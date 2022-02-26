@@ -1,4 +1,8 @@
 package Command;
 
-public class RemoveHead {
+public class RemoveHead extends AbstractCommand {
+    @Override
+    public void execute() {
+
+    }
 }

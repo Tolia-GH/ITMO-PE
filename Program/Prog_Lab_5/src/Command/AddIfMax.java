@@ -1,4 +1,8 @@
 package Command;
 
-public class AddIfMax {
+public class AddIfMax extends AbstractCommand {
+    @Override
+    public void execute() {
+
+    }
 }

@@ -1,4 +1,8 @@
 package Command;
 
-public class FliterLessThanType {
+public class FliterLessThanType extends AbstractCommand {
+    @Override
+    public void execute() {
+
+    }
 }
