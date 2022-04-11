@@ -1,16 +1,15 @@
 package Collection;
 
+import Collection.Exceptions.NoSuchTypeException;
 import Collection.Exceptions.NullValueException;
 import Collection.Exceptions.ValueOutOfRangeException;
 import Tools.Tools;
 
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
-import java.util.function.ToLongBiFunction;
 
 public class Organization implements Comparable<Organization> {
-    public static int idCode = 0;
+    public static Long idCode = 1L;
 
     private long id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
@@ -22,68 +21,113 @@ public class Organization implements Comparable<Organization> {
     private OrganizationType type; //Поле может быть null
     private Address postalAddress; //Поле не может быть null
 
-    public Organization(String name, Coordinates coordinates, Long annualTurnover, String fullName, Long employeesCount, OrganizationType type, Address postalAddress) {
-        setName(name);
-        setCoordinates(coordinates);
-        setAnnualTurnover(annualTurnover);
-        setFullName(fullName);
-        setEmployeesCount(employeesCount);
-        setType(type);
-        setPostalAddress(postalAddress);
-
-        setId();
-        setCreationDate(new Date());
+    public Organization() {
     }
 
     public static Organization Create() throws NullValueException, ValueOutOfRangeException {
+        Organization organization = new Organization();
 
-        Tools.Message("Input name of Organization:");
+        Tools.Message("    Input name of Organization: ");
         String name = Tools.Input();
+        if (name.equals("")) {
+            name = null;
+        }
+        organization.setName(name);
 
-        Tools.Message("Input coordinates x(x>-295):");
-        Float x = Float.valueOf(Tools.Input());
+        Coordinates coordinates = new Coordinates();
+        Tools.Message("    Input coordinates x(x>-295): ");
+        Float x;
+        String sx = Tools.Input();
+        if (sx.equals("")) {
+            x = null;
+        } else {
+            x = Float.valueOf(sx);
+        }
+        coordinates.setX(x);
 
-        Tools.Message("Input coordinates y(y<=500):");
-        Double y = Double.valueOf(Tools.Input());
+        Tools.Message("    Input coordinates y(y<=500): ");
+        Double y;
+        String sy = Tools.Input();
+        if (sy.equals("")) {
+            y = null;
+        } else {
+            y = Double.valueOf(sy);
+        }
+        coordinates.setY(y);
+        organization.setCoordinates(coordinates);
 
-        Coordinates coordinates = new Coordinates(x,y);
+        Tools.Message("    Input annualTurnover(annualTurnover>0): ");
+        String sAT = Tools.Input();
+        Long annualTurnover;
+        if (sAT.equals("")) {
+            annualTurnover = null;
+        } else {
+            annualTurnover = Long.valueOf(sAT);
+        }
+        organization.setAnnualTurnover(annualTurnover);
 
-        Tools.Message("Input annualTurnover");
-        Long annualTurnover = Long.valueOf(Tools.Input());
-
-        Tools.Message("Input full name");
+        Tools.Message("    Input full name: ");
         String fullName = Tools.Input();
+        if (fullName.equals("")) {
+            fullName = null;
+        }
+        organization.setFullName(fullName);
 
-        Tools.Message("Input employeesCount");
-        Long employeesCount = Long.valueOf(Tools.Input());
+        Tools.Message("    Input employeesCount(employeesCount>0): ");
+        String sEC = Tools.Input();
+        Long employeesCount;
+        if (sEC.equals("")) {
+            employeesCount = null;
+        } else {
+            employeesCount = Long.valueOf(sEC);
+        }
+        organization.setEmployeesCount(employeesCount);
 
-        Tools.Message("Set organization type");
-        OrganizationType type = OrganizationType.valueOf(Tools.Input());
+        OrganizationType type;
+        Tools.MessageL("    Set organization type from: ");
+        Tools.MessageL(OrganizationType.list());
+        Tools.Message("    Organization type = ");
+        String typeInput = Tools.Input();
+        if (typeInput.equals("")) {
+            type = OrganizationType.NULL;
+        } else {
+            if (OrganizationType.findType(typeInput)) {
+                type = OrganizationType.valueOf(typeInput);
+            } else {
+                throw new NoSuchTypeException("Type [" + typeInput + "] not found\n");
+            }
+        }
+        organization.setType(type);
 
-        Tools.Message("Set postal address");
+        Tools.Message("    Set the street of postal address: ");
         String street = Tools.Input();
+        Tools.Message("    Set the zipCode of postal address(length bigger than 8): ");
         String zipCode = Tools.Input();
         Address postalAddress = new Address(street, zipCode);
+        organization.setPostalAddress(postalAddress);
 
-        return new Organization(name, coordinates, annualTurnover, fullName, employeesCount, type, postalAddress);
+        organization.setId(idCode);
+        idCode++;
+        organization.setCreationDate(new Date());
+
+        return organization;
     }
 
-    public void setId() {
+    public void setId(Long idCode) {
         this.id = idCode;
-        idCode++;
     }
 
     public void setName(String name) throws NullValueException{
-        if(name == null) {
-            throw new NullValueException("");
+        if (name == null) {
+            throw new NullValueException("Error: Name can not be empty!\n");
         } else {
             this.name = name;
         }
     }
 
     public void setCoordinates(Coordinates coordinates) throws NullValueException {
-        if(coordinates == null) {
-            throw new NullValueException("coordinates can't be null");
+        if (coordinates == null) {
+            throw new NullValueException("Error: Coordinates can't be empty!\n");
         } else {
             this.coordinates = coordinates;
         }
@@ -94,11 +138,11 @@ public class Organization implements Comparable<Organization> {
     }
 
     public void setAnnualTurnover(Long annualTurnover) throws NullValueException,ValueOutOfRangeException{
-        if(annualTurnover == null) {
-
+        if (annualTurnover == null) {
+            throw new NullValueException("Error: AnnualTurnover can not be empty!\n");
         } else
-        if(annualTurnover <= 0) {
-            throw new ValueOutOfRangeException("annualTurnover should be bigger than 0");
+        if (annualTurnover <= 0) {
+            throw new ValueOutOfRangeException("Error: Value out of range! The range of is >0\n");
         }
         else {
             this.annualTurnover = annualTurnover;
@@ -110,32 +154,32 @@ public class Organization implements Comparable<Organization> {
     }
 
     public void setEmployeesCount(Long employeesCount) throws NullValueException,ValueOutOfRangeException {
-        if(employeesCount == null) {
-            throw new NullValueException("");
+        if (employeesCount == null) {
+            throw new NullValueException("Error: employeesCount can not be empty!\n");
         }
-        else if(employeesCount < 0) {
-            throw new ValueOutOfRangeException("");
+        else if (employeesCount <= 0) {
+            throw new ValueOutOfRangeException("Error: Value out of Range! The range of employeesCount is >0\n");
         }
         this.employeesCount = employeesCount;
     }
 
     public void setType(OrganizationType type) throws NullValueException {
-        if(type == null) {
-            throw new NullValueException("");
+        if (type.equals(OrganizationType.NULL)) {
+            throw new NullValueException("Error: Organization type can not be null!\n");
         } else {
             this.type = type;
         }
     }
 
     public void setPostalAddress(Address postalAddress) throws NullValueException {
-        if(postalAddress == null) {
+        if (postalAddress == null) {
             throw new NullValueException("");
         } else {
             this.postalAddress = postalAddress;
         }
     }
 
-    public int getIdCode() {
+    public Long getIdCode() {
         return idCode;
     }
 
@@ -175,12 +219,24 @@ public class Organization implements Comparable<Organization> {
         return postalAddress;
     }
 
+    public String toString() {
+        return this.id + ","
+                + this.name + ","
+                + this.getType() + ","
+                + this.coordinates.toString() + ","
+                + this.annualTurnover + ","
+                + this.employeesCount + ","
+                + this.fullName + ","
+                + this.postalAddress + ","
+                + this.creationDate + "\n";
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Organization that = (Organization) o;
-        return id == that.id &&
+        return Objects.equals(id, that.id) &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(coordinates, that.coordinates) &&
                 Objects.equals(creationDate, that.creationDate) &&
@@ -197,6 +253,17 @@ public class Organization implements Comparable<Organization> {
 
     @Override
     public int compareTo(Organization o) {
-        return 0;
+        if (o == null) {
+            throw new NullPointerException("Error: Null can't be compare!\n");
+        }
+        else if (this.equals(o)) {
+            return 0;
+        }
+        else if (this.hashCode() > o.hashCode()) {
+            return 1;
+        }
+        else {
+            return -1;
+        }
     }
 }

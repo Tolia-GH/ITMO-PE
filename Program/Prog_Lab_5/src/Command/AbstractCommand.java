@@ -1,5 +1,7 @@
 package Command;
 
+import Manager.CommandManager;
+
 public abstract class AbstractCommand {
     protected String name;
     protected String description;
@@ -12,5 +14,5 @@ public abstract class AbstractCommand {
         return this.description;
     }
 
-    abstract public void execute();
+    abstract public void execute(CommandManager commandManager, String[] para, String saver);
 }

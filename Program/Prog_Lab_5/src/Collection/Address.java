@@ -13,8 +13,8 @@ public class Address {
     }
 
     public void setStreet(String street) throws NullValueException {
-        if(street == null) {
-            throw new NullValueException("Street can't be null");
+        if (street == null) {
+            throw new NullValueException("Error: Street can't be null\n");
         }
         else {
             this.street = street;
@@ -22,11 +22,11 @@ public class Address {
     }
 
     public void setZipCode(String zipCode) {
-        if(zipCode == null) {
-            throw new NullValueException("zipcode shouldn't be null");
+        if (zipCode == null) {
+            throw new NullValueException("Error: zipcode can not be null!\n");
         }
-        else if(zipCode.length() < 8) {
-            throw new StringLengthOutOfRange("the length of zipcode shouldn't be smaller than 8");
+        else if (zipCode.length() < 8) {
+            throw new StringLengthOutOfRange("Error: The length of zipcode shouldn't be smaller than 8!\n");
         }
         else {
             this.zipCode = zipCode;
@@ -34,6 +34,6 @@ public class Address {
     }
 
     public String toString() {
-        return "Address: " + this.street + " street, zipcode: " + this.zipCode;
+        return this.street + " street,zipcode:" + this.zipCode;
     }
 }
