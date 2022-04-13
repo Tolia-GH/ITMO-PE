@@ -1,5 +1,4 @@
 import Collection.Exceptions.*;
-import Collection.Organization;
 import Command.AbstractCommand;
 import Manager.CommandManager;
 import Tools.Tools;
@@ -30,7 +29,7 @@ public class Main {
                     abstractCommand = iterator.next();
                     if (abstractCommand.getName().equals(command[0])) {
                         comExist = true;
-                        abstractCommand.execute(commandManager, command, "Person.csv");
+                        abstractCommand.execute(commandManager, command, "Organizations.json");
                         Tools.Message("\n");
                     }
                 }
@@ -38,22 +37,16 @@ public class Main {
                     throw new NoSuchCommandException("Error: Command [" +command[0] + "] not found!\n");
                 }
 
-            } catch (NoSuchCommandException noSuchCom) {
-                Tools.MessageL(noSuchCom.getMessage());
-            } catch (ParaIncorrectException para) {
-                Tools.MessageL(para.getMessage());
-            } catch (NoSuchTypeException noSuchType) {
-                Tools.MessageL(noSuchType.getMessage());
-            } catch (ValueOutOfRangeException valueOutOfRange) {
-                Tools.MessageL(valueOutOfRange.getMessage());
-            } catch (NullValueException nullValue) {
-                Tools.MessageL(nullValue.getMessage());
+            } catch (NoSuchCommandException |
+                    ParaIncorrectException |
+                    NoSuchTypeException |
+                    ValueOutOfRangeException |
+                    NullValueException |
+                    StringLengthOutOfRange |
+                    NotInitializedException exception) {
+                Tools.MessageL(exception.getMessage());
             } catch (NumberFormatException numberFormat) {
                 Tools.MessageL("Error: Value format error!");
-            } catch (StringLengthOutOfRange lengthOutOfRange) {
-                Tools.MessageL(lengthOutOfRange.getMessage());
-            } catch (NotInitializedException notInitialized) {
-                Tools.MessageL(notInitialized.getMessage());
             }
         }
     }

@@ -6,7 +6,9 @@ import Collection.Organization;
 import Collection.OrganizationType;
 import Command.*;
 import Tools.Tools;
-import java.util.LinkedHashSet;
+
+import java.sql.ClientInfoStatus;
+import java.util.*;
 
 public class CommandManager {
     public static LinkedHashSet<AbstractCommand> commands = new LinkedHashSet<>();
@@ -163,6 +165,20 @@ public class CommandManager {
     }
 
     public void executePrintFieldAscendingAnnualTurnover() {
-
+        ArrayDeque<Organization> arrayDeque = OrganizationManager.getOrganizationSet().clone();
+        long min = 9223372036854775807L;
+        while (arrayDeque.size() > 0) {
+            Organization minOrg = new Organization();
+            for (Organization organization : arrayDeque) {
+                if(organization.getAnnualTurnover() < min) {
+                    min = organization.getAnnualTurnover();
+                    minOrg = organization;
+                }
+            }
+            Tools.Message(minOrg.toString());
+            arrayDeque.remove(minOrg);
+            min = 9223372036854775807L;
+        }
+//////
     }
 }
