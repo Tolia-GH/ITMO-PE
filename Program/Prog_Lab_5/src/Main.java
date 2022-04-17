@@ -3,15 +3,20 @@ import Command.AbstractCommand;
 import Manager.CommandManager;
 import Tools.Tools;
 
+import java.io.IOException;
 import java.util.Iterator;
 
 /**
- * @author P3113 Чжоу Хунсян
- * Variant 951316
+ * The type Main.
  */
-
 public class Main {
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
+
 
         CommandManager commandManager = new CommandManager();
 
@@ -19,7 +24,7 @@ public class Main {
         while (true) {
             AbstractCommand abstractCommand;
             iterator = commandManager.getCommands().iterator();
-            boolean comExist = false;
+            //boolean comExist = false;
 
             Tools.MessageL("Program: Input your command:");
             Tools.Message("User: ");
@@ -28,22 +33,22 @@ public class Main {
                 while (iterator.hasNext()) {
                     abstractCommand = iterator.next();
                     if (abstractCommand.getName().equals(command[0])) {
-                        comExist = true;
+                        //comExist = true;
                         abstractCommand.execute(commandManager, command, "Organizations.json");
                         Tools.Message("\n");
                     }
                 }
-                if (!comExist) {
+                if (!commandManager.isCommandExist(command[0])) {
                     throw new NoSuchCommandException("Error: Command [" +command[0] + "] not found!\n");
                 }
-
             } catch (NoSuchCommandException |
                     ParaIncorrectException |
                     NoSuchTypeException |
                     ValueOutOfRangeException |
                     NullValueException |
                     StringLengthOutOfRange |
-                    NotInitializedException exception) {
+                    NotInitializedException |
+                    IOException exception) {
                 Tools.MessageL(exception.getMessage());
             } catch (NumberFormatException numberFormat) {
                 Tools.MessageL("Error: Value format error!");

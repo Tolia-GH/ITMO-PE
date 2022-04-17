@@ -3,7 +3,13 @@ package Command;
 import Collection.Exceptions.ParaIncorrectException;
 import Manager.CommandManager;
 
+/**
+ * The type Show.
+ */
 public class Show extends AbstractCommand {
+    /**
+     * Instantiates a new Show.
+     */
     public Show() {
         this.name = "show";
         this.description = "Print to standard output all elements of the collection in string representation";

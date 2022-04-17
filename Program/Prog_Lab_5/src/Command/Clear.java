@@ -1,10 +1,15 @@
 package Command;
 
 import Collection.Exceptions.ParaIncorrectException;
-import Collection.Organization;
 import Manager.CommandManager;
 
+/**
+ * The type Clear.
+ */
 public class Clear extends AbstractCommand {
+    /**
+     * Instantiates a new Clear.
+     */
     public Clear() {
         this.name = "clear";
         this.description = "Clear collection";

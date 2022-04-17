@@ -3,7 +3,13 @@ package Command;
 import Collection.Exceptions.ParaIncorrectException;
 import Manager.CommandManager;
 
+/**
+ * The type Print field ascending annual turnover.
+ */
 public class PrintFieldAscendingAnnualTurnover extends AbstractCommand {
+    /**
+     * Instantiates a new Print field ascending annual turnover.
+     */
     public PrintFieldAscendingAnnualTurnover() {
         this.name = "print_field_ascending_annual_turnover";
         this.description = "Print the values of the annualTurnover field of all elements in ascending order";

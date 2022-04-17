@@ -3,7 +3,13 @@ package Command;
 import Collection.Exceptions.ParaIncorrectException;
 import Manager.CommandManager;
 
+/**
+ * The type Info.
+ */
 public class Info extends AbstractCommand {
+    /**
+     * Instantiates a new Info.
+     */
     public Info() {
         this.name = "info";
         this.description = "Print information about the collection to standard output (type, initialization date, number of elements, etc.)";

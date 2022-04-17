@@ -3,7 +3,13 @@ package Command;
 import Collection.Exceptions.ParaIncorrectException;
 import Manager.CommandManager;
 
+/**
+ * The type Remove by id.
+ */
 public class RemoveByID extends AbstractCommand {
+    /**
+     * Instantiates a new Remove by id.
+     */
     public RemoveByID() {
         this.name = "remove_by_id";
         this.description = "Remove an element from the collection by its id";

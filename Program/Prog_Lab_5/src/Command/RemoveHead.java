@@ -3,7 +3,13 @@ package Command;
 import Collection.Exceptions.ParaIncorrectException;
 import Manager.CommandManager;
 
+/**
+ * The type Remove head.
+ */
 public class RemoveHead extends AbstractCommand {
+    /**
+     * Instantiates a new Remove head.
+     */
     public RemoveHead() {
         this.name = "remove_head";
         this.description = "Print the first element of the collection and remove it";

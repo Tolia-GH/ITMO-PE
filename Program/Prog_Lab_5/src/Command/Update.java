@@ -3,7 +3,13 @@ package Command;
 import Collection.Exceptions.ParaIncorrectException;
 import Manager.CommandManager;
 
+/**
+ * The type Update.
+ */
 public class Update extends AbstractCommand {
+    /**
+     * Instantiates a new Update.
+     */
     public Update() {
         this.name = "update";
         this.description = "Update the value of the collection element whose id is equal to the given one";

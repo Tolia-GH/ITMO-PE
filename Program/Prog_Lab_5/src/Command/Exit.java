@@ -3,7 +3,13 @@ package Command;
 import Collection.Exceptions.ParaIncorrectException;
 import Manager.CommandManager;
 
+/**
+ * The type Exit.
+ */
 public class Exit extends AbstractCommand {
+    /**
+     * Instantiates a new Exit.
+     */
     public Exit() {
         this.name = "exit";
         this.description = "End the program(without saving)";

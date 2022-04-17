@@ -5,7 +5,13 @@ import Collection.Organization;
 import Manager.CommandManager;
 import Tools.Tools;
 
+/**
+ * The type Add.
+ */
 public class Add extends AbstractCommand{
+    /**
+     * Instantiates a new Add.
+     */
     public Add() {
         this.name = "add";
         this.description = "Add a new element to the organization set";

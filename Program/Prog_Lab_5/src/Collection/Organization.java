@@ -8,22 +8,65 @@ import Tools.Tools;
 import java.util.Date;
 import java.util.Objects;
 
+/**
+ * The type Organization.
+ */
 public class Organization implements Comparable<Organization> {
+    /**
+     * The constant idCode.
+     */
     public static Long idCode = 1L;
 
+    /**
+     * The Id.
+     */
     private long id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
+    /**
+     * The Name.
+     */
     private String name; //Поле не может быть null, Строка не может быть пустой
+    /**
+     * The Coordinates.
+     */
     private Coordinates coordinates; //Поле не может быть null
+    /**
+     * The Creation date.
+     */
     private java.util.Date creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
+    /**
+     * The Annual turnover.
+     */
     private Long annualTurnover; //Поле может быть null, Значение поля должно быть больше 0
+    /**
+     * The Full name.
+     */
     private String fullName; //Значение этого поля должно быть уникальным, Строка не может быть пустой, Поле не может быть null
+    /**
+     * The Employees count.
+     */
     private Long employeesCount; //Поле может быть null, Значение поля должно быть больше 0
+    /**
+     * The Type.
+     */
     private OrganizationType type; //Поле может быть null
+    /**
+     * The Postal address.
+     */
     private Address postalAddress; //Поле не может быть null
 
+    /**
+     * Instantiates a new Organization.
+     */
     public Organization() {
     }
 
+    /**
+     * Create organization.
+     *
+     * @return the organization
+     * @throws NullValueException       the null value exception
+     * @throws ValueOutOfRangeException the value out of range exception
+     */
     public static Organization Create() throws NullValueException, ValueOutOfRangeException {
         Organization organization = new Organization();
 
@@ -113,10 +156,21 @@ public class Organization implements Comparable<Organization> {
         return organization;
     }
 
+    /**
+     * Sets id.
+     *
+     * @param idCode the id code
+     */
     public void setId(Long idCode) {
         this.id = idCode;
     }
 
+    /**
+     * Sets name.
+     *
+     * @param name the name
+     * @throws NullValueException the null value exception
+     */
     public void setName(String name) throws NullValueException{
         if (name == null) {
             throw new NullValueException("Error: Name can not be empty!\n");
@@ -125,6 +179,12 @@ public class Organization implements Comparable<Organization> {
         }
     }
 
+    /**
+     * Sets coordinates.
+     *
+     * @param coordinates the coordinates
+     * @throws NullValueException the null value exception
+     */
     public void setCoordinates(Coordinates coordinates) throws NullValueException {
         if (coordinates == null) {
             throw new NullValueException("Error: Coordinates can't be empty!\n");
@@ -133,10 +193,22 @@ public class Organization implements Comparable<Organization> {
         }
     }
 
+    /**
+     * Sets creation date.
+     *
+     * @param creationDate the creation date
+     */
     public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
     }
 
+    /**
+     * Sets annual turnover.
+     *
+     * @param annualTurnover the annual turnover
+     * @throws NullValueException       the null value exception
+     * @throws ValueOutOfRangeException the value out of range exception
+     */
     public void setAnnualTurnover(Long annualTurnover) throws NullValueException,ValueOutOfRangeException{
         if (annualTurnover == null) {
             throw new NullValueException("Error: AnnualTurnover can not be empty!\n");
@@ -149,10 +221,22 @@ public class Organization implements Comparable<Organization> {
         }
     }
 
+    /**
+     * Sets full name.
+     *
+     * @param fullName the full name
+     */
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }
 
+    /**
+     * Sets employees count.
+     *
+     * @param employeesCount the employees count
+     * @throws NullValueException       the null value exception
+     * @throws ValueOutOfRangeException the value out of range exception
+     */
     public void setEmployeesCount(Long employeesCount) throws NullValueException,ValueOutOfRangeException {
         if (employeesCount == null) {
             throw new NullValueException("Error: employeesCount can not be empty!\n");
@@ -163,6 +247,12 @@ public class Organization implements Comparable<Organization> {
         this.employeesCount = employeesCount;
     }
 
+    /**
+     * Sets type.
+     *
+     * @param type the type
+     * @throws NullValueException the null value exception
+     */
     public void setType(OrganizationType type) throws NullValueException {
         if (type.equals(OrganizationType.NULL)) {
             throw new NullValueException("Error: Organization type can not be null!\n");
@@ -171,6 +261,12 @@ public class Organization implements Comparable<Organization> {
         }
     }
 
+    /**
+     * Sets postal address.
+     *
+     * @param postalAddress the postal address
+     * @throws NullValueException the null value exception
+     */
     public void setPostalAddress(Address postalAddress) throws NullValueException {
         if (postalAddress == null) {
             throw new NullValueException("");
@@ -179,42 +275,92 @@ public class Organization implements Comparable<Organization> {
         }
     }
 
+    /**
+     * Gets id code.
+     *
+     * @return the id code
+     */
     public Long getIdCode() {
         return idCode;
     }
 
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
     public long getId() {
         return id;
     }
 
+    /**
+     * Gets name.
+     *
+     * @return the name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Gets coordinates.
+     *
+     * @return the coordinates
+     */
     public Coordinates getCoordinates() {
         return coordinates;
     }
 
+    /**
+     * Gets creation date.
+     *
+     * @return the creation date
+     */
     public Date getCreationDate() {
         return creationDate;
     }
 
+    /**
+     * Gets annual turnover.
+     *
+     * @return the annual turnover
+     */
     public Long getAnnualTurnover() {
         return annualTurnover;
     }
 
+    /**
+     * Gets full name.
+     *
+     * @return the full name
+     */
     public String getFullName() {
         return fullName;
     }
 
+    /**
+     * Gets employees count.
+     *
+     * @return the employees count
+     */
     public Long getEmployeesCount() {
         return employeesCount;
     }
 
+    /**
+     * Gets type.
+     *
+     * @return the type
+     */
     public OrganizationType getType() {
         return type;
     }
 
+    /**
+     * Gets postal address.
+     *
+     * @return the postal address
+     */
     public Address getPostalAddress() {
         return postalAddress;
     }

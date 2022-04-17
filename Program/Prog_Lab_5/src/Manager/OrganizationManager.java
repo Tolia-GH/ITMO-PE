@@ -6,11 +6,28 @@ import Collection.Organization;
 import java.util.ArrayDeque;
 import java.util.Date;
 
+/**
+ * The type Organization manager.
+ */
 public class OrganizationManager {
+    /**
+     * The constant InitializationTime.
+     */
     private static Date InitializationTime;
+    /**
+     * The Organization set.
+     */
     private static ArrayDeque<Organization> organizationSet;
+    /**
+     * The constant IsInitialized.
+     */
     public static boolean IsInitialized = false;
 
+    /**
+     * Gets organization set.
+     *
+     * @return the organization set
+     */
     public static ArrayDeque<Organization> getOrganizationSet() {
         if (!OrganizationManager.IsInitialized) {
             throw new NoSuchCommandException("Error: Collections was not initialized!\n");
@@ -19,6 +36,9 @@ public class OrganizationManager {
         }
     }
 
+    /**
+     * Do initialization.
+     */
     public static void doInitialization() {
         if (!IsInitialized) {
             organizationSet = new ArrayDeque<>();
@@ -27,6 +47,11 @@ public class OrganizationManager {
         }
     }
 
+    /**
+     * Gets initialization time.
+     *
+     * @return the initialization time
+     */
     public static Date getInitializationTime() {
         return InitializationTime;
     }
