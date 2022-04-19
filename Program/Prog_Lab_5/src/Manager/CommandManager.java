@@ -244,7 +244,7 @@ public class CommandManager {
      * Execute group counting by id.
      */
     public void executeGroupCountingByID() {
-
+        Tools.MessageL("author: Haven't figure out what should I do with this command...");
     }
 
     /**
