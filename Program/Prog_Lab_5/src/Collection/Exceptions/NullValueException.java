@@ -7,7 +7,7 @@ public class NullValueException extends RuntimeException{
     /**
      * Instantiates a new Null value exception.
      *
-     * @param message the message
+     * @param message description of exeption
      */
     public NullValueException(String message) {
         super(message);

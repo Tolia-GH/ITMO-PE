@@ -8,19 +8,21 @@ import Collection.Exceptions.StringLengthOutOfRange;
  */
 public class Address {
     /**
-     * The Street.
+     * The street of address.
+     * Value can not be null.
      */
     private String street; //Поле не может быть null
     /**
-     * The Zip code.
+     * The zip code of address.
+     * Value can not be null.
      */
     private String zipCode; //Длина строки должна быть не меньше 8, Поле может быть null
 
     /**
      * Instantiates a new Address.
      *
-     * @param street  the street
-     * @param zipCode the zip code
+     * @param street  the street.
+     * @param zipCode the zip code.
      */
     public Address(String street, String zipCode) {
         setStreet(street);
@@ -31,7 +33,7 @@ public class Address {
      * Sets street.
      *
      * @param street the street
-     * @throws NullValueException the null value exception
+     * @throws NullValueException throw while value is null.
      */
     public void setStreet(String street) throws NullValueException {
         if (street == null) {

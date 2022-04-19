@@ -172,9 +172,6 @@ public class CommandManager {
      */
     public void executeSave(String saver) throws IOException {
         JsonWriter.SaveCollectionsToFile(OrganizationManager.getOrganizationSet(), saver);
-        //for (Organization organization : OrganizationManager.getOrganizationSet()) {
-            //JsonWriter.SaveCollectionsToFile(organization, saver);
-        //}
     }
 
     /**
@@ -196,10 +193,10 @@ public class CommandManager {
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         String commandLine;
-        while((commandLine = bufferedReader.readLine()) != null){
+        while ((commandLine = bufferedReader.readLine()) != null){
             String []split = commandLine.split(" ");
             AbstractCommand command = gotCommand(split[0]);
-            if(command != null && !(command.getName().equals("ExecuteScript")&&split[1].equals(name))) {
+            if (command != null && !(command.getName().equals("ExecuteScript")&&split[1].equals(name))) {
                 command.execute(commandManager, split,Saver);
             }
         }

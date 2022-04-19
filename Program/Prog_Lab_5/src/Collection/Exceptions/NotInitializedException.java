@@ -7,7 +7,7 @@ public class NotInitializedException extends RuntimeException {
     /**
      * Instantiates a new Not initialized exception.
      *
-     * @param message the message
+     * @param message description of exeption
      */
     public NotInitializedException(String message) {
         super(message);

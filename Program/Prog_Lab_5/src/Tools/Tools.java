@@ -9,7 +9,7 @@ public class Tools {
     /**
      * Message.
      *
-     * @param message the message
+     * @param message description of exeption
      */
     public static void Message(String message) {
         System.out.print(message);
@@ -18,7 +18,7 @@ public class Tools {
     /**
      * Message l.
      *
-     * @param messageL the message l
+     * @param messageL description of exeption l
      */
     public static void MessageL(String messageL) {
         System.out.println(messageL);

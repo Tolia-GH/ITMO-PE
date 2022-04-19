@@ -7,7 +7,7 @@ public class ValueOutOfRangeException extends RuntimeException {
     /**
      * Instantiates a new Value out of range exception.
      *
-     * @param message the message
+     * @param message description of exeption
      */
     public ValueOutOfRangeException(String message) {
         super(message);

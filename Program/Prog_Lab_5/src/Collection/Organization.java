@@ -18,44 +18,44 @@ public class Organization implements Comparable<Organization> {
     public static Long idCode = 1L;
 
     /**
-     * The Id.
+     * The id of Organization.
      */
     private long id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     /**
-     * The Name.
+     * The Name of Organization.
      */
     private String name; //Поле не может быть null, Строка не может быть пустой
     /**
-     * The Coordinates.
+     * The Coordinates of Organization.
      */
     private Coordinates coordinates; //Поле не может быть null
     /**
-     * The Creation date.
+     * The Creation date of Organization.
      */
     private java.util.Date creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
     /**
-     * The Annual turnover.
+     * The Annual turnover of Organization.
      */
     private Long annualTurnover; //Поле может быть null, Значение поля должно быть больше 0
     /**
-     * The Full name.
+     * The Full name of Organization.
      */
     private String fullName; //Значение этого поля должно быть уникальным, Строка не может быть пустой, Поле не может быть null
     /**
-     * The Employees count.
+     * The Employees count of Organization.
      */
     private Long employeesCount; //Поле может быть null, Значение поля должно быть больше 0
     /**
-     * The Type.
+     * The Type of Organization.
      */
     private OrganizationType type; //Поле может быть null
     /**
-     * The Postal address.
+     * The Postal address of Organization.
      */
     private Address postalAddress; //Поле не может быть null
 
     /**
-     * Instantiates a new Organization.
+     * Instantiates a new Organization of Organization.
      */
     public Organization() {
     }

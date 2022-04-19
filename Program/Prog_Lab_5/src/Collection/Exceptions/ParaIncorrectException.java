@@ -7,7 +7,7 @@ public class ParaIncorrectException extends RuntimeException {
     /**
      * Instantiates a new Para incorrect exception.
      *
-     * @param message the message
+     * @param message description of exeption
      */
     public ParaIncorrectException(String message) {
         super(message);

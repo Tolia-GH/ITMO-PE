@@ -7,7 +7,7 @@ public class StringLengthOutOfRange extends RuntimeException{
     /**
      * Instantiates a new String length out of range.
      *
-     * @param message the message
+     * @param message description of exeption
      */
     public StringLengthOutOfRange(String message) {
         super(message);
