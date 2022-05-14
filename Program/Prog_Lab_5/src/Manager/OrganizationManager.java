@@ -2,6 +2,8 @@ package Manager;
 
 import Collection.Exceptions.NoSuchCommandException;
 import Collection.Organization;
+import Tools.Tools;
+import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.util.ArrayDeque;
 import java.util.Date;
@@ -22,6 +24,16 @@ public class OrganizationManager {
      * The constant IsInitialized.
      */
     public static boolean IsInitialized = false;
+
+    public static void setOrganizationSet(ArrayDeque<Organization> arrayDeque) {
+        //try {
+            organizationSet = new ArrayDeque<>();
+            organizationSet = arrayDeque.clone();
+            IsInitialized = true;
+        //} catch (NullPointerException e) {
+            //Tools.MessageL("Error: Can not set Organizations because parameters was wrong!");
+        //}
+    }
 
     /**
      * Gets organization set.

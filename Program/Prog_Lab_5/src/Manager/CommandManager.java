@@ -90,6 +90,7 @@ public class CommandManager {
      */
     public void executeShow() {
         if (OrganizationManager.getOrganizationSet().size() == 0) {
+            System.out.println(OrganizationManager.getOrganizationSet().size());
             Tools.MessageL("Program [show]: Collections of organization is empty!");
         } else {
             for (Organization organization : OrganizationManager.getOrganizationSet()) {

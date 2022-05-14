@@ -3,6 +3,7 @@ package JSON;
 import Collection.Organization;
 import Tools.Tools;
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.*;
@@ -21,30 +22,30 @@ public class JsonReader {
      * @return the collection from file
      * @throws IOException the io exception
      */
-    public static ArrayDeque<Organization> getCollectionFromFile(String path) throws IOException {
-        File file = new File(path);
-        if (!file.exists()) {
-            throw new FileNotFoundException("Error: File [" + path + "] not found!");
-        }
-        if (!file.canRead()) {
-            throw new SecurityException("Error: File [" + path + "] can not read!");
-        }
-        FileReader fileReader = new FileReader(file);
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
+    public static ArrayDeque<Organization> getCollectionFromFile(String path) throws IOException, JsonSyntaxException, IllegalStateException {
+        ArrayDeque<Organization> collectionGot = new ArrayDeque<>();
+            File file = new File(path);
+            if (!file.exists()) {
+                throw new FileNotFoundException("Error: File [" + path + "] not found!");//
+            }
+            if (!file.canRead()) {
+                throw new SecurityException("Error: File [" + path + "] can not read!");
+            }
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
 
-        StringBuilder fileData = new StringBuilder();
-        String newLine;
-        while ((newLine = bufferedReader.readLine()) != null) {
-            fileData.append(newLine);
-        }
+            StringBuilder fileData = new StringBuilder();
+            String newLine;
+            while ((newLine = bufferedReader.readLine()) != null) {
+                fileData.append(newLine);
+            }
 
-        Type arrayDequeType = new TypeToken<ArrayDeque<Organization>>(){}.getType();
+            Type arrayDequeType = new TypeToken<ArrayDeque<Organization>>(){}.getType();
 
-        Gson gson = new Gson();
-        ArrayDeque<Organization> collectionGot = gson.fromJson(fileData.toString(), arrayDequeType);
-        Tools.MessageL("Program: Collection got from file successfully!");
+            Gson gson = new Gson();
+            collectionGot = gson.fromJson(fileData.toString(), arrayDequeType);
 
-        bufferedReader.close();
+            bufferedReader.close();
         return collectionGot;
     }
 }
