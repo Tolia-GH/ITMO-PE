@@ -42,4 +42,4 @@ $$\begin{cases}
 
 $$a=g\sin{\alpha}-\mu g\cos{\alpha}\qquad(6)$$
 
-![](/Phisics/pic/Lab1.02-1.png#pic_center)
+<div align=center><img src="/Phisics/pic/Lab1.02-1.png"></img></div>
