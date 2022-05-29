@@ -2,10 +2,13 @@
 
 ## 阅读索引
 
-- [讲座内容](/Physics/Lecture.md)
+- [x] [讲座内容](Lecture.md)
 - 实验室工作
-  - [Lab 1.01](/Physics/Labs/Lab1.01.md)
-  - [Lab 1.02](/Physics/Labs/Lab1.02.md)
+  - [x] [Lab 1.01](Labs/Lab1.01.md)
+  - [x] [Lab 1.02](Labs/Lab1.02.md)
+  - [ ] [Lab 1.04](../404.md)
+  - [ ] [Lab 1.07](../404.md)
+  - [ ] [Lab 1.09](../404.md)
 
 <style type="text/css">
     #footer {

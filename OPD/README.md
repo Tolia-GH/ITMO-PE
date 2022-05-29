@@ -2,9 +2,9 @@
 
 ## 阅读索引
 
-- [ ] [实验要求](/OPD/Lab%20requests.md)
-- [ ] [教材指引](/OPD/Guide.md)
-- [ ] [Рубеж](/404.md)
+- [ ] [实验要求](Lab%20requests.md)
+- [ ] [教材指引](/Guide.md)
+- [ ] [Рубеж](../404.md)
 
 <style type="text/css">
     #footer {

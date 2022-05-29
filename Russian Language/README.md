@@ -2,7 +2,7 @@
 
 ## 阅读索引
 
-- [x] [教材课文及翻译](/Russian%20Language/课文.md)
+- [x] [教材课文及翻译](课文.md)
 
 <style type="text/css">
     #footer {
