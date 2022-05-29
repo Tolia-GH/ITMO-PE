@@ -2,7 +2,7 @@
 
 ## 阅读索引
 
-- [ ] [实验要求](Lab%20requests.md)
+- [ ] [实验要求](LabRequests.md)
 - [ ] [教材指引](/Guide.md)
 - [ ] [Рубеж](../404.md)
 
