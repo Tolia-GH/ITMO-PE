@@ -8,9 +8,10 @@
 
 - [数学](/Mathematic/README.md)
 - [离散数学](/Discrete%20Mathematic/README.md)
-- [物理](/Phisics/README.md)
+- [物理](/Physics/README.md)
 - [编程](/Program/README.md)
 - [OPD](/OPD/README.md)
+- [哲学](/Philosophy/README.md)
 
 ## 版权声明
 - 本项目所有非代码文本内容遵循 [CC BY-NC-SA 3.0 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)
