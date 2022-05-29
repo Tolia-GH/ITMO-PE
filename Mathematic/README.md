@@ -2,9 +2,9 @@
 
 ## 阅读索引
 
-- [x] [高等数学](/Mathematic/Mathematic.md)
-- [ ] [Типовой работа](/404.md)
-- [ ] [考试准备](/404.md)
+- [x] [高等数学](Mathematic/Mathematic.md)
+- [ ] [Типовой работа](404.md)
+- [ ] [考试准备](404.md)
 
 <style type="text/css">
     #footer {
