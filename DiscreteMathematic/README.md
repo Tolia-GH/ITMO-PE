@@ -2,19 +2,19 @@
 
 ## 阅读索引
 
-- [x] [离散数学](/DiscreteMathematic/离散数学.md)
-- [x] [Test1](/DiscreteMathematic/Test1.md)
-- [x] [Test2](/DiscreteMathematic/Test2.md)
-- [ ] [Test3](/404.md)
-- [ ] [Test4](/404.md)
-- [ ] [Test5](/404.md)
-- [ ] [作业1](/404.md)
-- [ ] [作业2](/404.md)
-- [ ] [作业3](/404.md)
-- [ ] [作业4](/404.md)
-- [ ] [作业5](/404.md)
-- [ ] [作业6](/404.md)
-- [ ] [学期作业](/404.md)
+- [x] [离散数学](离散数学.md)
+- [x] [Test1](Test1.md)
+- [x] [Test2](Test2.md)
+- [ ] [Test3](../404.md)
+- [ ] [Test4](../404.md)
+- [ ] [Test5](../404.md)
+- [ ] [作业1](../404.md)
+- [ ] [作业2](../404.md)
+- [ ] [作业3](../404.md)
+- [ ] [作业4](../404.md)
+- [ ] [作业5](../404.md)
+- [ ] [作业6](../404.md)
+- [ ] [学期作业](../404.md)
 
 <style type="text/css">
     #footer {
