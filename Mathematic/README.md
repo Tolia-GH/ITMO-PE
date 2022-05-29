@@ -2,4 +2,6 @@
 
 ## 阅读索引
 
-- [高等数学](/Mathematic/Mathematic.md)
+- [ ] [高等数学](/Mathematic/Mathematic.md)
+- [ ] [Типовой работа](/404.md)
+- [ ] [考试准备](/404.md)
