@@ -27,3 +27,33 @@ $$\sigma_{\left\langle t\right\rangle}=\sqrt{\frac{1}{N\left(N-1\right)}\sum_{i=
     $$\Delta=t_{\alpha,N}\cdot\sigma_{\left\langle t\right\rangle}$$
     где $t\alpha,N$ — коэффициент Стьюдента, зависящий от числа измерений N и доверительной вероятности $\alpha$:
     $$\alpha=P\left(t\in\left[\left\langle t\right\rangle-\Delta t,\left\langle t\right\rangle+\Delta t\right]\right)$$
+
+<style type="text/css">
+    #footer {
+        position: relative;
+        margin: 0 auto;
+        line-height: 20px;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+ 
+    .content {
+        height: 1800px;
+        width: 100%;
+        text-align: center;
+    }
+</style>
+
+<div id="footer">
+    Powered by
+    <a href="https://html5up.net">HTML</a>, 
+    <a href="https://markdown.com.cn/">markdown</a>, 
+    <a href="https://www.latex-project.org/">LaTeX</a>
+    <br>
+    Copyright © 2022 | 
+    <a href="https://tolia-gh.github.io">Tolia</a>
+    <br>
+    All Rights Reserved.
+    <br>
+</div>

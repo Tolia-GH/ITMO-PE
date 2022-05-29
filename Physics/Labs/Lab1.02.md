@@ -105,3 +105,33 @@ $$a=g(\sin{\alpha-\mu})$$
 3. Под обе ножки левой опоры подложите одну стандартную пластину толщиной 𝑑 ≈ 1 см.
 4. Включить прибор ПКЦ-3 тумблером на правой боковой па- нели.
 5. На дистанционном пульте управления нажать последовательно три кнопки: «режим работы: 0», «механика: сброс», «индика- ция: время t1, t2».
+
+<style type="text/css">
+    #footer {
+        position: relative;
+        margin: 0 auto;
+        line-height: 20px;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+ 
+    .content {
+        height: 1800px;
+        width: 100%;
+        text-align: center;
+    }
+</style>
+
+<div id="footer">
+    Powered by
+    <a href="https://html5up.net">HTML</a>, 
+    <a href="https://markdown.com.cn/">markdown</a>, 
+    <a href="https://www.latex-project.org/">LaTeX</a>
+    <br>
+    Copyright © 2022 | 
+    <a href="https://tolia-gh.github.io">Tolia</a>
+    <br>
+    All Rights Reserved.
+    <br>
+</div>

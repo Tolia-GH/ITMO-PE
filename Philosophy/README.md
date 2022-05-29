@@ -24,6 +24,7 @@
         text-align: center;
     }
 </style>
+
 <div id="footer">
     Powered by
     <a href="https://html5up.net">HTML</a>, 
@@ -31,8 +32,7 @@
     <a href="https://www.latex-project.org/">LaTeX</a>
     <br>
     Copyright © 2022 | 
-    <a href="https://tolia-gh.github.io">Tolia</a> - 
-    <a href="https://github.com/golden-sea">GoldenSea</a>
+    <a href="https://tolia-gh.github.io">Tolia</a>
     <br>
     All Rights Reserved.
     <br>

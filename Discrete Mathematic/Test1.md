@@ -59,3 +59,33 @@
 8. Определить функцию, реализуемую схемой. (3 балла)
 9. Привести функцию к нормальной форме. (4 балла) Определить реакцию схемы на входной набор (0101K). (2 балла)
 9. Булева функция y=f4 (х) принимает значение, равное нулю, на набо­ рах (0, 2, 7, 9, 15) и безразличное значение - на наборах (4, 11, 13, 14). Постро­ ить схему с парафазными входами, реализующую данную функцию на элемен­ тах базиса (ИЛИ-HE) и обладающую минимальной ценой. (18 баллов) Опреде­ лить реакцию схемы на безразличных наборах и пояснить ее. (2 балла за каж­ дый набор)
+
+<style type="text/css">
+    #footer {
+        position: relative;
+        margin: 0 auto;
+        line-height: 20px;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+ 
+    .content {
+        height: 1800px;
+        width: 100%;
+        text-align: center;
+    }
+</style>
+
+<div id="footer">
+    Powered by
+    <a href="https://html5up.net">HTML</a>, 
+    <a href="https://markdown.com.cn/">markdown</a>, 
+    <a href="https://www.latex-project.org/">LaTeX</a>
+    <br>
+    Copyright © 2022 | 
+    <a href="https://tolia-gh.github.io">Tolia</a>
+    <br>
+    All Rights Reserved.
+    <br>
+</div>
