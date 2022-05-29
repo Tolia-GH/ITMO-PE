@@ -1,3 +1,5 @@
+## [主页](../index.md)/[物理](README.md)/Lecture
+
 # Lecture
 
 ## Lecture №1

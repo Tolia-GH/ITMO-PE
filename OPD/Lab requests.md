@@ -1,3 +1,5 @@
+## [主页](../index.md)/[OPD](README.md)/Lab Requests
+
 ## <center>Лабораторная работа No5. <br>实验室工作No5</center>
 # <center>Асинхронный обмен данными с ВУ <br>与 ВУ 进行异步数据交换</center>
 
