@@ -2,9 +2,9 @@
 
 ## 阅读索引
 
-- [x] [离散数学](/Discrete%20Mathematic/离散数学.md)
-- [x] [Test1](/Discrete%20Mathematic/Test1.md)
-- [x] [Test2](/Discrete%20Mathematic/Test2.md)
+- [x] [离散数学](/DiscreteMathematic/离散数学.md)
+- [x] [Test1](/DiscreteMathematic/Test1.md)
+- [x] [Test2](/DiscreteMathematic/Test2.md)
 - [ ] [Test3](/404.md)
 - [ ] [Test4](/404.md)
 - [ ] [Test5](/404.md)
