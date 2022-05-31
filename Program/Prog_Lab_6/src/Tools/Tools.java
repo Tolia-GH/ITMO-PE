@@ -1,10 +1,7 @@
 package Tools;
 
-import Main.Server;
-
 import java.io.IOException;
 import java.net.ServerSocket;
-import java.net.Socket;
 import java.util.Scanner;
 
 /**
@@ -19,6 +16,9 @@ public class Tools {
     public static void Message(String message) {
         System.out.print(message);
     }
+    public static void Message(char message) {
+        System.out.print(message);
+    }
 
     /**
      * Message l.
@@ -26,6 +26,9 @@ public class Tools {
      * @param messageL description of exception l
      */
     public static void MessageL(String messageL) {
+        System.out.println(messageL);
+    }
+    public static void MessageL(char messageL) {
         System.out.println(messageL);
     }
 
