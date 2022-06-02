@@ -7,8 +7,8 @@
   - [x] [Lab 1.01](Labs/Lab1.01.md)
   - [x] [Lab 1.02](Labs/Lab1.02.md)
   - [ ] [Lab 1.04](../404.md)
-  - [ ] [Lab 1.07](../404.md)
-  - [ ] [Lab 1.09](../404.md)
+  - [x] [Lab 1.07](Labs/Lab1.07.md)
+  - [x] [Lab 1.09](Labs/Lab1.09.md)
 
 <style type="text/css">
     #footer {
