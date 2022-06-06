@@ -4,7 +4,7 @@
 
 - [x] [实验要求](LabRequests.md)
 - [x] [教材指引](Guide.md)
-- [ ] [Рубеж](../404.md)
+- [x] [Рубеж](Rubiesh.md)
 
 <style type="text/css">
     #footer {
