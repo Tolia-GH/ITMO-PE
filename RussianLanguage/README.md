@@ -2,7 +2,8 @@
 
 ## 阅读索引
 
-- [x] [教材课文及翻译](课文.md)
+- [x] [教材课文及翻译](text.md)
+- [x] [语法](gramma.md)
 
 <style type="text/css">
     #footer {
