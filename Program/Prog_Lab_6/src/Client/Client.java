@@ -1,18 +1,20 @@
 package Client;
 
 
+import Collection.Exceptions.ConnectionErrorException;
+import Main.Request;
+import Main.Response;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 import java.net.InetSocketAddress;
-import java.net.Socket;
 import java.nio.channels.SocketChannel;
 
 public class Client {
     //args
-    private int port = 2001;
-    private String ip = "localhost";
+    private int port;
+    private String host;
     private String filePath;
     private InetSocketAddress inetSocketAddress;
     private SocketChannel socketChannel;
@@ -20,8 +22,8 @@ public class Client {
     private ObjectOutputStream objectWriter;
 
 
-    public Client(String ip, int port) {
-        this.ip = ip;
+    public Client(String host, int port) {
+        this.host = host;
         this.port = port;
     }
 
@@ -31,9 +33,9 @@ public class Client {
             while (processingStatus) {
                 try {
                     connectToServer();
-                    processingStatus = processingStatus;
-                } catch (IOException ioException) {
-                    ioException.printStackTrace();
+                    processingStatus = processRequest();
+                } catch (ConnectionErrorException exception) {
+                    if()
                 }
             }
         } catch (Exception e) {
@@ -43,7 +45,7 @@ public class Client {
 
     private void connectToServer() throws IOException {
         try {
-            inetSocketAddress = new InetSocketAddress(ip,port);
+            inetSocketAddress = new InetSocketAddress(host,port);
             socketChannel = SocketChannel.open(inetSocketAddress);
             objectReader = new ObjectInputStream(socketChannel.socket().getInputStream());
             objectWriter = new ObjectOutputStream(socketChannel.socket().getOutputStream());
@@ -53,6 +55,16 @@ public class Client {
     }
 
     private boolean processRequest() {
+        Request requestToServer = null;
+        Response serverResponse = null;
+        do {
+            try {
+                requestToServer = serverResponse != null ?
+
+            } catch () {
+
+            }
+        } while (!requestToServer.getCommandName().equals("exit"));
         return false;
     }
 
