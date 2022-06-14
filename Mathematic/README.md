@@ -3,7 +3,7 @@
 ## 阅读索引
 
 - [x] [高等数学](Mathematic.md)
-- [x] [Типовой расчет](ТypeWork.md)
+- [x] [Типовой расчет](TypeWork.md)
 - [ ] [考试准备](../404.md)
 
 <style type="text/css">
