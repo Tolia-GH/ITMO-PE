@@ -205,24 +205,55 @@ $$
 \end{cases}
 $$
 
+Очевидно, что $f_1$ - окружность,и Площать $S_1=64\pi$
+
 $$\begin{split}
-    &Очевидно, что\ f_1 - окружность,и\ Площать\ S_1=64\pi\\
     &Пусть\ S_\Delta=\int^8_0(f_1-f_2){\rm d}x=\int^8_0(\sqrt{16x-x^2}-2\sqrt{2x}){\rm d}x\\
     &=16\pi-\int^8_02\sqrt{2x}{\rm d}x\\
     &=16\pi-2\sqrt{2}\int^8_0\sqrt{x}{\rm d}x\\
     &=16\pi-\left.\frac{4}{3}\sqrt{2}x^\frac{3}{2}\right|^8_0\\
     &=16\pi-\frac{128}{3}\\
-    &Площадь\ области,ограниченной\ заданными\ кривыми\\
-    &S=S_1-2S\Delta=64\pi-2(16\pi-\frac{128}{3})=32\pi+\frac{256}{3}
+    &
 \end{split}
 $$
 
+Площадь области,ограниченной заданными кривыми $S$:
+
+$$S=S_1-2S\Delta=64\pi-2(16\pi-\frac{128}{3})=32\pi+\frac{256}{3}$$
+
+
 ## Задание №11
 
-Найдите длину кривой, заданной в декартовых координатах
+Найдите длину кривой $L$, заданной в декартовых координатах
 
 $$y^2-2y=4x\quad -1\le x\le 0$$
 
+<div align=center><img src="pic/TypeWork-2.png"></div>
+<center>График Функция</center>
+
+Очевидно, что L равна его обратной фукцией в части $(-1\le y\le 0)$:
+
+$$x^2-2x=4y\quad -1\le y\le 0$$
+
+<div align=center><img src="pic/TypeWork-3.png"></div>
+<center>График Функция</center>
+
+$$\begin{split}
+    x^2&-2x=4y\\
+    \Rightarrow y&=\frac{x^2}{4}-\frac{x}{2}\\
+    y'&=\frac{x}{2}-\frac{1}{2}\\
+    L&=\int^0_{-1}\sqrt{1+y'^2}{\rm d}x\\
+    &=\int^0_{-1}\sqrt{1+(\frac{x}{2}-\frac{1}{2})^2}{\rm d}x\\
+    &=\frac{1}{2}\int^0_{-1}\sqrt{x^2-2x+5}{\rm d}x\\
+    Пусть\ u&=x-1,{\rm d}u={\rm d}x\\
+    L&=\frac{1}{2}\int^{-1}_{-2}\sqrt{u^2+4}{\rm d}u\\
+    Пусть\ u&=2\tan(t),{\rm d}u=2\sec^2(t){\rm d}t\\
+    L&=2\int^{-\arctan\frac{1}{2}}_{-\frac{\pi}{4}}\sec^3(t){\rm d}t\\
+    &=\left.\tan(t)\sec(t)\right|^{-\arctan\frac{1}{2}}_{-\frac{\pi}{4}}+\int^{-\arctan\frac{1}{2}}_{-\frac{\pi}{4}}\sec(t){\rm d}t\\
+    &=\sqrt{2}-\frac{\sqrt{5}}{4}+\int^{-\arctan\frac{1}{2}}_{-\frac{\pi}{4}}\sec(t){\rm d}t\\
+    &=\sqrt{2}-\frac{\sqrt{5}}{4}+\left.\ln(\tan(t)+\sec(t))\right|^{-\arctan\frac{1}{2}}_{-\frac{\pi}{4}}\\
+    &=\sqrt{2}-\frac{\sqrt{5}}{4}-\ln(\sqrt{2}-1)+\ln(\frac{1}{2}(\sqrt{5}-1))
+\end{split}$$
 ## Задание №12
 
 Вычислите
