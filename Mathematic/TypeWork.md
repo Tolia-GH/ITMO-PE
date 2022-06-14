@@ -115,8 +115,8 @@ $$\begin{split}
     =&\frac{3}{10}\int\frac{-t-2}{2t^2+t+1}{\rm d}t+6\int t^5{\rm d}t+3\int t^3{\rm d}t+3\int t^2{\rm d}t+\frac{3}{2}\int t{\rm d}t+\frac{12}{5}\int\frac{ {\rm d}t}{t-1}+3\int {\rm d}t\\
     =&\frac{3}{10}\int\left(-\frac{4t+2}{4(2t^2+2t+1)}-\frac{3}{2(2t^2+2t+1)}\right){\rm d}t+6\int t^5{\rm d}t+3\int t^3{\rm d}t+3\int t^2{\rm d}t+\frac{3}{2}\int t{\rm d}t+\frac{12}{5}\int\frac{ {\rm d}t}{t-1}+3\int {\rm d}t\\
     =&-\frac{3}{40}\int\frac{4t+2}{2t^2+2t+1}{\rm d}t-\frac{9}{20}\int\frac{ {\rm d}t}{2t^2+2t+1}+6\int t^5{\rm d}t+3\int t^3{\rm d}t+3\int t^2{\rm d}t+\frac{3}{2}\int t{\rm d}t+\frac{12}{5}\int\frac{ {\rm d}t}{t-1}+3\int {\rm d}t\\
-    =&-\frac{3}{40}\int\frac{{\rm d}(2t^2+2t+1)}{2t^2+2t+1}-\frac{9}{20}\int\frac{ {\rm d}t}{(\sqrt{2}t+\frac{1}{\sqrt{2}})^2+\frac{1}{2}}+6\int t^5{\rm d}t+3\int t^3{\rm d}t+3\int t^2{\rm d}t+\frac{3}{2}\int t{\rm d}t+\frac{12}{5}\int\frac{ {\rm d}t}{t-1}+3\int {\rm d}t\\
-    =&-\frac{3}{40}\int\frac{{\rm d}(2t^2+2t+1)}{2t^2+2t+1}-\frac{9}{10\sqrt{2}}\int\frac{ {\rm d}(\sqrt{2t}+\frac{1}{\sqrt{2}})}{2(\sqrt{2}t+\frac{1}{\sqrt{2}})^2+1}+6\int t^5{\rm d}t+3\int t^3{\rm d}t+3\int t^2{\rm d}t+\frac{3}{2}\int t{\rm d}t+\frac{12}{5}\int\frac{ {\rm d}t}{t-1}+3\int {\rm d}t\\
+    =&-\frac{3}{40}\int\frac{ {\rm d}(2t^2+2t+1)}{2t^2+2t+1}-\frac{9}{20}\int\frac{ {\rm d}t}{(\sqrt{2}t+\frac{1}{\sqrt{2}})^2+\frac{1}{2}}+6\int t^5{\rm d}t+3\int t^3{\rm d}t+3\int t^2{\rm d}t+\frac{3}{2}\int t{\rm d}t+\frac{12}{5}\int\frac{ {\rm d}t}{t-1}+3\int {\rm d}t\\
+    =&-\frac{3}{40}\int\frac{ {\rm d}(2t^2+2t+1)}{2t^2+2t+1}-\frac{9}{10\sqrt{2}}\int\frac{ {\rm d}(\sqrt{2t}+\frac{1}{\sqrt{2}})}{2(\sqrt{2}t+\frac{1}{\sqrt{2}})^2+1}+6\int t^5{\rm d}t+3\int t^3{\rm d}t+3\int t^2{\rm d}t+\frac{3}{2}\int t{\rm d}t+\frac{12}{5}\int\frac{ {\rm d}t}{t-1}+3\int {\rm d}t\\
     =&-\frac{3}{40}\ln(2t^2+2t+1)-\frac{9}{20}\arctan(2t+1)+t^6+\frac{3}{4}t^4+t^3+\frac{3}{4}t^2+\frac{12}{5}\ln(t-1)+3t+C\\
     &(t=\sqrt[12]{x+5})
 \end{split}
