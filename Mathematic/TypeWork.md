@@ -264,6 +264,18 @@ $$\begin{cases}
     y=\frac{8}{1+t^2}
 \end{cases}$$
 
+Из формулы $x$ получим $t=\frac{x}{2}$, подставляем в $y$:
+
+$$\begin{split}
+    y&=\frac{8}{1+(\frac{x}{2})^2}=\frac{32}{x^2+4}\\
+    S&=\int^{+\infty}_{-\infty}\frac{32}{x^2+4}{\rm d}x\\
+    &=32\int^{+\infty}_{\infty}\frac{1}{x^2+4}{\rm d}x\\
+    &=64\int^{\infty}_0\frac{1}{x^2+4}{\rm d}x\\
+    &=32\int^{\infty}_0\frac{1}{\frac{x^2}{4}+1}{\rm d}(\frac{x}{2})\\
+    &=\left.\lim_{a\rightarrow\infty}32\arctan(\frac{x}{2})\right|^a_0\\
+    &=16\pi
+\end{split}$$
+
 - б) Длину дуги кривой $r=6\sin^3{(\frac{\varphi}{3})}$
 
 ## Задание №13
