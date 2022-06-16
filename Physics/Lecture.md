@@ -548,7 +548,8 @@
 
       $$A=\sqrt{A_1^2+A_2^2+2A_1A_2\cos\Delta\varphi}$$
 
-      式中，$\Delta\varphi=-2\pi(r_1-r_2)/\lambda+\varphi_@-\varphi_1$ 为两波源分别在 $P$ 点引起的振动的相位差  
+      式中，$\Delta\varphi=-2\pi(r_1-r_2)/\lambda+\varphi_@-\varphi_1$ 为两波源分别在 $P$ 点引起的振动的相位差
+
       由此可见：
       - 当 $\Delta\varphi=2\pi$ 时，$A=A_1+A_2$，$P$ 点为振动加强点  
       - 当 $\Delta\varphi=(2k+1)\pi$ 时，$A=|A_1-A_2|$，$P$ 点为振动减弱点
