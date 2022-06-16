@@ -10,7 +10,7 @@
   - [x] [Lab 1.07](Labs/Lab1.07.md)
   - [x] [Lab 1.09](Labs/Lab1.09.md)
 - [x] [练习课习题](Practice.md)
-- [ ] [期末考试](Exam.md)
+- [x] [期末考试](Exam.md)
 
 <style type="text/css">
     #footer {
