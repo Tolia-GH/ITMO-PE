@@ -88,7 +88,7 @@
     热力学温度|$\theta$
     物质的量|$N$
     发光强度|$J$
-    
+
   - 国际单位制
     <div align=center><img src="pic/Lec1.2.png"></div>
   - 测量方法
@@ -548,7 +548,7 @@
 
       式中，$\Delta\varphi=-2\pi(r_1-r_2)/\lambda+\varphi_@-\varphi_1$ 为两波源分别在 $P$ 点引起的振动的相位差  
       由此可见：
-      - 当 $\Delta\varphi=2\pi$ 时，$A=A_1+A_2$，$P$点为振动加强点
+      - 当 $\Delta\varphi=2\pi$ 时，$A=A_1+A_2$，$P$ 点为振动加强点  
       - 当 $\Delta\varphi=(2k+1)\pi$ 时，$A=|A_1-A_2|$，$P$ 点为振动减弱点
 
       把 $\Delta r=r_2-r_1$ 称为波程差。由波程差引起的相位差为
