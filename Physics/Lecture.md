@@ -560,7 +560,7 @@
 
     式中，机为质元振动的速度大小，由波动方程 $y=A\cos\omega(t-\frac{x}{v})$ 可得：
 
-    $$u=\frac{{\rm d}y}{{\rm d}t}=-A\omega\sin\omega(t-\frac{x}{v})$$
+    $$u=\frac{ {\rm d}y}{ {\rm d}t}=-A\omega\sin\omega(t-\frac{x}{v})$$
 
     $${\rm d}W_k=\frac{1}{2}(\rho{\rm d}V)A^2\omega^2\sin^2\omega(t-\frac{x}{v})$$
 
