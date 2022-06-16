@@ -163,11 +163,11 @@ $$t=\sqrt{\frac{l}{a_{т}}}=\sqrt{\frac{2h}{g(\sin\alpha-\mu\cos\alpha)-a(\cos\a
 
 $$U(x)=\frac{a}{x^{\frac{3}{2}}}-\frac{ b}{x^{ \frac{1}{2}}}$$
 
-$$F(x)=\frac{ {\rm d}U(x)}{ {\rm d}x}=-m\omega^2x$$
+$$F(x)=\frac{ {\rm d}U(x)}{ {\rm d}x}=\frac{1}{2}bx^{-\frac{3}{2}}-\frac{3}{2}ax^{-\frac{5}{2}}=-m\omega^2x$$
 
-$$\Rightarrow\omega$$
+$$\Rightarrow\omega=\frac{3a\sqrt{x}}{2mx^4}-\frac{b\sqrt{x}}{2x^3}$$
 
-$$T=\frac{2\pi}{\omega}$$
+$$T=\frac{2\pi}{\omega}=\frac{4\pi x^3\sqrt{x}}{3a-bx}$$
 
 ## 6)
 
