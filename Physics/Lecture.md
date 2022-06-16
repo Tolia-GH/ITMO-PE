@@ -552,7 +552,7 @@
 
       由此可见：
       - 当 $\Delta\varphi=2\pi$ 时，$A=A_1+A_2$，$P$ 点为振动加强点  
-      - 当 $\Delta\varphi=(2k+1)\pi$ 时，$A=\|A_1-A_2\|$，$P$ 点为振动减弱点
+      - 当 $\Delta\varphi=(2k+1)\pi$ 时，$A=\left|A_1-A_2\right|$，$P$ 点为振动减弱点
 
       把 $\Delta r=r_2-r_1$ 称为波程差。由波程差引起的相位差为
 
