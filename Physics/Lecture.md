@@ -517,9 +517,11 @@
           $$y=A\cos[\omega(t-\frac{x}{v})+\varphi]$$
 
     - 当振动沿 $x$ 轴负向传播时，$x$ 点的相位超前于原点的相位为 $2\pi x/\lambda$，$x$ 点的时间超前于原点的时间为 $x/v$。则波动方程为:
-      $$y=A\cos(\omega t+2\pi\frac{x}{\lambda}+\varphi)\\
-      y=A\cos[\omega(t+\frac{x}{v}+\varphi)]
-      $$
+
+      $$y=A\cos(\omega t+2\pi\frac{x}{\lambda}+\varphi)$$
+
+      $$y=A\cos[\omega(t+\frac{x}{v}+\varphi)]$$
+
   - 波的叠加
     - 叠加原理：
       - 两列波相遇后再分开，其传播情况与未相遇时相同，互不干扰
