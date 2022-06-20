@@ -276,7 +276,30 @@ $$\begin{split}
     &=16\pi
 \end{split}$$
 
-- б) Длину дуги кривой $r=6\sin^3{(\frac{\varphi}{3})}$
+- б) Длину дуги кривой
+
+  $$r=6\sin^3{(\frac{\varphi}{3})}$$
+
+  $$r'=6\sin^2(\frac{\varphi}{3})\cos(\frac{\varphi}{3})$$
+
+  $$\begin{split}
+    L&=\int^{\varphi_2}_{\varphi_1}\sqrt{r^2+r'^2}{\rm d}\varphi\\
+    &=\int^{\varphi_2}_{\varphi_1}\sqrt{36\sin^6(\frac{\varphi}{3})+36\sin^4(\frac{\varphi}{3})\cos^2(\frac{\varphi}{3})}{\rm d}\varphi\\
+    &=\int^{\varphi_2}_{\varphi_1}6\sin^2(\frac{\varphi}{3}){\rm d}\varphi
+  \end{split}
+  $$
+
+  потому что $r\ge0$, мы получим $\sin^3(\frac{\varphi}{3}\ge0)$, то $\varphi_1=0,\varphi_2=3\pi$, поэтому
+
+  $$\begin{split}
+    L&=\int^{3\pi}_{0}6\sin^2(\frac{\varphi}{3}){\rm d}\varphi\\
+    &=6\int^{3\pi}_{0}\sin^2(\frac{\varphi}{3}){\rm d}\varphi\\
+    &=18\int^{\pi}_{0}\sin^2(\frac{\varphi}{3}){\rm d}(\frac{\varphi}{3})\\
+    &=18\int^{\pi}_{0}(\frac{1-\cos(\frac{2\varphi}{3})}{2}){\rm d}(\frac{\varphi}{3})\\
+    &=9\int^{\pi}_0{\rm d}(\frac{\varphi}{3})-9\int^{\pi}_0\cos(\frac{2\varphi}{3}){\rm d}(\frac{\varphi}{3})\\
+    &=9\int^{\pi}_0{\rm d}(\frac{\varphi}{3})\\
+    &=9\pi
+  \end{split}$$
 
 ## Задание №13
 
