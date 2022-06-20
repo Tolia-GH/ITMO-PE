@@ -10,7 +10,7 @@
     </script>
 </head>
 
-## [MainPage](../index.md)/[离散数学](README.md)/离散数学
+## [MainPage](../index.md)/[Discrete Mathematics](README.md)/Discrete Mathematics
 
 # 离散数学
 

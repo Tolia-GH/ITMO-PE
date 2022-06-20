@@ -1,8 +1,8 @@
-## [MainPage](../index.md)/俄语
+## [MainPage](../index.md)/Rusian Language
 
 ## 阅读索引
 
-- [x] [教材课文及翻译](text.md)
+- [x] [教材课文及翻译](Texts.md)
 - [x] [语法](gramma.md)
 
 <style type="text/css">

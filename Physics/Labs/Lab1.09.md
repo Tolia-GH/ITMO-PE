@@ -10,7 +10,7 @@
     </script>
 </head>
 
-## [MainPage](../../index.md)/[物理](../README.md)/Lab1.09
+## [MainPage](../../index.md)/[Physics](../README.md)/Lab1.09
 
 # <center>Лабораторная работа No 1.09</center>
 

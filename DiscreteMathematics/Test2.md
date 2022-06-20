@@ -1,4 +1,4 @@
-## [MainPage](../index.md)/[离散数学](README.md)/Test2
+## [MainPage](../index.md)/[Discrete Mathematics](README.md)/Test2
 
 <style type="text/css">
     #footer {

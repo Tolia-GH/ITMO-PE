@@ -1,10 +1,10 @@
-## [MainPage](../index.md)/数学
+## [MainPage](../index.md)/Mathematics
 
 ## 阅读索引
 
-- [x] [高等数学](Mathematic.md)
+- [x] [Advanced Mathematics](AdvancedMathematics.md)
 - [x] [Типовой расчет](TypeWork.md)
-- [ ] [考试准备](../404.md)
+- [ ] [Exam](../404.md)
 
 <style type="text/css">
     #footer {

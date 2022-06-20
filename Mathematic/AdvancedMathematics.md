@@ -10,7 +10,7 @@
     </script>
 </head>
 
-## [MainPage](../index.md)/[数学](README.md)/高等数学
+## [MainPage](../index.md)/[Mathematics](README.md)/Advanced Mathematics
 
 # 高等数学
 

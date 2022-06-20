@@ -10,7 +10,7 @@
     </script>
 </head>
 
-## [MainPage](../index.md)/[物理](README.md)/Practice
+## [MainPage](../index.md)/[Physics](README.md)/Practice
 
 # Practice
 

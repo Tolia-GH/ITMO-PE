@@ -10,7 +10,7 @@
     </script>
 </head>
 
-## [MainPage](../index.md)/[离散数学](README.md)/Test1
+## [MainPage](../index.md)/[Discrete Mathematics](README.md)/Test1
 
 ## Variant 1
 

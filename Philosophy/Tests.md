@@ -1,4 +1,4 @@
-## [MainPage](../index.md)/[哲学](README.md)/Tests
+## [MainPage](../index.md)/[Philosophy](README.md)/Tests
 
 ## Test1
 

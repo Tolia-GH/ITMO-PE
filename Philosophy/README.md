@@ -1,8 +1,8 @@
-## [MainPage](../index.md)/哲学
+## [MainPage](../index.md)/Philosophy
 
 ## 阅读索引
 
-- [x] [柏拉图-阿尔喀比亚德篇](柏拉图-阿尔喀比亚德篇.md)
+- [x] [Plato-Alcibiades](Plato-Alcibiades.md)
 - [ ] [笛卡尔-第一哲学沉思录](../404.md)
 - [x] [灵魂与身体的二元](辩论-灵魂与身体的二元.md)
 - [x] [论意识与身体](论意识与身体.md)

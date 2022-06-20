@@ -1,4 +1,4 @@
-## [MainPage](../index.md)/[哲学](README.md)/柏拉图 阿尔喀比亚德篇
+## [MainPage](../index.md)/[Philosophy](README.md)/柏拉图 阿尔喀比亚德篇
 
 # 柏拉图 阿尔喀比亚德篇 Платон Алкивиад I
 

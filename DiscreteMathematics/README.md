@@ -1,8 +1,8 @@
-## [MainPage](../index.md)/离散数学
+## [MainPage](../index.md)/Discrete Mathematics
 
 ## 阅读索引
 
-- [x] [离散数学](离散数学.md)
+- [x] [Discrete Mathematics](DiscreteMathematics.md)
 - [x] [Test1](Test1.md)
 - [x] [Test2](Test2.md)
 - [ ] [Test3](../404.md)

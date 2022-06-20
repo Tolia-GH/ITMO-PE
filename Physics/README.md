@@ -1,4 +1,4 @@
-## [MainPage](../index.md)/物理
+## [MainPage](../index.md)/Physics
 
 ## 阅读索引
 
