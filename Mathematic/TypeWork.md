@@ -254,6 +254,7 @@ $$\begin{split}
     &=\sqrt{2}-\frac{\sqrt{5}}{4}+\left.\ln(\tan(t)+\sec(t))\right|^{-\arctan\frac{1}{2}}_{-\frac{\pi}{4}}\\
     &=\sqrt{2}-\frac{\sqrt{5}}{4}-\ln(\sqrt{2}-1)+\ln(\frac{1}{2}(\sqrt{5}-1))
 \end{split}$$
+
 ## Задание №12
 
 Вычислите
