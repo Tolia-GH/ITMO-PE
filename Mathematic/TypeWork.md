@@ -306,7 +306,17 @@ $$\begin{split}
 Найдите значение несобственного интеграла или установите его расходимость.
 - а)
   
-$$\int^{+\infty}_0(4-3x)e^{-3x}{\rm d}x$$
+$$
+\begin{split}
+    &\int^{+\infty}_0(4-3x)e^{-3x}{\rm d}x\\
+    =&4\int^{+\infty}_0e^{-3x}{\rm d}x-3\int^{+\infty}_0xe^{-3x}{\rm d}x\\
+    =&4\lim_{b\rightarrow\infty}\int^{b}_0e^{-3x}{\rm d}x-3\lim_{b\rightarrow\infty}\int^{b}_0xe^{-3x}{\rm d}x\\
+    =&3\lim_{b\rightarrow\infty}\int^b_0e^{-3x}{\rm d}x+\left.\lim_{b\rightarrow\infty}xe^{-3x}\right|^b_0\\
+    =&3\lim_{b\rightarrow\infty}\int^b_0e^{-3x}{\rm d}x+\lim_{b\rightarrow\infty}be^{-3b}\\
+    =&3\lim_{b\rightarrow\infty}\int^b_0e^{-3x}{\rm d}x+0\\
+    =&\left.e^{-3b}\right|^{0}_{-\infty}\\
+    =&1
+\end{split}$$
 
 - б)
 
