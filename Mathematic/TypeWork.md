@@ -290,7 +290,7 @@ $$\begin{split}
   \end{split}
   $$
 
-  потому что $r\ge0$, мы получим $\sin^3(\frac{\varphi}{3}\ge0)$, то $\varphi_1=0,\varphi_2=3\pi$, поэтому
+  потому что $r\ge0$, мы получим $\sin^3(\frac{\varphi}{3})\ge0$, то $\varphi_1=0,\varphi_2=3\pi$, поэтому
 
   $$\begin{split}
     L&=\int^{3\pi}_{0}6\sin^2(\frac{\varphi}{3}){\rm d}\varphi\\
