@@ -320,7 +320,16 @@ $$
 
 - б)
 
-$$\int^\frac{1}{2}_0\frac{x^3{\rm d}x}{\sqrt{1-16x^4}}$$
+$$\begin{split}
+    &\int^\frac{1}{2}_0\frac{x^3{\rm d}x}{\sqrt{1-16x^4}}\\
+    Пусть\ u=&1-16x^4\quad{\rm d}u=-64x^3{\rm d}x\\
+    =&-\frac{1}{64}\int^0_1\frac{1}{\sqrt{u}}{\rm d}u\\
+    =&\frac{1}{64}\int^1_0\frac{1}{\sqrt{u}}{\rm d}u\\
+    =&\left.\lim_{b\rightarrow0^+}\frac{\sqrt
+    u}{32}\right|^1_b\\
+    =&\frac{\sqrt{1}}{32}-\frac{\sqrt{0}}{32}\\
+    =&\frac{1}{32}
+\end{split}$$
 
 <style type="text/css">
     #footer {
