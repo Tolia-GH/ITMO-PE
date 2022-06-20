@@ -1,4 +1,4 @@
-## [主页](../index.md)/[俄语](README.md)/课文
+## [MainPage](../index.md)/[俄语](README.md)/课文
 
 # Основный курс
 

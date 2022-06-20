@@ -10,7 +10,7 @@
     </script>
 </head>
 
-## [主页](../index.md)/[物理](README.md)/Exam
+## [MainPage](../index.md)/[物理](README.md)/Exam
 
 ### Классическая (ньютоновская) механика
 

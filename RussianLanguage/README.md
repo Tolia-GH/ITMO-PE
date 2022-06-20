@@ -1,4 +1,4 @@
-## [主页](../index.md)/俄语
+## [MainPage](../index.md)/俄语
 
 ## 阅读索引
 

@@ -10,7 +10,7 @@
     </script>
 </head>
 
-## [主页](../../index.md)/[物理](../README.md)/Lab1.01
+## [MainPage](../../index.md)/[物理](../README.md)/Lab1.01
 
 ## Задачи, решаемые при выполнении работы.
 

@@ -1,4 +1,4 @@
-## [主页](../index.md)/数学
+## [MainPage](../index.md)/数学
 
 ## 阅读索引
 

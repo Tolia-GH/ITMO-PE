@@ -1,4 +1,4 @@
-## [主页](../index.md)/[OPD](README.md)/Guide
+## [MainPage](../index.md)/[OPD](README.md)/Guide
 
 # <center>Приложение В. Состав, структура и функционирование БЭВМ-NG <br>附录 C. BEVM-NG 的组成、结构和功能</center>
 ## <center>Часть 2. Организация ввода-вывода в базовой ЭВМ <br>第 2 部分：基础计算机中输入输出的组织</center>

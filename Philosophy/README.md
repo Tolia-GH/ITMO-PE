@@ -1,4 +1,4 @@
-## [主页](../index.md)/哲学
+## [MainPage](../index.md)/哲学
 
 ## 阅读索引
 

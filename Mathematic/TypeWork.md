@@ -10,7 +10,7 @@
     </script>
 </head>
 
-## [主页](../index.md)/[数学](README.md)/Типовой Расчёт
+## [MainPage](../index.md)/[数学](README.md)/Типовой Расчёт
 
 # Типовой Расчёт
 
