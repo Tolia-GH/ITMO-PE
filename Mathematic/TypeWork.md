@@ -340,13 +340,36 @@ $$\begin{split}
 
 $$z=\lg(x-2)(y-1)+\frac{y}{x+1}$$
 
+$$\begin{split}
+    \begin{cases}
+        (x-2)(y-1)>0\\
+        x+1\ne0
+    \end{cases}
+\end{split}$$
+
 $$z=\ln(x^2+y^2-16)+\frac{1}{\sqrt{4-x^2-y^2}}$$
+
+$$\begin{cases}
+    x^2+y^2-16>0\\
+    4-x^2-y^2>0
+\end{cases}$$
 
 ## Задание №2
 
 Найдите частные производные первого порядка функции
 
 $$z=\frac{5x+y\cdot\tan x}{\sqrt{x^2+y^2}}$$
+
+$$\begin{split}
+    z'_x&=\frac{\partial}{\partial x}(\frac{5x+y\cdot\tan x}{\sqrt{x^2+y^2}})\\
+    Пусть&\begin{cases}
+        u=5x+y\cdot\tan x\\
+        v=\frac{1}{\sqrt{x^2+y^2}}
+    \end{cases} \\
+    \frac{\partial}{\partial x}(uv)&=\frac{\partial u}{\partial x}v+\frac{\partial v}{\partial x}u\\
+    z'_x&=\frac{\frac{\partial}{\partial x}(5x+y\cdot\tan x)}{\sqrt{x^2+y^2}}+(\frac{\partial}{\partial x}\frac{1}{\sqrt{x^2+y^2}})(5x+y\tan x)\\
+    z'_y&=\\
+\end{split}$$
 
 ## Задание №3
 
