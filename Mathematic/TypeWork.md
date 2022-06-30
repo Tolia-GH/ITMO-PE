@@ -363,21 +363,51 @@ $$z=\frac{5x+y\cdot\tan x}{\sqrt{x^2+y^2}}$$
 $$\begin{split}
     z'_x&=\frac{\partial}{\partial x}(\frac{5x+y\cdot\tan x}{\sqrt{x^2+y^2}})\\
     Пусть&\begin{cases}
-        u=5x+y\cdot\tan x\\
+        u=5x+y\cdot\tan(x)\\
         v=\frac{1}{\sqrt{x^2+y^2}}
     \end{cases} \\
-    \frac{\partial}{\partial x}(uv)&=\frac{\partial u}{\partial x}v+\frac{\partial v}{\partial x}u\\
-    z'_x&=\frac{\frac{\partial}{\partial x}(5x+y\cdot\tan x)}{\sqrt{x^2+y^2}}+(\frac{\partial}{\partial x}\frac{1}{\sqrt{x^2+y^2}})(5x+y\tan x)\\
-    z'_y&=\\
+    \frac{\partial}{\partial x}&(uv)=\frac{\partial u}{\partial x}v+\frac{\partial v}{\partial x}u\\
+    z'_x&=\frac{\frac{\partial}{\partial x}(5x+y\cdot\tan(x))}{\sqrt{x^2+y^2}}+(\frac{\partial}{\partial x}\frac{1}{\sqrt{x^2+y^2}})(5x+y\tan(x))\\
+    &=\frac{5+y\cdot\sec^2(x)}{\sqrt{x^2+y^2}}-\frac{x(5x+y\tan(x))}{\sqrt{(x^2+y^2)^3}}\\
+    z'_y&=\frac{\partial}{\partial y}(\frac{5x+y\cdot\tan(x)}{\sqrt{x^2+y^2}})\\
+    \frac{\partial}{\partial y}&(uv)=\frac{\partial u}{\partial y}v+\frac{\partial v}{\partial y}u\\
+    z'_y&=\frac{\frac{\partial}{\partial y}(5x+y\cdot\tan(x))}{\sqrt{x^2+y^2}}+(\frac{\partial}{\partial y}\frac{1}{\sqrt{x^2+y^2}})(5x+y\tan(x))\\
+    &=\frac{\tan(x)}{\sqrt{x^2+y^2}}-\frac{y(5x+y\tan(x))}{\sqrt{(x^2+y^2)^3}}
 \end{split}$$
 
 ## Задание №3
 
 Найдите частные производные функции $z=z(x;y)$, заданной неявной уравнением $8x^3-3y^2+z^2-\sin z+2x-3y+1=0$
 
+$$F'_x(x,y,z)=24x^2+2, F'_y(x,y,z)=6y-3,F'_z(x,y,z)=2z-\cos z$$
+
+$$z'_x=-\frac{F'_x(x,y,z)}{F'_z(x,y,z)}=\frac{24x^2+2}{2z-\cos z}$$
+
+$$z'_y=-\frac{F'_y(x,y,z)}{F'_z(x,y,z)}=\frac{6y-3}{2z-\cos z}$$
+
 ## Задание №4
 
-Найдите градиент функции $z=2x^4-3y^3+x+2y$ в точке $M_0(2;1)$ и произаодную по направлению вектора $\vec{M_0M_1}$, где $M_1(5;3)$
+Найдите градиент функции $z=2x^4-3y^3+x+2y$ в точке $M_0(2;1)$ и производную по направлению вектора $\vec{M_0M_1}$, где $M_1(5;3)$
+
+$$\begin{split}
+    z'_x&=\frac{\partial}{\partial x}(2x^4-3y^3+x+2y)=8x^3+1
+    \\ z'_x&(2;1)=65\\
+    z'_y&=\frac{\partial}{\partial y}(2x^4-3y^3+x+2y)=-9y^2+2
+    \\ z'_y&(2;1)=-7\\
+\end{split}$$
+
+тогда $\nabla z=\{65;-7\}$
+
+$$\begin{split}
+    z'_l(x;y)&=z'_x\cdot\cos\alpha+z'_y\cdot\cos\beta\\
+    \vec{M_0M_1}&=(5-2;3-1)=(3;2)\\
+    |\vec{M_0M_1}|&=\sqrt{x^2+y^2}=\sqrt{13}\\
+    \cos\alpha&=\frac{3}{\sqrt{13}},\cos\beta=\frac{2}{\sqrt{13}}\\
+    z'_l&=z'_x(3;2)\cos\alpha+z'_y(3;2)\cos\beta\\
+    &=65\times\frac{3}{\sqrt{13}}-7\frac{2}{\sqrt{13}}\\
+    &=\frac{195}{\sqrt{13}}-\frac{14}{\sqrt{13}}
+\end{split}$$
+
 
 ## Задание №5
 
