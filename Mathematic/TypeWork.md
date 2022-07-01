@@ -508,6 +508,47 @@ $$\begin{split}
     \end{cases}
 \end{split}$$
 
+<div align=center><img src="pic/TypeWork-7.png"></div>
+<center>График Функция</center>
+
+$$\begin{split}
+    Расмотрим\ AO\\
+    y=0, -3\le x\le 0\\
+    z=7-x^2+3x\\
+    z(-3;0)=-25\\
+    z(0;0)=7\\
+    z'_x=-2x+3\\
+    x=\frac{3}{2}\\
+    (\frac{3}{2},0)\ лежит\ не\ в\ AO
+\end{split}
+$$
+
+$$\begin{split}
+    Расмотрим\ BO\\
+    x=0, -2\le x\le 0\\
+    z=7-y^2-3y\\
+    z(0;-2)=9\\
+    z(0;0)=7\\
+    z'_x=-2y-3\\
+    x=-\frac{3}{2}\\
+    (0,-\frac{3}{2})\ лежит\ в\ BO
+    z(0,-\frac{3}{2})=\frac{37}{4}
+\end{split}
+$$
+
+$$\begin{split}
+    Расмотрим\ AB\\
+    x=0, -2\le x\le 0\\
+    z=7-y^2-3y\\
+    z(0;-2)=9\\
+    z(0;0)=7\\
+    z'_x=-2y-3\\
+    x=-\frac{3}{2}\\
+    (0,-\frac{3}{2})\ лежит\ в\ BO
+    z(0,-\frac{3}{2})=\frac{37}{4}
+\end{split}
+$$
+
 <style type="text/css">
     #footer {
         position: relative;
@@ -517,7 +558,7 @@ $$\begin{split}
         font-size: 12px;
         letter-spacing: 1px;
     }
- 
+
     .content {
         height: 1800px;
         width: 100%;
