@@ -347,12 +347,18 @@ $$\begin{split}
     \end{cases}
 \end{split}$$
 
+<div align=center><img src="pic/TypeWork-4.png"></div>
+<center>График Функция</center>
+
 $$z=\ln(x^2+y^2-16)+\frac{1}{\sqrt{4-x^2-y^2}}$$
 
 $$\begin{cases}
     x^2+y^2-16>0\\
     4-x^2-y^2>0
 \end{cases}$$
+
+<div align=center><img src="pic/TypeWork-4.png"></div>
+<center>График Функция</center>
 
 ## Задание №2
 
@@ -505,49 +511,68 @@ $$\begin{split}
     \begin{cases}
         x=3\\
         y=-3\\
-    \end{cases}
+    \end{cases}\\
+    (3;-3)\ лежит\ в\ D\\
+    z(3;-3)=7
 \end{split}$$
 
 <div align=center><img src="pic/TypeWork-7.png"></div>
 <center>График Функция</center>
 
 $$\begin{split}
-    Расмотрим\ AO\\
-    y=0, -3\le x\le 0\\
-    z=7-x^2+3x\\
-    z(-3;0)=-25\\
-    z(0;0)=7\\
-    z'_x=-2x+3\\
-    x=\frac{3}{2}\\
-    (\frac{3}{2},0)\ лежит\ не\ в\ AO
-\end{split}
-$$
-
-$$\begin{split}
-    Расмотрим\ BO\\
-    x=0, -2\le x\le 0\\
-    z=7-y^2-3y\\
-    z(0;-2)=9\\
-    z(0;0)=7\\
-    z'_x=-2y-3\\
-    x=-\frac{3}{2}\\
-    (0,-\frac{3}{2})\ лежит\ в\ BO
-    z(0,-\frac{3}{2})=\frac{37}{4}
-\end{split}
-$$
-
-$$\begin{split}
     Расмотрим\ AB\\
-    x=0, -2\le x\le 0\\
-    z=7-y^2-3y\\
-    z(0;-2)=9\\
-    z(0;0)=7\\
-    z'_x=-2y-3\\
-    x=-\frac{3}{2}\\
-    (0,-\frac{3}{2})\ лежит\ в\ BO
-    z(0,-\frac{3}{2})=\frac{37}{4}
+    y=1, 0\le x\le 4\\
+    z=3-x^2+2x\\
+    z(0;1)=3\\
+    z(4;1)=-5\\
+    z'_x=-2x+2\\
+    x=1\\
+    (1,1)\ лежит\ в\ AB\\
+    z(1,1)=4
 \end{split}
 $$
+
+$$\begin{split}
+    Расмотрим\ CD\\
+    y=-4, 0\le x\le 4\\
+    z=3-x^2+7x\\
+    z(0;-4)=3\\
+    z(4;-4)=15\\
+    z'_x=-2x+7\\
+    x=\frac{7}{2}\\
+    (\frac{7}{2},-4)\ лежит\ в\ CD\\
+    z(\frac{7}{2},-4)=15.25
+\end{split}
+$$
+
+$$\begin{split}
+    Расмотрим\ AC\\
+    x=0, -4\le y\le 1\\
+    z=7-y^2-3y\\
+    z(0;-4)=3\\
+    z(0;1)=3\\
+    z'_y=-2y-3\\
+    y=-\frac{3}{2}\\
+    (0,-\frac{3}{2})\ лежит\ в\ AC\\
+    z(0,-\frac{3}{2})=9.25
+\end{split}
+$$
+
+$$\begin{split}
+    Расмотрим\ BD\\
+    x=4, -4\le y\le 1\\
+    z=7-y^2-7y\\
+    z(4;-4)=19\\
+    z(4;1)=-1\\
+    z'_y=-2y-7\\
+    y=-\frac{7}{2}\\
+    (0,-\frac{7}{2})\ лежит\ в\ BD\\
+    z(0,-\frac{7}{2})=19,25
+\end{split}
+$$
+
+Сравниавя все найденные значения функции $z(3;-3),z(0;1),z(4;1),z(0;-4),z(0;-4),z(4;-4),z(1;1),z(\frac{7}{2},-4),z(0,-\frac{3}{2}),z(0,-\frac{7}{2})$
+Получми $z_{\min}=z(1,1)=4,z_{\max}=z(0;-\frac{7}{2})=19.25$
 
 <style type="text/css">
     #footer {
