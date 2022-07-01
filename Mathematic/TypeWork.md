@@ -606,7 +606,20 @@ $$\begin{split}
 c) 
 
 $$\begin{split}
-    \int^{\frac{\pi}{2}}_1плохо\ видно
+    &\int^{e^{\frac{\pi}{2}}}_1\cos(\ln x){\rm d}x\\
+    &Пусть\ u=\ln x,{\rm d}u=\frac{1}{x}{\rm d}x\\
+    =&\int^{\frac{\pi}{2}}_0e^u\cos(u){\rm d}u\\
+    &Пусть\ f=\cos(u),{\rm d}f=-\sin(u){\rm d}u\\
+    &Пусть\ {\rm d}g=e^u{\rm d}u,g=e^u\\
+    &\int e^u\cos(u){\rm d}u\\
+    =&e^u\cos(u)+\int e^u\sin(u){\rm d}u\\
+    &Пусть\ f'=\sin(u),{\rm d}f'=\cos(u){\rm d}u\\
+    &Пусть\ {\rm d}g'=e^u{\rm d}u,g'=e^u\\
+    &\int e^u\cos(u){\rm d}u=e^u\sin(u)+e^u\cos(u)-\int e^u\cos(u){\rm d}u\\
+    &e^u\cos(u)=\frac{1}{2}(e^u\sin(u)+e^u\cos(u))\\
+    &\int^{\frac{\pi}{2}}_0e^u\cos(u){\rm d}u\\
+    =&\left.\frac{1}{2}(e^u\sin(u)+e^u\cos(u))\right|^{\frac{\pi}{2}}_0\\
+    =&\frac{1}{2}(e^{\frac{\pi}{2}}-1)
 \end{split}$$
 
 ### Задание 2
@@ -614,7 +627,19 @@ $$\begin{split}
 a)
 
 $$\begin{split}
-    \int^{+\infty}_0e^{плохо\ видно}{\rm d}x
+    &\int^{+\infty}_0e^{-\sqrt{x}}{\rm d}x\\
+    &Пустт\ u=\sqrt{x},{\rm d}u=\frac{1}{2\sqrt{x}}{\rm d}x\\
+    =&2\int^{+\infty}_0e^{-u}u{\rm d}u\\
+    &Пусть\ f=u,{\rm d}f={\rm d}u\\
+    &Пусть\ {\rm d}g=e^{-u}{\rm d}u,g=e^{-u}\\
+    =&\lim_{a\rightarrow\infty}\left.(-2e^{-u}u)\right|^a_0+2\int^\infty_0e^{-u}{\rm d}u\\
+    =&\lim_{a\rightarrow\infty}-2e^{-a}a+2\int^\infty_0e^{-u}{\rm d}u\\
+    =&0+2\int^\infty_0e^{-u}{\rm d}u\\
+    &Пусть\ v=-u,{\rm d}v=-{\rm d}u\\
+    =&-2\int^{-\infty}_0e^v{\rm d}v\\
+    =&2\int^0_{-\infty}e^v{\rm d}v\\
+    =&\left.2e^v\right|^0_{-\infty}\\
+    =2
 \end{split}$$
 
 b)
