@@ -603,10 +603,10 @@ $$\begin{split}
     =&\frac{1}{2\times2}-\frac{1}{2\times1}=-\frac{1}{4}
 \end{split}$$
 
-c)
+c) 
 
 $$\begin{split}
-    \int^{\frac{\pi}{2}}_1
+    \int^{\frac{\pi}{2}}_1плохо\ видно
 \end{split}$$
 
 ### Задание 2
@@ -614,7 +614,7 @@ $$\begin{split}
 a)
 
 $$\begin{split}
-    \int^{+\infty}_0e^{-\sqrt{x}}{\rm d}x?
+    \int^{+\infty}_0e^{плохо\ видно}{\rm d}x
 \end{split}$$
 
 b)
