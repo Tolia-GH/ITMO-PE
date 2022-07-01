@@ -357,7 +357,7 @@ $$\begin{cases}
     4-x^2-y^2>0
 \end{cases}$$
 
-<div align=center><img src="pic/TypeWork-4.png"></div>
+<div align=center><img src="pic/TypeWork-5.png"></div>
 <center>График Функция</center>
 
 ## Задание №2
