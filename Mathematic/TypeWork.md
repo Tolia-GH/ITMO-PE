@@ -574,6 +574,121 @@ $$
 Сравниавя все найденные значения функции $z(3;-3),z(0;1),z(4;1),z(0;-4),z(0;-4),z(4;-4),z(1;1),z(\frac{7}{2},-4),z(0,-\frac{3}{2}),z(0,-\frac{7}{2})$
 Получми $z_{\min}=z(1,1)=4,z_{\max}=z(0;-\frac{7}{2})=19.25$
 
+Дополнительные задачи
+
+### Задание 1
+
+a)
+
+$$\begin{split}
+    &\int^1_0\frac{2\arctan x+x}{1+x^2}{\rm d}x\\
+    =&2\int^1_0\frac{\arctan x}{x^2+1}+\int^1_0\frac{x}{x^2+1}\\
+    &Пусть\ u=\arctan x,{\rm d}u=\frac{1}{x^2+1}{\rm d}x\\
+    =&2\int^{\frac{\pi}{4}}_0u{\rm d}u+\int^1_0\frac{x}{x^2+1}{\rm d}x\\
+    =&\left.u^2\right|^{\frac{\pi}{4}}_0+\int^1_0\frac{x}{x^2+1}{\rm d}x\\
+    =&\frac{\pi^2}{16}+\int^1_0\frac{x}{x^2+1}{\rm d}x\\
+    &Пусть\ v=x^2=1,{\rm d}v=2x{\rm d}x\\
+    =&\frac{\pi^2}{16}+\frac{1}{2}\int^2_1\frac{1}{v}{\rm d}v\\
+    =&\frac{\pi^2}{16}+\left.\frac{\ln v}{2}\right|^2_1\\
+    =&\frac{\pi^2}{16}+\frac{\ln 2}{2}
+\end{split}$$
+
+b)
+
+$$\begin{split}
+    &\int^{\frac{\pi}{4}}_0\frac{\sin x-\cos x}{(\cos x+\sin x)^3}{\rm d}x\\
+    &Пусть\ u=\sin x+\cos x,{\rm d}u=(\cos x-\sin x){\rm d}x\\
+    =&-\int^{\sqrt{2}}_1\frac{1}{u^3}{\rm d}u\\
+    =&\left.\frac{1}{2u^2}\right|^{\sqrt{2}}_1\\
+    =&\frac{1}{2\times2}-\frac{1}{2\times1}=-\frac{1}{4}
+\end{split}$$
+
+c)
+
+$$\begin{split}
+    \int^{\frac{\pi}{2}}_1
+\end{split}$$
+
+### Задание 2
+
+a)
+
+$$\begin{split}
+    \int^{+\infty}_0e^{-\sqrt{x}}{\rm d}x?
+\end{split}$$
+
+b)
+
+$$\begin{split}
+    &\int^1_0x^2\ln x{\rm d}x\\
+    &Пучть\ u=\ln x,{\rm d}u=\frac{1}{x}{\rm d}x\\
+    &Пучть\ {\rm d}v=x^2,v=\frac{x^3}{3}\\
+    =&\lim_{a\rightarrow0^+}\left.\frac{x^3}{3}\ln x\right|^1_a-\frac{1}{3}\int^1_0x^2{\rm d}x\\
+    =&-\frac{1}{3}\int^1_0x^2{\rm d}x\\
+    =&\left.-\frac{x^3}{9}\right|^1_0\\
+    =&-\frac{1}{9}
+\end{split}$$
+
+### Задание 3
+
+a)
+
+$$\begin{split}
+    y_1&=\frac{8}{4+x^2}\\
+    y_2&=\frac{x^2}{4}\\
+    Пусть\ f(x)&=y_1-y_2=\frac{8}{4+x^2}-\frac{x^2}{4}=0\\
+    Получим\ x_1&=-2,x_2=2\\
+    S&=\int^2_{-2}f(x)=\int^2_{-2}(\frac{8}{4+x^2}-\frac{x^2}{4}){\rm d}x\\
+    &=8\int^2_{-2}\frac{1}{x^2+4}{\rm d}x-\frac{1}{4}\int^2_{-2}x^2{\rm d}x\\
+    &=2\int^2_{-2}\frac{1}{\frac{x^2}{4}+1}{\rm d}x-\frac{1}{4}\int^2_{-2}x^2{\rm d}x\\
+    Пусть\ u&=\frac{x}{2},{\rm d}u=\frac{1}{2}{\rm d}x\\
+    S&=4\int^1_{-1}\frac{1}{u^2+1}{\rm d}u-\frac{1}{4}\int^2_{-2}x^2{\rm d}x\\
+    &=\left.4\arctan x\right|^1_{-1}-\frac{1}{4}\int^2_{-2}x^2{\rm d}x\\
+    &=2\pi-\frac{1}{4}\int^2_{-2}x^2{\rm d}x\\
+    &=2\pi+\left.(-\frac{x^3}{12})\right|^2_{-2}\\
+    &=2\pi-\frac{4}{3}
+\end{split}$$
+
+<div align=center><img src="pic/TypeWork-8.png"></div>
+<center>График Функция</center>
+
+b)
+
+$$\begin{split}
+    S\begin{cases}
+        \frac{x^2}{9}-\frac{y^2}{4}=1\\
+        y=0\\
+        y=4\\
+    \end{cases}=
+    S\begin{cases}
+        \frac{y^2}{9}-\frac{x^2}{4}=1\\
+        x=0\\
+        x=4\\
+    \end{cases}
+\end{split}$$
+
+<div align=center><img src="pic/TypeWork-9.png"></div>
+<center>График Функция</center>
+
+$$\begin{split}
+    &\frac{y^2}{9}-\frac{x^2}{4}=1\\
+    \Rightarrow&y^2=9+\frac{9x^2}{4}\\
+    Пусть\ f(x)&=\sqrt{9+\frac{9x^2}{4}},\ то\\
+    S&=2\int^4_0f(x){\rm d}x\\
+    &=2\int^4_0\sqrt{9+\frac{9x^2}{4}}{\rm d}x\\
+    Пучть\ x&=2\tan u,{\rm d}x=2\sec^2 u{\rm d}u\\
+    S&=4\int^{\arctan 2}_03\sqrt{(\sec^2(u))^3}{\rm d}u\\
+    &=12\int^{\arctan 2}_0\sqrt{(\sec^2(u))^3}{\rm d}u\\
+    &=12\int^{\arctan 2}_0\sec^3(u){\rm d}u\\
+    &=12(\frac{\sin(u)\sec^2(u)}{3-1}+\frac{3-2}{3-1}\int\sec^{3-2}(u){\rm d}u)\\
+    &=\left.6\tan(u)\sec(u)\right|^{\arctan 2}_0+6\int^{\arctan 2}_0\sec(u){\rm d}u\\
+    &=12\sqrt{5}+6\int^{\arctan2}_0\frac{\sec^2(u)+\tan(u)\sec(u)}{\tan(u)+\sec(u)}{\rm d}u\\
+    Пучть\ v&=\tan(u)+\sec(u),{\rm d}v=(\sec^2(u)+\tan(u)\sec(u)){\rm d}u\\
+    S&=12\sqrt{5}+6\int^{2+\sqrt{5}}_1\frac{1}{v}{\rm d}v\\
+    &=12\sqrt{5}+\left.6\ln s\right|^{2+\sqrt{5}}_1\\
+    &=12\sqrt{5}+6\ln(2+\sqrt{5})
+\end{split}$$
+
 <style type="text/css">
     #footer {
         position: relative;
