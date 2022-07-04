@@ -74,8 +74,10 @@
   - 模型化：科学将自然形式化位具有有限复杂度的简化模型进行研究
   - 需要统一的测量语言-单位制来进行实验
   - 在实验和观察的基础上构建模型并做出预测，并且改进模型，得到新的预测等
+  
     <div align=center><img src="pic/Lec1.1.png"></div>
     <center>原子结构理论的发展</center>
+
 - 物理概念的定义
 - 物理量及其测量方法
   - 基本物理量
@@ -90,44 +92,154 @@
     发光强度|$J$
 
   - 国际单位制
+    
     <div align=center><img src="pic/Lec1.2.png"></div>
+
   - 测量方法
+    
     <div align=center><img src="pic/Lec1.3.png"></div>
+
   - 物体的机械运动
     - 力学研究的主题是研究物体的机械运动以及物体之间的相关相互作用。
     - 在机械运动下，了解物体或其部分在空间中的相对位置随时间的变化
 
 ## Lecture №2 Кинематика материальной точки 质点的运动学
 
-- 课堂计划
-  - 运动学的一般任务
-  - 运动性质
-  - 参考系（СО）
-  - 运动学的正反问题
-  - 角速度及其与线性的关系
-  - Нормальная и тангенциальное ускорение
-  - 法向和切向加速度
+- 质点
+  - 物体作为物理学的研究对象，具有大小，形状，质量和内部结构。如果在所研究的过程中，物体的大小，形状和内部结构不起作用，或者所起的作用不显著，以至于可以忽略不计时，就可以将物体看作一个只具有质量而没有大小和形状的理想物体，称为质点
 - 机械运动（Механическое двмжение）
   - 广义上的运动是一般的任何变化。
   - 最简单的运动形式是机械运动，它包括随着时间的推移改变物体或其部分相对于彼此的位置。
-- 质点
-  - 质点是一个物体，与给定问题中到其他物体的距离相比，它的尺寸可以忽略不计。
+  - 运动具有绝对性，自然界的一切物体都永恒的处在运动中
 - 绝对弹性物体
   - 绝对刚体 (ATT) 是在给定问题的条件下可以忽略其变形（但不是尺寸）的对象。
-- 参考系（Система отчёта-CO）
+- 参考系（Система отчёта-CO）：要描述一个物体的运动，必须选择另一个物体或几 个彼此间相对静止的物体群作参考，这个被选作参考的物体或物体群，称为参考系
   - 笛卡尔坐标系
+   
+    <div align=center><img src="pic/Lec2.1.png"></div>
+
+    OX - обсцисса  
+    OY - ордтната  
+    OZ - аппликата  
+
+    - 左手系右手系
+
+  <div align=center><img src="pic/Lec2.2.png"></div>
+
     - 笛卡尔坐标系中向量的坐标表示
+
+    <div align=center><img src="pic/Lec2.3.png"></div>
+
+    $$\vec{a}=(a_x,a_y,a_z)$$
+
+    $$\vec{a}=a_x\hat{e}_x+a_y+\hat{e}_y+a_z\hat{e}_z$$
+
     - 平面笛卡尔坐标系
+
+      <div align=center><img src="pic/Lec2.4.png"></div>
+
     - 柱形立体笛卡尔坐标系
+
+       <div align=center><img src="pic/Lec2.5.png"></div>
+
+       $$\begin{cases}
+        x=\rho\cos\varphi\\
+        y=\rho\sin\varphi\\
+        z=z
+       \end{cases}$$
+
     - 球形笛卡尔坐标系
+
+      <div align=center><img src="pic/Lec2.6.png"></div>
+
+      $$\begin{cases}
+        x=r\sin\theta\cos\varphi\\
+        y=r\sin\theta\sin\varphi\\
+        z=\cos\theta
+      \end{cases}$$
+
 - 向量
   - 向量乘法
     - 点乘法
     - 叉乘法
     - 混合乘法
   - 向量求模
-- 半径向量（Радиус-вектор）
+  - 位置矢量（Радиус-вектор）：
+    - 定义：通常把由坐标原点 指向质点所在位置的有向线段定义为质点的位置矢量，简称位矢或矢径,用矢量 $\vec{r}$ 表示
 
+      <div align=center><img src="pic/Lec2.7.png"></div>
+
+      $$\vec{r}=x\vec{i}+y\vec{j}+z\vec{k}$$
+
+    - 大小：
+
+      $$r=|\vec{r}|=\sqrt{x^2+y^2+z^2}$$
+
+    - 方向：由其方向余弦确定
+
+      $$\cos\alpha=\frac{x}{r},\cos\beta=\frac{y}{r},\cos\gamma=\frac{z}{r}$$
+
+      其中：$\alpha,\beta,\gamma$ 分别是位矢 $\vec{r}$ 和各个坐标轴之间的夹角
+
+    - 运动方程：当指点运动时，位矢 $\vec{r}$ 和坐标 $x,y,z$ 都是关于时间 $t$ 的函数，一般表示为：
+
+      $$\vec{r}=\vec{r}(t)=x(t)\vec{i}+y(t)\vec{j}+z(t)\vec{k}$$
+
+      或者
+
+      $$\begin{cases}
+        x=x(t)\\
+        y=y(t)\\
+        z=z(t)\\
+      \end{cases}$$
+
+    - 位移
+      
+      <div align=center><img src="pic/Lec2.8.png"></div>
+      <center>图1-2 质点的位移</center>
+
+      假设质点在如 图1-2 所示的任一曲线上运动，在 $t$ 时刻，质点 位于 $A$ 点，其位置矢量为 $\vec{r_A}$；在 $t+\Delta t$ 时刻，质点运动到 $B$ 点，其位置矢量为 $\vec{r_B}$。在时间 $\Delta t$ 内，质点的位置变化可用从 $A$ 到 $B$ 的有向线段 $\Delta\vec{r}$ 来表示，$\Delta\vec{r}$ 称为质点的位移矢量，简称位移，即
+
+      $$\Delta\vec{r}=\vec{r_B}-\vec{r_A}$$
+
+      - 单位：位置矢量和位移的单位都是米,用符号m 表示
+
+    - 速度
+
+      <div align=center><img src="pic/Lec2.9.png"></div>
+      <center>图1-3 质点的速度矢量</center>
+
+      - 平均速度
+        当质点在 $\Delta t$ 时间内完成了位移 $\Delta\vec{r}$ 时，为了表示运动在这段时间内的快慢程度，把质点的位移与相应的时间房的比值，称为质点在这段时间 $\Delta t$ 内的平均速度
+
+        $$\overline{v}=\frac{\Delta\vec{r}}{\Delta t}$$
+
+        平均速度是矢量，其方向与位移方向相同
+      - 瞬时速度
+        当 $\Delta t$ 趋于零时平均速度的极限值，称为瞬时速度，简称速度
+
+        $$\vec{v}=\lim_{\Delta t\rightarrow0}\frac{\Delta\vec{r}}{\Delta t}=\frac{ {\rm d}\vec{r}}{ {\rm d}t}$$
+
+        速度是位置矢量对时刻 $t$ 的一阶导数。在一般情况下，速度是 $t$ 的函数，具有瞬时性，可精确地描述质点运动的快慢程度
+      - 速率
+        速度是矢量，其大小称为速率，其方向沿位移的极限方向
+      - 单位：速度的单位是 米/秒，用符号 $m\cdot s^{-1}$ 表示
+    - 加速度
+
+      <div align=center><img src="pic/Lec2.10.png"></div>
+      <center>图1-4 质点的加速度矢量</center>
+
+      - 平均加速度
+        加速度是描述质点速度(速度数值和速度方向)变化的物理量，如 图1-4 所示。质点在时刻 $t$ 位于 $A$ 点，其速度为 $v_A$；在时刻 $t+\Delta t$ 位于 $B$ 点，其速度为 $v_B$ 则在 $\Delta t$ 时间内速度的增量为 $\Delta v=v_B-v_A$，将该速度增量与所经历的时间之比定义为在此时间内的平均加速度，是矢量
+
+        $$\overline{a}=\frac{\Delta v}{\Delta t}$$
+
+      - 瞬时加速度
+        当 $\Delta t\rightarrow0$ 时，$\overline{a}$ 趋近于一极限值，称为质点的瞬时加速度，简称加速度，用 $\vec{a}$ 表示
+
+        $$\vec{a}=\lim_{\Delta t\rightarrow0}\frac{\Delta\vec{v}}{\Delta t}=\frac{ {\rm d}v}{ {\rm d}t}=\frac{ {\rm d}^2\vec{r}}{ {\rm d}t^2}$$
+
+        可见，加速度是速度对时间的一阶导数，或位置矢量对时间的二阶导数。在一般情况下，它也是时间 $t$ 的函数，具有瞬时性。加速度又具有矢量性，其方向沿速度增量的极限方向。由图1-4可知，加速度总是指向运动曲线凹的一侧
 
 ## Lecture №3 Динамика 动力学
 
