@@ -241,8 +241,7 @@
     $$\vec{a}=\lim_{\Delta t\rightarrow0}\frac{\Delta\vec{v}}{\Delta t}=\frac{ {\rm d}v}{ {\rm d}t}=\frac{ {\rm d}^2\vec{r}}{ {\rm d}t^2}$$
 
     可见，加速度是速度对时间的一阶导数，或位置矢量对时间的二阶导数。在一般情况下，它也是时间 $t$ 的函数，具有瞬时性。加速度又具有矢量性，其方向沿速度增量的极限方向。由图1-4可知，加速度总是指向运动曲线凹的一侧
-  - 切向加速度
-  - 法相加速度
+  
 - 运动叠加原理：在研究一个复杂的运动时，可以通 过对几个简单运动的讨论来完成,从而使研究工作大为简化
   若质点的运动轨迹位于同一平面内，则这种运动称为平面曲线运动。一个平面曲线 运动可看作是两个简单直线运动的合成。平面曲线运动的运动方程在直角坐标 系中可写成
 
@@ -287,8 +286,58 @@
 
     通常用弧度(rad)来度量 $\theta$，所以角速度 $\omega$ 的单位名称为弧度每秒，符号为 ${\rm rad}\cdot s^{-1}$
 
-  <div align=center><img src="pic/Lec2.11.png"></div>
+  <div align=center><img src="pic/Lec2.12.png"></div>
   <center>图1-6 质点在平面上做圆周运动的位置</center>
+
+  若在时间 $\Delta t$ 内，质点由图上的 $A$ 点运动到 $B$ 点，所经历的圆弧则为 $\Delta s=r\Delta\theta$ 为 $\Delta t$ 时间内，径矢 $\vec{r}$ 所转过的角度。当 $\Delta t\rightarrow$ 时，$\Delta s/\Delta t$ 的极限值为：
+
+  $$\lim_{\Delta t\rightarrow0}\frac{\Delta s}{\Delta t}=r\lim_{\Delta t\rightarrow0}\frac{\Delta\theta}{\Delta t}$$
+
+  即
+
+  $$\frac{ {\rm d}s}{ {\rm d}t}=r\frac{ {\rm d}\theta}{\rm d t}$$
+
+  而 ${\rm d}s/{\rm d}t$ 曲为质点在点 $A$ 的速率，用 $v$ 表示，${\rm d}\theta/{\rm d}t$ 则为质点在点 $A$ 的角速度 $\omega$，故有
+
+  $$v=r\omega$$
+
+  该式表明了质点做圆周运动时，速率和角速度之间的关系
+
+  <div align=center><img src="pic/Lec2.13.png"></div>
+  <center>图 1-7 切向单位矢量</center>
+
+  如 图1-7 所示，质点在圆周上 $A$ 点的速度为 $\vec{v}$，$\vec{v}$ 的方向与 $A$ 点的切线方向相同，大小为 $v$，在 $A$ 点的切线方向去一单位矢量 $e_\tau$，称为切向单位矢量，于是 $A$ 点的速度 $v$
+
+    $$\vec{v}=v\vec{e_\tau}$$
+
+    一般来说，质点作圆周运动时，不仅速度方向要发生变化，而且速度的大小也会改变。由上式可得加速度为
+
+    $$\vec{a}=\frac{ {\rm d}\vec{v}}{ {\rm d}t}=\frac{ {\rm d}v}{ {\rm d}t}\vec{e_\tau}+v\frac{ {\rm d}\vec{e_\tau}}{ {\rm d}t}$$
+  - 切向加速度
+    其中，$\frac{ {\rm d}v}{ {\rm d}t}e_\tau$ 是由速度大小发生变化而引起的，其方向为 $\vec{e_\tau}$ 的方向，即与速度 $\vec{v}$ 的方向相同，称为切向加速度，用 $\vec{a_\tau}$ 表示，有
+
+    $$\vec{a_\tau}=\frac{ {\rm d}v}{ {\rm d}t}\vec{e-\tau},\qquad|\vec{e_\tau}|=\frac{ {\rm d}v}{ {\rm d}t}$$
+  - 法相加速度
+    其中，$\frac{ {\rm d}e_\tau}{ {\rm d}t}$ 是由于切向单位矢量的方向随时间变化引起的，称为法相加速度
+
+    <div align=center><img src="pic/Lec2.14.png"></div>
+    <center>图 1-8 切向单位矢量随时间变化率</center>
+
+    设在时刻 $t$，质点位于圆周上 $A$ 点，其速度为 $v_1$；在时刻 $t+\Delta t$，质点位于 $B$ 点，速度为 $v_2$。在时间间隔 $\Delta t$ 内，径矢 $\vec{r}$ 转过的角度为 $\Delta\theta$，速度增量为 $\Delta v=v_2-v_1$ 而在这段时 间内，切向单位矢量的增量为 $\Delta e_\tau=e_{\tau2}-e_{\tau1}$。由于切向单位矢量的值为 $1$,因而由 图1-8 可以知道 $|\Delta e_\tau|=\Delta\theta\times1=\Delta\theta$ 当 $\Delta t\rightarrow0$ 时，$\Delta\theta\rightarrow0$，这时 $\Delta e_\tau$ 的方向趋于与 $e_\tau$ 垂直，即趋于与 $\vec{v}$ 垂直， 也即趋于指向圆心。如果取沿径矢而指向圆心的单位矢量为 $e_n$，这个单位矢量又称法向单位矢量，那么在 $\Delta\rightarrow0$ 时，$\Delta e_\tau/\Delta t$ 的极限值为
+
+    $$\lim_{\Delta t\rightarrow0}\frac{\Delta \vec{e_\tau}}{\Delta t}=\frac{ {\rm d}\vec{e_\tau}}{ {\rm d}t}=\frac{ {\rm d}\theta}{ {\rm d}t}\vec{e_n}$$
+
+    由此可以看到，式中的第二项的方向总是指向圆心的，故称为法向加速度，用 $\vec{a_n}$ 表示，即
+
+    $$\vec{a_n}=v\frac{ {\rm d}\theta}{ {\rm d}t}\vec{e_n}$$
+
+    考虑 $\omega={\rm d}\theta/{\rm d}t,v=\omega r$，故上式为：
+
+    $$\vec{a_n}=\omega^2\vec{e_n}=\frac{v^2}{r}\vec{e_n},\qquad|\vec{e_n}|=\frac{v^2}{r}$$
+
+    质点作一般圆周运动时的加速度表示为：
+
+    $$\vec{a}=\vec{a_\tau}+\vec{e_n}=\frac{ {\rm d}v}{ {\rm d}t}\vec{e-\tau}+\frac{v^2}{r}\vec{e_n}$$
 
 ## Lecture №3 Динамика 动力学
 
@@ -325,7 +374,9 @@
   - 牛顿第二定律
     - 描述：物体受到外力作用时，所获得的加速度大小与合外力大小成正比，与物体的质量成 反比;加速度的方向与合外力的方向相同
     - 公式：
+     
       $$\vec{F}=m\vec{a}\qquad(2-1)$$
+
     - 概念：
       1. 物体的加速度与外力是瞬时、正比、同向的关系
       2. 在相同外力的作用下，物体加速度的大小与其质量成反比，这意味着质量大的物体要改变其速度比较难，即它的惯性大；质量小的物体要改变其速度比较容易，即它的惯性小。因此，质量是物体惯性大小的量度，故又称为惯性质量
