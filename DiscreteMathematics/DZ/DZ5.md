@@ -41,3 +41,24 @@
 |-|-|-|-|-|-|-|
 |E|e4|e3,e11|e1,e10|e7,e9|e2,e5,e6,e8|e12|
 |H|h9|h2,h10|h3,h12|h4,h6|h5,h7,h8,h11|h1|
+
+Из таблицы сразу видно соответствие вершин e4 – h9, e12-h1.  
+Попробуем установить соответствие между p(e) = p(h) = 6
+
+<div align=center><img src="../pic/DZ5-1.png"></div>
+
+Видим, что e1 – h12, e12 – h3
+
+<div align=center><img src="../pic/DZ5-2.png"></div>
+
+Видим, что e7 – h6, e9 – h4
+
+<div align=center><img src="../pic/DZ5-3.png"></div>
+
+Видим, что e3 – h10, e11 – h2
+
+<div align=center><img src="../pic/DZ5-4.png"></div>
+
+Видим, что e2 – h11, e5 – h8, e6 - h7, e8 - h5
+
+Из всего этого заключаем, что наши графы изоморфны.
