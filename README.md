@@ -9,7 +9,7 @@
 ## 阅读索引
 
 - [数学](/Mathematic/README.md)
-- [离散数学](/DiscreteMathematic/README.md)
+- [离散数学](/DiscreteMathematics/README.md)
 - [物理](/Physics/README.md)
 - [编程](/Program/README.md)
 - [OPD](/OPD/README.md)
