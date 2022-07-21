@@ -727,7 +727,58 @@
       称为刚体定轴转动的转动定律，是刚体定轴转动的基本运动方程。表明了刚体所受的对于某一固定转轴的合外力矩等于刚体对此转轴的转动惯量与刚体在此合外力矩作用下所获得的角加速度的乘积
       
   - 力矩的功
+      如 图3-5 所示，刚体在垂直于转轴 $Oz$ 的外力 $\boldsymbol{F}$ 的作用下转动。力 $\boldsymbol{F}$ 的作用点 $P$ 到转轴的距离为 $r$（相应的矢径为 $\boldsymbol{r}$），经过 ${\rm d}t$ 时间后，刚体转过一微小角度 ${\rm d}\theta$ 点的位移为 ${\rm d}\boldsymbol{r}$ 则力 $\boldsymbol{F}$ 在这段位移上所做的功为：
+
+      $${\rm d}\boldsymbol{W}=\boldsymbol{F}\cdot{\rm d}\boldsymbol{r}=F\cos\alpha{\rm d}s=f\cos(\frac{\pi}{2}-\varphi)r{\rm d}\theta=Fr\sin\varphi{\rm d}\theta$$
+
+      其中：
+      - $\varphi$ 为 $\boldsymbol{r}$ 和 $\boldsymbol{F}$ 之间的夹角
+      - $Fr\sin\varphi$ 是作用于 $P$ 点的力 $\boldsymbol{F}$ 对转轴的力矩 $\boldsymbol{M}$ 的大小
+
+      则上式化为
+
+      $${\rm d}W=M{\rm d}\theta$$
+
+      上式表明，力所做的元功等于力矩 $M$ 与角位移 ${\rm d}\theta$ 的乘积，也把它称为力矩的功。与力的功类似，力矩的功反映了力矩的空间累积效应
+
+      当刚体在力矩的作用下转过 $\Delta\theta$ 角时，力矩对刚体所做的功为：
+
+      $$W=\int{\rm d}W=\int^\theta_0 M{\rm d}\theta$$
+
+      若力矩为常力矩，则力矩所做的功为：
+
+      $$W=M\Delta\theta$$
+
+      通过以上推导可看出，力矩做功的本质是力所做的功，即力做功的另一种表达形式
+
+    - 力矩的功率
+      按功率定义,也可得到力矩的瞬时功率：
+
+      $$P=\frac{ {\rm d}W}{ {\rm d}t}=M\frac{ {\rm d}\theta}{ {\rm d}t}=M\omega$$
+
+      即力矩的功率等于力矩与角速度的乘积
   - 转动动能
+    设某时刻刚体的角速度为 $\omega$，则到转轴的垂直距离为 $r_i$ 的质量为 $\Delta m_i$ 的质元的速度为 $v_i=r_i\omega$，从而该质元的动能为 $\Delta m_iv_i^2/2$。这样整个刚体的转动动能为：
+
+    $$E_k=\sum_i\frac{1}{2}\Delta m_ir_i^2\omega^2=\frac{1}{2}(\sum_i\Delta m_ir_i^2)\omega^2=\frac{1}{2}J\omega^2$$
+
+    上式表明，刚体的转动动能等于刚体的转动惯量与其角速度平方的乘积的一半。它是描述刚体定轴转动的一个物理量
+  - 刚体定轴转动的动能定理
+    设在合外力矩 $M$ 的作用下，刚体绕定轴转动的角速度由 $\omega_1$ 变为 $\omega_2$，在这个过程中，当刚体转过微小角位移 ${\rm d}\theta$ 时，合外力矩所做的功为：
+
+    $${\rm d}W=M{\rm d}\theta$$
+
+    又由转动定律：
+
+    $$M=J\beta=J\frac{ {\rm d}\omega}{ {\rm d}t}=J\frac{ {\rm d}\omega}{ {\rm d}\theta}\cdot\frac{ {\rm d}\theta}{ {\rm d}t}=J\omega {\rm d}\omega$$
+
+    则合外力矩的元功为：
+
+    $${\rm d}W=J\omega\frac{ {\rm d}\omega}{ {\rm d}\theta}\cdot{\rm d}\theta=J\omega{\rm d}\omega$$
+
+    从而在整个过程中合外力矩对刚体所做的功为：
+
+    $$W=\int{\rm d}W=\int^{\omega_2}_{\omega_1}J\omega{\rm d}\omega=\frac{1}{2}\omega_2^2-\frac{1}{2}J\omega_1^2$$
 
 ## Lecture №6 Динамика АТТ 质点系统运动学
 
