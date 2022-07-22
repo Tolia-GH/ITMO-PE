@@ -313,6 +313,7 @@
     一般来说，质点作圆周运动时，不仅速度方向要发生变化，而且速度的大小也会改变。由上式可得加速度为
 
     $$\vec{a}=\frac{ {\rm d}\vec{v}}{ {\rm d}t}=\frac{ {\rm d}v}{ {\rm d}t}\vec{e_\tau}+v\frac{ {\rm d}\vec{e_\tau}}{ {\rm d}t}$$
+
   - 切向加速度
     其中，$\frac{ {\rm d}v}{ {\rm d}t}e_\tau$ 是由速度大小发生变化而引起的，其方向为 $\vec{e_\tau}$ 的方向，即与速度 $\vec{v}$ 的方向相同，称为切向加速度，用 $\vec{a_\tau}$ 表示，有
 
@@ -323,7 +324,7 @@
     <div align=center><img src="pic/Lec2.14.png"></div>
     <center>图 1-8 切向单位矢量随时间变化率</center>
 
-    设在时刻 $t$，质点位于圆周上 $A$ 点，其速度为 $v_1$；在时刻 $t+\Delta t$，质点位于 $B$ 点，速度为 $v_2$。在时间间隔 $\Delta t$ 内，径矢 $\vec{r}$ 转过的角度为 $\Delta\theta$，速度增量为 $\Delta v=v_2-v_1$ 而在这段时 间内，切向单位矢量的增量为 $\Delta e_\tau=e_{\tau2}-e_{\tau1}$。由于切向单位矢量的值为 $1$,因而由 图1-8 可以知道 $|\Delta e_\tau|=\Delta\theta\times1=\Delta\theta$ 当 $\Delta t\rightarrow0$ 时，$\Delta\theta\rightarrow0$，这时 $\Delta e_\tau$ 的方向趋于与 $e_\tau$ 垂直，即趋于与 $\vec{v}$ 垂直， 也即趋于指向圆心。如果取沿径矢而指向圆心的单位矢量为 $e_n$，这个单位矢量又称法向单位矢量，那么在 $\Delta\rightarrow0$ 时，$\Delta e_\tau/\Delta t$ 的极限值为
+    设在时刻 $t$，质点位于圆周上 $A$ 点，其速度为 $v_1$；在时刻 $t+\Delta t$，质点位于 $B$ 点，速度为 $v_2$。在时间间隔 $\Delta t$ 内，径矢 $\vec{r}$ 转过的角度为 $\Delta\theta$，速度增量为 $\Delta v=v_2-v_1$ 而在这段时 间内，切向单位矢量的增量为 $\Delta e_\tau=e_{\tau2}-e_{\tau1}$。由于切向单位矢量的值为 $1$，因而由 图1-8 可以知道 $\|\Delta e_\tau\|=\Delta\theta\times1=\Delta\theta$ 当 $\Delta t\rightarrow0$ 时，$\Delta\theta\rightarrow0$，这时 $\Delta e_\tau$ 的方向趋于与 $e_\tau$ 垂直，即趋于与 $\vec{v}$ 垂直，也即趋于指向圆心。如果取沿径矢而指向圆心的单位矢量为 $e_n$，这个单位矢量又称法向单位矢量，那么在 $\Delta\rightarrow0$ 时，$\Delta e_\tau/\Delta t$ 的极限值为
 
     $$\lim_{\Delta t\rightarrow0}\frac{\Delta \vec{e_\tau}}{\Delta t}=\frac{ {\rm d}\vec{e_\tau}}{ {\rm d}t}=\frac{ {\rm d}\theta}{ {\rm d}t}\vec{e_n}$$
 
