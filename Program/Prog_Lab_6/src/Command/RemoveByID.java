@@ -1,6 +1,6 @@
 package Command;
 
-import Collection.Exceptions.ParaIncorrectException;
+import Exceptions.ParaIncorrectException;
 import Manager.CommandManager;
 
 /**

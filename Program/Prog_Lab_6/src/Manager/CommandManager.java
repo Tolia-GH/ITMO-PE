@@ -1,9 +1,9 @@
 package Manager;
 
-import Collection.Exceptions.NoSuchCommandException;
-import Collection.Exceptions.ParaIncorrectException;
-import Collection.Organization;
-import Collection.OrganizationType;
+import Exceptions.NoSuchCommandException;
+import Exceptions.ParaIncorrectException;
+import JSON.Collection.Organization;
+import JSON.Collection.OrganizationType;
 import Command.*;
 import JSON.JsonWriter;
 import Tools.Tools;
@@ -198,7 +198,7 @@ public class CommandManager {
         String commandLine;
         while ((commandLine = bufferedReader.readLine()) != null){
             String []split = commandLine.split(" ");
-            AbstractCommand command = gotCommand(split[0]);
+            AbstractCommand command = findCommand(split[0]);
             if (command != null && !(command.getName().equals("ExecuteScript")&&split[1].equals(name))) {
                 command.execute(commandManager, split,Saver);
             }
@@ -294,10 +294,10 @@ public class CommandManager {
      * @param commandName the command name
      * @return the abstract command
      */
-    public AbstractCommand gotCommand(String commandName) {
+    public AbstractCommand findCommand(String commandName) {
         AbstractCommand targetCommand;
         for (AbstractCommand command : commands) {
-            if(command.getName().equals(commandName)) {
+            if(command.getName().equalsIgnoreCase(commandName)) {
                 targetCommand = command;
                 return targetCommand;
             }
@@ -313,7 +313,7 @@ public class CommandManager {
      */
     public boolean isCommandExist(String commandName) {
         for (AbstractCommand command : commands) {
-            if (command.getName().equals(commandName)) {
+            if (command.getName().equalsIgnoreCase(commandName)) {
                 return true;
             }
         }

@@ -1,6 +1,6 @@
 package Main;
 
-import Collection.Organization;
+import JSON.Collection.Organization;
 import Command.AbstractCommand;
 
 import java.io.Serializable;
@@ -10,7 +10,7 @@ import java.util.List;
 public class PackageCommand implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    private final String[] arg;
+    private final String[] commandWithArgs;
     private final AbstractCommand abstractCommand;
     private final Organization organization;
     private final ArrayDeque<Organization> arrayDeque;
@@ -18,8 +18,8 @@ public class PackageCommand implements Serializable {
     private final List<PackageCommand> list;
     private final boolean set;
 
-    PackageCommand() {
-        this.arg = null;
+    public PackageCommand() {
+        this.commandWithArgs = null;
         this.abstractCommand = null;
         this.organization = null;
         this.arrayDeque = null;
@@ -28,8 +28,8 @@ public class PackageCommand implements Serializable {
         this.set = false;
     }
 
-    PackageCommand(String[] arg, AbstractCommand command, String fileName) {
-        this.arg = arg;
+    public PackageCommand(String[] arg, AbstractCommand command, String fileName) {
+        this.commandWithArgs = arg;
         this.abstractCommand = command;
         this.organization = null;
         this.arrayDeque = null;
@@ -38,8 +38,8 @@ public class PackageCommand implements Serializable {
         this.set = false;
     }
 
-    PackageCommand(AbstractCommand command, Organization organization, String fileName) {
-        this.arg = null;
+    public PackageCommand(AbstractCommand command, Organization organization, String fileName) {
+        this.commandWithArgs = null;
         this.abstractCommand = command;
         this.organization = organization;
         this.arrayDeque = null;
@@ -48,8 +48,8 @@ public class PackageCommand implements Serializable {
         this.set = false;
     }
 
-    PackageCommand(AbstractCommand command, ArrayDeque<Organization> arrayDeque, String fileName) {
-        this.arg = null;
+    public PackageCommand(AbstractCommand command, ArrayDeque<Organization> arrayDeque, String fileName) {
+        this.commandWithArgs = null;
         this.abstractCommand = command;
         this.organization = null;
         this.arrayDeque = arrayDeque;
@@ -58,8 +58,8 @@ public class PackageCommand implements Serializable {
         this.set = false;
     }
 
-    PackageCommand(String[] arg, AbstractCommand command, Organization organization, String fileName) {
-        this.arg = arg;
+    public PackageCommand(String[] arg, AbstractCommand command, Organization organization, String fileName) {
+        this.commandWithArgs = arg;
         this.abstractCommand = command;
         this.organization = organization;
         this.arrayDeque = null;
@@ -68,9 +68,8 @@ public class PackageCommand implements Serializable {
         this.set = false;
     }
 
-
-    PackageCommand(String name,boolean set){
-        this.arg = null;
+    public PackageCommand(String name,boolean set){
+        this.commandWithArgs = null;
         this.abstractCommand = null;
         this.organization = null;
         this.arrayDeque = null;
@@ -79,8 +78,8 @@ public class PackageCommand implements Serializable {
         this.set = set;
     }
 
-    PackageCommand(List<PackageCommand> list) {
-        this.arg = null;
+    public PackageCommand(List<PackageCommand> list) {
+        this.commandWithArgs = null;
         this.abstractCommand = null;
         this.organization = null;
         this.arrayDeque = null;
@@ -89,8 +88,8 @@ public class PackageCommand implements Serializable {
         this.set = false;
     }
 
-    public String[] getArg() {
-        return this.arg;
+    public String[] getCommandWithArgs() {
+        return this.commandWithArgs;
     }
 
     public AbstractCommand getAbstractCommand() {

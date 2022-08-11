@@ -1,7 +1,7 @@
 package Main;
 
-import Collection.Exceptions.*;
 import Command.AbstractCommand;
+import Exceptions.NotInitializedException;
 import Manager.CommandManager;
 import Tools.Tools;
 
@@ -40,14 +40,14 @@ public class Main {
                     }
                 }
                 if (!commandManager.isCommandExist(command[0])) {
-                    throw new NoSuchCommandException("Error: Command [" +command[0] + "] not found!\n");
+                    throw new Exceptions.NoSuchCommandException("Error: Command [" +command[0] + "] not found!\n");
                 }
-            } catch (NoSuchCommandException |
-                    ParaIncorrectException |
-                    NoSuchTypeException |
-                    ValueOutOfRangeException |
-                    NullValueException |
-                    StringLengthOutOfRange |
+            } catch (Exceptions.NoSuchCommandException |
+                    Exceptions.ParaIncorrectException |
+                    Exceptions.NoSuchTypeException |
+                    Exceptions.ValueOutOfRangeException |
+                    Exceptions.NullValueException |
+                    Exceptions.StringLengthOutOfRange |
                     NotInitializedException |
                     IOException exception) {
                 Tools.MessageL(exception.getMessage());

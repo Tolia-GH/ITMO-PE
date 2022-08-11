@@ -5,6 +5,7 @@ import Collection.Exceptions.NullValueException;
 import Collection.Exceptions.ValueOutOfRangeException;
 import Tools.Tools;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
 
@@ -200,6 +201,7 @@ public class Organization implements Comparable<Organization> {
      */
     public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
     }
 
     /**

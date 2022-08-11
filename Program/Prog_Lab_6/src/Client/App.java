@@ -1,6 +1,9 @@
 package Client;
 
+import Exceptions.NoSuchTypeException;
 import Tools.Tools;
+
+import java.io.IOException;
 
 public class App {
 
@@ -37,5 +40,13 @@ public class App {
 
     public static void main(String[] args) {
         Client client = new Client("localhost", 2001);
+        try {
+            client.run();
+            client.runTerminal();
+        } catch (IOException e) {
+            Tools.MessageL("Error: IO Exception!");
+        } catch (NoSuchTypeException e) {
+            Tools.MessageL(e.getMessage());
+        }
     }
 }

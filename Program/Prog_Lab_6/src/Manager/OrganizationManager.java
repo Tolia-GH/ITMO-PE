@@ -1,7 +1,7 @@
 package Manager;
 
-import Collection.Exceptions.NoSuchCommandException;
-import Collection.Organization;
+import Collection.Exceptions.NotInitializedException;
+import JSON.Collection.Organization;
 
 import java.util.ArrayDeque;
 import java.util.Date;
@@ -30,7 +30,7 @@ public class OrganizationManager {
      */
     public static ArrayDeque<Organization> getOrganizationSet() {
         if (!OrganizationManager.IsInitialized) {
-            throw new NoSuchCommandException("Error: Collections was not initialized!\n");
+            throw new NotInitializedException("Error: Collections was not initialized!\n");
         } else {
             return organizationSet;
         }
