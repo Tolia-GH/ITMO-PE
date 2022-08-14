@@ -1,10 +1,12 @@
 package Collection;
 
-import Collection.Exceptions.NoSuchTypeException;
-import Collection.Exceptions.NullValueException;
-import Collection.Exceptions.ValueOutOfRangeException;
+import Exceptions.NoSuchTypeException;
+import Exceptions.NullValueException;
+import Exceptions.ValueOutOfRangeException;
 import Tools.Tools;
 
+import java.io.Serializable;
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
@@ -12,7 +14,7 @@ import java.util.Objects;
 /**
  * The type Organization.
  */
-public class Organization implements Comparable<Organization> {
+public class Organization implements Comparable<Organization>, Serializable {
     /**
      * The constant idCode.
      */
@@ -80,33 +82,39 @@ public class Organization implements Comparable<Organization> {
 
         Coordinates coordinates = new Coordinates();
         Tools.Message("    Input coordinates x(x>-295): ");
-        Float x;
+        Float x = null;
         String sx = Tools.Input();
-        if (sx.equals("")) {
-            x = null;
-        } else {
-            x = Float.valueOf(sx);
+        if (!sx.equals("")) {
+            try {
+                x = Float.valueOf(sx);
+            } catch (NumberFormatException e) {
+                throw new ValueOutOfRangeException("Error: input numbers only!");
+            }
         }
         coordinates.setX(x);
 
         Tools.Message("    Input coordinates y(y<=500): ");
-        Double y;
+        Double y = null;
         String sy = Tools.Input();
-        if (sy.equals("")) {
-            y = null;
-        } else {
-            y = Double.valueOf(sy);
+        if (!sy.equals("")) {
+            try {
+                y = Double.valueOf(sy);
+            } catch (NumberFormatException e) {
+                throw new ValueOutOfRangeException("Error: input numbers only!");
+            }
         }
         coordinates.setY(y);
         organization.setCoordinates(coordinates);
 
         Tools.Message("    Input annualTurnover(annualTurnover>0): ");
         String sAT = Tools.Input();
-        Long annualTurnover;
-        if (sAT.equals("")) {
-            annualTurnover = null;
-        } else {
-            annualTurnover = Long.valueOf(sAT);
+        Long annualTurnover = null;
+        if (!sAT.equals("")) {
+            try {
+                annualTurnover = Long.valueOf(sAT);
+            } catch (NumberFormatException e) {
+                throw new ValueOutOfRangeException("Error: input numbers only!");
+            }
         }
         organization.setAnnualTurnover(annualTurnover);
 
@@ -119,11 +127,13 @@ public class Organization implements Comparable<Organization> {
 
         Tools.Message("    Input employeesCount(employeesCount>0): ");
         String sEC = Tools.Input();
-        Long employeesCount;
-        if (sEC.equals("")) {
-            employeesCount = null;
-        } else {
-            employeesCount = Long.valueOf(sEC);
+        Long employeesCount = null;
+        if (!sEC.equals("")) {
+            try {
+                employeesCount = Long.valueOf(sEC);
+            } catch (NumberFormatException e) {
+                throw new ValueOutOfRangeException("Error: input numbers only!");
+            }
         }
         organization.setEmployeesCount(employeesCount);
 

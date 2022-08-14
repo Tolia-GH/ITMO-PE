@@ -1,7 +1,7 @@
 package Manager;
 
-import Collection.Exceptions.NotInitializedException;
-import JSON.Collection.Organization;
+import Exceptions.NotInitializedException;
+import Collection.Organization;
 
 import java.util.ArrayDeque;
 import java.util.Date;

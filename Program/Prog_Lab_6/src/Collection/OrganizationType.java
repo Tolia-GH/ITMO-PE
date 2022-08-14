@@ -1,9 +1,11 @@
 package Collection;
 
+import java.io.Serializable;
+
 /**
  * The enum Organization type.
  */
-public enum OrganizationType {
+public enum OrganizationType implements Serializable {
     /**
      * Commercial organization type.
      */

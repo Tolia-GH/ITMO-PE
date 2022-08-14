@@ -1,9 +1,12 @@
 package Client;
 
+import Exceptions.MyException;
+import Exceptions.NoSuchCommandException;
 import Exceptions.NoSuchTypeException;
 import Tools.Tools;
 
 import java.io.IOException;
+import java.net.ConnectException;
 
 public class App {
 
@@ -43,10 +46,13 @@ public class App {
         try {
             client.run();
             client.runTerminal();
-        } catch (IOException e) {
-            Tools.MessageL("Error: IO Exception!");
-        } catch (NoSuchTypeException e) {
+        } catch (ConnectException e) {
+            Tools.MessageL("Error: Server not available!");
+        } catch (MyException e) {
             Tools.MessageL(e.getMessage());
+        } catch (IOException e) {
+            //Tools.MessageL("Error: IO Exception!");
+            e.printStackTrace();
         }
     }
 }

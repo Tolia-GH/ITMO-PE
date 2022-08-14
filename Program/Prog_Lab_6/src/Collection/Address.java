@@ -1,12 +1,14 @@
 package Collection;
 
-import Collection.Exceptions.NullValueException;
-import Collection.Exceptions.StringLengthOutOfRange;
+import Exceptions.NullValueException;
+import Exceptions.StringLengthOutOfRange;
+
+import java.io.Serializable;
 
 /**
  * The type Address.
  */
-public class Address {
+public class Address implements Serializable {
     /**
      * The street of address.
      * Value can not be null.

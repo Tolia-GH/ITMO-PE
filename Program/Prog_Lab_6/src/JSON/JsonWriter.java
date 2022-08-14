@@ -1,6 +1,6 @@
 package JSON;
 
-import JSON.Collection.Organization;
+import Collection.Organization;
 import Tools.Tools;
 import com.google.gson.Gson;
 

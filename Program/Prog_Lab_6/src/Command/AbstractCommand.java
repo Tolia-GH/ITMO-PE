@@ -3,11 +3,12 @@ package Command;
 import Manager.CommandManager;
 
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * The type Abstract command.
  */
-public abstract class AbstractCommand {
+public abstract class AbstractCommand implements Serializable {
     /**
      * The Name.
      */

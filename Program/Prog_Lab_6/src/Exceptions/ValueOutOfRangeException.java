@@ -3,7 +3,7 @@ package Exceptions;
 /**
  * The type Value out of range exception.
  */
-public class ValueOutOfRangeException extends RuntimeException {
+public class ValueOutOfRangeException extends MyException {
     /**
      * Instantiates a new Value out of range exception.
      *

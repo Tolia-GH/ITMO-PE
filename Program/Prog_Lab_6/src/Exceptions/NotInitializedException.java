@@ -3,7 +3,7 @@ package Exceptions;
 /**
  * The type Not initialized exception.
  */
-public class NotInitializedException extends RuntimeException {
+public class NotInitializedException extends MyException {
     /**
      * Instantiates a new Not initialized exception.
      *

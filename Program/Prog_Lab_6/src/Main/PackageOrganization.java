@@ -1,6 +1,6 @@
 package Main;
 
-import JSON.Collection.Organization;
+import Collection.Organization;
 
 import java.io.Serializable;
 import java.util.ArrayDeque;

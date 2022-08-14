@@ -1,12 +1,14 @@
 package Collection;
 
-import Collection.Exceptions.NullValueException;
-import Collection.Exceptions.ValueOutOfRangeException;
+import Exceptions.NullValueException;
+import Exceptions.ValueOutOfRangeException;
+
+import java.io.Serializable;
 
 /**
  * The type Coordinates.
  */
-public class Coordinates {
+public class Coordinates implements Serializable {
     /**
      * The X.
      */

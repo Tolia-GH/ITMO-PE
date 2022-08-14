@@ -1,5 +1,6 @@
 package Server;
 
+import Exceptions.MyException;
 import Manager.CommandManager;
 import Tools.Tools;
 
@@ -39,6 +40,8 @@ public class App {
         Server server = new Server(2001);
         try {
             server.run();
+        } catch (MyException e) {
+            Tools.MessageL(e.getMessage());
         } catch (IOException e) {
             e.printStackTrace();
         }

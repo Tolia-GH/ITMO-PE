@@ -1,13 +1,14 @@
 package Client;
 
-
-import Collection.Exceptions.NoSuchCommandException;
-import Collection.Exceptions.ParaIncorrectException;
 import Command.AbstractCommand;
-import JSON.Collection.Organization;
+import Exceptions.MyException;
+import Exceptions.NoSuchCommandException;
+import Exceptions.ParaIncorrectException;
+import Collection.Organization;
 import Main.PackageCommand;
 import Manager.CommandManager;
 import Tools.Tools;
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -18,6 +19,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
+import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 
 public class Client {
@@ -28,9 +30,6 @@ public class Client {
     private InetSocketAddress inetSocketAddress;
     private SocketChannel socketChannel;
     private Selector selector;
-    //ByteArrayOutputStream
-    private ObjectInputStream objectReader;
-    private ObjectOutputStream objectWriter;
 
 
     public Client(String host, int port) {
@@ -52,6 +51,7 @@ public class Client {
         Tools.MessageL("Client: Connecting to server: " + host + ":" + port);
         if (socketChannel.finishConnect()) {
             Tools.MessageL("Client: Connect to server successfully!");
+            messageToServer("Hello Server!");
         }
         //connect to server
     }
@@ -85,7 +85,6 @@ public class Client {
 
         CommandManager commandManager = new CommandManager();
 
-        Iterator<AbstractCommand> commandIterator;
         int numReadyChannel;
         while (true) {
             numReadyChannel = selector.select();
@@ -101,8 +100,24 @@ public class Client {
                         Tools.Message("User: ");
                         String[] commandWithArgs = Tools.Input().split(" ");
 
-                        PackageCommand packageCommand = packCommand(commandWithArgs, commandManager, fileName);
+                        try {
+                            PackageCommand packageCommand = PackageCommand.packCommand(commandWithArgs, commandManager, fileName);
 
+                            ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
+                            ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
+
+                            objectOut.writeObject(packageCommand);
+                            objectOut.flush();
+
+                            byte[] bytes = byteArrayOut.toByteArray();
+                            ByteBuffer byteBuffer = ByteBuffer.wrap(bytes);
+
+                            socketChannel.write(byteBuffer);
+                            Tools.MessageL("Client: Command sent!");
+                        } catch (MyException e) {
+                            Tools.MessageL(e.getMessage());
+                            continue;
+                        }
                     }
 
                     if (key.isReadable()) {
@@ -145,67 +160,20 @@ public class Client {
         }
     }
 
-    public PackageCommand packCommand(String[] commandWithArgs, CommandManager commandManager, String fileName) {
-
-        AbstractCommand commandToBePacked = commandManager.findCommand(commandWithArgs[0]);
-        PackageCommand packageCommand;
-
-        switch (commandToBePacked.getName()) {
-            case "add":
-            case "add_if_max": {
-                if (commandWithArgs.length != 1) {
-                    throw new ParaIncorrectException("Error: This command don't accept any parameters!");
-                }
-                Organization organization = Organization.Create();
-                packageCommand = new PackageCommand(commandToBePacked, organization, fileName);
-                return packageCommand;
-            }
-            case "clear": {
-                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
-                return packageCommand;
-            }
-            case "execute_script": {
-
-            }
-            case "exit": {
-
-            }
-            case "filter_less_than_type": {
-
-            }
-            case "group_counting_by_id": {
-
-            }
-            case "head": {
-
-            }
-            case "help": {
-
-            }
-            case "info": {
-
-            }
-            case "print_field_ascending_annual_turnover": {
-
-            }
-            case "remove_by_id": {
-
-            }
-            case "remove_head": {
-
-            }
-            case "save": {
-
-            }
-            case "show": {
-
-            }
-            case "update": {
-
-            }
-            default: {
-                throw new NoSuchCommandException("Error: Command not found!");
-            }
+    public void  messageToServer(String message) throws IOException {
+        ByteBuffer  buffer = ByteBuffer.allocate(1024);
+        buffer.clear();
+        buffer.put(message.getBytes(StandardCharsets.UTF_8));
+        buffer.flip();
+        while (buffer.hasRemaining()) {
+            Tools.MessageL("Client: Saying Hello to Server.");
+            socketChannel.write(buffer);
         }
     }
+
+    public void receiveFromServer() {
+
+    }
+
+
 }

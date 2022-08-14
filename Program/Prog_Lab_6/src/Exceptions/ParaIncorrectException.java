@@ -3,7 +3,7 @@ package Exceptions;
 /**
  * The type Para incorrect exception.
  */
-public class ParaIncorrectException extends RuntimeException {
+public class ParaIncorrectException extends MyException {
     /**
      * Instantiates a new Para incorrect exception.
      *

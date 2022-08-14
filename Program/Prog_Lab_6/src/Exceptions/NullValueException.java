@@ -3,7 +3,7 @@ package Exceptions;
 /**
  * The type Null value exception.
  */
-public class NullValueException extends RuntimeException{
+public class NullValueException extends MyException {
     /**
      * Instantiates a new Null value exception.
      *

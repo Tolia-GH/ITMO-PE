@@ -2,8 +2,8 @@ package Manager;
 
 import Exceptions.NoSuchCommandException;
 import Exceptions.ParaIncorrectException;
-import JSON.Collection.Organization;
-import JSON.Collection.OrganizationType;
+import Collection.Organization;
+import Collection.OrganizationType;
 import Command.*;
 import JSON.JsonWriter;
 import Tools.Tools;

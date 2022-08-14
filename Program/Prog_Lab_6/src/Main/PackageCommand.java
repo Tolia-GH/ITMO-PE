@@ -1,7 +1,10 @@
 package Main;
 
-import JSON.Collection.Organization;
+import Exceptions.NoSuchCommandException;
+import Exceptions.ParaIncorrectException;
+import Collection.Organization;
 import Command.AbstractCommand;
+import Manager.CommandManager;
 
 import java.io.Serializable;
 import java.util.ArrayDeque;
@@ -116,6 +119,117 @@ public class PackageCommand implements Serializable {
         return set;
     }
 
+    public static PackageCommand packCommand(String[] commandWithArgs, CommandManager commandManager, String fileName) {
 
+        AbstractCommand commandToBePacked = commandManager.findCommand(commandWithArgs[0]);
+        PackageCommand packageCommand;
+
+        switch (commandToBePacked.getName()) {
+            case "add":
+            case "add_if_max": {
+                if (commandWithArgs.length != 1) {
+                    throw new ParaIncorrectException("Error: This command do not accept any parameters!");
+                }
+                Organization organization = Organization.Create();
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, organization, fileName);
+                return packageCommand;
+            }
+            case "clear": {
+                if (commandWithArgs.length != 1) {
+                    throw new ParaIncorrectException("Error: This command do not accept any parameters!");
+                }
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                return packageCommand;
+            }
+            case "execute_script": {
+                if (commandWithArgs.length != 2) {
+                    throw new ParaIncorrectException("Error: This command accept 1 parameter!");
+                }
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                return packageCommand;
+            }
+            case "exit": {
+                if (commandWithArgs.length != 1) {
+                    throw new ParaIncorrectException("Error: This command do not accept any parameters!");
+                }
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                return packageCommand;
+            }
+            case "filter_less_than_type": {
+                if (commandWithArgs.length != 2) {
+                    throw new ParaIncorrectException("Error: This command accept 1 parameter!");
+                }
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                return packageCommand;
+            }
+            case "group_counting_by_id": {//haven't figure out what to do with this command
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                return packageCommand;
+            }
+            case "head": {
+                if (commandWithArgs.length != 1) {
+                    throw new ParaIncorrectException("Error: This command do not accept any parameters!");
+                }
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                return packageCommand;
+            }
+            case "help": {
+                if (commandWithArgs.length != 1) {
+                    throw new ParaIncorrectException("Error: This command do not accept any parameters!");
+                }
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                return packageCommand;
+            }
+            case "info": {
+                if (commandWithArgs.length != 1) {
+                    throw new ParaIncorrectException("Error: This command do not accept any parameters!");
+                }
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                return packageCommand;
+            }
+            case "print_field_ascending_annual_turnover": {
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                return packageCommand;
+            }
+            case "remove_by_id": {
+                if (commandWithArgs.length != 2) {
+                    throw new ParaIncorrectException("Error: This command accept 1 parameter!");
+                }
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                return packageCommand;
+            }
+            case "remove_head": {
+                if (commandWithArgs.length != 1) {
+                    throw new ParaIncorrectException("Error: This command do not accept any parameters!");
+                }
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                return packageCommand;
+            }
+            case "save": {
+                if (commandWithArgs.length != 1) {
+                    throw new ParaIncorrectException("Error: This command do not accept any parameters!");
+                }
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                return packageCommand;
+            }
+            case "show": {
+                if (commandWithArgs.length != 1) {
+                    throw new ParaIncorrectException("Error: This command do not accept any parameters!");
+                }
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                return packageCommand;
+            }
+            case "update": {
+                if (commandWithArgs.length != 2) {
+                    throw new ParaIncorrectException("Error: This command accept 1 parameter!");
+                }
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                return packageCommand;
+            }
+            default: {
+                throw new NoSuchCommandException("Error: Command not found while packing!");
+            }
+        }
+    }
 
 }
