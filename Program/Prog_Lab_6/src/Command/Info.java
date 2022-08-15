@@ -1,6 +1,7 @@
 package Command;
 
 import Exceptions.ParaIncorrectException;
+import Main.PackageCommand;
 import Manager.CommandManager;
 
 /**
@@ -16,11 +17,7 @@ public class Info extends AbstractCommand {
     }
 
     @Override
-    public void execute(CommandManager commandManager, String[] para, String saver) {
-        if (para.length > 1) {
-            throw new ParaIncorrectException("Error [info]: This command doesn't accept any parameter!\n");
-        }else {
-            commandManager.executeInfo();
-        }
+    public void execute(CommandManager commandManager, PackageCommand packageCommand) {
+        commandManager.executeInfo();
     }
 }

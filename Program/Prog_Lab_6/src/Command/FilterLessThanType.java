@@ -2,6 +2,7 @@ package Command;
 
 import Exceptions.ParaIncorrectException;
 import Collection.OrganizationType;
+import Main.PackageCommand;
 import Manager.CommandManager;
 
 /**
@@ -17,13 +18,11 @@ public class FilterLessThanType extends AbstractCommand {
     }
 
     @Override
-    public void execute(CommandManager commandManager, String[] para, String saver) {
-        if (para.length != 2) {
-            throw new ParaIncorrectException("Error [filter_less_than_type]: this command only and must accept one parameter");
-        } else if (!OrganizationType.findType(para[1])) {
+    public void execute(CommandManager commandManager, PackageCommand packageCommand) {
+        if (!OrganizationType.findType(packageCommand.getCommandWithArgs()[1])) {
             throw new ParaIncorrectException("Error [filter_less_than_type]: Organization type not found!");
         } else {
-            commandManager.executeFilterLessThanType(OrganizationType.valueOf(para[1]));
+            commandManager.executeFilterLessThanType(OrganizationType.valueOf(packageCommand.getCommandWithArgs()[1]));
         }
     }
 }

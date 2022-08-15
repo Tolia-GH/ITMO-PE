@@ -6,6 +6,8 @@ import Collection.Organization;
 import Collection.OrganizationType;
 import Command.*;
 import JSON.JsonWriter;
+import Main.PackageCommand;
+import Main.Response;
 import Tools.Tools;
 
 import java.io.*;
@@ -177,15 +179,14 @@ public class CommandManager {
         JsonWriter.SaveCollectionsToFile(OrganizationManager.getOrganizationSet(), saver);
     }
 
+
     /**
      * Execute execute script.
      *
      * @param name           the name
-     * @param commandManager the command manager
-     * @param Saver          the saver
      * @throws IOException the io exception
      */
-    public void executeExecuteScript(String name, CommandManager commandManager, String Saver) throws IOException {
+    public void executeExecuteScript(String name, PackageCommand packageCommand) throws IOException {
         File file = new File(name);
         if (!file.exists()) {
             throw new FileNotFoundException("Error: File [" + name + "] not found!");
@@ -199,8 +200,9 @@ public class CommandManager {
         while ((commandLine = bufferedReader.readLine()) != null){
             String []split = commandLine.split(" ");
             AbstractCommand command = findCommand(split[0]);
+
             if (command != null && !(command.getName().equals("ExecuteScript")&&split[1].equals(name))) {
-                command.execute(commandManager, split,Saver);
+                //command.execute(new CommandManager(), packageCommand);
             }
         }
         bufferedReader.close();
@@ -210,7 +212,8 @@ public class CommandManager {
      * Execute exit.
      */
     public void executeExit() {
-        System.exit(2);
+        Tools.MessageL("Server: Client exit");
+        System.exit(0);
     }
 
     /**

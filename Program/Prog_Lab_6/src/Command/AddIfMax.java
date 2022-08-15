@@ -2,6 +2,7 @@ package Command;
 
 import Exceptions.ParaIncorrectException;
 import Collection.Organization;
+import Main.PackageCommand;
 import Manager.CommandManager;
 
 /**
@@ -17,11 +18,7 @@ public class AddIfMax extends AbstractCommand {
     }
 
     @Override
-    public void execute(CommandManager commandManager, String[] para, String saver) {
-        if (para.length > 1) {
-            throw new ParaIncorrectException("Error: This command doesn't accept any parameter!\n");
-        } else {
-            commandManager.executeAddIfMax(Organization.Create());
-        }
+    public void execute(CommandManager commandManager, PackageCommand packageCommand) {
+        commandManager.executeAddIfMax(packageCommand.getOrganization());
     }
 }

@@ -1,5 +1,6 @@
 package Command;
 
+import Main.PackageCommand;
 import Manager.CommandManager;
 
 import java.io.IOException;
@@ -44,5 +45,5 @@ public abstract class AbstractCommand implements Serializable {
      * @param saver          the saver
      * @throws IOException the io exception
      */
-    abstract public void execute(CommandManager commandManager, String[] para, String saver) throws IOException;
+    abstract public void execute(CommandManager commandManager, PackageCommand packageCommand) throws IOException;
 }

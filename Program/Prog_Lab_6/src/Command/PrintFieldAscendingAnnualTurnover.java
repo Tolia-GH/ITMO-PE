@@ -1,6 +1,7 @@
 package Command;
 
 import Exceptions.ParaIncorrectException;
+import Main.PackageCommand;
 import Manager.CommandManager;
 
 /**
@@ -16,11 +17,7 @@ public class PrintFieldAscendingAnnualTurnover extends AbstractCommand {
     }
 
     @Override
-    public void execute(CommandManager commandManager, String[] para, String saver) {
-        if(para.length>1){
-            throw new ParaIncorrectException("Error [print_field_ascending_annual_turnover]: This command does not accept any parameter!\n");
-        }else {
-            commandManager.executePrintFieldAscendingAnnualTurnover();
-        }
+    public void execute(CommandManager commandManager, PackageCommand packageCommand) {
+        commandManager.executePrintFieldAscendingAnnualTurnover();
     }
 }

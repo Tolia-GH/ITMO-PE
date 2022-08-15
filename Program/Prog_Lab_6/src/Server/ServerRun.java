@@ -6,7 +6,7 @@ import Tools.Tools;
 
 import java.io.IOException;
 
-public class App {
+public class ServerRun {
 
     String filePath;
     int port;

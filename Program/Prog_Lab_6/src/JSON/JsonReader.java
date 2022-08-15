@@ -42,7 +42,7 @@ public class JsonReader {
 
         Gson gson = new Gson();
         ArrayDeque<Organization> collectionGot = gson.fromJson(fileData.toString(), arrayDequeType);
-        Tools.MessageL("Program: Collection got from file successfully!");
+        //Tools.MessageL("Program: Collection got from file successfully!");
 
         bufferedReader.close();
         return collectionGot;

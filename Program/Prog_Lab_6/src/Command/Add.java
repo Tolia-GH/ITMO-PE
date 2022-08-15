@@ -2,6 +2,7 @@ package Command;
 
 import Exceptions.ParaIncorrectException;
 import Collection.Organization;
+import Main.PackageCommand;
 import Manager.CommandManager;
 import Tools.Tools;
 
@@ -18,12 +19,7 @@ public class Add extends AbstractCommand{
     }
 
     @Override
-    public void execute(CommandManager commandManager, String[] para, String saver) {
-        if (para.length > 1) {
-            throw new ParaIncorrectException("Error: This command doesn't accept any parameter!\n");
-        }else {
-            Tools.MessageL("Program [add]: Please input parameters to create a organization");
-            commandManager.executeAdd(Organization.Create());
-        }
+    public void execute(CommandManager commandManager, PackageCommand packageCommand) {
+        commandManager.executeAdd(packageCommand.getOrganization());
     }
 }

@@ -5,8 +5,8 @@
 package Server;
 
 import Command.AbstractCommand;
-import Command.Add;
 import Main.PackageCommand;
+import Main.Response;
 import Manager.CommandManager;
 import Manager.OrganizationManager;
 import Tools.Tools;
@@ -14,15 +14,13 @@ import Tools.Tools;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.nio.charset.StandardCharsets;
+import java.nio.ByteBuffer;
 
 
 public class Server {
 
     private final int port;
     private ServerSocket serverSocket;
-    private BufferedReader readFromClient;
-    private PrintWriter writeToClient;
     private String fileName;
 
     public Server(int port) {
@@ -42,16 +40,6 @@ public class Server {
             Service();
         }
     }
-
-    /*private PrintWriter getWriter(Socket socket) throws IOException {
-        OutputStream out = socket.getOutputStream();
-        return new PrintWriter(new OutputStreamWriter(out, StandardCharsets.UTF_8),true);
-    }
-
-    private BufferedReader getReader(Socket socket) throws IOException {
-        InputStream in = socket.getInputStream();
-        return new BufferedReader(new InputStreamReader(in, StandardCharsets.UTF_8));
-    }*/
 
     public void Service() throws IOException {
         Socket socket = serverSocket.accept();
@@ -76,20 +64,27 @@ public class Server {
 
     public void handleCommand(Socket socket) throws IOException {
         CommandManager commandManager = new CommandManager();
+
         while (true) {
             //byte[] buffer = new byte[102400];
-            ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(socket.getInputStream()));
-            try {
-                PackageCommand packageCommand = (PackageCommand) ois.readObject();
-                String commandName = packageCommand.getAbstractCommand().getName();
-                AbstractCommand command = packageCommand.getAbstractCommand();
-                fileName = packageCommand.getFileName();
-                Tools.MessageL("Server: Receive command from client: " + commandName);
-                //command.execute(commandManager, packageCommand.getCommandWithArgs(), packageCommand.getFileName());
-                if (commandName.equals("add")) {
-                    Tools.MessageL("Receive command from client: add");
-                    Tools.MessageL(packageCommand.getOrganization().toString());
 
+            try {
+                ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(socket.getInputStream()));
+                PackageCommand packageCommand = (PackageCommand) ois.readObject();
+                if (packageCommand.isSetFromFile()) {
+                    OrganizationManager.setOrganizationSet(packageCommand.getOrganizationSet());
+                } else {
+                    String commandName = packageCommand.getAbstractCommand().getName();
+                    AbstractCommand command = packageCommand.getAbstractCommand();
+                    fileName = packageCommand.getFileName();
+                    Tools.MessageL("Server: Receive command from client: " + commandName);
+                    command.execute(commandManager, packageCommand);
+
+                    Response response = new Response("TestMessage from Server");
+
+                    ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
+                    oos.writeObject(response);
+                    oos.flush();
                 }
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();

@@ -71,6 +71,8 @@ public class Organization implements Comparable<Organization>, Serializable {
      * @throws ValueOutOfRangeException the value out of range exception
      */
     public static Organization Create() throws NullValueException, ValueOutOfRangeException {
+
+        Tools.MessageL("Program [add]: Please input parameters to create a organization");
         Organization organization = new Organization();
 
         Tools.Message("    Input name of Organization: ");

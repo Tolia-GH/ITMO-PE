@@ -1,33 +1,30 @@
 package Main;
 
+import Collection.Organization;
+
 import java.io.Serializable;
+import java.util.LinkedHashSet;
 
 public class Response implements Serializable {
-    private ResponseCode responseCode;
-    private String responseBody;
-
-    public Response(ResponseCode responseCode, String responseBody) {
-        this.responseCode = responseCode;
-        this.responseBody = responseBody;
+    public Response(LinkedHashSet<Organization> people, String responseMessage){
+        this.organizationSet = people;
+        this.responseMessage = responseMessage;
     }
 
-    /**
-     * @return Response сode.
-     */
-    public ResponseCode getResponseCode() {
-        return responseCode;
+    public Response(String responseMessage){
+        this.organizationSet = null;
+        this.responseMessage = responseMessage;
     }
 
-    /**
-     * @return Response body.
-     */
-    public String getResponseBody() {
-        return responseBody;
+    private final LinkedHashSet<Organization> organizationSet;
+
+    private final String responseMessage;
+
+    public LinkedHashSet<Organization> getOrganizationSet() {
+        return organizationSet;
     }
 
-    @Override
-    public String toString() {
-        return "Response[" + responseCode + ", " + responseBody + "]";
+    public String getResponseMessage() {
+        return responseMessage;
     }
 }
-

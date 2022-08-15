@@ -1,6 +1,7 @@
 package Command;
 
 import Exceptions.ParaIncorrectException;
+import Main.PackageCommand;
 import Manager.CommandManager;
 
 /**
@@ -16,11 +17,7 @@ public class Exit extends AbstractCommand {
     }
 
     @Override
-    public void execute(CommandManager commandManager, String[] para, String saver) {
-        if (para.length > 1) {
-            throw new ParaIncorrectException("Error [exit]: This command doesn't accept any parameter!\n");
-        }else {
-            commandManager.executeExit();
-        }
+    public void execute(CommandManager commandManager, PackageCommand packageCommand) {
+        commandManager.executeExit();
     }
 }

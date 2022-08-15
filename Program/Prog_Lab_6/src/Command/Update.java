@@ -1,6 +1,7 @@
 package Command;
 
 import Exceptions.ParaIncorrectException;
+import Main.PackageCommand;
 import Manager.CommandManager;
 
 /**
@@ -16,13 +17,11 @@ public class Update extends AbstractCommand {
     }
 
     @Override
-    public void execute(CommandManager commandManager, String[] para, String saver) {
-        if (para.length!=2) {
-            throw new ParaIncorrectException("Error [update]: this command only and must accept one parameter");
-        } else if (Integer.parseInt(para[1])<=0) {
+    public void execute(CommandManager commandManager, PackageCommand packageCommand) {
+        if (Integer.parseInt(packageCommand.getCommandWithArgs()[1])<=0) {
             throw new ParaIncorrectException("Error [update]: id should bigger than 0");
         } else {
-            commandManager.executeUpdate(Long.valueOf(para[1]));
+            commandManager.executeUpdate(Long.valueOf(packageCommand.getCommandWithArgs()[1]));
         }
     }
 }

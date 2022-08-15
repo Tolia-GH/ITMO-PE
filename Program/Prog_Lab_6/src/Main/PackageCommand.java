@@ -4,9 +4,14 @@ import Exceptions.NoSuchCommandException;
 import Exceptions.ParaIncorrectException;
 import Collection.Organization;
 import Command.AbstractCommand;
+import Exceptions.ValueOutOfRangeException;
 import Manager.CommandManager;
+import Tools.Tools;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.Serializable;
+import java.nio.file.FileAlreadyExistsException;
 import java.util.ArrayDeque;
 import java.util.List;
 
@@ -16,79 +21,79 @@ public class PackageCommand implements Serializable {
     private final String[] commandWithArgs;
     private final AbstractCommand abstractCommand;
     private final Organization organization;
-    private final ArrayDeque<Organization> arrayDeque;
+    private final ArrayDeque<Organization> organizationSet;
     private final String fileName;
     private final List<PackageCommand> list;
-    private final boolean set;
+    private final boolean setFromFile;
 
     public PackageCommand() {
         this.commandWithArgs = null;
         this.abstractCommand = null;
         this.organization = null;
-        this.arrayDeque = null;
+        this.organizationSet = null;
         this.fileName = null;
         this.list = null;
-        this.set = false;
+        this.setFromFile = false;
     }
 
     public PackageCommand(String[] arg, AbstractCommand command, String fileName) {
         this.commandWithArgs = arg;
         this.abstractCommand = command;
         this.organization = null;
-        this.arrayDeque = null;
+        this.organizationSet = null;
         this.fileName = fileName;
         this.list = null;
-        this.set = false;
+        this.setFromFile = false;
     }
 
     public PackageCommand(AbstractCommand command, Organization organization, String fileName) {
         this.commandWithArgs = null;
         this.abstractCommand = command;
         this.organization = organization;
-        this.arrayDeque = null;
+        this.organizationSet = null;
         this.fileName = fileName;
         this.list = null;
-        this.set = false;
+        this.setFromFile = false;
     }
 
     public PackageCommand(AbstractCommand command, ArrayDeque<Organization> arrayDeque, String fileName) {
         this.commandWithArgs = null;
         this.abstractCommand = command;
         this.organization = null;
-        this.arrayDeque = arrayDeque;
+        this.organizationSet = arrayDeque;
         this.fileName = fileName;
         this.list = null;
-        this.set = false;
+        this.setFromFile = false;
     }
 
     public PackageCommand(String[] arg, AbstractCommand command, Organization organization, String fileName) {
         this.commandWithArgs = arg;
         this.abstractCommand = command;
         this.organization = organization;
-        this.arrayDeque = null;
+        this.organizationSet = null;
         this.fileName = fileName;
         this.list = null;
-        this.set = false;
-    }
-
-    public PackageCommand(String name,boolean set){
-        this.commandWithArgs = null;
-        this.abstractCommand = null;
-        this.organization = null;
-        this.arrayDeque = null;
-        this.fileName = name;
-        this.list = null;
-        this.set = set;
+        this.setFromFile = false;
     }
 
     public PackageCommand(List<PackageCommand> list) {
         this.commandWithArgs = null;
         this.abstractCommand = null;
         this.organization = null;
-        this.arrayDeque = null;
+        this.organizationSet = null;
         this.fileName = null;
         this.list = list;
-        this.set = false;
+        this.setFromFile = false;
+    }
+
+    public PackageCommand(ArrayDeque<Organization> organizationSet) {
+        this.commandWithArgs = null;
+        this.abstractCommand = null;
+        this.organization = null;
+        this.organizationSet = organizationSet;
+        this.fileName = null;
+        this.list = null;
+        this.setFromFile = true;
     }
 
     public String[] getCommandWithArgs() {
@@ -103,8 +108,8 @@ public class PackageCommand implements Serializable {
         return this.organization;
     }
 
-    public ArrayDeque<Organization> getArrayDeque() {
-        return this.arrayDeque;
+    public ArrayDeque<Organization> getOrganizationSet() {
+        return this.organizationSet;
     }
 
     public String getFileName() {
@@ -115,11 +120,11 @@ public class PackageCommand implements Serializable {
         return this.list;
     }
 
-    public boolean isSet() {
-        return set;
+    public boolean isSetFromFile() {
+        return setFromFile;
     }
 
-    public static PackageCommand packCommand(String[] commandWithArgs, CommandManager commandManager, String fileName) {
+    public static PackageCommand packCommand(String[] commandWithArgs, CommandManager commandManager, String fileName) throws IOException {
 
         AbstractCommand commandToBePacked = commandManager.findCommand(commandWithArgs[0]);
         PackageCommand packageCommand;
@@ -206,8 +211,28 @@ public class PackageCommand implements Serializable {
                 return packageCommand;
             }
             case "save": {
-                if (commandWithArgs.length != 1) {
+                if (commandWithArgs.length != 1) {//check parameter number
                     throw new ParaIncorrectException("Error: This command do not accept any parameters!");
+                }
+
+                File file = new File(fileName);//check if file exist and ask if replace
+                if (!file.exists()) {
+                    file.createNewFile();
+                } else {
+                    Tools.Message("Program: File Already exist, Would you like to replace it? Y/N:");
+                    switch (Tools.Input()) {
+                        case "Y": {
+                            file.delete();
+                            file.createNewFile();
+                            break;
+                        }
+                        case "N": {
+                            throw new FileAlreadyExistsException("Program: command return because file exist");
+                        }
+                        default: {
+                            throw new ValueOutOfRangeException("Program: command return because input error!");
+                        }
+                    }
                 }
                 packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
                 return packageCommand;

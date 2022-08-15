@@ -24,7 +24,7 @@ public class JsonWriter {
      */
     public static void SaveCollectionsToFile(ArrayDeque<Organization> arrayDeque, String targetPath) throws IOException {
         File file = new File(targetPath);
-        if (!file.exists()) {
+        /*if (!file.exists()) {
             file.createNewFile();
         } else {
             Tools.Message("Program: File Already exist, Would you like to replace it? Y/N:");
@@ -42,7 +42,7 @@ public class JsonWriter {
                     break;
                 }
             }
-        }
+        }*/
         FileWriter fileWriter = new FileWriter(file, true);
         BufferedWriter bufferedReader = new BufferedWriter(fileWriter);
 

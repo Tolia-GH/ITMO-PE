@@ -23,6 +23,16 @@ public class OrganizationManager {
      */
     public static boolean IsInitialized = false;
 
+    public static void setOrganizationSet(ArrayDeque<Organization> arrayDeque) {
+        //try {
+        organizationSet = new ArrayDeque<>();
+        organizationSet = arrayDeque.clone();
+        IsInitialized = true;
+        //} catch (NullPointerException e) {
+        //Tools.MessageL("Error: Can not set Organizations because parameters was wrong!");
+        //}
+    }
+
     /**
      * Gets organization set.
      *

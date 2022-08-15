@@ -1,6 +1,7 @@
 package Command;
 
 import Exceptions.ParaIncorrectException;
+import Main.PackageCommand;
 import Manager.CommandManager;
 
 import java.io.IOException;
@@ -18,11 +19,7 @@ public class Save extends AbstractCommand {
     }
 
     @Override
-    public void execute(CommandManager commandManager, String[] para, String saver) throws IOException {
-        if (para.length > 1) {
-            throw new ParaIncorrectException("Error [save]: This command doesn't accept any parameter!\n");
-        }else {
-            commandManager.executeSave(saver);
-        }
+    public void execute(CommandManager commandManager, PackageCommand packageCommand) throws IOException {
+        commandManager.executeSave(packageCommand.getFileName());
     }
 }

@@ -1,6 +1,7 @@
 package Command;
 
 import Exceptions.ParaIncorrectException;
+import Main.PackageCommand;
 import Manager.CommandManager;
 
 import java.io.IOException;
@@ -18,11 +19,7 @@ public class ExecuteScript extends AbstractCommand {
     }
 
     @Override
-    public void execute(CommandManager commandManager, String[] para, String saver) throws IOException {
-        if (para.length > 2 || para.length == 1) {
-            throw new ParaIncorrectException("Error: This command must accept only one parameter!\n");
-        } else {
-            commandManager.executeExecuteScript(para[1], commandManager, saver);
-        }
+    public void execute(CommandManager commandManager, PackageCommand packageCommand) throws IOException {
+        //commandManager.executeExecuteScript(para[1], commandManager, saver);
     }
 }
