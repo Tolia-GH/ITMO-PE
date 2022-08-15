@@ -82,9 +82,26 @@ public class Server {
 
                     Response response = new Response("TestMessage from Server");
 
-                    ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
-                    oos.writeObject(response);
-                    oos.flush();
+                    ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();//
+                    ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
+                    objectOut.writeObject(response);
+                    byte[] bytes = byteArrayOut.toByteArray();
+                    OutputStream outputStream = socket.getOutputStream();
+                    outputStream.write(bytes);//
+                    /*
+                    ATTENTION HERE!!!
+                    I tried sending response to Client like this:
+                        ObjectOutputStream objectOut = new ObjectOutputStream(socket.getOutputStream);
+                        objectOut.writeObject(response);
+                        objectOut.flush();
+                    but cause java.io.StreamCorruptedException: invalid type code: 00
+                    because when Create the object of ObjectOutputStream,the system will send 2 bytes head [AC ED] message to the IOStream
+                    so when deserialize the object, if the ObjectOutputStream and the ObjectInputStream do not match each other
+                    when deSerialization the ObjectInputStream will not receive the 2 bytes head message
+                    and the serialVersionUID client receive not equals the class we want
+                    As a result, java.io.StreamCorruptedException will be thrown
+                    the ObjectInputStream and ObjectOutStream must patch each other when doing Serialization and deSerialization
+                     */
                 }
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();

@@ -118,6 +118,7 @@ public class Client {
                             ByteBuffer byteBuffer = ByteBuffer.wrap(bytes);
 
                             socketChannel.write(byteBuffer);
+                            objectOut.close();
                             Tools.MessageL("Client: Command sent!");
 
                             if (commandWithArgs[0].equalsIgnoreCase("exit")) {
@@ -130,6 +131,17 @@ public class Client {
                             continue;
                         }
                     } else if (key.isReadable()) {
+                        SocketChannel socketChannel = (SocketChannel) key.channel();
+                        Tools.MessageL("Client: Receiving response from Server:");
+                        ByteBuffer byteBuffer = ByteBuffer.allocate(102400);
+                        byteBuffer.clear();
+                        socketChannel.read(byteBuffer);
+                        byteBuffer.flip();
+                        ByteArrayInputStream byteArrayIn = new ByteArrayInputStream(byteBuffer.array());
+
+                        ObjectInputStream objectIn = new ObjectInputStream(byteArrayIn);//
+                        Response response = (Response) objectIn.readObject();//Bug Here!
+                        Tools.MessageL(response.getResponseMessage());
                         key.interestOps(SelectionKey.OP_WRITE);
                     } else {
 
