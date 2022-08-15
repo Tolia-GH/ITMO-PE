@@ -94,10 +94,10 @@ public class Client {
                     SelectionKey key = keyIterator.next();
                     keyIterator.remove();
 
-                    System.out.println("is Readable:" + key.isReadable());
+                    /*System.out.println("is Readable:" + key.isReadable());
                     System.out.println("is Writable:" + key.isWritable());
                     System.out.println("is Acceptable:" + key.isAcceptable());
-                    System.out.println("is Connectable:" + key.isConnectable());
+                    System.out.println("is Connectable:" + key.isConnectable());*/
 
                     if (key.isWritable()) {
                         SocketChannel socketChannel = (SocketChannel) key.channel();
