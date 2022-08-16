@@ -132,7 +132,7 @@ public class Client {
                         }
                     } else if (key.isReadable()) {
                         SocketChannel socketChannel = (SocketChannel) key.channel();
-                        Tools.MessageL("Client: Receiving response from Server:");
+                        Tools.MessageL("Client: Receiving response from Server:\n");
                         ByteBuffer byteBuffer = ByteBuffer.allocate(102400);
                         byteBuffer.clear();
                         socketChannel.read(byteBuffer);

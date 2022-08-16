@@ -80,7 +80,7 @@ public class Server {
                     Tools.MessageL("Server: Receive command from client: " + commandName);
                     command.execute(commandManager, packageCommand);
 
-                    Response response = new Response("TestMessage from Server");
+                    Response response = new Response(commandManager.getResponseMessage());
 
                     ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();//
                     ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);

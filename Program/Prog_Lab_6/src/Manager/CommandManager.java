@@ -7,7 +7,6 @@ import Collection.OrganizationType;
 import Command.*;
 import JSON.JsonWriter;
 import Main.PackageCommand;
-import Main.Response;
 import Tools.Tools;
 
 import java.io.*;
@@ -21,7 +20,21 @@ public class CommandManager {
     /**
      * The constant commands.
      */
-    public static LinkedHashSet<AbstractCommand> commands = new LinkedHashSet<>();
+    private static LinkedHashSet<AbstractCommand> commands = new LinkedHashSet<>();
+
+    private String responseMessage = "";
+
+    public void appendResponseMessage(String message) {
+        this.responseMessage = this.responseMessage + message;
+    }
+
+    public void appendResponseMessageL(String message) {
+        this.responseMessage = this.responseMessage + message + "\n";
+    }
+
+    public void clearResponseMessage() {
+        this.responseMessage = "";
+    }
 
     /**
      * Instantiates a new Command manager.
@@ -54,6 +67,11 @@ public class CommandManager {
         return commands;
     }
 
+    public String getResponseMessage() {
+        return this.responseMessage;
+    }
+
+
     /**
      * Find by id organization.
      *
@@ -73,8 +91,11 @@ public class CommandManager {
      * Execute help.
      */
     public void executeHelp() {
+        clearResponseMessage();
+        appendResponseMessageL("All commands:");
         for (AbstractCommand C : commands) {
-            System.out.println(C.getName() + ": " + C.getDescription());
+            appendResponseMessageL(C.getName() + ": " + C.getDescription());
+            System.out.println();
         }
     }
 
@@ -82,24 +103,33 @@ public class CommandManager {
      * Execute info.
      */
     public void executeInfo() {
-        Tools.MessageL("    The date of initialization is: "
-                + OrganizationManager.getInitializationTime() + "\n");
-        Tools.MessageL("    The amount of elements is: "
-                + OrganizationManager.getOrganizationSet().size()+"\n");
-        Tools.MessageL("    The type of collection is: "
-                + OrganizationManager.getOrganizationSet().getClass() +"\n");
+        clearResponseMessage();
+        appendResponseMessageL("Info of Collections:");
+        appendResponseMessageL("    The date of initialization is: "
+                + OrganizationManager.getInitializationTime());
+        appendResponseMessageL("    The amount of elements is: "
+                + OrganizationManager.getOrganizationSet().size());
+        appendResponseMessageL("    The type of collection is: "
+                + OrganizationManager.getOrganizationSet().getClass());
+        Tools.MessageL(getResponseMessage());
     }
 
     /**
      * Execute show.
      */
     public void executeShow() {
+        clearResponseMessage();
+        if (!OrganizationManager.IsInitialized) {
+            appendResponseMessageL("Error: Collections was not initialized!");
+        }
         if (OrganizationManager.getOrganizationSet().size() == 0) {
-            Tools.MessageL("Program [show]: Collections of organization is empty!");
+            appendResponseMessageL("Error: Collections of organization is empty!");
         } else {
+            appendResponseMessageL("All organizations:");
             for (Organization organization : OrganizationManager.getOrganizationSet()) {
-                System.out.print(organization.toString());
+                appendResponseMessageL(organization.toString());
             }
+            System.out.print(responseMessage);
         }
     }
 
@@ -109,6 +139,9 @@ public class CommandManager {
      * @param organization the organization
      */
     public void executeAdd(Organization organization) {
+        clearResponseMessage();
+        appendResponseMessageL("You add an organization:");
+        appendResponseMessageL(organization.toString());
         if (OrganizationManager.IsInitialized) {
             OrganizationManager.getOrganizationSet().add(organization);
         } else {
@@ -123,10 +156,12 @@ public class CommandManager {
      * @param id the id
      */
     public void executeUpdate(Long id) {
+        clearResponseMessage();
+
         Organization changed = Organization.Create();
         Organization original = findById(id);
 
-        Tools.MessageL("Program [update]: input new parameters to the target organization.");
+        appendResponseMessageL("Program [update]: input new parameters to the target organization.");
         original.setName(changed.getName());
         original.setCoordinates(changed.getCoordinates());
         original.setAnnualTurnover(changed.getAnnualTurnover());
@@ -142,31 +177,38 @@ public class CommandManager {
      * @param id the id
      */
     public void executeRemoveByID(Long id) {
+        clearResponseMessage();
 
         Organization organization = findById(id);
 
         OrganizationManager.getOrganizationSet().remove(organization);
+        appendResponseMessageL("Program[execute_by_id]: organization removed.");
     }
 
     /**
      * Execute remove head.
      */
     public void executeRemoveHead() {
+        clearResponseMessage();
+
         if (!OrganizationManager.IsInitialized) {
-            throw new NoSuchCommandException("Error: Collections was not initialized!\n");
+            appendResponseMessageL("Error: Collections was not initialized!");
+        } else {
+            Organization organization = findById(1L);
+            OrganizationManager.getOrganizationSet().remove(organization);
+            appendResponseMessageL("Program[remove_head]: organization removed.");
         }
-
-        Organization organization = findById(1L);
-
-        OrganizationManager.getOrganizationSet().remove(organization);
+        Tools.MessageL(getResponseMessage());
     }
 
     /**
      * Execute clear.
      */
     public void executeClear() {
+        clearResponseMessage();
         OrganizationManager.getOrganizationSet().clear();
-        Tools.MessageL("Program [clear]: Set cleared\n");
+        appendResponseMessageL("Program [clear]: Set cleared");
+        Tools.MessageL(getResponseMessage());
     }
 
     /**
@@ -176,7 +218,10 @@ public class CommandManager {
      * @throws IOException the io exception
      */
     public void executeSave(String saver) throws IOException {
+        clearResponseMessage();
+
         JsonWriter.SaveCollectionsToFile(OrganizationManager.getOrganizationSet(), saver);
+        appendResponseMessageL("Collection saved at: " + new File(saver).getAbsolutePath());
     }
 
 
@@ -187,6 +232,8 @@ public class CommandManager {
      * @throws IOException the io exception
      */
     public void executeExecuteScript(String name, PackageCommand packageCommand) throws IOException {
+        clearResponseMessage();
+
         File file = new File(name);
         if (!file.exists()) {
             throw new FileNotFoundException("Error: File [" + name + "] not found!");
@@ -212,6 +259,8 @@ public class CommandManager {
      * Execute exit.
      */
     public void executeExit() {
+        clearResponseMessage();
+
         Tools.MessageL("Server: Client exit");
         System.exit(0);
     }
@@ -220,11 +269,18 @@ public class CommandManager {
      * Execute head.
      */
     public void executeHead() {
-        if (OrganizationManager.getOrganizationSet().size() == 0) {
-            Tools.MessageL("Program [show]: Collections of organization is empty!");
+        clearResponseMessage();
+        if (!OrganizationManager.IsInitialized) {
+            clearResponseMessage();
+
+            appendResponseMessageL("Error: Collections was not initialized!");
+        } else if (OrganizationManager.getOrganizationSet().size() == 0) {
+            appendResponseMessageL("Error: Collections of organization is empty!");
         } else {
-            Tools.Message(OrganizationManager.getOrganizationSet().getFirst().toString());
+            appendResponseMessageL("First organization:");
+            appendResponseMessageL(OrganizationManager.getOrganizationSet().getFirst().toString());
         }
+        Tools.MessageL(getResponseMessage());
     }
 
     /**
@@ -233,16 +289,18 @@ public class CommandManager {
      * @param organization the organization
      */
     public void executeAddIfMax(Organization organization) {
+        clearResponseMessage();
 
         boolean isMax = true;
         for (Organization value : OrganizationManager.getOrganizationSet()) {
             if (organization.compareTo(value) < 0) {
                 isMax = false;
-                Tools.MessageL("Program [add_if_max]: element id is not the max\n");
+                appendResponseMessageL("Program [add_if_max]: element id is not the max");
             }
         }
         if (isMax) {
             OrganizationManager.getOrganizationSet().add(organization);
+            appendResponseMessageL(" You add an Organization: " + organization.toString());
         }
     }
 
@@ -250,6 +308,7 @@ public class CommandManager {
      * Execute group counting by id.
      */
     public void executeGroupCountingByID() {
+        clearResponseMessage();
         Tools.MessageL("author: Haven't figure out what should I do with this command...");
     }
 
@@ -259,15 +318,17 @@ public class CommandManager {
      * @param type the type
      */
     public void executeFilterLessThanType(OrganizationType type) {
+        clearResponseMessage();
         boolean hasLess = false;
+        appendResponseMessageL("Checking collections...");
         for (Organization organization : OrganizationManager.getOrganizationSet()) {
             if (organization.getType().compareTo(type) < 0) {
-                Tools.Message(organization.toString());
+                appendResponseMessageL(organization.toString());
                 hasLess = true;
             }
         }
         if (!hasLess) {
-            Tools.MessageL("    Found no element!");
+            appendResponseMessageL("    Found no element!");
         }
     }
 
@@ -275,6 +336,7 @@ public class CommandManager {
      * Execute print field ascending annual turnover.
      */
     public void executePrintFieldAscendingAnnualTurnover() {
+        clearResponseMessage();
         ArrayDeque<Organization> arrayDeque = OrganizationManager.getOrganizationSet().clone();
         long min = Long.MAX_VALUE;
         while (arrayDeque.size() > 0) {
@@ -285,7 +347,7 @@ public class CommandManager {
                     minOrg = organization;
                 }
             }
-            Tools.Message(minOrg.toString());
+            appendResponseMessageL(minOrg.toString());
             arrayDeque.remove(minOrg);
             min = Long.MAX_VALUE;
         }

@@ -388,7 +388,7 @@ public class Organization implements Comparable<Organization>, Serializable {
                 + this.employeesCount + ","
                 + this.fullName + ","
                 + this.postalAddress + ","
-                + this.creationDate + "\n";
+                + this.creationDate;
     }
 
     @Override
