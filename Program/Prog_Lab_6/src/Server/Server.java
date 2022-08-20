@@ -75,6 +75,7 @@ public class Server {
                     OrganizationManager.setOrganizationSet(packageCommand.getOrganizationSet());
                     OrganizationManager.sort();
                 } else {
+                    OrganizationManager.doInitialization();
 
                     String commandName = packageCommand.getAbstractCommand().getName();
                     AbstractCommand command = packageCommand.getAbstractCommand();
@@ -106,7 +107,7 @@ public class Server {
                     As a result, java.io.StreamCorruptedException will be thrown
                     the ObjectInputStream and ObjectOutStream must patch each other when doing Serialization and deSerialization
                      */
-                    } else {
+                    } else {//for execute_script
                         List<PackageCommand> packCommand = packageCommand.getList();
                         String message = "executing commands from file...";
 
