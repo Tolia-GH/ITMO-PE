@@ -4,7 +4,7 @@ package Exceptions;
  * The type No such command exception.
  *
  */
-public class NoSuchCommandException extends MyException {
+public class NoSuchCommandException extends AbstractException {
     /**
      * Instantiates a new No such command exception.
      *

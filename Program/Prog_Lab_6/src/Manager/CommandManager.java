@@ -1,14 +1,14 @@
 package Manager;
 
-import Exceptions.NoSuchCommandException;
 import Collection.Organization;
 import Collection.OrganizationType;
 import Command.*;
+import Exceptions.NoSuchCommandException;
 import JSON.JsonWriter;
-import Main.PackageCommand;
 import Tools.Tools;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.LinkedHashSet;
 
@@ -19,7 +19,7 @@ public class CommandManager {
     /**
      * The constant commands.
      */
-    private static LinkedHashSet<AbstractCommand> commands = new LinkedHashSet<>();
+    private static final LinkedHashSet<AbstractCommand> commands = new LinkedHashSet<>();
 
     private String responseMessage = "";
 
@@ -137,17 +137,16 @@ public class CommandManager {
     public void executeUpdate(Long id, Organization organization) {
         clearMessage();
 
-        Organization changed = organization;
         Organization original = OrganizationManager.findById(id);
 
         appendMessageL("Program [update]: organization updated");
-        original.setName(changed.getName());
-        original.setCoordinates(changed.getCoordinates());
-        original.setAnnualTurnover(changed.getAnnualTurnover());
-        original.setFullName(changed.getFullName());
-        original.setEmployeesCount(changed.getEmployeesCount());
-        original.setType(changed.getType());
-        original.setPostalAddress(changed.getPostalAddress());
+        original.setName(organization.getName());
+        original.setCoordinates(organization.getCoordinates());
+        original.setAnnualTurnover(organization.getAnnualTurnover());
+        original.setFullName(organization.getFullName());
+        original.setEmployeesCount(organization.getEmployeesCount());
+        original.setType(organization.getType());
+        original.setPostalAddress(organization.getPostalAddress());
     }
 
     /**
@@ -207,36 +206,6 @@ public class CommandManager {
 
 
     /**
-     * Execute execute script.
-     *
-     * @param name           the name
-     * @throws IOException the io exception
-     */
-    public void executeExecuteScript(String name, PackageCommand packageCommand) throws IOException {
-        clearMessage();
-
-        File file = new File(name);
-        if (!file.exists()) {
-            throw new FileNotFoundException("Error: File [" + name + "] not found!");
-        }
-        if (!file.canRead()) {
-            throw new SecurityException("Error: File [" + name + "] can not read!");
-        }
-        FileReader fileReader = new FileReader(file);
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
-        String commandLine;
-        while ((commandLine = bufferedReader.readLine()) != null){
-            String []split = commandLine.split(" ");
-            AbstractCommand command = findCommand(split[0]);
-
-            if (command != null && !(command.getName().equals("ExecuteScript")&&split[1].equals(name))) {
-                //command.execute(new CommandManager(), packageCommand);
-            }
-        }
-        bufferedReader.close();
-    }
-
-    /**
      * Execute exit.
      */
     public void executeExit() {
@@ -277,12 +246,14 @@ public class CommandManager {
             if (organization.compareTo(value) < 0) {
                 isMax = false;
 
+                break;
             }
         }
         if (isMax) {
             OrganizationManager.getOrganizationSet().add(organization);
             OrganizationManager.sort();
-            appendMessageL(" You add an Organization: " + organization.toString());
+            appendMessageL("You add an organization:");
+            appendMessageL(organization.toString());
         } else {
             appendMessageL("Program [add_if_max]: element id is not the max");
         }

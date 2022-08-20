@@ -109,16 +109,16 @@ public class Server {
                      */
                     } else {//for execute_script
                         List<PackageCommand> packCommand = packageCommand.getList();
-                        String message = "executing commands from file...";
+                        StringBuilder message = new StringBuilder("executing commands from file...");
 
                         for (PackageCommand pack : packCommand) {
                             AbstractCommand commandFromList = pack.getAbstractCommand();
                             commandFromList.execute(commandManager,pack);
-                            message += "\nCommand[" + commandFromList.getName() + "]:\n";
-                            message += commandManager.getResponseMessage();
+                            message.append("\nCommand[").append(commandFromList.getName()).append("]:\n");
+                            message.append(commandManager.getResponseMessage());
                         }
 
-                        Response response = new Response(OrganizationManager.getOrganizationSet(),message);
+                        Response response = new Response(OrganizationManager.getOrganizationSet(), message.toString());
 
                         ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();//
                         ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
@@ -127,8 +127,6 @@ public class Server {
                         OutputStream outputStream = socket.getOutputStream();
                         outputStream.write(bytes);//
                     }
-
-
                 }
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();

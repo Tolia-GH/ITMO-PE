@@ -1,20 +1,13 @@
 package Client;
 
-import Command.AbstractCommand;
-import Exceptions.MyException;
-import Exceptions.NoSuchCommandException;
-import Exceptions.ParaIncorrectException;
+import Exceptions.AbstractException;
 import Collection.Organization;
 import JSON.JsonReader;
 import Main.PackageCommand;
 import Main.Response;
 import Manager.CommandManager;
-import Manager.OrganizationManager;
 import Tools.Tools;
-import com.sun.org.apache.xpath.internal.operations.Or;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 
-import javax.smartcardio.ResponseAPDU;
 import java.io.*;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -97,11 +90,6 @@ public class Client {
                     SelectionKey key = keyIterator.next();
                     keyIterator.remove();
 
-                    /*System.out.println("is Readable:" + key.isReadable());
-                    System.out.println("is Writable:" + key.isWritable());
-                    System.out.println("is Acceptable:" + key.isAcceptable());
-                    System.out.println("is Connectable:" + key.isConnectable());*/
-
                     if (key.isWritable()) {
                         SocketChannel socketChannel = (SocketChannel) key.channel();
                         //commandManager.executeShow();
@@ -130,10 +118,7 @@ public class Client {
                             }
 
                             key.interestOps(SelectionKey.OP_READ);
-                        } catch (MyException e) {
-                            Tools.MessageL(e.getMessage());
-                            continue;
-                        } catch (FileNotFoundException e) {
+                        } catch (AbstractException | FileNotFoundException e) {
                             Tools.MessageL(e.getMessage());
                         }
                     } else if (key.isReadable()) {
@@ -152,7 +137,7 @@ public class Client {
 
                         //Tools.MessageL(String.valueOf(response.getAmountSet()));
                     } else {
-
+                        Tools.MessageL("Error: Key is not ready!");
                     }
                 }
             } else {
@@ -170,10 +155,6 @@ public class Client {
             Tools.MessageL("Client: Saying Hello to Server.");
             socketChannel.write(buffer);
         }
-    }
-
-    public void receiveFromServer() {
-
     }
 
 

@@ -1,14 +1,10 @@
 package Client;
 
-import Collection.Organization;
-import Exceptions.MyException;
-import JSON.JsonReader;
+import Exceptions.AbstractException;
 import Manager.OrganizationManager;
 import Tools.Tools;
 
-import java.io.IOException;
 import java.net.ConnectException;
-import java.util.ArrayDeque;
 
 public class ClientRun {
 
@@ -55,13 +51,11 @@ public class ClientRun {
             client.runTerminal(isSetFromFile, filePath);
         } catch (ConnectException e) {
             Tools.MessageL("Error: Server not available!");
-        } catch (MyException e) {
+        } catch (AbstractException e) {
             Tools.MessageL(e.getMessage());
-        } catch (IOException e) {
-            //Tools.MessageL("Error: IO Exception!");
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            Tools.MessageL("Error: Something Wrong!");
+            //e.printStackTrace();
         }
     }
 }

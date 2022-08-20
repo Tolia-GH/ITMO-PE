@@ -1,46 +1,33 @@
 package Server;
 
-import Exceptions.MyException;
-import Manager.CommandManager;
+import Exceptions.AbstractException;
 import Tools.Tools;
 
 import java.io.IOException;
 
 public class ServerRun {
+    static int port = 2001;
 
-    String filePath;
-    int port;
-
-    private void setArgs(String[] args) {
+    private static void setArgs(String[] args) {
         try {
             for (int i = 0; i < args.length; i++) {
-                switch (args[i]) {
-                    case "-f": {
-                        filePath = args[++i];
-                        break;
-                    }
-                    /*case "-p": {
-                        port = Integer.parseInt(args[++i]);
-                        break;
-                    }*/
+                if (args[i].equals("-p")) {
+                    port = Integer.parseInt(args[++i]);
                 }
             }
         } catch (IndexOutOfBoundsException e) {
             Tools.MessageL("Error: You should input the arguments in the following format:");
-            Tools.MessageL("       -f filepath");
-            /*Tools.MessageL("       -ip ipAddress");
-            Tools.MessageL("       -p port");*/
+            Tools.MessageL("       -p port");
             System.exit(1);
         }
     }
 
     public static void main(String[] args) {
-        //CommandManager commandManager = new CommandManager();
-
-        Server server = new Server(2001);
+        ServerRun.setArgs(args);
+        Server server = new Server(port);
         try {
             server.run();
-        } catch (MyException e) {
+        } catch (AbstractException e) {
             Tools.MessageL(e.getMessage());
         } catch (IOException e) {
             e.printStackTrace();

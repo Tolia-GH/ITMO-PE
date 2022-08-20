@@ -118,7 +118,13 @@ public class PackageCommand implements Serializable {
                 packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, organization, fileName);
                 return packageCommand;
             }
-            case "clear": {
+            case "clear":
+            case "exit":
+            case "head":
+            case "help":
+            case "info":
+            case "remove_head":
+            case "show": {
                 if (commandWithArgs.length != 1) {
                     throw new ParaIncorrectException("Error: This command do not accept any parameters!");
                 }
@@ -154,49 +160,7 @@ public class PackageCommand implements Serializable {
                 }
                 return packageCommand;
             }
-            case "exit": {
-                if (commandWithArgs.length != 1) {
-                    throw new ParaIncorrectException("Error: This command do not accept any parameters!");
-                }
-                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
-                return packageCommand;
-            }
-            case "filter_less_than_type": {
-                if (commandWithArgs.length != 2) {
-                    throw new ParaIncorrectException("Error: This command accept 1 parameter!");
-                }
-                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
-                return packageCommand;
-            }
-            case "group_counting_by_id": {//haven't figure out what to do with this command
-                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
-                return packageCommand;
-            }
-            case "head": {
-                if (commandWithArgs.length != 1) {
-                    throw new ParaIncorrectException("Error: This command do not accept any parameters!");
-                }
-                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
-                return packageCommand;
-            }
-            case "help": {
-                if (commandWithArgs.length != 1) {
-                    throw new ParaIncorrectException("Error: This command do not accept any parameters!");
-                }
-                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
-                return packageCommand;
-            }
-            case "info": {
-                if (commandWithArgs.length != 1) {
-                    throw new ParaIncorrectException("Error: This command do not accept any parameters!");
-                }
-                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
-                return packageCommand;
-            }
-            case "print_field_ascending_annual_turnover": {
-                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
-                return packageCommand;
-            }
+            case "filter_less_than_type":
             case "remove_by_id": {
                 if (commandWithArgs.length != 2) {
                     throw new ParaIncorrectException("Error: This command accept 1 parameter!");
@@ -204,10 +168,8 @@ public class PackageCommand implements Serializable {
                 packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
                 return packageCommand;
             }
-            case "remove_head": {
-                if (commandWithArgs.length != 1) {
-                    throw new ParaIncorrectException("Error: This command do not accept any parameters!");
-                }
+            case "group_counting_by_id":
+            case "print_field_ascending_annual_turnover": {//haven't figured out what to do with this command
                 packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
                 return packageCommand;
             }
@@ -238,17 +200,10 @@ public class PackageCommand implements Serializable {
                 packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
                 return packageCommand;
             }
-            case "show": {
-                if (commandWithArgs.length != 1) {
-                    throw new ParaIncorrectException("Error: This command do not accept any parameters!");
-                }
-                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
-                return packageCommand;
-            }
             case "update": {
                 if (commandWithArgs.length != 2) {
                     throw new ParaIncorrectException("Error: This command accept 1 parameter!");
-                } else if(Integer.valueOf(commandWithArgs[1]) > response.getAmountSet()) {
+                } else if(Integer.parseInt(commandWithArgs[1]) > response.getAmountSet()) {
                     throw new OrganizationNotFoundException("Error: Organization not found!");
                 } else {
                     Organization organization = Organization.Create();

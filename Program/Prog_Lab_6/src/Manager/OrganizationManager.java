@@ -23,7 +23,6 @@ public class OrganizationManager {
      * The constant IsInitialized.
      */
     public static boolean IsInitialized = false;
-    private static int amount;
 
     public static void setOrganizationSet(ArrayDeque<Organization> arrayDeque) {
         //try {
