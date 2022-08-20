@@ -25,6 +25,7 @@ public class ClientRun {
                     case "-f": {//setting file path
                         filePath = args[++i];
                         isSetFromFile = true;
+                        OrganizationManager.setInitialization();
                         break;
                     }
                     case "-ip": {//setting ip address

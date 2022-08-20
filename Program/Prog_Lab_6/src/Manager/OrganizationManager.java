@@ -2,6 +2,7 @@ package Manager;
 
 import Exceptions.NotInitializedException;
 import Collection.Organization;
+import Exceptions.ParaIncorrectException;
 
 import java.util.ArrayDeque;
 import java.util.Date;
@@ -22,6 +23,7 @@ public class OrganizationManager {
      * The constant IsInitialized.
      */
     public static boolean IsInitialized = false;
+    private static int amount;
 
     public static void setOrganizationSet(ArrayDeque<Organization> arrayDeque) {
         //try {
@@ -57,6 +59,10 @@ public class OrganizationManager {
         }
     }
 
+    public static void setInitialization() {
+        IsInitialized = true;
+    }
+
     /**
      * Gets initialization time.
      *
@@ -64,5 +70,36 @@ public class OrganizationManager {
      */
     public static Date getInitializationTime() {
         return InitializationTime;
+    }
+
+    /**
+     * Find by id organization.
+     *
+     * @param id the id
+     * @return the organization
+     */
+    public static Organization findById(Long id) {
+        for (Organization organization : OrganizationManager.getOrganizationSet()) {
+            if (id.equals(organization.getId())) {
+                return organization;
+            }
+        }
+        throw new ParaIncorrectException("Error: Target organization not found!\n");
+    }
+
+    public static boolean isExist(Long id) {
+        for (Organization organization : OrganizationManager.getOrganizationSet()) {
+            if (id.equals(organization.getId())) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public static void sort() {
+        Long count = 1L;
+        for (Organization organization : OrganizationManager.getOrganizationSet()) {
+            organization.setId(count);
+            count++;
+        }
     }
 }

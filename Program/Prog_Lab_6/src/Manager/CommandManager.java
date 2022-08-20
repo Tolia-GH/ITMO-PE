@@ -71,22 +71,6 @@ public class CommandManager {
         return this.responseMessage;
     }
 
-
-    /**
-     * Find by id organization.
-     *
-     * @param id the id
-     * @return the organization
-     */
-    public Organization findById(Long id) {
-        for (Organization organization : OrganizationManager.getOrganizationSet()) {
-            if (id.equals(organization.getId())) {
-                return organization;
-            }
-        }
-        throw new ParaIncorrectException("Error: Target organization not found!\n");
-    }
-
     /**
      * Execute help.
      */
@@ -105,8 +89,6 @@ public class CommandManager {
     public void executeInfo() {
         clearResponseMessage();
         appendResponseMessageL("Info of Collections:");
-        appendResponseMessageL("    The date of initialization is: "
-                + OrganizationManager.getInitializationTime());
         appendResponseMessageL("    The amount of elements is: "
                 + OrganizationManager.getOrganizationSet().size());
         appendResponseMessageL("    The type of collection is: "
@@ -140,14 +122,15 @@ public class CommandManager {
      */
     public void executeAdd(Organization organization) {
         clearResponseMessage();
-        appendResponseMessageL("You add an organization:");
-        appendResponseMessageL(organization.toString());
         if (OrganizationManager.IsInitialized) {
             OrganizationManager.getOrganizationSet().add(organization);
         } else {
             OrganizationManager.doInitialization();
             OrganizationManager.getOrganizationSet().add(organization);
         }
+        OrganizationManager.sort();
+        appendResponseMessageL("You add an organization:");
+        appendResponseMessageL(organization.toString());
     }
 
     /**
@@ -155,13 +138,13 @@ public class CommandManager {
      *
      * @param id the id
      */
-    public void executeUpdate(Long id) {
+    public void executeUpdate(Long id, Organization organization) {
         clearResponseMessage();
 
-        Organization changed = Organization.Create();
-        Organization original = findById(id);
+        Organization changed = organization;
+        Organization original = OrganizationManager.findById(id);
 
-        appendResponseMessageL("Program [update]: input new parameters to the target organization.");
+        appendResponseMessageL("Program [update]: organization updated");
         original.setName(changed.getName());
         original.setCoordinates(changed.getCoordinates());
         original.setAnnualTurnover(changed.getAnnualTurnover());
@@ -179,10 +162,11 @@ public class CommandManager {
     public void executeRemoveByID(Long id) {
         clearResponseMessage();
 
-        Organization organization = findById(id);
+        Organization organization = OrganizationManager.findById(id);
 
         OrganizationManager.getOrganizationSet().remove(organization);
         appendResponseMessageL("Program[execute_by_id]: organization removed.");
+        OrganizationManager.sort();
     }
 
     /**
@@ -194,11 +178,12 @@ public class CommandManager {
         if (!OrganizationManager.IsInitialized) {
             appendResponseMessageL("Error: Collections was not initialized!");
         } else {
-            Organization organization = findById(1L);
+            Organization organization = OrganizationManager.findById(1L);
             OrganizationManager.getOrganizationSet().remove(organization);
             appendResponseMessageL("Program[remove_head]: organization removed.");
         }
         Tools.MessageL(getResponseMessage());
+        OrganizationManager.sort();
     }
 
     /**
@@ -295,12 +280,15 @@ public class CommandManager {
         for (Organization value : OrganizationManager.getOrganizationSet()) {
             if (organization.compareTo(value) < 0) {
                 isMax = false;
-                appendResponseMessageL("Program [add_if_max]: element id is not the max");
+
             }
         }
         if (isMax) {
             OrganizationManager.getOrganizationSet().add(organization);
+            OrganizationManager.sort();
             appendResponseMessageL(" You add an Organization: " + organization.toString());
+        } else {
+            appendResponseMessageL("Program [add_if_max]: element id is not the max");
         }
     }
 

@@ -1,11 +1,13 @@
 package Main;
 
 import Exceptions.NoSuchCommandException;
+import Exceptions.OrganizationNotFoundException;
 import Exceptions.ParaIncorrectException;
 import Collection.Organization;
 import Command.AbstractCommand;
 import Exceptions.ValueOutOfRangeException;
 import Manager.CommandManager;
+import Manager.OrganizationManager;
 import Tools.Tools;
 
 import java.io.File;
@@ -124,7 +126,7 @@ public class PackageCommand implements Serializable {
         return setFromFile;
     }
 
-    public static PackageCommand packCommand(String[] commandWithArgs, CommandManager commandManager, String fileName) throws IOException {
+    public static PackageCommand packCommand(Response response, String[] commandWithArgs, CommandManager commandManager, String fileName) throws IOException {
 
         AbstractCommand commandToBePacked = commandManager.findCommand(commandWithArgs[0]);
         PackageCommand packageCommand;
@@ -247,8 +249,13 @@ public class PackageCommand implements Serializable {
             case "update": {
                 if (commandWithArgs.length != 2) {
                     throw new ParaIncorrectException("Error: This command accept 1 parameter!");
+                } else if(Integer.valueOf(commandWithArgs[1]) > response.getAmountSet()) {
+                    throw new OrganizationNotFoundException("Error: Organization not found!");
+                } else {
+                    Organization organization = Organization.Create();
+                    packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, organization, fileName);
+
                 }
-                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
                 return packageCommand;
             }
             default: {

@@ -21,7 +21,7 @@ public class Update extends AbstractCommand {
         if (Integer.parseInt(packageCommand.getCommandWithArgs()[1])<=0) {
             throw new ParaIncorrectException("Error [update]: id should bigger than 0");
         } else {
-            commandManager.executeUpdate(Long.valueOf(packageCommand.getCommandWithArgs()[1]));
+            commandManager.executeUpdate(Long.valueOf(packageCommand.getCommandWithArgs()[1]), packageCommand.getOrganization());
         }
     }
 }
