@@ -108,11 +108,23 @@ public class Server {
                      */
                     } else {
                         List<PackageCommand> packCommand = packageCommand.getList();
-                        Response response = new Response(OrganizationManager.getOrganizationSet(),"");
+                        String message = "executing commands from file...";
+
                         for (PackageCommand pack : packCommand) {
                             AbstractCommand commandFromList = pack.getAbstractCommand();
                             commandFromList.execute(commandManager,pack);
+                            message += "\nCommand[" + commandFromList.getName() + "]:\n";
+                            message += commandManager.getResponseMessage();
                         }
+
+                        Response response = new Response(OrganizationManager.getOrganizationSet(),message);
+
+                        ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();//
+                        ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
+                        objectOut.writeObject(response);
+                        byte[] bytes = byteArrayOut.toByteArray();
+                        OutputStream outputStream = socket.getOutputStream();
+                        outputStream.write(bytes);//
                     }
 
 

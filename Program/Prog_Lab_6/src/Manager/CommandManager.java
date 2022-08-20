@@ -91,7 +91,6 @@ public class CommandManager {
                 + OrganizationManager.getOrganizationSet().size());
         appendMessageL("    The type of collection is: "
                 + OrganizationManager.getOrganizationSet().getClass());
-        Tools.MessageL(getResponseMessage());
     }
 
     /**
@@ -262,7 +261,7 @@ public class CommandManager {
             appendMessageL("First organization:");
             appendMessageL(OrganizationManager.getOrganizationSet().getFirst().toString());
         }
-        Tools.MessageL(getResponseMessage());
+        //Tools.MessageL(getResponseMessage());
     }
 
     /**
