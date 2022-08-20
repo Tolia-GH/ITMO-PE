@@ -1,13 +1,9 @@
 package Main;
 
-import Exceptions.NoSuchCommandException;
-import Exceptions.OrganizationNotFoundException;
-import Exceptions.ParaIncorrectException;
 import Collection.Organization;
 import Command.AbstractCommand;
-import Exceptions.ValueOutOfRangeException;
+import Exceptions.*;
 import Manager.CommandManager;
-import Manager.OrganizationManager;
 import Tools.Tools;
 
 import java.io.*;
@@ -147,7 +143,9 @@ public class PackageCommand implements Serializable {
                     while ((commandLine = bufferedReader.readLine()) != null) {
                         String[] splitCommand = commandLine.split(" ");
                         AbstractCommand command = commandManager.findCommand(splitCommand[0]);
-                        if (command != null && !(command.getName().equals("execute_script") && splitCommand[1].equals(commandFile))) {
+                        if (command.getName().equals("execute_script")) {
+                            throw new IllegalRecursionException("Error: Illegal recursion!");
+                        } else {
                             PackageCommand packCommand = packCommand(response,splitCommand,commandManager,fileName);
                             commandList.add(packCommand);
                         }
