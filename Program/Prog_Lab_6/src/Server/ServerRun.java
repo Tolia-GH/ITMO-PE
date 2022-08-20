@@ -35,7 +35,7 @@ public class ServerRun {
     }
 
     public static void main(String[] args) {
-        CommandManager commandManager = new CommandManager();
+        //CommandManager commandManager = new CommandManager();
 
         Server server = new Server(2001);
         try {

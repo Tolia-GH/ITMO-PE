@@ -10,11 +10,10 @@ import Manager.CommandManager;
 import Manager.OrganizationManager;
 import Tools.Tools;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.Serializable;
+import java.io.*;
 import java.nio.file.FileAlreadyExistsException;
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PackageCommand implements Serializable {
@@ -48,23 +47,13 @@ public class PackageCommand implements Serializable {
         this.setFromFile = false;
     }
 
-    public PackageCommand(AbstractCommand command, Organization organization, String fileName) {
-        this.commandWithArgs = null;
-        this.abstractCommand = command;
-        this.organization = organization;
-        this.organizationSet = null;
-        this.fileName = fileName;
-        this.list = null;
-        this.setFromFile = false;
-    }
-
-    public PackageCommand(AbstractCommand command, ArrayDeque<Organization> arrayDeque, String fileName) {
-        this.commandWithArgs = null;
+    public PackageCommand(String[] arg, AbstractCommand command, List<PackageCommand> packageCommands, String fileName) {
+        this.commandWithArgs = arg;
         this.abstractCommand = command;
         this.organization = null;
-        this.organizationSet = arrayDeque;
+        this.organizationSet = null;
         this.fileName = fileName;
-        this.list = null;
+        this.list = packageCommands;
         this.setFromFile = false;
     }
 
@@ -78,16 +67,6 @@ public class PackageCommand implements Serializable {
         this.setFromFile = false;
     }
 
-    public PackageCommand(List<PackageCommand> list) {
-        this.commandWithArgs = null;
-        this.abstractCommand = null;
-        this.organization = null;
-        this.organizationSet = null;
-        this.fileName = null;
-        this.list = list;
-        this.setFromFile = false;
-    }
-
     public PackageCommand(ArrayDeque<Organization> organizationSet) {
         this.commandWithArgs = null;
         this.abstractCommand = null;
@@ -97,6 +76,8 @@ public class PackageCommand implements Serializable {
         this.list = null;
         this.setFromFile = true;
     }
+
+
 
     public String[] getCommandWithArgs() {
         return this.commandWithArgs;
@@ -151,8 +132,28 @@ public class PackageCommand implements Serializable {
             case "execute_script": {
                 if (commandWithArgs.length != 2) {
                     throw new ParaIncorrectException("Error: This command accept 1 parameter!");
+                } else {
+                    File commandFile = new File(commandWithArgs[1]);
+                    if (!commandFile.exists()) {
+                        throw new FileNotFoundException("Error: File [" + commandWithArgs[1] + "] not found!");
+                    }
+                    if (!commandFile.canRead()){
+                        throw new SecurityException("Error: File [" + commandWithArgs[1] + "] can not read!");
+                    }
+                    FileReader fileReader = new FileReader(commandFile);
+                    BufferedReader bufferedReader = new BufferedReader(fileReader);
+                    String commandLine;
+                    List<PackageCommand> commandList = new ArrayList<>();
+                    while ((commandLine = bufferedReader.readLine()) != null) {
+                        String[] splitCommand = commandLine.split(" ");
+                        AbstractCommand command = commandManager.findCommand(splitCommand[0]);
+                        if (command != null && !(command.getName().equals("execute_script") && splitCommand[1].equals(commandFile))) {
+                            PackageCommand packCommand = packCommand(response,splitCommand,commandManager,fileName);
+                            commandList.add(packCommand);
+                        }
+                    }
+                    packageCommand = new PackageCommand(commandWithArgs,commandToBePacked,commandList,fileName);
                 }
-                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
                 return packageCommand;
             }
             case "exit": {

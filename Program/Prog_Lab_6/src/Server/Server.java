@@ -14,6 +14,7 @@ import Tools.Tools;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.List;
 
 
 public class Server {
@@ -79,16 +80,18 @@ public class Server {
                     AbstractCommand command = packageCommand.getAbstractCommand();
                     fileName = packageCommand.getFileName();
                     Tools.MessageL("Server: Receive command from client: " + commandName);
-                    command.execute(commandManager, packageCommand);
 
-                    Response response = new Response(OrganizationManager.getOrganizationSet(),commandManager.getResponseMessage());
+                    if (!command.getName().equalsIgnoreCase("execute_script")) {
+                        command.execute(commandManager, packageCommand);
 
-                    ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();//
-                    ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
-                    objectOut.writeObject(response);
-                    byte[] bytes = byteArrayOut.toByteArray();
-                    OutputStream outputStream = socket.getOutputStream();
-                    outputStream.write(bytes);//
+                        Response response = new Response(OrganizationManager.getOrganizationSet(),commandManager.getResponseMessage());
+
+                        ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();//
+                        ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
+                        objectOut.writeObject(response);
+                        byte[] bytes = byteArrayOut.toByteArray();
+                        OutputStream outputStream = socket.getOutputStream();
+                        outputStream.write(bytes);//
                     /*
                     ATTENTION HERE!!!
                     I tried sending response to Client like this:
@@ -103,6 +106,16 @@ public class Server {
                     As a result, java.io.StreamCorruptedException will be thrown
                     the ObjectInputStream and ObjectOutStream must patch each other when doing Serialization and deSerialization
                      */
+                    } else {
+                        List<PackageCommand> packCommand = packageCommand.getList();
+                        Response response = new Response(OrganizationManager.getOrganizationSet(),"");
+                        for (PackageCommand pack : packCommand) {
+                            AbstractCommand commandFromList = pack.getAbstractCommand();
+                            commandFromList.execute(commandManager,pack);
+                        }
+                    }
+
+
                 }
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();

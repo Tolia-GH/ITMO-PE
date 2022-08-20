@@ -133,6 +133,8 @@ public class Client {
                         } catch (MyException e) {
                             Tools.MessageL(e.getMessage());
                             continue;
+                        } catch (FileNotFoundException e) {
+                            Tools.MessageL(e.getMessage());
                         }
                     } else if (key.isReadable()) {
                         SocketChannel socketChannel = (SocketChannel) key.channel();
