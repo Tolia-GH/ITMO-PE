@@ -1,7 +1,7 @@
 package Command;
 
-import Exceptions.ParaIncorrectException;
 import Collection.OrganizationType;
+import Exceptions.ParaIncorrectException;
 import Main.PackageCommand;
 import Manager.CommandManager;
 

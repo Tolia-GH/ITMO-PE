@@ -1,7 +1,7 @@
 package Manager;
 
-import Exceptions.NotInitializedException;
 import Collection.Organization;
+import Exceptions.NotInitializedException;
 import Exceptions.ParaIncorrectException;
 
 import java.util.ArrayDeque;
@@ -24,6 +24,11 @@ public class OrganizationManager {
      */
     public static boolean IsInitialized = false;
 
+    /**
+     * Sets organization set.
+     *
+     * @param arrayDeque the array deque
+     */
     public static void setOrganizationSet(ArrayDeque<Organization> arrayDeque) {
         //try {
         organizationSet = new ArrayDeque<>();
@@ -58,6 +63,9 @@ public class OrganizationManager {
         }
     }
 
+    /**
+     * Sets initialization.
+     */
     public static void setInitialization() {
         IsInitialized = true;
     }
@@ -86,6 +94,12 @@ public class OrganizationManager {
         throw new ParaIncorrectException("Error: Target organization not found!\n");
     }
 
+    /**
+     * Is exist boolean.
+     *
+     * @param id the id
+     * @return the boolean
+     */
     public static boolean isExist(Long id) {
         for (Organization organization : OrganizationManager.getOrganizationSet()) {
             if (id.equals(organization.getId())) {
@@ -94,6 +108,10 @@ public class OrganizationManager {
         }
         return false;
     }
+
+    /**
+     * Sort.
+     */
     public static void sort() {
         Long count = 1L;
         for (Organization organization : OrganizationManager.getOrganizationSet()) {

@@ -1,7 +1,7 @@
 package Client;
 
-import Exceptions.AbstractException;
 import Collection.Organization;
+import Exceptions.AbstractException;
 import JSON.JsonReader;
 import Main.PackageCommand;
 import Main.Response;
@@ -18,8 +18,11 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayDeque;
 import java.util.Iterator;
 
+/**
+ * The type Client.
+ */
 public class Client {
-    //args
+
     private final int port;
     private final String host;
     private String fileName;
@@ -29,11 +32,22 @@ public class Client {
     private Response response;
 
 
+    /**
+     * Instantiates a new Client.
+     *
+     * @param host the host address
+     * @param port the port of address
+     */
     public Client(String host, int port) {
         this.host = host;
         this.port = port;
     }
 
+    /**
+     * Run the client process, set up selector and channel and connect to server
+     *
+     * @throws IOException the io exception
+     */
     public void run() throws IOException {
 
         selector = Selector.open();
@@ -54,6 +68,15 @@ public class Client {
         //connect to server
     }
 
+    /**
+     * Run terminal.
+     * Accept commands from User and pack the command and send to server and read the response from server then show in the Terminal
+     *
+     * @param isSetFromFile check if the Organization Set is build from file
+     * @param filePath      the file path of the Organization Set
+     * @throws IOException            the io exception
+     * @throws ClassNotFoundException the class not found exception
+     */
     public void runTerminal(boolean isSetFromFile, String filePath) throws IOException, ClassNotFoundException {
 
         this.fileName = filePath;
@@ -146,6 +169,12 @@ public class Client {
         }
     }
 
+    /**
+     * Message to server.
+     *
+     * @param message message that send to server
+     * @throws IOException the io exception
+     */
     public void  messageToServer(String message) throws IOException {
         ByteBuffer  buffer = ByteBuffer.allocate(1024);
         buffer.clear();

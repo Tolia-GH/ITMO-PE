@@ -16,6 +16,12 @@ public class Tools {
     public static void Message(String message) {
         System.out.print(message);
     }
+
+    /**
+     * Message.
+     *
+     * @param message the message
+     */
     public static void Message(char message) {
         System.out.print(message);
     }
@@ -28,6 +34,12 @@ public class Tools {
     public static void MessageL(String messageL) {
         System.out.println(messageL);
     }
+
+    /**
+     * Message l.
+     *
+     * @param messageL the message l
+     */
     public static void MessageL(char messageL) {
         System.out.println(messageL);
     }
@@ -41,6 +53,12 @@ public class Tools {
         return new Scanner(System.in).nextLine();
     }
 
+    /**
+     * Is port available boolean.
+     *
+     * @param port the port
+     * @return the boolean
+     */
     public static boolean isPortAvailable(int port) {
         boolean available = true;
         ServerSocket s = null;

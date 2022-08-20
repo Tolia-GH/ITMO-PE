@@ -5,7 +5,13 @@ import Tools.Tools;
 
 import java.io.IOException;
 
+/**
+ * The type Server run.
+ */
 public class ServerRun {
+    /**
+     * The Port.
+     */
     static int port = 2001;
 
     private static void setArgs(String[] args) {
@@ -22,6 +28,11 @@ public class ServerRun {
         }
     }
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         ServerRun.setArgs(args);
         Server server = new Server(port);

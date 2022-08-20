@@ -12,6 +12,9 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Package command.
+ */
 public class PackageCommand implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -23,6 +26,9 @@ public class PackageCommand implements Serializable {
     private final List<PackageCommand> list;
     private final boolean setFromFile;
 
+    /**
+     * Instantiates a new Package command.
+     */
     public PackageCommand() {
         this.commandWithArgs = null;
         this.abstractCommand = null;
@@ -33,6 +39,13 @@ public class PackageCommand implements Serializable {
         this.setFromFile = false;
     }
 
+    /**
+     * Instantiates a new Package command.
+     *
+     * @param arg      the arg
+     * @param command  the command
+     * @param fileName the file name
+     */
     public PackageCommand(String[] arg, AbstractCommand command, String fileName) {
         this.commandWithArgs = arg;
         this.abstractCommand = command;
@@ -43,6 +56,14 @@ public class PackageCommand implements Serializable {
         this.setFromFile = false;
     }
 
+    /**
+     * Instantiates a new Package command.
+     *
+     * @param arg             the arg
+     * @param command         the command
+     * @param packageCommands the package commands
+     * @param fileName        the file name
+     */
     public PackageCommand(String[] arg, AbstractCommand command, List<PackageCommand> packageCommands, String fileName) {
         this.commandWithArgs = arg;
         this.abstractCommand = command;
@@ -53,6 +74,14 @@ public class PackageCommand implements Serializable {
         this.setFromFile = false;
     }
 
+    /**
+     * Instantiates a new Package command.
+     *
+     * @param arg          the arg
+     * @param command      the command
+     * @param organization the organization
+     * @param fileName     the file name
+     */
     public PackageCommand(String[] arg, AbstractCommand command, Organization organization, String fileName) {
         this.commandWithArgs = arg;
         this.abstractCommand = command;
@@ -63,6 +92,11 @@ public class PackageCommand implements Serializable {
         this.setFromFile = false;
     }
 
+    /**
+     * Instantiates a new Package command.
+     *
+     * @param organizationSet the organization set
+     */
     public PackageCommand(ArrayDeque<Organization> organizationSet) {
         this.commandWithArgs = null;
         this.abstractCommand = null;
@@ -74,35 +108,79 @@ public class PackageCommand implements Serializable {
     }
 
 
-
+    /**
+     * Get command with args string [ ].
+     *
+     * @return the string [ ]
+     */
     public String[] getCommandWithArgs() {
         return this.commandWithArgs;
     }
 
+    /**
+     * Gets abstract command.
+     *
+     * @return the abstract command
+     */
     public AbstractCommand getAbstractCommand() {
         return this.abstractCommand;
     }
 
+    /**
+     * Gets organization.
+     *
+     * @return the organization
+     */
     public Organization getOrganization() {
         return this.organization;
     }
 
+    /**
+     * Gets organization set.
+     *
+     * @return the organization set
+     */
     public ArrayDeque<Organization> getOrganizationSet() {
         return this.organizationSet;
     }
 
+    /**
+     * Gets file name.
+     *
+     * @return the file name
+     */
     public String getFileName() {
         return fileName;
     }
 
+    /**
+     * Gets list.
+     *
+     * @return the list
+     */
     public List<PackageCommand> getList() {
         return this.list;
     }
 
+    /**
+     * Is set from file boolean.
+     *
+     * @return the boolean
+     */
     public boolean isSetFromFile() {
         return setFromFile;
     }
 
+    /**
+     * Pack command package command.
+     *
+     * @param response        the response
+     * @param commandWithArgs the command with args
+     * @param commandManager  the command manager
+     * @param fileName        the file name
+     * @return the package command
+     * @throws IOException the io exception
+     */
     public static PackageCommand packCommand(Response response, String[] commandWithArgs, CommandManager commandManager, String fileName) throws IOException {
 
         AbstractCommand commandToBePacked = commandManager.findCommand(commandWithArgs[0]);

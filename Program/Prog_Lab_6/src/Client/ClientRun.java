@@ -6,12 +6,27 @@ import Tools.Tools;
 
 import java.net.ConnectException;
 
+/**
+ * The type Client run.
+ */
 public class ClientRun {
 
+    /**
+     * The File path.
+     */
     static String filePath;
+    /**
+     * The Ip.
+     */
     static String ip;
+    /**
+     * The Port.
+     */
     static int port;
 
+    /**
+     * The Is set from file.
+     */
     static boolean isSetFromFile = false;
 
     private static void setArgs(String[] args) {
@@ -43,6 +58,11 @@ public class ClientRun {
         }
     }
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         ClientRun.setArgs(args);
         Client client = new Client("localhost", 2001);

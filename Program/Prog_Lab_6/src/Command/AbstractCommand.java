@@ -41,6 +41,7 @@ public abstract class AbstractCommand implements Serializable {
      * Execute.
      *
      * @param commandManager the command manager
+     * @param packageCommand the package command
      * @throws IOException the io exception
      */
     abstract public void execute(CommandManager commandManager, PackageCommand packageCommand) throws IOException;

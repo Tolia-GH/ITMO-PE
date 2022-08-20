@@ -17,18 +17,28 @@ import java.net.Socket;
 import java.util.List;
 
 
+/**
+ * The type Server.
+ */
 public class Server {
 
     private final int port;
     private ServerSocket serverSocket;
     private String fileName;
 
+    /**
+     * Instantiates a new Server.
+     *
+     * @param port the port
+     */
     public Server(int port) {
         this.port = port;
     }
 
     /**
      * Begins server operation.
+     *
+     * @throws IOException the io exception
      */
     public void run() throws IOException {
         serverSocket = new ServerSocket(port);
@@ -41,6 +51,11 @@ public class Server {
         }
     }
 
+    /**
+     * Service.
+     *
+     * @throws IOException the io exception
+     */
     public void Service() throws IOException {
         Socket socket = serverSocket.accept();
         Tools.MessageL("Server: New connection accepted from: " + socket.getInetAddress().getHostAddress() + ":" + socket.getPort());
@@ -51,6 +66,12 @@ public class Server {
 
     }
 
+    /**
+     * Handle message.
+     *
+     * @param socket the socket
+     * @throws IOException the io exception
+     */
     public void handleMessage(Socket socket) throws IOException {
         InputStream in = socket.getInputStream();
         byte[] receiveBuffer = new byte[1024];
@@ -62,6 +83,12 @@ public class Server {
         //}
     }
 
+    /**
+     * Handle command.
+     *
+     * @param socket the socket
+     * @throws IOException the io exception
+     */
     public void handleCommand(Socket socket) throws IOException {
         CommandManager commandManager = new CommandManager();
 

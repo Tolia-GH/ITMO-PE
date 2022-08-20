@@ -23,14 +23,27 @@ public class CommandManager {
 
     private String responseMessage = "";
 
+    /**
+     * Append message.
+     *
+     * @param message the message
+     */
     public void appendMessage(String message) {
         this.responseMessage = this.responseMessage + message;
     }
 
+    /**
+     * Append message l.
+     *
+     * @param message the message
+     */
     public void appendMessageL(String message) {
         this.responseMessage = this.responseMessage + message + "\n";
     }
 
+    /**
+     * Clear message.
+     */
     public void clearMessage() {
         this.responseMessage = "";
     }
@@ -66,6 +79,11 @@ public class CommandManager {
         return commands;
     }
 
+    /**
+     * Gets response message.
+     *
+     * @return the response message
+     */
     public String getResponseMessage() {
         return this.responseMessage;
     }
@@ -132,7 +150,8 @@ public class CommandManager {
     /**
      * Execute update.
      *
-     * @param id the id
+     * @param id           the id
+     * @param organization the organization
      */
     public void executeUpdate(Long id, Organization organization) {
         clearMessage();
