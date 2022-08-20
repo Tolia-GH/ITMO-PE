@@ -21,5 +21,5 @@ public class ExecuteScript extends AbstractCommand {
     @Override
     public void execute(CommandManager commandManager, PackageCommand packageCommand) throws IOException {
         //commandManager.executeExecuteScript(para[1], commandManager, saver);
-    }
+    }//useless
 }
