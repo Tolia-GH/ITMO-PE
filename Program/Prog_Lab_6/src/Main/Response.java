@@ -3,28 +3,34 @@ package Main;
 import Collection.Organization;
 
 import java.io.Serializable;
-import java.util.LinkedHashSet;
+import java.util.ArrayDeque;
 
 public class Response implements Serializable {
-    public Response(LinkedHashSet<Organization> people, String responseMessage){
-        this.organizationSet = people;
+    public Response(ArrayDeque<Organization> organizations, String responseMessage){
+        this.organizationSet = organizations;
         this.responseMessage = responseMessage;
+        this.amountSet = organizations.size();
     }
 
-    public Response(String responseMessage){
-        this.organizationSet = null;
-        this.responseMessage = responseMessage;
-    }
+    private final ArrayDeque<Organization> organizationSet;
 
-    private final LinkedHashSet<Organization> organizationSet;
+    private int amountSet;
 
     private final String responseMessage;
 
-    public LinkedHashSet<Organization> getOrganizationSet() {
+    public ArrayDeque<Organization> getOrganizationSet() {
         return organizationSet;
     }
 
     public String getResponseMessage() {
         return responseMessage;
+    }
+
+    public int getAmountSet() {
+        return amountSet;
+    }
+
+    public void setAmountSet(int amountSet) {
+        this.amountSet = amountSet;
     }
 }

@@ -14,7 +14,6 @@ import Tools.Tools;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.nio.ByteBuffer;
 
 
 public class Server {
@@ -73,14 +72,16 @@ public class Server {
                 PackageCommand packageCommand = (PackageCommand) ois.readObject();
                 if (packageCommand.isSetFromFile()) {
                     OrganizationManager.setOrganizationSet(packageCommand.getOrganizationSet());
+                    OrganizationManager.sort();
                 } else {
+
                     String commandName = packageCommand.getAbstractCommand().getName();
                     AbstractCommand command = packageCommand.getAbstractCommand();
                     fileName = packageCommand.getFileName();
                     Tools.MessageL("Server: Receive command from client: " + commandName);
                     command.execute(commandManager, packageCommand);
 
-                    Response response = new Response(commandManager.getResponseMessage());
+                    Response response = new Response(OrganizationManager.getOrganizationSet(),commandManager.getResponseMessage());
 
                     ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();//
                     ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);

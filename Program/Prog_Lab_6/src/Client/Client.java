@@ -14,6 +14,7 @@ import Tools.Tools;
 import com.sun.org.apache.xpath.internal.operations.Or;
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 
+import javax.smartcardio.ResponseAPDU;
 import java.io.*;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -32,6 +33,7 @@ public class Client {
     private InetSocketAddress inetSocketAddress;
     private SocketChannel socketChannel;
     private Selector selector;
+    private Response response;
 
 
     public Client(String host, int port) {
@@ -69,6 +71,7 @@ public class Client {
 
         if (isSetFromFile) {
             ArrayDeque<Organization>set = JsonReader.getCollectionFromFile(filePath);
+            response = new Response(set,null);
             PackageCommand OrganizationSet = new PackageCommand(set);
 
             ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
@@ -101,12 +104,13 @@ public class Client {
 
                     if (key.isWritable()) {
                         SocketChannel socketChannel = (SocketChannel) key.channel();
+                        //commandManager.executeShow();
                         Tools.MessageL("Client: input your command: ");
                         Tools.Message("User: ");
                         String[] commandWithArgs = Tools.Input().split(" ");
 
                         try {
-                            PackageCommand packageCommand = PackageCommand.packCommand(commandWithArgs, commandManager, fileName);
+                            PackageCommand packageCommand = PackageCommand.packCommand(response,commandWithArgs, commandManager, fileName);
 
                             ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
                             ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
@@ -140,9 +144,11 @@ public class Client {
                         ByteArrayInputStream byteArrayIn = new ByteArrayInputStream(byteBuffer.array());
 
                         ObjectInputStream objectIn = new ObjectInputStream(byteArrayIn);//
-                        Response response = (Response) objectIn.readObject();//Bug Here!
+                        response = (Response) objectIn.readObject();//Bug Here!
                         Tools.MessageL(response.getResponseMessage());
                         key.interestOps(SelectionKey.OP_WRITE);
+
+                        //Tools.MessageL(String.valueOf(response.getAmountSet()));
                     } else {
 
                     }
