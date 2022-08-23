@@ -152,7 +152,7 @@
 - Сумматор — это компонент, выполняющий операции сложения, являющийся основой арифметико-логического устройства АЛУ.  
   加法器是一种用于执行加法运算的部件，是构成算术逻辑单元 ALU 的基础
   - Полусумматор 半加器
-    ![](/OPD/pic/Exam/1.png)
+    ![](/OPD/pic/Exam/4-1.png)
 
     A<sub>in</sub> | B<sub>in</sub> | Carry<sub>out</sub> | Sum<sub>out</sub>
     ---|---|---|---
@@ -161,7 +161,7 @@
     0|1|0|1
     1|1|1|0
   - Полный сумматор 全加器
-    ![](/OPD/pic/Exam/2.png)
+    ![](/OPD/pic/Exam/4-2.png)
 
     A<sub>in</sub> | B<sub>in</sub> | Carry<sub>in</sub> | Carry<sub>out</sub> | Sum<sub>out</sub>
     ---|---|---|---|---
