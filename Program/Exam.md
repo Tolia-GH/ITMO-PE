@@ -142,7 +142,7 @@ Java `Set` 接口继承于 `Collection` 接口，其方法基本与 `Collection`
 - `Set` 接口
   - 所存储的元素不可重复
   - 所存储的元素无序
-  - 可以包含最多 1 个空元素
+  - 可以包含最多 1 个 `null`元素
 
 - `SortedSet` 接口
   - 在 Set 集合的基础上提供了对元素的排序
@@ -185,6 +185,13 @@ Java `Set` 接口继承于 `Collection` 接口，其方法基本与 `Collection`
   `SortedSet`|`headSet(Object toElement)`|返回此集合中小于元素 `toElement` 的元素组成的子集
   `SortedSet`|`tailSet(Object fromElement)`|返回此集合中大于元素 `fromElement` 的元素组成的子集
 
+<!--
+参考链接：
+https://blog.csdn.net/mashaokang1314/article/details/83721792?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-83721792-blog-120220136.t0_layer_searchtargeting_sa&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-83721792-blog-120220136.t0_layer_searchtargeting_sa&utm_relevant_index=1
+
+https://docs.oracle.com/javase/10/docs/api/java/util/HashSet.html#HashSet--
+-->
+
 #### 9. Интерфейсы Map и SortedMap, их реализации. Классы HashMap и TreeMap.
 
 ![](pic/Exam/9-1.jpeg)
@@ -194,6 +201,76 @@ Java `Set` 接口继承于 `Collection` 接口，其方法基本与 `Collection`
 -->
 
 #### 10. Интерфейсы Queue и Deque. Классы PriorityQueue и ArrayDeque.
+
+![](pic/Exam/10-1.png)
+- `Queue` 接口
+  队列是一种特殊的线性表，一般遵循先入先出、后入后出的基本原则，只允许在表的前端进行删除操作，而在表的后端进行插入操作。但 Java 中的一些队列但是java的某些队列运行在任何地方插入删除
+
+  基本方法：
+
+  修饰符和类型 | 方法名 | 描述
+  ---|---|---
+  `boolean`|`add(E e)`|如果可以在不违反容量限制的情况下将指定元素插入此队列，则在成功时返回 `true`，当没有可用空间时抛出 `IllegalStateException`
+  `E`|`element()`|检索但不删除此队列的头部。
+  `boolean`|`offer(E e)`|如果可以在不违反容量限制的情况下将指定元素插入此队列
+  `E`|`peek()`|检索但不删除此队列的头部，如果此队列为空，则返回 `null`
+  `E`|`poll()`|检索并删除此队列的头部，如果此队列为空，则返回 `null`
+  `E`|`remove()`|检索并删除此队列的头部
+
+  分类
+
+  - 阻塞队列
+    - 入列(添加元素)时，如果元素数量超过队列总数，会进行等待（阻塞），待队列的中的元素出列后，元素数量未超过队列总数时，就会解除阻塞状态，进而可以继续入列；
+    - 出列(删除元素)时，如果队列为空的情况下，也会进行等待（阻塞），待队列有值的时候即会解除阻塞状态，进而继续出列；
+     
+    阻塞队列的好处是可以防止队列容器溢出；只要满了就会进行阻塞等待；也就不存在溢出的情况；  
+    只要是阻塞队列，都是线程安全的；
+  - 非阻塞队列
+    不管出列还是入列，都不会进行阻塞
+    - 入列时，如果元素数量超过队列总数，则会抛出异常，
+    - 出列时，如果队列为空，则取出空值；
+    阻塞和非阻塞队列在使用上的最大区别就是阻塞队列提供了以下2个方法：
+    - 出队阻塞方法 ： `take()`
+    - 入队阻塞方法 ： `put()`
+    --- 
+  - 有界队列：有界限，大小长度受限制
+  - 无界队列：无界限，超过界限时会动态扩容
+   
+    --- 
+  - 单向队列：每个元素中除了元素本身之外，还存储一个指针，这个指针指向下一个元素
+  - 双向队列：除了元素本身之外，还有两个指针，一个指针指向前一个元素的地址，另一个指针指向后一个元素的地址
+- `Deque` 接口
+  继承自 `Queue` 接口，是一种双端队列，支持两端元素的插入和移除，接受有界队列与无界队列
+
+  与 `Queue` 方法的比较：
+
+  `Queue` 方法 | `Deque` 方法
+  ---|---
+  `add(E e)`|`addLast(E e)`
+  `offer(E e)`|`offerLast(E e)`
+  `remove()`|`removeFirst()`
+  `poll()`|`pollFirst()`
+  `element()`|`getFirst()`
+  `peek()`|`peekFirst()`
+  `push(E e)`|`addFirst(E e)`
+  `pop`|`removeFirst()`
+
+- `PriorityQueue` 类
+  基于优先级堆继承 `AbstractQueue` 类的队列类
+
+  特点：
+  - 无界，没有容量限制，会根据需要增长以支持使用
+  - 元素根据自然顺序或在队列构造时提供的 `Comparator` 进行排序
+  - 不允许 `null` 元素
+  - 不允许不可比较的对象作为队列元素（否则抛出 `ClassCastException`）
+  - 不是线程安全的；在没有外部同步的情况下，不支持多线程并发访问
+- `ArrayDeque` 类
+  基于可调整大小的数组实现 `Deque` 接口的双向队列类
+
+  特点：
+  - 无界，没有容量限制，会根据需要增长以支持使用
+  - 不是线程安全的；在没有外部同步的情况下，不支持多线程并发访问
+  - 不允许 `null` 元素
 
 #### 13. Байтовые потоки ввода-вывода. Классы InputStream, OutputStream и их потомки.
 
