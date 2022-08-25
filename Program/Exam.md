@@ -274,4 +274,51 @@ https://docs.oracle.com/javase/10/docs/api/java/util/HashSet.html#HashSet--
 
 #### 13. Байтовые потоки ввода-вывода. Классы InputStream, OutputStream и их потомки.
 
+![](pic/Exam/13-1.png)
+
+- IO：Java 的 io 是实现输入和输出的基础，可以方便的实现数据的输入和输出操作。
+
+- 流：在 Java 中，不同的输入/输出源（键盘，文件，网络连接等）抽象表述为“流”(Stream)
+流是一种有顺序的，有起点和终点的字节集合，是对数据传输的总称或抽象。即数据在两个设备间的传输成为流，流的本质是数据传输。通过流的形式允许 Java 程序使用相同的方式来访问不同的输入/输出源
+  分类：
+  - 按流向：输入流、输出流
+  - 按数据类型：
+    - 字节流：一次读取 1 byte，适用于各种文本，图片，音频视频等数据
+    - 字符流：一次读取 1 字符，即 2 bytes，主要适用于普通文本文件
+- `InputStream` 类
+  `java.io.InputStream` 抽象类是表示字节输入流的所有类的超类（父类），可以读取字节信息到内存中。它定义了字节输入流的基本共性功能方法
+
+  基本方法
+  修饰符和类型 | 方法名 | 描述
+  ---|---|---
+  `int`|`available()`|返回此输入流中可读取（或跳过）的字节数的估计值，而不会被下一次调用此输入流的方法阻塞
+  `void`|`close()`|关闭此输入流并释放与该流关联的所有系统资源
+  `void`|`mark(int readlimit)`|标记此输入流中的当前位置
+  `boolean`|`markSupported()`|测试此输入流是否支持 `markand reset` 方法
+  `abstract int`|`read()`|从输入流中读取数据的下一个字节
+  `int`|`read(byte[] b)`|从输入流中读取一些字节并将它们存储到缓冲区数组 `b` 中
+  `int`|`read(byte[] b, int off, int len)`|从数入流中读取最多 len 个字节，存储到缓冲区数组 `b` 的 `off` 位及之后（从 `b[off]` 到 `b[off+len-1]`）
+  `byte[]`|`readAllBytes()`|从输入流中读取所有剩余字节
+  `int`|`readNBytes(byte[] b, int off, int len)`|从输入流中读取指定的 `len` 个字节到给定的字节数组中
+  `void`|`reset()`|将此流重新定位到 mark上次在此输入流上调用该方法时的位置
+  `long`|`skip()`|跳过并丢弃 `n` 个此输入流中的数据字节
+  `long`|`transferTo()`|从此输入流中读取所有字节，并按照读取顺序将字节写入给定的输出流
+- `OutputStream` 类
+  `java.io.OutPutStream` 抽象类是表示字节输出流的所有类的超类（父类），将指定的字节信息写出到某个接收器；它定义了字节输出流的基本共性功能方法
+
+  基本方法
+  修饰符和类型 | 方法名 | 描述
+  ---|---|---
+  `void`|`close()`|关闭此输出流并释放与此流关联的所有系统资源
+  `void`|`flush()`|刷新此输出流并强制写出所有缓冲的输出字节
+  `void`|`write(byte[] b)`|将 `b.length` 个字节从指定字节数组写入输出流
+  `void`|`write(byte b, int off, int len)`|从 `b[off]` 字节作为第一个写入的字节开始，将 `len` 个字节从指定字节数组写入输出流
+  `abstract void`|`write(int b)`|将参数 `b` 的低八位比特作为字节写入输出流
+
+
+<!--
+参考链接：
+https://blog.csdn.net/Wyunpeng/article/details/12285087813
+-->
+
 #### 16. Работа с файлами в Java. Интерфейс Path. Классы File, Files, Paths.
