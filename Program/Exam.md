@@ -23,13 +23,16 @@
   在 Java 中处理文件，Path 接口。 File 类，Files 类，Paths 类
 17. Сериализация объектов. Интерфейс Serializable. Модификатор transient.
 18. Многопоточные программы. Класс Thread и интерфейс Runnable. Состояния потока.
-19. Многопоточные программы. Интерфейсы Executor, ExecutorService, Callable, Future
+19. [Многопоточные программы. Интерфейсы Executor, ExecutorService, Callable, Future](#19-многопоточные-программы-интерфейсы-executor-executorservice-callable-future)
+  多线程程序。 接口 Executor、ExecutorService、Callable、Future
 20. Класс Executors. Пулы потоков. Фреймворк fork/join.
 21. Гонки. Синхронизация потоков. Модификатор synchronized.
-22. Порядок выполнения и ограничение "happens-before". Модификатор volatile.
+22. [Порядок выполнения и ограничение "happens-before". Модификатор volatile.](#22-порядок-выполнения-и-ограничение-happens-before-модификатор-volatile)
+  执行顺序和“happens-before”约束。 “volatile”修饰符
 23. Взаимодействие потоков. Методы wait(), notify().
 24. Интерфейсы Lock, ReadWriteLock, Condition.
 25. Атомарный доступ к переменным. Пакет java.util.concurrent.atomic.
+  对变量的原子访问。 包 java.util.concurrent.atomic。
 26. Потокобезопасные коллекции. Synchronized- и Concurrent-коллекции.
 27. Шаблоны проектирования. Структурные шаблоны.
 28. Шаблоны проектирования. Порождающие шаблоны.
@@ -404,3 +407,9 @@ https://blog.csdn.net/Wyunpeng/article/details/12285087813
   
 - `java.nio.file.Files` 类
   此类仅包含对文件、目录或其他类型文件进行操作的静态方法，在大多数情况下，此处定义的方法将委托给关联的文件系统提供者来执行文件操作
+
+#### 19. Многопоточные программы. Интерфейсы Executor, ExecutorService, Callable, Future
+
+#### 22. Порядок выполнения и ограничение "happens-before". Модификатор volatile.
+
+#### 25. Атомарный доступ к переменным. Пакет java.util.concurrent.atomic.
