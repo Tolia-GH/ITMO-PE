@@ -322,3 +322,85 @@ https://blog.csdn.net/Wyunpeng/article/details/12285087813
 -->
 
 #### 16. Работа с файлами в Java. Интерфейс Path. Классы File, Files, Paths.
+
+- `java.nio.file.Path` 接口
+  `Path` 表示分层路径，由一系列目录和文件名元素组成，由特殊的分隔符或定界符分隔，开头可以用一个由系统文件决定的根部件开始，尾部也可以以一个文件名结束。可用于定位文件或目录的位置并访问
+
+  分类：
+  - 绝对路径：以根部件开始的路径
+  - 相对路径：不以根部件开始的路径
+  
+  创建实体类：
+  ```Java
+  File file = new File("C:/Directory/FileName");
+  Path path1 = file.toPath();
+  //利用 File 类的 toPath 方法获取对象 file 的 Path 类路径
+  Path path2 = Paths.get(file.getPath());
+  //利用 Paths 类的静态方法 get 通过字符串获得对象 file 的 Path 类路径
+  ```
+
+  基本方法
+  修饰符和类型 | 方法名 | 描述
+  ---|---|---
+  `boolean`|`endsWith(Path p)`|测试此路径是否以给定路径 `p` 结束
+  `default boolean`|`endsWith(String s)`|将字符串 `s` 转为 `Path` 路径 `p`，然后按照 `endsWith(Path p)` 的方式执行
+  `boolean`|`startsWith(Path p)`|测试此路径是否以给定路径 `p` 开始
+  `default boolean`|`startsWith(String s)`|将字符串 `s` 转为 `Path` 路径 `p`，然后按照 `startsWith(Path p)` 的方式执行
+  `Path`|`getName()`|将此路径的名称元素作为 `Path` 对象返回
+  `int`|`getNameCount()`|返回路径中名称元素的数量
+  `Path`|`getFileName()`|将此路径表示的文件或目录的名称作为 `Path` 对象返回
+  `Path`|`getRoot()`|将此路径的根组件作为 `Path` 对象返回
+  `Path`|`getParent()`|将此路径的根组件作为 `Path` 对象返回
+  `boolean`|`isAbsolute()`|判断这条路径是否是绝对的
+  `default File`|`toFile()`|	返回此路径表示的 `File` 对象
+  `String`|`toString()`|返回此路径的字符串表示形式
+
+- `java.nio.file.Paths` 类
+  继承自 `Object` 类，只由静态方法构成，可以将路径字符串或 `URI` 转换为 `Path` 类对象
+  
+  基本方法
+  修饰符和类型 | 方法名 | 描述
+  ---|---|---
+  `static Path`|`get(String first, String... more)`|将一个或多个路径字符串连接形成的字符串序列转换为 `Path` 对象
+  `static Path`|`get(URI uri)`|将给定的 URI 转换为Path对象
+
+- `java.io.File` 类
+  文件和目录路径名的抽象表示
+
+  此类的实例可能表示也可能不表示实际的文件系统对象，例如文件或目录。如果它确实表示这样的对象，则该对象驻留在一个分区中。分区是文件系统的特定于操作系统的存储部分。单个存储设备（例如物理磁盘驱动器、闪存、CD-ROM）可能包含多个分区。该对象（如果有）将驻留在此路径名的绝对形式的某个祖先 命名的分区上
+
+  文件系统可以限制指定用户对实际文件系统对象的某些操作（例如读取、写入和执行）。这些限制统称为访问权限
+
+  `File` 类的实例不可变，一旦创建，`File` 类的对象所代表的抽象路径名就永远不会改变
+
+  基本字段
+  修饰符和类型 | 字段名 | 描述
+  ---|---|---
+  `static String`|`pathSeparator`|系统相关的路径分隔符
+  `static char`|`pathSeparatorChar`|系统相关的路径分隔符字符
+  `static String`|`separator`|系统相关的默认名称分隔符
+  `static char`|`separatorChar`|系统相关的默认名称分隔符字符
+
+  构造函数
+  字段名 | 描述
+  ---|---
+  `File​(File parent, String child)`|从父抽象路径名和子路径名字符串创建一个新 `File` 实例
+  `File​(String pathname)`|将给定的路径名​​字符串转换为抽象路径名来创建一个新 `File` 实例
+  `File​(String parent, String child)`|从父路径名字符串和子路径名字符串创建一个新 `File` 实例
+  `File​(URI uri)`|将给定的URI 转换为抽象路径名来创建一个新 `File` 实例
+
+  基本方法
+  修饰符和类型 | 方法名 | 描述
+  ---|---|---
+  `boolean`|`canRead()`|测试应用程序是否可以读取此抽象路径名表示的文件
+  `boolean`|`canWrite()`|测试应用程序是否可以修改此抽象路径名表示的文件
+  `boolean`|`canExecute()`|测试应用程序是否可以执行此抽象路径名表示的文件
+  `boolean`|`createNewFile()`|当且仅当具有此名称的文件尚不存在时，创建以此抽象路径名命名的新的空文件
+  `boolean`|`delete()`|删除此抽象路径名表示的文件或目录
+  `boolean`|`exists()`|测试此抽象路径名表示的文件或目录是否存在
+  `boolean`|`isDirectory()`|测试此抽象路径名表示的文件是否为目录
+  `boolean`|`mkdir()`|创建由此抽象路径名命名的目录
+  `boolean`|`	mkdirs()`|创建由此抽象路径名命名的目录，包括任何必要但不存在的父目录
+  
+- `java.nio.file.Files` 类
+  此类仅包含对文件、目录或其他类型文件进行操作的静态方法，在大多数情况下，此处定义的方法将委托给关联的文件系统提供者来执行文件操作
