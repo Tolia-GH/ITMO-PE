@@ -8,6 +8,7 @@
   - [ ] [Lab 7](../404.md)
   - [ ] [Lab 8](../404.md)
 - [ ] [Рубеж](../404.md)
+- [ ] [Exam](Exam.md)
 
 <style type="text/css">
     #footer {
