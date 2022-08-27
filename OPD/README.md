@@ -6,8 +6,8 @@
 - [x] [教材指引](Guide.md)
 - [x] [Рубеж](Rubiesh.md)
 - [ ] [Exam](Exam.md)
-- [x] [幻灯片1梳理](OPD%20part1.md)
-- [x] [幻灯片2梳理](OPD%20part1.md)
+- [x] [幻灯片1梳理](OPDpart1.md)
+- [x] [幻灯片2梳理](OPDpart2.md)
 - [x] [幻灯片1详解](lecture.md)
 
 <style type="text/css">
