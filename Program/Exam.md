@@ -36,30 +36,39 @@
 26. Потокобезопасные коллекции. Synchronized- и Concurrent-коллекции.
 27. Шаблоны проектирования. Структурные шаблоны.
 28. Шаблоны проектирования. Порождающие шаблоны.
+  设计模式。 生成模板。
 29. Шаблоны проектирования. Поведенческие шаблоны.
 30. Провайдеры служб.
 31. Взаимодействие с базами данных. Протокол JDBC. Основные элементы.
+  数据库交互。 JDBC 协议。 主要元素。
 32. Создание соединения с базой данных. Класс DriverManager. Интерфейс DataSource.
 33. Создание запросов. Интерфейсы Statement, PreparedStatement, CallableStatement.
 34. Обработка результатов запроса. Интерфейсы ResultSet и RowSet.
+  处理查询结果。 ResultSet 和 RowSet 接口。
 35. Безопасное хранение паролей.
 36. Интернационализация. Локализация. Хранение локализованных ресурсов.
 37. Форматирование локализованных числовых данных, текста, даты и времени.
+  格式化本地化的数字数据、文本、日期和时间。
 38. Пакет java.time. Классы для представления даты и времени.
 39. Функциональные интерфейсы и λ-выражения. Пакет java.util.function.
 40. Рекурсия и ее использование.
+  递归及其使用。
 41. Конвейерная обработка данных. Пакет java.util.stream.
 42. Библиотеки графического интерфейса. Особенности и различия.
 43. Компоненты графического интерфейса. Классы Component, JComponent, Node.
+  图形用户界面组件。 类组件，JComponent，节点。
 44. Контейнеры. Классы Container, JPanel, Parent, Region, Scene.
 45. Размещение компонентов в контейнерах. Менеджеры компоновки.
 46. Контейнеры верхнего уровня. Классы JFrame, SwingUtilities, Stage, Application.
+  顶级容器。 类 JFrame、SwingUtilities、Stage、Application。
 47. Обработка событий графического интерфейса. События и слушатели.
 48. Новые функции Java 9 и последующих версий.
 49. Сетевое взаимодействие. Основные протоколы, их сходства и отличия.
+  网络互动。 基本协议，它们的异同。
 50. Протокол TCP. Классы Socket и ServerSocket.
 51. Протокол TCP. Классы SocketChannel и ServerSocketChannel.
 52. Протокол UDP. Классы DatagramSocket и DatagramPacket.
+  UDP协议。 DatagramSocket 和 DatagramPacket 类。
 53. Протокол UDP. Класс DatagramChannel.
 54. Неблокирующий сетевой обмен. Селекторы.
 
@@ -410,6 +419,198 @@ https://blog.csdn.net/Wyunpeng/article/details/12285087813
 
 #### 19. Многопоточные программы. Интерфейсы Executor, ExecutorService, Callable, Future
 
+- 多线程程序
+  - 进程：当一个程序被运行，就开启了一个进程
+  - 线程：一个进程内可分为多个线程。一个线程就是一个指令流，cpu调度的最小单位，由cpu一条一条执行指令
+  - 并行：单核cpu运行多线程时，时间片进行很快的切换。线程轮流执行cp
+  - 并发：多核cpu运行 多线程时，真正的在同一时刻运行
+    ![](pic/Exam/19-1.image)
+  - 多任务执行：实际上就是让 CPU 对多个任务轮流交替执行，充分利用 CPU 资源，提高效率，例如有语文、数学、英语3门作业要做，每个作业需要 30 分钟。我们把这3门作业看成是 3 个任务，可以做 1 分钟语文作业，再做1分钟数学作业，再做 1 分钟英语作业
+  - 多任务实现方式
+    - 多进程模式
+      ```
+      ┌──────────┐ ┌──────────┐ ┌──────────┐  
+      │Process   │ │Process   │ │Process   │  
+      │┌────────┐│ │┌────────┐│ │┌────────┐│  
+      ││ Thread ││ ││ Thread ││ ││ Thread ││  
+      │└────────┘│ │└────────┘│ │└────────┘│  
+      └──────────┘ └──────────┘ └──────────┘  
+      ```
+      优点
+      - 多进程稳定性比多线程高，因为在多进程的情况下，一个进程崩溃不会影响其他进程
+      缺点：
+      - 创建进程比创建线程开销大
+      - 进程间通信比线程间通信要慢
+    - 多线程模式
+      ```
+      ┌────────────────────┐
+      │Process             │
+      │┌────────┐┌────────┐│
+      ││ Thread ││ Thread ││
+      │└────────┘└────────┘│
+      │┌────────┐┌────────┐│
+      ││ Thread ││ Thread ││
+      │└────────┘└────────┘│
+      └────────────────────┘
+      ```
+      特点：
+      - 线程间通信就是读写同一个变量，所以线程间通信比进程间快
+      - 多线程经常需要读写共享数据，并且需要同步
+    - 多进程多线程复合模式（最复杂）
+      ```
+      ┌──────────┐┌──────────┐┌──────────┐
+      │Process   ││Process   ││Process   │
+      │┌────────┐││┌────────┐││┌────────┐│
+      ││ Thread ││││ Thread ││││ Thread ││
+      │└────────┘││└────────┘││└────────┘│
+      │┌────────┐││┌────────┐││┌────────┐│
+      ││ Thread ││││ Thread ││││ Thread ││
+      │└────────┘││└────────┘││└────────┘│
+      └──────────┘└──────────┘└──────────┘
+      ```
+  - 多线程实现
+    - 实例化 `Thread` 类，然后调用其 `start()` 方法
+      ```Java
+      public class Main {
+          public static void main(String[] args) {
+              Thread t = new Thread();
+              t.start(); // 启动新线程
+          }
+      }
+      ```
+      但是这个线程启动后实际上什么也不做就会立刻结束
+    - 从 `Thread` 派生一个自定义类，然后覆写 `run()` 方法：
+      ```Java
+      public class Main {
+          public static void main(String[] args) {
+              Thread t = new MyThread();
+              t.start(); // 启动新线程
+          }
+      }
+
+      class MyThread extends Thread {
+          @Override
+          public void run() {
+              System.out.println("start new thread!");
+          }
+      }
+      ```
+    - 创建Thread实例时，传入一个实现了 `Runnable` 接口的类的实例：
+      ```Java
+      public class Main {
+          public static void main(String[] args) {
+              Thread t = new Thread(new MyRunnable());
+              t.start(); // 启动新线程
+          }
+      }
+
+      class MyRunnable implements Runnable {
+          @Override
+          public void run() {
+              System.out.println("start new thread!");
+          }
+      }
+      ```
+      使用 `Lambda` 可进一步简写为：
+      ```Java
+      public class Main {
+          public static void main(String[] args) {
+              Thread t = new Thread(() -> {
+                  System.out.println("start new thread!");
+              });
+              t.start(); // 启动新线程
+          }
+      }
+      ```
+      优点：
+      - Java 不允许多继承，因此实现了 `Runnable` 接口的类可以再继承其他类
+  - 线程池
+  由于创建和销毁线程需要操作系统资源，如果可以复用一组线程，那么我们就可以把很多小任务让一组线程来执行，而不是一个任务对应一个新线程。这种能接收大量小任务并进行分发处理的就是线程池。
+
+  线程池内部维护了若干个线程，没有任务的时候，这些线程都处于等待状态。如果有新任务，就分配一个空闲线程执行。如果所有线程都处于忙碌状态，新任务要么放入队列等待，要么增加一个新线程进行处理
+
+  Java 标准库提供了 `Executor` 框架来管理使用线程池：
+  - `Executor` 接口：是一个简单的接口，它包含一个 `execute()` 方法用于启动由 `Runnable` 对象指定的任务
+    ```Java
+    Executor executor = anExecutor();
+    executor.execute(new RunnableTask1());
+    executor.execute(new RunnableTask2());
+    ```
+  - `ExecutorService` 接口是 `Executor` 的一个子接口，增加了管理线程生命周期的功能。  
+    它还包括一个 `submit()` 方法，类似于 `execute()` 但更通用。`submit()` 方法的重载版本可以采用 `Runnable` 或 `Callable` 对象  
+    
+  - `ScheduledExecutorService` 又是 `ExecutorService` 的子接口。它添加了允许您在代码中安排任务的功能
+  Java 标准库还提供了几个实现类来创建线程池：
+  - `FixedThreadPool`：线程数固定的线程池；
+  - `CachedThreadPool`：线程数根据任务动态调整的线程池；
+  - `SingleThreadExecutor`：仅单线程执行的线程池。
+  而创建这些线程池的方法都被封装到 `Executors` 这个类中：
+  ```Java
+  // 创建一个固定线程数为 4 的线程池
+  ExecutorService es = Executors.newFixedThreadPool(4);
+  ```
+  线程池在程序结束的时候要关闭：
+  - 使用 `shutdown()` 方法会等待正在执行的任务先完成，然后再关闭。
+  - 使用 `shutdownNow()` 方法会立刻停止正在执行的任务并关闭
+  - 使用 `awaitTermination()` 方法则会等待指定的时间让线程池关闭
+- `Callable` 接口
+  与 `Runnable` 类似，只是不同于 `Runnable` 接口中的 `void run()` 方法，`Callable` 接口中的 `V call()` 方法具有返回值。因此，如果我们将一个 `Callable` 对象传递给该 `submit()` 方法，它将返回一个 `Future` 对象。而该对象可用于获取 `Callable` 返回值并对 `Callable` 和 `Runnable` 任务执行结果进行取消 `cancel()`、查询是否完成 `isDone()`、获取结果 `get()`
+
 #### 22. Порядок выполнения и ограничение "happens-before". Модификатор volatile.
 
+- 多线程可见性：
+  指当一个线程修改了共享变量的值，其它线程能够适时得知这个修改  
+
+  在单线程环境中，如果在程序前面修改了某个变量的值，后面的程序一定会读取到那个变量的新值。这看起来很自然，然而当变量的写操作和读操作在不同的线程中时，情况却并非如此
+
+  问题原因：
+  ![](pic/Exam/22-1.jpeg)
+  假设有两个线程 A、B 分别在两个不同的 CPU 上运行，它们共享同一个变量 X。如果线程 A 对 X 进行修改后，并没有将 X 更新后的结果同步到主内存，则变量 X 的修改对 B 线程是不可见的。所以 CPU 与内存之间的高速缓存就是导致线程可见性问题的一个原因，而 Java 虚拟机规范定义了自己的内存模型 JMM(Java Memory Model) 来屏蔽掉不同硬件和操作系统的内存模型差异，以实现让 Java 程序在各种平台下都能达到一致的内存访问结果
+
+  解决方法：
+  - Happens-Before 原则
+    为解决多线程可见性的问题，JMM定义了 Happens-Before 原则：对于两个操作 A 和 B，这两个操作可以在不同的线程中执行。如果 A Happens-Before B，那么可以保证，当 A 操作执行完后，A 操作的执行结果对 B 操作是可见的
+    Happens-Before 的规则包括：
+    - 程序顺序规则：在一个线程内部，按照程序代码的书写顺序，书写在前面的代码操作 Happens-Before 书写在后面的代码操作
+    - 锁定规则：对锁M解锁之前的所有操作 Happens-Before 对锁M加锁之后的所有操作
+    - volatile变量规则：对一个 volatile 变量的写操作及这个写操作之前的所有操作 Happens-Before 对这个变量的读操作及这个读操作之后的所有操作
+    - 线程启动规则：Thread对象的 start 方法及书写在 start 方法前面的代码操作 Happens-Before 此线程的每一个动作
+    - 线程结束规则：线程中的任何操作都 Happens-Before 其它线程检测到该线程已经结束
+    - 中断规则：一个线程在另一个线程上调用 interrupt,Happens-Before 被中断线程检测到interrupt被调用
+    - 终结器规则：一个对象的构造函数执行结束 Happens-Before 它的 finalize() 方法的开始
+    - 传递性规则：如果操作 A Happens-Before B，B Happens-Before C，那么可以得出操作 A Happens-Before C
+
 #### 25. Атомарный доступ к переменным. Пакет java.util.concurrent.atomic.
+
+- 原子性操作
+  即不可分割的，不可中断的操作，其本身是线程安全的。例如赋值操作 `i = 1;`
+
+  而对于非原子操作，例如
+  ```Java
+  `n = n + 1`
+  ```
+  实际上对应了三条原子操作：
+  ```
+  LOAD n
+  ADD 1
+  STORE n
+  ```
+  这种非原子操作是不安全的，例如设 `n` 的值为 `100`，如果两个线程同时执行 `n = n + 1`，得到的结果很可能不是 `102`，而是 `101`，这是因为
+  ```
+  ┌───────┐    ┌───────┐
+  │Thread1│    │Thread2│
+  └───┬───┘    └───┬───┘
+      │            │
+      │LOAD (100)  │
+      │            │LOAD (100)
+      │            │ADD 1
+      │            │STORE (101)
+      │ADD 1       │
+      │STORE (101) │
+      ▼            ▼
+  ```
+  如果 线程1 在执行 `LOAD` 后被操作系统中断，此刻如果 线程2 被调度执行，它执行 `LOAD` 后获取的值仍然是 `100`，最终结果被两个线程的 `STORE` 写入后变成了 `101`，而不是期待的 `102`
+
+  因此多线程模型下，要保证逻辑正确，对共享变量进行读写时，必须保证一组指令以原子方式执行：即某一个线程执行时，其他线程必须等待。对此除了对代码块用 `synchronized` 关键字进行加锁以外，我们还可以使用 `java.util.concurrent.atomic` 包提供的各种原子性的方法来进行操作
+- `java.util.concurrent.atomic` 包
+  JDK6 以后，新增加了这个包，其中包含了各种原子类，例如 `AtomicInteger` 类就提供了各种如自增，自减等方法，而这些方法都是原子性的，也就是线程安全的，即同一个时间，只有一个线程可以调用这个方法
