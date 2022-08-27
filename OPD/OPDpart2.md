@@ -1,4 +1,4 @@
-## [MainPage](../index.md)/OPD/part2
+## [MainPage](../index.md)/[OPD](README.md)/part2
 
 ## 微机的历史与体系结构
 

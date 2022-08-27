@@ -1,4 +1,4 @@
-## [MainPage](../index.md)/OPD/Rubiesh
+## [MainPage](../index.md)/[OPD](README.md)/Rubiesh
 
 ## Рубежный контроль No1
 
