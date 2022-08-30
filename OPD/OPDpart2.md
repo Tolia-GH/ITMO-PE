@@ -203,7 +203,7 @@
               $$Q_{nest}=\overline{K}Q+J\overline{Q}$$
 
               - ![](pic/part2/30.png)
-            - T触发器（Toggle Flip-Flop，or Trigger Flip-Flop）设有一个输入和输出，当时脉由0转为1时，如果T和Q不相同时，其输出值会是 1。输入端 T 为 1 的时候，输出端的状态Q发生反转；输入端T为0的时候，输出端的状态 Q 保持不变。把JK触发器的J和K输入点连接在一起，即构成一个 T 触发器，因此 T 触发器的算式为：
+            - T 触发器（Toggle Flip-Flop，or Trigger Flip-Flop）设有一个输入和输出，当时脉由0转为1时，如果T和Q不相同时，其输出值会是 1。输入端 T 为 1 的时候，输出端的状态Q发生反转；输入端T为0的时候，输出端的状态 Q 保持不变。把JK触发器的J和K输入点连接在一起，即构成一个 T 触发器，因此 T 触发器的算式为：
              
               $$Q_{next}=\overline{T}Q+T\overline{Q}+T\overline{Q}=Q\oplus T$$
 
