@@ -1,4 +1,4 @@
-# Домашнее Задание 4
+## [MainPage](../index.md)/[Discrete Mathematics](../README.md)/Домашнее Задание 4
 
 Вариант №122
 

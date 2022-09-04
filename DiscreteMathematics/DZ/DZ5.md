@@ -1,4 +1,4 @@
-# Домашнее Задание 5
+## [MainPage](../index.md)/[Discrete Mathematics](../README.md)/Домашнее Задание 5
 
 Вариант №122
 
