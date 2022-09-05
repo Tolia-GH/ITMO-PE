@@ -755,9 +755,11 @@ $$(u+v)^{(n)}=\sum_{k=0}^n C^k_n u^{(n-k)}v^{(k)}$$
         $$\Delta y=A\Delta x+o(\Delta x)$$
         其中 $A$ 是不依赖于 $\Delta x$ 的常数，那么称函数 $y=f(x)$ 在点 $x_0$ 是可微的，而 $A\Delta x$ 叫做函数 $y=f(x)$ 在点 $x_0$ 相应于自变量增量 $\Delta x$ 的微分，记作 ${\rm d}y$
     - 通常把自变量，的增量 $\Delta x$ 称为自变量的微分，记作 ${\rm d}x$，即 ${\rm d}x=\Delta x$。于是函数 $y=f(x)$ 的微分又可记作
+      
         $${\rm d}y=f'(x){\rm d}x$$
         从而有
-        $$frac{ {\rm d}y}{{\rm d}x}=f'(x)$$
+
+        $$frac{ {\rm d}y}{ {\rm d}x}=f'(x)$$
         > 这就是说，函数的微分 ${\rm d}y$ 与自变量的微分 ${\rm d}x$ 之商等于该函数的导数。因此，导数也叫做“微商”
 - 微分的几何意义
     ![](https://www.ranying.xyz/api/icsg/icsg-image/i/2021/07/20/qnxhzv.png)
