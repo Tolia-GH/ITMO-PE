@@ -785,7 +785,7 @@
       $$P=\frac{ {\rm d}W}{ {\rm d}t}=M\frac{ {\rm d}\theta}{ {\rm d}t}=M\omega$$
 
       即力矩的功率等于力矩与角速度的乘积
-  - 转动动能
+  - 刚体定轴转动的动能
     设某时刻刚体的角速度为 $\omega$，则到转轴的垂直距离为 $r_i$ 的质量为 $\Delta m_i$ 的质元的速度为 $v_i=r_i\omega$，从而该质元的动能为 $\Delta m_iv_i^2/2$。这样整个刚体的转动动能为：
 
     $$E_k=\sum_i\frac{1}{2}\Delta m_ir_i^2\omega^2=\frac{1}{2}(\sum_i\Delta m_ir_i^2)\omega^2=\frac{1}{2}J\omega^2$$
