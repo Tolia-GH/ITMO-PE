@@ -757,7 +757,7 @@ $$(u+v)^{(n)}=\sum_{k=0}^n C^k_n u^{(n-k)}v^{(k)}$$
     - 通常把自变量，的增量 $\Delta x$ 称为自变量的微分，记作 ${\rm d}x$，即 ${\rm d}x=\Delta x$。于是函数 $y=f(x)$ 的微分又可记作
         $${\rm d}y=f'(x){\rm d}x$$
         从而有
-        $$\frac{{\rm d}y}{{\rm d}x}=f'(x)$$
+        $$frac{ {\rm d}y}{{\rm d}x}=f'(x)$$
         > 这就是说，函数的微分 ${\rm d}y$ 与自变量的微分 ${\rm d}x$ 之商等于该函数的导数。因此，导数也叫做“微商”
 - 微分的几何意义
     ![](https://www.ranying.xyz/api/icsg/icsg-image/i/2021/07/20/qnxhzv.png)
@@ -793,7 +793,7 @@ $$(u+v)^{(n)}=\sum_{k=0}^n C^k_n u^{(n-k)}v^{(k)}$$
         函数和差运算 | $(u\pm v)'=u'\pm v'$ | ${\rm d}(u\pm v)={\rm d}u\pm {\rm d}v$
         常数积运算 | $(Cu)'=Cu'$ | ${\rm d}(Cu)=C{\rm d}u$
         函数积运算 | $(uv)'=u'v+uv'$ | ${\rm d}(uv)={\rm d}uv+u{\rm d}v$
-        函数商运算 | $(\frac{u}{v})'=\frac{u'v-uv'}{v^2}\quad(v\neq 0)$ | ${\rm d}(\frac{u}{v})=\frac{{\rm d}uv-u{\rm d}v}{v^2}\quad(v\neq 0)$
+        函数商运算 | $(\frac{u}{v})'=\frac{u'v-uv'}{v^2}\quad(v\neq 0)$ | ${\rm d}(\frac{u}{v})=frac{ {\rm d}uv-u{\rm d}v}{v^2}\quad(v\neq 0)$
     - 复合函数的微分法则
         - 设 $y=f(u)$ 及 $u=g(x)$ 都可导，则复合函数 $y=f[g(x)]$ 的微分为
             $${\rm d}y=y'_x{\rm d}x=f'(u)g'(x){rm d}x$$
