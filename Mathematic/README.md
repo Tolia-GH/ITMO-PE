@@ -3,7 +3,7 @@
 ## 阅读索引
 
 - [x] [Advanced Mathematics](AdvancedMathematics.md)
-- [x] [Linear Algebra](LinearAlgebra.md))
+- [x] [Linear Algebra](LinearAlgebra.md)
 - [x] [Типовой расчет](TypeWork.md)
 - [ ] [Exam](../404.md)
 
