@@ -465,7 +465,10 @@
   - 定义：作用在物体上的力在位移方向的分量与物体位移大小的乘积
   - 恒力做功
     - 设 $\theta$ 为力与位移 $\Delta \vec{r}$ 的夹角，则力在位移方向的分量为 $F\cos\theta$。所以，力对质点所做的功为：
-     
+
+      <div align=center><img src="pic/Lec4.1.png"></div>
+      <center>图4-1 恒力的功</center>
+
       $$W=(F\cos\theta)|\Delta \vec{r}|=F|\Delta\vec{r}|\cos\theta$$
 
       $$\vec{W}=\vec{F}\cdot\Delta\vec{r}$$
@@ -527,6 +530,10 @@
   - 非保守力：这种力对物体做的功只取决于初、末位置,而与运动物体的路径无关，如重力、弹性力等
 - 重力
   - 重力做功
+
+    <div align=center><img src="pic/Lec4.2.png"></div>
+    <center>图4-2 重力做功</center>
+
     设质量为 $m$ 的物体在重力作用下，在地面附近运动，从 $a$ 点沿某一曲线路径 $acb$ 到达 $b$ 点，如 图2-5 所示。$a$ 点和 $b$ 点对 选取的参考平面来说高度分别为 $h_a$ 和 $h_b$。在曲线上任取一位移元 ${\rm d}\vec{r}$，重力 $\vec{P}$ 所做的功为
 
     $${\rm d}W=\vec{P}\cdot{\rm d}\vec{r}=mg\cos\alpha{\rm d}s$$
@@ -552,6 +559,10 @@
 
 - 弹性力
   - 弹性力做功
+
+    <div align=center><img src="pic/Lec4.3.png"></div>
+    <center>图4-3 弹性力的功</center>
+
     设有一轻质弹簧，一端固定，另一端连接一物体。当物体在光滑的水平面内沿弹簧方向做直线运动时，弹簧发生形变，同时，弹性力作用于物体上。取运动方向为 $X$ 轴，物体的平衡位置为坐标原点，在运动中物体的某一位置 $x$ 处，根据胡克定律，在弹性 限度内，作用于物体上的弹性力为：
 
     $$F=-kx$$
@@ -644,6 +655,9 @@
 
   $$\int^{t_1}_{t_2}(\vec{F}_2+\vec{F}_{21}){\rm d}t=m_2\vec{v}_2-m_2\vec{v}_{20}$$
 
+  <div align=center><img src="pic/Lec4.4.png"></div>
+  <center>图4-4 质点系的内力和外力</center>
+
   上式表明，作用于两质点组成系统的合外力的冲量等于系统内质点动量之和的增量，即系统的动量增量。
 
   如果系统内含有 $n$ 个质点，则动量定理可表示为：
@@ -691,6 +705,9 @@
       - $\varphi$ 为 $r$ 和 $F$ 间的夹角
     - 单位：$m\cdot N$
     - 量纲：$ML^2T^2$
+
+    <div align=center><img src="pic/Lec5.1.png"></div>
+    <center>图5-1 力矩</center>
   
     如果外力不在转动平面内，则必须将外力 $\boldsymbol{F}$ 分解成平行于转轴的分力 $\boldsymbol{F_{//}}$ 和在转动平面内的分力 $\boldsymbol{F_\perp}$ 其中，只有 $\boldsymbol{F_\perp}$ 才有可能改变刚体的定轴转动状态。这时力矩定义式中的 $\boldsymbol{F}$ 应理解为上述的 $\boldsymbol{F_\perp}$ 分力
 
@@ -707,8 +724,16 @@
 
       $$J=\int_{(m)}r^2{\rm d}m$$
     - 几种常见几何体的转动惯量
+
+    <div align=center><img src="pic/Lec5.3.png"></div>
+    <center>图5-3 质点在平面上做圆周运动的位置</center>
+
   - 转动定律
-    - 如 图3-3 所示，表示一个绕定轴 $Oz$ 转动的刚体，其上任一质元 $P$，质量为 $\Delta m_i$，离转轴的距离 $r_i$，它所受的外力为 $\boldsymbol{F_i}$，内力为 $\boldsymbol{f_i}$。为讨论简单起见，假设 $\boldsymbol{F_i}$ 和 $\boldsymbol{f_i}$ 都在 $P$ 点的转动平面内，它们于矢径的夹角分别为 $\varphi_i$ 和 $\theta_i$ 根据牛顿第二定律，$P$ 质元的切向运动方程为
+
+    <div align=center><img src="pic/Lec5.2.png"></div>
+    <center>图5-2 转动定律的推导</center>
+
+    - 如 图5-2 所示，表示一个绕定轴 $Oz$ 转动的刚体，其上任一质元 $P$，质量为 $\Delta m_i$，离转轴的距离 $r_i$，它所受的外力为 $\boldsymbol{F_i}$，内力为 $\boldsymbol{f_i}$。为讨论简单起见，假设 $\boldsymbol{F_i}$ 和 $\boldsymbol{f_i}$ 都在 $P$ 点的转动平面内，它们于矢径的夹角分别为 $\varphi_i$ 和 $\theta_i$ 根据牛顿第二定律，$P$ 质元的切向运动方程为
 
       $$F_i\sin\varphi_i+f_i\sin\theta_i=\Delta m_ia_{i\tau}=\Delta m_ir_i\beta$$
 
