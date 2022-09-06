@@ -185,6 +185,4 @@ public class Client {
             socketChannel.write(buffer);
         }
     }
-
-
 }

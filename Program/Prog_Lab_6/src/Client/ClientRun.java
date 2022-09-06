@@ -74,7 +74,7 @@ public class ClientRun {
         } catch (AbstractException e) {
             Tools.MessageL(e.getMessage());
         } catch (Exception e) {
-            Tools.MessageL("Error: Something Wrong!");
+            e.printStackTrace();
             //e.printStackTrace();
         }
     }

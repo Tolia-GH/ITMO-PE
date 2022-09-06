@@ -12,7 +12,7 @@
 
 ## [MainPage](../index.md)/[Physics](README.md)/Lecture
 
-# Lecture
+# Lecture I
 
 ## Lecture №1 Вводная лекция 介绍性讲座
 
@@ -1569,6 +1569,12 @@
     光子的质量为：
 
     $$m=\frac{E}{c^2}=\frac{h\nu}{c^2}$$
+
+# Lecture II
+
+## Lecture №1 Электромагнетизм 电磁学
+
+
 
 <style type="text/css">
     #footer {
