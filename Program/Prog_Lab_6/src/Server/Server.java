@@ -112,7 +112,7 @@ public class Server {
                     if (!command.getName().equalsIgnoreCase("execute_script")) {
                         command.execute(commandManager, packageCommand);
 
-                        Response response = new Response(OrganizationManager.getOrganizationSet(),commandManager.getResponseMessage());
+                        Response response = new Response(OrganizationManager.getOrganizationSet(),commandManager.getResponseMessage(),OrganizationManager.getOrganizationSet().size());
 
                         ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();//
                         ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
@@ -145,7 +145,7 @@ public class Server {
                             message.append(commandManager.getResponseMessage());
                         }
 
-                        Response response = new Response(OrganizationManager.getOrganizationSet(), message.toString());
+                        Response response = new Response(OrganizationManager.getOrganizationSet(), message.toString(),OrganizationManager.getOrganizationSet().size());
 
                         ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();//
                         ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);

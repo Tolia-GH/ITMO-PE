@@ -2,21 +2,27 @@
 <html lang = "en">
     <head>
         <meta charset = "UTF-8">
-        <title>Студент: Чжоу Хунсян P32131 <br> Вариант: 14800</title>
+        <title>Студент: Чжоу Хунсян P32131 Вариант: 14800</title>
         <link rel="stylesheet" type="text/css" href="Style.css">
     </head>
+
     <body>
         <script>
             function check() {
-
+                let Y = document.getElementById("Y").value;
+                let R = document.getElementById("R").value;
+                let X = document.getElementById("X").value;
+                alert("X="+X+"\nY="+Y+"R="+R);
             }
             function sendAll() {
                 check()
             }
         </script>
+
         <h1 class = "hate">
-            <p>Студент: Чжоу Хунсян P32131 <br> Вариант: 14800</p>
+            Студент: Чжоу Хунсян P32131 <br> Вариант: 14800
         </h1>
+
         <h2>
             Lab 1
         </h2>
@@ -55,7 +61,7 @@
                     </p>
                 </div>
                 <div class = "submit">
-                    <button type = "button" onclick = "sendAll()">submit</button>
+                    <button onclick = "check()">submit</button>
                 </div>
             
             </div>

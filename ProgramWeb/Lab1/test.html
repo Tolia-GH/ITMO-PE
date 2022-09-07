@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script>
+        function myFunction() {
+            let x=document.getElementsByName("X");
+            let s = "";
+            for (let i = 0; i<x.length; i++){
+                if (x[i].checked) {
+                    s += x[i].value + ' ';
+                }
+            }
+            alert(s);
+
+            let y=document.getElementById("Y").value;
+            alert(y);
+
+            let r;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="checkbox" name="X" value="1">
+        <input type="checkbox" name="X" value="2">
+        <input type="checkbox" name="X" value="3">
+
+        <input type="text" name="Y" id="Y">
+
+        <input type="button" name="R" value="4">
+        <input type="button" name="R" value="5">
+        <input type="button" name="R" value="6">
+    </form>
+
+    <button onclick="myFunction()">submit</button>
+</body>
+</html>

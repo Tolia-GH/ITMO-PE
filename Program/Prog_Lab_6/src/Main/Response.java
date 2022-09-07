@@ -15,10 +15,10 @@ public class Response implements Serializable {
      * @param organizations   the organizations
      * @param responseMessage the response message
      */
-    public Response(ArrayDeque<Organization> organizations, String responseMessage){
+    public Response(ArrayDeque<Organization> organizations, String responseMessage, int amountSet){
         this.organizationSet = organizations;
         this.responseMessage = responseMessage;
-        this.amountSet = organizations.size();
+        this.amountSet = amountSet;
     }
 
     private final ArrayDeque<Organization> organizationSet;

@@ -14,7 +14,7 @@ public class ClientRun {
     /**
      * The File path.
      */
-    static String filePath;
+    static String filePath = "Organizations.json";
     /**
      * The Ip.
      */

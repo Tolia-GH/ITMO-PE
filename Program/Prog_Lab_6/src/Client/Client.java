@@ -87,20 +87,25 @@ public class Client {
 
         if (isSetFromFile) {
             ArrayDeque<Organization>set = JsonReader.getCollectionFromFile(filePath);
-            response = new Response(set,null);
-            PackageCommand OrganizationSet = new PackageCommand(set);
+            if (set == null) {
 
-            ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
-            ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
+            } else {
+                response = new Response(set,null,set.size());
+                PackageCommand OrganizationSet = new PackageCommand(set);
 
-            objectOut.writeObject(OrganizationSet);
-            objectOut.flush();
+                ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
+                ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
 
-            byte[] bytes = byteArrayOut.toByteArray();
-            ByteBuffer byteBuffer = ByteBuffer.wrap(bytes);
+                objectOut.writeObject(OrganizationSet);
+                objectOut.flush();
 
-            socketChannel.write(byteBuffer);
-            Tools.MessageL("Client: Organization set from file");
+                byte[] bytes = byteArrayOut.toByteArray();
+                ByteBuffer byteBuffer = ByteBuffer.wrap(bytes);
+
+                socketChannel.write(byteBuffer);
+                Tools.MessageL("Client: Organization set from file");
+            }
+
         }
 
         int numReadyChannel;
