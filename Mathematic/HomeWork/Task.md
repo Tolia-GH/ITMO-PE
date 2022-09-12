@@ -197,14 +197,33 @@ $$f(x)=x^2-3x+1, A=
 
 **Решение**
 
-$$x^2=
+$$x^2=\begin{pmatrix}
+    2 & 1\\
+    0 & 3\\
+\end{pmatrix}\cdot
 \begin{pmatrix}
     2 & 1\\
     0 & 3\\
-\end{pmatrix}\cdot 
+\end{pmatrix}=
 \begin{pmatrix}
-    2 & 1\\
-    0 & 3\\
+    4 & 5\\
+    0 & 9\\
+\end{pmatrix}$$
+
+$$-3x=\begin{pmatrix}
+    -6 & -3\\
+    0 & -9\\
+\end{pmatrix}$$
+
+$$1=E=\begin{pmatrix}
+    1 & 0\\
+    0 & 1\\
+\end{pmatrix}$$
+
+$$f(A)=x^2-3x+1=
+\begin{pmatrix}
+    -1 & 2\\
+    0 & 1\\
 \end{pmatrix}$$
 
 ### 3.14
@@ -217,25 +236,114 @@ $$\begin{vmatrix}
     x & x & c+x\\
 \end{vmatrix}$$
 
+**Решение**
+
+$$\det =（a+x)(b+x)(c+x)+x^3+x^3-(b+x)x^2-(a+x)x^2-(c+x)x^2$$
+
 ### 3.109
 
 Методом присоединенной матрицы найти абратные для следующих матриц:
 
-$$\begin{pmatrix}
+$$A=\begin{pmatrix}
     2 & 5 & 7\\
     6 & 3 & 4\\
     5 & -2 & -3\\
+\end{pmatrix}$$
+
+**Решение**
+
+$$\begin{vmatrix}
+    A
+\end{vmatrix}=-1$$
+
+$$A_{11}=\begin{pmatrix}
+    3 & 4\\
+    -2 & -3\\
+\end{pmatrix}=-1\quad
+A_{12}\begin{pmatrix}
+    6 & 4\\
+    5 & -3\\
+\end{pmatrix}=-38\quad
+A_{13}=\begin{pmatrix}
+    6 & 3\\
+    5 & -2\\
+\end{pmatrix}=-27$$
+
+$$A_{21}=\begin{pmatrix}
+    5 & 7\\
+    -2 & -3\\
+\end{pmatrix}=-1\quad
+A_{22}\begin{pmatrix}
+    2 & 7\\
+    5 & -3\\
+\end{pmatrix}=-41\quad
+A_{23}=\begin{pmatrix}
+    2 & 5\\
+    5 & -2
+\end{pmatrix}=-29$$
+
+$$A_{31}=\begin{pmatrix}
+    5 & 7\\
+    3 & 4\\
+\end{pmatrix}=-1\quad
+A_{32}\begin{pmatrix}
+    2 & 7\\
+    6 & 4\\
+\end{pmatrix}=-34\quad
+A_{33}=\begin{pmatrix}
+    2 & 5\\
+    6 & 3\\
+\end{pmatrix}=-24$$
+
+$$A^*=\begin{pmatrix}
+    A_{11} & A_{12} & A_{13}\\
+    A_{21} & A_{22} & A_{23}\\
+    A_{31} & A_{32} & A_{33}\\
+\end{pmatrix}\\
+=\begin{pmatrix}
+    -1 & -1 & -1\\
+    -38 & -41 & -34\\
+    -27 & -29 & -24\\
+\end{pmatrix}$$
+
+$$A^{-1}=\frac{1}{\lvert A\rvert}A^*=
+\begin{pmatrix}
+    1 & 1 & 1\\
+    38 & 41 & 34\\
+    27 & 29 & 24\\
 \end{pmatrix}$$
 
 ### 3.116
 
 Методом элементных преобразований найти абратные для следующих матриц:
 
-$$\begin{pmatrix}
+$$A=\begin{pmatrix}
     1 & 1 & 1 & 1\\
     1 & 1 & -1 & -1\\
     1 & -1 & 1 & -1\\
     1 & -1 & -1 & 1\\
+\end{pmatrix}$$
+
+**Решение**
+
+$$\begin{pmatrix}
+    1 & 1 & 1 & 1 & \vert & 1 & 0 & 0 & 0\\
+    1 & 1 & -1 & -1 & \vert & 0 & 1 & 0 & 0\\
+    1 & -1 & 1 & -1 & \vert & 0 & 0 & 1 & 0\\
+    1 & -1 & -1 & 1 & \vert & 0 & 0 & 0 & 1\\
+\end{pmatrix}=\\
+\begin{pmatrix}
+    1 & 0 & 0 & 0 & \vert & \frac{1}{4} & \frac{1}{4} & \frac{1}{4} & \frac{1}{4}\\
+    0 & 1 & 0 & 0 & \vert & \frac{1}{4} & \frac{1}{4} & -\frac{1}{4} & -\frac{1}{4}\\
+    0 & 0 & 1 & 0 & \vert & \frac{1}{4} & -\frac{1}{4} & \frac{1}{4} & -\frac{1}{4}\\
+    0 & 0 & 0 & 1 & \vert & \frac{1}{4} & -\frac{1}{4} & -\frac{1}{4} & \frac{1}{4}\\
+\end{pmatrix}$$
+
+$$A^T=\begin{pmatrix}
+    \frac{1}{4} & \frac{1}{4} & \frac{1}{4} & \frac{1}{4}\\
+    \frac{1}{4} & \frac{1}{4} & -\frac{1}{4} & -\frac{1}{4}\\
+    \frac{1}{4} & -\frac{1}{4} & \frac{1}{4} & -\frac{1}{4}\\
+    \frac{1}{4} & -\frac{1}{4} & -\frac{1}{4} & \frac{1}{4}\\
 \end{pmatrix}$$
 
 ### 3.123
@@ -253,4 +361,35 @@ $$\begin{pmatrix}
 \begin{pmatrix}
     14 & 16\\
     9 & 10\\
+\end{pmatrix}$$
+
+**Решение**
+
+$$X=\begin{pmatrix}
+    14 & 16\\
+    9 & 10\\
+\end{pmatrix}\cdot
+\begin{pmatrix}
+    3 & -1\\
+    5 & -2\\
+\end{pmatrix}^{-1}\cdot
+\begin{pmatrix}
+    5 & 6\\
+    7 & 8\\
+\end{pmatrix}^{-1}\\
+=\begin{pmatrix}
+    14 & 16\\
+    9 & 10\\
+\end{pmatrix}\cdot
+\begin{pmatrix}
+    2 & -1\\
+    5 & -3\\
+\end{pmatrix}\cdot
+\begin{pmatrix}
+    -4 & 3\\
+    \frac{7}{2} & -\frac{5}{2}\\
+\end{pmatrix}\\
+=\begin{pmatrix}
+    -649 & 479\\
+    -\frac{817}{2} & \frac{603}{2}
 \end{pmatrix}$$
