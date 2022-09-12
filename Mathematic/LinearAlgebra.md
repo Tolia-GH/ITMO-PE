@@ -793,21 +793,21 @@ $$\sum_{k=1}^n a_{ik}A_{jk}
   \begin{cases}
     a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n=b_1\\
     a_{12}x_1+a_{22}x_2+\cdots+a_{2n}x_n=b_2\\
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\cdots \\
+    \cdots \\
     a_{n1}x_1+a_{n2}x_2+\cdots+a_{nn}x_n=b_n\\
   \end{cases}\qquad(1)
   $$
   
   如果线性方程组 $(1)$ 的系数矩阵 $A$ 的行列式不等于零，即
    
-    $$
-    \bm A=
-    \begin{vmatrix}
-      a_{11} &\cdots & a_{1n}\\
-      \vdots & &\vdots\\
-      a_{m1} &  \cdots & a_{mn}\\
-    \end{vmatrix} \ne 0
-    $$
+  $$
+  \bm A=
+  \begin{vmatrix}
+    a_{11} &\cdots & a_{1n}\\
+    \vdots & &\vdots\\
+    a_{m1} &  \cdots & a_{mn}\\
+  \end{vmatrix} \ne 0
+  $$
 
   那么方程组（9）有唯一解
 
