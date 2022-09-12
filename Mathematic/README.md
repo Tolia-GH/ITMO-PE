@@ -5,7 +5,8 @@
 - [x] [Advanced Mathematics](AdvancedMathematics.md)
 - [x] [Linear Algebra](LinearAlgebra.md)
 - [x] [Типовой расчет](TypeWork.md)
-- [ ] [Exam](../404.md)
+- [ ] [HomeWork](HomeWork/Task.md)
+- [x] [Exam](../404.md)
 
 <style type="text/css">
     #footer {
