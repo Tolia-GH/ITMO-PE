@@ -1,4 +1,16 @@
-# Задания
+<head>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      inlineMath: [['$','$']]
+      }
+    });
+  </script>
+</head>
+
+## [MainPage](../index.md)/[Mathematics](README.md)/HomeWork
 
 ## Задание 1
 
@@ -7,6 +19,7 @@
 <div align=center><img src="../pic/Task-1.png"></div>
 
 - Matrix Multiply
+
 ```c++
 #include <iostream>
 
@@ -77,7 +90,6 @@ void run() {
     printf("\n");
     system("pause");
 }
-
 int main() {
 
     printf("Matrix Multiply version 1.0\n");
@@ -92,6 +104,7 @@ int main() {
 ```
 
 - Determinant Calculate
+
 ```c++
 #include <iostream>
 
