@@ -9,6 +9,8 @@
   - [x] [Lab 1.04](Labs/Lab1.04.md)
   - [x] [Lab 1.07](Labs/Lab1.07.md)
   - [x] [Lab 1.09](Labs/Lab1.09.md)
+  - [ ] [Lab 3.13](Labs/Lab3.13.md)
+- [ ] [HomeWork](HomeWork.md)
 - [x] [练习课习题](Practice.md)
 - [x] [期末考试](Exam.md)
 
