@@ -58,6 +58,8 @@ public class Client {
         socketChannel.configureBlocking(false);
         //create a non-blocking channel
 
+        runAccount();
+
         socketChannel.connect(inetSocketAddress);
         Tools.MessageL("Client: Connecting to server: " + host + ":" + port);
         if (socketChannel.finishConnect()) {
@@ -66,6 +68,23 @@ public class Client {
             messageToServer("Hello Server!");
         }
         //connect to server
+    }
+
+    public void runAccount() {
+        Tools.Message("Client: input \"login\" to login, input \"register\" to create a new account: ");
+        String choice = Tools.Input();
+        if (choice.equalsIgnoreCase("login")||choice.equalsIgnoreCase("register")) {
+            Tools.Message("Client: Input username: ");
+            String userName = Tools.Input();
+            Tools.Message("Client: Input password: ");
+            String passWord = Tools.Input();
+            ClientInformation clientInformation = new ClientInformation(userName, passWord, !choice.equalsIgnoreCase("login"));
+        } else {
+            Tools.MessageL("Error: Input error!");
+            System.exit(3);
+        }
+
+
     }
 
     /**
