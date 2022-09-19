@@ -4,6 +4,8 @@
 
 - [x] [实验要求](LabRequests.md)
 - [x] [教材指引](Guide.md)
+- [x] [Lab5](/OPD/OPD_Lab_5/Lab5.md)
+- [x] [Lab6](/OPD/OPD_Lab_6/Lab6.md)
 - [x] [Рубеж](Rubiesh.md)
 - [ ] [Exam](Exam.md)
 - [x] [幻灯片1梳理](OPDpart1.md)

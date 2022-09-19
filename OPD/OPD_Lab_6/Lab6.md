@@ -1,4 +1,3 @@
-
 Вариант 8
 Основная программа в бесконечном цикле суммирует элементы массива, значения которых больше 3839. Если элементы массива закончились, тоячейки результата обнуляются, и подсчет начинается заново.
 
@@ -13,3 +12,58 @@
 
 
 Обработчик прерывания должен по нажатию кнопки готовности ВУ-3 осуществлять вывод количества обработанных элементов массива наданное ВУ, а также игнорировать все необрабатываемые прерывания. Примечание: все числа предоставлены в десятичной системе счисленияесли явно не указано иное.
+
+```asm
+ORG 0x100
+ADDR:	WORD	$ARRAY
+RES1:	WORD	0x0000
+RES2:	WORD	0x0000
+CAL:	WORD	0x0000
+NUM:	WORD	0x3839
+LEN:	WORD	0x000A
+
+START:	CLA
+SUMUP:	LD	(ADDR)+
+	SUB	NUM
+	BMI	CONTINUE
+	ADD	NUM
+	ADD	RES1
+	ST	RES1
+	LD	RES2
+	ADC	0x6E3
+	ST	RES2
+CONTINUE:	LD	CAL
+	SUB	LEN
+	BEQ	FINAL
+	ADD	LEN
+	INC
+	ST	CAL
+	IN	7
+	AND	#0x40
+	BEQ	PASS
+	LD	CAL
+	OUT	6
+PASS:	JUMP	SUMUP
+FINAL:	HLT
+
+RESET:	CLA
+	ST	CAL
+	ST	RES1
+	ST	RES2
+	LD	ADDR
+	SUB	LEN
+	DEC
+	ST	ADDR
+	RET
+ORG 0x6E4
+ARRAY:	WORD	0x3839
+	WORD	0x0010
+	WORD	0x0010
+	WORD	0x0010
+	WORD	0x0001
+	WORD	0x3839
+	WORD	0x0001
+	WORD	0x3839
+	WORD	0x3839
+	WORD	0x3839
+```
