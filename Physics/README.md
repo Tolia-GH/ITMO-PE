@@ -2,7 +2,7 @@
 
 ## 阅读索引
 
-- [x] [讲座内容](Lecture.md)
+- [x] [Lecture](Lecture.md)
 - 实验室工作
   - [x] [Lab 1.01](Labs/Lab1.01.md)
   - [x] [Lab 1.02](Labs/Lab1.02.md)
@@ -10,9 +10,10 @@
   - [x] [Lab 1.07](Labs/Lab1.07.md)
   - [x] [Lab 1.09](Labs/Lab1.09.md)
   - [ ] [Lab 3.13](Labs/Lab3.13.md)
+  - [ ] [Lab 3.07](Labs/Lab3.07.md)
 - [ ] [HomeWork](HomeWork.md)
-- [x] [练习课习题](Practice.md)
-- [x] [期末考试](Exam.md)
+- [x] [Practice](Practice.md)
+- [x] [Exam](Exam.md)
 
 <style type="text/css">
     #footer {

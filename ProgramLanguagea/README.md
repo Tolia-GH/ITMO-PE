@@ -2,10 +2,7 @@
 
 ## 阅读索引
 
-- [x] [教材课文及翻译](Texts.md)
-- [x] [Gramma](Gramma.md)
-- [ ] [HomeWork](HomeWork.md)
-- [x] [语法](gramma.md)
+- [Low-Level Programming](LowLevel.md)
 
 <style type="text/css">
     #footer {
