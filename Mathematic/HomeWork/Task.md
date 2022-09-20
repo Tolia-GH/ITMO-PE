@@ -420,6 +420,49 @@ $$A=\begin{pmatrix}
     2 & 2 & 4 & 3\\
 \end{pmatrix}$$
 
+**Решение**
+
+$$\begin{pmatrix}
+    3 & 1 & 1 & 4\\
+    \lambda & 4 & 10 & 1\\
+    1 & 7 & 17 & 3\\
+    2 & 2 & 4 & 3\\
+\end{pmatrix}\sim
+\begin{pmatrix}
+    1 & 7 & 17 & 3\\
+    \lambda & 4 & 10 & 1\\
+    3 & 1 & 1 & 4\\
+    2 & 2 & 4 & 3\\
+\end{pmatrix}\\
+\sim\begin{pmatrix}
+    1 & 7 & 17 & 3\\
+    0 & 4-7\lambda & 10-17\lambda & 1-3\lambda\\
+    0 & -20 & -50 & -5\\
+    0 & -12 & -30 &-3\\
+\end{pmatrix}\\
+\sim\begin{pmatrix}
+    1 & 7 & 17 & 3\\
+    0 & -20 & -50 & -5\\
+    0 & 4-7\lambda & 10-17\lambda & 1-3\lambda\\
+    0 & -12 & -30 &-3\\
+\end{pmatrix}\\
+\sim\begin{pmatrix}
+    1 & 7 & 17 & 3\\
+    0 & -20 & -50 & -5\\
+    0 & 0 & \frac{\lambda}{2} & -\frac{5\lambda}{4}\\
+    0 & -12 & -30 &-3\\
+\end{pmatrix}\\
+\sim\begin{pmatrix}
+    1 & 7 & 17 & 3\\
+    0 & -20 & -50 & -5\\
+    0 & 0 & \frac{\lambda}{2} & -\frac{5\lambda}{4}\\
+    0 & 0 & 0 & 0\\
+\end{pmatrix}$$
+
+если $\lambda=0$, то $rank(A)=2$
+
+если $\lambda\neq0$, то $rank(A)=3$
+
 ### 3.157
 
 Чему равен ранг матрицы $A$ при различных значениях $\lambda$?
@@ -429,6 +472,26 @@ $$A=\begin{pmatrix}
     2 & -1 & \lambda & 5\\
     1 & 10 & -6 & \lambda\\
 \end{pmatrix}$$
+
+**Решение**
+
+$$\begin{pmatrix}
+    1 & \lambda & -1 & 2\\
+    2 & -1 & \lambda & 5\\
+    1 & 10 & -6 & \lambda\\
+\end{pmatrix}\sim
+\begin{pmatrix}
+    1 & \lambda & -1 & 2\\
+    0 & -1-2\lambda & 2+\lambda & 1\\
+    0 & 10-\lambda & -5 & -2+\lambda\\
+\end{pmatrix}\\
+\sim\begin{pmatrix}
+    1 & \lambda & -1 & 2\\
+    0 & -1-2\lambda & 2+\lambda & 1\\
+    0 & 0 & -\frac{\lambda^2+2\lambda-15}{2\lambda+1} & 2\frac{\lambda^2-2\lambda+4}{2\lambda+1}\\
+\end{pmatrix}$$
+
+$rank(A)=3$
 
 ### 3.161
 
@@ -495,6 +558,30 @@ a_2=(7,3,9)\\
 a_3=(5,1,3)\\
 x=(\lambda,2,5)$$
 
+**Решение**
+
+$$A=\begin{pmatrix}
+    3 & 7 & 5 & \lambda\\
+    2 & 3 & 1 & 2\\
+    6 & 9 & 3 & 5\\
+\end{pmatrix}\sim
+\begin{pmatrix}
+    6 & 9 & 3 & 5\\
+    0 & \frac{5}{2} & \frac{7}{2} & \lambda-\frac{5}{2}\\
+    0 & 0 & 0 & \frac{1}{3}\\
+\end{pmatrix}
+$$
+
+то есть,
+
+$$\begin{cases}
+    6x_1+9x_2+3x_3=5\\
+    \frac{5}{2}x_2+\frac{7}{2}x_3=\lambda-\frac{5}{2}\\
+    0=\frac{1}{3}\\
+\end{cases}$$
+
+нет решения
+
 ### 3.209
 
 Исследовать совместность и найти общее решение следуюших систем:
@@ -504,6 +591,33 @@ $$\begin{cases}
     3x_1-x_2-6x_3-4x_4=2\\
     2x_1+3x_2+9x_3+2x_4=6\\
     3x_1+2x_2+3x_3+8x_4=-7\\
+\end{cases}$$
+
+**Решение**
+
+$$\begin{pmatrix}
+    1 & 1 & -6 & -4 & 6\\
+    3 & -1 & -6 & -4 & 2\\
+    2 & 3 & 9 & 2 & 6\\
+    3 & 2 & 3 & 8 & -7\\
+\end{pmatrix}\sim
+\begin{pmatrix}
+    1 & 1 & -6 & -4 & 6\\
+    0 & 1 & 21 & 10 & -6\\
+    0 & 0 & 96 & 48 & -40\\
+    0 & 0 & 0 & 9 & -\frac{27}{2}\\
+\end{pmatrix}\\
+\begin{cases}
+    x_1+x_2-6x_3-4x_4=6\\
+    x_2+21x_3+10x_4=-6\\
+    96x_3+48x_4=-40\\
+    9x_4=-\frac{27}{2}
+\end{cases}\Rightarrow
+\begin{cases}
+    x_1=0\\
+    x_2=2\\
+    x_3=\frac{1}{3}\\
+    x_4=-\frac{3}{2}
 \end{cases}$$
 
 ### 3.197*

@@ -10,7 +10,7 @@
     </script>
 </head>
 
-## [MainPage](../../index.md)/[Physics](../README.md)/Lab1.09
+## [MainPage](../../index.md)/[Physics](../README.md)/Lab3.13
 
 ## Цель работы
 
