@@ -4,8 +4,10 @@
 
 package Server;
 
+import Client.ClientInformation;
 import Command.AbstractCommand;
 import Main.PackageCommand;
+import Main.Request;
 import Main.Response;
 import Manager.CommandManager;
 import Manager.OrganizationManager;
@@ -62,6 +64,7 @@ public class Server {
 
         //Handler handler = new Handler(readFromClient,writeToClient);
         handleMessage(socket);
+        //handleClient(socket);
         handleCommand(socket);
 
     }
@@ -83,6 +86,18 @@ public class Server {
         //}
     }
 
+    /*public void handleClient(Socket socket) throws IOException {
+        ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(socket.getInputStream()));
+        try {
+            ClientInformation clientInformation = (ClientInformation) ois.readObject();
+            Tools.MessageL(clientInformation.getUserName());
+            Tools.MessageL(clientInformation.getPassWord());
+            Tools.MessageL(clientInformation.getHash());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }*/
+
     /**
      * Handle command.
      *
@@ -91,16 +106,22 @@ public class Server {
      */
     public void handleCommand(Socket socket) throws IOException {
         CommandManager commandManager = new CommandManager();
+        boolean isClientSet = false;
 
         while (true) {
             //byte[] buffer = new byte[102400];
 
             try {
                 ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(socket.getInputStream()));
-                PackageCommand packageCommand = (PackageCommand) ois.readObject();
-                if (packageCommand.isSetFromFile()) {
-                    OrganizationManager.setOrganizationSet(packageCommand.getOrganizationSet());
-                    OrganizationManager.sort();
+                Request request = (Request) ois.readObject();
+                PackageCommand packageCommand = request.getPackageCommand();
+                if (!isClientSet) {
+                    Tools.MessageL("Information of client: ");
+                    ClientInformation clientInformation = request.getClientInformation();
+                    isClientSet = true;
+                    Tools.MessageL("Username: " + clientInformation.getUserName());
+                    Tools.MessageL("PassWord: " + clientInformation.getPassWord());
+                    Tools.MessageL("Hash: " + clientInformation.getHash());
                 } else {
                     OrganizationManager.doInitialization();
 

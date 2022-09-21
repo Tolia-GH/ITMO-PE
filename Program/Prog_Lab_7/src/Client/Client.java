@@ -4,6 +4,7 @@ import Collection.Organization;
 import Exceptions.AbstractException;
 import JSON.JsonReader;
 import Main.PackageCommand;
+import Main.Request;
 import Main.Response;
 import Manager.CommandManager;
 import Tools.Tools;
@@ -30,6 +31,7 @@ public class Client {
     private SocketChannel socketChannel;
     private Selector selector;
     private Response response;
+    private ClientInformation clientInformation;
 
 
     /**
@@ -64,7 +66,7 @@ public class Client {
         Tools.MessageL("Client: Connecting to server: " + host + ":" + port);
         if (socketChannel.finishConnect()) {
             Tools.MessageL("Client: Connect to server successfully!");
-
+            //sendAccountInfo();
             messageToServer("Hello Server!");
         }
         //connect to server
@@ -78,48 +80,56 @@ public class Client {
             String userName = Tools.Input();
             Tools.Message("Client: Input password: ");
             String passWord = Tools.Input();
-            ClientInformation clientInformation = new ClientInformation(userName, passWord, !choice.equalsIgnoreCase("login"));
+            clientInformation = new ClientInformation(userName, passWord, !choice.equalsIgnoreCase("login"));
         } else {
             Tools.MessageL("Error: Input error!");
             System.exit(3);
         }
+    }
 
+    public void sendAccountInfo() throws IOException {
+        ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
+        ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
 
+        objectOut.writeObject(clientInformation);
+        objectOut.flush();
+
+        byte[] bytes = byteArrayOut.toByteArray();
+        ByteBuffer byteBuffer = ByteBuffer.wrap(bytes);
+
+        socketChannel.write(byteBuffer);
     }
 
     /**
      * Run terminal.
      * Accept commands from User and pack the command and send to server and read the response from server then show in the Terminal
      *
-     * @param isSetFromFile check if the Organization Set is build from file
-     * @param filePath      the file path of the Organization Set
      * @throws IOException            the io exception
      * @throws ClassNotFoundException the class not found exception
      */
-    public void runTerminal(boolean isSetFromFile, String filePath) throws IOException, ClassNotFoundException {
-
-        this.fileName = filePath;
+    public void runTerminal() throws IOException, ClassNotFoundException {
 
         socketChannel.register(selector, SelectionKey.OP_CONNECT | SelectionKey.OP_WRITE | SelectionKey.OP_READ);
 
         CommandManager commandManager = new CommandManager();
 
-        if (isSetFromFile) {
-            ArrayDeque<Organization>set = JsonReader.getCollectionFromFile(filePath);
-            response = new Response(set,null);
-            PackageCommand OrganizationSet = new PackageCommand(set);
+        boolean isClientInfoSent = false;
+
+        if (!isClientInfoSent) {
+
+            Request request = new Request(clientInformation);
 
             ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
             ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
 
-            objectOut.writeObject(OrganizationSet);
+            objectOut.writeObject(request);
             objectOut.flush();
 
             byte[] bytes = byteArrayOut.toByteArray();
             ByteBuffer byteBuffer = ByteBuffer.wrap(bytes);
 
             socketChannel.write(byteBuffer);
-            Tools.MessageL("Client: Organization set from file");
+            Tools.MessageL("Client: Client information sent!");
         }
 
         int numReadyChannel;
@@ -141,11 +151,12 @@ public class Client {
 
                         try {
                             PackageCommand packageCommand = PackageCommand.packCommand(response,commandWithArgs, commandManager, fileName);
+                            Request request = new Request(packageCommand);
 
                             ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
                             ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
 
-                            objectOut.writeObject(packageCommand);
+                            objectOut.writeObject(request);
                             objectOut.flush();
 
                             byte[] bytes = byteArrayOut.toByteArray();

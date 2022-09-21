@@ -68,7 +68,7 @@ public class ClientRun {
         Client client = new Client("localhost", 2001);
         try {
             client.run();
-            client.runTerminal(isSetFromFile, filePath);
+            client.runTerminal();
         } catch (ConnectException e) {
             Tools.MessageL("Error: Server not available!");
         } catch (AbstractException e) {
