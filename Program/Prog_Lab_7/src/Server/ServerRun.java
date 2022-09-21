@@ -1,6 +1,7 @@
 package Server;
 
 import Exceptions.AbstractException;
+import Exceptions.UserInformationException;
 import Tools.Tools;
 
 import java.io.IOException;
@@ -40,6 +41,7 @@ public class ServerRun {
             server.run();
         } catch (AbstractException e) {
             Tools.MessageL(e.getMessage());
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

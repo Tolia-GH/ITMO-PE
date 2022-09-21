@@ -6,6 +6,7 @@ package Server;
 
 import Client.ClientInformation;
 import Command.AbstractCommand;
+import Exceptions.UserInformationException;
 import Main.PackageCommand;
 import Main.Request;
 import Main.Response;
@@ -16,6 +17,7 @@ import Tools.Tools;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.*;
 import java.util.List;
 
 
@@ -27,6 +29,11 @@ public class Server {
     private final int port;
     private ServerSocket serverSocket;
     private String fileName;
+    private final String host = "localhost";
+    private final String nameDB = "studs";
+    private final String managerName = "postgres";
+    private final String managerPass = "123456";
+    private final String linkDB = "jdbc:postgresql://" + host + ":5432/" + nameDB;
 
     /**
      * Instantiates a new Server.
@@ -82,11 +89,11 @@ public class Server {
         //while ((messageSize = in.read(receiveBuffer)) != -1) {
             byte[] temp = new byte[messageSize];
             System.arraycopy(receiveBuffer,0,temp,0,messageSize);
-            Tools.MessageL("Message from Client: " + new String(temp));
+            Tools.MessageL("Server: Message from Client: " + new String(temp));
         //}
     }
 
-    /*public void handleClient(Socket socket) throws IOException {
+    public void handleClient(Socket socket) throws IOException {
         ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(socket.getInputStream()));
         try {
             ClientInformation clientInformation = (ClientInformation) ois.readObject();
@@ -96,7 +103,7 @@ public class Server {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-    }*/
+    }
 
     /**
      * Handle command.
@@ -108,6 +115,7 @@ public class Server {
         CommandManager commandManager = new CommandManager();
         boolean isClientSet = false;
 
+
         while (true) {
             //byte[] buffer = new byte[102400];
 
@@ -115,13 +123,46 @@ public class Server {
                 ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(socket.getInputStream()));
                 Request request = (Request) ois.readObject();
                 PackageCommand packageCommand = request.getPackageCommand();
+                Class.forName("org.postgresql.Driver");
                 if (!isClientSet) {
-                    Tools.MessageL("Information of client: ");
+                    Tools.MessageL("Server: Information of client: ");
                     ClientInformation clientInformation = request.getClientInformation();
                     isClientSet = true;
-                    Tools.MessageL("Username: " + clientInformation.getUserName());
-                    Tools.MessageL("PassWord: " + clientInformation.getPassWord());
-                    Tools.MessageL("Hash: " + clientInformation.getHash());
+                    Tools.MessageL("       Username: " + clientInformation.getUserName());
+                    Tools.MessageL("       PassWord: " + clientInformation.getPassWord());
+                    Tools.MessageL("       Hash: " + clientInformation.getHash());
+                    if (clientInformation.isCreate()) {
+                        addUser(clientInformation);
+
+                        String message = "You add a account: " + clientInformation.getUserName();
+
+                        Response response = new Response(message);
+
+                        ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();//
+                        ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
+                        objectOut.writeObject(response);
+                        byte[] bytes = byteArrayOut.toByteArray();
+                        OutputStream outputStream = socket.getOutputStream();
+                        outputStream.write(bytes);//
+                    } else {
+                        try {
+                            checkUser(clientInformation);
+                        } catch (UserInformationException e) {
+                            String message = e.getMessage();
+                            Tools.MessageL(message);
+
+                            Response response = new Response(message);
+
+                            ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();//
+                            ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
+                            objectOut.writeObject(response);
+                            byte[] bytes = byteArrayOut.toByteArray();
+                            OutputStream outputStream = socket.getOutputStream();
+                            outputStream.write(bytes);//
+
+                            System.exit(1);
+                        }
+                    }
                 } else {
                     OrganizationManager.doInitialization();
 
@@ -179,6 +220,42 @@ public class Server {
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    private void addUser(ClientInformation clientInformation) throws ClassNotFoundException {
+        try {
+            Connection connection = DriverManager.getConnection(linkDB, managerName, managerPass);
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO users (username,password) VALUES (?,?);");
+            statement.setObject(1,clientInformation.getUserName());
+            statement.setObject(2,clientInformation.getPassWord());
+            statement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void checkUser(ClientInformation clientInformation) throws ClassNotFoundException {
+        try {
+            Connection connection = DriverManager.getConnection(linkDB, managerName, managerPass);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(
+                    "SELECT * FROM users " +
+                            "WHERE username = " + "'" + clientInformation.getUserName() + "'");
+            if (resultSet.next()) {
+                resultSet = statement.executeQuery("SELECT * FROM users " +
+                        "WHERE username = " + "'" + clientInformation.getUserName() + "'" +
+                        "AND password = " + "'" + clientInformation.getPassWord() + "'");
+                if (resultSet.next()) {
+                    Tools.MessageL("Welcome! " + clientInformation.getUserName());
+                } else {
+                    throw new UserInformationException("Error: Incorrect password!");
+                }
+            } else {
+                throw new UserInformationException("Error: User not found!");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }

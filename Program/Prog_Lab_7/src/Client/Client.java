@@ -115,22 +115,7 @@ public class Client {
 
         boolean isClientInfoSent = false;
 
-        if (!isClientInfoSent) {
 
-            Request request = new Request(clientInformation);
-
-            ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
-            ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
-
-            objectOut.writeObject(request);
-            objectOut.flush();
-
-            byte[] bytes = byteArrayOut.toByteArray();
-            ByteBuffer byteBuffer = ByteBuffer.wrap(bytes);
-
-            socketChannel.write(byteBuffer);
-            Tools.MessageL("Client: Client information sent!");
-        }
 
         int numReadyChannel;
         while (true) {
@@ -143,15 +128,10 @@ public class Client {
                     keyIterator.remove();
 
                     if (key.isWritable()) {
-                        SocketChannel socketChannel = (SocketChannel) key.channel();
-                        //commandManager.executeShow();
-                        Tools.MessageL("Client: input your command: ");
-                        Tools.Message("User: ");
-                        String[] commandWithArgs = Tools.Input().split(" ");
 
-                        try {
-                            PackageCommand packageCommand = PackageCommand.packCommand(response,commandWithArgs, commandManager, fileName);
-                            Request request = new Request(packageCommand);
+                        if (!isClientInfoSent) {
+
+                            Request request = new Request(clientInformation);
 
                             ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
                             ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
@@ -163,16 +143,42 @@ public class Client {
                             ByteBuffer byteBuffer = ByteBuffer.wrap(bytes);
 
                             socketChannel.write(byteBuffer);
-                            objectOut.close();
-                            Tools.MessageL("Client: Command sent!");
-
-                            if (commandWithArgs[0].equalsIgnoreCase("exit")) {
-                                System.exit(0);
-                            }
+                            Tools.MessageL("Client: Client information sent!");
+                            isClientInfoSent = true;
 
                             key.interestOps(SelectionKey.OP_READ);
-                        } catch (AbstractException | FileNotFoundException e) {
-                            Tools.MessageL(e.getMessage());
+                        } else {
+                            SocketChannel socketChannel = (SocketChannel) key.channel();
+                            //commandManager.executeShow();
+                            Tools.MessageL("Client: input your command: ");
+                            Tools.Message("User: ");
+                            String[] commandWithArgs = Tools.Input().split(" ");
+
+                            try {
+                                PackageCommand packageCommand = PackageCommand.packCommand(response,commandWithArgs, commandManager, fileName);
+                                Request request = new Request(packageCommand);
+
+                                ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
+                                ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
+
+                                objectOut.writeObject(request);
+                                objectOut.flush();
+
+                                byte[] bytes = byteArrayOut.toByteArray();
+                                ByteBuffer byteBuffer = ByteBuffer.wrap(bytes);
+
+                                socketChannel.write(byteBuffer);
+                                objectOut.close();
+                                Tools.MessageL("Client: Command sent!");
+
+                                if (commandWithArgs[0].equalsIgnoreCase("exit")) {
+                                    System.exit(0);
+                                }
+
+                                key.interestOps(SelectionKey.OP_READ);
+                            } catch (AbstractException | FileNotFoundException e) {
+                                Tools.MessageL(e.getMessage());
+                            }
                         }
                     } else if (key.isReadable()) {
                         SocketChannel socketChannel = (SocketChannel) key.channel();
@@ -184,8 +190,11 @@ public class Client {
                         ByteArrayInputStream byteArrayIn = new ByteArrayInputStream(byteBuffer.array());
 
                         ObjectInputStream objectIn = new ObjectInputStream(byteArrayIn);//
-                        response = (Response) objectIn.readObject();//Bug Here!
+                        response = (Response) objectIn.readObject();//Attention Here!
                         Tools.MessageL(response.getResponseMessage());
+                        if (response.getResponseMessage().contains("Error")) {
+                            System.exit(1);
+                        }
                         key.interestOps(SelectionKey.OP_WRITE);
 
                         //Tools.MessageL(String.valueOf(response.getAmountSet()));

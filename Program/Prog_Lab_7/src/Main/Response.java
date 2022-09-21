@@ -21,6 +21,11 @@ public class Response implements Serializable {
         this.amountSet = organizations.size();
     }
 
+    public Response(String message) {
+        this.responseMessage = message;
+        this.organizationSet = null;
+    }
+
     private final ArrayDeque<Organization> organizationSet;
 
     private int amountSet;
