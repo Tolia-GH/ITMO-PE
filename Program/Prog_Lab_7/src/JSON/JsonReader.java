@@ -6,7 +6,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.*;
 import java.lang.reflect.Type;
-import java.util.ArrayDeque;
+import java.util.concurrent.LinkedBlockingDeque;
 
 
 /**
@@ -20,7 +20,7 @@ public class JsonReader {
      * @return the collection from file
      * @throws IOException the io exception
      */
-    public static ArrayDeque<Organization> getCollectionFromFile(String path) throws IOException {
+    public static LinkedBlockingDeque<Organization> getCollectionFromFile(String path) throws IOException {
         File file = new File(path);
         if (!file.exists()) {
             throw new FileNotFoundException("Error: File [" + path + "] not found!");
@@ -37,10 +37,10 @@ public class JsonReader {
             fileData.append(newLine);
         }
 
-        Type arrayDequeType = new TypeToken<ArrayDeque<Organization>>(){}.getType();
+        Type linkedBlockingDequeType = new TypeToken<LinkedBlockingDeque<Organization>>(){}.getType();
 
         Gson gson = new Gson();
-        ArrayDeque<Organization> collectionGot = gson.fromJson(fileData.toString(), arrayDequeType);
+        LinkedBlockingDeque<Organization> collectionGot = gson.fromJson(fileData.toString(), linkedBlockingDequeType);
         //Tools.MessageL("Program: Collection got from file successfully!");
 
         bufferedReader.close();

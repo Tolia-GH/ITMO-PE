@@ -8,9 +8,9 @@ import Tools.Tools;
 
 import java.io.*;
 import java.nio.file.FileAlreadyExistsException;
-import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  * The type Package command.
@@ -21,7 +21,7 @@ public class PackageCommand implements Serializable {
     private final String[] commandWithArgs;
     private final AbstractCommand abstractCommand;
     private final Organization organization;
-    private final ArrayDeque<Organization> organizationSet;
+    private final LinkedBlockingDeque<Organization> organizationSet;
     private final String userName;
     private final String fileName;
     private final List<PackageCommand> list;
@@ -102,7 +102,7 @@ public class PackageCommand implements Serializable {
      *
      * @param organizationSet the organization set
      */
-    public PackageCommand(ArrayDeque<Organization> organizationSet) {
+    public PackageCommand(LinkedBlockingDeque<Organization> organizationSet) {
         this.commandWithArgs = null;
         this.abstractCommand = null;
         this.organization = null;
@@ -146,7 +146,7 @@ public class PackageCommand implements Serializable {
      *
      * @return the organization set
      */
-    public ArrayDeque<Organization> getOrganizationSet() {
+    public LinkedBlockingDeque<Organization> getOrganizationSet() {
         return this.organizationSet;
     }
 

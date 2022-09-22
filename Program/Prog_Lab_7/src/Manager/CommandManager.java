@@ -13,8 +13,8 @@ import java.io.File;
 import java.io.IOException;
 import java.sql.*;
 import java.text.SimpleDateFormat;
-import java.util.ArrayDeque;
 import java.util.LinkedHashSet;
+import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  * The type Command manager.
@@ -399,18 +399,18 @@ public class CommandManager {
      */
     public void executePrintFieldAscendingAnnualTurnover() {
         clearMessage();
-        ArrayDeque<Organization> arrayDeque = OrganizationManager.getOrganizationSet().clone();
+        LinkedBlockingDeque<Organization> linkedBlockingSeque = OrganizationManager.getOrganizationSet();
         long min = Long.MAX_VALUE;
-        while (arrayDeque.size() > 0) {
+        while (linkedBlockingSeque.size() > 0) {
             Organization minOrg = new Organization();
-            for (Organization organization : arrayDeque) {
+            for (Organization organization : linkedBlockingSeque) {
                 if(organization.getAnnualTurnover() < min) {
                     min = organization.getAnnualTurnover();
                     minOrg = organization;
                 }
             }
             appendMessageL(minOrg.toString());
-            arrayDeque.remove(minOrg);
+            linkedBlockingSeque.remove(minOrg);
             min = Long.MAX_VALUE;
         }
     }

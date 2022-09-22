@@ -3,7 +3,7 @@ package Main;
 import Collection.Organization;
 
 import java.io.Serializable;
-import java.util.ArrayDeque;
+import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  * The type Response.
@@ -15,7 +15,7 @@ public class Response implements Serializable {
      * @param organizations   the organizations
      * @param responseMessage the response message
      */
-    public Response(ArrayDeque<Organization> organizations, String responseMessage){
+    public Response(LinkedBlockingDeque<Organization> organizations, String responseMessage){
         this.organizationSet = organizations;
         this.responseMessage = responseMessage;
         this.amountSet = organizations.size();
@@ -26,7 +26,7 @@ public class Response implements Serializable {
         this.organizationSet = null;
     }
 
-    private final ArrayDeque<Organization> organizationSet;
+    private final LinkedBlockingDeque<Organization> organizationSet;
 
     private int amountSet;
 
@@ -37,7 +37,7 @@ public class Response implements Serializable {
      *
      * @return the organization set
      */
-    public ArrayDeque<Organization> getOrganizationSet() {
+    public LinkedBlockingDeque<Organization> getOrganizationSet() {
         return organizationSet;
     }
 

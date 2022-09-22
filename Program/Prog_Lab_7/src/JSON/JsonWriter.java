@@ -8,7 +8,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayDeque;
+import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  * The type Json writer.
@@ -17,11 +17,11 @@ public class JsonWriter {
     /**
      * Save collections to file.
      *
-     * @param arrayDeque the array deque
+     * @param linkedBlockingDeque the array deque
      * @param targetPath the target path
      * @throws IOException the io exception
      */
-    public static void SaveCollectionsToFile(ArrayDeque<Organization> arrayDeque, String targetPath) throws IOException {
+    public static void SaveCollectionsToFile(LinkedBlockingDeque<Organization> linkedBlockingDeque, String targetPath) throws IOException {
         File file = new File(targetPath);
         FileWriter fileWriter = new FileWriter(file, true);
         BufferedWriter bufferedReader = new BufferedWriter(fileWriter);
@@ -29,7 +29,7 @@ public class JsonWriter {
         Gson gson = new Gson();
 
         Tools.MessageL("Program: Collection saved at " + file.getAbsolutePath());
-        bufferedReader.write(gson.toJson(arrayDeque));
+        bufferedReader.write(gson.toJson(linkedBlockingDeque));
         bufferedReader.close();
     }
 }

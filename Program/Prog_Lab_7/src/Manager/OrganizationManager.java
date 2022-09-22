@@ -2,10 +2,9 @@ package Manager;
 
 import Collection.Organization;
 import Exceptions.NotInitializedException;
-import Exceptions.ParaIncorrectException;
 
-import java.util.ArrayDeque;
 import java.util.Date;
+import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  * The type Organization manager.
@@ -18,7 +17,7 @@ public class OrganizationManager {
     /**
      * The Organization set.
      */
-    private static ArrayDeque<Organization> organizationSet;
+    private static LinkedBlockingDeque<Organization> organizationSet;
     /**
      * The constant IsInitialized.
      */
@@ -27,12 +26,10 @@ public class OrganizationManager {
     /**
      * Sets organization set.
      *
-     * @param arrayDeque the array deque
      */
-    public static void setOrganizationSet(ArrayDeque<Organization> arrayDeque) {
+    public static void setOrganizationSet(LinkedBlockingDeque<Organization> linkedBlockingDeque) {
         //try {
-        organizationSet = new ArrayDeque<>();
-        organizationSet = arrayDeque.clone();
+        organizationSet = linkedBlockingDeque;
         IsInitialized = true;
         //} catch (NullPointerException e) {
         //Tools.MessageL("Error: Can not set Organizations because parameters was wrong!");
@@ -44,7 +41,7 @@ public class OrganizationManager {
      *
      * @return the organization set
      */
-    public static ArrayDeque<Organization> getOrganizationSet() {
+    public static LinkedBlockingDeque<Organization> getOrganizationSet() {
         if (!OrganizationManager.IsInitialized) {
             throw new NotInitializedException("Error: Collections was not initialized!\n");
         } else {
@@ -57,7 +54,7 @@ public class OrganizationManager {
      */
     public static void doInitialization() {
         if (!IsInitialized) {
-            organizationSet = new ArrayDeque<>();
+            organizationSet = new LinkedBlockingDeque<>();
             InitializationTime = new Date();
             IsInitialized = true;
         }
