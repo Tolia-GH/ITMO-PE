@@ -22,6 +22,7 @@ public class PackageCommand implements Serializable {
     private final AbstractCommand abstractCommand;
     private final Organization organization;
     private final ArrayDeque<Organization> organizationSet;
+    private final String userName;
     private final String fileName;
     private final List<PackageCommand> list;
     private final boolean setFromFile;
@@ -34,6 +35,7 @@ public class PackageCommand implements Serializable {
         this.abstractCommand = null;
         this.organization = null;
         this.organizationSet = null;
+        this.userName = null;
         this.fileName = null;
         this.list = null;
         this.setFromFile = false;
@@ -46,11 +48,12 @@ public class PackageCommand implements Serializable {
      * @param command  the command
      * @param fileName the file name
      */
-    public PackageCommand(String[] arg, AbstractCommand command, String fileName) {
+    public PackageCommand(String[] arg, AbstractCommand command, String fileName,String userName) {
         this.commandWithArgs = arg;
         this.abstractCommand = command;
         this.organization = null;
         this.organizationSet = null;
+        this.userName = userName;
         this.fileName = fileName;
         this.list = null;
         this.setFromFile = false;
@@ -64,11 +67,12 @@ public class PackageCommand implements Serializable {
      * @param packageCommands the package commands
      * @param fileName        the file name
      */
-    public PackageCommand(String[] arg, AbstractCommand command, List<PackageCommand> packageCommands, String fileName) {
+    public PackageCommand(String[] arg, AbstractCommand command, List<PackageCommand> packageCommands, String fileName,String userName) {
         this.commandWithArgs = arg;
         this.abstractCommand = command;
         this.organization = null;
         this.organizationSet = null;
+        this.userName = userName;
         this.fileName = fileName;
         this.list = packageCommands;
         this.setFromFile = false;
@@ -82,11 +86,12 @@ public class PackageCommand implements Serializable {
      * @param organization the organization
      * @param fileName     the file name
      */
-    public PackageCommand(String[] arg, AbstractCommand command, Organization organization, String fileName) {
+    public PackageCommand(String[] arg, AbstractCommand command, Organization organization, String fileName, String userName) {
         this.commandWithArgs = arg;
         this.abstractCommand = command;
         this.organization = organization;
         this.organizationSet = null;
+        this.userName = userName;
         this.fileName = fileName;
         this.list = null;
         this.setFromFile = false;
@@ -102,6 +107,7 @@ public class PackageCommand implements Serializable {
         this.abstractCommand = null;
         this.organization = null;
         this.organizationSet = organizationSet;
+        this.userName = null;
         this.fileName = null;
         this.list = null;
         this.setFromFile = true;
@@ -144,6 +150,10 @@ public class PackageCommand implements Serializable {
         return this.organizationSet;
     }
 
+    public String getUserName() {
+        return this.userName;
+    }
+
     /**
      * Gets file name.
      *
@@ -181,7 +191,7 @@ public class PackageCommand implements Serializable {
      * @return the package command
      * @throws IOException the io exception
      */
-    public static PackageCommand packCommand(Response response, String[] commandWithArgs, CommandManager commandManager, String fileName) throws IOException {
+    public static PackageCommand packCommand(Response response, String[] commandWithArgs, CommandManager commandManager, String fileName, String userName) throws IOException {
 
         AbstractCommand commandToBePacked = commandManager.findCommand(commandWithArgs[0]);
         PackageCommand packageCommand;
@@ -193,7 +203,7 @@ public class PackageCommand implements Serializable {
                     throw new ParaIncorrectException("Error: This command do not accept any parameters!");
                 }
                 Organization organization = Organization.Create();
-                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, organization, fileName);
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, organization, fileName, userName);
                 return packageCommand;
             }
             case "clear":
@@ -206,7 +216,7 @@ public class PackageCommand implements Serializable {
                 if (commandWithArgs.length != 1) {
                     throw new ParaIncorrectException("Error: This command do not accept any parameters!");
                 }
-                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName, userName);
                 return packageCommand;
             }
             case "execute_script": {
@@ -230,11 +240,11 @@ public class PackageCommand implements Serializable {
                         if (command.getName().equals("execute_script")) {
                             throw new IllegalRecursionException("Error: Illegal recursion!");
                         } else {
-                            PackageCommand packCommand = packCommand(response,splitCommand,commandManager,fileName);
+                            PackageCommand packCommand = packCommand(response,splitCommand,commandManager,fileName, userName);
                             commandList.add(packCommand);
                         }
                     }
-                    packageCommand = new PackageCommand(commandWithArgs,commandToBePacked,commandList,fileName);
+                    packageCommand = new PackageCommand(commandWithArgs,commandToBePacked,commandList,fileName, userName);
                 }
                 return packageCommand;
             }
@@ -243,12 +253,12 @@ public class PackageCommand implements Serializable {
                 if (commandWithArgs.length != 2) {
                     throw new ParaIncorrectException("Error: This command accept 1 parameter!");
                 }
-                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName, userName);
                 return packageCommand;
             }
             case "group_counting_by_id":
             case "print_field_ascending_annual_turnover": {//haven't figured out what to do with this command
-                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName, userName);
                 return packageCommand;
             }
             case "save": {
@@ -275,7 +285,7 @@ public class PackageCommand implements Serializable {
                         }
                     }
                 }
-                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName);
+                packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName,userName);
                 return packageCommand;
             }
             case "update": {
@@ -285,7 +295,7 @@ public class PackageCommand implements Serializable {
                     throw new OrganizationNotFoundException("Error: Organization not found!");
                 } else {
                     Organization organization = Organization.Create();
-                    packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, organization, fileName);
+                    packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, organization, fileName, userName);
 
                 }
                 return packageCommand;

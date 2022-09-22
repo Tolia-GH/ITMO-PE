@@ -1,8 +1,6 @@
 package Client;
 
-import Collection.Organization;
 import Exceptions.AbstractException;
-import JSON.JsonReader;
 import Main.PackageCommand;
 import Main.Request;
 import Main.Response;
@@ -16,7 +14,6 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayDeque;
 import java.util.Iterator;
 
 /**
@@ -26,7 +23,7 @@ public class Client {
 
     private final int port;
     private final String host;
-    private String fileName;
+    private String fileName = "Organizations.json";
     private InetSocketAddress inetSocketAddress;
     private SocketChannel socketChannel;
     private Selector selector;
@@ -155,7 +152,7 @@ public class Client {
                             String[] commandWithArgs = Tools.Input().split(" ");
 
                             try {
-                                PackageCommand packageCommand = PackageCommand.packCommand(response,commandWithArgs, commandManager, fileName);
+                                PackageCommand packageCommand = PackageCommand.packCommand(response,commandWithArgs, commandManager, fileName, clientInformation.getUserName());
                                 Request request = new Request(packageCommand);
 
                                 ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
@@ -224,6 +221,4 @@ public class Client {
             socketChannel.write(buffer);
         }
     }
-
-
 }

@@ -18,7 +18,7 @@ public class Save extends AbstractCommand {
     }
 
     @Override
-    public void execute(CommandManager commandManager, PackageCommand packageCommand) throws IOException {
+    public void execute(CommandManager commandManager, PackageCommand packageCommand, String linkDB, String managerDB, String passwordDB) throws IOException {
         commandManager.executeSave(packageCommand.getFileName());
     }
 }

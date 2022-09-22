@@ -31,6 +31,14 @@ public class Address implements Serializable {
         setZipCode(zipCode);
     }
 
+    public String getStreet() {
+        return this.street;
+    }
+
+    public String getZipCode() {
+        return this.zipCode;
+    }
+
     /**
      * Sets street.
      *

@@ -5,10 +5,14 @@ import Collection.OrganizationType;
 import Command.*;
 import Exceptions.NoSuchCommandException;
 import JSON.JsonWriter;
+import Main.PackageCommand;
 import Tools.Tools;
+import com.sun.corba.se.spi.orb.StringPair;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayDeque;
 import java.util.LinkedHashSet;
 
@@ -117,10 +121,10 @@ public class CommandManager {
     public void executeShow() {
         clearMessage();
         if (!OrganizationManager.IsInitialized) {
-            appendMessageL("Error: Collections was not initialized!");
+            appendMessageL("Attention: Collections was not initialized!");
         }
         if (OrganizationManager.getOrganizationSet().size() == 0) {
-            appendMessageL("Error: Collections of organization is empty!");
+            appendMessageL("Attention: Collections of organization is empty!");
         } else {
             appendMessageL("All organizations:");
             for (Organization organization : OrganizationManager.getOrganizationSet()) {
@@ -134,15 +138,36 @@ public class CommandManager {
      *
      * @param organization the organization
      */
-    public void executeAdd(Organization organization) {
+    public void executeAdd(Organization organization, PackageCommand packageCommand,String linkDb, String managerDb, String passwordDB) throws ClassNotFoundException, SQLException {
         clearMessage();
-        if (OrganizationManager.IsInitialized) {
-            OrganizationManager.getOrganizationSet().add(organization);
-        } else {
+        if (!OrganizationManager.IsInitialized) {
             OrganizationManager.doInitialization();
-            OrganizationManager.getOrganizationSet().add(organization);
         }
-        OrganizationManager.sort();
+
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(linkDb,managerDb,passwordDB);
+        PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO organizations " +
+                "(owner, id, name, x, y, date, annualTurnover, fullName, employeesCount, type, street, zipCode) " +
+                "VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
+        preparedStatement.setObject(1,packageCommand.getUserName());
+        preparedStatement.setObject(2,1+OrganizationManager.getOrganizationSet().size());
+        preparedStatement.setObject(3,organization.getName());
+        preparedStatement.setObject(4,organization.getCoordinates().getX());
+        preparedStatement.setObject(5,organization.getCoordinates().getY());
+        preparedStatement.setObject(6,formatter.format(organization.getCreationDate()));
+        preparedStatement.setObject(7,organization.getAnnualTurnover());
+        preparedStatement.setObject(8,organization.getFullName());
+        preparedStatement.setObject(9,organization.getEmployeesCount());
+        preparedStatement.setObject(10,organization.getType().toString());
+        preparedStatement.setObject(11,organization.getPostalAddress().getStreet());
+        preparedStatement.setObject(12,organization.getPostalAddress().getZipCode());
+
+        preparedStatement.executeUpdate();
+
+        //OrganizationManager.getOrganizationSet().add(organization);
+        //OrganizationManager.sort();
         appendMessageL("You add an organization:");
         appendMessageL(organization.toString());
     }
@@ -153,19 +178,44 @@ public class CommandManager {
      * @param id           the id
      * @param organization the organization
      */
-    public void executeUpdate(Long id, Organization organization) {
+    public void executeUpdate(Long id, Organization organization, PackageCommand packageCommand, String linkDb, String managerDb, String passwordDB) throws ClassNotFoundException, SQLException {
         clearMessage();
 
         Organization original = OrganizationManager.findById(id);
 
-        appendMessageL("Program [update]: organization updated");
+        if (original != null && original.getOwner().equals(packageCommand.getUserName())) {
+            Class.forName("org.postgresql.Driver");
+
+            Connection connection = DriverManager.getConnection(linkDb,managerDb,passwordDB);
+            PreparedStatement preparedStatement = connection.prepareStatement("UPDATE organizations SET " +
+                    "name = ?, x = ?, y = ?, date = ?, annualturnover = ?, fullname = ?, employeescount = ?, type = ?, street = ?, zipcode = ?");
+
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+            preparedStatement.setObject(1,organization.getName());
+            preparedStatement.setObject(2,organization.getCoordinates().getX());
+            preparedStatement.setObject(3,organization.getCoordinates().getY());
+            preparedStatement.setObject(4,formatter.format(organization.getCreationDate()));
+            preparedStatement.setObject(5,organization.getAnnualTurnover());
+            preparedStatement.setObject(6,organization.getFullName());
+            preparedStatement.setObject(7,organization.getEmployeesCount());
+            preparedStatement.setObject(8,organization.getType().toString());
+            preparedStatement.setObject(9,organization.getPostalAddress().getStreet());
+            preparedStatement.setObject(10,organization.getPostalAddress().getZipCode());
+            preparedStatement.executeUpdate();
+
+            appendMessageL("Program [update]: organization updated");
+        } else {
+            appendMessageL("Program [update]: Not available to update organization!");
+        }
+
+        /*
         original.setName(organization.getName());
         original.setCoordinates(organization.getCoordinates());
         original.setAnnualTurnover(organization.getAnnualTurnover());
         original.setFullName(organization.getFullName());
         original.setEmployeesCount(organization.getEmployeesCount());
         original.setType(organization.getType());
-        original.setPostalAddress(organization.getPostalAddress());
+        original.setPostalAddress(organization.getPostalAddress());*/
     }
 
     /**
@@ -173,39 +223,77 @@ public class CommandManager {
      *
      * @param id the id
      */
-    public void executeRemoveByID(Long id) {
+    public void executeRemoveByID(Long id,PackageCommand packageCommand, String linkDb,String managerDb,String passwordDB) throws ClassNotFoundException, SQLException {
         clearMessage();
+        if (!OrganizationManager.IsInitialized) {
+            appendMessageL("Attention: Collections was not initialized!");
+        } else {
+            Organization organization = OrganizationManager.findById(id);
+            if (organization != null && organization.getOwner().equals(packageCommand.getUserName())) {
+                Class.forName("org.postgresql.Driver");
+                Connection connection = DriverManager.getConnection(linkDb,managerDb,passwordDB);
+                PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM organizations WHERE id = ? AND owner = ?");
+                preparedStatement.setObject(1,id);
+                preparedStatement.setObject(2,packageCommand.getUserName());
+                preparedStatement.executeUpdate();
 
-        Organization organization = OrganizationManager.findById(id);
+                appendMessageL("Program[execute_by_id]: organization removed.");
+            } else {
+                appendMessageL("Program[execute_by_id]: Not available to remove organization!");
+            }
+        }
 
-        OrganizationManager.getOrganizationSet().remove(organization);
-        appendMessageL("Program[execute_by_id]: organization removed.");
-        OrganizationManager.sort();
+        //OrganizationManager.getOrganizationSet().remove(organization);
+
+        //OrganizationManager.sort();
     }
 
     /**
      * Execute remove head.
      */
-    public void executeRemoveHead() {
+    public void executeRemoveHead(String linkDb,PackageCommand packageCommand,String managerDb,String passwordDB) throws ClassNotFoundException, SQLException {
         clearMessage();
 
         if (!OrganizationManager.IsInitialized) {
             appendMessageL("Error: Collections was not initialized!");
         } else {
             Organization organization = OrganizationManager.findById(1L);
-            OrganizationManager.getOrganizationSet().remove(organization);
-            appendMessageL("Program[remove_head]: organization removed.");
+            if (organization != null && organization.getOwner().equals(packageCommand.getUserName())) {
+                Class.forName("org.postgresql.Driver");
+                Connection connection = DriverManager.getConnection(linkDb,managerDb,passwordDB);
+                PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM organizations WHERE id = ? AND owner = ?");
+                preparedStatement.setObject(1,1L);
+                preparedStatement.setObject(2,packageCommand.getUserName());
+                preparedStatement.executeUpdate();
+
+                appendMessageL("Program[execute_by_id]: organization removed.");
+            } else {
+                appendMessageL("Program[execute_by_id]: Not available to remove organization!");
+            }
+
+            //OrganizationManager.getOrganizationSet().remove(organization);
+            //appendMessageL("Program[remove_head]: organization removed.");
         }
         Tools.MessageL(getResponseMessage());
-        OrganizationManager.sort();
+        //OrganizationManager.sort();
     }
 
     /**
      * Execute clear.
+     * @param packageCommand
+     * @param linkDB
+     * @param managerDB
+     * @param passwordDB
      */
-    public void executeClear() {
+    public void executeClear(PackageCommand packageCommand, String linkDB, String managerDB, String passwordDB) throws ClassNotFoundException, SQLException {
         clearMessage();
-        OrganizationManager.getOrganizationSet().clear();
+
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(linkDB,managerDB,passwordDB);
+        PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM organizations WHERE owner = ?");
+        preparedStatement.setObject(1,packageCommand.getUserName());
+        preparedStatement.executeUpdate();
+
         appendMessageL("Program [clear]: Set cleared");
         Tools.MessageL(getResponseMessage());
     }

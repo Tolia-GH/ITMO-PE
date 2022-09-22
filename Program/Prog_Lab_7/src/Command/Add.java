@@ -3,6 +3,8 @@ package Command;
 import Main.PackageCommand;
 import Manager.CommandManager;
 
+import java.sql.SQLException;
+
 /**
  * The type Add.
  */
@@ -16,7 +18,11 @@ public class Add extends AbstractCommand{
     }
 
     @Override
-    public void execute(CommandManager commandManager, PackageCommand packageCommand) {
-        commandManager.executeAdd(packageCommand.getOrganization());
+    public void execute(CommandManager commandManager, PackageCommand packageCommand, String linkDB, String managerDB, String passwordDB) {
+        try {
+            commandManager.executeAdd(packageCommand.getOrganization(),packageCommand,linkDB,managerDB,passwordDB);
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

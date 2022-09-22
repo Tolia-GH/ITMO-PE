@@ -44,5 +44,5 @@ public abstract class AbstractCommand implements Serializable {
      * @param packageCommand the package command
      * @throws IOException the io exception
      */
-    abstract public void execute(CommandManager commandManager, PackageCommand packageCommand) throws IOException;
+    abstract public void execute(CommandManager commandManager, PackageCommand packageCommand, String linkDB, String managerDB, String passwordDB) throws IOException;
 }

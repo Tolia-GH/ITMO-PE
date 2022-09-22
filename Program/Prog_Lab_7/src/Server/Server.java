@@ -5,6 +5,10 @@
 package Server;
 
 import Client.ClientInformation;
+import Collection.Address;
+import Collection.Coordinates;
+import Collection.Organization;
+import Collection.OrganizationType;
 import Command.AbstractCommand;
 import Exceptions.UserInformationException;
 import Main.PackageCommand;
@@ -15,9 +19,11 @@ import Manager.OrganizationManager;
 import Tools.Tools;
 
 import java.io.*;
+import java.lang.reflect.Type;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.sql.*;
+import java.util.Date;
 import java.util.List;
 
 
@@ -69,9 +75,7 @@ public class Server {
         Socket socket = serverSocket.accept();
         Tools.MessageL("Server: New connection accepted from: " + socket.getInetAddress().getHostAddress() + ":" + socket.getPort());
 
-        //Handler handler = new Handler(readFromClient,writeToClient);
         handleMessage(socket);
-        //handleClient(socket);
         handleCommand(socket);
 
     }
@@ -93,18 +97,6 @@ public class Server {
         //}
     }
 
-    public void handleClient(Socket socket) throws IOException {
-        ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(socket.getInputStream()));
-        try {
-            ClientInformation clientInformation = (ClientInformation) ois.readObject();
-            Tools.MessageL(clientInformation.getUserName());
-            Tools.MessageL(clientInformation.getPassWord());
-            Tools.MessageL(clientInformation.getHash());
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-
     /**
      * Handle command.
      *
@@ -119,18 +111,18 @@ public class Server {
         while (true) {
             //byte[] buffer = new byte[102400];
 
-            try {
+            try {//deal with account
                 ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(socket.getInputStream()));
                 Request request = (Request) ois.readObject();
                 PackageCommand packageCommand = request.getPackageCommand();
+                ClientInformation clientInformation = request.getClientInformation();
                 Class.forName("org.postgresql.Driver");
                 if (!isClientSet) {
                     Tools.MessageL("Server: Information of client: ");
-                    ClientInformation clientInformation = request.getClientInformation();
-                    isClientSet = true;
                     Tools.MessageL("       Username: " + clientInformation.getUserName());
                     Tools.MessageL("       PassWord: " + clientInformation.getPassWord());
                     Tools.MessageL("       Hash: " + clientInformation.getHash());
+                    isClientSet = true;
                     if (clientInformation.isCreate()) {
                         addUser(clientInformation);
 
@@ -147,6 +139,18 @@ public class Server {
                     } else {
                         try {
                             checkUser(clientInformation);
+
+                            String message = "Welcome! " + clientInformation.getUserName();
+                            //Tools.MessageL(message);
+
+                            Response response = new Response(message);
+
+                            ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();//
+                            ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
+                            objectOut.writeObject(response);
+                            byte[] bytes = byteArrayOut.toByteArray();
+                            OutputStream outputStream = socket.getOutputStream();
+                            outputStream.write(bytes);//
                         } catch (UserInformationException e) {
                             String message = e.getMessage();
                             Tools.MessageL(message);
@@ -163,8 +167,46 @@ public class Server {
                             System.exit(1);
                         }
                     }
-                } else {
+                } else {//deal with commands
                     OrganizationManager.doInitialization();
+                    OrganizationManager.getOrganizationSet().clear();
+
+                    try {
+                        Connection connection = DriverManager.getConnection(linkDB, managerName, managerPass);
+                        Statement statement = connection.createStatement();
+                        ResultSet resultSet = statement.executeQuery("SELECT * FROM organizations ");
+                        while (resultSet.next()) {
+                            Organization organization = new Organization();
+
+                            organization.setOwner(resultSet.getString("owner"));
+                            organization.setId(resultSet.getLong("id"));
+                            organization.setName(resultSet.getString("name"));
+                            float x = resultSet.getFloat("x");
+                            double y = resultSet.getDouble("y");
+                            Coordinates coordinates = new Coordinates(x,y);
+                            organization.setCoordinates(coordinates);
+                            Date date = resultSet.getDate("date");
+                            organization.setCreationDate(date);
+                            organization.setAnnualTurnover(resultSet.getLong("annualturnover"));
+                            organization.setFullName(resultSet.getString("fullname"));
+                            organization.setEmployeesCount(resultSet.getLong("employeescount"));
+                            String type = resultSet.getString("type");
+                            organization.setType(OrganizationType.valueOf(type));
+                            String street = resultSet.getString("street");
+                            String zipCode = resultSet.getString("zipcode");
+                            Address address = new Address(street,zipCode);
+                            organization.setPostalAddress(address);
+
+                            OrganizationManager.getOrganizationSet().add(organization);
+                            //Tools.Message(".");
+                        }
+                        resultSet.close();
+                        statement.close();
+                        connection.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+
 
                     String commandName = packageCommand.getAbstractCommand().getName();
                     AbstractCommand command = packageCommand.getAbstractCommand();
@@ -172,7 +214,7 @@ public class Server {
                     Tools.MessageL("Server: Receive command from client: " + commandName);
 
                     if (!command.getName().equalsIgnoreCase("execute_script")) {
-                        command.execute(commandManager, packageCommand);
+                        command.execute(commandManager, packageCommand,linkDB,managerName,managerPass);
 
                         Response response = new Response(OrganizationManager.getOrganizationSet(),commandManager.getResponseMessage());
 
@@ -202,7 +244,7 @@ public class Server {
 
                         for (PackageCommand pack : packCommand) {
                             AbstractCommand commandFromList = pack.getAbstractCommand();
-                            commandFromList.execute(commandManager,pack);
+                            commandFromList.execute(commandManager,pack,linkDB,managerName,managerPass);
                             message.append("\nCommand[").append(commandFromList.getName()).append("]:\n");
                             message.append(commandManager.getResponseMessage());
                         }

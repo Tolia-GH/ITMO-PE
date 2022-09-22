@@ -91,7 +91,7 @@ public class OrganizationManager {
                 return organization;
             }
         }
-        throw new ParaIncorrectException("Error: Target organization not found!\n");
+        return null;
     }
 
     /**

@@ -16,7 +16,7 @@ public class AddIfMax extends AbstractCommand {
     }
 
     @Override
-    public void execute(CommandManager commandManager, PackageCommand packageCommand) {
+    public void execute(CommandManager commandManager, PackageCommand packageCommand, String linkDB, String managerDB, String passwordDB) {
         commandManager.executeAddIfMax(packageCommand.getOrganization());
     }
 }

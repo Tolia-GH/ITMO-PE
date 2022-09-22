@@ -18,7 +18,7 @@ public class FilterLessThanType extends AbstractCommand {
     }
 
     @Override
-    public void execute(CommandManager commandManager, PackageCommand packageCommand) {
+    public void execute(CommandManager commandManager, PackageCommand packageCommand, String linkDB, String managerDB, String passwordDB) {
         if (!OrganizationType.findType(packageCommand.getCommandWithArgs()[1])) {
             throw new ParaIncorrectException("Error [filter_less_than_type]: Organization type not found!");
         } else {
