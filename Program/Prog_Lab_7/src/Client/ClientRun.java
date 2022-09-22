@@ -33,12 +33,6 @@ public class ClientRun {
         try {
             for (int i = 0; i < args.length; i++) {
                 switch (args[i]) {
-                    case "-f": {//setting file path
-                        filePath = args[++i];
-                        isSetFromFile = true;
-                        OrganizationManager.setInitialization();
-                        break;
-                    }
                     case "-ip": {//setting ip address
                         ip = args[++i];
                         break;
@@ -51,7 +45,6 @@ public class ClientRun {
             }
         } catch (IndexOutOfBoundsException e) {
             Tools.MessageL("Error: You should input the arguments in the following format:");
-            Tools.MessageL("       -f filepath");
             Tools.MessageL("       -ip ipAddress");
             Tools.MessageL("       -p port");
             System.exit(1);
