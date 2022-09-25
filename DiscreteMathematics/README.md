@@ -15,7 +15,7 @@
 - [x] [作业4](DZ/DZ4.md)
 - [x] [作业5](DZ/DZ5.md)
 - [x] [作业6](DZ/DZ6.md)
-- [ ] [学期作业](../404.md)
+- [x] [学期作业](FinalWork.md)
 
 <style type="text/css">
     #footer {
