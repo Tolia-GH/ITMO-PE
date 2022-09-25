@@ -6,6 +6,7 @@
 - [x] [Linear Algebra](LinearAlgebra.md)
 - [x] [Типовой расчет](TypeWork.md)
 - [ ] [HomeWork](HomeWork/Task.md)
+- [ ] [Test](Test.md)
 - [x] [Exam](../404.md)
 
 <style type="text/css">
