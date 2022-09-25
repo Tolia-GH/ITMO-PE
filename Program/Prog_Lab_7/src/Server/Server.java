@@ -25,10 +25,10 @@ public class Server {
     private final int port;
     private ServerSocket serverSocket;
     private Response response;
-    private final String host = "localhost";
+    private final String host = "pg";//localhost
     private final String nameDB = "studs";
-    private final String managerName = "postgres";
-    private final String managerPass = "123456";
+    private final String managerName = "s336184";//postgres
+    private final String managerPass = "Di2oaLyDd20js6Ox";//123456
     private final String linkDB = "jdbc:postgresql://" + host + ":5432/" + nameDB;
 
     /**
@@ -156,18 +156,6 @@ public class Server {
         }
     }
 
-    private void addUser(ClientInformation clientInformation) {
-        try {
-            Connection connection = DriverManager.getConnection(linkDB, managerName, managerPass);
-            PreparedStatement statement = connection.prepareStatement("INSERT INTO users (username,password) VALUES (?,?);");
-            statement.setObject(1,clientInformation.getUserName());
-            statement.setObject(2,clientInformation.getPassWord());
-            statement.execute();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
     private void checkUser(ClientInformation clientInformation) {
         try {
             Connection connection = DriverManager.getConnection(linkDB, managerName, managerPass);
@@ -187,6 +175,18 @@ public class Server {
             } else {
                 throw new UserInformationException("Error: User not found!");
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void addUser(ClientInformation clientInformation) {
+        try {
+            Connection connection = DriverManager.getConnection(linkDB, managerName, managerPass);
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO users (username,password) VALUES (?,?);");
+            statement.setObject(1,clientInformation.getUserName());
+            statement.setObject(2,clientInformation.getPassWord());
+            statement.execute();
         } catch (SQLException e) {
             e.printStackTrace();
         }
