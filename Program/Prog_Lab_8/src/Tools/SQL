@@ -1,0 +1,9 @@
+CREATE TABLE users(
+    ID INT PRIMARY KEY NOT NULL,
+    username TEXT NOT NULL,
+    password TEXT NOT NULL
+);
+
+INSERT INTO users (id,username,password) VALUES (1,'Tolia','123456');
+
+DELETE FROM users WHERE ID = 1;
