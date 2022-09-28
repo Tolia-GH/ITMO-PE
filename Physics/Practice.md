@@ -119,7 +119,7 @@ $$vS=Const$$
 
 $$v_1S_1=v_2S_2$$
 
-$$F=\frac{\rho v_2^2(S_1-S_2)}{2S_2}$$
+$$v_1=\frac{v_2S_2}{S_1}=2.5m/s$$
 
 ## 4)
 
@@ -163,11 +163,15 @@ $$t=\sqrt{\frac{l}{a_{т}}}=\sqrt{\frac{2h}{g(\sin\alpha-\mu\cos\alpha)-a(\cos\a
 
 $$U(x)=\frac{a}{x^{\frac{3}{2}}}-\frac{ b}{x^{ \frac{1}{2}}}$$
 
-$$F(x)=\frac{ {\rm d}U(x)}{ {\rm d}x}=\frac{1}{2}bx^{-\frac{3}{2}}-\frac{3}{2}ax^{-\frac{5}{2}}=-m\omega^2x$$
+$$F(x)=-\frac{ {\rm d}U(x)}{ {\rm d}x}=\frac{3}{2}ax^{-\frac{5}{2}}-\frac{1}{2}bx^{-\frac{3}{2}}$$
 
-$$\Rightarrow\omega=\frac{3a\sqrt{x}}{2mx^4}-\frac{b\sqrt{x}}{2x^3}$$
+$$F(x)=-m\omega^2x$$
 
-$$T=\frac{2\pi}{\omega}=\frac{4\pi x^3\sqrt{x}}{3a-bx}$$
+$$\omega^2=-\frac{F(x)}{mx}=\frac{b}{2m}x^{-\frac{5}{2}}-\frac{3a}{2m}x^{-\frac{7}{2}}$$
+
+$$\Rightarrow\omega=\sqrt{\frac{b}{2m}x^{-\frac{5}{2}}-\frac{3a}{2m}x^{-\frac{7}{2}}}=\sqrt{\frac{bx-3a}{2mx^{\frac{7}{2}}}}$$
+
+$$T=\frac{2\pi}{\omega}=2\pi\sqrt{\frac{2mx^{\frac{7}{2}}}{bx-3a}}$$
 
 ## 6)
 
@@ -188,7 +192,7 @@ $$N=\nu(t-\frac{S}{v_0+u})$$
 
 Следовательно, мотоциклист будет воспринимать сигнал частотой
 
-$$f=\frac{N}{t}=\frac{\nu(t-\frac{S}{v_0+u})}{t}=\frac{\nu(t-\frac{vt}{v_0+u})}{t}=\nu-\frac{v}{v_0+u}$$
+$$f=\frac{N}{t}=\frac{\nu(t-\frac{S}{v_0+u})}{t}=\frac{\nu(t-\frac{vt}{v_0+u})}{t}=\nu(1-\frac{v}{v_0+u})=\nu(\frac{v_0+u-v}{v_0+u})=2300(\frac{345-15}{345})=2200Hz$$
 
 <style type="text/css">
     #footer {
