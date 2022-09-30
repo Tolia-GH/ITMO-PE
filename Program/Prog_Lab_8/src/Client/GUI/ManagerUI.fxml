@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<SplitPane dividerPositions="0.2809076682316119" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <items>
+      <AnchorPane>
+         <children>
+            <Canvas height="345.0" width="345.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+         </children>
+      </AnchorPane>
+      <SplitPane dividerPositions="0.6979949874686717" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ScrollPane prefHeight="553.0" prefWidth="912.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <TableView prefHeight="553.0" prefWidth="899.0">
+                           <columns>
+                              <TableColumn prefWidth="57.663177490234375" text="Owner" />
+                              <TableColumn prefWidth="36.414794921875" text="ID" />
+                              <TableColumn prefWidth="75.0" text="Name" />
+                              <TableColumn prefWidth="93.8193359375" text="Coordinates">
+                                 <columns>
+                                    <TableColumn prefWidth="35.6734619140625" text="x" />
+                                    <TableColumn prefWidth="36.3472900390625" text="y" />
+                                 </columns>
+                              </TableColumn>
+                              <TableColumn prefWidth="75.0" text="Date" />
+                              <TableColumn prefWidth="94.6632080078125" text="AnnualTurnover" />
+                              <TableColumn prefWidth="75.0" text="Fullname" />
+                              <TableColumn prefWidth="107.30389404296875" text="Employeescount" />
+                              <TableColumn prefWidth="58.44970703125" text="Type" />
+                              <TableColumn prefWidth="134.55029296875" text="Address">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="Street" />
+                                    <TableColumn prefWidth="75.0" text="Zipcode" />
+                                 </columns>
+                              </TableColumn>
+                           </columns>
+                        </TableView>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="299.0" prefWidth="994.0">
+               <children>
+                  <TextField layoutX="117.0" layoutY="204.0" prefHeight="27.0" prefWidth="872.0" promptText="Input Command" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="117.0" AnchorPane.rightAnchor="5.0" />
+                  <TextArea editable="false" prefHeight="200.0" prefWidth="996.0" text="Connecting to Server" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Button layoutX="6.0" layoutY="205.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="104.0" text="Send" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="6.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </items>
+</SplitPane>
