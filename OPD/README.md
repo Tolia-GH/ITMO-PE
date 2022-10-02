@@ -10,7 +10,8 @@
 - [ ] [Exam](Exam.md)
 - [x] [幻灯片1梳理](OPDpart1.md)
 - [x] [幻灯片2梳理](OPDpart2.md)
-- [x] [幻灯片1详解](lecture.md)
+- [ ] [幻灯片3详解](OPDpart3.md)
+- [ ] [幻灯片4详解](OPDpart4.md)
 
 <style type="text/css">
     #footer {
