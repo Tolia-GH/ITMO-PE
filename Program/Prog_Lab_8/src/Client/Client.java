@@ -1,11 +1,13 @@
 package Client;
 
+import Client.UIController.AccountUI;
 import Exceptions.AbstractException;
 import Main.PackageCommand;
 import Main.Request;
 import Main.Response;
 import Manager.CommandManager;
 import Tools.Tools;
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 
 import java.io.*;
 import java.net.InetSocketAddress;
@@ -21,24 +23,17 @@ import java.util.Iterator;
  */
 public class Client {
 
-    private final int port;
-    private final String host;
-    private String fileName = "Organizations.json";
-    private InetSocketAddress inetSocketAddress;
-    private SocketChannel socketChannel;
-    private Selector selector;
-    private Response response;
-    private ClientInformation clientInformation;
+    private static int port = 2001;
+    private static String host = "localhost";
+    public static String fileName = "Organizations.json";
+    private static InetSocketAddress inetSocketAddress;
+    public static SocketChannel socketChannel;
+    public static Selector selector;
+    public static Response response;
+    public static ClientInformation clientInformation;
 
-
-    /**
-     * Instantiates a new Client.
-     *
-     * @param host the host address
-     * @param port the port of address
-     */
-    public Client(String host, int port) {
-        this.host = host;
+    public Client(String localhost, int port) {
+        this.host = localhost;
         this.port = port;
     }
 
@@ -47,7 +42,7 @@ public class Client {
      *
      * @throws IOException the io exception
      */
-    public void run() throws IOException {
+    public static void run() throws IOException {
 
         selector = Selector.open();
 
@@ -57,7 +52,7 @@ public class Client {
         socketChannel.configureBlocking(false);
         //create a non-blocking channel
 
-        runAccount();
+        //runAccount();
 
         socketChannel.connect(inetSocketAddress);
         Tools.MessageL("Client: Connecting to server: " + host + ":" + port);
@@ -69,34 +64,6 @@ public class Client {
         //connect to server
     }
 
-    public void runAccount() {
-        Tools.Message("Client: input \"login\" to login, input \"register\" to create a new account: ");
-        String choice = Tools.Input();
-        if (choice.equalsIgnoreCase("login")||choice.equalsIgnoreCase("register")) {
-            Tools.Message("Client: Input username: ");
-            String userName = Tools.Input();
-            Tools.Message("Client: Input password: ");
-            String passWord = Tools.Input();
-            clientInformation = new ClientInformation(userName, passWord, !choice.equalsIgnoreCase("login"));
-        } else {
-            Tools.MessageL("Error: Input error!");
-            System.exit(3);
-        }
-    }
-
-    public void sendAccountInfo() throws IOException {
-        ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
-        ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
-
-        objectOut.writeObject(clientInformation);
-        objectOut.flush();
-
-        byte[] bytes = byteArrayOut.toByteArray();
-        ByteBuffer byteBuffer = ByteBuffer.wrap(bytes);
-
-        socketChannel.write(byteBuffer);
-    }
-
     /**
      * Run terminal.
      * Accept commands from User and pack the command and send to server and read the response from server then show in the Terminal
@@ -104,15 +71,13 @@ public class Client {
      * @throws IOException            the io exception
      * @throws ClassNotFoundException the class not found exception
      */
-    public void runTerminal() throws IOException, ClassNotFoundException {
+    public static void runTerminal() throws IOException, ClassNotFoundException {
 
         socketChannel.register(selector, SelectionKey.OP_CONNECT | SelectionKey.OP_WRITE | SelectionKey.OP_READ);
 
         CommandManager commandManager = new CommandManager();
 
         boolean isClientInfoSent = false;
-
-
 
         int numReadyChannel;
         while (true) {
@@ -211,7 +176,7 @@ public class Client {
      * @param message message that send to server
      * @throws IOException the io exception
      */
-    public void  messageToServer(String message) throws IOException {
+    public static void  messageToServer(String message) throws IOException {
         ByteBuffer  buffer = ByteBuffer.allocate(1024);
         buffer.clear();
         buffer.put(message.getBytes(StandardCharsets.UTF_8));

@@ -30,6 +30,7 @@ public class Server {
     private final String managerName = "postgres";//postgres|s336184
     private final String managerPass = "123456";//123456|Di2oaLyDd20js6Ox
     private final String linkDB = "jdbc:postgresql://" + host + ":5432/" + nameDB;
+    private boolean isClientSet = false;
 
     /**
      * Instantiates a new Server.
@@ -91,9 +92,10 @@ public class Server {
         if (clientInformation.isCreate()) {
             addUser(clientInformation);
 
-            String message = "You add a account: " + clientInformation.getUserName();
+            String message = "Welcome new account: " + clientInformation.getUserName();
             Response response = new Response(message);
             Tools.sendObject(response,socket);
+            isClientSet = true;
         } else {
             try {
                 checkUser(clientInformation);
@@ -101,6 +103,7 @@ public class Server {
                 String message = "Welcome! " + clientInformation.getUserName();
                 Response response = new Response(message);
                 Tools.sendObject(response,socket);
+                isClientSet = true;
             } catch (UserInformationException e) {
                 String message = e.getMessage();
                 Tools.MessageL(message);
@@ -109,7 +112,7 @@ public class Server {
 
                 Tools.sendObject(response,socket);
 
-                System.exit(1);
+                //System.exit(1);
             }
         }
     }
@@ -136,9 +139,9 @@ public class Server {
                 ClientInformation clientInformation = serverReceiveThread.getClientInformation();
 
                 Class.forName("org.postgresql.Driver");
-                if (!isClientSet) {//deal with account
+                if (!this.isClientSet) {//deal with account
                     handleAccount(socket,clientInformation);
-                    isClientSet = true;
+                    //isClientSet = true;
                 } else {//deal with commands
                     ServerDealThread serverDealThread = new ServerDealThread(packageCommand,commandManager,linkDB,managerName,managerPass);
                     serverDealThread.start();

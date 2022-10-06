@@ -1,11 +1,19 @@
 package Tools;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
+import Client.Client;
+import Main.PackageCommand;
+import Main.Request;
+import Main.Response;
+import Manager.CommandManager;
+import javafx.scene.control.Alert;
+
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.ByteBuffer;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.SocketChannel;
+import java.util.Iterator;
 import java.util.Scanner;
 
 /**
@@ -61,6 +69,7 @@ public class Tools {
         ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();//
         ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
         objectOut.writeObject(obj);
+        objectOut.close();
         byte[] bytes = byteArrayOut.toByteArray();
         OutputStream outputStream = socket.getOutputStream();
         outputStream.write(bytes);//
@@ -78,6 +87,84 @@ public class Tools {
         As a result, java.io.StreamCorruptedException will be thrown
         the ObjectInputStream and ObjectOutStream must patch each other when doing Serialization and deSerialization
          */
+    }
+
+    public static void sendObject(Object obj, SocketChannel socketChannel) throws IOException {
+        ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
+        ObjectOutputStream objectOut = new ObjectOutputStream(byteArrayOut);
+
+        objectOut.writeObject(obj);
+        objectOut.flush();
+
+        byte[] bytes = byteArrayOut.toByteArray();
+        ByteBuffer byteBuffer = ByteBuffer.wrap(bytes);
+
+        socketChannel.write(byteBuffer);
+    }
+
+    public static Object readObject(SelectionKey key) throws IOException, ClassNotFoundException {
+        SocketChannel socketChannel = (SocketChannel) key.channel();
+        Tools.MessageL("Client: Receiving response from Server:\n");
+        ByteBuffer byteBuffer = ByteBuffer.allocate(102400);
+        byteBuffer.clear();
+        socketChannel.read(byteBuffer);
+        byteBuffer.flip();
+        ByteArrayInputStream byteArrayIn = new ByteArrayInputStream(byteBuffer.array());
+
+        ObjectInputStream objectIn = new ObjectInputStream(byteArrayIn);//
+        return objectIn.readObject();
+    }
+
+    public static void handleCommand(String[] commandWithArgs) throws IOException, ClassNotFoundException {
+        Client.socketChannel.register(Client.selector, SelectionKey.OP_CONNECT | SelectionKey.OP_WRITE | SelectionKey.OP_READ);
+
+        CommandManager commandManager = new CommandManager();
+
+        int numReadyChannel;
+        loop:
+        while (true) {
+            numReadyChannel = Client.selector.select();
+
+            if (numReadyChannel > 0) {
+                Iterator<SelectionKey> keyIterator = Client.selector.selectedKeys().iterator();
+                while (keyIterator.hasNext()) {
+                    SelectionKey key = keyIterator.next();
+                    keyIterator.remove();
+
+                    if (key.isWritable()) {
+
+
+                        PackageCommand packCommand = PackageCommand.packCommand(Client.response, commandWithArgs, commandManager, Client.fileName, Client.clientInformation.getUserName());
+                        Request request = new Request(packCommand);
+
+                        Tools.sendObject(request, Client.socketChannel);
+
+                        if (commandWithArgs[0].equalsIgnoreCase("exit")) {
+                            System.exit(0);
+                        }
+
+                        key.interestOps(SelectionKey.OP_READ);
+                    }
+                    if (key.isReadable()) {
+                        Client.response = (Response) Tools.readObject(key);//Attention Here!
+
+                        if (Client.response.getResponseMessage().contains("Error")) {
+                            Alert alert = new Alert(Alert.AlertType.ERROR);
+                            alert.setTitle("Error");
+                            alert.setContentText(Client.response.getResponseMessage());
+                            alert.showAndWait();
+                            return;
+                        } else {
+                            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                            alert.setTitle("Response from Server");
+                            alert.setContentText(Client.response.getResponseMessage());
+                            alert.showAndWait();
+                            return;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     /**

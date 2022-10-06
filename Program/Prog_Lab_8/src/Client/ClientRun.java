@@ -1,67 +1,27 @@
 package Client;
 
 import Exceptions.AbstractException;
-import Manager.OrganizationManager;
 import Tools.Tools;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.ConnectException;
 
-/**
- * The type Client run.
- */
-public class ClientRun {
+public class ClientRun extends Application {
 
-    /**
-     * The File path.
-     */
-    static String filePath;
-    /**
-     * The Ip.
-     */
-    static String ip;
-    /**
-     * The Port.
-     */
-    static int port;
+    public static Stage stage;
 
-    /**
-     * The Is set from file.
-     */
-    static boolean isSetFromFile = false;
-
-    private static void setArgs(String[] args) {
-        try {
-            for (int i = 0; i < args.length; i++) {
-                switch (args[i]) {
-                    case "-ip": {//setting ip address
-                        ip = args[++i];
-                        break;
-                    }
-                    case "-p": {//setting port
-                        port = Integer.parseInt(args[++i]);
-                        break;
-                    }
-                }
-            }
-        } catch (IndexOutOfBoundsException e) {
-            Tools.MessageL("Error: You should input the arguments in the following format:");
-            Tools.MessageL("       -ip ipAddress");
-            Tools.MessageL("       -p port");
-            System.exit(1);
-        }
-    }
-
-    /**
-     * The entry point of application.
-     *
-     * @param args the input arguments
-     */
     public static void main(String[] args) {
-        ClientRun.setArgs(args);
-        Client client = new Client("localhost", 2001);
+
+        //Client client = new Client("localhost",2001);
         try {
-            client.run();
-            client.runTerminal();
+            Client.run();
+            launch(args);
+            //Client.runTerminal();
         } catch (ConnectException e) {
             Tools.MessageL("Error: Server not available!");
         } catch (AbstractException e) {
@@ -70,5 +30,22 @@ public class ClientRun {
             Tools.MessageL("Error: Something Wrong!");
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        stage = primaryStage;
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML/AccountUI.fxml"));
+
+        Scene scene = new Scene(root);
+        stage.setTitle("Organizations Manager");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void changeScene(String fxmlFile) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/" + fxmlFile));
+        stage.getScene().setRoot(root);
     }
 }
