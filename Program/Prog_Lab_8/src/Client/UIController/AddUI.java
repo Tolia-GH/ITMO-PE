@@ -138,7 +138,7 @@ public class AddUI implements Initializable {
 
     @FXML
     void clear(ActionEvent event) {
-
+        //
     }
 
     @Override
