@@ -188,7 +188,7 @@ public class Organization implements Comparable<Organization>, Serializable {
      * @throws NullValueException the null value exception
      */
     public void setName(String name) throws NullValueException{
-        if (name == null) {
+        if (name == null || name.equals("")) {
             throw new NullValueException("Error: Name can not be empty!\n");
         } else {
             this.name = name;
@@ -243,7 +243,11 @@ public class Organization implements Comparable<Organization>, Serializable {
      * @param fullName the full name
      */
     public void setFullName(String fullName) {
-        this.fullName = fullName;
+        if (fullName == null || fullName.equals("")) {
+            throw new NullValueException("Error: Full name nan not be empty!\n");
+        } else {
+            this.fullName = fullName;
+        }
     }
 
     /**
@@ -285,7 +289,7 @@ public class Organization implements Comparable<Organization>, Serializable {
      */
     public void setPostalAddress(Address postalAddress) throws NullValueException {
         if (postalAddress == null) {
-            throw new NullValueException("");
+            throw new NullValueException("Error: PostalAddress can not be null");
         } else {
             this.postalAddress = postalAddress;
         }

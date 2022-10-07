@@ -1,6 +1,7 @@
 package Tools;
 
 import Client.Client;
+import Collection.Organization;
 import Main.PackageCommand;
 import Main.Request;
 import Main.Response;
@@ -115,13 +116,13 @@ public class Tools {
         return objectIn.readObject();
     }
 
-    public static void handleCommand(String[] commandWithArgs) throws IOException, ClassNotFoundException {
+    public static void handleCommand(String[] commandWithArgs, Organization organization) throws IOException, ClassNotFoundException {
         Client.socketChannel.register(Client.selector, SelectionKey.OP_CONNECT | SelectionKey.OP_WRITE | SelectionKey.OP_READ);
 
         CommandManager commandManager = new CommandManager();
 
         int numReadyChannel;
-        loop:
+
         while (true) {
             numReadyChannel = Client.selector.select();
 
@@ -133,8 +134,7 @@ public class Tools {
 
                     if (key.isWritable()) {
 
-
-                        PackageCommand packCommand = PackageCommand.packCommand(Client.response, commandWithArgs, commandManager, Client.fileName, Client.clientInformation.getUserName());
+                        PackageCommand packCommand = PackageCommand.packCommand(Client.response, commandWithArgs, organization, commandManager, Client.fileName, Client.clientInformation.getUserName());
                         Request request = new Request(packCommand);
 
                         Tools.sendObject(request, Client.socketChannel);

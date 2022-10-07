@@ -38,6 +38,17 @@ public class Coordinates implements Serializable {
         setY(y);
     }
 
+    public Coordinates(String sx,String sy)throws NullValueException, ValueOutOfRangeException, NumberFormatException {
+        if (sx == null || sy == null || sx.equals("") || sy.equals("")) {
+            throw new NullValueException("Error: x and y can not be empty!");
+        } else {
+            Float fx = Float.valueOf(sx);
+            Double dy = Double.valueOf(sy);
+            setX(fx);
+            setY(dy);
+        }
+    }
+
     /**
      * Sets x.
      *

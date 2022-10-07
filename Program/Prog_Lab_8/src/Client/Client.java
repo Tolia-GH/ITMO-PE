@@ -1,6 +1,7 @@
 package Client;
 
 import Client.UIController.AccountUI;
+import Collection.Organization;
 import Exceptions.AbstractException;
 import Main.PackageCommand;
 import Main.Request;
@@ -117,7 +118,7 @@ public class Client {
                             String[] commandWithArgs = Tools.Input().split(" ");
 
                             try {
-                                PackageCommand packageCommand = PackageCommand.packCommand(response,commandWithArgs, commandManager, fileName, clientInformation.getUserName());
+                                PackageCommand packageCommand = PackageCommand.packCommand(response,commandWithArgs, new Organization(),commandManager, fileName, clientInformation.getUserName());
                                 Request request = new Request(packageCommand);
 
                                 ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();

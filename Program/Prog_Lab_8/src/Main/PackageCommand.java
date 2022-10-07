@@ -5,11 +5,14 @@ import Command.AbstractCommand;
 import Exceptions.*;
 import Manager.CommandManager;
 import Tools.Tools;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 
 import java.io.*;
 import java.nio.file.FileAlreadyExistsException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.LinkedBlockingDeque;
 
 /**
@@ -191,7 +194,7 @@ public class PackageCommand implements Serializable {
      * @return the package command
      * @throws IOException the io exception
      */
-    public static PackageCommand packCommand(Response response, String[] commandWithArgs, CommandManager commandManager, String fileName, String userName) throws IOException {
+    public static PackageCommand packCommand(Response response, String[] commandWithArgs, Organization organization, CommandManager commandManager, String fileName, String userName) throws IOException {
 
         AbstractCommand commandToBePacked = commandManager.findCommand(commandWithArgs[0]);
         PackageCommand packageCommand;
@@ -202,7 +205,7 @@ public class PackageCommand implements Serializable {
                 if (commandWithArgs.length != 1) {
                     throw new ParaIncorrectException("Error: This command do not accept any parameters!");
                 }
-                Organization organization = Organization.Create();
+                //Organization organization = Organization.Create();
                 packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, organization, fileName, userName);
                 return packageCommand;
             }
@@ -240,7 +243,7 @@ public class PackageCommand implements Serializable {
                         if (command.getName().equals("execute_script")) {
                             throw new IllegalRecursionException("Error: Illegal recursion!");
                         } else {
-                            PackageCommand packCommand = packCommand(response,splitCommand,commandManager,fileName, userName);
+                            PackageCommand packCommand = packCommand(response,splitCommand,organization,commandManager,fileName, userName);
                             commandList.add(packCommand);
                         }
                     }
@@ -270,7 +273,7 @@ public class PackageCommand implements Serializable {
                 if (!file.exists()) {
                     file.createNewFile();
                 } else {
-                    Tools.Message("Program: File Already exist, Would you like to replace it? Y/N:");
+                    /*Tools.Message("Program: File Already exist, Would you like to replace it? Y/N:");
                     switch (Tools.Input()) {
                         case "Y": {
                             file.delete();
@@ -278,11 +281,22 @@ public class PackageCommand implements Serializable {
                             break;
                         }
                         case "N": {
-                            throw new FileAlreadyExistsException("Program: command return because file exist");
+                            //throw new FileAlreadyExistsException("Program: command return because file exist");
                         }
                         default: {
                             throw new ValueOutOfRangeException("Program: command return because input error!");
                         }
+                    }*/
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setTitle("Confirm to Replace");
+                    alert.setContentText("Program: File Already exist, Would you like to replace it?");
+
+                    Optional<ButtonType> res = alert.showAndWait();
+                    if (res.get() == ButtonType.OK) {
+                        file.delete();
+                        file.createNewFile();
+                    } else {
+                        alert.close();
                     }
                 }
                 packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, fileName,userName);
@@ -294,7 +308,7 @@ public class PackageCommand implements Serializable {
                 } else if(Integer.parseInt(commandWithArgs[1]) > response.getAmountSet()) {
                     throw new OrganizationNotFoundException("Error: Organization not found!");
                 } else {
-                    Organization organization = Organization.Create();
+                    //Organization organization = Organization.Create();
                     packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, organization, fileName, userName);
 
                 }

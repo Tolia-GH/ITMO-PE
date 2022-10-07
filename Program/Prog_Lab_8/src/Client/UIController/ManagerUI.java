@@ -1,13 +1,8 @@
 package Client.UIController;
 
-import Client.*;
+import Client.Client;
+import Client.ClientRun;
 import Collection.Organization;
-import Command.AbstractCommand;
-import Exceptions.AbstractException;
-import Main.PackageCommand;
-import Main.Request;
-import Main.Response;
-import Manager.CommandManager;
 import Tools.Tools;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,7 +10,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -24,8 +18,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.nio.channels.SelectionKey;
-import java.util.Iterator;
 import java.util.ResourceBundle;
 
 public class ManagerUI implements Initializable {
@@ -122,7 +114,7 @@ public class ManagerUI implements Initializable {
         try {
             String[] commandWithArgs = new String[]{"clear"};
 
-            Tools.handleCommand(commandWithArgs);
+            Tools.handleCommand(commandWithArgs, null);
         }catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -155,7 +147,7 @@ public class ManagerUI implements Initializable {
         try {
             String[] commandWithArgs = new String[]{"head"};
 
-            Tools.handleCommand(commandWithArgs);
+            Tools.handleCommand(commandWithArgs, null);
         }catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -166,7 +158,7 @@ public class ManagerUI implements Initializable {
         try {
             String[] commandWithArgs = new String[]{"help"};
 
-            Tools.handleCommand(commandWithArgs);
+            Tools.handleCommand(commandWithArgs, null);
         }catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -177,7 +169,7 @@ public class ManagerUI implements Initializable {
         try {
             String[] commandWithArgs = new String[]{"info"};
 
-            Tools.handleCommand(commandWithArgs);
+            Tools.handleCommand(commandWithArgs, null);
         }catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -205,7 +197,7 @@ public class ManagerUI implements Initializable {
         try {
             String[] commandWithArgs = new String[]{"remove_head"};
 
-            Tools.handleCommand(commandWithArgs);
+            Tools.handleCommand(commandWithArgs, null);
         }catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -216,7 +208,7 @@ public class ManagerUI implements Initializable {
         try {
             String[] commandWithArgs = new String[]{"save"};
 
-            Tools.handleCommand(commandWithArgs);
+            Tools.handleCommand(commandWithArgs, null);
         }catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -227,7 +219,7 @@ public class ManagerUI implements Initializable {
         try {
             String[] commandWithArgs = new String[]{"show"};
 
-            Tools.handleCommand(commandWithArgs);
+            Tools.handleCommand(commandWithArgs, null);
         }catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -250,7 +242,7 @@ public class ManagerUI implements Initializable {
         try {
             String[] commandWithArgs = new String[]{"exit"};
 
-            //Tools.handleCommand(commandWithArgs);
+            Tools.handleCommand(commandWithArgs, null);
             System.exit(0);
         }catch (Exception e) {
             e.printStackTrace();
