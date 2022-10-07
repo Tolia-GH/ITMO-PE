@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<AnchorPane prefHeight="574.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.UIController.AddIfMaxUI">
+<?import java.lang.String?>
+
+<AnchorPane prefHeight="574.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.UIController.AddUI">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="22.0" layoutY="33.0" prefHeight="200.0" prefWidth="100.0" spacing="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="60.0">
          <children>
@@ -31,7 +36,7 @@
             <TextField fx:id="zipCodeField" minHeight="30.0" prefHeight="30.0" prefWidth="115.0" />
          </children>
       </VBox>
-      <Label layoutX="96.0" layoutY="14.0" text="Add If Max" AnchorPane.topAnchor="14.0">
+      <Label layoutX="129.0" layoutY="14.0" text="Add" AnchorPane.topAnchor="14.0">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>

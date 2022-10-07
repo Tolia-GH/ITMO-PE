@@ -27,8 +27,15 @@ public class Address implements Serializable {
      * @param zipCode the zip code.
      */
     public Address(String street, String zipCode) {
-        setStreet(street);
-        setZipCode(zipCode);
+        if (street == null || street.equals("")) {
+            throw new NullValueException("Error: Street can not be empty!");
+        } else if (zipCode == null || zipCode.equals("")) {
+            throw new NullValueException("Error: zipCode can not be empty!");
+        } else {
+            setStreet(street);
+            setZipCode(zipCode);
+        }
+
     }
 
     public String getStreet() {

@@ -8,11 +8,14 @@ import Collection.OrganizationType;
 import Exceptions.AbstractException;
 import Exceptions.NoSuchTypeException;
 import Exceptions.NullValueException;
+import Exceptions.ValueOutOfRangeException;
 import Tools.Tools;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -72,7 +75,7 @@ public class AddUI implements Initializable {
                 Coordinates coordinates = new Coordinates(x,y);
                 organization.setCoordinates(coordinates);
             } catch (NumberFormatException e) {
-                errorMessage.setText("Error: Coordinates format error!");
+                throw new ValueOutOfRangeException("Error: Coordinates format error!");
             }
 
             String annualTurnoverText = annualTurnOverField.getText();
@@ -83,11 +86,22 @@ public class AddUI implements Initializable {
                     Long annualTurnover = Long.valueOf(annualTurnoverText);
                     organization.setAnnualTurnover(annualTurnover);
                 } catch (NumberFormatException e) {
-                    errorMessage.setText("Error: AnnualTurnover format error!");
+                    throw new ValueOutOfRangeException("Error: AnnualTurnover format error!");
                 }
             }
             organization.setFullName(fullNameField.getText());
-            organization.setEmployeesCount(Long.valueOf(employeesCountField.getText()));
+
+            String employeesCountText = employeesCountField.getText();
+            if (employeesCountText == null || employeesCountText.equals("")) {
+                throw new NullValueException("Error: Employees Count can not be empty!");
+            } else {
+                try {
+                    Long employeesCount = Long.valueOf(annualTurnoverText);
+                    organization.setEmployeesCount(employeesCount);
+                } catch (NumberFormatException e) {
+                    throw new ValueOutOfRangeException("Error: Employees Count format error!");
+                }
+            }
 
             String type = typeSelect.getValue();
             switch (type) {
@@ -124,7 +138,8 @@ public class AddUI implements Initializable {
             organization.setCreationDate(new Date());
 
             Tools.handleCommand(commandWithArgs, organization);
-            //System.exit(0);
+            Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            stage.hide();
         } catch (AbstractException e) {
             errorMessage.setText(e.getMessage());
         } catch (IOException | ClassNotFoundException e) {
@@ -138,7 +153,15 @@ public class AddUI implements Initializable {
 
     @FXML
     void clear(ActionEvent event) {
-        //
+        nameField.clear();
+        xField.clear();
+        yField.clear();
+        annualTurnOverField.clear();
+        fullNameField.clear();
+        employeesCountField.clear();
+        typeSelect.setValue("Choose a type");
+        streetField.clear();
+        zipCodeField.clear();
     }
 
     @Override

@@ -170,7 +170,7 @@ public class ManagerUI implements Initializable {
             String[] commandWithArgs = new String[]{"info"};
 
             Tools.handleCommand(commandWithArgs, null);
-        }catch (IOException | ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
