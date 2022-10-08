@@ -3,7 +3,7 @@
 ## 阅读索引
 
 - [x] [Texts](Texts.md)
-- [x] [Gramma](Gramma.md)
+- [x] [Gramma](gramma.md)
 - [ ] [HomeWork](HomeWork.md)
 
 <style type="text/css">

@@ -400,6 +400,24 @@ public class Organization implements Comparable<Organization>, Serializable {
                 + this.postalAddress + ","
                 + this.creationDate;
     }
+    public ObservableOrganization toObservableOrganization() {
+        ObservableOrganization observableOrganization = new ObservableOrganization();
+
+        observableOrganization.setOwner(this.owner);
+        observableOrganization.setId(this.id);
+        observableOrganization.setName(this.name);
+        observableOrganization.setCreationDate(this.creationDate.toString());
+        observableOrganization.setX(this.coordinates.getX());
+        observableOrganization.setY(this.coordinates.getY());
+        observableOrganization.setAnnualTurnover(this.annualTurnover);
+        observableOrganization.setFullName(this.fullName);
+        observableOrganization.setEmployeesCount(this.employeesCount);
+        observableOrganization.setType(this.type.toString());
+        observableOrganization.setStreet(this.postalAddress.getStreet());
+        observableOrganization.setZipCode(this.postalAddress.getZipCode());
+
+        return observableOrganization;
+    }
 
     @Override
     public boolean equals(Object o) {

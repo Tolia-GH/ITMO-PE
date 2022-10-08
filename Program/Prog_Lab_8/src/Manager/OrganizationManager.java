@@ -1,7 +1,11 @@
 package Manager;
 
+import Collection.ObservableOrganization;
 import Collection.Organization;
 import Exceptions.NotInitializedException;
+import com.sun.org.apache.xpath.internal.operations.Or;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.util.Date;
 import java.util.concurrent.LinkedBlockingDeque;
@@ -91,6 +95,16 @@ public class OrganizationManager {
         return null;
     }
 
+    public static Long getMaxId() {
+        Long id = -1L;
+        for (Organization organization : OrganizationManager.getOrganizationSet()) {
+            if (organization.getId() > id) {
+                id = organization.getId();
+            }
+        }
+        return id;
+    }
+
     /**
      * Is exist boolean.
      *
@@ -115,5 +129,14 @@ public class OrganizationManager {
             organization.setId(count);
             count++;
         }
+    }
+
+    public static ObservableList<ObservableOrganization> toObservableList(LinkedBlockingDeque<Organization> organizationSet) {
+        ObservableList<ObservableOrganization> organizationList = FXCollections.observableArrayList();
+        for (Organization organization : organizationSet) {
+            organizationList.add(organization.toObservableOrganization());
+        }
+
+        return organizationList;
     }
 }

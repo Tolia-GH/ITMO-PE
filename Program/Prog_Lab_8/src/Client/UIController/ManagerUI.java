@@ -2,17 +2,20 @@ package Client.UIController;
 
 import Client.Client;
 import Client.ClientRun;
+import Collection.ObservableOrganization;
 import Collection.Organization;
-import Tools.Tools;
+import Manager.OrganizationManager;
+import Tools.*;
+import com.sun.xml.internal.bind.v2.model.core.ID;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -26,13 +29,46 @@ public class ManagerUI implements Initializable {
     private Label usernameField;
 
     @FXML
-    private TableColumn<Organization, String> ownerCol;
+    private TableView<ObservableOrganization> organizationsTable = new TableView<>();
 
     @FXML
-    private TableColumn<Organization, Long> IDCol;
+    private TableColumn<ObservableOrganization, String> ownerCol;
 
     @FXML
-    private TableColumn<Organization, String> nameCol;
+    private TableColumn<ObservableOrganization, Long> IDCol;
+
+    @FXML
+    private TableColumn<ObservableOrganization, String> nameCol;
+
+    @FXML
+    private TableColumn<?,?> coordinateCol;
+
+    @FXML
+    private TableColumn<ObservableOrganization, Float> xCol;
+
+    @FXML
+    private TableColumn<ObservableOrganization, Double> yCol;
+
+    @FXML
+    private TableColumn<ObservableOrganization, String> dateCol;
+
+    @FXML
+    private TableColumn<ObservableOrganization, Long> annualTurnoverCol;
+
+    @FXML
+    private TableColumn<ObservableOrganization, String> fullNameCol;
+
+    @FXML
+    private TableColumn<ObservableOrganization, Long> employeesCountCol;
+
+    @FXML
+    private TableColumn<ObservableOrganization, String> typeCol;
+
+    @FXML
+    private TableColumn<ObservableOrganization, String> streetCol;
+
+    @FXML
+    private TableColumn<ObservableOrganization, String> zipCodeCol;
 
     @FXML
     private Button filterLessThanTypeButton;
@@ -84,6 +120,8 @@ public class ManagerUI implements Initializable {
 
     @FXML
     private Button executeScriptButton;
+
+    private ObservableList<ObservableOrganization> organizationList;
 
     @FXML
     void add(ActionEvent event) {
@@ -266,8 +304,25 @@ public class ManagerUI implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         usernameField.setText(Client.clientInformation.getUserName());
 
-        ownerCol.setCellValueFactory(new PropertyValueFactory<Organization, String>("owner"));
-        IDCol.setCellValueFactory(new PropertyValueFactory<Organization, Long>("id"));
-        nameCol.setCellValueFactory(new PropertyValueFactory<Organization, String>("name"));
+        organizationList = FXCollections.observableArrayList();
+
+
+        organizationList = OrganizationManager.toObservableList(Client.response.getOrganizationSet());
+
+        ownerCol.setCellValueFactory(new PropertyValueFactory<ObservableOrganization, String>("owner"));
+        IDCol.setCellValueFactory(new PropertyValueFactory<ObservableOrganization, Long>("id"));
+        nameCol.setCellValueFactory(new PropertyValueFactory<ObservableOrganization, String>("name"));
+        xCol.setCellValueFactory(new PropertyValueFactory<ObservableOrganization, Float>("x"));
+        yCol.setCellValueFactory(new PropertyValueFactory<ObservableOrganization, Double>("y"));
+        dateCol.setCellValueFactory(new PropertyValueFactory<ObservableOrganization, String>("creationDate"));
+        annualTurnoverCol.setCellValueFactory(new PropertyValueFactory<ObservableOrganization, Long>("annualTurnover"));
+        fullNameCol.setCellValueFactory(new PropertyValueFactory<ObservableOrganization, String >("fullName"));
+        employeesCountCol.setCellValueFactory(new PropertyValueFactory<ObservableOrganization, Long>("employeesCount"));
+        typeCol.setCellValueFactory(new PropertyValueFactory<ObservableOrganization, String>("type"));
+        streetCol.setCellValueFactory(new PropertyValueFactory<ObservableOrganization, String>("street"));
+        zipCodeCol.setCellValueFactory(new PropertyValueFactory<ObservableOrganization, String>("zipCode"));
+
+        organizationsTable.getColumns().addAll(ownerCol, IDCol, nameCol, xCol, yCol, dateCol, annualTurnoverCol, fullNameCol, employeesCountCol, typeCol, streetCol, zipCodeCol);
+        organizationsTable.setItems(organizationList);
     }
 }

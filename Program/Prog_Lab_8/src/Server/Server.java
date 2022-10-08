@@ -9,7 +9,8 @@ import Exceptions.UserInformationException;
 import Main.PackageCommand;
 import Main.Response;
 import Manager.CommandManager;
-import Tools.Tools;
+import Manager.OrganizationManager;
+import Tools.*;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -65,10 +66,10 @@ public class Server {
     public void Service() throws IOException, InterruptedException {
         Socket socket = serverSocket.accept();
         Tools.MessageL("Server: New connection accepted from: " + socket.getInetAddress().getHostAddress() + ":" + socket.getPort());
+        SQL.getOrganizationsFromDB();
 
         handleMessage(socket);
         handleCommand(socket);
-
     }
 
     /**
@@ -93,7 +94,7 @@ public class Server {
             addUser(clientInformation);
 
             String message = "Welcome new account: " + clientInformation.getUserName();
-            Response response = new Response(message);
+            Response response = new Response(OrganizationManager.getOrganizationSet(), message);
             Tools.sendObject(response,socket);
             isClientSet = true;
         } else {
@@ -101,7 +102,7 @@ public class Server {
                 checkUser(clientInformation);
 
                 String message = "Welcome! " + clientInformation.getUserName();
-                Response response = new Response(message);
+                Response response = new Response(OrganizationManager.getOrganizationSet(), message);
                 Tools.sendObject(response,socket);
                 isClientSet = true;
             } catch (UserInformationException e) {
@@ -111,8 +112,6 @@ public class Server {
                 Response response = new Response(message);
 
                 Tools.sendObject(response,socket);
-
-                //System.exit(1);
             }
         }
     }
@@ -125,7 +124,7 @@ public class Server {
      */
     public void handleCommand(Socket socket) throws IOException, InterruptedException {
         CommandManager commandManager = new CommandManager();
-        boolean isClientSet = false;
+        //boolean isClientSet = false;
 
         while (true) {
             //byte[] buffer = new byte[102400];

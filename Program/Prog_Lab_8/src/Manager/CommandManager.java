@@ -152,7 +152,7 @@ public class CommandManager {
                 "(owner, id, name, x, y, date, annualTurnover, fullName, employeesCount, type, street, zipCode) " +
                 "VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
         preparedStatement.setObject(1,packageCommand.getUserName());
-        preparedStatement.setObject(2,1+OrganizationManager.getOrganizationSet().size());
+        preparedStatement.setObject(2,OrganizationManager.getMaxId());
         preparedStatement.setObject(3,organization.getName());
         preparedStatement.setObject(4,organization.getCoordinates().getX());
         preparedStatement.setObject(5,organization.getCoordinates().getY());
