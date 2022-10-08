@@ -144,6 +144,8 @@ public class CommandManager {
             OrganizationManager.doInitialization();
         }
 
+        organization.setId(1+OrganizationManager.getMaxId());
+
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
         Class.forName("org.postgresql.Driver");
@@ -152,7 +154,7 @@ public class CommandManager {
                 "(owner, id, name, x, y, date, annualTurnover, fullName, employeesCount, type, street, zipCode) " +
                 "VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
         preparedStatement.setObject(1,packageCommand.getUserName());
-        preparedStatement.setObject(2,OrganizationManager.getMaxId());
+        preparedStatement.setObject(2,organization.getId());
         preparedStatement.setObject(3,organization.getName());
         preparedStatement.setObject(4,organization.getCoordinates().getX());
         preparedStatement.setObject(5,organization.getCoordinates().getY());

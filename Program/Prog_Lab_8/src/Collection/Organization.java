@@ -6,7 +6,6 @@ import Exceptions.ValueOutOfRangeException;
 import Tools.Tools;
 
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
 
@@ -16,10 +15,7 @@ import java.util.Objects;
 public class Organization implements Comparable<Organization>, Serializable {
 
     private String owner;
-    /**
-     * The constant idCode.
-     */
-    public static Long idCode = 1L;
+    //public static Long idCode = 1L;
 
     /**
      * The id of Organization.
@@ -293,15 +289,6 @@ public class Organization implements Comparable<Organization>, Serializable {
         } else {
             this.postalAddress = postalAddress;
         }
-    }
-
-    /**
-     * Gets id code.
-     *
-     * @return the id code
-     */
-    public Long getIdCode() {
-        return idCode;
     }
 
     public String getOwner() {
