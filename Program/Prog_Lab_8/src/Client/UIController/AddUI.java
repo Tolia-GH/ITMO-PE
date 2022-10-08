@@ -138,6 +138,7 @@ public class AddUI implements Initializable {
             organization.setCreationDate(new Date());
 
             Tools.handleCommand(commandWithArgs, organization);
+
             Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
             stage.hide();
         } catch (AbstractException e) {

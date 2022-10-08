@@ -21,23 +21,15 @@
                         <TableColumn fx:id="ownerCol" prefWidth="60.0" text="Owner" />
                         <TableColumn fx:id="IDCol" prefWidth="40.0" text="ID" />
                         <TableColumn fx:id="nameCol" prefWidth="100.0" text="Name" />
-                        <TableColumn fx:id="coorordinatesCol" prefWidth="93.8193359375" text="Coordinates">
-                           <columns>
-                              <TableColumn prefWidth="40.0" text="x" fx:id="xCol" />
-                              <TableColumn fx:id="yCol" prefWidth="40.0" text="y" />
-                           </columns>
-                        </TableColumn>
+                        <TableColumn prefWidth="40.0" text="x" fx:id="xCol" />
+                        <TableColumn fx:id="yCol" prefWidth="40.0" text="y" />
                         <TableColumn fx:id="dateCol" prefWidth="120.0" text="Date" />
                         <TableColumn fx:id="annualTurnoverCol" prefWidth="105.0" text="AnnualTurnover" />
                         <TableColumn fx:id="fullNameCol" prefWidth="130.0" text="Fullname" />
                         <TableColumn fx:id="employeesCountCol" prefWidth="105.0" text="Employeescount" />
                         <TableColumn fx:id="typeCol" text="Type" />
-                        <TableColumn fx:id="addressCol" prefWidth="134.55029296875" text="Address">
-                           <columns>
-                              <TableColumn fx:id="streetCol" prefWidth="90.0" text="Street" />
-                              <TableColumn fx:id="zipCodeCol" prefWidth="70.0" text="Zipcode" />
-                           </columns>
-                        </TableColumn>
+                        <TableColumn fx:id="streetCol" prefWidth="90.0" text="Street" />
+                        <TableColumn fx:id="zipCodeCol" prefWidth="70.0" text="Zipcode" />
                      </columns>
                   </TableView>
                </content>

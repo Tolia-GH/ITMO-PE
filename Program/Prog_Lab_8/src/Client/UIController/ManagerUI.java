@@ -5,8 +5,7 @@ import Client.ClientRun;
 import Collection.ObservableOrganization;
 import Collection.Organization;
 import Manager.OrganizationManager;
-import Tools.*;
-import com.sun.xml.internal.bind.v2.model.core.ID;
+import Tools.Tools;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,7 +14,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -29,7 +31,7 @@ public class ManagerUI implements Initializable {
     private Label usernameField;
 
     @FXML
-    private TableView<ObservableOrganization> organizationsTable = new TableView<>();
+    private TableView<ObservableOrganization> organizationsTable;
 
     @FXML
     private TableColumn<ObservableOrganization, String> ownerCol;
@@ -39,9 +41,6 @@ public class ManagerUI implements Initializable {
 
     @FXML
     private TableColumn<ObservableOrganization, String> nameCol;
-
-    @FXML
-    private TableColumn<?,?> coordinateCol;
 
     @FXML
     private TableColumn<ObservableOrganization, Float> xCol;
@@ -121,7 +120,7 @@ public class ManagerUI implements Initializable {
     @FXML
     private Button executeScriptButton;
 
-    private ObservableList<ObservableOrganization> organizationList;
+    public static ObservableList<ObservableOrganization> organizationList;
 
     @FXML
     void add(ActionEvent event) {
@@ -130,6 +129,10 @@ public class ManagerUI implements Initializable {
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 300, 574));
             stage.show();
+            organizationList.clear();
+            for (Organization o : Client.response.getOrganizationSet()) {
+                organizationList.add(o.toObservableOrganization());
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -142,6 +145,10 @@ public class ManagerUI implements Initializable {
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 300, 574));
             stage.show();
+            organizationList.clear();
+            for (Organization o : Client.response.getOrganizationSet()) {
+                organizationList.add(o.toObservableOrganization());
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -153,6 +160,11 @@ public class ManagerUI implements Initializable {
             String[] commandWithArgs = new String[]{"clear"};
 
             Tools.handleCommand(commandWithArgs, null);
+
+            organizationList.clear();
+            for (Organization o : Client.response.getOrganizationSet()) {
+                organizationList.add(o.toObservableOrganization());
+            }
         }catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -225,6 +237,7 @@ public class ManagerUI implements Initializable {
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 300, 214));
             stage.show();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -270,6 +283,8 @@ public class ManagerUI implements Initializable {
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 300, 620));
             stage.show();
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -305,9 +320,7 @@ public class ManagerUI implements Initializable {
         usernameField.setText(Client.clientInformation.getUserName());
 
         organizationList = FXCollections.observableArrayList();
-
-
-        organizationList = OrganizationManager.toObservableList(Client.response.getOrganizationSet());
+        organizationsTable.getColumns().clear();
 
         ownerCol.setCellValueFactory(new PropertyValueFactory<ObservableOrganization, String>("owner"));
         IDCol.setCellValueFactory(new PropertyValueFactory<ObservableOrganization, Long>("id"));
@@ -324,5 +337,11 @@ public class ManagerUI implements Initializable {
 
         organizationsTable.getColumns().addAll(ownerCol, IDCol, nameCol, xCol, yCol, dateCol, annualTurnoverCol, fullNameCol, employeesCountCol, typeCol, streetCol, zipCodeCol);
         organizationsTable.setItems(organizationList);
+
+        for (Organization organization : Client.response.getOrganizationSet()) {
+            organizationList.add(organization.toObservableOrganization());
+        }
+
+        //organizationList = OrganizationManager.toObservableList(Client.response.getOrganizationSet());
     }
 }

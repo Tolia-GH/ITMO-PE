@@ -63,4 +63,52 @@ public class ObservableOrganization {
     public void setZipCode(String zipCode) {
         this.zipCode = new SimpleStringProperty(zipCode);
     }
+
+    public String getOwner() {
+        return owner.get();
+    }
+
+    public long getId() {
+        return id.get();
+    }
+
+    public String getName() {
+        return name.get();
+    }
+
+    public Float getX() {
+        return x.get();
+    }
+
+    public Double getY() {
+        return y.get();
+    }
+
+    public String getCreationDate() {
+        return creationDate.get();
+    }
+
+    public Long getAnnualTurnover() {
+        return annualTurnover.get();
+    }
+
+    public String getFullName() {
+        return fullName.get();
+    }
+
+    public Long getEmployeesCount() {
+        return employeesCount.get();
+    }
+
+    public String getType() {
+        return Type.get();
+    }
+
+    public String getStreet() {
+        return Street.get();
+    }
+
+    public String getZipCode() {
+        return zipCode.get();
+    }
 }

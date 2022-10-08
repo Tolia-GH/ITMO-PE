@@ -237,9 +237,9 @@ public class CommandManager {
                 preparedStatement.setObject(2,packageCommand.getUserName());
                 preparedStatement.executeUpdate();
 
-                appendMessageL("Program[execute_by_id]: organization removed.");
+                appendMessageL("Program[remove_by_id]: organization removed.");
             } else {
-                appendMessageL("Program[execute_by_id]: Not available to remove organization!");
+                appendMessageL("Program[remove_by_id]: Not available to remove organization!");
             }
         }
 
@@ -257,7 +257,7 @@ public class CommandManager {
         if (!OrganizationManager.IsInitialized) {
             appendMessageL("Error: Collections was not initialized!");
         } else {
-            Organization organization = OrganizationManager.findById(1L);
+            Organization organization = OrganizationManager.getOrganizationSet().getFirst();
             if (organization != null && organization.getOwner().equals(packageCommand.getUserName())) {
                 Class.forName("org.postgresql.Driver");
                 Connection connection = DriverManager.getConnection(linkDb,managerDb,passwordDB);

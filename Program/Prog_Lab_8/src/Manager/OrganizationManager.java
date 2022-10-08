@@ -96,7 +96,7 @@ public class OrganizationManager {
     }
 
     public static Long getMaxId() {
-        Long id = -1L;
+        Long id = 0L;
         for (Organization organization : OrganizationManager.getOrganizationSet()) {
             if (organization.getId() > id) {
                 id = organization.getId();
@@ -124,7 +124,7 @@ public class OrganizationManager {
      * Sort.
      */
     public static void sort() {
-        Long count = 1L;
+        Long count = 0L;
         for (Organization organization : OrganizationManager.getOrganizationSet()) {
             organization.setId(count);
             count++;

@@ -1,6 +1,7 @@
 package Server;
 
 import Command.AbstractCommand;
+import Exceptions.AbstractException;
 import Main.PackageCommand;
 import Main.Response;
 import Manager.CommandManager;
@@ -44,7 +45,11 @@ public class ServerDealThread extends Thread {
             Tools.MessageL("Server: Receive command from client: " + commandName);
 
             if (!command.getName().equalsIgnoreCase("execute_script")) {
-                command.execute(commandManager, packageCommand,linkDB,managerName,managerPass);
+                try {
+                    command.execute(commandManager, packageCommand,linkDB,managerName,managerPass);
+                } catch (AbstractException e) {
+
+                }
                 response = new Response(OrganizationManager.getOrganizationSet(),commandManager.getResponseMessage());
             } else {//for execute_script
                 List<PackageCommand> packCommand = packageCommand.getList();
