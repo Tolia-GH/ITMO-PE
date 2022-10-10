@@ -48,7 +48,7 @@ public class ServerDealThread extends Thread {
                 try {
                     command.execute(commandManager, packageCommand,linkDB,managerName,managerPass);
                 } catch (AbstractException e) {
-
+                    Tools.MessageL(e.getMessage());
                 }
                 response = new Response(OrganizationManager.getOrganizationSet(),commandManager.getResponseMessage());
             } else {//for execute_script

@@ -1,5 +1,7 @@
 package Manager;
 
+import Client.UIController.ManagerUI;
+import Collection.ObservableOrganization;
 import Collection.Organization;
 import Collection.OrganizationType;
 import Command.*;
@@ -8,6 +10,7 @@ import JSON.JsonWriter;
 import Main.PackageCommand;
 import Tools.Tools;
 import com.sun.corba.se.spi.orb.StringPair;
+import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.io.File;
 import java.io.IOException;
@@ -166,7 +169,11 @@ public class CommandManager {
         preparedStatement.setObject(11,organization.getPostalAddress().getStreet());
         preparedStatement.setObject(12,organization.getPostalAddress().getZipCode());
 
+        OrganizationManager.getOrganizationSet().add(organization);
+
         preparedStatement.executeUpdate();
+
+        //ManagerUI.organizationList.add(organization.toObservableOrganization());
 
         //OrganizationManager.getOrganizationSet().add(organization);
         //OrganizationManager.sort();
@@ -184,6 +191,9 @@ public class CommandManager {
         clearMessage();
 
         Organization original = OrganizationManager.findById(id);
+
+        OrganizationManager.getOrganizationSet().remove(original);
+        OrganizationManager.getOrganizationSet().add(organization);
 
         if (original != null && original.getOwner().equals(packageCommand.getUserName())) {
             Class.forName("org.postgresql.Driver");
@@ -231,6 +241,8 @@ public class CommandManager {
             appendMessageL("Attention: Collections was not initialized!");
         } else {
             Organization organization = OrganizationManager.findById(id);
+            OrganizationManager.getOrganizationSet().remove(organization);
+
             if (organization != null && organization.getOwner().equals(packageCommand.getUserName())) {
                 Class.forName("org.postgresql.Driver");
                 Connection connection = DriverManager.getConnection(linkDb,managerDb,passwordDB);
@@ -260,6 +272,8 @@ public class CommandManager {
             appendMessageL("Error: Collections was not initialized!");
         } else {
             Organization organization = OrganizationManager.getOrganizationSet().getFirst();
+            OrganizationManager.getOrganizationSet().remove(organization);
+
             if (organization != null && organization.getOwner().equals(packageCommand.getUserName())) {
                 Class.forName("org.postgresql.Driver");
                 Connection connection = DriverManager.getConnection(linkDb,managerDb,passwordDB);
@@ -295,6 +309,8 @@ public class CommandManager {
         PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM organizations WHERE owner = ?");
         preparedStatement.setObject(1,packageCommand.getUserName());
         preparedStatement.executeUpdate();
+
+        OrganizationManager.getOrganizationSet().clear();
 
         appendMessageL("Program [clear]: Set cleared");
         Tools.MessageL(getResponseMessage());

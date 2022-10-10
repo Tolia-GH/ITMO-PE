@@ -139,6 +139,8 @@ public class AddUI implements Initializable {
 
             Tools.handleCommand(commandWithArgs, organization);
 
+            //ManagerUI.refresh();
+
             Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
             stage.hide();
         } catch (AbstractException e) {

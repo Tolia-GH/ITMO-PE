@@ -1,6 +1,7 @@
 package Tools;
 
 import Client.Client;
+import Client.UIController.ManagerUI;
 import Collection.Organization;
 import Main.PackageCommand;
 import Main.Request;
@@ -9,7 +10,6 @@ import Manager.CommandManager;
 import javafx.scene.control.Alert;
 
 import java.io.*;
-import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
@@ -148,47 +148,22 @@ public class Tools {
                     if (key.isReadable()) {
                         Client.response = (Response) Tools.readObject(key);//Attention Here!
 
+                        Alert alert;
                         if (Client.response.getResponseMessage().contains("Error")) {
-                            Alert alert = new Alert(Alert.AlertType.ERROR);
+                            alert = new Alert(Alert.AlertType.ERROR);
                             alert.setTitle("Error");
-                            alert.setContentText(Client.response.getResponseMessage());
-                            alert.showAndWait();
-                            return;
                         } else {
-                            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                            alert = new Alert(Alert.AlertType.INFORMATION);
                             alert.setTitle("Response from Server");
-                            alert.setContentText(Client.response.getResponseMessage());
-                            alert.showAndWait();
-                            return;
                         }
+                        alert.setContentText(Client.response.getResponseMessage());
+                        alert.showAndWait();
+
+                        ManagerUI.refresh();
+                        return;
                     }
                 }
             }
         }
-    }
-
-    /**
-     * Is port available boolean.
-     *
-     * @param port the port
-     * @return the boolean
-     */
-    public static boolean isPortAvailable(int port) {
-        boolean available = true;
-        ServerSocket s = null;
-        try {
-            s = new ServerSocket(port);
-        } catch (IOException e) {
-            available = false;
-        } finally {
-            if (s != null) {
-                try {
-                    s.close();
-                } catch (IOException e) {
-
-                }
-            }
-        }
-        return available;
     }
 }

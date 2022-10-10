@@ -129,10 +129,8 @@ public class ManagerUI implements Initializable {
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 300, 574));
             stage.show();
-            organizationList.clear();
-            for (Organization o : Client.response.getOrganizationSet()) {
-                organizationList.add(o.toObservableOrganization());
-            }
+
+            //refresh();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -145,10 +143,7 @@ public class ManagerUI implements Initializable {
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 300, 574));
             stage.show();
-            organizationList.clear();
-            for (Organization o : Client.response.getOrganizationSet()) {
-                organizationList.add(o.toObservableOrganization());
-            }
+            //refresh();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -161,10 +156,7 @@ public class ManagerUI implements Initializable {
 
             Tools.handleCommand(commandWithArgs, null);
 
-            organizationList.clear();
-            for (Organization o : Client.response.getOrganizationSet()) {
-                organizationList.add(o.toObservableOrganization());
-            }
+            //refresh();
         }catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -177,6 +169,7 @@ public class ManagerUI implements Initializable {
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 300, 214));
             stage.show();
+            //refresh();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -238,6 +231,7 @@ public class ManagerUI implements Initializable {
             stage.setScene(new Scene(root, 300, 214));
             stage.show();
 
+            //refresh();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -249,6 +243,8 @@ public class ManagerUI implements Initializable {
             String[] commandWithArgs = new String[]{"remove_head"};
 
             Tools.handleCommand(commandWithArgs, null);
+
+            //refresh();
         }catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -260,6 +256,8 @@ public class ManagerUI implements Initializable {
             String[] commandWithArgs = new String[]{"save"};
 
             Tools.handleCommand(commandWithArgs, null);
+
+
         }catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -271,6 +269,8 @@ public class ManagerUI implements Initializable {
             String[] commandWithArgs = new String[]{"show"};
 
             Tools.handleCommand(commandWithArgs, null);
+
+            //refresh();
         }catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -284,7 +284,7 @@ public class ManagerUI implements Initializable {
             stage.setScene(new Scene(root, 300, 620));
             stage.show();
 
-
+            refresh();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -341,7 +341,16 @@ public class ManagerUI implements Initializable {
         for (Organization organization : Client.response.getOrganizationSet()) {
             organizationList.add(organization.toObservableOrganization());
         }
-
         //organizationList = OrganizationManager.toObservableList(Client.response.getOrganizationSet());
+    }
+
+    public static void refresh() {
+        //organizationList.clear();
+        organizationList.clear();
+
+        for (Organization organization : Client.response.getOrganizationSet()) {
+            organizationList.add(organization.toObservableOrganization());
+        }
+        //organizationsTable.refresh();
     }
 }
