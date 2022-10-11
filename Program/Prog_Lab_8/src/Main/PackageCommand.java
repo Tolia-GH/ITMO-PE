@@ -305,8 +305,6 @@ public class PackageCommand implements Serializable {
             case "update": {
                 if (commandWithArgs.length != 2) {
                     throw new ParaIncorrectException("Error: This command accept 1 parameter!");
-                } else if(Integer.parseInt(commandWithArgs[1]) > response.getAmountSet()) {
-                    throw new OrganizationNotFoundException("Error: Organization not found!");
                 } else {
                     //Organization organization = Organization.Create();
                     packageCommand = new PackageCommand(commandWithArgs, commandToBePacked, organization, fileName, userName);

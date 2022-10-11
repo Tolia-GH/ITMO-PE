@@ -18,18 +18,18 @@
                <content>
                   <TableView fx:id="organizationsTable" prefHeight="750.0" prefWidth="990.0">
                      <columns>
-                        <TableColumn fx:id="ownerCol" prefWidth="60.0" text="Owner" />
+                        <TableColumn fx:id="ownerCol" prefWidth="60.0" text="%owner" />
                         <TableColumn fx:id="IDCol" prefWidth="40.0" text="ID" />
-                        <TableColumn fx:id="nameCol" prefWidth="100.0" text="Name" />
+                        <TableColumn fx:id="nameCol" prefWidth="100.0" text="%name" />
                         <TableColumn prefWidth="40.0" text="x" fx:id="xCol" />
                         <TableColumn fx:id="yCol" prefWidth="40.0" text="y" />
-                        <TableColumn fx:id="dateCol" prefWidth="120.0" text="Date" />
-                        <TableColumn fx:id="annualTurnoverCol" prefWidth="105.0" text="AnnualTurnover" />
-                        <TableColumn fx:id="fullNameCol" prefWidth="130.0" text="Fullname" />
-                        <TableColumn fx:id="employeesCountCol" prefWidth="105.0" text="Employeescount" />
-                        <TableColumn fx:id="typeCol" text="Type" />
-                        <TableColumn fx:id="streetCol" prefWidth="90.0" text="Street" />
-                        <TableColumn fx:id="zipCodeCol" prefWidth="70.0" text="Zipcode" />
+                        <TableColumn fx:id="dateCol" prefWidth="120.0" text="%date" />
+                        <TableColumn fx:id="annualTurnoverCol" prefWidth="105.0" text="%annualTurnover" />
+                        <TableColumn fx:id="fullNameCol" prefWidth="130.0" text="%fullName" />
+                        <TableColumn fx:id="employeesCountCol" prefWidth="105.0" text="%employeesCount" />
+                        <TableColumn fx:id="typeCol" text="%type" />
+                        <TableColumn fx:id="streetCol" prefWidth="90.0" text="%street" />
+                        <TableColumn fx:id="zipCodeCol" prefWidth="70.0" text="%zipCode" />
                      </columns>
                   </TableView>
                </content>
@@ -68,22 +68,22 @@
    <top>
       <AnchorPane prefHeight="50.0" prefWidth="1280.0" style="-fx-background-color: #aaaaaa;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="14.0" layoutY="16.0" text="User:">
+            <Label fx:id="usernameLabel" layoutX="14.0" layoutY="16.0" text="%user">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button fx:id="exitButton" layoutX="1228.0" layoutY="12.0" mnemonicParsing="false" onAction="#exit" prefWidth="60.0" text="Exit" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <Button fx:id="exitButton" layoutX="1228.0" layoutY="12.0" mnemonicParsing="false" onAction="#exit" prefWidth="60.0" text="%exit" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="mapButton" layoutX="1148.0" layoutY="12.0" mnemonicParsing="false" onAction="#map" prefWidth="60.0" text="Map" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="10.0">
+            <Button fx:id="mapButton" layoutX="1148.0" layoutY="12.0" mnemonicParsing="false" onAction="#map" prefWidth="60.0" text="%map" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="10.0">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Label fx:id="usernameField" layoutX="50.0" layoutY="16.0" text="name">
+            <Label fx:id="usernameField" layoutX="50.0" layoutY="16.0">
                <font>
                   <Font size="14.0" />
                </font>

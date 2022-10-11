@@ -9,6 +9,7 @@ import Exceptions.AbstractException;
 import Exceptions.NoSuchTypeException;
 import Exceptions.NullValueException;
 import Exceptions.ValueOutOfRangeException;
+import Manager.OrganizationManager;
 import Tools.Tools;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -78,6 +79,7 @@ public class UpdateUI implements Initializable {
             String[] commandWithArgs = new String[]{"update",id.toString()};
 
             organization.setOwner(Client.clientInformation.getUserName());
+            organization.setId(id);
             organization.setName(nameField.getText());
 
             String x = xField.getText();

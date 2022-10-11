@@ -111,4 +111,22 @@ public class ObservableOrganization {
     public String getZipCode() {
         return zipCode.get();
     }
+
+    @Override
+    public String toString() {
+        return "Selected object:\n" +
+                "owner=" + owner +
+                "\nid=" + id +
+                "\nname=" + name +
+                "\nx=" + x +
+                "\ny=" + y +
+                "\ncreationDate=" + creationDate +
+                "\nannualTurnover=" + annualTurnover +
+                "\nfullName=" + fullName +
+                "\nemployeesCount=" + employeesCount +
+                "\nType=" + Type +
+                "\nStreet=" + Street +
+                "\nzipCode=" + zipCode +
+                '\n';
+    }
 }

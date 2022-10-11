@@ -4,7 +4,7 @@ import Client.Client;
 import Client.ClientRun;
 import Collection.ObservableOrganization;
 import Collection.Organization;
-import Manager.OrganizationManager;
+import Exceptions.NullValueException;
 import Tools.Tools;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -29,6 +29,9 @@ public class ManagerUI implements Initializable {
 
     @FXML
     private Label usernameField;
+
+    @FXML
+    private Label usernameLabel;
 
     @FXML
     private TableView<ObservableOrganization> organizationsTable;
@@ -125,7 +128,8 @@ public class ManagerUI implements Initializable {
     @FXML
     void add(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("../FXML/AddUI.fxml"));
+            ResourceBundle bundle = ResourceBundle.getBundle("Client/FXML/labels",ClientRun.locale);
+            Parent root = FXMLLoader.load(getClass().getResource("../FXML/AddUI.fxml"),bundle);
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 300, 574));
             stage.show();
@@ -139,7 +143,8 @@ public class ManagerUI implements Initializable {
     @FXML
     void addIfMax(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("../FXML/AddIfMaxUI.fxml"));
+            ResourceBundle bundle = ResourceBundle.getBundle("Client/FXML/labels",ClientRun.locale);
+            Parent root = FXMLLoader.load(getClass().getResource("../FXML/AddIfMaxUI.fxml"),bundle);
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 300, 574));
             stage.show();
@@ -165,7 +170,8 @@ public class ManagerUI implements Initializable {
     @FXML
     void executeScript(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("../FXML/ExecuteScriptUI.fxml"));
+            ResourceBundle bundle = ResourceBundle.getBundle("Client/FXML/labels",ClientRun.locale);
+            Parent root = FXMLLoader.load(getClass().getResource("../FXML/ExecuteScriptUI.fxml"),bundle);
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 300, 214));
             stage.show();
@@ -182,7 +188,13 @@ public class ManagerUI implements Initializable {
 
     @FXML
     void groupCountingByID(ActionEvent event) {
+        try {
+            String[] commandWithArgs = new String[]{"group_counting_by_id"};
 
+            Tools.handleCommand(commandWithArgs, null);
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -220,13 +232,20 @@ public class ManagerUI implements Initializable {
 
     @FXML
     void printFieldAscendingAnnualTurnover(ActionEvent event) {
+        try {
+            String[] commandWithArgs = new String[]{"print_field_ascending_annual_turnover"};
 
+            Tools.handleCommand(commandWithArgs, null);
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void removeByID(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("../FXML/RemoveByIDUI.fxml"));
+            ResourceBundle bundle = ResourceBundle.getBundle("Client/FXML/labels",ClientRun.locale);
+            Parent root = FXMLLoader.load(getClass().getResource("../FXML/RemoveByIDUI.fxml"),bundle);
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 300, 214));
             stage.show();
@@ -279,7 +298,8 @@ public class ManagerUI implements Initializable {
     @FXML
     void update(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("../FXML/UpdateUI.fxml"));
+            ResourceBundle bundle = ResourceBundle.getBundle("Client/FXML/labels",ClientRun.locale);
+            Parent root = FXMLLoader.load(getClass().getResource("../FXML/UpdateUI.fxml"),bundle);
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 300, 620));
             stage.show();
@@ -305,7 +325,8 @@ public class ManagerUI implements Initializable {
     @FXML
     void map(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("../FXML/MapUI.fxml"));
+            ResourceBundle bundle = ResourceBundle.getBundle("Client/FXML/labels",ClientRun.locale);
+            Parent root = FXMLLoader.load(getClass().getResource("../FXML/MapUI.fxml"),bundle);
             //Stage stage = new Stage();
             //stage.setScene(new Scene(root, 1280, 800));
             ClientRun.stage.setScene(new Scene(root,1280,800));
@@ -317,7 +338,8 @@ public class ManagerUI implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        usernameField.setText(Client.clientInformation.getUserName());
+        //usernameField.setText(Client.clientInformation.getUserName());
+        usernameLabel.setText(usernameLabel.getText() + Client.clientInformation.getUserName());
 
         organizationList = FXCollections.observableArrayList();
         organizationsTable.getColumns().clear();
@@ -352,5 +374,14 @@ public class ManagerUI implements Initializable {
             organizationList.add(organization.toObservableOrganization());
         }
         //organizationsTable.refresh();
+    }
+
+    public static ObservableOrganization findByID(Long id) {
+        for (ObservableOrganization o : organizationList) {
+            if (o.getId() == id.longValue()) {
+                return o;
+            }
+        }
+        throw new NullValueException("Error: Organization not found");
     }
 }

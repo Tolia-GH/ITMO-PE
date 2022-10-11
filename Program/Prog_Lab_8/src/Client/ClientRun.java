@@ -10,10 +10,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.ConnectException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class ClientRun extends Application {
 
     public static Stage stage;
+    public static Locale locale = new Locale("en", "US");
 
     public static void main(String[] args) {
 
@@ -36,7 +39,8 @@ public class ClientRun extends Application {
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML/AccountUI.fxml"));
+        ResourceBundle bundle = ResourceBundle.getBundle("Client/FXML/labels", locale);
+        Parent root = FXMLLoader.load(getClass().getResource("FXML/AccountUI.fxml"), bundle);
 
         Scene scene = new Scene(root);
         stage.setTitle("Organizations Manager");

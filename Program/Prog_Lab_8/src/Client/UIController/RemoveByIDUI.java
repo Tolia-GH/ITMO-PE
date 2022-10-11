@@ -55,7 +55,7 @@ public class RemoveByIDUI {
 
     @FXML
     void clear(ActionEvent event) {
-
+        IDField.clear();
     }
 
 }

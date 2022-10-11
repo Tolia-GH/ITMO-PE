@@ -18,6 +18,7 @@ import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.LinkedHashSet;
 import java.util.concurrent.LinkedBlockingDeque;
+import Tools.SQL;
 
 /**
  * The type Command manager.
@@ -200,7 +201,7 @@ public class CommandManager {
 
             Connection connection = DriverManager.getConnection(linkDb,managerDb,passwordDB);
             PreparedStatement preparedStatement = connection.prepareStatement("UPDATE organizations SET " +
-                    "name = ?, x = ?, y = ?, date = ?, annualturnover = ?, fullname = ?, employeescount = ?, type = ?, street = ?, zipcode = ?");
+                    "name = ?, x = ?, y = ?, date = ?, annualturnover = ?, fullname = ?, employeescount = ?, type = ?, street = ?, zipcode = ? WHERE id= ?");
 
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
             preparedStatement.setObject(1,organization.getName());
@@ -213,6 +214,7 @@ public class CommandManager {
             preparedStatement.setObject(8,organization.getType().toString());
             preparedStatement.setObject(9,organization.getPostalAddress().getStreet());
             preparedStatement.setObject(10,organization.getPostalAddress().getZipCode());
+            preparedStatement.setObject(11,organization.getId());
             preparedStatement.executeUpdate();
 
             appendMessageL("Program [update]: organization updated");
@@ -389,7 +391,7 @@ public class CommandManager {
      */
     public void executeGroupCountingByID() {
         clearMessage();
-        Tools.MessageL("author: Haven't figure out what should I do with this command...");
+        appendMessageL("author: Haven't figure out what should I do with this command...");
     }
 
     /**
@@ -417,20 +419,24 @@ public class CommandManager {
      */
     public void executePrintFieldAscendingAnnualTurnover() {
         clearMessage();
-        LinkedBlockingDeque<Organization> linkedBlockingSeque = OrganizationManager.getOrganizationSet();
+        LinkedBlockingDeque<Organization> linkedBlockingDeque = new LinkedBlockingDeque<>();
+        for (Organization o : OrganizationManager.getOrganizationSet()) {
+            linkedBlockingDeque.add(o);
+        }
         long min = Long.MAX_VALUE;
-        while (linkedBlockingSeque.size() > 0) {
+        while (linkedBlockingDeque.size() > 0) {
             Organization minOrg = new Organization();
-            for (Organization organization : linkedBlockingSeque) {
+            for (Organization organization : linkedBlockingDeque) {
                 if(organization.getAnnualTurnover() < min) {
                     min = organization.getAnnualTurnover();
                     minOrg = organization;
                 }
             }
             appendMessageL(minOrg.toString());
-            linkedBlockingSeque.remove(minOrg);
+            linkedBlockingDeque.remove(minOrg);
             min = Long.MAX_VALUE;
         }
+        //SQL.getOrganizationsFromDB();
     }
 
     /**

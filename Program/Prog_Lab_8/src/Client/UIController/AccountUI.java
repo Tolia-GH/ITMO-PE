@@ -23,6 +23,8 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.SocketChannel;
 import java.util.Iterator;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class AccountUI {
 
@@ -87,8 +89,8 @@ public class AccountUI {
                                 return;
                             } else if (Client.response.getResponseMessage().contains("Welcome")) {
                                 errorMassage.setText(Client.response.getResponseMessage());
-                                //FXMLLoader loader = new FXMLLoader();
-                                Parent root = FXMLLoader.load(getClass().getResource("../FXML/ManagerUI.fxml"));
+                                ResourceBundle bundle = ResourceBundle.getBundle("Client/FXML/labels",ClientRun.locale);
+                                Parent root = FXMLLoader.load(getClass().getResource("../FXML/ManagerUI.fxml"),bundle);
                                 ClientRun.stage.setScene(new Scene(root, 1280, 800));
                                 ClientRun.stage.show();
 
@@ -118,6 +120,52 @@ public class AccountUI {
         checkUser(clientInformation);
     }
 
+    @FXML
+    void setRu(ActionEvent event) throws IOException {
+        ClientRun.locale = new Locale("ru", "RU");
 
+        ResourceBundle bundle = ResourceBundle.getBundle("Client/FXML/labels", ClientRun.locale);
+        Parent root = FXMLLoader.load(getClass().getResource("../FXML/AccountUI.fxml"),bundle);
+        //Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        //stage.hide();
+        ClientRun.stage.setScene(new Scene(root));
+        ClientRun.stage.show();
+    }
+
+    @FXML
+    void setEt(ActionEvent event) throws IOException {
+        ClientRun.locale = new Locale("et", "EE");
+
+        ResourceBundle bundle = ResourceBundle.getBundle("Client/FXML/labels", ClientRun.locale);
+        Parent root = FXMLLoader.load(getClass().getResource("../FXML/AccountUI.fxml"),bundle);
+        //Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        //stage.hide();
+        ClientRun.stage.setScene(new Scene(root));
+        ClientRun.stage.show();
+    }
+
+    @FXML
+    void setHr(ActionEvent event) throws IOException {
+        ClientRun.locale = new Locale("en", "US");
+
+        ResourceBundle bundle = ResourceBundle.getBundle("Client/FXML/labels", ClientRun.locale);
+        Parent root = FXMLLoader.load(getClass().getResource("../FXML/AccountUI.fxml"),bundle);
+        //Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        //stage.hide();
+        ClientRun.stage.setScene(new Scene(root));
+        ClientRun.stage.show();
+    }
+
+    @FXML
+    void setEs(ActionEvent event) throws IOException {
+        ClientRun.locale = new Locale("es", "CO");
+
+        ResourceBundle bundle = ResourceBundle.getBundle("Client/FXML/labels", ClientRun.locale);
+        Parent root = FXMLLoader.load(getClass().getResource("../FXML/AccountUI.fxml"),bundle);
+        //Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        //stage.hide();
+        ClientRun.stage.setScene(new Scene(root));
+        ClientRun.stage.show();
+    }
 }
 
