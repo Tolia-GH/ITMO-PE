@@ -11,7 +11,6 @@
       <file value="file://$PROJECT_DIR$/src/Client/FXML/labels_en_US.properties" />
       <file value="file://$PROJECT_DIR$/src/Client/FXML/labels_es_CO.properties" />
       <file value="file://$PROJECT_DIR$/src/Client/FXML/labels_et_EE.properties" />
-      <file value="file://$PROJECT_DIR$/src/Client/FXML/labels_hr_HRV.properties" />
       <file value="file://$PROJECT_DIR$/src/Client/FXML/labels_ru_RU.properties" />
       <base-name>labels</base-name>
     </custom-resource-bundle>
