@@ -723,10 +723,19 @@
       如果刚体的质量连续分布，则上式的求和可用积分代替，即
 
       $$J=\int_{(m)}r^2{\rm d}m$$
+
+      - 质量为线分布：
+        $${\rm d}m=\lambda{\rm d}l$$
+      - 质量为面分布：
+        $${\rm d}m=\sigma{\rm d}s$$
+      - 质量为体分布：
+        $${\rm d}m=\rho{\rm d}V$$ 
     - 几种常见几何体的转动惯量
 
     <div align=center><img src="pic/Lec5.3.png"></div>
     <center>图5-3 质点在平面上做圆周运动的位置</center>
+
+    圆锥 - $\frac{3}{10}m^r^2$
 
   - 转动定律
 
