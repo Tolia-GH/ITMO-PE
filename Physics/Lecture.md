@@ -755,36 +755,39 @@
       称为刚体定轴转动的转动定律，是刚体定轴转动的基本运动方程。表明了刚体所受的对于某一固定转轴的合外力矩等于刚体对此转轴的转动惯量与刚体在此合外力矩作用下所获得的角加速度的乘积
       
   - 力矩的功
-      如 图3-5 所示，刚体在垂直于转轴 $Oz$ 的外力 $\boldsymbol{F}$ 的作用下转动。力 $\boldsymbol{F}$ 的作用点 $P$ 到转轴的距离为 $r$（相应的矢径为 $\boldsymbol{r}$），经过 ${\rm d}t$ 时间后，刚体转过一微小角度 ${\rm d}\theta$ 点的位移为 ${\rm d}\boldsymbol{r}$ 则力 $\boldsymbol{F}$ 在这段位移上所做的功为：
+    <div align=center><img src="pic/Lec3.5.png"></div>
+    <center>图5-2 转动定律的推导</center>
 
-      $${\rm d}\boldsymbol{W}=\boldsymbol{F}\cdot{\rm d}\boldsymbol{r}=F\cos\alpha{\rm d}s=f\cos(\frac{\pi}{2}-\varphi)r{\rm d}\theta=Fr\sin\varphi{\rm d}\theta$$
+    如 图3-5 所示，刚体在垂直于转轴 $Oz$ 的外力 $\boldsymbol{F}$ 的作用下转动。力 $\boldsymbol{F}$ 的作用点 $P$ 到转轴的距离为 $r$（相应的矢径为 $\boldsymbol{r}$），经过 ${\rm d}t$ 时间后，刚体转过一微小角度 ${\rm d}\theta$ 点的位移为 ${\rm d}\boldsymbol{r}$ 则力 $\boldsymbol{F}$ 在这段位移上所做的功为：
 
-      其中：
-      - $\varphi$ 为 $\boldsymbol{r}$ 和 $\boldsymbol{F}$ 之间的夹角
-      - $Fr\sin\varphi$ 是作用于 $P$ 点的力 $\boldsymbol{F}$ 对转轴的力矩 $\boldsymbol{M}$ 的大小
+    $${\rm d}\boldsymbol{W}=\boldsymbol{F}\cdot{\rm d}\boldsymbol{r}=F\cos\alpha{\rm d}s=f\cos(\frac{\pi}{2}-\varphi)r{\rm d}\theta=Fr\sin\varphi{\rm d}\theta$$
 
-      则上式化为
+    其中：
+    - $\varphi$ 为 $\boldsymbol{r}$ 和 $\boldsymbol{F}$ 之间的夹角
+    - $Fr\sin\varphi$ 是作用于 $P$ 点的力 $\boldsymbol{F}$ 对转轴的力矩 $\boldsymbol{M}$ 的大小
 
-      $${\rm d}W=M{\rm d}\theta$$
+    则上式化为
 
-      上式表明，力所做的元功等于力矩 $M$ 与角位移 ${\rm d}\theta$ 的乘积，也把它称为力矩的功。与力的功类似，力矩的功反映了力矩的空间累积效应
+    $${\rm d}W=M{\rm d}\theta$$
 
-      当刚体在力矩的作用下转过 $\Delta\theta$ 角时，力矩对刚体所做的功为：
+    上式表明，力所做的元功等于力矩 $M$ 与角位移 ${\rm d}\theta$ 的乘积，也把它称为力矩的功。与力的功类似，力矩的功反映了力矩的空间累积效应
 
-      $$W=\int{\rm d}W=\int^\theta_0 M{\rm d}\theta$$
+    当刚体在力矩的作用下转过 $\Delta\theta$ 角时，力矩对刚体所做的功为：
 
-      若力矩为常力矩，则力矩所做的功为：
+    $$W=\int{\rm d}W=\int^\theta_0 M{\rm d}\theta$$
 
-      $$W=M\Delta\theta$$
+    若力矩为常力矩，则力矩所做的功为：
 
-      通过以上推导可看出，力矩做功的本质是力所做的功，即力做功的另一种表达形式
+    $$W=M\Delta\theta$$
 
-    - 力矩的功率
-      按功率定义,也可得到力矩的瞬时功率：
+    通过以上推导可看出，力矩做功的本质是力所做的功，即力做功的另一种表达形式
 
-      $$P=\frac{ {\rm d}W}{ {\rm d}t}=M\frac{ {\rm d}\theta}{ {\rm d}t}=M\omega$$
+  - 力矩的功率
+    按功率定义,也可得到力矩的瞬时功率：
 
-      即力矩的功率等于力矩与角速度的乘积
+    $$P=\frac{ {\rm d}W}{ {\rm d}t}=M\frac{ {\rm d}\theta}{ {\rm d}t}=M\omega$$
+
+    即力矩的功率等于力矩与角速度的乘积
   - 刚体定轴转动的动能
     设某时刻刚体的角速度为 $\omega$，则到转轴的垂直距离为 $r_i$ 的质量为 $\Delta m_i$ 的质元的速度为 $v_i=r_i\omega$，从而该质元的动能为 $\Delta m_iv_i^2/2$。这样整个刚体的转动动能为：
 
@@ -798,7 +801,7 @@
 
     又由转动定律：
 
-    $$M=J\beta=J\frac{ {\rm d}\omega}{ {\rm d}t}=J\frac{ {\rm d}\omega}{ {\rm d}\theta}\cdot\frac{ {\rm d}\theta}{ {\rm d}t}=J\omega {\rm d}\omega$$
+    $$M=J\beta=J\frac{ {\rm d}\omega}{ {\rm d}t}=J\frac{ {\rm d}\omega}{ {\rm d}\theta}\cdot\frac{ {\rm d}\theta}{ {\rm d}t}=J\omega\frac{ {\rm d}\omega}{ {\rm d}\theta}$$
 
     则合外力矩的元功为：
 
@@ -898,6 +901,11 @@
     - $F$ - 外力
     - $k$ - 弹性系数
     - $x$ - 形变量
+- 叠加原理：
+  定义：如果内力，应力，变形等与外力成线性关系，则复杂受理情况下组合变形构件的内力，应力，变形等可以由几组基本变形的内力，应力，变形等的叠加得到
+  条件： 
+  1. 应力与应变为线性关系，即满足胡克定律
+  2. 变形是小变形
 - 弹性模量
   - 杨氏模量（$E$）
     - 定义：表示膨胀或压缩情况下应力与应变的关系，又叫压缩模量，即物体受涨缩力时应力与应变之比
@@ -907,6 +915,17 @@
   - 概念：固体介质越坚硬，在同样作用力下，横向应变越小，泊松比越小；反之越大
 - 体变模量（K）
   - 定义：设一物体，收到静水柱压力 $p$ 的作用，只产生体积形变，$\Delta V/V$ 其中 $V$ 是物体原体积 $\Delta V$ 是物体体积变化量，这种情况下的应力与应变的比称为体变模量，表示物体的抗压性质
+- 剪切模量
+  - 定义：剪应力与剪应变的比值。公式记为
+
+  $$G=\frac{\tau}{\gamma}$$ 
+  其中：$G$ 表示剪切模量，$\tau$ 为剪应力，$\gamma$ 为剪应变
+
+  在均质且等向性的材料中：
+
+  $$G=\frac{E}{2(1+\nu)}$$
+
+  其中，$G$ 是杨氏模数，$\nu$ 是泊松比
 
 ## Lecture №9 Основы гидродинамики 流体力学基础
 
