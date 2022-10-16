@@ -10,9 +10,11 @@
         <script>
             function check() {
                 let Y = document.getElementById("Y").value;
-                let R = document.getElementById("R").value;
-                let X = document.getElementById("X").value;
-                alert("X="+X+"\nY="+Y+"R="+R);
+
+                let checkBox = document.getElementsByName("X");
+                let arrayY = new Array();
+
+                alert("Y="+Y);
             }
             function sendAll() {
                 check()
@@ -28,36 +30,39 @@
         </h2>
         <form id = "form1" method = "post">
             <div class = "wrapper">
-                <div class = "inputX">
+
+                <div class = "InputX">
                     <p>
-                        Please input value of X<span class = "required">*</span>:<br>
-                        <input type="text" value="from -5 to 5" name="X">
+                        Please choose value of X<span class = "required">*</span>:<br>
+                        <input type="checkbox" value="-3" name="X">-3
+                        <input type="checkbox" value="-2" name="X">-2
+                        <input type="checkbox" value="-1" name="X">-1
+                        <input type="checkbox" value="0" name="X">0
+                        <input type="checkbox" value="1" name="X">1
+                        <input type="checkbox" value="2" name="X">2
+                        <input type="checkbox" value="3" name="X">3
+                        <input type="checkbox" value="4" name="X">4
+                        <input type="checkbox" value="5" name="X">5
                     </p>
                 </div>
 
-                <div class = "InputY">
+                <div class = "inputY">
                     <p>
-                        Please choose value of Y<span class = "required">*</span>:<br>
-                        <input type="checkbox" value="-2" name="Y">-2
-                        <input type="checkbox" value="-1.5" name="Y">-1.5
-                        <input type="checkbox" value="-1" name="Y">-1
-                        <input type="checkbox" value="-0.5" name="Y">-0.5
-                        <input type="checkbox" value="0" name="Y">0
-                        <input type="checkbox" value="0.5" name="Y">0.5
-                        <input type="checkbox" value="1" name="Y">1
-                        <input type="checkbox" value="1.5" name="Y">1.5
-                        <input type="checkbox" value="2" name="Y">2
+                        Please input value of Y<span class = "required">*</span>:<br>
+                        <input type="text" placeholder="from -3 to 3" id="Y">
                     </p>
                 </div>
+
+
 
                 <div class = "InputR">
                     <p>
                         Please choose value of R<span class = "required">*</span>:<br>
-                        <input type="button" value="1" name="R">
-                        <input type="button" value="2" name="R">
-                        <input type="button" value="3" name="R">
-                        <input type="button" value="4" name="R">
-                        <input type="button" value="5" name="R">
+                        <input type="radio" value="1" name="R">1
+                        <input type="radio" value="1.5" name="R">1.5
+                        <input type="radio" value="2" name="R">2
+                        <input type="radio" value="2.5" name="R">2.5
+                        <input type="radio" value="3" name="R">3
                     </p>
                 </div>
                 <div class = "submit">
