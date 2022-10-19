@@ -1,7 +1,13 @@
 <?php
-$x = "";
+$X = array();
+$Y = $R = "";
 if($_SERVER["REQUEST_METHOD"] == "GET") {
-    //$x = $_GET["R"];
-    echo $_GET["R"];
+    $X = $_GET["X"];//In the HTML file 'name = X[]', but here in the $_GET[] the name string can not involve symbol '[]'
+    $Y = $_GET["Y"];
+    $R = $_GET["R"];
+
+    echo $X[0];
+    echo $Y;
+    echo $R;
 }
 
