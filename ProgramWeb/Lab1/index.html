@@ -9,15 +9,65 @@
     <body>
         <script>
             function check() {
+                let checkBox = document.getElementsByName("X[]");
+                let arrayX = [];
+                let pinX = 0;
+
+                for (let i=0; i<checkBox.length; i++) {
+                    if (checkBox[i].checked) {
+                        arrayX[pinX++] = checkBox[i].value;
+                    }
+                }
+                if (pinX === 0) {
+                    alert("You should input at least 1 value of X!");
+                    return false;
+                }
+
                 let Y = document.getElementById("Y").value;
+                if (Y === "") {
+                    alert("Y can not be null");
+                    return false;
+                } else if (Y > 3 || Y < -3) {
+                    alert("Value out of range!");
+                    return false;
+                }
 
-                let checkBox = document.getElementsByName("X");
-                let arrayY = new Array();
+                let R=-1;
+                let checkR = false
+                let radioR = document.getElementsByName("R");
 
-                alert("Y="+Y);
+                for (let i=0; i<radioR.length; i++) {
+                    if (radioR[i].checked) {
+                        R=radioR[i].value;
+                        checkR = true;
+                    }
+                }
+
+                if (checkR === false) {
+                    alert("R can not be null!");
+                    return false;
+                }
+
+                //alert(pinX);
+                return true;
             }
             function sendAll() {
-                check()
+                let allRight = check();
+                //let form = document.getElementById("form1");
+                //let form_data = new FormData(form);
+                if(allRight){
+                    let request =new XMLHttpRequest();
+                    request.open("GET","PHPScript.php");//asynchronous
+                    request.send();
+
+                    request.onreadystatechange = function(){
+                        if (request.readyState === 4 && request.status === 200) {
+                            document.write(request.responseText);
+                        }
+                    }
+
+                }
+
             }
         </script>
 
@@ -28,48 +78,45 @@
         <h2>
             Lab 1
         </h2>
-        <form id = "form1" method = "post">
-            <div class = "wrapper">
 
-                <div class = "InputX">
-                    <p>
-                        Please choose value of X<span class = "required">*</span>:<br>
-                        <input type="checkbox" value="-3" name="X">-3
-                        <input type="checkbox" value="-2" name="X">-2
-                        <input type="checkbox" value="-1" name="X">-1
-                        <input type="checkbox" value="0" name="X">0
-                        <input type="checkbox" value="1" name="X">1
-                        <input type="checkbox" value="2" name="X">2
-                        <input type="checkbox" value="3" name="X">3
-                        <input type="checkbox" value="4" name="X">4
-                        <input type="checkbox" value="5" name="X">5
-                    </p>
-                </div>
+        <form id = "form1" method = "get" action="PHPScript.php">
+            <div class = "InputX">
+                <p>
+                    Please choose value of X<span class = "required">*</span>:<br>
+                    <input type="checkbox" value="-3" name="X[]">-3
+                    <input type="checkbox" value="-2" name="X[]">-2
+                    <input type="checkbox" value="-1" name="X[]">-1
+                    <input type="checkbox" value="0" name="X[]">0
+                    <input type="checkbox" value="1" name="X[]">1
+                    <input type="checkbox" value="2" name="X[]">2
+                    <input type="checkbox" value="3" name="X[]">3
+                    <input type="checkbox" value="4" name="X[]">4
+                    <input type="checkbox" value="5" name="X[]">5
+                </p>
+            </div>
 
-                <div class = "inputY">
-                    <p>
-                        Please input value of Y<span class = "required">*</span>:<br>
-                        <input type="text" placeholder="from -3 to 3" id="Y">
-                    </p>
-                </div>
+            <div class = "inputY">
+                <p>Please input value of Y<span class = "required">*</span>:<br>
+                <input type="text" placeholder="from -3 to 3" id="Y" name = "Y"></p>
+            </div>
 
+            <div class = "InputR">
+                <p>
+                    Please choose value of R<span class = "required">*</span>:<br>
+                    <input type="radio" value="1" name="R">1
+                    <input type="radio" value="1.5" name="R">1.5
+                    <input type="radio" value="2" name="R">2
+                    <input type="radio" value="2.5" name="R">2.5
+                    <input type="radio" value="3" name="R">3
+                </p>
+            </div>
 
-
-                <div class = "InputR">
-                    <p>
-                        Please choose value of R<span class = "required">*</span>:<br>
-                        <input type="radio" value="1" name="R">1
-                        <input type="radio" value="1.5" name="R">1.5
-                        <input type="radio" value="2" name="R">2
-                        <input type="radio" value="2.5" name="R">2.5
-                        <input type="radio" value="3" name="R">3
-                    </p>
-                </div>
-                <div class = "submit">
-                    <button onclick = "check()">submit</button>
-                </div>
-            
+            <div class = "submit">
+                <input type="submit" value="Submit" onclick="sendAll()">
             </div>
         </form>
+            <div class = "output">
+                <p id = "result">Res:</p>
+            </div>
     </body>
 </html>
