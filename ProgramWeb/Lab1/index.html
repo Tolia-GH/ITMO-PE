@@ -9,7 +9,7 @@
     <body>
         <script>
             function check() {
-                let checkBox = document.getElementsByName("X[]");
+                let checkBox = document.getElementsByName("arrayX[]");
                 let arrayX = [];
                 let pinX = 0;
 
@@ -23,8 +23,8 @@
                     return false;
                 }
 
-                let Y = document.getElementById("Y").value;
-                if (Y === "") {
+                let Y = document.getElementById("valueOfY").value;
+                if (Y === "" || Y === null || isNaN(Y)) {
                     alert("Y can not be null");
                     return false;
                 } else if (Y > 3 || Y < -3) {
@@ -52,52 +52,51 @@
                 return true;
             }
             function sendAll() {
-                let allRight = check();
-                //let form = document.getElementById("form1");
-                //let form_data = new FormData(form);
-                if(allRight){
+                //let allRight = check();
+                let form = document.getElementById("form1");
+                let formData = new FormData(form);
+
+                if(check()){
                     let request =new XMLHttpRequest();
-                    request.open("GET","PHPScript.php");//asynchronous
-                    request.send();
+                    request.open("GET","PHPScript.php",true);//asynchronous
+                    request.send(formData);
 
                     request.onreadystatechange = function(){
                         if (request.readyState === 4 && request.status === 200) {
                             document.write(request.responseText);
                         }
                     }
-
                 }
-
             }
         </script>
 
-        <h1 class = "hate">
-            Студент: Чжоу Хунсян P32131 <br> Вариант: 14800
+        <h1>
+            Студент: Чжоу Хунсян P32131 <br> Вариант: 1320
         </h1>
 
         <h2>
             Lab 1
         </h2>
 
-        <form id = "form1" method = "get" action="PHPScript.php">
+        <form id = "form1" method = "get" action="PHPScript.php" onsubmit="">
             <div class = "InputX">
                 <p>
                     Please choose value of X<span class = "required">*</span>:<br>
-                    <input type="checkbox" value="-3" name="X[]">-3
-                    <input type="checkbox" value="-2" name="X[]">-2
-                    <input type="checkbox" value="-1" name="X[]">-1
-                    <input type="checkbox" value="0" name="X[]">0
-                    <input type="checkbox" value="1" name="X[]">1
-                    <input type="checkbox" value="2" name="X[]">2
-                    <input type="checkbox" value="3" name="X[]">3
-                    <input type="checkbox" value="4" name="X[]">4
-                    <input type="checkbox" value="5" name="X[]">5
+                    <input type="checkbox" value="-3" name="arrayX[]">-3
+                    <input type="checkbox" value="-2" name="arrayX[]">-2
+                    <input type="checkbox" value="-1" name="arrayX[]">-1
+                    <input type="checkbox" value="0" name="arrayX[]">0
+                    <input type="checkbox" value="1" name="arrayX[]">1
+                    <input type="checkbox" value="2" name="arrayX[]">2
+                    <input type="checkbox" value="3" name="arrayX[]">3
+                    <input type="checkbox" value="4" name="arrayX[]">4
+                    <input type="checkbox" value="5" name="arrayX[]">5
                 </p>
             </div>
 
             <div class = "inputY">
                 <p>Please input value of Y<span class = "required">*</span>:<br>
-                <input type="text" placeholder="from -3 to 3" id="Y" name = "Y"></p>
+                <input type="text" placeholder="from -3 to 3" id="valueOfY" name = "Y"></p>
             </div>
 
             <div class = "InputR">
@@ -112,11 +111,17 @@
             </div>
 
             <div class = "submit">
-                <input type="submit" value="Submit" onclick="sendAll()">
+                <input type="submit" name="submit" onclick="return check()">
             </div>
         </form>
-            <div class = "output">
-                <p id = "result">Res:</p>
-            </div>
+        <!--
+        <div class = "submit">
+            <button type="button" onclick="sendAll()"> submit</button>
+        </div>
+        -->
+
+        <div class = "range">
+            <img src="WX20221019-113638.png">
+        </div>
     </body>
 </html>

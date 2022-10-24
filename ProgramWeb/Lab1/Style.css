@@ -1,0 +1,38 @@
+body {
+    background-color: lightblue;
+}
+
+span.required {
+    color : red;
+}
+
+h1 {
+    Font-family: "Times New Roman", serif;
+    color : black;
+}
+
+h2 {
+    Font-family: "Times New Roman", serif;
+    color : black;
+}
+p {
+    Font-family: "Times New Roman", serif;
+    color : black;
+}
+
+table {
+    border-collapse:collapse;
+}
+
+.InputR{
+    grid-column: 1;
+    grid-row:1;
+}
+.InputX{
+    grid-column: 1;
+    grid-row:2;
+}
+.inputY{
+    grid-column: 1;
+    grid-row:3;
+}
