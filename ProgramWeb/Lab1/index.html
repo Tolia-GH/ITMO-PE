@@ -2,7 +2,7 @@
 <html lang = "en">
     <head>
         <meta charset = "UTF-8">
-        <title>Студент: Чжоу Хунсян P32131 Вариант: 14800</title>
+        <title>Студент: Чжоу Хунсян P32131 Вариант: 1320</title>
         <link rel="stylesheet" type="text/css" href="Style.css">
     </head>
 
@@ -51,19 +51,24 @@
                 //alert(pinX);
                 return true;
             }
-            function sendAll() {
+            function send() {
                 //let allRight = check();
                 let form = document.getElementById("form1");
                 let formData = new FormData(form);
 
                 if(check()){
-                    let request =new XMLHttpRequest();
-                    request.open("GET","PHPScript.php",true);//asynchronous
+                    let request = new XMLHttpRequest();
+                    let url = 'PHPScript.php';
+
+                    request.open("POST",url,true);//asynchronous
+                    //request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;")
                     request.send(formData);
 
-                    request.onreadystatechange = function(){
-                        if (request.readyState === 4 && request.status === 200) {
-                            document.write(request.responseText);
+                    request.onreadystatechange = function() {
+                        if (request.readyState === 4  && request.status === 200) {
+                            let origin = document.getElementById("result").innerHTML;
+                            document.getElementById("result").innerHTML = origin + request.responseText;
+                            //document.write(request.responseText);
                         }
                     }
                 }
@@ -78,7 +83,7 @@
             Lab 1
         </h2>
 
-        <form id = "form1" method = "get" action="PHPScript.php" onsubmit="">
+        <form id = "form1" method = "post">
             <div class = "InputX">
                 <p>
                     Please choose value of X<span class = "required">*</span>:<br>
@@ -109,16 +114,20 @@
                     <input type="radio" value="3" name="R">3
                 </p>
             </div>
-
+            <!--
             <div class = "submit">
                 <input type="submit" name="submit" onclick="return check()">
             </div>
+            -->
         </form>
-        <!--
+
         <div class = "submit">
-            <button type="button" onclick="sendAll()"> submit</button>
+            <button type="button" id = "submit" onclick="send()"> submit</button>
         </div>
-        -->
+
+        <div class = "output">
+            <p id="result">Result:</p>
+        </div>
 
         <div class = "range">
             <img src="WX20221019-113638.png">

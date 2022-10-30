@@ -1,4 +1,34 @@
 <?php
+class Dot {
+    var $x;
+    var $y;
+    var $r;
+    var $check;
+
+    function __construct($x, $y, $r, $check) {
+        $this->x = $x;
+        $this->r = $r;
+        $this->y = $y;
+        $this->check = $check;
+    }
+
+    function getX() {
+        return $this->x;
+    }
+
+    function getY() {
+        return $this->y;
+    }
+
+    function getR() {
+        return $this->r;
+    }
+
+    function getCheck() {
+        return $this->check;
+    }
+}
+
 class Checker {
     var $X;
     var $Y;
@@ -26,29 +56,18 @@ class Checker {
 
     }
 }
-class Dot{
-    var $x;
-    var $y;
-    var $r;
 
-    function __construct($x,$y,$y)
-    {
-        $this->x = $x;
-        $this->r = $r;
-        $this->y = $y
 
-    }
-}
-var $dots = array();
 $startTime = microtime(true);
+$dots = array();
 
-$X = array();
-$Y = $R = "";
+//$X = array();
+//$Y = $R = "";
 $count = 0;
 
 if($_SERVER["REQUEST_METHOD"] == "GET") {
 
-    $X = $_GET["arrayX"];//In the HTML file 'name = X[]', but here in the $_GET[] the name string can not involve symbol '[]'
+    $X = $_GET["arrayX[]"];//In the HTML file 'name = X[]', but here in the $_GET[] the name string can not involve symbol '[]'
     $Y = $_GET["Y"];
     $R = $_GET["R"];
 
@@ -65,12 +84,27 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
     $checker = new Checker($Y,$R);
 
     for ($i = 0; $i < count($X); $i++) {
+
         $checker->setX($X[$i]);
-        $table .= "<tr>";
-        $table .= "<td>$X[$i]</td>";
-        $table .= "<td>$Y</td>";
-        $table .= "<td>$R</td>";
+        //$table .= "<tr>";
+        //$table .= "<td>$X[$i]</td>";
+        //$table .= "<td>$Y</td>";
+        //$table .= "<td>$R</td>";
         if ($checker->check()) {
+            $dot = new Dot($X[$i],$Y,$R,true);
+        } else {
+            $dot = new Dot($X[$i],$Y,$R,false);
+        }
+        //$table .= "</tr>";
+        array_push($dots, $dot);
+    }
+
+    for ($i = 0; $i < sizeof($dots); $i++) {
+        $table .= "<tr>";
+        $table .= "<td>" . $dots[$i]->x . "</td>";
+        $table .= "<td>" . $dots[$i]->y . "</td>";
+        $table .= "<td>" . $dots[$i]->r . "</td>";
+        if ($dots[$i]->check) {
             $table .= "<td>Coordinate in range</td>";
         } else {
             $table .= "<td>Coordinate out of range</td>";
