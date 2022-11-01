@@ -60,6 +60,11 @@ $$\begin{cases}
 main Algorithm:
 
 ```Java
+double[][] matrixTable = new double[3][4];
+double resultX;
+double resultY;
+double resultZ;
+
 for (int i = 0; i < n - 1; i++) {
     for (int j = i + 1; j < n; j++) {
         double div = matrixTable[j][i]/matrixTable[i][i];
@@ -71,17 +76,28 @@ for (int i = 0; i < n - 1; i++) {
 }
 
 for (int i = n-1; i > 0; i--) {
-            for (int j = i-1; j >= 0 ; j--) {
-                double div = matrixTable[j][i]/matrixTable[i][i];
-                for (int k = 0; k < n + 1; k++) {
-                    matrixTable[j][k] = matrixTable[j][k] - div * matrixTable[i][k];
-                    //matrixTable[j][k] *= matrixTable[i][i];
-                }
-            }
+    for (int j = i-1; j >= 0 ; j--) {
+        double div = matrixTable[j][i]/matrixTable[i][i];
+        for (int k = 0; k < n + 1; k++) {
+            matrixTable[j][k] = matrixTable[j][k] - div * matrixTable[i][k];
+            //matrixTable[j][k] *= matrixTable[i][i];
         }
+    }
+}
+
+for (int i = 0; i < n; i++) {
+    double div = matrixTable[i][i];
+    for (int j = 0; j < n + 1; j++) {
+        matrixTable[i][j] = matrixTable[i][j]/div;
+    }
+}
+
+resultX = matrixTable[0][3];
+resultY = matrixTable[1][3];
+resultZ = matrixTable[2][3];
 ```
 
-View Code in [GitHub]()
+View More in [GitHub]()
 
 ## Задание 2
 
