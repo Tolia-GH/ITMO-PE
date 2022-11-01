@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graphicwork.ResultPage">
+   <children>
+      <Label layoutX="174.0" layoutY="11.0" text="Input Data" AnchorPane.leftAnchor="174.0" AnchorPane.topAnchor="11.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <VBox layoutX="39.0" layoutY="35.0" prefHeight="101.0" prefWidth="375.0" spacing="10.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <HBox prefHeight="27.0" prefWidth="205.0">
+               <children>
+                  <Label fx:id="equation1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="375.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="205.0">
+               <children>
+                  <Label fx:id="equation2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="375.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="205.0">
+               <children>
+                  <Label fx:id="equation3" prefHeight="27.0" prefWidth="375.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="251.0" layoutY="50.0" prefHeight="101.0" prefWidth="375.0" spacing="10.0" AnchorPane.rightAnchor="25.0">
+         <children>
+            <HBox prefHeight="27.0" prefWidth="205.0" spacing="5.0">
+               <children>
+                  <Label fx:id="a1_11" prefHeight="27.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a1_12" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a1_13" prefHeight="27.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="b1_1" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="205.0" spacing="5.0">
+               <children>
+                  <Label fx:id="a1_21" prefHeight="27.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a1_22" prefHeight="27.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a1_23" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="b1_2" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="205.0" spacing="5.0">
+               <children>
+                  <Label fx:id="a1_31" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a1_32" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a1_33" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="b1_3" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="25.0" layoutY="204.0" prefHeight="101.0" prefWidth="375.0" spacing="10.0" AnchorPane.leftAnchor="25.0">
+         <children>
+            <HBox prefHeight="27.0" prefWidth="205.0" spacing="5.0">
+               <children>
+                  <Label fx:id="a2_11" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a2_12" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a2_13" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="b2_1" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="205.0" spacing="5.0">
+               <children>
+                  <Label fx:id="a2_21" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a2_22" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a2_23" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="b2_2" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="205.0" spacing="5.0">
+               <children>
+                  <Label fx:id="a2_31" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a2_32" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a2_33" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="b2_3" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="189.0" layoutY="165.0" text="Step 1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="567.0" layoutY="11.0" text="Matrix">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="563.0" layoutY="165.0" text="Step 2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <VBox layoutX="260.0" layoutY="204.0" prefHeight="101.0" prefWidth="375.0" spacing="10.0" AnchorPane.rightAnchor="25.0">
+         <children>
+            <HBox prefHeight="27.0" prefWidth="205.0" spacing="5.0">
+               <children>
+                  <Label fx:id="a3_11" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a3_12" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a3_13" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="b3_1" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="205.0" spacing="5.0">
+               <children>
+                  <Label fx:id="a3_21" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a3_22" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a3_23" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="b3_2" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="205.0" spacing="5.0">
+               <children>
+                  <Label fx:id="a3_31" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a3_32" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="a3_33" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="b3_3" prefHeight="29.0" prefWidth="90.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label fx:id="result" layoutX="373.0" layoutY="339.0" text="Result: " textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

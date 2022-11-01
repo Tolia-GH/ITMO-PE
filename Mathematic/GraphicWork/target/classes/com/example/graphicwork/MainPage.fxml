@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="218.0" prefWidth="235.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graphicwork.MainPage">
+   <children>
+      <VBox layoutX="29.0" layoutY="25.0" prefHeight="101.0" prefWidth="185.0" spacing="10.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <HBox prefHeight="27.0" prefWidth="205.0">
+               <children>
+                  <TextField fx:id="a11" prefHeight="30.0" prefWidth="30.0" />
+                  <Label prefHeight="29.0" prefWidth="21.0" text="x+">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="a12" prefHeight="30.0" prefWidth="30.0" />
+                  <Label prefHeight="29.0" prefWidth="21.0" text="y+">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="a13" prefHeight="30.0" prefWidth="30.0" />
+                  <Label prefHeight="29.0" prefWidth="21.0" text="z=">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="b1" prefHeight="30.0" prefWidth="30.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="205.0">
+               <children>
+                  <TextField fx:id="a21" prefHeight="30.0" prefWidth="30.0" />
+                  <Label prefHeight="29.0" prefWidth="21.0" text="x+">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="a22" prefHeight="30.0" prefWidth="30.0" />
+                  <Label prefHeight="29.0" prefWidth="21.0" text="y+">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="a23" prefHeight="30.0" prefWidth="30.0" />
+                  <Label prefHeight="29.0" prefWidth="21.0" text="z=">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="b2" prefHeight="30.0" prefWidth="30.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="205.0">
+               <children>
+                  <TextField fx:id="a31" prefHeight="30.0" prefWidth="30.0" />
+                  <Label prefHeight="29.0" prefWidth="21.0" text="x+">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="a32" prefHeight="30.0" prefWidth="30.0" />
+                  <Label prefHeight="29.0" prefWidth="21.0" text="y+">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="a33" prefHeight="30.0" prefWidth="30.0" />
+                  <Label prefHeight="29.0" prefWidth="21.0" text="z=">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="b3" prefHeight="30.0" prefWidth="30.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="79.0" layoutY="14.0" text="Input Data" AnchorPane.leftAnchor="79.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonRun" layoutX="24.0" layoutY="168.0" mnemonicParsing="false" onAction="#run" prefHeight="32.0" prefWidth="84.0" text="Run">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonClear" layoutX="123.0" layoutY="168.0" mnemonicParsing="false" onAction="#clear" prefHeight="32.0" prefWidth="84.0" text="Clear">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

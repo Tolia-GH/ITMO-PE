@@ -57,6 +57,32 @@ $$\begin{cases}
     2x+2y+z=-1\\
 \end{cases}$$
 
+main Algorithm:
+
+```Java
+for (int i = 0; i < n - 1; i++) {
+    for (int j = i + 1; j < n; j++) {
+        double div = matrixTable[j][i]/matrixTable[i][i];
+        for (int k = 0; k < n + 1; k++) {
+            matrixTable[j][k] = matrixTable[j][k] - div * matrixTable[i][k];
+            //matrixTable[j][k] *= matrixTable[i][i];
+        }
+    }
+}
+
+for (int i = n-1; i > 0; i--) {
+            for (int j = i-1; j >= 0 ; j--) {
+                double div = matrixTable[j][i]/matrixTable[i][i];
+                for (int k = 0; k < n + 1; k++) {
+                    matrixTable[j][k] = matrixTable[j][k] - div * matrixTable[i][k];
+                    //matrixTable[j][k] *= matrixTable[i][i];
+                }
+            }
+        }
+```
+
+View Code in [GitHub]()
+
 ## Задание 2
 
 ## Задание 3

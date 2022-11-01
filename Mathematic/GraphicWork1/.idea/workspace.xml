@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="GraphicWork1" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6d34ed17-652f-4890-9fbf-c84e1c609c54" name="变更" comment="变更">
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/artifacts/GraphicWork_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/libraries/Maven__org_openjfx_javafx_base_17_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/libraries/Maven__org_openjfx_javafx_base_mac_aarch64_17_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/libraries/Maven__org_openjfx_javafx_controls_17_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/libraries/Maven__org_openjfx_javafx_controls_mac_aarch64_17_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/libraries/Maven__org_openjfx_javafx_fxml_17_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/libraries/Maven__org_openjfx_javafx_fxml_mac_aarch64_17_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/libraries/Maven__org_openjfx_javafx_graphics_17_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/libraries/Maven__org_openjfx_javafx_graphics_mac_aarch64_17_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/GraphicWork.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/src/main/java/com/example/graphicwork/AppStart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/src/main/java/com/example/graphicwork/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/src/main/java/com/example/graphicwork/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/src/main/java/com/example/graphicwork/MainPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/src/main/java/com/example/graphicwork/Matrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/src/main/java/com/example/graphicwork/ResultPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/src/main/resources/com/example/graphicwork/MainPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/src/main/resources/com/example/graphicwork/ResultPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphicWork/src/main/resources/com/example/graphicwork/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2Gug1M8uSye8cLX1nDmJJXEX9Zy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main.Main" />
+      <module name="GraphicWork1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GraphicWork1.jar (1)" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/GraphicWork1/GraphicWork1.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GraphicWork1.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/GraphicWork1_jar/GraphicWork1.jar" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="6d34ed17-652f-4890-9fbf-c84e1c609c54" name="变更" comment="" />
+      <created>1667243668352</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667243668352</updated>
+      <workItem from="1667243669944" duration="27108000" />
+      <workItem from="1667295078610" duration="24000" />
+      <workItem from="1667295117115" duration="1750000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="matrix" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
