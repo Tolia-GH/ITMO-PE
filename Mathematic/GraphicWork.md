@@ -97,7 +97,9 @@ resultY = matrixTable[1][3];
 resultZ = matrixTable[2][3];
 ```
 
-View More in [GitHub]()
+View More in [GitHub](https://github.com/Tolia-GH/Semester-2/tree/main/Mathematic/GraphicWork)
+
+Download [Application](https://github.com/Tolia-GH/Semester-2/releases/download/Mathematic/GraphicWork.jar)
 
 ## Задание 2
 
