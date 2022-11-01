@@ -2,6 +2,7 @@ package com.example.graphicwork;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 
 import java.net.URL;
@@ -146,6 +147,10 @@ public class ResultPage implements Initializable {
         equation2.setText(inputMatrix[1][0] + "x" + inputMatrix[1][1] + "y" + inputMatrix[1][2] + "z=" + inputMatrix[1][3]);
         equation3.setText(inputMatrix[2][0] + "x" + inputMatrix[2][1] + "y" + inputMatrix[2][2] + "z=" + inputMatrix[2][3]);
 
+        //equation1.setAlignment(Pos.CENTER);
+        //equation2.setAlignment(Pos.CENTER);
+        //equation3.setAlignment(Pos.CENTER);
+
         a1_11.setText(inputMatrix[0][0]); a1_12.setText(inputMatrix[0][1]); a1_13.setText(inputMatrix[0][2]); b1_1.setText(inputMatrix[0][3]);
         a1_21.setText(inputMatrix[1][0]); a1_22.setText(inputMatrix[1][1]); a1_23.setText(inputMatrix[1][2]); b1_2.setText(inputMatrix[1][3]);
         a1_31.setText(inputMatrix[2][0]); a1_32.setText(inputMatrix[2][1]); a1_33.setText(inputMatrix[2][2]); b1_3.setText(inputMatrix[2][3]);
@@ -161,6 +166,7 @@ public class ResultPage implements Initializable {
         result.setText("Result: x=" + String.format("%.2f",MainPage.matrix.getResultX()) +
                 ", y=" + String.format("%.2f",MainPage.matrix.getResultY()) +
                 ", z=" + String.format("%.2f",MainPage.matrix.getResultZ()));
+        //result.setAlignment(Pos.CENTER);
     }
 
     void setMatrix(String[][] stringMatrix, double[][] doubleMatrix) {
