@@ -65,21 +65,24 @@ $dots = array();
 //$Y = $R = "";
 $count = 0;
 
-if($_SERVER["REQUEST_METHOD"] == "GET") {
+if($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $X = $_GET["arrayX[]"];//In the HTML file 'name = X[]', but here in the $_GET[] the name string can not involve symbol '[]'
-    $Y = $_GET["Y"];
-    $R = $_GET["R"];
+    $X = $_POST["arrayX"];//In the HTML file 'name = X[]', but here in the $_GET[] the name string can not involve symbol '[]'
+    $Y = $_POST["Y"];
+    $R = $_POST["R"];
 
-    echo "<h1>Result</h1>";
+    //echo "<h1>Result</h1>";
 
-    $table = "<table border='1'>";
-    $table .= "<tr>";
-    $table .= "<td>x</td>";
-    $table .= "<td>y</td>";
-    $table .= "<td>R</td>";
-    $table .= "<td>Result</td>";
-    $table .= "</tr>";
+    $table = "";
+    //$table = "<table border='1'>";
+    //$table .= "<tr>";
+    //$table .= "<td>x</td>";
+    //$table .= "<td>y</td>";
+    //$table .= "<td>R</td>";
+    //$table .= "<td>Result</td>";
+    //$table .= "<td>time</td>";
+    //$table .= "<td>time used</td>";
+    //$table .= "</tr>";
 
     $checker = new Checker($Y,$R);
 
@@ -104,24 +107,28 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
         $table .= "<td>" . $dots[$i]->x . "</td>";
         $table .= "<td>" . $dots[$i]->y . "</td>";
         $table .= "<td>" . $dots[$i]->r . "</td>";
+
         if ($dots[$i]->check) {
             $table .= "<td>Coordinate in range</td>";
         } else {
             $table .= "<td>Coordinate out of range</td>";
         }
+
+        $endTime = microtime(true);
+        $runTime = ($endTime-$startTime)*1000 . ' ms';
+
+        $table .= "<td>$runTime</td>";
+        date_default_timezone_set("Europe/Moscow");
+        $table .= "<td>" . date("d-m-Y H:i:s", time()) . "</td>";
         $table .= "</tr>";
     }
 
     $table .= "</table>";
     echo $table;
 
-    date_default_timezone_set("Europe/Moscow");
-    echo date("Y-m-d H:i:s", time());
+    //date_default_timezone_set("Europe/Moscow");
+    //echo date("Y-m-d H:i:s", time());
 
-
-    $endTime = microtime(true);
-    $runTime = "<br>Runtime:" . ($endTime-$startTime)*1000 . ' ms';
-
-    echo $runTime;
+    //echo $runTime;
 }
 

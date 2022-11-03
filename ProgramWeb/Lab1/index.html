@@ -66,8 +66,8 @@
 
                     request.onreadystatechange = function() {
                         if (request.readyState === 4  && request.status === 200) {
-                            let origin = document.getElementById("result").innerHTML;
-                            document.getElementById("result").innerHTML = origin + request.responseText;
+                            let origin = document.getElementById("resultTable").innerHTML;
+                            document.getElementById("resultTable").innerHTML = origin + request.responseText;
                             //document.write(request.responseText);
                         }
                     }
@@ -83,7 +83,7 @@
             Lab 1
         </h2>
 
-        <form id = "form1" method = "post">
+        <form id = "form1" method = "get">
             <div class = "InputX">
                 <p>
                     Please choose value of X<span class = "required">*</span>:<br>
@@ -125,12 +125,25 @@
             <button type="button" id = "submit" onclick="send()"> submit</button>
         </div>
 
-        <div class = "output">
-            <p id="result">Result:</p>
-        </div>
-
         <div class = "range">
             <img src="WX20221019-113638.png">
         </div>
+
+        <div class = "output">
+            <p id="result">Result:</p>
+
+            <table border='1' id="resultTable">
+            <tr>
+                <td>x</td>
+                <td>y</td>
+                <td>R</td>
+                <td>Result</td>
+                <td>Time used</td>
+                <td>Time</td>
+            </tr>
+
+        </div>
+
+
     </body>
 </html>
