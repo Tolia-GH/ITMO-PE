@@ -8,20 +8,24 @@ span.required {
 
 h1 {
     Font-family: "Times New Roman", serif;
+    font-size: medium;
     color : black;
 }
 
 h2 {
     Font-family: "Times New Roman", serif;
+    font-size: large;
     color : black;
 }
 p {
     Font-family: "Times New Roman", serif;
+    font-size: smaller;
     color : black;
 }
 
 table {
     border-collapse:collapse;
+    font-size: smaller;
 }
 
 .InputR{

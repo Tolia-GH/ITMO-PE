@@ -8,6 +8,26 @@
 
     <body>
         <script>
+            window.onload = function () {
+                let request = new XMLHttpRequest();
+                let url = 'PHPScript.php';
+
+                let form = document.getElementById("form1");
+                let formData = new FormData(form);
+
+                request.open("POST",url,true);//asynchronous
+                //request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;")
+                request.send({"arrayX" : ""});
+
+                request.onreadystatechange = function() {
+                    if (request.readyState === 4  && request.status === 200) {
+                        let origin = document.getElementById("resultTable").innerHTML;
+                        document.getElementById("resultTable").innerHTML = origin + request.responseText;
+                        //document.write(request.responseText);
+                    }
+                }
+            }
+
             function check() {
                 let checkBox = document.getElementsByName("arrayX[]");
                 let arrayX = [];
@@ -141,9 +161,8 @@
                 <td>Time used</td>
                 <td>Time</td>
             </tr>
+            </table>
 
         </div>
-
-
     </body>
 </html>
