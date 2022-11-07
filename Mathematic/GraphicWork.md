@@ -25,6 +25,8 @@ $$\begin{cases}
     2x-3y-4z=3\\
 \end{cases}$$
 
+![](pic/GraphicWork1-1.png)
+
 ### 1.2
 
 $$\begin{cases}
@@ -32,6 +34,8 @@ $$\begin{cases}
     x+3y-6z=2\\
     3x-2y+2z=9\\
 \end{cases}$$
+
+![](pic/GraphicWork1-2.png)
 
 ### 1.3
 
@@ -41,6 +45,8 @@ $$\begin{cases}
     3x-4y+z=2\\
 \end{cases}$$
 
+![](pic/GraphicWork1-3.png)
+
 ### 1.4
 
 $$\begin{cases}
@@ -49,6 +55,8 @@ $$\begin{cases}
     2x-y-7z=-1\\
 \end{cases}$$
 
+![](pic/GraphicWork1-4.png)
+
 ### 1.5
 
 $$\begin{cases}
@@ -56,6 +64,8 @@ $$\begin{cases}
     x+3y+2z=2\\
     2x+2y+z=-1\\
 \end{cases}$$
+
+![](pic/GraphicWork1-5.png)
 
 main Algorithm:
 
@@ -127,5 +137,54 @@ $$13x^2+37y^2+18xy-16\sqrt{10}x-48\sqrt{10}y+120$$
 ### 3.5
 
 $$4x^2+4y^2-10xy-27\sqrt{2}x+27\sqrt{2}y+72$$
+
+main Algorithm:
+
+```python
+import numpy as np
+
+
+def f(x):  # Define the objective function
+    return x[0]**2/2 + x[0]*x[1] + x[1]**2 - 2*x[1]
+
+
+A = np.array(([1/2, 1/2], [1/2, 1]), dtype=float)
+b = np.array([0., 2.])
+
+
+eigs = np.linalg.eigvals(A)
+print("The eigenvalues of A:", eigs)
+
+if (np.all(eigs>0)):
+    print("A is positive definite")
+elif (np.all(eigs>=0)):
+    print("A is positive semi-definite")
+else:
+    print("A is negative definite")
+
+
+if (A.T==A).all()==True: print("A is symmetric")
+
+
+def linear_CG(x, A, b, epsilon):
+    res = A.dot(x) - b  # Initialize the residual
+    delta = -res  # Initialize the descent direction
+
+    while True:
+
+        if np.linalg.norm(res) <= epsilon:
+            return x, f(x)  # Return the minimizer x* and the function value f(x*)
+
+        D = A.dot(delta)
+        beta = -(res.dot(delta)) / (delta.dot(D))  # Line (11) in the algorithm
+        x = x + beta * delta  # Generate the new iterate
+
+        res = A.dot(x) - b  # generate the new residual
+        chi = res.dot(D) / (delta.dot(D))  # Line (14) in the algorithm
+        delta = chi * delta - res  # Generate the new descent direction
+
+
+linear_CG(np.array([2.3, -2.2]), A, b, 10**-5)
+```
 
 ## Задание 4
