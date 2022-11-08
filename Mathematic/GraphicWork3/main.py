@@ -1,12 +1,13 @@
 import numpy as np
+import math
 
 
 def f(x):  # Define the objective function
-    return x[0]**2/2 + x[0]*x[1] + x[1]**2 - 2*x[1]
+    return 5*x[0]**2 + 6*x[0]*x[1] + 5*x[1]**2 - 8*math.sqrt(2)*x[1] - 8*math.sqrt(2)*x[0]
 
 
-A = np.array(([1/2, 1/2], [1/2, 1]), dtype=float)
-b = np.array([0., 2.])
+A = np.array(([5, 3], [3, 5]), dtype=float)
+b = np.array([8*math.sqrt(2), 8*math.sqrt(2)])
 
 
 eigs = np.linalg.eigvals(A)
