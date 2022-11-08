@@ -152,11 +152,16 @@ $$\begin{cases}
 
 Теперь найдём частные производные второго порядка:
 
-$$\frac{\partial^2z}{\partial x^2}=10;\frac{\partial^2z}{\partial y^2}=10;\frac{\partial^2z}{\partial x\partial y}=6$$
+$$\frac{\partial^2z}{\partial x^2}=10;
+\frac{\partial^2z}{\partial y^2}=10;
+\frac{\partial^2z}{\partial x\partial y}=6$$
 
 Вычислим значение $\Delta$:
 
-$$\Delta=\frac{\partial^2z}{\partial x^2}\cdot\frac{\partial^2z}{\partial y^2}-(\frac{\partial^2z}{\partial x\partial y})^2=10\cdot10-6^2=64$$
+$$\Delta
+=\frac{\partial^2z}{\partial x^2}\cdot\frac{\partial^2z}{\partial y^2}-(\frac{\partial^2z}{\partial x\partial y})^2
+=10\cdot10-6^2
+=64$$
 
 Так как $\Delta>0$ и $\frac{\partial^2z}{\partial x^2}>0$, о согласно алгоритму точка $(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})$ есть точкой минимума функции $z$.
 
@@ -164,24 +169,204 @@ $$\Delta=\frac{\partial^2z}{\partial x^2}\cdot\frac{\partial^2z}{\partial y^2}-(
 
 $$z_{min}=z(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})=-8$$
 
-
-
-
 ### 3.2
 
 $$17x^2+8y^2+12xy-32\sqrt{5}x-16\sqrt{5}y+60$$
+
+**Аналитическим:**
+
+Для начала найдём частные производные первого порядка:
+
+$$\begin{split}
+    \frac{\partial z}{\partial x}&=34x+12y-32\sqrt{5}\\
+    \frac{\partial z}{\partial y}&=12x+16y-16\sqrt{5}\\
+\end{split}$$
+
+Составим систему уравнений
+
+$$\begin{cases}
+    \frac{\partial z}{\partial x}&=0\\
+    \frac{\partial z}{\partial y}&=0\\
+\end{cases}\Rightarrow
+\begin{cases}
+    34x+12y-32\sqrt{5}=0\\
+    12x+16y-16\sqrt{5}=0\\
+\end{cases}
+$$
+
+Получим, что:
+
+$$\begin{cases}
+    x=\frac{4}{\sqrt{5}}\\
+    y=\frac{2}{\sqrt{5}}\\
+\end{cases}$$
+
+Теперь найдём частные производные второго порядка:
+
+$$\frac{\partial^2z}{\partial x^2}=34;
+\frac{\partial^2z}{\partial y^2}=16;
+\frac{\partial^2z}{\partial x\partial y}=12$$
+
+Вычислим значение $\Delta$:
+
+$$\Delta
+=\frac{\partial^2z}{\partial x^2}\cdot\frac{\partial^2z}{\partial y^2}-(\frac{\partial^2z}{\partial x\partial y})^2
+=34\cdot16-12^2
+=400$$
+
+Так как $\Delta>0$ и $\frac{\partial^2z}{\partial x^2}>0$, о согласно алгоритму точка $(\frac{4}{\sqrt{5}},\frac{2}{\sqrt{5}})$ есть точкой минимума функции $z$.
+
+Минимум функции $z$ найдём, подставив в заданную функцию координаты точки $(\frac{4}{\sqrt{5}},\frac{2}{\sqrt{5}})$
+
+$$z_{min}=z(\frac{4}{\sqrt{5}},\frac{2}{\sqrt{5}})=-20$$
 
 ### 3.3
 
 $$3x^2+3y^2-2xy+8\sqrt{2}x-8\sqrt{2}y$$
 
+**Аналитическим:**
+
+Для начала найдём частные производные первого порядка:
+
+$$\begin{split}
+    \frac{\partial z}{\partial x}&=6x-2y+8\sqrt{2}\\
+    \frac{\partial z}{\partial y}&=-2x+6y-8\sqrt{2}\\
+\end{split}$$
+
+Составим систему уравнений
+
+$$\begin{cases}
+    \frac{\partial z}{\partial x}&=0\\
+    \frac{\partial z}{\partial y}&=0\\
+\end{cases}\Rightarrow
+\begin{cases}
+    6x-2y+8\sqrt{2}=0\\
+    -2x+6y-4\sqrt{2}=0\\
+\end{cases}
+$$
+
+Получим, что:
+
+$$\begin{cases}
+    x=-\sqrt{2}\\
+    y=\sqrt{2}\\
+\end{cases}$$
+
+Теперь найдём частные производные второго порядка:
+
+$$\frac{\partial^2z}{\partial x^2}=6;
+\frac{\partial^2z}{\partial y^2}=6;
+\frac{\partial^2z}{\partial x\partial y}=-2$$
+
+Вычислим значение $\Delta$:
+
+$$\Delta
+=\frac{\partial^2z}{\partial x^2}\cdot\frac{\partial^2z}{\partial y^2}-(\frac{\partial^2z}{\partial x\partial y})^2
+=32$$
+
+Так как $\Delta>0$ и $\frac{\partial^2z}{\partial x^2}>0$, о согласно алгоритму точка $(-\sqrt{2},\sqrt{2})$ есть точкой минимума функции $z$.
+
+Минимум функции $z$ найдём, подставив в заданную функцию координаты точки $(-\sqrt{2},\sqrt{2})$
+
+$$z_{min}=z(-\sqrt{2},\sqrt{2})=$$
+
 ### 3.4
 
 $$13x^2+37y^2+18xy-16\sqrt{10}x-48\sqrt{10}y+120$$
 
+**Аналитическим:**
+
+Для начала найдём частные производные первого порядка:
+
+$$\begin{split}
+    \frac{\partial z}{\partial x}&=26x+18y-16\sqrt{10}\\
+    \frac{\partial z}{\partial y}&=18x+74y-48\sqrt{10}\\
+\end{split}$$
+
+Составим систему уравнений
+
+$$\begin{cases}
+    \frac{\partial z}{\partial x}&=0\\
+    \frac{\partial z}{\partial y}&=0\\
+\end{cases}\Rightarrow
+\begin{cases}
+    26x+18y-16\sqrt{10}=0\\
+    18x+74y-48\sqrt{10}=0\\
+\end{cases}
+$$
+
+Получим, что:
+
+$$\begin{cases}
+    x=\sqrt{\frac{2}{5}}\\
+    y=3\sqrt{\frac{2}{5}}\\
+\end{cases}$$
+
+Теперь найдём частные производные второго порядка:
+
+$$\frac{\partial^2z}{\partial x^2}=26;
+\frac{\partial^2z}{\partial y^2}=74;
+\frac{\partial^2z}{\partial x\partial y}=18$$
+
+Вычислим значение $\Delta$:
+
+$$\Delta
+=\frac{\partial^2z}{\partial x^2}\cdot\frac{\partial^2z}{\partial y^2}-(\frac{\partial^2z}{\partial x\partial y})^2
+=1600$$
+
+Так как $\Delta>0$ и $\frac{\partial^2z}{\partial x^2}>0$, о согласно алгоритму точка $(\sqrt{\frac{2}{5}},3\sqrt{\frac{2}{5}})$ есть точкой минимума функции $z$.
+
+Минимум функции $z$ найдём, подставив в заданную функцию координаты точки $(\sqrt{\frac{2}{5}},3\sqrt{\frac{2}{5}})$
+
+$$z_{min}=z(\sqrt{\frac{2}{5}},3\sqrt{\frac{2}{5}})=-40$$
+
 ### 3.5
 
 $$4x^2+4y^2-10xy-27\sqrt{2}x+27\sqrt{2}y+72$$
+
+**Аналитическим:**
+
+Для начала найдём частные производные первого порядка:
+
+$$\begin{split}
+    \frac{\partial z}{\partial x}&=8x-10y-27\sqrt{2}\\
+    \frac{\partial z}{\partial y}&=-10x+8y+27\sqrt{2}\\
+\end{split}$$
+
+Составим систему уравнений
+
+$$\begin{cases}
+    \frac{\partial z}{\partial x}&=0\\
+    \frac{\partial z}{\partial y}&=0\\
+\end{cases}\Rightarrow
+\begin{cases}
+    8x-10y-27\sqrt{2}=0\\
+    -10x+8y+27\sqrt{2}=0\\
+\end{cases}
+$$
+
+Получим, что:
+
+$$\begin{cases}
+    x=-\frac{27}{41\sqrt{2}}\\
+    y=-\frac{243}{41\sqrt{2}}\\
+\end{cases}$$
+
+Теперь найдём частные производные второго порядка:
+
+$$\frac{\partial^2z}{\partial x^2}=8;
+\frac{\partial^2z}{\partial y^2}=8;
+\frac{\partial^2z}{\partial x\partial y}=-10$$
+
+Вычислим значение $\Delta$:
+
+$$\Delta
+=\frac{\partial^2z}{\partial x^2}\cdot\frac{\partial^2z}{\partial y^2}-(\frac{\partial^2z}{\partial x\partial y})^2
+=-36$$
+
+Так как $\Delta<0$ и $\frac{\partial^2z}{\partial x^2}>0$, то в расматриваемой стационарной точке экстремума нет.
+
+$z_{min}$ нет
 
 main Algorithm:
 
