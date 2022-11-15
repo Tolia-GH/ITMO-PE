@@ -12,6 +12,7 @@
   - [ ] [Lab 3.13](Labs/Lab3.13.md)
   - [ ] [Lab 3.07](Labs/Lab3.07.md)
   - [ ] [Lab 3.03](Labs/Lab3.03.md)
+  - [ ] [Lab 3.05](Labs/Lab3.05.md)
 - [ ] [HomeWork](HomeWork.md)
 - [x] [Practice](Practice.md)
 - [x] [Exam](Exam.md)
