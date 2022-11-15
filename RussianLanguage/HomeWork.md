@@ -2,19 +2,19 @@
 
 ## Каталог
 
-[HomeWork Main](#homework-main)
-- [HomeWork 1](#домашние-задания-1)
-- [HomeWork 2](#домашние-задания-2)
-- [HomeWork 3](#домашние-задания-3)
-- [HomeWork 4](#домашние-задания-4)
-- [HomeWork 5](#домашние-задания-5)
-- [HomeWork 6](#домашние-задания-6)
+- [HomeWork Main](#homework-main)
+  - [HomeWork 1](#домашние-задания-1)
+  - [HomeWork 2](#домашние-задания-2)
+  - [HomeWork 3](#домашние-задания-3)
+  - [HomeWork 4](#домашние-задания-4)
+  - [HomeWork 5](#домашние-задания-5)
+  - [HomeWork 6](#домашние-задания-6)
 
-[HomeWork Dop](#homework-dop)
-- [HomeWork 4](#домашние-задания-D4)
-- [HomeWork 5](#домашние-задания-D5)
-- [HomeWork 6](#домашние-задания-D6)
-- [HomeWork 6](#домашние-задания-D7)
+- [HomeWork Dop](#homework-dop)
+  - [HomeWork 4](#домашние-задания-D4)
+  - [HomeWork 5](#домашние-задания-D5)
+  - [HomeWork 6](#домашние-задания-D6)
+  - [HomeWork 6](#домашние-задания-D7)
 
 
 # HomeWork Main
