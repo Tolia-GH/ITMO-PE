@@ -1,4 +1,8 @@
 <?php
+session_start();
+error_reporting(0);
+date_default_timezone_set('Europe/Moscow');
+
 class Dot {
     var $x;
     var $y;
@@ -10,22 +14,6 @@ class Dot {
         $this->r = $r;
         $this->y = $y;
         $this->check = $check;
-    }
-
-    function getX() {
-        return $this->x;
-    }
-
-    function getY() {
-        return $this->y;
-    }
-
-    function getR() {
-        return $this->r;
-    }
-
-    function getCheck() {
-        return $this->check;
     }
 }
 
@@ -61,70 +49,60 @@ class Checker {
 $startTime = microtime(true);
 $dots = array();
 
-//$X = array();
-//$Y = $R = "";
+$X = array();
+$Y = $R = "";
 $count = 0;
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
+if($_SERVER["REQUEST_METHOD"] == "GET") {
 
-    $X = $_POST["arrayX"];//In the HTML file 'name = X[]', but here in the $_GET[] the name string can not involve symbol '[]'
-    $Y = $_POST["Y"];
-    $R = $_POST["R"];
+    $X = $_GET["arrayX"];//In the HTML file 'name = X[]', but here in the $_GET[] the name string can not involve symbol '[]'
+    $Y = $_GET["Y"];
+    $R = $_GET["R"];
+    $delete = $_GET["delete"];
 
-    //echo "<h1>Result</h1>";
-
-    $table = "";
-    //$table = "<table border='1'>";
-    //$table .= "<tr>";
-    //$table .= "<td>x</td>";
-    //$table .= "<td>y</td>";
-    //$table .= "<td>R</td>";
-    //$table .= "<td>Result</td>";
-    //$table .= "<td>time</td>";
-    //$table .= "<td>time used</td>";
-    //$table .= "</tr>";
+    if ($delete) {
+        echo "delete";
+    }
 
     $checker = new Checker($Y,$R);
 
     for ($i = 0; $i < count($X); $i++) {
 
         $checker->setX($X[$i]);
-        //$table .= "<tr>";
-        //$table .= "<td>$X[$i]</td>";
-        //$table .= "<td>$Y</td>";
-        //$table .= "<td>$R</td>";
+
         if ($checker->check()) {
             $dot = new Dot($X[$i],$Y,$R,true);
         } else {
             $dot = new Dot($X[$i],$Y,$R,false);
         }
-        //$table .= "</tr>";
-        array_push($dots, $dot);
+
+        $dots[] = $dot;
     }
 
-    for ($i = 0; $i < sizeof($dots); $i++) {
-        $table .= "<tr>";
-        $table .= "<td>" . $dots[$i]->x . "</td>";
-        $table .= "<td>" . $dots[$i]->y . "</td>";
-        $table .= "<td>" . $dots[$i]->r . "</td>";
+    $tableResult = "";
 
-        if ($dots[$i]->check) {
-            $table .= "<td>Coordinate in range</td>";
-        } else {
-            $table .= "<td>Coordinate out of range</td>";
-        }
+    for ($i = 0; $i < sizeof($dots); $i++) {
 
         $endTime = microtime(true);
         $runTime = ($endTime-$startTime)*1000 . ' ms';
+        $currentTime = date("d-m-Y H:i:s", time());
 
-        $table .= "<td>$runTime</td>";
-        date_default_timezone_set("Europe/Moscow");
-        $table .= "<td>" . date("d-m-Y H:i:s", time()) . "</td>";
-        $table .= "</tr>";
+        $after_all = [$dots[$i]->x,$dots[$i]->y,$dots[$i]->r, $dots[$i]->check ? "Есть" : "Нет", $runTime];
+
+        //建表需要把这些数据全部传过来，最好存放在session里面
+        $_SESSION['history'][] = $after_all;
+        $_SESSION['time']['0'] = $currentTime;
+        $tableResult = "<table id=\"main_table\" class=\"super_table\" border=\"3\"><tr><th>X:</th><th>Y:</th><th>R:</th><th>Попадание:</th><th>Время работы:</th></tr>";
+        foreach ($_SESSION['history'] as $line) {
+            $tableResult.="<tr><td>$line[0]</td><td>$line[1]</td><td>$line[2]</td><td>$line[3]</td><td>$line[4]</td></tr>";
+        }
+
+        $tableResult .= "</table>";
+        $tableResult .= "<p>Current Time: $currentTime</p>";
     }
 
-    $table .= "</table>";
-    echo $table;
+    echo $tableResult;
+    //echo $table;
 
     //date_default_timezone_set("Europe/Moscow");
     //echo date("Y-m-d H:i:s", time());
