@@ -11,10 +11,10 @@
   - [HomeWork 6](#домашние-задания-6)
 
 - [HomeWork Dop](#homework-dop)
-  - [HomeWork 4](#домашние-задания-D4)
-  - [HomeWork 5](#домашние-задания-D5)
-  - [HomeWork 6](#домашние-задания-D6)
-  - [HomeWork 7](#домашние-задания-D7)
+  - [HomeWork 4](#домашние-задания-d4)
+  - [HomeWork 5](#домашние-задания-d5)
+  - [HomeWork 6](#домашние-задания-d6)
+  - [HomeWork 7](#домашние-задания-d7)
 
 
 # HomeWork Main
