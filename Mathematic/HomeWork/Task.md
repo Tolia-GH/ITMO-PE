@@ -768,37 +768,114 @@ I.1
   $$\sum_{n=1}^\infty\frac{n!}{e^n(n+1)^{100}}$$
 
   $$\begin{split}
-    a_n=\frac{n!}{e^n(n+1)^{100}}\\
-    a_{n+1}=\frac{}{}
+    a_n&=\frac{n!}{e^n(n+1)^{100}}\\
+    a_{n+1}&=\frac{(n+1)!}{e^{n+1}(n+2)^{100}}\\
+    \frac{a_{n+1}}{a_n}&=\frac{(n+1)^{101}}{e(n+2)^{100}}\\
+    \lim_{n\to \infty}\frac{a_{n+1}}{a_n}&=\infty>1
   \end{split}$$
+
+  расходится
 
   - б) выясните, сходится или расходится знакопеременный ряд; если ряд сходится, установите характер сходимости.  
 
   $$\sum_{n=1}^\infty\frac{(-1)^n(2n-1)}{2^{2n-1}}$$
+
+  $$\begin{split}
+    f(n)&=\frac{(2n-1)}{2^{2n-1}}\\
+    f'(n)&=4^{1-n}(1+\ln2-2n\ln2)<0\ (при\ n>\frac{1+\ln2}{2\ln2})\\
+    \lim_{n\to\infty}f(n)&=\lim_{n\to\infty}\frac{(2n-1)}{2^{2n-1}}=0
+  \end{split}$$
+
+  Поэтому $\sum_{n=1}^\infty\frac{(-1)^n(2n-1)}{2^{2n-1}}$ сходится, а для $\sum_{n=1}^\infty\frac{(2n-1)}{2^{2n-1}}$
+
+  $$\begin{split}
+    a_n&=\frac{(2n-1)}{2^{2n-1}}\\
+    a_{n+1}&=\frac{2n+1}{2^{2n+1}}\\
+    \lim_{n\to\infty}&=\frac{a_{n+1}}{a_n}=\frac{1}{4}<1
+  \end{split}$$
+
+  Поэтому $\sum_{n=1}^\infty\frac{(2n-1)}{2^{2n-1}}$ тоже сходится
+
+  И $\sum_{n=1}^\infty\frac{(-1)^n(2n-1)}{2^{2n-1}}$ абсолютно сходится
+
+  сходится
 
 I.2
   - а) выясните, сходится или расходится положительный ряд;  
 
   $$\sum_{n=1}^\infty\frac{2^{2n-1}}{8^nn}$$
 
+  $$\begin{split}
+    a_n&=\frac{2^{2n-1}}{8^nn}\\
+    a_{n+1}&=\frac{2^{2n+1}}{8^{n+1}(n+1)}\\
+    \lim_{n\to\infty}\frac{a_{n+1}}{a_n}&=\frac{n}{2(n+1)}=\frac{1}{2}<1
+  \end{split}$$
+
+  сходится
+
   - б) выясните, сходится или расходится знакопеременный ряд; если ряд сходится, установите характер сходимости.  
 
-  $$\sum_{n=1}^\infty\frac{(-1)^n}{n\ln n}$$
+  $$\sum_{n=2}^\infty\frac{(-1)^n}{n\ln n}$$
+
+  $$\begin{split}
+    f(x)&=\frac{1}{n\ln n}\\
+    f'(x)&=-\frac{\ln n+1}{n^2\ln^2 n}<0\ (при\ n>\frac{1}{e})\\
+    \lim_{n\to\infty}f(x)&=\lim_{n\to\infty}\frac{1}{n\ln n}=0
+  \end{split}$$
+
+  Поэтому $\sum_{n=2}^\infty\frac{(-1)^n}{n\ln n}$ сходится, а для $\sum_{n=2}^\infty\frac{1}{n\ln n}$
+
+  $$\begin{split}
+    \lim_{n\to\infty}\frac{a_{n+1}}{a_n}&=\frac{n\ln n}{(n+1)\ln (n+1)}=1\\
+    \frac{a_n}{a_{n+1}}&=\frac{(n+1)\ln (n+1)}{n\ln n}\\
+    &=\lambda+\frac{\mu}{n}+\frac{\theta_n}{n^2}(не\ знаю\ как\ здесь\ получить)
+  \end{split}$$
+
+  если $\lambda>1$ или $\lambda=1$, $\mu>1$, ряд сходится
+  если $\lambda<1$ или $\lambda=1$, $\mu\le1$, ряд расходится
 
 I.3
   - а) выясните, сходится или расходится положительный ряд;  
 
   $$\sum_{n=1}^\infty\frac{3^{2n}}{10^nn^2}$$
 
+  $$\begin{split}
+    a_n&=\frac{3^{2n}}{10^nn^2}\\
+    a_{n+1}&=\frac{3^{2n+2}}{10^{n+1}n^2}\\
+    \lim_{n\to\infty}&=\frac{9}{10}<1
+  \end{split}$$
+
+  сходится
+
   - б) выясните, сходится или расходится знакопеременный ряд; если ряд сходится, установите характер сходимости.  
 
   $$\sum_{n=1}^\infty\frac{\cos n}{2^n\sqrt{n}}$$
+
+  $$\begin{split}
+    не\ знаю\ как\ делать
+  \end{split}$$
 
 ### II. Найдите область сходимости степенного ряда
 
 1. 
 
   $$\sum_{n=1}^\infty\frac{n(x-2)^n}{(n^2+1)2^n}$$
+
+  Бусть $x=t+2$, то получается
+
+  $$\sum_{n=1}^\infty\frac{n}{(n^2+1)2^n}\cdot t^n$$
+
+  $$\begin{split}
+    a_n&=\frac{n}{(n^2+1)2^n}\\
+    a_{n+1}&=\frac{n+1}{((n+1)^2+1)2^{n+1}}\\
+    \lim_{n\to\infty}\frac{a_n}{a_{n+1}}&=\frac{2n^3+4n^2+4n}{n^3+n^2+n+1}=2
+  \end{split}$$
+
+  при $t=2$, ряд $\sum_{n=1}^\infty\frac{n}{(n^2+1)}$ расходится  
+  при $t=-2$, ряд $\sum_{n=1}^\infty\frac{n(-2)^n}{(n^2+1)2^n}=\sum_{n=1}^\infty\frac{n(-1)^n}{(n^2+1)}$ сходится
+
+  Поэтому область сходимости: $-2\le t\lt 2$  
+  т.е $0\le x\lt 4$
 
 2. 
 
