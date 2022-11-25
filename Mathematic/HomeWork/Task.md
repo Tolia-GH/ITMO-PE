@@ -868,7 +868,7 @@ I.3
   $$\begin{split}
     a_n&=\frac{n}{(n^2+1)2^n}\\
     a_{n+1}&=\frac{n+1}{((n+1)^2+1)2^{n+1}}\\
-    \lim_{n\to\infty}\frac{a_n}{a_{n+1}}&=\frac{2n^3+4n^2+4n}{n^3+n^2+n+1}=2
+    R=\lim_{n\to\infty}\frac{a_n}{a_{n+1}}&=\frac{2n^3+4n^2+4n}{n^3+n^2+n+1}=2
   \end{split}$$
 
   при $t=2$, ряд $\sum_{n=1}^\infty\frac{n}{(n^2+1)}$ расходится  
@@ -881,21 +881,95 @@ I.3
 
   $$\sum_{n=1}^\infty\frac{\sqrt{n+1}(x+1)^{2n-1}}{n^24^n}$$
 
+  Бусть $x=t-1$, то получается
+
+  $$\sum_{n=1}^\infty\frac{\sqrt{n+1}}{n^24^n}\cdot t^{2n-1}$$
+
+  $$\begin{split}
+    a_n&=\frac{\sqrt{n+1}}{n^24^n}\\
+    a_{n+1}&=\frac{\sqrt{n+2}}{(n+1)^24^{n+1}}\\
+    R=\lim_{n\to\infty}\frac{a_n}{a_{n+1}}&=\lim_{n\to\infty}\frac{4(n+1)^{\frac{5}{2}}}{n^2\sqrt{n+2}}=0\\
+  \end{split}$$
+
+  при $t=2$, сходится 
+
+  Поэтому область сходимости: $t=0$  
+  т.е $x=-1$
+
 3. 
 
   $$\sum_{n=1}^\infty\frac{(-1)^n2^nx^n}{n^2e^n}$$
+
+  записывается в общем виде, получается
+
+  $$\sum_{n=1}^\infty\frac{(-1)^n2^n}{n^2e^n}\cdot x^n$$
+
+  $$\begin{split}
+    a_n&=\frac{(-1)^n2^n}{n^2\cdot e^n}\\
+    a_{n+1}&=\frac{(-1)^{n+1}2^{n+1}}{(n+1)^2\cdot e^{n+1}}\\
+    R=\lim_{n\to\infty}\frac{a_n}{a_{n+1}}&=-\frac{(n+1)^2\cdot e^{n+1}}{2^n\cdot n^2\cdot e^n}=-\frac{1}{2}\\
+  \end{split}$$
+
+  при $x=-\frac{1}{2}$, ряд $\sum_{n=1}^\infty\frac{(-1)^{2n}}{n^2\cdot e^n}$ сходится  
+  при $x=\frac{1}{2}$, ряд $\sum_{n=1}^\infty\frac{(-1)^n}{n^2\cdot e^n}$ сходится
+
+  Поэтому область сходимости: $-\frac{1}{2}\le x\le\frac{1}{2}$
 
 4. 
 
   $$\sum_{n=1}^\infty\frac{(-1)^n(x-1)^{2n}}{9^n\sqrt[3]{n^2}}$$
 
+  Бусть $x=t+1$, то получается
+
+  $$\sum_{n=1}^\infty\frac{(-1)^n}{9^n\sqrt[3]{n^2}}\cdot t^{2n}$$
+
+  $$\begin{split}
+    a_n&=\frac{(-1)^n}{9^n\sqrt[3]{n^2}}\\
+    a_{n+1}&=\frac{(-1)^{n+1}}{9^{n+1}\sqrt[3]{(n+1)^2}}\\
+    R=\lim_{n\to\infty}\frac{a_n}{a_{n+1}}&=\lim_{n\to\infty}\frac{-9\sqrt[3]{(n+1)^2}}{\sqrt[3]{n^2}}=-9\\
+  \end{split}$$
+
+  при $t=-9$, ряд $\sum_{n=1}^\infty\frac{9^n(-1)^{3n}}{\sqrt[3]{n^2}}$ расходится  
+  при $t=9$, ряд $\sum_{n=1}^\infty\frac{9^n(-1)^n}{\sqrt[3]{n^2}}$ расходится
+
+  Поэтому область сходимости: $-9\lt t\lt9$  
+  т.е $-8\lt x\lt 10$
+
 5. 
 
   $$\sum_{n=1}^\infty\frac{(-1)^n(x+2)^n}{3^n\sqrt{n(n+1)}}$$
 
+  Бусть $x=t-2$, то получается
+
+  $$\sum_{n=1}^\infty\frac{(-1)^n}{3^n\sqrt{n(n+1)}}\cdot t^n$$
+
+  $$\begin{split}
+    a_n&=\frac{(-1)^n}{3^n\cdot\sqrt{n(n+1)}}\\
+    a_{n+1}&=\frac{(-1)^{n+1}}{3^{n+1}\cdot\sqrt{(n+1)(n+2)}}\\
+    R=\lim_{n\to\infty}\frac{a_n}{a_{n+1}}&=\lim_{n\to\infty}\frac{-3\sqrt{(n+1\cdot(n+2))}}{\sqrt{n(n+1)}}=-3\\
+  \end{split}$$
+
+  при $t=-3$, ряд $\sum_{n=1}^\infty\frac{(-1)^{2n}}{\sqrt{n(n+1)}}$ расходится  
+  при $t=3$, ряд $\sum_{n=1}^\infty\frac{(-1)^n}{\sqrt{n(n+1)}}$ расходится
+
+  Поэтому область сходимости: $-3\lt t\lt3$  
+  т.е $-5\lt x\lt 1$
+
 6. 
 
   $$\sum_{n=1}^\infty\frac{n(x-3)^{2n}}{4^n\sqrt{n+1}}$$
+
+  Бусть $x=t+3$, то получается
+
+  $$\sum_{n=1}^\infty\frac{n}{4^n\sqrt{n+1}}\cdot t^{2n}$$
+
+  $$\begin{split}
+    a_n&=\frac{n}{4^n\sqrt{n+1}}\\
+    a_{n+1}&=\frac{n+1}{4^{n+1}\sqrt{n+2}}\\
+    R=\lim_{n\to\infty}\frac{a_n}{a_{n+1}}&=\lim_{n\to\infty}\frac{4n\sqrt{n+2}}{\sqrt{(n+1)^3}}=\infty\\
+  \end{split}$$
+
+  Поэтому область сходимости: $-\infty\lt x\lt\infty$
 
 ### III. Разложите функции в степенные ряды по степеням х, используя стандартные разложения. Укажите интервалы их сходимости.
 
