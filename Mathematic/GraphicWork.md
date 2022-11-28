@@ -122,52 +122,216 @@ Download [Application](https://github.com/Tolia-GH/Semester-2/releases/download/
 
 $$z=5x^2+5y^2+6xy-8\sqrt{2}x-8\sqrt{2}y$$
 
-**Аналитическим:**
+- **Аналитическим:**
 
-Для начала найдём частные производные первого порядка:
+  Для начала найдём частные производные первого порядка:
 
-$$\begin{split}
-    \frac{\partial z}{\partial x}&=10x+6y-8\sqrt{2}\\
-    \frac{\partial z}{\partial y}&=6x+10y-8\sqrt{2}\\
-\end{split}$$
+  $$\begin{split}
+      \frac{\partial z}{\partial x}&=10x+6y-8\sqrt{2}\\
+      \frac{\partial z}{\partial y}&=6x+10y-8\sqrt{2}\\
+  \end{split}$$
 
-Составим систему уравнений
+  Составим систему уравнений
 
-$$\begin{cases}
-    \frac{\partial z}{\partial x}&=0\\
-    \frac{\partial z}{\partial y}&=0\\
-\end{cases}\Rightarrow
-\begin{cases}
-    10x+6y-8\sqrt{2}=0\\
-    6x+10y-8\sqrt{2}=0\\
-\end{cases}
-$$
+  $$\begin{cases}
+      \frac{\partial z}{\partial x}&=0\\
+      \frac{\partial z}{\partial y}&=0\\
+  \end{cases}\Rightarrow
+  \begin{cases}
+      10x+6y-8\sqrt{2}=0\\
+      6x+10y-8\sqrt{2}=0\\
+  \end{cases}
+  $$
 
-Получим, что:
+  Получим, что:
 
-$$\begin{cases}
-    x=\frac{1}{\sqrt{2}}\\
-    y=\frac{1}{\sqrt{2}}\\
-\end{cases}$$
+  $$\begin{cases}
+      x=\frac{1}{\sqrt{2}}\\
+      y=\frac{1}{\sqrt{2}}\\
+  \end{cases}$$
 
-Теперь найдём частные производные второго порядка:
+  Теперь найдём частные производные второго порядка:
 
-$$\frac{\partial^2z}{\partial x^2}=10;
-\frac{\partial^2z}{\partial y^2}=10;
-\frac{\partial^2z}{\partial x\partial y}=6$$
+  $$\frac{\partial^2z}{\partial x^2}=10;
+  \frac{\partial^2z}{\partial y^2}=10;
+  \frac{\partial^2z}{\partial x\partial y}=6$$
 
-Вычислим значение $\Delta$:
+  Вычислим значение $\Delta$:
 
-$$\Delta
-=\frac{\partial^2z}{\partial x^2}\cdot\frac{\partial^2z}{\partial y^2}-(\frac{\partial^2z}{\partial x\partial y})^2
-=10\cdot10-6^2
-=64$$
+  $$\Delta
+  =\frac{\partial^2z}{\partial x^2}\cdot\frac{\partial^2z}{\partial y^2}-(\frac{\partial^2z}{\partial x\partial y})^2
+  =10\cdot10-6^2
+  =64$$
 
-Так как $\Delta>0$ и $\frac{\partial^2z}{\partial x^2}>0$, о согласно алгоритму точка $(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})$ есть точкой минимума функции $z$.
+  Так как $\Delta>0$ и $\frac{\partial^2z}{\partial x^2}>0$, о согласно алгоритму точка $(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})$ есть точкой минимума функции $z$.
 
-Минимум функции $z$ найдём, подставив в заданную функцию координаты точки $(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})$
+  Минимум функции $z$ найдём, подставив в заданную функцию координаты точки $(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})$
 
-$$z_{min}=z(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})=-8$$
+  $$z_{min}=z(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})=-8$$
+
+- **Численным :**
+
+  ![](pic/GraphicWork3-1.1.png)
+  ![](pic/GraphicWork3-1.2.png)
+
+  - **linear conjugate gradient algorithm**
+
+    ```python
+    import numpy as np
+    import math
+
+
+    def f(x):  # Define the objective function
+        return 5*x[0]**2 + 6*x[0]*x[1] + 5*x[1]**2 - 8*math.sqrt(2)*x[0] - 8*math.sqrt(2)*x[1]
+
+
+    A = np.array(([5, 3], [3, 5]), dtype=float)
+    b = np.array([8*math.sqrt(2.), 8*math.sqrt(2)])
+
+
+    eigs = np.linalg.eigvals(A)
+    print("The eigenvalues of A:", eigs)
+
+    if (np.all(eigs>0)):
+        print("A is positive definite")
+    elif (np.all(eigs>=0)):
+        print("A is positive semi-definite")
+    else:
+        print("A is negative definite")
+
+
+    if (A.T==A).all()==True: print("A is symmetric")
+
+
+    def linear_CG(x, A, b, epsilon):
+        res = A.dot(x) - b  # Initialize the residual
+        delta = -res  # Initialize the descent direction
+
+        while True:
+
+            if np.linalg.norm(res) <= epsilon:
+                return x, f(x)  # Return the minimizer x* and the function value f(x*)
+
+            D = A.dot(delta)
+            beta = -(res.dot(delta)) / (delta.dot(D))  # Line (11) in the algorithm
+            x = x + beta * delta  # Generate the new iterate
+
+            res = A.dot(x) - b  # generate the new residual
+            chi = res.dot(D) / (delta.dot(D))  # Line (14) in the algorithm
+            delta = chi * delta - res  # Generate the new descent direction
+
+
+    linear_CG(np.array([0, 0]), A, b, 10**-5)
+    ```
+    result
+    ```
+    The eigenvalues of A: [8. 2.]
+    A is positive definite
+    A is symmetric
+    (array([1.41421356, 1.41421356]), 0.0)
+    ```
+
+  - **Nonlinear Conjugate Gradient Algorithm**
+    - **Fletcher-Reeves Algorithm**
+
+      ```python
+      from autograd import grad
+      import autograd.numpy as np
+      import math
+      from scipy.optimize import line_search
+      NORM = np.linalg.norm
+
+      def func(x): # Objective function
+          return 5*x[0]**2+5*x[1]**2+6*x[0]*x[1]-8*math.sqrt(2)*x[0]-8*math.sqrt(2)*x[1]
+
+      Df = grad(func) # Gradient of the objective function
+
+      def Fletcher_Reeves(Xj, tol, alpha_1, alpha_2):
+          x1 = [Xj[0]]
+          x2 = [Xj[1]]
+          D = Df(Xj)
+          delta = -D # Initialize the descent direction
+          
+          while True:
+              start_point = Xj # Start point for step length selection 
+              beta = line_search(f=func, myfprime=Df, xk=start_point, pk=delta, c1=alpha_1, c2=alpha_2)[0] # Selecting the step length
+              if beta!=None:
+                  X = Xj+ beta*delta #Newly updated experimental point
+              
+              if NORM(Df(X)) < tol:
+                  x1 += [X[0], ]
+                  x2 += [X[1], ]
+                  return X, func(X) # Return the results
+              else:
+                  Xj = X
+                  d = D # Gradient at the preceding experimental point
+                  D = Df(Xj) # Gradient at the current experimental point
+                  chi = NORM(D)**2/NORM(d)**2 # Line (16) of the Fletcher-Reeves algorithm
+                  delta = -D + chi*delta # Newly updated descent direction
+                  x1 += [Xj[0], ]
+                  x2 += [Xj[1], ]
+                  
+      Fletcher_Reeves(np.array([2., -1.8]), 10**-5, 10**-4, 0.38)
+
+      for i in res.allvecs: print(i)
+      ```
+      result
+      ```
+      Optimization terminated successfully.
+              Current function value: -8.000000
+              Iterations: 3
+              Function evaluations: 7
+              Gradient evaluations: 7
+      [-9.  4.]
+      [-4.20069713  5.57136627]
+      [0.7676896  0.77699143]
+      [0.70710678 0.70710678]
+      ```
+    - **Polak-Ribiere Algorithm**
+      ```python
+      from autograd import grad
+      import autograd.numpy as np
+      import math
+      from scipy.optimize import line_search
+      NORM = np.linalg.norm
+
+      def func(x): # Objective function
+          return 5*x[0]**2+5*x[1]**2+6*x[0]*x[1]-8*math.sqrt(2)*x[0]-8*math.sqrt(2)*x[1]
+
+      Df = grad(func) # Gradient of the objective function
+
+      def Polak_Ribiere(Xj, tol, alpha_1, alpha_2):
+          x1 = [Xj[0]]
+          x2 = [Xj[1]]
+          D = Df(Xj)
+          delta = -D # Initialize the descent direction
+          
+          while True:
+              start_point = Xj # Start point for step length selection 
+              beta = line_search(f=func, myfprime=Df, xk=start_point, pk=delta, c1=alpha_1, c2=alpha_2)[0] # Selecting the step length
+              if beta!=None:
+                  X = Xj+ beta*delta # Newly updated experimental point 
+              
+              if NORM(Df(X)) < tol:
+                  x1 += [X[0], ]
+                  x2 += [X[1], ]
+                  return X, func(X) # Return the results
+              else:
+                  Xj = X
+                  d = D # Gradient of the preceding experimental point
+                  D = Df(Xj) # Gradient of the current experimental point
+                  chi = (D-d).dot(D)/NORM(d)**2 
+                  chi = max(0, chi) # Line (16) of the Polak-Ribiere Algorithm
+                  delta = -D + chi*delta # Newly updated direction
+                  x1 += [Xj[0], ]
+                  x2 += [Xj[1], ]
+                  
+      Polak_Ribiere(np.array([-1.7, -3.2]), 10**-6, 10**-4, 0.2)
+      ```
+      result
+      ```
+      (array([0.70710678, 0.70710678]), -8.000000000000002)
+      ```
 
 ### 3.2
 
