@@ -976,7 +976,11 @@ I.3
 1. 
   - a)
 
-    $$f(x)=xe^{-4x}$$
+    $$
+    \begin{split}
+      f(x)&=xe^{-4x}\\
+    \end{split}\qquad
+    $$
 
   - b)
 
