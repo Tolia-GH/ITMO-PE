@@ -447,8 +447,8 @@ $$z=5x^2+5y^2+6xy-8\sqrt{2}x-8\sqrt{2}y$$
 
 - **Численным :**
 
-  ![](pic/GraphicWork3-1.1.png)
-  ![](pic/GraphicWork3-1.2.png)
+  ![](../pic/GraphicWork3-1.1.png)
+  ![](../pic/GraphicWork3-1.2.png)
 
   - **linear conjugate gradient algorithm**
     ```python
@@ -574,8 +574,8 @@ $$17x^2+8y^2+12xy-32\sqrt{5}x-16\sqrt{5}y+60$$
 
 - **Численным :**
 
-  ![](pic/GraphicWork3-2.1.png)
-  ![](pic/GraphicWork3-2.2.png)
+  ![](../pic/GraphicWork3-2.1.png)
+  ![](../pic/GraphicWork3-2.2.png)
 
   - **linear conjugate gradient algorithm**
     ```python
@@ -702,8 +702,8 @@ $$z_{min}=z(-\sqrt{2},\sqrt{2})=-16$$
 
 - **Численным :**
 
-  ![](pic/GraphicWork3-3.1.png)
-  ![](pic/GraphicWork3-3.2.png)
+  ![](../pic/GraphicWork3-3.1.png)
+  ![](../pic/GraphicWork3-3.2.png)
 
   - **linear conjugate gradient algorithm**
     ```python
@@ -829,8 +829,8 @@ $$13x^2+37y^2+18xy-16\sqrt{10}x-48\sqrt{10}y+120$$
 
 - **Численным :**
 
-  ![](pic/GraphicWork3-4.1.png)
-  ![](pic/GraphicWork3-4.2.png)
+  ![](../pic/GraphicWork3-4.1.png)
+  ![](../pic/GraphicWork3-4.2.png)
 
   - **linear conjugate gradient algorithm**
     ```python
@@ -956,8 +956,8 @@ $$4x^2+4y^2-10xy-27\sqrt{2}x+27\sqrt{2}y+72$$
 
 - **Численным :**
 
-  ![](pic/GraphicWork3-5.1.png)
-  ![](pic/GraphicWork3-5.2.png)
+  ![](../pic/GraphicWork3-5.1.png)
+  ![](../pic/GraphicWork3-5.2.png)
 
   - **linear conjugate gradient algorithm**
     ```python
