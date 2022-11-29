@@ -57,7 +57,7 @@ resultY = matrixTable[1][3];
 resultZ = matrixTable[2][3];
 ```
 
-View More in [GitHub](https://github.com/Tolia-GH/Semester-2/tree/main/Mathematic/GraphicWork)
+View More in [GitHub](https://github.com/Tolia-GH/Semester-2/tree/main/Mathematic/GraphicWork/GraphicWork-1)
 
 Download [Application](https://github.com/Tolia-GH/Semester-2/releases/download/Mathematic/GraphicWork.jar)
 
@@ -69,7 +69,7 @@ $$\begin{cases}
     2x-3y-4z=3\\
 \end{cases}$$
 
-![](pic/GraphicWork1-1.png)
+![](../pic/GraphicWork1-1.png)
 
 ### 1.2
 
@@ -79,7 +79,7 @@ $$\begin{cases}
     3x-2y+2z=9\\
 \end{cases}$$
 
-![](pic/GraphicWork1-2.png)
+![](../pic/GraphicWork1-2.png)
 
 ### 1.3
 
@@ -89,7 +89,7 @@ $$\begin{cases}
     3x-4y+z=2\\
 \end{cases}$$
 
-![](pic/GraphicWork1-3.png)
+![](../pic/GraphicWork1-3.png)
 
 ### 1.4
 
@@ -99,7 +99,7 @@ $$\begin{cases}
     2x-y-7z=-1\\
 \end{cases}$$
 
-![](pic/GraphicWork1-4.png)
+![](../pic/GraphicWork1-4.png)
 
 ### 1.5
 
@@ -109,7 +109,7 @@ $$\begin{cases}
     2x+2y+z=-1\\
 \end{cases}$$
 
-![](pic/GraphicWork1-5.png)
+![](../pic/GraphicWork1-5.png)
 
 ## Задание 2
 
@@ -392,7 +392,7 @@ $$\begin{cases}
         # if cnt == 100:
             # break;
     ```
-View More in [GitHub]()
+View More in [GitHub](https://github.com/Tolia-GH/Semester-2/blob/main/Mathematic/GraphicWork/GraphicWorks-3.ipynb)
 
 ### 3.1
 
