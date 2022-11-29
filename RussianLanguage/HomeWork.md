@@ -9,6 +9,7 @@
   - [HomeWork 4](#домашние-задания-4)
   - [HomeWork 5](#домашние-задания-5)
   - [HomeWork 6](#домашние-задания-6)
+  - [HomeWork 7](#домашние-задания-7)
 
 - [HomeWork Dop](#homework-dop)
   - [HomeWork 4](#домашние-задания-d4)
