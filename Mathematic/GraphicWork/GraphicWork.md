@@ -115,8 +115,6 @@ $$\begin{cases}
 
 ## Задание 3
 
-
-
 Разобраться с материалом (пункт 5) и аналогично с приведенными примерами аналитически и численно найти минимумы функции.Сделать график и указать найденную точку.  
 处理材料（第 5 点）并类似地处理给出的示例，分析和数值地找到函数的最小值。绘制图表并指出找到的点。
 
@@ -124,7 +122,7 @@ $$\begin{cases}
 
 - [Аналитическим](https://math1.ru/education/sys_lin_eq/kapelli.html)
 - [Численным](https://indrag49.github.io/Numerical-Optimization/conjugate-gradient-methods-1.html#the-scipy.optimize.minimize-function)
-  - Linear cConjugate Gradient Algorithm
+  - Linear Conjugate Gradient Algorithm (Пример врзьмем из первой задачи)
     ```python
     import numpy as np
     import math
@@ -168,7 +166,7 @@ $$\begin{cases}
 
     linear_CG(np.array([0, 0]), A, b, 10**-5)
     ```
-  - Nonlinear Conjugate Gradient Algorithm
+  - Nonlinear Conjugate Gradient Algorithm (Пример врзьмем из первой задачи)
     - Fletcher-Reeves algorithm
       ```python
       from autograd import grad
@@ -394,7 +392,7 @@ $$\begin{cases}
         # if cnt == 100:
             # break;
     ```
-
+View More in [GitHub]()
 
 ### 3.1
 
