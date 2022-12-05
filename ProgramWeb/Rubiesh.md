@@ -236,16 +236,16 @@
     - Получение: Получить из Cookie
     - Destroy: session.invalidate() или в элементе <session-timeout> определяет время жизни
   - Написать JS-функцию, которая запрещает вводить любые символы, кроме цифр и букв латинского алфавита 
+    ```javascript
+    function fixValue(){                                                           
 
-    **function** fixValue(){                                                           
+    ​    if (this.value.match(*/[ ^ a-z0-9]/ig*) !== null)                                           
 
-    ​    **if** (**this**.value.match(*/[ ^ a-z0-9]/ig*) !== **null**)                                           
-
-    ​        **this**.value = '';                                                   
+    ​        this.value = '';                                                   
 
     }  
 
-    **function** setValidation(){                                                         
+    function setValidation(){                                                         
 
     ​    let inputs = document.querySelectorAll('input[type=text], input[type=email], input[type=password], textarea');          
 
@@ -258,6 +258,7 @@
     ​       }                                                            
 
     ​    );  
+    ```
 
 ## Билет 8
 
@@ -280,16 +281,15 @@
     - 
 
   - Реализовать функцию на JavaScript, которая будет закрывать текущее окно, если в нем открыт [https://www.google.ru](https://www.google.ru/) ([Возможный ответ](http://pastebin.com/72gLeMH7))
-
-    **function** close(){
-
-      let isGoogle = documet.URL.match(*/^https?:\/\/(www\.)?google\.com(\/.\*)?$/ig*);
-
-      **if** (isGoogle)
-
-    ​    window.close();   
-
+    ```javascript
+    // Реализовать функцию на JavaScript, которая будет закрывать текущее окно, если в нем открыт https://www.google.ru
+ 
+    function close(){
+        let isGoogle = documet.URL.match(/^https?:\/\/(www\.)?google\.com(\/.*)?$/ig);
+        if (isGoogle)
+            window.close();     
     }
+    ```
 
 ## Билет 9
 
@@ -305,29 +305,21 @@
      Может быть конфликты. Непредсказуемые процесс программы и результаты. Можем делать асихронно или savebuy().
 
   - Написать js функцию, которая заменяет содержимое с именем класса "nyan" на изображение по ссылке: http://www.example.com/nyancat.gif ([Возможный ответ](http://pastebin.com/HFiFU850))
-
-    **function** replaceWithNyan(){                            
-
-    ​    let img = document.createElement('img');                  
-
-    ​    img.src = 'http://www.example.com/nyancat.gif';              
-
-    ​    Array.from(document.querySelectorAll('.nyan')).forEach(          
-
-    ​        div => {                              
-
-    ​            div.innerHTML = '';                    
-
-    ​            div.appendChild(img);                   
-
-    ​        }                                 
-
-    ​    );                                     
-
+    ```javascript
+    // Написать js функцию, которая заменяет содержимое <div> с именем класса "nyan"  
+    // на изображение по ссылке: http://www.example.com/nyancat.gif                   
+                                                                                      
+    function replaceWithNyan(){                                                       
+            let img = document.createElement('img');                                  
+            img.src = 'http://www.example.com/nyancat.gif';                           
+            Array.from(document.querySelectorAll('.nyan')).forEach(                   
+                    div => {                                                          
+                            div.innerHTML = '';                                       
+                            div.appendChild(img);                                     
+                    }                                                                 
+            );                                                                        
     }
-
-  
-
+    ```
 ## Билет 10
 
   - Rest и RPC
@@ -342,12 +334,13 @@
     - dispatch the request to another resource with forward();
 
   - Правило css, меняющее цвет фона на желтый, если ссылка посещена и не лежит в классе "news" ([Возможный ответ](http://pastebin.com/Y9Crhmaq))
-
+    ```css
     not(.news)>a:visited {
 
-      **color**: yellow;
+      color: yellow;
 
     }
+    ```
 
 ## Билет 11
 
@@ -362,14 +355,14 @@
     - <jsp : action attribute = "value"/>
 
   - php скрипт, который достаёт из get запроса имя и фамилию и приветствует пользователя, выводя html страницу ([Возможный ответ](http://pastebin.com/pWbJWbM5))
-
-    **<?php**                     
+    ```php
+    <?php                     
 
     $name = $_GET['name'];             
-
     echo 'Hello ' . ($name?$name:'noname');
 
-    **?>**
+    ?>
+    ```
 
 ## Билет 12:
 
@@ -388,26 +381,27 @@
     - вызов jspDestroy
 
   - написать на php класс ([Возможный ответ](http://pastebin.com/qy4x8CTa))
+    ```php
+    class User{
 
-    **class** User{
+      private $userName;
 
-      **private** $userName;
-
-      **private** $age;
+      private $age;
 
      
 
-      **function** __constuctor($userName, $age){
+      function __constuctor($userName, $age){
 
     ​    $this->userName = $userName;
 
     ​    $this->age = $age;
 
       }
-      **function** whois(){
+      function whois(){
     ​    return 'Name: ' . $this->userName . '\nAge: ' . $this->age;
       }
     }
+    ```
 
 ## Билет 13
 
@@ -423,30 +417,29 @@
     - атрибуты определяют что делать
 
   - Написать конфигурацию сервлета (org.xxx.MyServlet) с помощью аннотации. Сервлет должен принимать все запросы от файлов .html .xhtml
-
+    ```java
     @WebServlet(name = "org.xxx.MyServlet", value = "/servlet")
+    ```
 
 ## Билет 14
 
   - структура http запроса
 
-    ![avatar](C:\Users\x1761\Desktop\web\微信截图_20211023214404.png)
+    ![avatar](pic/Rubiesh-1.1.png)
+    ![avatar](pic/Rubiesh-1.2.png)
 
   - типы данных php
 
-    interger , float , double, boolean , string , NULL
+    `interger`, `float`, `double`, `boolean`, `string`, `NULL`
 
   - сервлет перенаправляющий все запросы на страницу google ([Возможный ответ](http://pastebin.com/EnTVLpNG))
-
-    **class** ToGoogleServlet **extends** HttpServlet{
-
-    ​    **public** **void** service(HttpServletRequest request, HttpServletResponse response) **throws** IOException, ServletException{
-
+    ```java
+    class ToGoogleServlet extends HttpServlet{
+    ​    public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
     ​        response.sendRedirect("http://google.com;")
-
     ​    }
-
     }
+    ```
 
 ## Билет 15
 
@@ -462,7 +455,7 @@
 
     в jsp
 
-    ```
+    ```jsp
     <%Enumeration e = session.getAttributeNames();
         int count = 0;
         while(e.hasMoreElements()) {
@@ -475,7 +468,7 @@
 
     в xml
 
-    ```
+    ```xml
       <session-config>
         <session-timeout>60</session-timeout>
       </session-config>
@@ -484,7 +477,7 @@
 ## Билет 16:
 
   - элементы JSP  
-    <%-- omment --%> <%@ directive %> <%! decl%> <% code %> <%= expression%>
+    `<%-- omment --%>` `<%@ directive %>` `<%! decl%>` `<% code %>` `<%= expression%>`
   - CGI - обработка запроса, преимущества и недостатки  
     Вызов программ на севере использователем. Каждый запрос обрабатывается одельным процессом СGI-прогораммы  
     - Преимущества: программы могут быть написаы на множестве языков  
@@ -493,36 +486,28 @@
     -  Недостатки: Высокие расходы. Слабое разделение уровня представления и бизнес-логики
 
   - Написать сервлет, который принимает из http запроса параметр name и выводит его. Если параметр не обнаружен то вывести Anonymous user ([Возможный ответ](http://pastebin.com/tHgjJSLz))
-
-    **class** HelloServlet **extends** HttpServlet{
-
-    ​    **public** **void** service(HttpServletRequest request, HttpServletResponse response) **throws** IOException, ServletException{
-
-    ​      response.setContentType("text/html; charset=UTF-8");
-
-     
-
-    ​        String name = request.getParameter("name");
-
-    ​        PrintWriter out = response.getWriter();
-
-     
-
-    ​        if(name==**null**){
-
-    ​		out.println(<h1>"Anonymous user</h1>);
-
-    ​		}else{
-
-    ​        	out.println("<h1>Hello " + name + "</h1>");
-
-    ​       	 out.close();
-
-    ​		}
-
-    ​    }
-
+    ```java
+    import java.io.PrintWriter;
+    import java.io.IOException;
+    import javax.servlet.ServletException;
+    import javax.servlet.http.HttpServlet;
+    import javax.servlet.http.HttpServletRequest;
+    import javax.servlet.http.HttpServleResponse;
+    
+    
+    class HelloServlet extends HttpServlet{
+            public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+                response.setContentType("text/html; charset=UTF-8");
+    
+                    String name = request.getParameter("name");
+                    PrintWriter out = response.getWriter();
+    
+                    name = name==null?"Anonymous user":name;
+                    out.println("<h1>Hello " + name + "</h1>");
+                    out.close();
+            }
     }
+    ```
 
 ## Билет 17:
 
@@ -551,17 +536,17 @@
 
   - Код фильтра запросов, запрещающий доступ к приложению неавторизированным пользователям(у неавт пол в запросе отсутствует заголовок x-application-user) ([Возможный ответ](http://pastebin.com/qTuT55Fg))
 
-    **class** AuthFilter **extends** ServletFilter{
+    class AuthFilter extends ServletFilter{
 
-    ​    **public** **void** init(FilterConfig config){}
+    ​    public void init(FilterConfig config){}
 
      
 
-    ​    **public** **void** doFilter(ServletRequest request, ServletResponse response, FilterChain chain) **throws** IOException{
+    ​    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException{
 
     ​        String auth = request.getHeader("x-application-user");
 
-    ​        **if** (auth == **null** || auth.equals("")){
+    ​        if (auth == null || auth.equals("")){
 
     ​            PrintWriter out = response.getWriter();
 
@@ -569,7 +554,7 @@
 
     ​            out.println("WTF?! You are not authorized");
 
-    ​        }**else**{
+    ​        }else{
 
     ​            chain.doFilter(request, response);
 
@@ -600,25 +585,25 @@
 
     <jsp:useBean id="managed" class="my.package.ManagedBean" scope="session">
 
-    <**html**>
+    <html>
 
-    <**head**>
+    <head>
 
             <meta charset="utf-8">
 
-    </**head**>
+    </head>
 
-    <**body**>
+    <body>
 
-    ​    <**tr**>
+    ​    <tr>
 
-    ​        <**th**>name</**th**>
+    ​        <th>name</th>
 
-    ​        <**th**>price</**th**>
+    ​        <th>price</th>
 
-    ​        <**th**>count</**th**>
+    ​        <th>count</th>
 
-    ​    </**tr**>
+    ​    </tr>
 
     <%
 
@@ -626,21 +611,21 @@
 
     ​    for (ShoppingItem position: basket){%>
 
-    ​        <**tr**>
+    ​        <tr>
 
-    ​            <**td**><%= position.getName() %></**td**>
+    ​            <td><%= position.getName() %></td>
 
-    ​            <**td**><%= position.getPrice() %></**td**>
+    ​            <td><%= position.getPrice() %></td>
 
-    ​            <**td**><%= position.getCount() %></**td**>
+    ​            <td><%= position.getCount() %></td>
 
-    ​        </**tr**>
+    ​        </tr>
 
     ​    <%}%>
 
-    </**table**>
+    </table>
 
-    </**body**>
+    </body>
 
 ## Билет 20
 
@@ -674,7 +659,7 @@
 
     not(h1) a:active {
 
-      **text-decoration**: underline;
+      text-decoration: underline;
 
     }
 
