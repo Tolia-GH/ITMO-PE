@@ -535,7 +535,7 @@
     Суперглобальные массивы в PHP (SuperGlobal massive)
 
   - Код фильтра запросов, запрещающий доступ к приложению неавторизированным пользователям(у неавт пол в запросе отсутствует заголовок x-application-user) ([Возможный ответ](http://pastebin.com/qTuT55Fg))
-
+    ```
     class AuthFilter extends ServletFilter{
 
     ​    public void init(FilterConfig config){}
@@ -563,6 +563,7 @@
     ​    } 
 
     }
+    ```
 
 ## Билет 19
 
@@ -576,7 +577,7 @@
     -  Получения глобальные параметры. Читения файла ресурсов проектов. Переводить запрос
 
   - Код jsp-страницы показывающий содержимое корзины юзера. Содержимое корзины - коллекциия объектов класса ShoppingItem который содержит имя, стоимость и количество заказанного товара - хранится в отдельном managed bean. ([Возможный ответ](http://pastebin.com/pBA7f4Zt))
-
+    ```
     <%@ import="my.package.ShoppingItem" %>
 
     <%@ import="java.util.Collection" %>
@@ -626,6 +627,7 @@
     </table>
 
     </body>
+    ```
 
 ## Билет 20
 
@@ -638,7 +640,7 @@
        action = "url" - куда отправитьs
 
   - конфигурация сервлетов. файл web.xml
-
+    ```
     <servlet>
 
     ​	<servlet-name>name</servlet-name>
@@ -654,14 +656,16 @@
     ​	<url-pattern>/url</url-pattern>
 
     </servlet-mapping>
+    ```
 
   - написать css правило, которое при клике на ссылку добавляет ей подчеркивание, всем кроме ссылок в теге h1 ([Возможный ответ](http://pastebin.com/Y9Crhmaq))
-
+    ```
     not(h1) a:active {
 
       text-decoration: underline;
 
     }
+    ```
 
 ## Билет 21
 
