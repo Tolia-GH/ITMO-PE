@@ -569,9 +569,8 @@ response.setContentType("text/html; charset=UTF-8");
                     <th>price</th>
                     <th>count</th>
             </tr>
-    <%
-            Collection<ShoppingItem> basket = mananged.getBasket();
-            for (ShoppingItem position: basket){%>
+    <% Collection<ShoppingItem> basket = mananged.getBasket();
+            for (ShoppingItem position: basket){ %>
                     <tr>
                             <td><%= position.getName() %></td>
                             <td><%= position.getPrice() %></td>
