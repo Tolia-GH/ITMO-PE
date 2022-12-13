@@ -237,48 +237,39 @@
     - Destroy: session.invalidate() или в элементе <session-timeout> определяет время жизни
   - Написать JS-функцию, которая запрещает вводить любые символы, кроме цифр и букв латинского алфавита 
     ```javascript
-    function fixValue(){                                                           
-
-    ​    if (this.value.match(*/[ ^ a-z0-9]/ig*) !== null)                                           
-
-    ​        this.value = '';                                                   
-
+    function fixValue(){
+    ​    if (this.value.match(*/[ ^ a-z0-9]/ig*) !== null)
+            ​this.value = '';
     }  
 
-    function setValidation(){                                                         
-
-    ​    let inputs = document.querySelectorAll('input[type=text], input[type=email], input[type=password], textarea');          
-
-    ​    Array.from(inputs).forEach(                                                    
-
-    ​        input => {                                                        
-
-    ​            input.addEventListener('input', fixValue)                                     
-
-    ​       }                                                            
-
-    ​    );  
+    function setValidation(){      
+    ​    let inputs = document.querySelectorAll('input[type=text], input[type=email], input[type=password], textarea');  
+    ​    Array.from(inputs).forEach( 
+            ​input => {     
+    ​            input.addEventListener('input', fixValue)
+    ​       } 
+    ​    );
+    }
     ```
 
 ## Билет 8
 
   - CSS : назначение, правила, приоритеты
-
     - определяет как страница выглядит. Разделение содержимого и представления
 
-    - Selector{
+    ```css
+    Selector{
 
       key : value
 
-      }
+    }
+    ```
 
-    - ！important > в <style = ""> > #id > колчество class(тем больше, тем выше) >  количество имени
+    - `!important >` в `<style = ""> > #id >` колчество class(тем больше, тем выше) >  количество имени
 
   - MVC : назначение, элементы, примеры реализации
-
     - Основная цель применения этой концепции состоит в отделении [бизнес-логики](https://ru.wikipedia.org/wiki/Бизнес-логика) (*модели*) от её визуализации.За счёт такогповышается возможность [повторного использования кода](https://ru.wikipedia.org/wiki/Повторное_использование_кода).
     -  Сontroller(управляет другие), Model(как работает), View(как выглядит)
-    - 
 
   - Реализовать функцию на JavaScript, которая будет закрывать текущее окно, если в нем открыт [https://www.google.ru](https://www.google.ru/) ([Возможный ответ](http://pastebin.com/72gLeMH7))
     ```javascript
@@ -287,7 +278,7 @@
     function close(){
         let isGoogle = documet.URL.match(/^https?:\/\/(www\.)?google\.com(\/.*)?$/ig);
         if (isGoogle)
-            window.close();     
+        window.close();     
     }
     ```
 
@@ -300,24 +291,22 @@
     - Все могут  динамичеки изменять страницу
     - DHTML все операции совершенны в клиенте.  AJAX взаймодействует с сервером
 
-  - Какие проблемы возникают при параллельной обработке запросов в JSP, как этого можно избежать?
-
-     Может быть конфликты. Непредсказуемые процесс программы и результаты. Можем делать асихронно или savebuy().
-
+  - Какие проблемы возникают при параллельной обработке запросов в JSP, как этого можно избежать?  
+     Может быть конфликты. Непредсказуемые процесс программы и результаты. Можем делать асихронно или savebuy().  
   - Написать js функцию, которая заменяет содержимое с именем класса "nyan" на изображение по ссылке: http://www.example.com/nyancat.gif ([Возможный ответ](http://pastebin.com/HFiFU850))
     ```javascript
     // Написать js функцию, которая заменяет содержимое <div> с именем класса "nyan"  
-    // на изображение по ссылке: http://www.example.com/nyancat.gif                   
-                                                                                      
-    function replaceWithNyan(){                                                       
-            let img = document.createElement('img');                                  
-            img.src = 'http://www.example.com/nyancat.gif';                           
-            Array.from(document.querySelectorAll('.nyan')).forEach(                   
-                    div => {                                                          
-                            div.innerHTML = '';                                       
-                            div.appendChild(img);                                     
-                    }                                                                 
-            );                                                                        
+    // на изображение по ссылке: http://www.example.com/nyancat.gif   
+
+    function replaceWithNyan(){    
+        let img = document.createElement('img');  
+        img.src = 'http://www.example.com/nyancat.gif';   
+        Array.from(document.querySelectorAll('.nyan')).forEach(   
+            div => {       
+                div.innerHTML = '';       
+                div.appendChild(img);     
+            }      
+        );     
     }
     ```
 ## Билет 10
@@ -336,9 +325,7 @@
   - Правило css, меняющее цвет фона на желтый, если ссылка посещена и не лежит в классе "news" ([Возможный ответ](http://pastebin.com/Y9Crhmaq))
     ```css
     not(.news)>a:visited {
-
-      color: yellow;
-
+        color: yellow;
     }
     ```
 
@@ -356,11 +343,9 @@
 
   - php скрипт, который достаёт из get запроса имя и фамилию и приветствует пользователя, выводя html страницу ([Возможный ответ](http://pastebin.com/pWbJWbM5))
     ```php
-    <?php                     
-
-    $name = $_GET['name'];             
+    <?php     
+    $name = $_GET['name'];     
     echo 'Hello ' . ($name?$name:'noname');
-
     ?>
     ```
 
@@ -383,23 +368,17 @@
   - написать на php класс ([Возможный ответ](http://pastebin.com/qy4x8CTa))
     ```php
     class User{
+        private $userName;
+        private $age;
 
-      private $userName;
+        function __constuctor($userName, $age){
+        ​    $this->userName = $userName;
+        ​    $this->age = $age;
+        }
 
-      private $age;
-
-     
-
-      function __constuctor($userName, $age){
-
-    ​    $this->userName = $userName;
-
-    ​    $this->age = $age;
-
-      }
-      function whois(){
-    ​    return 'Name: ' . $this->userName . '\nAge: ' . $this->age;
-      }
+        function whois(){
+        ​    return 'Name: ' . $this->userName . '\nAge: ' . $this->age;
+        }
     }
     ```
 
@@ -413,7 +392,7 @@
   - Директива page: назначение, особенности, атрибуты
 
     - управлять параметр JSP страницы
-    - <% @ directive attribute = "value" %>
+    - `<% @ directive attribute = "value" %>`
     - атрибуты определяют что делать
 
   - Написать конфигурацию сервлета (org.xxx.MyServlet) с помощью аннотации. Сервлет должен принимать все запросы от файлов .html .xhtml
@@ -436,7 +415,7 @@
     ```java
     class ToGoogleServlet extends HttpServlet{
     ​    public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
-    ​        response.sendRedirect("http://google.com;")
+    ​response.sendRedirect("http://google.com;")
     ​    }
     }
     ```
@@ -496,16 +475,16 @@
     
     
     class HelloServlet extends HttpServlet{
-            public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
-                response.setContentType("text/html; charset=UTF-8");
+    public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+response.setContentType("text/html; charset=UTF-8");
     
-                    String name = request.getParameter("name");
-                    PrintWriter out = response.getWriter();
+    String name = request.getParameter("name");
+    PrintWriter out = response.getWriter();
     
-                    name = name==null?"Anonymous user":name;
-                    out.println("<h1>Hello " + name + "</h1>");
-                    out.close();
-            }
+    name = name==null?"Anonymous user":name;
+    out.println("<h1>Hello " + name + "</h1>");
+    out.close();
+    }
     }
     ```
 
@@ -535,33 +514,30 @@
     Суперглобальные массивы в PHP (SuperGlobal massive)
 
   - Код фильтра запросов, запрещающий доступ к приложению неавторизированным пользователям(у неавт пол в запросе отсутствует заголовок x-application-user) ([Возможный ответ](http://pastebin.com/qTuT55Fg))
-    ```
+    ```java
+    import java.io.*;
+    import javax.servlet.*;
+    import javax.servlet.http.*;
+    
+    // Код фильтра запросов, запрещающий доступ к приложению неавторизированным
+    // пользователям(у неавт пол в запросе отсутствует заголовок x-application-user)
+    
     class AuthFilter extends ServletFilter{
-
-    ​    public void init(FilterConfig config){}
-
-     
-
-    ​    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException{
-
-    ​        String auth = request.getHeader("x-application-user");
-
-    ​        if (auth == null || auth.equals("")){
-
-    ​            PrintWriter out = response.getWriter();
-
-    ​            response.setContentType("text/html; charset=UTF-8");
-
-    ​            out.println("WTF?! You are not authorized");
-
-    ​        }else{
-
-    ​            chain.doFilter(request, response);
-
-    ​        }
-
-    ​    } 
-
+            public void init(FilterConfig config){}
+    
+            public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException{
+                    String auth = request.getHeader("x-application-user");
+                    if (auth == null || auth.equals("")){
+                            PrintWriter out = response.getWriter();
+                            response.setContentType("text/html; charset=UTF-8");
+                            out.println("WTF?! You are not authorized");
+                    }else{
+                            chain.doFilter(request, response);
+                    }
+    
+            }
+    
+            public void destroy(){}
     }
     ```
 
@@ -577,55 +553,32 @@
     -  Получения глобальные параметры. Читения файла ресурсов проектов. Переводить запрос
 
   - Код jsp-страницы показывающий содержимое корзины юзера. Содержимое корзины - коллекциия объектов класса ShoppingItem который содержит имя, стоимость и количество заказанного товара - хранится в отдельном managed bean. ([Возможный ответ](http://pastebin.com/pBA7f4Zt))
-    ```
+    ```jsp
     <%@ import="my.package.ShoppingItem" %>
-
     <%@ import="java.util.Collection" %>
-
     <%@ contentType="text/html;charset=UTF-8" language="java"%>
-
     <jsp:useBean id="managed" class="my.package.ManagedBean" scope="session">
-
     <html>
-
     <head>
-
-            <meta charset="utf-8">
-
+            <meta charset="utf-8">
     </head>
-
     <body>
-
-    ​    <tr>
-
-    ​        <th>name</th>
-
-    ​        <th>price</th>
-
-    ​        <th>count</th>
-
-    ​    </tr>
-
+    <table>
+            <tr>
+                    <th>name</th>
+                    <th>price</th>
+                    <th>count</th>
+            </tr>
     <%
-
-    ​     Collection<ShoppingItem> basket = mananged.getBasket();
-
-    ​    for (ShoppingItem position: basket){%>
-
-    ​        <tr>
-
-    ​            <td><%= position.getName() %></td>
-
-    ​            <td><%= position.getPrice() %></td>
-
-    ​            <td><%= position.getCount() %></td>
-
-    ​        </tr>
-
-    ​    <%}%>
-
+            Collection<ShoppingItem> basket = mananged.getBasket();
+            for (ShoppingItem position: basket){%>
+                    <tr>
+                            <td><%= position.getName() %></td>
+                            <td><%= position.getPrice() %></td>
+                            <td><%= position.getCount() %></td>
+                    </tr>
+            <%}%>
     </table>
-
     </body>
     ```
 
@@ -640,30 +593,22 @@
        action = "url" - куда отправитьs
 
   - конфигурация сервлетов. файл web.xml
-    ```
+    ```xml
     <servlet>
-
-    ​	<servlet-name>name</servlet-name>
-
-    ​	<servlet-class>classname</servlet-class> 
-
+      ​	<servlet-name>name</servlet-name>
+      ​	<servlet-class>classname</servlet-class> 
     </servlet>
 
     <servlet-mapping>
-
-    ​	<servlet-name>name</servlet-name>
-
-    ​	<url-pattern>/url</url-pattern>
-
+      ​	<servlet-name>name</servlet-name>
+      ​	<url-pattern>/url</url-pattern>
     </servlet-mapping>
     ```
 
   - написать css правило, которое при клике на ссылку добавляет ей подчеркивание, всем кроме ссылок в теге h1 ([Возможный ответ](http://pastebin.com/Y9Crhmaq))
     ```
     not(h1) a:active {
-
       text-decoration: underline;
-
     }
     ```
 
@@ -679,25 +624,14 @@
 ## Билет 22
 
   - Экмаскрипт, преимущества 6й и 7й версии
-
     - Можно писать класс
     - Новые операции, например, функция с ->(похож на lambda в java), которые упрощают прогромирование
-
   - ГоФ паттерны. Что такое? Основные виды, примеры
-
     - Повторимая архитектурная конструкция, которая решает какую-то проблема.
-
     - Порождающие: builder, factory, одиночка
-
       Структурная: bridge, proxy, adapter, decorator
-
       Поведенческие: command, iterator, observer
-
   - Написать html страницу и сервлет, возвращающий странице количество активных сессий
-
-    
-    
-    
 
 ## Билет 23
 
@@ -712,51 +646,39 @@
 ## Билет 24
 
   - ECMAScript, типы данных, особенности, инструкции
-
     - это встраиваемый расширяемый не имеющий средств [ввода-вывода](https://ru.wikipedia.org/wiki/Ввод-вывод) язык программирования,  для построения других скриптовых языков
-
-    - примитивные: Number,String,Boolean, Null, Undefined
-  
+    - примитивные: Number,String,Boolean, Null, Undefined  
       составные: Object, List, Reference
-  
     - Блок, переменное, выражение, цикл, исключение и так далее. В ES6 есть Класс
-  
   - цикл жизни jsp
-  
-    ​	Трансляция в сервлет
-  
-    ​	компиляция сервлета
-  
-    ​	загразка класса сервлета
-  
-    ​	создать экземпляра сервлета
-  
-    ​	вызов jspInit()
-  
-    ​	вызов jspService()
-  
-    ​	вызов jspDestroy()
+    - Трансляция в сервлет
+    - компиляция сервлета
+    - загразка класса сервлета
+    - создать экземпляра сервлета
+    - вызов jspInit()
+    - вызов jspService()
+    - вызов jspDestroy()
   
   - html форма отправляющая номер вопроса и выбор от a до f
     ```html
     <body>
+        <script>
+            function send(){
+              let form = document.getElementById("form");
+              let data = new FormData(form)
+              let request = new XMLHttpRequest();
+              request.open("POST","url");
+              request.send()
+            }
+        </script>
 
-    <script>
-    function send(){
-      let form = document.getElementById("form");
-      let data = new FormData(form)
-      let request = new XMLHttpRequest();
-      request.open("POST","url");
-      request.send()
-    }
-    </script>
-    <form id = "form" method = "post" action = "url" onsubmit = send()>
-      <input type = radio value = "a" name = "choice">a<br>
-        <input type = radio value = "b" name = "choice">b<br>
-        <input type = radio value = "c" name = "choice">c<br>
-        <input type = radio value = "d" name = "choice">d<br>
-        <input type = radio value = "e" name = "choice">e<br>
-        <input type = radio value = "f" name = "choice">f<br>
-    </form>
+        <form id = "form" method = "post" action = "url" onsubmit = send()>
+            <input type = radio value = "a" name = "choice">a<br>
+            <input type = radio value = "b" name = "choice">b<br>
+            <input type = radio value = "c" name = "choice">c<br>
+            <input type = radio value = "d" name = "choice">d<br>
+            <input type = radio value = "e" name = "choice">e<br>
+            <input type = radio value = "f" name = "choice">f<br>
+        </form>
     <body>
     ```
