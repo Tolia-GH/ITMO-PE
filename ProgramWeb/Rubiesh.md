@@ -230,11 +230,13 @@
       ![avatar](pic/Rubiesh-7.2.png)
 
   - Управление сессией. HttpSession.
+    - Session：在计算机中，尤其是在网络应用中，称为“会话控制”。Session对象存储特定用户会话所需的属性及配置信息。这样，当用户在应用程序的 Web 页之间跳转时，存储在Session对象中的变量将不会丢失，而是在整个用户会话中一直存在下去。当用户请求来自应用程序的 Web页时，如果该用户还没有会话，则Web服务器将自动创建一个 Session对象。当会话过期或被放弃后，服务器将终止该会话
     - Создание: 
-      1. 对于 Jsp: 若当前页面为浏览器（客户端）访问web应用的第一个资源页面且 Jsp的 Page 指定的 Session 属性的值为 true
-      2. 对于 Servlet: 若当前 Servlet 为浏览器（客户端）访问 web 应用的第一个资源时，使用 request.getSession() 或 request.getSession(true) 创建
+      1. 对于 php: 首先使用`session_start()`函数，PHP 从 session 仓库中加载已经存储的 session 变量，当执行PHP脚本时，通过使用`session_register()`函数注册 session 变量，当 PHP 脚本执行结束时，未被销毁的 session 变量会被自动保存在本地一定路径下的 session 库中，这个路径可以通过 php.ini 文件中的session.save_path 指定，下次浏览网页时可以加载使用
+      2. 对于 Jsp: 若当前页面为浏览器（客户端）访问 web 应用的第一个资源页面且 Jsp的 Page 指定的 Session 属性的值为 true
+      3. 对于 Servlet: 若当前 Servlet 为浏览器（客户端）访问 web 应用的第一个资源时，使用 `request.getSession()` 或 `request.getSession(true)` 创建
     - Получение: Получить из Cookie
-    - Destroy: session.invalidate() или в элементе <session-timeout> определяет время жизни
+    - Destroy: `session.invalidate()` или в элементе <session-timeout> определяет время жизни
   - Написать JS-функцию, которая запрещает вводить любые символы, кроме цифр и букв латинского алфавита 
     ```javascript
     function fixValue(){
@@ -255,23 +257,64 @@
 ## Билет 8
 
   - CSS : назначение, правила, приоритеты
-    - определяет как страница выглядит. Разделение содержимого и представления
+    - Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.
 
     ```css
-    Selector{
-
-      key : value
-
+    Selector {
+        key : value
     }
     ```
 
-    - `!important >` в `<style = ""> > #id >` колчество class(тем больше, тем выше) >  количество имени
+    - приоритеты
+      - 继承性（Inheritance）：CSS 的继承特性指的是应用在一个标签上的那些 CSS 属性（Attributes）被传到其子标签上
+      1. 最近的祖先样式比其他祖先样式优先级高
+        ```html
+        <!-- 类名为 son 的 div 的 color 为 blue -->
+        <div style="color: red">
+            <div style="color: blue">
+                <div class="son"></div>
+            </div>
+        </div>
+        ```
+      2. 标签直接拥有的属性比从祖先那里继承来的属性优先级高
+        ```html
+        <!-- 类名为 son 的 div 的 color 为 blue -->
+        <div style="color: red">
+            <div class="son" style="color: blue"></div>
+        </div>
+        ```
+      3. 优先级关系：内联样式 > ID 选择器 > 类选择器 = 属性选择器 = 伪类选择器 > 标签选择器 = 伪元素选择器  
+        inline style > ID selector > class selector = attribute selector = pseudo class selector > tag selector = pseudo element selector
+      4. 计算选择符中 ID 选择器的个数（a），计算选择符中类选择器、属性选择器以及伪类选择器的个数之和（b），计算选择符中标签选择器和伪元素选择器的个数之和（c）。按 a、b、c 的顺序依次比较大小，大的则优先级高，相等则比较下一个。若最后两个的选择符中 a、b、c 都相等，则按照"就近原则"来判断
+      5. 属性后插有 `!important` 的属性拥有最高优先级。若同时插有 `!important`，则再利用规则 3、4 判断优先级
 
   - MVC : назначение, элементы, примеры реализации
-    - Основная цель применения этой концепции состоит в отделении [бизнес-логики](https://ru.wikipedia.org/wiki/Бизнес-логика) (*модели*) от её визуализации.За счёт такогповышается возможность [повторного использования кода](https://ru.wikipedia.org/wiki/Повторное_использование_кода).
-    -  Сontroller(управляет другие), Model(как работает), View(как выглядит)
+    - MVC 是软件工程中的一种软件架构模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）
+      - 模型（Model） - 程序员编写程序应有的功能（实现算法等等）、数据库专家进行数据管理和数据库设计(可以实现具体的功能)
+      - 视图（View） - 界面设计人员进行图形界面设计
+      - 控制器（Controller）- 负责转发请求，对请求进行处理
+    - JavaScript 范例
+      ```javascript
+      /** 模拟 Model, View, Controller */
+      var M = {}, V = {}, C = {};
+
+      /** Model 负责存放资料 */
+      M.data = "hello world";
+
+      /** View 负责将资料输出给用户 */
+      V.render = (M) => { alert(M.data); }
+
+      /** Controller 作为连接 M 和 V 的桥梁 */
+      C.handleOnload = () => { V.render(M); }
+
+      /** 在网页读取的时候呼叫 Controller */
+      window.onload = C.handleOnload;
+      ``` 
+    - Основная цель применения этой концепции состоит в отделении [бизнес-логики](https://ru.wikipedia.org/wiki/Бизнес-логика) (*модели*) от её визуализации.За счёт такого повышается возможность [повторного использования кода](https://ru.wikipedia.org/wiki/Повторное_использование_кода).  
+      应用这个概念的主要目的是将业务逻辑（模型）与其可视化分离，因此增加了代码重用的可能性。
 
   - Реализовать функцию на JavaScript, которая будет закрывать текущее окно, если в нем открыт [https://www.google.ru](https://www.google.ru/) ([Возможный ответ](http://pastebin.com/72gLeMH7))
+    实现一个 JavaScript 函数，如果 [https://www.google.ru](https://www.google.ru/) 在其中打开，该函数将关闭当前窗口
     ```javascript
     // Реализовать функцию на JavaScript, которая будет закрывать текущее окно, если в нем открыт https://www.google.ru
  
@@ -286,14 +329,21 @@
 
   - AJAX и DHTML - описание, сходства и различия
 
-    - DHTML: Css, JS, Dom, HTML. Динамичеки изменяет страницу при операции позователя
-    - AJAX: XmlHttpRequest(). Отправить запрос в север, и потом динамически изменять страницу на основе ответа.
-    - Все могут  динамичеки изменять страницу
-    - DHTML все операции совершенны в клиенте.  AJAX взаймодействует с сервером
+    - DHTML: Css, JS, Dom, HTML. Динамичеки изменяет страницу при операции позователя 
+      在调用者操作时动态更改页面
+    - AJAX: `XmlHttpRequest()`. Отправить запрос в север, и потом динамически изменять страницу на основе ответа.
+      向服务器发送请求，然后根据响应动态更改页面。
+    - Все могут динамичеки изменять страницу 
+      都可以动态改变页面
+    - DHTML все операции совершенны в клиенте.  AJAX взаймодействует с сервером  
+      DHTML 的所有操作都在客户端完成，而 AJAX 需要与服务器交互
 
-  - Какие проблемы возникают при параллельной обработке запросов в JSP, как этого можно избежать?  
-     Может быть конфликты. Непредсказуемые процесс программы и результаты. Можем делать асихронно или savebuy().  
-  - Написать js функцию, которая заменяет содержимое с именем класса "nyan" на изображение по ссылке: http://www.example.com/nyancat.gif ([Возможный ответ](http://pastebin.com/HFiFU850))
+  - Какие проблемы возникают при параллельной  обработке запросов в JSP, как этого можно избежать?  
+    JSP 并行处理请求会出现什么问题，如何避免？ 
+    Может быть конфликты. Непредсказуемые процесс программы и результаты. Можем делать асихронно или `savebuy()`.  
+    可能会有冲突。 不可预测的程序过程和结果。 我们可以异步（asynchronously）或 `savebuy()` 来完成
+  - Написать js функцию, которая заменяет содержимое с именем класса "nyan" на изображение по ссылке:  
+    编写一个 js 函数，将类名“nyan”的内容替换为链接处的图片：http://www.example.com/nyancat.gif ([Возможный ответ](http://pastebin.com/HFiFU850))
     ```javascript
     // Написать js функцию, которая заменяет содержимое <div> с именем класса "nyan"  
     // на изображение по ссылке: http://www.example.com/nyancat.gif   
@@ -313,14 +363,19 @@
 
   - Rest и RPC
 
-    - REST будет использовать все методы HTTP, а RPC только будет использовать Get и  Post
+    - REST будет использовать все методы HTTP, а RPC только будет использовать Get и  Post  
+      REST 将使用所有 HTTP 方法，而 RPC 将仅使用 Get 和 Post
     - Rest - подход к архитектуре сетевых протоколов, обеспечивающих доступ к ресурсам
-    - RPC - подход, основенный на вызове удаленных процедур
+      一种提供资源访问的网络协议架构方法 
+    - RPC - подход, основенный на вызове удаленных процедур  
+      基于远程过程调用的方法
 
   - RequestDispatcher
 
-    - Полученны из контекста(абсолютная путь) или request(абсолютная или относительная)
-    - dispatch the request to another resource with forward();
+    - Полученны из контекста(абсолютная путь) или request(абсолютная или относительная)  
+      从上下文（绝对路径）或请求（绝对或相对）获取
+    - dispatch the request to another resource with `forward()`;  
+      使用 `forward()` 将请求分派到另一个资源
 
   - Правило css, меняющее цвет фона на желтый, если ссылка посещена и не лежит в классе "news" ([Возможный ответ](http://pastebin.com/Y9Crhmaq))
     ```css
@@ -332,14 +387,18 @@
 ## Билет 11
 
   - javascript, особенности, что для чего и тд
-
-    - объектно-ориентированный скриптовый язык программирования для придания интерактивность странтицам.
-    - Из ECMAscript, DOM, BOM
+    - javascript is a script language based on objects and events, it defines the behaviors of websites
+    - 解释型语言（interpreted language），边运行边解释
+    - 基于对象
+    - 弱类型的
+    - 动态的
+    - 跨平台的（仅需浏览器支持，无需通过 web 服务器）
 
   - JSP actions
 
-    - XML-элемент, позволяющие управлять поведением сервлет
-    - <jsp : action attribute = "value"/>
+    - XML-элемент, позволяющие управлять поведением сервлет  
+      用于控制 servlet 行为的 XML 元素  
+      `<jsp : action attribute = "value"/>`
 
   - php скрипт, который достаёт из get запроса имя и фамилию и приветствует пользователя, выводя html страницу ([Возможный ответ](http://pastebin.com/pWbJWbM5))
     ```php
@@ -351,9 +410,20 @@
 
 ## Билет 12:
 
-  - структура протокола http, характеристики
+  - структура протокола http, характеристики  http协议结构、特点
+    - 结构
+     
+      ![avatar](pic/Rubiesh-1.1.png)
+      ![avatar](pic/Rubiesh-1.2.png)
 
-    Сообщение(запрос и ответ, они все состоят из стартовой строки, заголовка и тело) и соединение. И каждый запрос имеет свой TCP соединение.
+      Сообщение(запрос и ответ, они все состоят из стартовой строки, заголовка и тело) и соединение. И каждый запрос имеет свой TCP соединение.  
+      消息（请求和响应，它们都由起始行、标题和正文组成）和连接。 每个请求都有自己的 TCP 连接。
+    - 特点
+      - 支持客户/服务器模式
+      - 简单快速：客户向服务器请求服务时，只需传送请求方法和路径，因而 HTTP 服务器的程序规模小，通信速度很快
+      - 灵活：HTTP允许传输任意类型的数据对象。正在传输的类型由 Content-Type 加以标记
+      - 无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间
+      - 无状态：HTTP协议是无状态协议。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快
 
   - жизненный цикл jsp
 
@@ -384,21 +454,40 @@
 
 ## Билет 13
 
-  - Преимущества и недостатки ajax
+- AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术
+  - 优点
+    - 能在不刷新整个页面的前提下与服务器通信维护数据。这使得Web应用程序更为迅捷地响应用户交互，并避免了在网络上发送那些没有改变的信息，减少用户等待时间
+    - AJAX 使用异步方式与服务器通信，不需要打断用户的操作，具有更加迅速的响应能力。优化了 Browser 和S erver 之间的沟通，减少不必要的数据传输、时间及降低网络上数据流量
+    - AJAX 可以把以前一些服务器负担的工作转嫁到客户端，利用客户端闲置的能力来处理，减轻服务器和带宽的负担，提升站点性能
+    - AJAX 使 WEB 中的界面与应用分离（也可以说是数据与呈现分离），有利于分工合作、减少非技术人员对页面的修改造成的WEB应用程序错误、提高效率、也更加适用于现在的发布系统
+  - 缺点：
+    - 在动态更新页面的情况下，用户无法回到前一个页面状态
+    - AJAX 暴露了浏览器与服务器交互的细节
+    - 对搜索引擎的支持比较弱。如果使用不当，AJAX 会增大网络数据的流量，从而降低整个系统的性能
+    - 破坏程序的异常处理机制
+    - AJAX 不能很好支持移动设备
 
-    - Экономия трафика, уменшение нагрузка на сервер, ускорение реакции интерфейса
-    - усложение проекта, требуется javascript, отсутствие интеграции со стандартными инструментами браузера
+  - Экономия трафика, уменшение нагрузка на сервер, ускорение реакции интерфейса
+  - усложение проекта, требуется javascript, отсутствие интеграции со стандартными инструментами браузера
 
-  - Директива page: назначение, особенности, атрибуты
+- Директива page: назначение, особенности, атрибуты
+  - JSP страница может послать сообщение соответствующему контейнеру с указаниями действий, которые необходимо провести. Эти сообщения называются директивами.  
+  JSP 页面可以向适当的容器发送一条消息，其中包含有关操作的说明。 这些消息称为指令
+  - Все директивы начинаются с <%@, затем следует название директивы и один или несколько атрибутов со значениями, и заканчиваются %>. Форму записи директив можно изобразить следующим образом:  
+    所有指令均以 <%@ 开头，后跟指令名称和一个或多个属性值，并以 %> 结尾。指令的形式可以表示如下：
+  - `<%@ directive attribute = "value" %>`
+  - 页面指令选项
+    - import	使一个JAVA导入声明被插入到最终页面文件。
+    - contentType	规定了生成内容的类型。当生成非HTML内容或者当前字符集并非默认字符集时使用。
+    - errorPage	处理HTTP请求时，如果出现异常则显示该错误提示信息页面。
+    - isErrorPage	如果设置为TRUE，则表示当前文件是一个错误提示页面。
+    - isThreadSafe	表示最终生成的servlet是否具有线程安全性。
 
-    - управлять параметр JSP страницы
-    - `<% @ directive attribute = "value" %>`
-    - атрибуты определяют что делать
-
-  - Написать конфигурацию сервлета (org.xxx.MyServlet) с помощью аннотации. Сервлет должен принимать все запросы от файлов .html .xhtml
-    ```java
-    @WebServlet(name = "org.xxx.MyServlet", value = "/servlet")
-    ```
+- Написать конфигурацию сервлета (org.xxx.MyServlet) с помощью аннотации. Сервлет должен принимать все запросы от файлов .html .xhtml  
+  使用注释编写 servlet 配置 (org.xxx.MyServlet)。 servlet 必须接受来自 .html .xhtml 文件的所有请求
+  ```java
+  @WebServlet(name = "org.xxx.MyServlet", value = "/servlet")
+  ```
 
 ## Билет 14
 
@@ -411,11 +500,12 @@
 
     `interger`, `float`, `double`, `boolean`, `string`, `NULL`
 
-  - сервлет перенаправляющий все запросы на страницу google ([Возможный ответ](http://pastebin.com/EnTVLpNG))
+  - сервлет перенаправляющий все запросы на страницу google  
+    将所有请求重定向到谷歌页面的 servlet（[Возможный ответ](http://pastebin.com/EnTVLpNG)）
     ```java
     class ToGoogleServlet extends HttpServlet{
     ​    public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
-    ​response.sendRedirect("http://google.com;")
+            ​response.sendRedirect("http://google.com;")
     ​    }
     }
     ```
@@ -423,14 +513,25 @@
 ## Билет 15
 
   - Php, особенности и запуск
-
-     скриптовый язык, часто используемый для написания веб-приложений.  ООП
+    - PHP is a open-soursce general-perpose scripting language, suitable for web development, and can be embedded in HTML, often used ny developers to write dynamic page.
+    - characteristics
+      - OOP
+      - type-weak language
+      - Cross-platform, run on web server
+      - simple gramma
+    - runing
+      - Scanning: convert php code to language tokens
+      - Parsing: convert tokens to meaningful expression
+      - Compilation: compile expretion to opcodes
+      - Execution: execute opcodes in order, to realize php funxtions
 
   - Long Polling vs WebSockets
 
     Long polling is much more resource intensive on servers whereas WebSockets have an extremely lightweight footprint on servers. Long polling also requires many hops between servers and device
+    长轮询在服务器上占用的资源要多得多，而 WebSockets 在服务器上的占用空间非常小。 长轮询还需要在服务器和设备之间进行多次跳转
 
-  - Написать JSP страницу, которая будет возвращать количество сессий, обратившихся к ней за последние 60 секунд и формировать вывод в HTML
+  - Написать JSP страницу, которая будет возвращать количество сессий, обратившихся к ней за последние 60 секунд и формировать вывод в HTML 
+    编写一个 JSP 页面，该页面将返回在过去 60 秒内访问它的会话数并以 HTML 格式生成输出
 
     в jsp
 
@@ -458,13 +559,17 @@
   - элементы JSP  
     `<%-- omment --%>` `<%@ directive %>` `<%! decl%>` `<% code %>` `<%= expression%>`
   - CGI - обработка запроса, преимущества и недостатки  
-    Вызов программ на севере использователем. Каждый запрос обрабатывается одельным процессом СGI-прогораммы  
+    - Вызов программ на севере использователем. Каждый запрос обрабатывается одельным процессом СGI-прогораммы  
+    用户调用服务器上的程序。 每个请求都由一个单独的 CGI 程序进程处理
     - Преимущества: программы могут быть написаы на множестве языков  
-      исключены конфликты при параллельной обработке  
-      ​нескольких запросов  
-    -  Недостатки: Высокие расходы. Слабое разделение уровня представления и бизнес-логики
+      优点：可以用多种语言编写程序  
+      исключены конфликты при параллельной обработке   ​нескольких запросов  
+      消除了并行处理多个请求时的冲突
+    - Недостатки: Высокие расходы. Слабое разделение уровня представления и бизнес-логики 
+      缺点：成本高。 表示层和业务逻辑之间的弱分离
 
-  - Написать сервлет, который принимает из http запроса параметр name и выводит его. Если параметр не обнаружен то вывести Anonymous user ([Возможный ответ](http://pastebin.com/tHgjJSLz))
+  - Написать сервлет, который принимает из http запроса параметр name и выводит его. Если параметр не обнаружен то вывести Anonymous user  
+    编写一个从 http 请求中获取名称参数并将其输出的 servlet。 如果未找到该参数，则显示匿名用户 ([Возможный ответ](http://pastebin.com/tHgjJSLz))
     ```java
     import java.io.PrintWriter;
     import java.io.IOException;
@@ -475,45 +580,70 @@
     
     
     class HelloServlet extends HttpServlet{
-    public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
-response.setContentType("text/html; charset=UTF-8");
+        public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+            response.setContentType("text/html; charset=UTF-8");
     
-    String name = request.getParameter("name");
-    PrintWriter out = response.getWriter();
+            String name = request.getParameter("name");
+            PrintWriter out = response.getWriter();
     
-    name = name==null?"Anonymous user":name;
-    out.println("<h1>Hello " + name + "</h1>");
-    out.close();
-    }
+            name = name==null?"Anonymous user":name;
+            out.println("<h1>Hello " + name + "</h1>");
+            out.close();
+        }
     }
     ```
 
 ## Билет 17:
 
   - FastCGI. Плюсы, минусы, отличия от CGI
-    -  Безопасность, высокая стабильность, быстрее
-    -  Не может работать долго, иначе север его убирает.
-    -  Все запросы могут обрабатываться одним процессом
+    - Безопасность, высокая стабильность, быстрее 
+      安全、高稳定、更快  
+    - Не может работать долго, иначе север его убирает.  
+      它不能长时间工作，否则服务器将其删除。
+    - Все запросы могут обрабатываться одним процессом 
+      所有请求都可以由一个进程处理
   - Суперглобальные массивы в PHP (SuperGlobal massive)  
-    Предопределённые массивы, имеющие глобальную область видимости
-    - `$_GLOBALS` - массив всех глобальных переменных
-    - `$_SERVER` - параметры, которые ОС передаёт серверу при его запуске
-    - `$_ENV` - переменные среды ОС
+    Предопределённые массивы, имеющие глобальную область видимости  PHP 中的超全局数组 (SuperGlobal massive)
+    - `$_GLOBALS` - массив всех глобальных переменных 所有全局变量的数组
+    - `$_SERVER` - параметры, которые ОС передаёт серверу при его запуске 操作系统启动时传递给服务器的参数
+    - `$_ENV` - переменные среды ОС 操作系统环境变量
       `$_POST, $_GET, $_COOKIE, $_REQUEST, $_FILE, $_SESSION`
-  - Страница JSP, проверяющая есть ли /какой-то параметр/ в запросе и если нету - выводящая сообщение об ошибке ([Возможный ответ](http://pastebin.com/9yVFXZku))
-    <%= request.getParameter("parameterName")==null?"400 - your did not set parameter":request.getParameter("parameterName") %>
+  - Страница JSP, проверяющая есть ли /какой-то параметр/ в запросе и если нету - выводящая сообщение об ошибке 
+    检查请求中是否有/some parameter/的JSP页面，如果没有，则显示错误消息 ([Возможный ответ](http://pastebin.com/9yVFXZku))
+    ```java
+    <%-- Страница JSP, проверяющая есть ли /какой-то параметр/ в запросе и если нету - выводящая сообщение об ошибке  --%>
+ 
+    <%@ page contentType="text/html; charset=UTF-8" language="java"%>
+    <%= request.getParameter("parameterName")==null?"400 - your did not set parameter":request.getParameter("parameterName")  %>
+    ```
 
 ## Билет 18
 
   - ООП в PHP
 
     Как java в PHP тоже есть класс. Наследование тоже не запрещено. Могут решить проблемы при создании экземплар.
+    和java一样，PHP也有一个类。 继承也不被禁止。 可以解决创建实例时的问题。
+
+    ```php
+    <?php
+    class phpClass {
+      var $var1;
+      var $var2 = "constant string";
+      
+      function myfunc ($arg1, $arg2) {
+        [..]
+      }
+      [..]
+    }
+    ?>
+    ```
 
   - Предопределенные переменные JSP
 
     Суперглобальные массивы в PHP (SuperGlobal massive)
 
-  - Код фильтра запросов, запрещающий доступ к приложению неавторизированным пользователям(у неавт пол в запросе отсутствует заголовок x-application-user) ([Возможный ответ](http://pastebin.com/qTuT55Fg))
+  - Код фильтра запросов, запрещающий доступ к приложению неавторизированным пользователям(у неавт пол в запросе отсутствует заголовок x-application-user)  
+    拒绝未经授权用户访问应用程序的请求过滤器代码（请求中的非授权字段没有 x-application-user 标头）  ([Возможный ответ](http://pastebin.com/qTuT55Fg))
     ```java
     import java.io.*;
     import javax.servlet.*;
@@ -553,7 +683,7 @@ response.setContentType("text/html; charset=UTF-8");
     -  Получения глобальные параметры. Читения файла ресурсов проектов. Переводить запрос
 
   - Код jsp-страницы показывающий содержимое корзины юзера. Содержимое корзины - коллекциия объектов класса ShoppingItem который содержит имя, стоимость и количество заказанного товара - хранится в отдельном managed bean. ([Возможный ответ](http://pastebin.com/pBA7f4Zt))
-    ```jsp
+    ```html
     <%@ import="my.package.ShoppingItem" %>
     <%@ import="java.util.Collection" %>
     <%@ contentType="text/html;charset=UTF-8" language="java"%>
@@ -586,12 +716,10 @@ response.setContentType("text/html; charset=UTF-8");
   - HTML формы
 
     - cбор ввод разных видов использователя
-
       text, checkbox, radio, button, password
+      `action = "url"` - куда отправитьs
 
-       action = "url" - куда отправитьs
-
-  - конфигурация сервлетов. файл web.xml
+  - конфигурация сервлетов. файл web.xml servlet 配置
     ```xml
     <servlet>
       ​	<servlet-name>name</servlet-name>
@@ -604,7 +732,8 @@ response.setContentType("text/html; charset=UTF-8");
     </servlet-mapping>
     ```
 
-  - написать css правило, которое при клике на ссылку добавляет ей подчеркивание, всем кроме ссылок в теге h1 ([Возможный ответ](http://pastebin.com/Y9Crhmaq))
+  - написать css правило, которое при клике на ссылку добавляет ей подчеркивание, всем кроме ссылок в теге h1  
+    写一个 css 规则，当点击一个链接时，给它添加一个下划线，除了 h1 标签中的链接 ([Возможный ответ](http://pastebin.com/Y9Crhmaq))
     ```
     not(h1) a:active {
       text-decoration: underline;
@@ -634,13 +763,15 @@ response.setContentType("text/html; charset=UTF-8");
 
 ## Билет 23
 
-  - обработка http с помощью servlet
-    - При помощи HttpServletRequest получить запрос и делать обработку. И ответ сохраняется в HttpServletResponse
-  - многоуровневая архитектура приложения
-    - Presentatio: самый верхний уровень. Что мы видим
-    - logic: Между другими двумя.Получать запрос, читать данные из data, делать обработку, отправить результат клиенту  
-    - data:Сохранение данных
-  - с помощью jquery посчитать количество div с классом lecture содержащие «де-факто»
+- обработка http с помощью servlet
+  - При помощи HttpServletRequest получить запрос и делать обработку. И ответ сохраняется в HttpServletResponse  
+    使用 HttpServletRequest 接收请求并进行处理。 并且响应存储在 HttpServletResponse
+- многоуровневая архитектура приложения 分层应用架构
+  - Presentatio: самый верхний уровень. Что мы видим
+  - logic: Между другими двумя.Получать запрос, читать данные из data, делать обработку, отправить результат клиенту  
+  - data:Сохранение данных
+- с помощью jquery посчитать количество div с классом lecture содержащие «де-факто»  
+  使用 jquery 计算包含“事实上”的讲座类的 div 数量
 
 ## Билет 24
 
@@ -658,7 +789,8 @@ response.setContentType("text/html; charset=UTF-8");
     - вызов jspService()
     - вызов jspDestroy()
   
-  - html форма отправляющая номер вопроса и выбор от a до f
+  - html форма отправляющая номер вопроса и выбор от a до f  
+    提交问题编号和从 a 到 f 的选择的 html 表单
     ```html
     <body>
         <script>
