@@ -5,7 +5,7 @@
 - [x] [Advanced Mathematics](AdvancedMathematics.md)
 - [x] [Linear Algebra](LinearAlgebra.md)
 - [x] [Типовой расчет](TypeWork.md)
-- [x] [Расчетно-графическая работа](GraphicWork/GraphicWork.md)
+- [x] [Расчетно-графическая работа](GraphicWork1/GraphicWork.md)
 - [ ] [HomeWork](HomeWork/Task.md)
 - [ ] [Test](Test.md)
 - [x] [Exam](../404.md)
