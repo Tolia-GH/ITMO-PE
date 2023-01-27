@@ -15,7 +15,8 @@
   - [ ] [Lab 3.05](Labs/Lab3.05.md)
 - [ ] [HomeWork](HomeWork.md)
 - [x] [Practice](Practice.md)
-- [x] [Exam](Exam.md)
+- [x] [Exam1](Exam1.md)
+- [ ] [Exam2](Exam2.md)
 
 <style type="text/css">
     #footer {
