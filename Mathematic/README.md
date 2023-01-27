@@ -9,7 +9,7 @@
 - [ ] [Расчетно-графическая работа 2](GraphicWork2/GraphicWork.md)
 - [ ] [HomeWork](HomeWork/Task.md)
 - [ ] [Test](Test.md)
-- [x] [Exam](../404.md)
+- [ ] [Exam](Exam.md)
 
 <style type="text/css">
     #footer {
