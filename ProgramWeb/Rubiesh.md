@@ -69,20 +69,20 @@
     <body>
     <script>
     function send(){
-    	let answer = document.getElementById("answer").value;
-    	let pattern = /^(A|B|C|D|E|F)$/g
-    	if(pattern.test(answer)){
-    		let form = document.getElementById("form");
-    		let data = new FormData(form)
-    		let request = new XMLHttpRequest();
-    		request.open("POST","url");
-    		request.send()
-    	}
+      let answer = document.getElementById("answer").value;
+      let pattern = /^(A|B|C|D|E|F)$/g
+      if(pattern.test(answer)){
+        let form = document.getElementById("form");
+        let data = new FormData(form)
+        let request = new XMLHttpRequest();
+        request.open("POST","url");
+        request.send()
+      }
     }
     </script>
     <form id = "form" method = "post" action = "url" onsubmit = "send()">
-    	<input type = "text" id = "answer">
-    	<button type = "submit" onclick="send()">submit</button>
+      <input type = "text" id = "answer">
+      <button type = "submit" onclick="send()">submit</button>
     </form>
     <body>
     ```
@@ -105,7 +105,7 @@
     function replaceAllTextInputs(){
         Array.from(document.querySelectorAll("input[type=text], textarea"))
             .forEach(input => {
-                let button = 		document.createElement('button').setAttribute("value",input.value);
+                let button = document.createElement('button').setAttribute("value",input.value);
                 input.replaceWith(button);
             });
     }
@@ -175,7 +175,7 @@
     编写一个 CSS 规则，在悬停时将新闻类中的所有图像框在一个框架中
     ```css
     .news img:hover{
-    ​	  border:5px solid black;
+      border:5px solid black;
     }
     ```
   
@@ -213,9 +213,9 @@
   - Jquery ajax запрос на сервлет, ответ от сервлета - объект json, вывести на страницу firstname, lastname, img_url
     ```javascript
     $.ajax({
-      ​	url: "url of servlet"
-      ​	data: {img_url: 'img_url',lastname:'lastname',firstname:'firstname'}
-      ​	dataType: "json"
+      ​url: "url of servlet"
+      ​data: {img_url: 'img_url',lastname:'lastname',firstname:'firstname'}
+      ​dataType: "json"
     })
     ```
 
@@ -479,11 +479,11 @@
     所有指令均以 <%@ 开头，后跟指令名称和一个或多个属性值，并以 %> 结尾。指令的形式可以表示如下：
   - `<%@ directive attribute = "value" %>`
   - 页面指令选项
-    - import	使一个JAVA导入声明被插入到最终页面文件。
-    - contentType	规定了生成内容的类型。当生成非HTML内容或者当前字符集并非默认字符集时使用。
-    - errorPage	处理HTTP请求时，如果出现异常则显示该错误提示信息页面。
-    - isErrorPage	如果设置为TRUE，则表示当前文件是一个错误提示页面。
-    - isThreadSafe	表示最终生成的servlet是否具有线程安全性。
+    - import 使一个JAVA导入声明被插入到最终页面文件。
+    - contentType 规定了生成内容的类型。当生成非HTML内容或者当前字符集并非默认字符集时使用。
+    - errorPage 处理HTTP请求时，如果出现异常则显示该错误提示信息页面。
+    - isErrorPage 如果设置为TRUE，则表示当前文件是一个错误提示页面。
+    - isThreadSafe 表示最终生成的servlet是否具有线程安全性。
 
 - Написать конфигурацию сервлета (org.xxx.MyServlet) с помощью аннотации. Сервлет должен принимать все запросы от файлов .html .xhtml  
   使用注释编写 servlet 配置 (org.xxx.MyServlet)。 servlet 必须接受来自 .html .xhtml 文件的所有请求
@@ -724,13 +724,13 @@
   - конфигурация сервлетов. файл web.xml servlet 配置
     ```xml
     <servlet>
-      ​	<servlet-name>name</servlet-name>
-      ​	<servlet-class>classname</servlet-class> 
+      ​<servlet-name>name</servlet-name>
+      ​<servlet-class>classname</servlet-class> 
     </servlet>
 
     <servlet-mapping>
-      ​	<servlet-name>name</servlet-name>
-      ​	<url-pattern>/url</url-pattern>
+      ​<servlet-name>name</servlet-name>
+      ​<url-pattern>/url</url-pattern>
     </servlet-mapping>
     ```
 
@@ -828,7 +828,7 @@ P.S. Документ в процессе редакции, попозже на�
 ## Билет ? (НОВЫЙ!)
 
 ## Билет 1
-- Фазы jsf: Invoke Application и Render Response	
+- Фазы jsf: Invoke Application и Render Response  
   jsf 阶段：调用应用程序和呈现响应  
   При поступлении запроса необходимо выполнить определенную цепочку действий, чтобы проанализировать запрос и подготовить ответ. За программиста это делает фреймворк(JSF)  
   当收到请求时，有必要执行特定的一系列操作以分析请求并准备响应。 程序员用框架来做这件事 (JSF)
@@ -851,7 +851,7 @@ P.S. Документ в процессе редакции, попозже на�
     JSF 使用在前面的步骤中接收到的数据生成响应。 使用托管 bean 更新页面视图，之后生成 html 页面并发送给用户。 此外，如果在前面的步骤中发生错误，它们将被收集在 `<messages>` 标记中。
 
 
-- Способы задания конфигурации в Spring	 
+- Способы задания конфигурации в Spring   
   Spring 配置方式
 
   1. конфигурация с помощью конфиг файла applicationContext.xml. 使用配置文件 applicationContext.xml 进行配置。
@@ -862,47 +862,47 @@ P.S. Документ в процессе редакции, попозже на�
     为此，您需要创建一个带有注解 `Configuration` 的类，并在其中通过添加带有各种注解的方法（例如 bean）来配置 spring。
   Так же спринг приложение можно конфигурировать только аннотациями, добавляя к классам аннотации Component, Bean и т.д. Внедрение зависимостей происходит через аннотацию Autowired.  
   另外，一个 spring 应用可以只配置注解，给类添加 Component、Bean 等注解。依赖注入通过 Autowired 注释发生。
-- Написать исходный код CDI бина, реализующего паттерн «команда» (Command Pattern)	
+- Написать исходный код CDI бина, реализующего паттерн «команда» (Command Pattern)  
   编写实现命令模式的 CDI bean 的源代码
 
   ```java
   interface Command {
-		void execute();
-	}
+    void execute();
+  }
 
-	@Named(value=”cmd1”)
-	@ApplicationScoped
-	public class Cmd1 implements Command {
-		void execute() { ... };
-	}
+  @Named(value=”cmd1”)
+  @ApplicationScoped
+  public class Cmd1 implements Command {
+    void execute() { ... };
+  }
 
-	@Named(value=”cmd2”)
-	@ApplicationScoped
-	public class Cmd2 implements Command {
-		void execute() { ... };
-	}
+  @Named(value=”cmd2”)
+  @ApplicationScoped
+  public class Cmd2 implements Command {
+    void execute() { ... };
+  }
 
-	@Named
-	@ApplicationScoped
-	public class MyBean implements Command {
-		private final Command cmd1, cmd2;
-	
-		@Inject
-		public MyBean(@Named(“cmd1”) Command cmd1, @Named(“cmd2”) Command cmd2) {
-			this.cmd1 = cmd1;
-			this.cmd2 = cmd2;
-		}
+  @Named
+  @ApplicationScoped
+  public class MyBean implements Command {
+    private final Command cmd1, cmd2;
+  
+    @Inject
+    public MyBean(@Named(“cmd1”) Command cmd1, @Named(“cmd2”) Command cmd2) {
+      this.cmd1 = cmd1;
+      this.cmd2 = cmd2;
+    }
 
-		public void cmd(int n) {
-			if (n == 1) cmd1.execute();
-			if (n == 2) cmd2.execute();
-		}
-	}
+    public void cmd(int n) {
+      if (n == 1) cmd1.execute();
+      if (n == 2) cmd2.execute();
+    }
+  }
 
   ```
 
 ## Билет 2
-- Принципы IoC и CDI. Реализация в Java EE	
+- Принципы IoC и CDI. Реализация в Java EE  
   - Inversion of Control (инверсия управления)   
     принцип работы программы, который диктует нам как писать слабо связанный код. Он говорит, что компонент системы должен быть как можно более изолированным от других. Так же есть IoC контейнер, который упрощает работу с компонентами, автоматизирует написание кода, в общем по максимуму берет работу с компонентами на себя.  
     Inversion of Control（控制反转）——程序的原理，它指示我们如何编写松散 耦合的代码。 他说系统组件应该尽可能地与其他组件隔离开来。 还有一个 IoC 容器可以简化组件的工作，自动编写代码，一般来说，最大限度地利用组件的工作。
@@ -916,7 +916,7 @@ P.S. Документ в процессе редакции, попозже на�
       使用 Inject 注释，将依赖项注入构造函数
     Также у бинов есть скоупы (Request, Session, Application и тд), по которым контейнер, понимает когда уничтожать или создавать новый бин.  
     Bean 也有范围（请求、会话、应用程序等），容器通过这些范围了解何时销毁或创建新的 bean。
-- Архитектура Vue.js (компоненты, экземпляры, директивы)	
+- Архитектура Vue.js (компоненты, экземпляры, директивы)  
   - Vue.js — JS фреймворк, для разработки UI. Использует архитектуру MVVM.  
     Vue.js 是一个用于 UI 开发的 JS 框架。 使用 MVVM 架构。
 
@@ -954,14 +954,14 @@ P.S. Документ в процессе редакции, попозже на�
     允许您执行操作，例如遍历数组或按条件包含元素。
     В разметке представляют собой атрибуты тегов.  
     在标记中，它们是标记属性。
-- JSF страница, динамически подгружаемая и выводящая новостную ленту с новостями формата: автор, заголовок, дата, иллюстрация, аннотация и полный текст (показывается при нажатии на соответствующую строчку)	  
+- JSF страница, динамически подгружаемая и выводящая новостную ленту с новостями формата: автор, заголовок, дата, иллюстрация, аннотация и полный текст (показывается при нажатии на соответствующую строчку)    
   动态加载和显示新闻提要的 JSF 页面，格式为：作者、标题、日期、插图、摘要和全文（单击相应行时显示）
   ```xhtml
   <html
   xmlns:f”http://…
   xmlns:h”http://…
   xmlns:ui”http://…>
-	<f:view>
+  <f:view>
   <h:head>
     ...
       <title>JSF PAGE</title>
@@ -982,8 +982,8 @@ P.S. Документ в процессе редакции, попозже на�
   </html>
   ```
 
-## Билет 3	
-- Реализация шаблона MVC в JSF	
+## Билет 3  
+- Реализация шаблона MVC в JSF  
   - Model в JSF это managed bean, джава классы, которые содержат бизнес-логику и передаются юзеру. К ним указываются аннотации, с помощью которых настраивается их поведение.  
     JSF 中的模型是一个托管 bean，包含业务逻辑并传递给用户的 Java 类。 为它们指定了注释，并借助这些注释配置了它们的行为。
 
@@ -992,7 +992,7 @@ P.S. Документ в процессе редакции, попозже на�
 
   - Controller в JSF мы не пишем руками, он реализуется фреймворком, нам нужно лишь указывать в верстке action’ы по которым фреймворк будет понимать, что мы хотим получить.  
     我们不用在 JSF 中手写 Controller，它是由框架实现的，我们只需要在布局中指定动作，框架就会明白我们想要得到什么。
-- Основные аннотации Java EE CDI	
+- Основные аннотации Java EE CDI  
   У CDI Bean’ов есть множество аннотаций: CDI Beans 有很多注解：
   - `@NoneScoped` - контекст не определён, жизненным циклом управляют другие бины;  
     未定义上下文，其他 beans 管理生命周期；
@@ -1017,7 +1017,7 @@ P.S. Документ в процессе редакции, попозже на�
   - `@Alternative` - может применяться к двум или нескольким компонентам, а затем, в зависимости от развертывания, в файле настройки CDI beans.xml указывается компонент для использования.  
     可以应用于两个或多个 bean，然后根据部署，CDI beans.xml 配置文件指定要使用的 bean。
 
-- Написать React компонент формирующий таблицу пользователей, данные приходят в props	 
+- Написать React компонент формирующий таблицу пользователей, данные приходят в props   
   编写一个形成用户表的 React 组件，数据来自 props
   ```js
   function UsersTable(props) 
@@ -1047,8 +1047,8 @@ P.S. Документ в процессе редакции, попозже на�
     )
   }
   ```
-## Билет 4	
-- Spring Web MVC: View Resolvers	
+## Билет 4  
+- Spring Web MVC: View Resolvers  
   Реализация MVC в SPRING: SPRING 中的 MVC 实现：
   - Диспетчер сервлет получает запрос, далее он смотрит в свои настройки, чтобы понять какому контроллеру передавать запрос.  
     servlet 调度程序接收请求，然后查看其设置以确定将请求发送到哪个控制器。
@@ -1061,7 +1061,7 @@ P.S. Документ в процессе редакции, попозже на�
   - View Resolver — интерфейс, реализуемый объектами, которые способны находить представление по его имени. Так же возможна поддержка локализации.  
     View Resolver 是由能够通过名称查找视图的对象实现的接口。 本地化支持也是可能的。
 
-- Angular: ключевые особенности, отличия от AngularJS	 
+- Angular: ключевые особенности, отличия от AngularJS   
   Angular 2 как и AngularJS реализуют модель MVVM  
   Angular 2 和 AngularJS 一样，实现了 MVVM 模型
 
@@ -1079,7 +1079,7 @@ P.S. Документ в процессе редакции, попозже на�
 
   Еще Angular адаптирован под слабые мобильные устройства(чего нет в AngularJS).  
   Angular 也适用于弱移动设备（AngularJS 中没有）。
-- Написать веб-приложение на JSF (xhtml + CDI-бин) со списком студентов и бин, который будет реализовывать логику отчисления студентов. Напротив каждого имени студента должна быть кнопка "отчислить". Обновление должно производиться при помощи AJAX	 
+- Написать веб-приложение на JSF (xhtml + CDI-бин) со списком студентов и бин, который будет реализовывать логику отчисления студентов. Напротив каждого имени студента должна быть кнопка "отчислить". Обновление должно производиться при помощи AJAX   
   编写一个 JSF Web 应用程序（xhtml + CDI bean），其中包含一个学生列表和一个将实现学生开除逻辑的 bean。 每个学生名字的对面应该有一个按钮“开除”。 更新应使用 AJAX 完成  
   java:
   ```java
@@ -1126,9 +1126,9 @@ P.S. Документ в процессе редакции, попозже на�
   </html>
   ```
 
-## Билет 5	
+## Билет 5  
 
-- Профили и платформы Java EE	
+- Профили и платформы Java EE  
   - В JavaEE существует два профиля:
     - Web Profile — содержит в себе только те компоненты, которые нужны для работы веб приложения, это Servlet’ы, JSP, JSF, JPA, CDI, EJB.  
       Web 配置文件 - 仅包含 Web 应用程序工作所需的那些组件，这些组件是 Servlets、JSP、JSF、JPA、CDI、EJB。
@@ -1143,7 +1143,7 @@ P.S. Документ в процессе редакции, попозже на�
       JEE-（Java Enterprise Edition）用于开发企业应用程序。 它建立在 JSE 平台之上，还支持开发更大、更复杂、分层和更安全的程序。 包含：WebSocket、JSF、统一 EL、RESTful Web 服务 API、DI、EJB、JPA 和 Java 事务 API。
     Все платформы Java поддерживают полный функционал языка Java и отличаются лишь наличием или отсутствием определенных API.  
     所有 Java 平台都支持 Java 语言的全部功能，只是在存在或不存在某些 API 时有所不同。
-- Типы DI в Spring	
+- Типы DI в Spring  
   В Spring реализовано три типа внедрения зависимостей:  
   Spring实现了三种类型的依赖注入：
 
@@ -1154,7 +1154,7 @@ P.S. Документ в процессе редакции, попозже на�
     基于 Setter 的 DI - 首先，容器将调用不带参数的 bean 构造函数，然后它将调用标有 @Autowired 注释的 setter 并将必要的依赖项推送到那里
   - Field-based DI - контейнер через рефлексию будет в поля класса пропихивать зависимости (не рекомендуется к использованию, рефлексия ест много ресурсов, очень легко нарушить Single Responsibility принцип, тяжело отлаживать)  
     Field-based DI - 容器会通过反射将依赖推送到类的字段中（不推荐使用，反射很吃资源，很容易违背单一职责原则，很难调试）
-- Интерфейс на React, формирующий две страницы с разными URL: Главную (/home) и Новости (/news). Переход между страницами должен осуществляться посредством гиперссылок.	
+- Интерфейс на React, формирующий две страницы с разными URL: Главную (/home) и Новости (/news). Переход между страницами должен осуществляться посредством гиперссылок.  
   生成两个具有不同 URL 的页面的 React 界面：主页 (/home) 和新闻 (/news)。 页面之间的转换应通过超链接进行。  
   ```js
   const router = createBrowserRouter([
@@ -1179,9 +1179,9 @@ P.S. Документ в процессе редакции, попозже на�
   )
   ```
 
-## Билет 6	
+## Билет 6  
 
-- Структура JSF приложения	
+- Структура JSF приложения  
   JSF - высокоуровневый веб фреймворк (каркас для будущего приложения). Он абстрагирует программиста от работы с http протоколом напрямую.  
 
   JSF 是一种高级 Web 框架（用于未来应用程序的框架）。 它将程序员从直接使用 http 协议中抽象出来。
@@ -1216,7 +1216,7 @@ P.S. Документ в процессе редакции, попозже на�
   - Дескриптор развертывания - как и для любого веб приложения  
     部署描述符——对于任何 Web 应用程序
 
-- Spring MVC: особенности, интеграция в Spring	
+- Spring MVC: особенности, интеграция в Spring  
   Фреймворк Spring MVC обеспечивает архитектуру паттерна MVC при помощи слабо связанных готовых компонентов.  
   Spring MVC 框架为 MVC 模式的体系结构提供了松散耦合的预构建组件。
 
@@ -1253,11 +1253,11 @@ P.S. Документ в процессе редакции, попозже на�
     public int mul(int a, int b) { return a * b; }
     public int div(int a, int b) { return a / b; }
   }
-  ```	
+  ```  
 
-## Билет 7	
+## Билет 7  
 
-- Spring MVC: обработка запросов, DispatcherServlet	 
+- Spring MVC: обработка запросов, DispatcherServlet   
   Вся логика работы Spring MVC построена вокруг DispatcherServlet, который принимает и обрабатывает все HTTP-запросы и ответы на них. При получении запроса, происходит следующая цепочка событий:  
   Spring MVC 的整个逻辑是围绕 DispatcherServlet 构建的，它接收并处理所有 HTTP 请求和对它们的响应。 收到请求后，会发生以下事件链：  
 
@@ -1289,43 +1289,43 @@ P.S. Документ в процессе редакции, попозже на�
     没有JS，无法使用应用的全部功能
   3. Невозможность индексации страниц браузерами (SEO), т.к. содержимое генерируется/рендерится не сервером сразу а динамически на уже загруженной дефолтной странице  
     浏览器无法索引页面 (SEO)，因为 服务器不会立即生成/呈现内容，而是在已加载的默认页面上动态生成/呈现 
-	
-- Интерфейс JSF (xhtml страница + CDI), реализующий ввод паспортных данных (серия, номер, день, место)	
+  
+- Интерфейс JSF (xhtml страница + CDI), реализующий ввод паспортных данных (серия, номер, день, место)  
   java:  
   ```java
   @ManagedBean 
   @SessionScoped 
   @Setter 
   @Getter 
-  public class PassportInputBean { 	
-    private String series; 	
-    private String number; 	
-    private Date date; 	
-    private String place; 	
+  public class PassportInputBean {
+    private String series;
+    private String number;
+    private Date date;
+    private String place;
 
     @ManagedProperty(value = "#{repoBean}") 
-    private PassportRepo repo; 	
-    public void storePassportData() { 		
-      repo.store(series, number, date, place); 	
+    private PassportRepo repo;
+    public void storePassportData() {
+      repo.store(series, number, date, place);
     }
   }
   ```
   xhtml:  
   ```html
-  <h:form> 	
-  Введите серию 	
+  <h:form>
+  Введите серию
   <h:inputText type="text" value="#{passportInputBean.series}"
-  required="true"/>	
+  required="true"/>
 
-  Введите номер 	
+  Введите номер
   <h:inputText type="text" value="#{passportInputBean.number}"> 
 
-  Введите дату 	
+  Введите дату
   <h:inputText value="#{passportInputBean.date}">
-  <f:convertDateTime pattern="yyyy-MM-dd"/> 	
-  </h:inputText> 	
+  <f:convertDateTime pattern="yyyy-MM-dd"/>
+  </h:inputText>
 
-  Введите место рождения 	
+  Введите место рождения
   <h:inputText type="text" value="#{passportInputBean.place}">
 
   <h:commandButton value="Отправить" action="#{passportInputBean.storePassportData()}"> 
@@ -1333,9 +1333,9 @@ P.S. Документ в процессе редакции, попозже на�
   </h:form>
   ```
 
-## Билет 8	
+## Билет 8  
 
-- Технология RMI. Использование RMI в Java EE	 
+- Технология RMI. Использование RMI в Java EE   
   Система Java Remote Method Invocation (RMI) позволяет объекту, запущенному на одной виртуальной машине Java, вызывать методы объекта, запущенного на другой виртуальной машине Java. Работает поверх TCP. В общем случае, объекты передаются по значению (копии), следовательно, передаваемые объекты должны быть Serializable.  
   Java 远程方法调用 (RMI) 系统允许运行在一个 Java 虚拟机中的对象调用运行在另一个 Java 虚拟机中的对象的方法。 通过 TCP 工作。 一般情况下，对象都是按值（拷贝）传递的，所以传递的对象必须是Serializable的。
 
@@ -1363,7 +1363,7 @@ P.S. Документ в процессе редакции, попозже на�
       调用需要的方法
 
 
-- Управление состоянием в React. Flux & Redux	 
+- Управление состоянием в React. Flux & Redux   
   - Flux — архитектура для создания приложений на React, в которой описывается, как хранить, изменять и отображать глобальные данные (состояние).  
     Flux 是一种用于创建 React 应用程序的架构，它描述了如何存储、修改和显示全局数据（状态）。
     Основные концепции: 基本概念：  
@@ -1373,7 +1373,7 @@ P.S. Документ в процессе редакции, попозже на�
       Store - 存储数据的单例。 只有 Store 知道如何更改数据。 您不能直接从 React 组件更改它们。 数据改变后，Store 发送事件给视图，视图被重绘。
   - Redux — небольшая библиотека, реализующая упрощенный паттерн Flux. В Redux нет Dispatcher, но есть store — синглтон, хранилище состояние всего приложения. Изменения состояния производятся при помощи чистых функций (reducers)  
     Redux 是一个实现简化的 Flux 模式的小型库。 Redux 中没有 Dispatcher，但是有一个 store - 一个单例，整个应用的状态的 store。 使用纯函数（reducer）进行状态更改
-- Привести фрагмент кода управляемого бина, увеличивающего на 1 значение, отображаемое на кнопке при каждом клике по ней:	 
+- Привести фрагмент кода управляемого бина, увеличивающего на 1 значение, отображаемое на кнопке при каждом клике по ней:   
   ```java
   @ManagedBean
   @ApplicationScoped
@@ -1391,11 +1391,11 @@ P.S. Документ в процессе редакции, попозже на�
   }
 
   <h:commandButton actionListener = "#{MyBean.increment}" value = "{bean.value}"/>
-  ```	 
+  ```   
 
-## Билет 9	
+## Билет 9  
 
-- JNDI. JNDI в Java EE. Способы взаимодействия с JNDI. Их преимущества и недостатки.	
+- JNDI. JNDI в Java EE. Способы взаимодействия с JNDI. Их преимущества и недостатки.  
   JNDI — API для доступа к объектам по их именам. Организовано в виде службы имен и каталогов.  
   JNDI 是一种通过名称访问对象的 API。 组织为命名和目录服务。
 
@@ -1416,7 +1416,7 @@ P.S. Документ в процессе редакции, попозже на�
   - зависимость от контейнера 容器依赖
   - при использовании старой версии log4j есть уязвимость (log4shell) основанная на jndi  
     使用旧版本的 log4j 时存在基于 jndi 的漏洞 (log4shell)
-- React. Особенности. Архитектура	 
+- React. Особенности. Архитектура   
   React — JS библиотека для разработки пользовательского интерфейса. Позволяет создавать свои собственные компоненты, с пропсами (атрибутами) и стейтом (данными). Компоненты рендерятся в HTML.  
   React 是一个用于开发用户界面的 JS 库。 允许您使用道具（属性）和状态（数据）创建自己的组件。 组件以 HTML 呈现
 
@@ -1443,7 +1443,7 @@ P.S. Документ в процессе редакции, попозже на�
 
   ```
 
-## Билет 10	 
+## Билет 10   
 
 - Платформы Java. Сходства и различия.  
   Существует 3 самых известных API: JME, JSE, JEE
@@ -1503,29 +1503,213 @@ P.S. Документ в процессе редакции, попозже на�
 
 ## Билет 11   
 
-- Java EE CDI Beans стереотипы  
-- Разметка страницы в React- приложениях. JSX   
-- JSF Manager Bean, после инициализации HTTP-сессии формирующий коллекцию с  8
-  содержимым таблицы Н_УЧЕБНЫЕ_ПЛАНЫ. Для доступа к БД необходимо использовать  
-  JDBC-ресурс jdbc/OrbisPool.  
+- Java EE CDI Beans стереотипы(Sterotype)  
+  Stereotype — аннотация, включающая в себя много аннотаций. Мы можем создать свой стереотип и использовать его:  
+  Stereotype 是一个包含很多注解的注解。  我们可以创建自己的原型并使用它：
+
+  ```java
+  @ApplicaitonScoped
+  @Named
+  @Secure
+  public @interface myStereotype() {}
+  ```
+
+  Также существуют стандартные стереотипы, например @Model (`@RequestScoped + @Named`)  
+  还有标准的构造型，如 @Model (`@RequestScoped + @Named`)
+
+  При применении аннотации `@MyStereotype` будут включатся все перечисленные аннотации. Один бин может использовать несколько стереотипов.  
+  应用 `@MyStereotype` 注释时，将包含所有列出的注释。  一个 bean 可以使用多个构造型。
+
+  Если у вас будут разные scope в стереотипах, то у вас не скомпилится, либо вам надо будет указать скоуп прямо перед бином. По поводу имен бинов ещё круче: в стереотипах нельзя задавать имена бинов  
+  如果您在构造型中有不同的范围，那么它不会为您编译，或者您需要在 bean 之前指定范围。  至于 bean 的名字，就更酷了：你不能在构造型中设置 bean 的名字
+
+- Разметка страницы в React- приложениях. JSX  
+  В React приложениях разметка пишется в JSX файлах. JSX — надстройка над JS, которая позволяет вкраплять HTML-синтаксис в код. Можно использовать стандартные HTML элементы (такие как div, span, h1, input) так и кастомные React компоненты.  
+  在 React 应用程序中，标记是用 JSX 文件编写的。 JSX 是 JS 的附加组件，允许您将 HTML 语法散布到代码中。 您可以使用标准 HTML 元素（例如 div、span、h1、input）以及自定义 React 组件。  
+
+  JSX код: 
+  `<div className=”foo”>text</div>` компилируется в вызов функции `React.createElement(“div”, { className: “foo”}, “text”)`  
+  `<div className="foo">text</div>` 编译为函数调用 `React.createElement("div", { className: "foo"}, "text")`
+- JSF Manager Bean, после инициализации HTTP-сессии формирующий коллекцию с содержимым таблицы Н_УЧЕБНЫЕ_ПЛАНЫ. Для доступа к БД необходимо использовать JDBC-ресурс jdbc/OrbisPool.  
+  JSF 管理器 Bean，在初始化 HTTP 会话后，形成一个包含 N_CURRICULUM 表内容的集合。 要访问数据库，您必须使用 jdbc/OrbisPool JDBC 资源。
+  
+  ```java
+  @Named("myBean")
+  @SessionScoped
+  class MyBean {
+      private List<String> plans;
+
+      private List<String> getPlans() {
+      return plans;
+      }
+
+      @Resource(name="jdbc/OrbisPool",type=DataSource.class)
+      private DataSource dataSource;
+
+      @PostConstruct
+      private void loadPlans() {
+      try (var conn = dataSource.getConnection()) {
+        var stmt = conn.createStatement();
+        var rs = stmt.executeQuery("SELECT name FROM plans");
+        plans = new ArrayList<>();
+        while (rs.next()) {
+          plans.add(rs.getString("name"));
+        }
+      }
+      }
+  }
+  ```
 
 ## Билет 12
 
 - Location Transparency в Java EE  
+  Этот принцип в Java EE заключается в том, что за интерфейсом могут скрываться различные его реализации. Если мы вызываем локальный компонент, то мы обращаемся с его ссылкой, так как все происходит на локальной JVM, а вот если мы обращаемся к удаленному компоненту, то мы обратимся к нему с помощью RMI(удаленный вызов методов). Будут созданы два утилитарных объекта: stub(сторона вызова) и skeleton(сторона удаленного компонента), которые будут транслировать локальные вызовы в вызовы по сети и обратно. Таким образом, не важно где находится вызываемый компонент. В Java EE в первую очередь реализуется через JNDI — API для предоставления доступа к объектам по имени, нежели по их физической локации.  
+  Java EE 中的这一原则是不同的实现可以隐藏在一个接口后面。  如果我们调用一个本地组件，那么我们访问它的引用，因为一切都发生在本地 JVM 上，但是如果我们访问一个远程组件，那么我们将使用 RMI（远程方法调用）访问它。  将创建两个实用程序对象：stub（调用端）和 skeleton（远程组件端），它们会将本地调用转换为网络调用，反之亦然。  因此，调用的组件位于何处并不重要。  在 Java EE 中，它主要通过 JNDI 实现，JNDI 是一种 API，用于通过名称而不是物理位置提供对对象的访问。
 - Spring MVC часть представления  
+  Представление отвечает за то, как будут визуализироваться данные в браузере пользователя.  
+  视图负责数据在用户浏览器中的呈现方式。
+
+  За поиск представления по имени отвечает интерфейс ViewResolver.  
+  ViewResolver 接口负责按名称查找视图。
+
+  Spring MVC поддерживает множество различных представлений. Можно генерировать html, pdf, csv, json, использовать различные шаблонизаторы: JSP, Thymeleaf, Freemaker.  
+  Spring MVC 支持许多不同的视图。  您可以生成 html、pdf、csv、json，使用各种模板引擎：JSP、Thymeleaf、Freemaker。
+
+  ViewResolver - интерфейс, при помощи которого DispatcherServlet определяет какое представление нужно использовать на основании имени.  
+  ViewResolver - DispatcherServlet 用于根据其名称确定要使用哪个视图的接口。
+
 - Написать managed bean и задать ему scope такой же как у бина otherBean  
+  编写一个托管 bean 并赋予它与 otherBean 相同的作用域  
+
+  ```java
+  @ManagedBean
+  @NoneScoped
+  public class TestBean implements Serializable{
+    int a;
+    public int getA(){
+      return a++;
+    }
+
+    public void setA(int a){
+      this.a=a;
+    }
+  }
+
+  @MangedBean
+  @RequestScoped
+  public class OtherMyBean implements Serializable{
+    int a;
+    @ManagedProperty(value=”#{testBean}”)
+    TestBean testBean = new TestBean();
+    
+    public void setTestBean(TestBean testBean){
+      this.testBean=testBean;
+    }
+
+    public TestBean getTestBean(){
+      return testBean;
+    }
+
+    public int getA(){
+      System.out.println(testBean.getA());
+      return a+1;
+    }
+
+    public void setA(int a){
+      this.a=a;
+    }
+  }
+  ```
 
 ## Билет 13
 
 - Валидаторы в JSF. Создание, назначение и тд.  
-- Реализация контроллера в Spring Web MVC   
+  Валидаторы в JSF — реализации интерфейса `Validator`. Метод validate принимает `FacesContext, UiComponent` и значение (Object), которое необходимо валидировать.  
+  JSF 中的验证器是 `Validator` 接口的实现。 validate 方法采用 `FacesContext、UiComponent` 和要验证的值 (Object)。
+
+  Валидатор можно повесить на компоненты при помощи тега `<f:validator validatorId=”com.example.MyValidator”/>`  
+  可以使用 `<f:validator validatorId=”com.example.MyValidator”/>` 标签将验证器附加到组件
+
+  Чтобы JSF зарегистрировал кастомный валидатор, используется аннотация `@FacesValidator`. Существует 3 самых известных API: JME, JSE, JEE  
+  为了让 JSF 注册自定义验证器，使用了 `@FacesValidator` 注释。有 3 个最著名的 API：JME、JSE、JEE ([参见 Билет 10](#билет-10-1))
+
+  Также есть встроенные валидаторы: `BeanValidator` (вызывает метод на бине для валидации), `DoubleRangeValidator, LengthValidator, RegexValidator, RequiredValidator`.  
+  还有内置验证器：`BeanValidator`（调用 bean 上的方法进行验证）、`DoubleRangeValidator、LengthValidator、RegexValidator、RequiredValidator`。
+
+- Реализация контроллера в Spring Web MVC  
+  Контроллер – специальный класс, помеченный аннотацией @Controller (или RestController). Задача контроллера - перехватывать входящие запросы, паковать данные в нужный формат, отправлять эти данные нужной модели, а затем ответ от модели передать обратно в DispatcherServlet. На методы контроллера вешаются разные аннотации, такие как `@GetMapping, @PostMapping` (это для путей запроса) и аннотации для получения данных из запроса, такие как `@PathVariable или @ResourcesVarible`.  
+  控制器是一个用@Controller（或RestController）注解注解的特殊类。 控制器的任务是拦截传入的请求，以所需格式打包数据，将此数据发送到所需模型，然后将模型的响应传递回 DispatcherServlet。 控制器方法上挂了各种注解，例如@GetMapping、@PostMapping（这是针对请求路径的）和用于从请求中接收数据的注解，例如@PathVariable 或@ResourcesVarible。
 - Vue.js простейший чат бот, который на любое сообщение отвечает «сам дурак»  
+  Vue.js 实现最简单的聊天机器人，可以响应“сам дурак”的任何消息
+
+  ```json
+  <template>
+    <input v-model="message_value" placeholder="message"/> 
+    <button @click="send">send</button> 
+    <li v-for="item in message_history" :key="item"> 
+      {{item}}
+    </li> 
+  </template> 
+
+  <script>
+    export default { 
+      data() { 
+        return { 
+          message_value: '', 
+          message_history: [] 
+        } 
+      }, 
+      methods: {
+        send() {
+          this.message_history.push(this.message_value); 
+          this.message_history.push("сам дурак"); this.message_value = "";
+        }
+      }
+    } 
+  </script>
+  ```
 
 ## Билет 14
 
-- Фаза формирования представления   
+- Фаза формирования представления  
+  Фаза формирования представления (RestoreView), на этой фазе фреймворк(JSF) делает следующее:
+  - Если это первое обращение клиента, то создаются объекты, назначаются слушатели, валидаторы, конверторы, все это помещается в FacesContext и отправляется на создание ответа юзеру.
+  - Если FacesContext уже есть (это не первый запрос и все объекты уже созданы), то проверяется тип запроса, а после запускаются процессы рендера новых страниц(если это GET) и создание/изменение данных(если это POST).
+  Доп инфа:
+  1. Формирование представления (Restore view)
+    Создаются объекты дерева компонентов, начиная с UIViewRoot, назначаются слушатели, конверторы и валидаторы. Все элементы помещаются в FacesContext. Если клиент уже заходил на эту страницу, то состояния представления синхронизируются с клиентом.
+  2. JSF начинает фазу восстановления представления, как только щелкает ссылка или кнопка и JSF получает запрос. На этом этапе JSF создает представление, связывает обработчики событий и средства проверки с компонентами пользовательского интерфейса и сохраняет представление в экземпляре FacesContext. Экземпляр FacesContext теперь будет содержать всю информацию, необходимую для обработки запроса.
+
 - Spring framework. Отличия от Java EE  
-- RestController, который реализует перевод градусов Цельсия в Фаренгейты и обратно   
+  Java EE — это, грубо говоря, конструктор, она модульная, можно делать свои сборки, подключать и отключать совсем маленькие модули. В ней есть множество реализаций представлений, бинов и т.д. что делает ее идеальной для разработки монолитного масштабируемого приложения.
+
+  Spring — также разделен на модули, но эти модули довольно крупные и скорее удобно дополняют друг-друга чем живут обособленно. Спринг ставит более жесткие рамки, диктуя как писать приложении, и в каких-то случаях это очень важно. Этот фреймворк подходит для небольших веб приложений, либо для микросервисной архитектуры. Тот же ajax, который в JavaEE пишется 1 строчкой(благодаря JSF), в спринге нужно писать руками.  
+
+  Доп инфа:
+  Java EE +|Java EE -|Spring +|Spring -
+  ---|---|---|---|
+  Считается более надежным и масштабируемым решением|Сложная среда разработки|Проще чем Java EE|Отсуствует четкая направленность и понимание разработчиков зачем Spring нужен фундаментально
+  Java EE - утвержденный стандарт|-|Обеспечивает слабую связность приложений - потому что изначально задумывался лишь для реальзации IoC|Медленее чем Java EE (нигде не пиншут почему)
+  -|-|Не требует использования корпоративоного контейнера (севера прилодений такого как tomcat, glassfish...)|-
+  -|-|опенсурс/-
+  -|-|нам практик говарил, что Spring выигрывает из-за Spring boot и Spring data|а вот по сравнению Java EE тут security сложнее
+
+- RestController, который реализует перевод градусов Цельсия в Фаренгейты и обратно  
+  RestController 实现从摄氏度到华氏度的转换，反之亦然
+  ```Java
+  @RestController
+  class TempController {
+    @GetMapping("/convert/c/f")
+    double celsiusToFahrenheit(@RequestParam double celsius) {
+        return celsius * 1.8 + 32.0;
+    }
+
+    @GetMapping("/convert/f/c")
+    double fahrenheitToCelsius(@RequestParam double fahrenheit) {
+        return (fahrenheit - 32.0) / 1.8;
+    }
+  }
+  ```
 
 ## Билет 15
 
@@ -1591,13 +1775,13 @@ P.S. Документ в процессе редакции, попозже на�
 - Process validations phase, Update module values phase  
 - Жизненный цикл Spring-приложения  
   1. Создается контейнер
-	2. Контейнер считывает конфиг
-	3. Загружается описание бинов из конфига и classpath (с аннотацией)
-	4. Создаются экземпляры бинов
-	5. Производится внедрение зависимостей
-	6. Вызывается PostConstructor
-	7. Вызываются callback’и BeanPostProcessor
-	8. Приложение запущено
+  2. Контейнер считывает конфиг
+  3. Загружается описание бинов из конфига и classpath (с аннотацией)
+  4. Создаются экземпляры бинов
+  5. Производится внедрение зависимостей
+  6. Вызывается PostConstructor
+  7. Вызываются callback’и BeanPostProcessor
+  8. Приложение запущено
   9. Приложение закрывается
   10.  Вызываются PreDestroy, callback’и
   11.  Приложение остановлено
