@@ -1,4 +1,4 @@
-## [MainPage](../index.md)/Algorithm & Data Structures
+## [MainPage](../index.md)/Computational Mathematics
 
 ## 阅读索引
 
