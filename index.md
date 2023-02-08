@@ -9,13 +9,13 @@
 ### 大一
 - [OPD](/OPD/README.md)
 - [编程](/Program/README.md)
-
+- [离散数学](/DiscreteMathematics/README.md)
+- [哲学](/Philosophy/README.md)
 
 ### 大二
+
 - [数学](/Mathematic/README.md)
-- [离散数学](/DiscreteMathematics/README.md)
 - [物理](/Physics/README.md)
-- [哲学](/Philosophy/README.md)
 - [俄语](/Russian%20Language/README.md)
 - [编程语言](/ProgramLanguagea/README.md)
 - [网络编程](/ProgramWeb/README.md)
