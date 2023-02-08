@@ -21,7 +21,8 @@
 - [网络编程](/ProgramWeb/README.md)
 - [算法与数据结构](/Algorithm&DataStructures/README.md)
 - [计算数学](/ComputationalMathematics/README.md)
-- [信息安全方法论](InformationSecurity/README.md)
+- [信息安全方法论](/InformationSecurity/README.md)
+- [概率论](/ProbabilityTheory/README.md)
 
 ## 版权声明
 - 本项目所有非代码文本内容遵循 [CC BY-NC-SA 3.0 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)

@@ -1,4 +1,4 @@
-## [MainPage](../index.md)/Probability Theory
+## [MainPage](../index.md)/Theory of Information Securuty and protection methodology
 
 ## 阅读索引
 
