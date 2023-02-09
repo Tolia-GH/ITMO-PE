@@ -1,27 +1,5 @@
 <head>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [
-                ['$', '$'],
-                ['\\(', '\\)']
-            ],
-            displayMath: [
-                ['$$', '$$'],
-                ["\\[", "\\]"]
-            ]
-        },
-        TeX: {
-            extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autoload-all.js"]
-        },
-        "HTML-CSS": {
-            preferredFont: "STIX"
-        }
-    });
-    </script>
+    <script src="load-mathjax.js" async></script>
 </head>
 
 ## [MainPage](../index.md)/[Algorithm&DataStructures](README.md)/Lecture
