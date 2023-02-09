@@ -1,5 +1,14 @@
 <head>
-    <script src="/mathjax-config.js" async></script>
+    <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 </head>
 
 ## [MainPage](../index.md)/[Algorithm&DataStructures](README.md)/Lecture
