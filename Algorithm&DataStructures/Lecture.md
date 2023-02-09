@@ -1,5 +1,5 @@
 <head>
-    <script src="load-mathjax.js" async></script>
+    <script src="/mathjax-config.js" async></script>
 </head>
 
 ## [MainPage](../index.md)/[Algorithm&DataStructures](README.md)/Lecture
