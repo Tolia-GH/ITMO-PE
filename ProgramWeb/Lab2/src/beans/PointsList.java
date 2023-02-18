@@ -4,13 +4,13 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class PointsList {
-    private List<Point> pointList;
+    private static List<Point> pointList = new LinkedList<>();
 
     public PointsList() {
         pointList = new LinkedList<>();
     }
 
-    public List<Point> getPointList() {
+    public static List<Point> getPointList() {
         return pointList;
     }
 }

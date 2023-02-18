@@ -5,6 +5,7 @@
   Time: 12:43
   To change this template use File | Settings | File Templates.
 --%>
+<% String path = request.getContextPath(); %>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
   <head>
@@ -26,7 +27,7 @@
       Lab 2
     </h2>
 
-    <form id = "pointForm" class="dataForm" method = "get">
+    <form id = "pointForm" class="dataForm" method = "get" action="<%=path%>/Controller">
       <fieldset>
         <legend class="InputX">
           Please choose value of X<span class = "required">*</span>
@@ -76,7 +77,7 @@
       <br>
 
       <div class="submit">
-        <input type="submit" class="submitButton" value="Submit">
+        <input type="button" class="submitButton" value="Submit" onclick="submitData()">
       </div>
 
     </form>
