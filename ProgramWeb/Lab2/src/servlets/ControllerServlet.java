@@ -16,11 +16,11 @@ public class ControllerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         double x = Double.parseDouble(new String(
-                req.getParameter("X").getBytes(StandardCharsets.UTF_8)));
+                req.getParameter("x_hidden").getBytes(StandardCharsets.UTF_8)));
         double y = Double.parseDouble(new String(
-                req.getParameter("Y").getBytes(StandardCharsets.UTF_8)));
+                req.getParameter("y_hidden").getBytes(StandardCharsets.UTF_8)));
         double r = Double.parseDouble(new String(
-                req.getParameter("R").getBytes(StandardCharsets.UTF_8)));
+                req.getParameter("r_hidden").getBytes(StandardCharsets.UTF_8)));
         System.out.println("x=" + x);
         System.out.println("y=" + y);
         System.out.println("r=" + r);

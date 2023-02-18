@@ -11,11 +11,10 @@
   <head>
     <meta charset = "UTF-8">
     <title>Студент: Чжоу Хунсян P32131 Вариант: 13111</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/indexStyle.css">
   </head>
 
   <body>
-
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/clientHandler.js"></script>
 
@@ -44,6 +43,8 @@
               <input type="radio" value="4" name="X">4
               <input type="radio" value="5" name="X">5
             </label>
+
+            <p id="errorX" class="errorMessage"></p>
           </fieldset>
 
           <fieldset>
@@ -52,9 +53,10 @@
             </legend>
 
             <label>
-              <input type="text" placeholder="from -3 to 3" id="Y" name = "Y">
+              <input type="text" placeholder="from -5 to 5" id="Y" name = "Y">
             </label>
 
+            <p id="errorY" class="errorMessage"></p>
           </fieldset>
 
           <fieldset>
@@ -70,9 +72,16 @@
               <input type="radio" value="5" name="R">5
             </label>
 
+            <p id="errorR" class="errorMessage"></p>
           </fieldset>
 
-          <br>
+          <div>
+            <form method="GET" id="hiddenForm" action=<%=path%>"/Controller">
+              <input type="hidden" name="x_hidden" id="x_hidden_id">
+              <input type="hidden" name="y_hidden" id="y_hidden_id">
+              <input type="hidden" name="r_hidden" id="r_hidden_id">
+            </form>
+          </div>
 
           <div class="submit">
             <input type="button" class="submitButton" value="Submit" onclick="submitData()">

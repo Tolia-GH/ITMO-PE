@@ -1,0 +1,21 @@
+#header{
+    font-family: "Times New Roman", serif;
+    text-align: center;
+    margin: auto;
+}
+
+h1{
+    font-size: 28px;
+}
+h2{
+    font-size: 16px;
+}
+
+.errorMessage{
+    color: red;
+    font-size: small;
+}
+
+span.required{
+    color: red;
+}
