@@ -11,17 +11,14 @@
   <component name="ChangeListManager">
     <list default="true" id="4254883d-51a9-4cb4-9ab2-e2c39234a917" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/AreaCheckServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/ControllerServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/beans/PointsList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/beans/PointsList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/servlets/ControllerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/servlets/ControllerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/js/clientHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/js/clientHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab2/AreaCheckServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab2/ControllerServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/beans/PointsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beans/PointsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlets/AreaCheckServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/AreaCheckServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlets/ControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/ControllerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab2/beans/PointsList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab2/beans/PointsList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab2/servlets/ControllerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab2/servlets/ControllerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/js/clientHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/clientHandler.js" afterDir="false" />
     </list>
@@ -70,7 +67,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
@@ -176,7 +173,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676540630799</updated>
-      <workItem from="1676540631964" duration="17635000" />
+      <workItem from="1676540631964" duration="26634000" />
     </task>
     <servers />
   </component>

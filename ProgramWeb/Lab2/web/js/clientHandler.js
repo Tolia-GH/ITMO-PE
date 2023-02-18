@@ -1,4 +1,6 @@
+/*
 $("#pointForm").on("submit", function () {
+
     console.log("Submitting data...");
 
     $.ajax({
@@ -12,12 +14,18 @@ $("#pointForm").on("submit", function () {
         }
     })
 })
+*/
 
 function submitData() {
-    dataCheck();
-    document.getElementById("pointForm").submit();
+    //let x = document.getElementsByName("X");
+    let y = document.getElementById("Y").value;
+    //let r = document.getElementsByName("R");
+    alert("x="+", y="+y+", r=");
+    //dataCheck(x,y,r);
+
+    //document.getElementById("pointForm").submit();
 }
 
-function dataCheck() {
+function dataCheck(x,y,r) {
 
 }

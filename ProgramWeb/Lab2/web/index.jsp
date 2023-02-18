@@ -11,7 +11,7 @@
   <head>
     <meta charset = "UTF-8">
     <title>Студент: Чжоу Хунсян P32131 Вариант: 13111</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
@@ -19,67 +19,74 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/clientHandler.js"></script>
 
-    <h1>
-      Студент: Чжоу Хунсян P32131 <br> Вариант: 13111
-    </h1>
+    <div id="header">
+      <h1>Lab 2</h1>
+      <h2>Студент: Чжоу Хунсян P32131</h2>
+      <h2>Вариант: 13111</h2>
+    </div>
 
-    <h2>
-      Lab 2
-    </h2>
+    <table id="formTable">
+      <tr>
+        <td>
+          <fieldset class="InputX">
+            <legend class="InputX">
+              Please choose value of X<span class = "required">*</span>
+            </legend>
 
-    <form id = "pointForm" class="dataForm" method = "get" action="<%=path%>/Controller">
-      <fieldset>
-        <legend class="InputX">
-          Please choose value of X<span class = "required">*</span>
-        </legend>
-        <div class = "InputX">
-          <label>
-            <input type="radio" value="-3" name="X">-3
-            <input type="radio" value="-2" name="X">-2
-            <input type="radio" value="-1" name="X">-1
-            <input type="radio" value="0" name="X">0
-            <input type="radio" value="1" name="X">1
-            <input type="radio" value="2" name="X">2
-            <input type="radio" value="3" name="X">3
-            <input type="radio" value="4" name="X">4
-            <input type="radio" value="5" name="X">5
-          </label>
-        </div>
-      </fieldset>
+            <label>
+              <input type="radio" value="-3" name="X">-3
+              <input type="radio" value="-2" name="X">-2
+              <input type="radio" value="-1" name="X">-1
+              <input type="radio" value="0" name="X">0
+              <input type="radio" value="1" name="X">1
+              <input type="radio" value="2" name="X">2
+              <input type="radio" value="3" name="X">3
+              <input type="radio" value="4" name="X">4
+              <input type="radio" value="5" name="X">5
+            </label>
+          </fieldset>
 
-      <fieldset>
-        <legend class="inputY">
-          Please input value of Y<span class = "required">*</span>
-        </legend>
-        <div class = "inputY">
-          <label>
-            <input type="text" placeholder="from -3 to 3" id="valueOfY" name = "Y">
-          </label>
-        </div>
-      </fieldset>
+          <fieldset>
+            <legend class="inputY">
+              Please input value of Y<span class = "required">*</span>
+            </legend>
 
-      <fieldset>
-        <legend class="InputR">
-          Please choose value of R<span class = "required">*</span>
-        </legend>
-        <div class = "InputR">
-          <label>
-            <input type="radio" value="1" name="R">1
-            <input type="radio" value="2" name="R">2
-            <input type="radio" value="3" name="R">3
-            <input type="radio" value="4" name="R">4
-            <input type="radio" value="5" name="R">5
-          </label>
+            <label>
+              <input type="text" placeholder="from -3 to 3" id="Y" name = "Y">
+            </label>
 
-        </div>
-      </fieldset>
+          </fieldset>
 
-      <br>
+          <fieldset>
+            <legend class="InputR">
+              Please choose value of R<span class = "required">*</span>
+            </legend>
 
-      <div class="submit">
-        <input type="button" class="submitButton" value="Submit" onclick="submitData()">
-      </div>
+            <label>
+              <input type="radio" value="1" name="R">1
+              <input type="radio" value="2" name="R">2
+              <input type="radio" value="3" name="R">3
+              <input type="radio" value="4" name="R">4
+              <input type="radio" value="5" name="R">5
+            </label>
 
-    </form>
+          </fieldset>
+
+          <br>
+
+          <div class="submit">
+            <input type="button" class="submitButton" value="Submit" onclick="submitData()">
+          </div>
+
+        </td>
+        <td id="graph">
+          <div>
+            <canvas id="canvas" width="300" height="300"></canvas>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+
   </body>
 </html>
