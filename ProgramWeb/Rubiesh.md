@@ -878,8 +878,8 @@ P.S. Документ в процессе редакции, попозже на�
   2. конфигурирование спринга с помощью Java кода 使用 Java 代码的 spring 配置
     Для этого нужно создать класс с аннотацией Configuration, и в нем, путем добавления методов с различными аннотациями(bean например) конфигурировать спринг.  
     为此，您需要创建一个带有注解 `Configuration` 的类，并在其中通过添加带有各种注解的方法（例如 bean）来配置 spring。
-  Так же спринг приложение можно конфигурировать только аннотациями, добавляя к классам аннотации Component, Bean и т.д. Внедрение зависимостей происходит через аннотацию Autowired.  
-  另外，一个 spring 应用可以只配置注解，给类添加 Component、Bean 等注解。依赖注入通过 Autowired 注释发生。
+  3. Так же спринг приложение можно конфигурировать только аннотациями, добавляя к классам аннотации Component, Bean и т.д. Внедрение зависимостей происходит через аннотацию Autowired.  
+    另外，一个 spring 应用可以只配置注解，给类添加 Component、Bean 等注解。依赖注入通过 Autowired 注释发生。
 - Написать исходный код CDI бина, реализующего паттерн «команда» (Command Pattern)  
   编写实现命令模式的 CDI bean 的源代码
 
@@ -888,13 +888,13 @@ P.S. Документ в процессе редакции, попозже на�
     void execute();
   }
 
-  @Named(value=”cmd1”)
+  @Named(value="cmd1")
   @ApplicationScoped
   public class Cmd1 implements Command {
     void execute() { ... };
   }
 
-  @Named(value=”cmd2”)
+  @Named(value="cmd2")
   @ApplicationScoped
   public class Cmd2 implements Command {
     void execute() { ... };
@@ -906,7 +906,7 @@ P.S. Документ в процессе редакции, попозже на�
     private final Command cmd1, cmd2;
   
     @Inject
-    public MyBean(@Named(“cmd1”) Command cmd1, @Named(“cmd2”) Command cmd2) {
+    public MyBean(@Named("cmd1") Command cmd1, @Named("cmd2") Command cmd2) {
       this.cmd1 = cmd1;
       this.cmd2 = cmd2;
     }
@@ -973,11 +973,11 @@ P.S. Документ в процессе редакции, попозже на�
     在标记中，它们是标记属性。
 - JSF страница, динамически подгружаемая и выводящая новостную ленту с новостями формата: автор, заголовок, дата, иллюстрация, аннотация и полный текст (показывается при нажатии на соответствующую строчку)    
   动态加载和显示新闻提要的 JSF 页面，格式为：作者、标题、日期、插图、摘要和全文（单击相应行时显示）
-  ```xhtml
+  ```html
   <html
-  xmlns:f”http://…
-  xmlns:h”http://…
-  xmlns:ui”http://…>
+  xmlns:f"http://…
+  xmlns:h"http://…
+  xmlns:ui"http://…>
   <f:view>
   <h:head>
     ...
@@ -986,12 +986,12 @@ P.S. Документ в процессе редакции, попозже на�
   <h:head>
   <h:body>
   ...
-    <ui:repeat value”#{news.list} var=”news”>
-      <h:outputText value=”#{news.title”} />
-      <h:outputText value=”#{news.author”} />
+    <ui:repeat value"#{news.list} var="news">
+      <h:outputText value="#{news.title"} />
+      <h:outputText value="#{news.author"} />
       <h:graphicImage library="#{news.photo}" name="img.png"/>
-      <h:outputText value=”Раскрыть новость”/>
-      <h:outputText styleClass=”hid text” value=”#{news.text} />
+      <h:outputText value="Раскрыть новость"/>
+      <h:outputText styleClass="hid text" value="#{news.text} />
     </ui:repeat>
     ...
   </h:body>
@@ -1042,7 +1042,7 @@ P.S. Документ в процессе редакции, попозже на�
     return 
     (
       {
-        props.data  && <table className=”table”>
+        props.data  && <table className="table">
           <thead>
           <tr><td>Name</td><td>Surname</td>...</tr>
           </thead>
@@ -1100,7 +1100,7 @@ P.S. Документ в процессе редакции, попозже на�
   编写一个 JSF Web 应用程序（xhtml + CDI bean），其中包含一个学生列表和一个将实现学生开除逻辑的 bean。 每个学生名字的对面应该有一个按钮“开除”。 更新应使用 AJAX 完成  
   java:
   ```java
-  @Named(value = “student”)
+  @Named(value = "student")
   @SessionScoped
   public class Student implements Serializable {
     private DBHelper dbhelper;
@@ -1131,10 +1131,10 @@ P.S. Документ в процессе редакции, попозже на�
   </h:head>
   <h:body>
     <ui:repeat id="table" className="table" value="student.list" var="student" />
-    <div class=”row”>
-          <h:outputText value=”#{student.user.name}” />
-          <h:commandButton id=”#{student.user.name”} action=”#{student.delete(student.user.name)}”>
-                <f:ajax execute=”#{student.user.name”}” render=”table” />
+    <div class="row">
+          <h:outputText value="#{student.user.name}" />
+          <h:commandButton id="#{student.user.name"} action="#{student.delete(student.user.name)}">
+                <f:ajax execute="#{student.user.name"}" render="table" />
           </h:commandButton>
     </div>
   </ui:repeat>
@@ -1176,21 +1176,21 @@ P.S. Документ в процессе редакции, попозже на�
   ```js
   const router = createBrowserRouter([
     {
-      path: “/home”,
+      path: "/home",
       element: (
         <h1>Home</h1>
-        <a href=”/news”>News</a>
+        <a href="/news">News</a>
       )
     },
     {
-      path: “/news”,
+      path: "/news",
       element: (
         <h1>News<h1>
-        <a href=”/home”>Home</a>
+        <a href="/home">Home</a>
       )
     }
   ])
-  ReactDOM.createRoot(document.getElementById(“root”)).render
+  ReactDOM.createRoot(document.getElementById("root")).render
   (
     <RouterProvider router={router}/>
   )
@@ -1262,7 +1262,7 @@ P.S. Документ в процессе редакции, попозже на�
 - Написать CDI Bean калькулятор, поддерживающий 4 базовые операции для целых чисел  
   编写支持 4 种基本整数运算的 CDI Bean 计算器  
   ```java
-  @Named(value=”calc”)
+  @Named(value="calc")
   @ApplicationScoped
   public class Calc {
     public int add(int a, int b) { return a + b; }
@@ -1446,7 +1446,7 @@ P.S. Документ в процессе редакции, попозже на�
 - Сделать бин который показывает время в минутах со старта сервера  
   制作一个容器，以分钟为单位显示自服务器启动以来的时间  
   ```java
-  @Named(“serverTimer”)
+  @Named("serverTimer")
   @ApplicaitonScoped
   public class ServerTimer {
       private long start;
@@ -1545,7 +1545,7 @@ P.S. Документ в процессе редакции, попозже на�
   在 React 应用程序中，标记是用 JSX 文件编写的。 JSX 是 JS 的附加组件，允许您将 HTML 语法散布到代码中。 您可以使用标准 HTML 元素（例如 div、span、h1、input）以及自定义 React 组件。  
 
   JSX код: 
-  `<div className=”foo”>text</div>` компилируется в вызов функции `React.createElement(“div”, { className: “foo”}, “text”)`  
+  `<div className="foo">text</div>` компилируется в вызов функции `React.createElement("div", { className: "foo"}, "text")`  
   `<div className="foo">text</div>` 编译为函数调用 `React.createElement("div", { className: "foo"}, "text")`
 - JSF Manager Bean, после инициализации HTTP-сессии формирующий коллекцию с содержимым таблицы Н_УЧЕБНЫЕ_ПЛАНЫ. Для доступа к БД необходимо использовать JDBC-ресурс jdbc/OrbisPool.  
   JSF 管理器 Bean，在初始化 HTTP 会话后，形成一个包含 N_CURRICULUM 表内容的集合。 要访问数据库，您必须使用 jdbc/OrbisPool JDBC 资源。
@@ -1616,7 +1616,7 @@ P.S. Документ в процессе редакции, попозже на�
   @RequestScoped
   public class OtherMyBean implements Serializable{
     int a;
-    @ManagedProperty(value=”#{testBean}”)
+    @ManagedProperty(value="#{testBean}")
     TestBean testBean = new TestBean();
     
     public void setTestBean(TestBean testBean){
@@ -1644,8 +1644,8 @@ P.S. Документ в процессе редакции, попозже на�
   Валидаторы в JSF — реализации интерфейса `Validator`. Метод validate принимает `FacesContext, UiComponent` и значение (Object), которое необходимо валидировать.  
   JSF 中的验证器是 `Validator` 接口的实现。 validate 方法采用 `FacesContext、UiComponent` 和要验证的值 (Object)。
 
-  Валидатор можно повесить на компоненты при помощи тега `<f:validator validatorId=”com.example.MyValidator”/>`  
-  可以使用 `<f:validator validatorId=”com.example.MyValidator”/>` 标签将验证器附加到组件
+  Валидатор можно повесить на компоненты при помощи тега `<f:validator validatorId="com.example.MyValidator"/>`  
+  可以使用 `<f:validator validatorId="com.example.MyValidator"/>` 标签将验证器附加到组件
 
   Чтобы JSF зарегистрировал кастомный валидатор, используется аннотация `@FacesValidator`. Существует 3 самых известных API: JME, JSE, JEE  
   为了让 JSF 注册自定义验证器，使用了 `@FacesValidator` 注释。有 3 个最著名的 API：JME、JSE、JEE ([参见 Билет 10](#билет-10-1))
@@ -1689,18 +1689,25 @@ P.S. Документ в процессе редакции, попозже на�
 ## Билет 14
 
 - Фаза формирования представления  
-  Фаза формирования представления (RestoreView), на этой фазе фреймворк(JSF) делает следующее:
-  - Если это первое обращение клиента, то создаются объекты, назначаются слушатели, валидаторы, конверторы, все это помещается в FacesContext и отправляется на создание ответа юзеру.
-  - Если FacesContext уже есть (это не первый запрос и все объекты уже созданы), то проверяется тип запроса, а после запускаются процессы рендера новых страниц(если это GET) и создание/изменение данных(если это POST).
+  Фаза формирования представления (RestoreView), на этой фазе фреймворк(JSF) делает следующее:  
+  视图形成阶段（RestoreView），在这个阶段，框架（JSF）做了以下事情：
+  - Если это первое обращение клиента, то создаются объекты, назначаются слушатели, валидаторы, конверторы, все это помещается в FacesContext и отправляется на создание ответа юзеру.  
+    如果这是客户端的第一个请求，则创建对象，分配监听器、验证器、转换器，所有这些都放在 FacesContext 中并发送以创建对用户的响应。
+  - Если FacesContext уже есть (это не первый запрос и все объекты уже созданы), то проверяется тип запроса, а после запускаются процессы рендера новых страниц(если это GET) и создание/изменение данных(если это POST).  
+    如果 FacesContext 已经存在（这不是第一个请求并且所有对象都已经创建），那么检查请求类型，然后渲染新页面（如果是 GET）和创建/更改数据（如果是是 POST）被启动。
   Доп инфа:
   1. Формирование представления (Restore view)
-    Создаются объекты дерева компонентов, начиная с UIViewRoot, назначаются слушатели, конверторы и валидаторы. Все элементы помещаются в FacesContext. Если клиент уже заходил на эту страницу, то состояния представления синхронизируются с клиентом.
-  2. JSF начинает фазу восстановления представления, как только щелкает ссылка или кнопка и JSF получает запрос. На этом этапе JSF создает представление, связывает обработчики событий и средства проверки с компонентами пользовательского интерфейса и сохраняет представление в экземпляре FacesContext. Экземпляр FacesContext теперь будет содержать всю информацию, необходимую для обработки запроса.
+    Создаются объекты дерева компонентов, начиная с UIViewRoot, назначаются слушатели, конверторы и валидаторы. Все элементы помещаются в FacesContext. Если клиент уже заходил на эту страницу, то состояния представления синхронизируются с клиентом.  
+    创建组件树对象，从 UIViewRoot 开始，分配监听器、转换器和验证器。 所有元素都放在 FacesContext 中。 如果客户端已经访问过该页面，则视图状态与客户端同步。
+  2. JSF начинает фазу восстановления представления, как только щелкает ссылка или кнопка и JSF получает запрос. На этом этапе JSF создает представление, связывает обработчики событий и средства проверки с компонентами пользовательского интерфейса и сохраняет представление в экземпляре FacesContext. Экземпляр FacesContext теперь будет содержать всю информацию, необходимую для обработки запроса.  
+    单击链接或按钮并且 JSF 收到请求后，JSF 立即开始视图恢复阶段。 此时，JSF 创建视图，将事件处理程序和验证程序与 UI 组件相关联，并将视图存储在 FacesContext 实例中。 FacesContext 实例现在将包含处理请求所需的所有信息。
 
 - Spring framework. Отличия от Java EE  
-  Java EE — это, грубо говоря, конструктор, она модульная, можно делать свои сборки, подключать и отключать совсем маленькие модули. В ней есть множество реализаций представлений, бинов и т.д. что делает ее идеальной для разработки монолитного масштабируемого приложения.
+  Java EE — это, грубо говоря, конструктор, она модульная, можно делать свои сборки, подключать и отключать совсем маленькие модули. В ней есть множество реализаций представлений, бинов и т.д. что делает ее идеальной для разработки монолитного масштабируемого приложения.  
+  粗略地说，Java EE 是一个构造函数，它是模块化的，您可以制作自己的程序集，连接和断开非常小的模块。 它有许多视图、bean 等的实现。 使其成为开发单一的、可扩展的应用程序的理想选择。
 
   Spring — также разделен на модули, но эти модули довольно крупные и скорее удобно дополняют друг-друга чем живут обособленно. Спринг ставит более жесткие рамки, диктуя как писать приложении, и в каких-то случаях это очень важно. Этот фреймворк подходит для небольших веб приложений, либо для микросервисной архитектуры. Тот же ajax, который в JavaEE пишется 1 строчкой(благодаря JSF), в спринге нужно писать руками.  
+  Spring也是分模块的，但是这些模块都比较大，相辅相成比分开住更方便。 Spring 对如何编写应用程序施加了更严格的限制，在某些情况下这非常重要。 此框架适用于小型 Web 应用程序或微服务架构。 同样的 ajax，在 JavaEE 中用 1 行编写（感谢 JSF），在 spring 中你需要手动编写它。
 
   Доп инфа:
   Java EE +|Java EE -|Spring +|Spring -
@@ -1710,6 +1717,14 @@ P.S. Документ в процессе редакции, попозже на�
   -|-|Не требует использования корпоративоного контейнера (севера прилодений такого как tomcat, glassfish...)|-
   -|-|опенсурс/-
   -|-|нам практик говарил, что Spring выигрывает из-за Spring boot и Spring data|а вот по сравнению Java EE тут security сложнее
+
+  Java EE +|Java EE -|Spring +|Spring -
+  ---|---|---|---|
+  被认为是更可靠和可扩展的解决方案|复杂的开发环境|比 Java EE 更容易|开发人员没有明确的重点和理解为什么从根本上需要 Spring
+  Java EE - 批准的标准|-|提供弱应用程序连接——因为它最初的构想只是为了实现 IoC|比 Java EE 慢（无处写下原因）
+  -|-|不需要使用企业容器（像 tomcat、glassfish 等应用服务器……）|-
+  -|-|开源|-
+  -|-|曾经有一个从业者告诉我们，Spring赢是因为Spring boot和Spring data|但与 Java EE 相比，这里的安全性更复杂
 
 - RestController, который реализует перевод градусов Цельсия в Фаренгейты и обратно  
   RestController 实现从摄氏度到华氏度的转换，反之亦然
@@ -1765,7 +1780,7 @@ P.S. Документ в процессе редакции, попозже на�
   …
   <h:body>
     <h:inputTextArea>
-      <f:validateRegex pattern=”[a-z, A-Z]*”/>
+      <f:validateRegex pattern="[a-z, A-Z]*"/>
     </h:inputTextArea>
   </h:body>
   ...
@@ -1864,9 +1879,9 @@ P.S. Документ в процессе редакции, попозже на�
                 </div>
   })
   export class AppComponent { 
-    username: string=””;
-    password: string=””;
-    message: string=””;
+    username: string="";
+    password: string="";
+    message: string="";
   http: HttpClient;
     submit(){
       const body = {login: username, password: password, message: message};
@@ -2044,7 +2059,8 @@ P.S. Документ в процессе редакции, попозже на�
 ## Билет 21  
 
 - REST в спринге: методы и аргументы  
-  REST можно реализовать в обычном Spring MVC контроллере, используя аннотацию `@Controller`. На каждый метод-обработчик, возвращающий сериализованный ответ в теле, нужно добавить аннотацию `@ResponseBody`. Для удобства в Spring сделали аннотацию `@RestController`, которая по умолчанию применяет `@ResponseBody` к всем методам, помеченными аннотацией `@RequestMapping`. Методы-обработчики запросов могут принимать параметры из URL через аннотацию @PathVariable, параметры GET-запроса (query string) через `@RequestParam`, десериализованные данные из тела запроса через `@RequestBody`. Spring автоматически определит формат данных, исходя из заголовка Content-Type и десериализует их, при наличии соответствующей библиотеки (для JSON используется Jackson)
+  REST можно реализовать в обычном Spring MVC контроллере, используя аннотацию `@Controller`. На каждый метод-обработчик, возвращающий сериализованный ответ в теле, нужно добавить аннотацию `@ResponseBody`. Для удобства в Spring сделали аннотацию `@RestController`, которая по умолчанию применяет `@ResponseBody` к всем методам, помеченными аннотацией `@RequestMapping`. Методы-обработчики запросов могут принимать параметры из URL через аннотацию @PathVariable, параметры GET-запроса (query string) через `@RequestParam`, десериализованные данные из тела запроса через `@RequestBody`. Spring автоматически определит формат данных, исходя из заголовка Content-Type и десериализует их, при наличии соответствующей библиотеки (для JSON используется Jackson)  
+  REST 可以使用 `@Controller` 注释在常规 Spring MVC 控制器中实现。 对于在正文中返回序列化响应的每个处理程序方法，您需要添加 `@ResponseBody` 注释。 为方便起见，Spring 引入了 `@RestController` 注解，它默认将 `@ResponseBody` 应用于所有标有 `@RequestMapping` 注解的方法。 请求处理程序方法可以通过@PathVariable 注释接受来自 URL 的参数，通过 `@RequestParam` 获取请求参数（查询字符串），通过 `@RequestBody` 从请求正文中反序列化数据。 Spring会根据Content-Type头自动判断数据格式，如果有合适的库就反序列化（Jackson用的是JSON）
 - Навигация в React. React Router  
   React Router - система маршрутизации, позволяющая делать навигацию между компонентами, а также позволяет сопоставлять запросы к приложению с определенными компонентами.
 
@@ -2166,7 +2182,7 @@ P.S. Документ в процессе редакции, попозже на�
   Использование в JSF: 在 JSF 中的用法：
 
   ```java
-  <f:converter converterId=”my.package.MyConverter:>
+  <f:converter converterId="my.package.MyConverter":>
   ```
   
   Есть встроенные конверторы: `IntegerConverter`, `DoubleConverter`, `DateTimeConverter`, `EnumConverter` и другие.  
@@ -2226,13 +2242,13 @@ P.S. Документ в процессе редакции, попозже на�
 
 - CDI Beans  
   CDI bean — класс, удовлетворяющим следующим требованиям: класс должен быть статическим (а не вложенным не статическим) и должен иметь конструктор (либо без аргументов, либо с аргументами, но помеченный аннотацией `@Inject`)  
-  CDI bean - 满足以下要求的类：该类必须是静态的（并且不是嵌套的非静态的）并且必须具有构造函数（不带参数或带参数，但标有 “@Inject” 注释）
+  CDI bean - 满足以下要求的类：该类必须是静态的（并且不是嵌套的非静态的）并且必须具有构造函数（不带参数或带参数，但标有 `@Inject` 注释）
 
   CDI beans появились начиная с Java EE 6 и поддерживают гораздо больше фич, чем JSF ManagedBeans. CDI бины, как и их аналоги, поддерживают внедрение зависимостей. Жизненным циклом бинов управляет CDI контейнер, то есть их экземпляры создаются автоматически при необходимости.  
   CDI bean 从 Java EE 6 开始就存在，并且支持比 JSF ManagedBeans 更多的功能。 CDI bean 和它们的对应物一样，支持依赖注入。 bean 的生命周期由 CDI 容器管理，也就是说，如果需要，它们的实例会自动创建。
 - Angular DI  
   Отличительная особенность фреймворка Angular — поддержка внедрения зависимостей. Можно писать свои классы, помеченные аннотацией `@Injectable`, и внедрять их в другие классы, сервисы, компоненты. Чаще всего внедряют сервисы, в которых реализуется бизнес логика, не связанная с представлением. Например логирование, общение с API. Плюс использования DI в том что при необходимости легко заменить конкретную реализацию на другую, тестовую, тем самым тестируя компоненты системы по отдельности.  
-  Angular 框架的一个显着特点是支持依赖注入。 您可以编写自己的标有“@Injectable”注解的类，并将它们注入到其他类、服务和组件中。 大多数情况下，实现的服务实现了与表示无关的业务逻辑。 例如日志记录、与 API 的通信。 使用 DI 的好处是，如果需要，可以很容易地用另一个实现替换一个特定的实现，测试一个，从而单独测试系统组件。
+  Angular 框架的一个显着特点是支持依赖注入。 您可以编写自己的标有 `@Injectable` 注解的类，并将它们注入到其他类、服务和组件中。 大多数情况下，实现的服务实现了与表示无关的业务逻辑。 例如日志记录、与 API 的通信。 使用 DI 的好处是，如果需要，可以很容易地用另一个实现替换一个特定的实现，测试一个，从而单独测试系统组件。
 
   Доп инфа: 附加信息：
 
@@ -2243,7 +2259,7 @@ P.S. Документ в процессе редакции, попозже на�
   Angular 有自己的 DI 模式实现。 Angular 中 DI 的一个例子是当组件使用服务时，通常是为了获取数据。
 
   Чтобы сервис мог быть использован через DI, он должен быть  `@Injectable()`.   
-  对于要通过 DI 使用的服务，它必须是 “@Injectable ()”。
+  对于要通过 DI 使用的服务，它必须是 `@Injectable ()`。
 
   Все сервисы регистрируются Injector-ом. В приложении может быть несколько injector-ов одновременно.  
   所有服务都由 Injector 注册。  一个应用程序可以同时拥有多个注入器。
@@ -2271,21 +2287,21 @@ P.S. Документ в процессе редакции, попозже на�
   包含来自 bean 的数据的 JSF 页面
 
   ```java
-  @Named(“myBean”)
+  @Named("myBean")
   class MyBean {
       public int getValue() {
           return 42:
       }
   }
 
-  <h:outputText value=”#{myBean.value}”/>
+  <h:outputText value="#{myBean.value}"/>
   ```
 
 ## Билет 25  
 
 - Шаблоны и представление в Angular  
-  Для того чтобы задать, как будет отображаться компонент, используются шаблоны. Шаблоны Angular напоминают видоизмененный HTML. Поддерживается интерполяция: {{ value }}. Синтаксис атрибутов расширен: `[attr]=”value”` — одностороннее связывание, `[(attr)]=”value”` — двухстороннее связывание, `@event=”handler”` — обработчик событий. Для условной отрисовки используется директива `*ngIf`, для циклов — `*ngFor`.  
-  模板用于定义组件的显示方式。 Angular 模板就像修改过的 HTML。  支持插值：{{值}}。  属性语法扩展：`[attr]=”value”` — 单向绑定，`[(attr)]=”value”` — 双向绑定，`@event=”handler”` — 事件处理程序。  对于条件渲染，使用 `*ngIf` 指令，用于循环 - `*ngFor`。
+  Для того чтобы задать, как будет отображаться компонент, используются шаблоны. Шаблоны Angular напоминают видоизмененный HTML. Поддерживается интерполяция: {{ value }}. Синтаксис атрибутов расширен: `[attr]="value"` — одностороннее связывание, `[(attr)]="value"` — двухстороннее связывание, `@event="handler"` — обработчик событий. Для условной отрисовки используется директива `*ngIf`, для циклов — `*ngFor`.  
+  模板用于定义组件的显示方式。 Angular 模板就像修改过的 HTML。  支持插值：{{值}}。  属性语法扩展：`[attr]="value"` — 单向绑定，`[(attr)]="value"` — 双向绑定，`@event="handler"` — 事件处理程序。  对于条件渲染，使用 `*ngIf` 指令，用于循环 - `*ngFor`。
 
   Представление в Angular — древовидная структура данных, содержащая ссылки на DOM элементы.  
   Angular 中的视图是一种树状数据结构，包含对 DOM 元素的引用。
@@ -2305,8 +2321,8 @@ P.S. Документ в процессе редакции, попозже на�
 
   Пример:
   ```
-  ApplicationContext appContext = new ClassPathXmlApplicationContext(“/application-context.xml”);
-  MyBean bean = appContext.getBean(“myBean”);
+  ApplicationContext appContext = new ClassPathXmlApplicationContext("/application-context.xml");
+  MyBean bean = appContext.getBean("myBean");
   ```
   То есть, мы сами достаём xml и сами грузим оттуда нужный бин. Но так почти никогда не делают.  
   也就是说，我们自己获取 xml 并从那里自己加载必要的 bean。但他们几乎从不这样做。
@@ -2316,8 +2332,8 @@ P.S. Документ в процессе редакции, попозже на�
   Dependency Lookup (DL) — подход при котором компонент напрямую просит у контейнера передать ему зависимость. Противопоставляется DI, который происходит автоматически.  
   Dependency Lookup (DL) 是一种组件直接请求容器将依赖项传递给它的方法。与 DI 对比，DI 是自动发生的。
 
-  В Spring для реализации DL нужно сначала получить контекст приложения (например ClassPathXmlApplicationContext). Затем: context.getBean(“name”) — вернет Object. Также можно указать конкретный класс или интерфейс: context.getBean(“name”, MyBean.class)  
-  在 Spring 中，要实现一个 DL，首先需要获取应用程序上下文（例如，ClassPathXmlApplicationContext）。然后：context.getBean (“name”) 将返回一个对象。您还可以指定特定的类或接口：context.getBean ("name", MyBean.class)
+  В Spring для реализации DL нужно сначала получить контекст приложения (например ClassPathXmlApplicationContext). Затем: context.getBean("name") — вернет Object. Также можно указать конкретный класс или интерфейс: context.getBean("name", MyBean.class)  
+  在 Spring 中，要实现一个 DL，首先需要获取应用程序上下文（例如，ClassPathXmlApplicationContext）。然后：context.getBean ("name") 将返回一个对象。您还可以指定特定的类或接口：context.getBean ("name", MyBean.class)
 
 - Конфигурация, чтобы JSF обрабатывал все запросы приходящие с `.xhtml` и со всех URL, начинающихся с `/faces/`
   让 JSF 处理所有来自 .xhtml 的请求和所有以 `/faces/` 开头的 URL 的配置
@@ -2460,13 +2476,13 @@ P.S. Документ в процессе редакции, попозже на�
   - Старый: с помощью JavaScript API jsf.ajax.request(). Обеспечивает стандартный мост для запросов и детальный контроль.
     Пример: 
     ```html
-    <h:commandButton … onClick=”jsf.ajax.request(this, event, {execute:’myinput’, render:’outtext’’}); return false;”/>
+    <h:commandButton … onClick="jsf.ajax.request(this, event, {execute:’myinput’, render:’outtext’’}); return false;"/>
     ```
   - Новый: тегом `<f:ajax>`. Очень удобно, не нужно трогать JavaScript. 
     Пример:
     ```html
     <h:commandButton>
-        <f:ajax execute=”@form” render=”outtext”/>
+        <f:ajax execute="@form" render="outtext"/>
     </h:commandButton>
 
     ```
@@ -2475,20 +2491,20 @@ P.S. Документ в процессе редакции, попозже на�
 
     Доп инфа: 
     
-    AJAX в JSF реализуется при помощи тега `<f:ajax>`. Вставляем этот тег внутрь другого интерактивного компонента, например кнопки или текстового поля. `<f:ajax>` принимает следующие параметры: render=”ids” — список ID компонентов, которые будут перерисованы после AJAX запроса. execute=”id” — список форм, которые будут отправлены. event=”...” — событие, которое вызовет AJAX запрос. onevent/onerror — JS каллбеки.
+    AJAX в JSF реализуется при помощи тега `<f:ajax>`. Вставляем этот тег внутрь другого интерактивного компонента, например кнопки или текстового поля. `<f:ajax>` принимает следующие параметры: render="ids" — список ID компонентов, которые будут перерисованы после AJAX запроса. execute="id" — список форм, которые будут отправлены. event="..." — событие, которое вызовет AJAX запрос. onevent/onerror — JS каллбеки.
 
     в JSF есть два способа реализации Ajax запросов: старый и новый.
     - Старый: с помощью JavaScript API jsf.ajax.request(). Обеспечивает стандартный мост для запросов и детальный контроль.
       Пример:
 
       ```html
-      <h:commandButton … onClick=”jsf.ajax.request(this, event, {execute:’myinput’, render:’outtext’’}); return false;”/>
+      <h:commandButton … onClick="jsf.ajax.request(this, event, {execute:’myinput’, render:’outtext’’}); return false;"/>
       ```
     - Новый: тегом <f:ajax>. Очень удобно, не нужно трогать JavaScript. 
       Пример: 
       ```html
       <h:commandButton>
-        <f:ajax execute=”@form” render=”outtext”/>
+        <f:ajax execute="@form" render="outtext"/>
       </h:commandButton>
       ```
     
