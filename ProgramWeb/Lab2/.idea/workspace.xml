@@ -10,7 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4254883d-51a9-4cb4-9ab2-e2c39234a917" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/Lab1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/out/production/Lab1/Matrix.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/out/production/Lab1/Terminal.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/src/Matrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/src/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ComputationalMathematics/Lecture.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Lecture.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +173,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676540630799</updated>
-      <workItem from="1676540631964" duration="36311000" />
+      <workItem from="1676540631964" duration="36909000" />
     </task>
     <servers />
   </component>
