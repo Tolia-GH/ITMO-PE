@@ -10,26 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4254883d-51a9-4cb4-9ab2-e2c39234a917" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/GraphicWork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/GraphicWork.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/AppStart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/MainPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/Matrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/ResultPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/resources/com/example/graphicwork/MainPage.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/resources/com/example/graphicwork/ResultPage.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/target/classes/com/example/graphicwork/AppStart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/target/classes/com/example/graphicwork/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/target/classes/com/example/graphicwork/MainPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/target/classes/com/example/graphicwork/MainPage.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/target/classes/com/example/graphicwork/Matrix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/target/classes/com/example/graphicwork/ResultPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/target/classes/com/example/graphicwork/ResultPage.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/target/classes/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +163,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676540630799</updated>
-      <workItem from="1676540631964" duration="36227000" />
+      <workItem from="1676540631964" duration="36311000" />
     </task>
     <servers />
   </component>
