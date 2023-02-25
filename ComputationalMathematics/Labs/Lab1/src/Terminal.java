@@ -16,6 +16,8 @@ public class Terminal {
         matrix.printMatrix(matrix.inputMatrix);
         matrix.printMatrix(matrix.firstMatrix);
         matrix.printMatrix(matrix.secondMatrix);
+        matrix.printResult();
+        matrix.printR();
     }
 
     static void readData() {

@@ -10,17 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4254883d-51a9-4cb4-9ab2-e2c39234a917" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/Lab1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/out/production/Lab1/Matrix.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/out/production/Lab1/Terminal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/src/Matrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/src/Terminal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ComputationalMathematics/Lecture.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Lecture.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/out/production/Lab1/Matrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/out/production/Lab1/Matrix.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/out/production/Lab1/Terminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/out/production/Lab1/Terminal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/src/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/src/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/src/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/src/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/AppStart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/META-INF/MANIFEST 2.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/MainPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/Matrix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/ResultPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/resources/com/example/graphicwork/MainPage.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/resources/com/example/graphicwork/ResultPage.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/servlets/ControllerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/servlets/ControllerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/js/clientHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/js/clientHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab2/servlets/ControllerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab2/servlets/ControllerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlets/ControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/ControllerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/clientHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/clientHandler.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,16 +87,17 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.71" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.71" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 9.0.71" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.71" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Lab2:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/Lab2" />
+            <option name="CONTEXT_PATH" value="/Lab2_war" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="1226980e-2713-4b9c-8b92-de281b026bf0" />
+        <option name="BASE_DIRECTORY_NAME" value="41307551-80cc-471e-a766-cd09855a700b" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -95,7 +105,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="55823" />
+        <option name="DEBUG_PORT" value="49376" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -173,7 +183,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676540630799</updated>
-      <workItem from="1676540631964" duration="36909000" />
+      <workItem from="1676540631964" duration="38206000" />
     </task>
     <servers />
   </component>

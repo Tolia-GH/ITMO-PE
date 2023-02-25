@@ -25,7 +25,5 @@ public class ControllerServlet extends HttpServlet {
         System.out.println("y=" + y);
         System.out.println("r=" + r);
 
-        Point newPoint = new Point(x, y, r, false);
-        PointsList.getPointList().add(newPoint);
     }
 }

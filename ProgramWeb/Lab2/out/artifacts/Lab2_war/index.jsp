@@ -76,7 +76,7 @@
           </fieldset>
 
           <div>
-            <form method="GET" id="hiddenForm" action=<%=path%>"/Controller">
+            <form method="GET" id="hiddenForm" action="<%=path%>/Controller">
               <input type="hidden" name="x_hidden" id="x_hidden_id">
               <input type="hidden" name="y_hidden" id="y_hidden_id">
               <input type="hidden" name="r_hidden" id="r_hidden_id">

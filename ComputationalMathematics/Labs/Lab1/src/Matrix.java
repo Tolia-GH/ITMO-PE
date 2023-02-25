@@ -9,20 +9,11 @@ public class Matrix {
     public double determinant;
     int sign = 1;
 
-    double resultX;
-    double resultY;
-    double resultZ;
+    double result[] = new double[21];
+    double R[] = new double[21];
 
-    public double getResultX() {
-        return resultX;
-    }
-
-    public double getResultY() {
-        return resultY;
-    }
-
-    public double getResultZ() {
-        return resultZ;
+    public double[] getResults() {
+        return result;
     }
 
     public Matrix() {}
@@ -37,6 +28,17 @@ public class Matrix {
         matrixCopy(matrixTable, inputMatrix);
 
         for (int i = 0; i < n - 1; i++) {
+            double max = Double.NEGATIVE_INFINITY;
+            int maxIndex = i;
+            for (int m = i; m < n; m++) {
+                if (matrixTable[m][i]>max) {
+                    max = matrixTable[m][i];
+                    maxIndex = m;
+                }
+            }
+            if (maxIndex != i) {
+                swabLine(maxIndex, i);
+            }
             for (int j = i + 1; j < n; j++) {
                 double div = matrixTable[j][i]/matrixTable[i][i];
                 for (int k = 0; k < n + 1; k++) {
@@ -67,9 +69,18 @@ public class Matrix {
 
         matrixCopy(secondMatrix, matrixTable);
 
-        resultX = matrixTable[0][3];
-        resultY = matrixTable[1][3];
-        resultZ = matrixTable[2][3];
+        for (int i = 0; i < n; i++) {
+            result[i] = matrixTable[i][n];
+        }
+
+
+        for (int i = 0; i < n; i++) {
+            double sum = 0L;
+            for (int j = 0; j < n; j++) {
+                sum += inputMatrix[i][j] * result[j];
+            }
+            R[i] = sum-inputMatrix[i][n];
+        }
     }
 
     void swabCol(int r, int c) {
@@ -77,6 +88,15 @@ public class Matrix {
             matrixTable[i][r] += matrixTable[i][c];
             matrixTable[i][c] = matrixTable[i][r] - matrixTable[i][c];
             matrixTable[i][r] -= matrixTable[i][c];
+        }
+        sign = -sign;
+    }
+
+    void swabLine(int r, int c) {
+        for (int i = 0; i <= n; i++)	{
+            matrixTable[r][i] += matrixTable[c][i];
+            matrixTable[c][i] = matrixTable[r][i] - matrixTable[c][i];
+            matrixTable[r][i] -= matrixTable[c][i];
         }
         sign = -sign;
     }
@@ -97,6 +117,22 @@ public class Matrix {
             }
             System.out.println();
         }
+    }
+
+    void printResult() {
+        System.out.println("The result is: ");
+        for (int i = 0; i < n; i++) {
+            System.out.printf("%3.2f ", result[i]);
+        }
+        System.out.println();
+    }
+
+    void printR() {
+        System.out.println("The R is: ");
+        for (int i = 0; i < n; i++) {
+            System.out.printf("%3.20f ", R[i]);
+        }
+        System.out.println();
     }
 
     void calDeterminant() {
