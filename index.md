@@ -16,7 +16,7 @@
 
 - [数学](/Mathematic/README.md)
 - [物理](/Physics/README.md)
-- [俄语](/Russian%20Language/README.md)
+- [俄语](/RussianLanguage/README.md)
 - [编程语言](/ProgramLanguagea/README.md)
 - [网络编程](/ProgramWeb/README.md)
 - [算法与数据结构](/Algorithm&DataStructures/README.md)

@@ -9,31 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4254883d-51a9-4cb4-9ab2-e2c39234a917" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/web/classes/Lab2/beans/Point.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/classes/Lab2/beans/PointsList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/classes/Lab2/servlets/AreaCheckServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/classes/Lab2/servlets/ControllerServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/beans/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/beans/Point.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/beans/PointsList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/beans/PointsList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/servlets/AreaCheckServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/servlets/AreaCheckServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/servlets/ControllerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/servlets/ControllerServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/js/clientHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/js/clientHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab2/beans/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab2/beans/Point.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab2/beans/PointsList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab2/beans/PointsList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab2/servlets/AreaCheckServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab2/servlets/AreaCheckServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab2/servlets/ControllerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab2/servlets/ControllerServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/beans/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beans/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/beans/PointsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beans/PointsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlets/AreaCheckServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/AreaCheckServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlets/ControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/ControllerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/canvasDrawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/canvasDrawer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/clientHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/clientHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/result.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="4254883d-51a9-4cb4-9ab2-e2c39234a917" name="Changes" comment="update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +51,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/classes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -192,6 +168,7 @@
       <option name="presentableId" value="Default" />
       <updated>1676540630799</updated>
       <workItem from="1676540631964" duration="66797000" />
+      <workItem from="1677758960210" duration="82000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1677308200870</created>
