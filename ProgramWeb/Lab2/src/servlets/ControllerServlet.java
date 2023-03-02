@@ -1,10 +1,6 @@
 package servlets;
 
-import beans.Point;
-import beans.PointsList;
-
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,9 +17,12 @@ public class ControllerServlet extends HttpServlet {
                 req.getParameter("y_hidden").getBytes(StandardCharsets.UTF_8)));
         double r = Double.parseDouble(new String(
                 req.getParameter("r_hidden").getBytes(StandardCharsets.UTF_8)));
-        System.out.println("x=" + x);
-        System.out.println("y=" + y);
-        System.out.println("r=" + r);
+        System.out.println("Receiving data: x=" + x + ", y=" + y + ", r=" + r);
 
+        req.getServletContext().getRequestDispatcher("/AreaCheck").forward(req,resp);
+    }
+
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+        req.getServletContext().getRequestDispatcher("index.jsp").forward(req,resp);
     }
 }

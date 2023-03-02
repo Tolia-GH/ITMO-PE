@@ -9,27 +9,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4254883d-51a9-4cb4-9ab2-e2c39234a917" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/out/production/Lab1/Matrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/out/production/Lab1/Matrix.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/out/production/Lab1/Terminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/out/production/Lab1/Terminal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/src/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/src/Matrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/src/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputationalMathematics/Labs/Lab1/src/Terminal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/AppStart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/META-INF/MANIFEST 2.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/MainPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/Matrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/java/com/example/graphicwork/ResultPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/resources/com/example/graphicwork/MainPage.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mathematic/GraphicWork1/GraphicWork-1/src/main/resources/com/example/graphicwork/ResultPage.fxml" beforeDir="false" />
+    <list default="true" id="4254883d-51a9-4cb4-9ab2-e2c39234a917" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/web/classes/Lab2/beans/Point.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/classes/Lab2/beans/PointsList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/classes/Lab2/servlets/AreaCheckServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/classes/Lab2/servlets/ControllerServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/beans/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/beans/Point.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/beans/PointsList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/beans/PointsList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/servlets/AreaCheckServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/servlets/AreaCheckServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/servlets/ControllerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/WEB-INF/classes/servlets/ControllerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Lab2_war/js/clientHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab2_war/js/clientHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab2/beans/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab2/beans/Point.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab2/beans/PointsList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab2/beans/PointsList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab2/servlets/AreaCheckServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab2/servlets/AreaCheckServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab2/servlets/ControllerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab2/servlets/ControllerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/beans/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beans/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/beans/PointsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beans/PointsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlets/AreaCheckServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/AreaCheckServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlets/ControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/ControllerServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/canvasDrawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/canvasDrawer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/js/clientHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/clientHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/result.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +42,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
+        <option value="Jsp File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -71,17 +75,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/classes" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/classes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web" />
     </key>
@@ -183,8 +191,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676540630799</updated>
-      <workItem from="1676540631964" duration="38206000" />
+      <workItem from="1676540631964" duration="66797000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1677308200870</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677308200870</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,5 +216,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

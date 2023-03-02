@@ -1,7 +1,5 @@
 package beans;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
-
 import java.io.Serializable;
 
 public class Point implements Serializable {
@@ -9,6 +7,7 @@ public class Point implements Serializable {
     private double y;
     private double R;
     private boolean res;
+    private long timeUsage;
 
     public double getX() {
         return x;
@@ -42,6 +41,20 @@ public class Point implements Serializable {
         this.res = res;
     }
     public Point() {}
+
+    public void setTimeUsage(long timeUsage) {
+        this.timeUsage = timeUsage;
+    }
+
+    public long getTimeUsage() {
+        return timeUsage;
+    }
+
+    public Point(double x, double y, double r) {
+        this.x = x;
+        this.y = y;
+        this.R = r;
+    }
 
     public Point(double x,double y,double R,boolean res) {
         this.x = x;

@@ -1,16 +1,35 @@
 package beans;
 
-import java.util.LinkedList;
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
-public class PointsList {
-    private static List<Point> pointList = new LinkedList<>();
+public class PointsList implements Serializable {
+    private int no = 0;
+    private List<Point> pointList = new ArrayList<>();
 
     public PointsList() {
-        pointList = new LinkedList<>();
+
     }
 
-    public static List<Point> getPointList() {
+    public void setNo(int no) {
+        this.no = no;
+    }
+
+    public int getNo() {
+        return no;
+    }
+
+    public void setPointList(List<Point> pointList) {
+        this.pointList = pointList;
+    }
+
+    public List<Point> getPointList() {
         return pointList;
+    }
+
+    public void addPoint(Point p) {
+        ++no;
+        pointList.add(p);
     }
 }
