@@ -18,8 +18,6 @@
   </head>
 
   <body onload="init()">
-
-  <jsp:useBean id="pointBean" class="beans.PointsList" scope="session"/>
   <center>
     <div id="header">
       <h1>Lab 2</h1>
