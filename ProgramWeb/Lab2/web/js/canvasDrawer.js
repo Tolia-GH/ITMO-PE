@@ -1,9 +1,9 @@
 
 
 let n = 0;
-let pointsX = new Array();
-let pointsY = new Array();
-let pointsR = new Array();
+let pointsX = [];
+let pointsY = [];
+let pointsR = [];
 
 function drawGraphic() {
     let canvas = document.getElementById("canvas");
@@ -120,10 +120,6 @@ function drawPoints(x,y,r,hit) {
     ctx.fill();
 
     ctx.save();
-}
-
-function AreaCheck(x,y,r) {
-
 }
 
 function clickCanvas() {
