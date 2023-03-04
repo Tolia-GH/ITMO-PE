@@ -4,7 +4,24 @@ let checkedY=false;
 let checkedR=false
 
 function init() {
-    drawGraphic()
+    drawGraphic();
+    let table = document.getElementById("result_table");
+
+    for (var i = 1; i < table.rows.length; i++) {
+        console.log("drawing point: " +
+            table.rows[i].cells[0].innerHTML + ", " +
+            table.rows[i].cells[1].innerHTML + ", " +
+            table.rows[i].cells[2].innerHTML + ", " +
+            table.rows[i].cells[3].innerHTML + ", " +
+            table.rows[i].cells[4].innerHTML + ". "
+        )
+        drawPoints(
+            table.rows[i].cells[1].innerHTML,
+            table.rows[i].cells[2].innerHTML,
+            table.rows[i].cells[3].innerHTML,
+            table.rows[i].cells[4].innerHTML
+        )
+    }
 }
 
 function submitData() {
@@ -23,7 +40,7 @@ function submitData() {
     if (dataCheck(xRadio,yText,rRadio)) {
         document.getElementById("hiddenForm").submit();
         console.log("Data submitted.");
-        //storePoint(x,y,r);
+        storePoint(x,y,r);
         drawPoints(x,y,r);
     }
 

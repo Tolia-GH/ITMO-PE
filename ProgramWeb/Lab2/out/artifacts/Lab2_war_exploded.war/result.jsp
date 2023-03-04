@@ -15,23 +15,25 @@
 </head>
 <body>
     <div>
-        <table border="1">
-            <tr>
+        <table id="result_table" border="1">
+            <thead>
                 <th> No. </th> <th> x </th> <th> y </th> <th> r </th> <th> result </th> <th> time </th>
-            </tr>
+            </thead>
             <%
                 int no = 0;
                 List<Point> list = pointsBean.getPointList();
                 for (Point p : list) {
             %>
-            <tr>
-                <td><%=++no%></td>
-                <td><%=p.getX()%></td>
-                <td><%=p.getY()%></td>
-                <td><%=p.getR()%></td>
-                <td><%=p.getRes()? "True" : "False"%></td>
-                <td><%=p.getTimeUsage() + "ms"%></td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td><%=++no%></td>
+                    <td><%=p.getX()%></td>
+                    <td><%=p.getY()%></td>
+                    <td><%=p.getR()%></td>
+                    <td><%=p.getRes()? "True" : "False"%></td>
+                    <td><%=p.getTimeUsage() + "ms"%></td>
+                </tr>
+            </tbody>
             <%}%>
         </table>
     </div>

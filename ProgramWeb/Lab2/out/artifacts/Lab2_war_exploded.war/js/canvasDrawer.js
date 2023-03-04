@@ -86,19 +86,23 @@ function drawGraphic() {
     ctx.strokeStyle = "black";
     ctx.fillStyle = "black";
     ctx.stroke();
+
+    ctx.save();
 }
 
 function storePoint(x,y,r) {
     console.log("Storing " + n + "-th point...");
     pointsX[n] = x;
-    pointsX[n] = y;
+    pointsY[n] = y;
     pointsR[n] = r;
-    n++;
+    ++n;
 }
 
-function drawPoints(x,y,r) {
+function drawPoints(x,y,r,hit) {
     let canvas = document.getElementById("canvas");
     let ctx = canvas.getContext("2d");
+
+    ctx.restore();
 
     let canvasX = (x/r) * 130 + 150;
     let canvasY = 150 - (y/r) * 130;
@@ -107,8 +111,19 @@ function drawPoints(x,y,r) {
     ctx.beginPath();
     ctx.arc(canvasX,canvasY,2,0,2 * Math.PI);
     ctx.closePath();
-    ctx.strokeStyle = "black";
-    ctx.stroke();
+    if (hit === "True") {
+        ctx.fillStyle = "green";
+    } else {
+        ctx.fillStyle = "red";
+    }
+
+    ctx.fill();
+
+    ctx.save();
+}
+
+function AreaCheck(x,y,r) {
+
 }
 
 function clickCanvas() {
@@ -128,9 +143,9 @@ function clickCanvas() {
 
         setHiddenForm(x,y,r);
         drawPoints(x,y,r);
+        storePoint(x,y,r)
         document.getElementById("hiddenForm").submit();
         clearHiddenForm();
-
 
         console.log("Clicking on: x=" + x + ", y =" + y + ", r=" + r);
 
