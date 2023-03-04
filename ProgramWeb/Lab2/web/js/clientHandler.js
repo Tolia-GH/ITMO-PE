@@ -19,7 +19,8 @@ function submitData() {
     if (dataCheck(xRadio,yText,rRadio)) {
         document.getElementById("hiddenForm").submit();
         console.log("Data submitted.");
-        storePoint(x,y,r);
+        //storePoint(x,y,r);
+        drawPoints(x,y,r);
     }
 
     checkedX = false;

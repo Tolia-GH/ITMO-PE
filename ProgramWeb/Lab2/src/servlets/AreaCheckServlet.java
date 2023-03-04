@@ -38,11 +38,11 @@ public class AreaCheckServlet extends HttpServlet {
     }
 
     private void checkPoint(Point p) {
-        if (0 <= p.getX() && p.getX() <= p.getR() && 0 <= p.getY() && p.getY() <= 0.5 * p.getR()) {
+        if (0 <= p.getX() && p.getX() <= p.getR() && 0 <= p.getY() && p.getY() <= 0.5 * p.getR()) {//rectangle
             p.setRes(true);
-        } else if (p.getX() >= 0 && p.getY() <= 0 && p.getX() * p.getX() + p.getY() * p.getY() <= p.getR() * p.getR()){
+        } else if (p.getX() >= 0 && p.getY() <= 0 && Math.pow(p.getX(), 2) + Math.pow(p.getY(), 2) <= Math.pow(0.5 * p.getR(), 2)){//arc
             p.setRes(true);
-        } else p.setRes(p.getX() <= 0 && p.getY() <= 0 && p.getX() + p.getY() <= p.getR());
+        } else p.setRes(p.getX() <= 0 && p.getY() <= 0 && p.getX() + p.getY() <= -p.getR());//triangle
     }
 
 }

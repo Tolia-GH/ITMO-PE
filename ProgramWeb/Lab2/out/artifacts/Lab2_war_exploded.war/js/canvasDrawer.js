@@ -129,6 +129,12 @@ function clickCanvas() {
         let x = (event.clientX - left - 150)/65 * 0.5 * r;
         let y = (150 - (event.clientY - top))/65 * 0.5 * r;
 
+        setHiddenForm(x,y,r);
+        drawPoints(x,y,r);
+        document.getElementById("hiddenForm").submit();
+        clearHiddenForm();
+
+
         console.log("Clicking on: x=" + x + ", y =" + y + ", r=" + r);
 
 
