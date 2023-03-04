@@ -32,7 +32,9 @@ public class AreaCheckServlet extends HttpServlet {
         point.setTimeUsage(timeUsage);
         pointsList.addPoint(point);
 
-        req.getServletContext().getRequestDispatcher("/index.jsp").forward(req,resp);
+        resp.sendRedirect("index.jsp");
+
+        //req.getServletContext().getRequestDispatcher("/index.jsp").forward(req,resp);
     }
 
     private void checkPoint(Point p) {

@@ -34,15 +34,15 @@
               </legend>
 
               <label>
-                <input type="radio" value="-3" name="X">-3
-                <input type="radio" value="-2" name="X">-2
-                <input type="radio" value="-1" name="X">-1
-                <input type="radio" value="0" name="X">0
-                <input type="radio" value="1" name="X">1
-                <input type="radio" value="2" name="X">2
-                <input type="radio" value="3" name="X">3
-                <input type="radio" value="4" name="X">4
-                <input type="radio" value="5" name="X">5
+                <input type="radio" onclick="setRadioValue(this)" value="-3" name="X">-3
+                <input type="radio" onclick="setRadioValue(this)" value="-2" name="X">-2
+                <input type="radio" onclick="setRadioValue(this)" value="-1" name="X">-1
+                <input type="radio" onclick="setRadioValue(this)" value="0" name="X">0
+                <input type="radio" onclick="setRadioValue(this)" value="1" name="X">1
+                <input type="radio" onclick="setRadioValue(this)" value="2" name="X">2
+                <input type="radio" onclick="setRadioValue(this)" value="3" name="X">3
+                <input type="radio" onclick="setRadioValue(this)" value="4" name="X">4
+                <input type="radio" onclick="setRadioValue(this)" value="5" name="X">5
               </label>
 
               <p id="errorX" class="errorMessage"></p>

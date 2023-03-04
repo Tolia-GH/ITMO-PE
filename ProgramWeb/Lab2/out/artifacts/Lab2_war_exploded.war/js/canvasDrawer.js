@@ -13,7 +13,7 @@ function drawGraphic() {
 
     // rectangle
     ctx.fillStyle = "#2f9aff";
-    ctx.fillRect(150, 85, 120, 65);
+    ctx.fillRect(150, 85, 130, 65);
 
     //arc
     ctx.moveTo(150,150);
@@ -130,6 +130,9 @@ function clickCanvas() {
         let y = (150 - (event.clientY - top))/65 * 0.5 * r;
 
         console.log("Clicking on: x=" + x + ", y =" + y + ", r=" + r);
+
+
+
     } else {
         document.getElementById("errorR").innerText = "Error: R unchecked!"
         console.log("R unchecked!")
