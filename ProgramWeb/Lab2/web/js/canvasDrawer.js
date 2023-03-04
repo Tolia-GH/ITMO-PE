@@ -1,6 +1,4 @@
-function init() {
-    drawGraphic()
-}
+
 
 let n = 0;
 let pointsX = new Array();
@@ -103,7 +101,7 @@ function drawPoints(x,y,r) {
     let ctx = canvas.getContext("2d");
 
     let canvasX = (x/r) * 130 + 150;
-    let canvasY = 150 - (x/r) * 130;
+    let canvasY = 150 - (y/r) * 130;
 
     ctx.moveTo(canvasX,canvasY);
     ctx.beginPath();
@@ -111,7 +109,6 @@ function drawPoints(x,y,r) {
     ctx.closePath();
     ctx.strokeStyle = "black";
     ctx.stroke();
-
 }
 
 function clickCanvas() {

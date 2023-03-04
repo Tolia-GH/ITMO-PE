@@ -3,6 +3,10 @@ let checkedX=false;
 let checkedY=false;
 let checkedR=false
 
+function init() {
+    drawGraphic()
+}
+
 function submitData() {
 
     document.getElementById("errorR").innerText = "";
