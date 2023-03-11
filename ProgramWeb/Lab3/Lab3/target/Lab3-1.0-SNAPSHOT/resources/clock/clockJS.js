@@ -1,5 +1,5 @@
-let canvas = document.getElementById("canvas");
-let ctx = canvas.getContext("2d");
+let canvas;
+let ctx;
 
 function drawPanel() {//Clock white panel
     ctx.translate(150, 150);
@@ -103,10 +103,12 @@ function update() {
 }
 
 window.onload=function () {
-    update();
+    canvas = document.getElementById("canvas");
+    ctx = canvas.getContext("2d");
+    //update();
 };
 
 window.setInterval(() => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     update();
-}, 1000);
+}, 12000);

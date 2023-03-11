@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5fe6a883-4037-4abc-a928-3243ed997829" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Lab3/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT/index.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT/resources/clock/clock.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT/resources/clock/clock.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT/resources/clock/clock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT/templates/index_template.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Lab3_new_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Lab3_new_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_web_api_8_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_jws_javax_jws_api_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mvc_javax_mvc_api_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_soap_javax_xml_soap_api_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_ws_jaxws_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab3_new.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/.idea/artifacts/Lab3_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/.idea/artifacts/Lab3_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/.idea/libraries/primefaces_10_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/webapp/resources/clock/clock.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/src/main/webapp/resources/clock/clock.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/webapp/resources/clock/clock.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/src/main/webapp/resources/clock/clock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/classes/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/META-INF/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/classes/com/example/lab3/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/com/example/lab3/HelloApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/classes/com/example/lab3/HelloResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/com/example/lab3/HelloResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/classes/com/example/lab3/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/com/example/lab3/HelloServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT/WEB-INF/faces-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/target/Lab3-1.0-SNAPSHOT.war/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/src/main/webapp/templates/index_template.xhtml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MrLhpZs5TJxNnLOF7bxDCxbEG2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.28460687" />
+  </component>
+  <component name="RunManager">
+    <configuration name="JBoss/WildFly 27.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 27.0.1.Final" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Lab3_new-1.0-SNAPSHOT" />
+      <deployment>
+        <artifact name="Lab3_new:war exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="SERVER" value="" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" value="" />
+        <option name="USERNAME" value="" />
+        <option name="CREDENTIAL_ALIAS" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="JBoss" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Lab3_new:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5fe6a883-4037-4abc-a928-3243ed997829" name="Changes" comment="" />
+      <created>1678520878790</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678520878790</updated>
+      <workItem from="1678520880394" duration="630000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
