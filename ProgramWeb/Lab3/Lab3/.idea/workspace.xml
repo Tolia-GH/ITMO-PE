@@ -9,62 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/clock/clockJS.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/artifacts/Lab3_new_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/artifacts/Lab3_new_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__javax_javaee_web_api_8_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__javax_jws_javax_jws_api_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__javax_mvc_javax_mvc_api_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__javax_xml_soap_javax_xml_soap_api_1_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__javax_xml_ws_jaxws_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/Lab3_new.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/src/main/java/itmo/lab3_new/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/src/main/java/itmo/lab3_new/HelloResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/src/main/java/itmo/lab3_new/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3_new/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Lab3_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Lab3_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/primefaces_10_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/clock/clock.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/clock/clock.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/clock/clock.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/classes/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3_new/src/main/resources/META-INF/beans.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3_new/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/classes/com/example/lab3/HelloApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/classes/com/example/lab3/HelloResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/classes/com/example/lab3/HelloServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/faces-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/index_template.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab3/HelloApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab3/HelloResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab3/HelloServlet.class" beforeDir="false" />
-    </list>
+    <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
