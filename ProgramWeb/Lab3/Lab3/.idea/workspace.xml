@@ -3,13 +3,32 @@
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="Lab3:war" />
+      <artifact name="Lab3:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="" />
+    <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/CSS/index_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/blacktocat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/CSS/index_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/HTML/clock.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/clockJS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/img/blacktocat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/clock/clock.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/clock/clock.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/HTML/clock.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/clock/clockJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/JS/clockJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/clock/clock.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/clock/clock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/clock/clockJS.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,9 +41,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="jsf" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -43,7 +62,9 @@
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -54,6 +75,8 @@
       <recent name="$PROJECT_DIR$/lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/JS" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/CSS" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/clock" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
     </key>
@@ -152,9 +175,9 @@
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Lab3-1.0-SNAPSHOT" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="Lab3:war">
+        <file path="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war">
           <settings />
-        </artifact>
+        </file>
       </deployment>
       <server-settings>
         <option name="SERVER" />
@@ -217,6 +240,7 @@
         <option name="MakeProject" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="Lab3:war" />
+          <artifact name="Lab3:war exploded" />
         </option>
       </method>
     </configuration>

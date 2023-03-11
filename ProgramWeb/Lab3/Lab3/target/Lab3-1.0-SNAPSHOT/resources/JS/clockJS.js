@@ -12,7 +12,7 @@ function drawPanel() {//Clock white panel
 function hourNum() {//Numbers of Hour
     let arr = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
     ctx.beginPath();
-    ctx.font = "30px fangsong";
+    ctx.font = "30px Times New Romen";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillStyle = "black";
@@ -105,10 +105,10 @@ function update() {
 window.onload=function () {
     canvas = document.getElementById("canvas");
     ctx = canvas.getContext("2d");
-    //update();
+    update();
 };
 
 window.setInterval(() => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     update();
-}, 12000);
+}, 1000);

@@ -9,26 +9,31 @@
     <ui:composition template="templates/index_template.xhtml">
 
         <ui:define name="scripts">
-            <h:outputScript library="clock" name="clockJS.js"/>
+            <h:outputScript library="JS" name="clockJS.js"/>
         </ui:define>
 
         <ui:define name="css">
-            <h:outputStylesheet library="clock" name="clock.css"/>
+            <h:outputStylesheet library="CSS" name="index_style.css"/>
         </ui:define>
 
         <ui:define name="header">
-            <h1>Lab 3</h1>
-            <h2>P32131 Чжоу Хунсян 13109</h2>
-        </ui:define>
+            <div id="header_col">
+                <a id="forkMe" href="https://github.com/Tolia-GH/ITMO-PE">
+                    View on GitHub
+                    <img src="resources/img/blacktocat.png" alt=""/>
+                </a>
 
-        <ui:define name="git">
-            <h:outputLink value="https://github.com/LiaoYihong-1/web_lab3">Git</h:outputLink>
+                <h1 id="title">Lab 3</h1>
+                <h2 id="author">P32131 Чжоу Хунсян 13109</h2>
+            </div>
         </ui:define>
 
         <ui:define name="content">
-            <ui:include src="resources/clock/clock.html"/>
+            <br></br>
+            <ui:include src="resources/HTML/clock.html"/>
+            <br></br>
             <div class="link">
-                <h:link value="Main page" outcome="main"/>
+                <h:link id="linkText" value="Main page" outcome="main"/>
             </div>
         </ui:define>
     </ui:composition>
