@@ -10,72 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Lab2/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lab2/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lab2/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Lab3_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Lab3_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_web_api_8_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/HelloResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/classes/META-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/classes/com/example/lab3/HelloApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/classes/com/example/lab3/HelloResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/classes/com/example/lab3/HelloServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/faces-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war/index.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/lab3/HelloApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/lab3/HelloResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/lab3/HelloServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab2/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab2/Lab2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab2/Lab2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab2/out/production/Lab2/beans/Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab2/out/production/Lab2/beans/PointsList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab2/out/production/Lab2/servlets/AreaCheckServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab2/out/production/Lab2/servlets/ControllerServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab2/src/beans/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab2/src/main/java/beans/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab2/src/beans/PointsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab2/src/main/java/beans/PointsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab2/src/servlets/AreaCheckServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab2/src/main/java/servlets/AreaCheckServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab2/src/servlets/ControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab2/src/main/java/servlets/ControllerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/artifacts/Lab3_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Mojarra_2_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/javax.faces-2.4.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/artifacts/Lab3_war_exploded.war/WEB-INF/faces-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/artifacts/Lab3_war_exploded.war/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/artifacts/Lab3_war_exploded.war/index.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/faces-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/index.xhtml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/primefaces_10_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/primefaces-10.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/clock/clock.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/clock/clock.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/clock/clock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +28,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="jsf" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -104,17 +49,33 @@
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/structure" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.28460687" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/structure" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/JS" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/CSS" />
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/clock" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
+    </key>
   </component>
   <component name="RunManager" selected="JBoss/WildFly Server.JBoss/WildFly 27.0.1.Final">
     <configuration name="GlassFish 5.0.0" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 5.0.0" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
@@ -265,7 +226,9 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="false" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Lab3:war exploded" />
+        </option>
       </method>
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
@@ -293,7 +256,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678488616673</updated>
-      <workItem from="1678488618076" duration="967000" />
+      <workItem from="1678488618076" duration="5271000" />
     </task>
     <servers />
   </component>
