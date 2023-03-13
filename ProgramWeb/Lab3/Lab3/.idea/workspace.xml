@@ -10,25 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/CSS/index_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/blacktocat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/CSS/index_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/HTML/clock.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/clockJS.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/img/blacktocat.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/clock/clock.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/clock/clock.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/HTML/clock.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/clock/clockJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/JS/clockJS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/clock/clock.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/clock/clock.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/clock/clockJS.js" beforeDir="false" />
-    </list>
+    <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
