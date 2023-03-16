@@ -10,7 +10,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="" />
+    <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Algorithm&amp;DataStructures/Practice/2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Algorithm&amp;DataStructures/Practice/3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Algorithm&amp;DataStructures/Practice/4.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
