@@ -10,7 +10,7 @@ class Counter{
 public:
     int balance[26] = {0};
     void resetBalacne(){
-        for(int i= 0 ; i < 26 ; i++){
+        for(int i= 0 ; i < 26 ; i++) {
             balance[i] = 0;
         }
     }

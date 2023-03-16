@@ -15,11 +15,13 @@ int main()
     // search day k
 
     //scanf("%d%d%d%d%d", &a, &b, &c, &d, &k);
+    //I don't know why there will be WA while using scanf() and printf() in test 23
+
     cin >> a >> b >> c >> d >> k;
 
-    //for every day i
+    //for every day-i
     for (int i = 0; i < k; i++){
-        a = a * b;//every day changes
+        a = a * b;//every day increase
         a -= min(a, c);//every day usage for experiment
 
         if (a == 0) {//experiment ends
@@ -27,7 +29,7 @@ int main()
         } else if (a > d) {//experiment continue and bacterias overflow
             a = d;
             break;
-        } else if (a == a * b - min(a * b, c)) {//experiment continue but bacterias come to balance
+        } else if (a == a * b - min(a * b, c)) {//experiment continue and bacterias come to balance
             break;
         }
     }
