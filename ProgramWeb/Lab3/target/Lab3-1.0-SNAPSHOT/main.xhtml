@@ -7,12 +7,12 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui"
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
-      xmlns:ace="http://www.icefaces.org/icefaces/components"
 >
 
 <h:head>
     <ui:define name="title">P32131 Чжоу Хунсян 13109</ui:define>
 </h:head>
+
 <h:body onload="drawGraphic()">
     <ui:composition template="templates/main_template.xhtml">
 
@@ -21,8 +21,6 @@
         </ui:define>
 
         <ui:define name="scripts">
-<!--            <h:outputScript library="JS" name="graphDrawsPen.js"/>-->
-<!--            <h:outputScript library="JS" name="dotsPen.js"/>-->
             <h:outputScript library="JS" name="as1.js"/>
             <h:outputScript library="JS" name="grapg_drawer.js"/>
         </ui:define>
@@ -55,15 +53,13 @@
                 </div>
                 <div class="y">
                     <p:outputLabel>Please input Y:</p:outputLabel>
-                    <p:spinner id="xSpinner" value="#{dots.dot.y}" stepFactor="0.1" min="-5" max="5"/>
+
                     <span style="color:red">*</span>
                 </div>
                 <div class="r">
                     <p:fieldset>
                         <h:outputLabel>Please input R:</h:outputLabel>
-                            <ace:sliderEntry value="#{dots.dot.r}">
 
-                            </ace:sliderEntry>
                         <span style="color:red">*</span>
                     </p:fieldset>
                 </div>
@@ -91,8 +87,6 @@
                 <h:commandButton id="submitClick" action="#{dots.addDot}" onclick="updateClick('click-graph')">
                     <f:ajax render="table click-graph" execute="canvasForm"/>
                 </h:commandButton>
-                <p:commandButton id="Flusher" style="visibility: hidden">
-                </p:commandButton>
             </h:form>
         </ui:define>
 
