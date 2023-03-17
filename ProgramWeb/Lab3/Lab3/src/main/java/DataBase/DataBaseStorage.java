@@ -1,7 +1,7 @@
 package DataBase;
 
 import Data.DotsTable;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.*;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;

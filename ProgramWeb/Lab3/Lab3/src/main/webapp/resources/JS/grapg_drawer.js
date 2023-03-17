@@ -19,12 +19,12 @@ function drawGraphic() {
 
     // rectangle
     ctx.fillStyle = "#2f9aff";
-    ctx.fillRect(150, 85, 130, 65);
+    ctx.fillRect(150, 20, 130, 130);
 
     //arc
     ctx.moveTo(150,150);
     ctx.beginPath();
-    ctx.arc(150, 150, 65, 0, 0.5 * Math.PI)
+    ctx.arc(150, 150, 65, 0.5 * Math.PI, Math.PI)
     ctx.closePath();
     ctx.fillStyle = "#2f9aff";
     ctx.fill();
@@ -33,10 +33,10 @@ function drawGraphic() {
 
     //triangle
     ctx.beginPath();
-    ctx.moveTo(215, 150);
-    ctx.lineTo(150, 215);
+    ctx.moveTo(150, 215);
     ctx.lineTo(85, 150);
-    ctx.lineTo(215, 150);
+    ctx.lineTo(150, 20);
+    ctx.lineTo(150, 215)
     ctx.closePath();
     ctx.fillStyle = "#2f9aff";
     ctx.fill();

@@ -48,5 +48,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.20" level="project" />
     <orderEntry type="library" name="hibernate-core-4.3.6.Final" level="project" />
+    <orderEntry type="library" name="icefaces-4.3.0" level="project" />
   </component>
 </module>
