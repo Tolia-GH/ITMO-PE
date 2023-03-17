@@ -7,7 +7,6 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui"
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
-      xmlns:ace="http://www.icefaces.org/icefaces/components"
 >
 
 <h:head>
@@ -24,7 +23,7 @@
 <!--            <h:outputScript library="JS" name="graphDrawsPen.js"/>-->
 <!--            <h:outputScript library="JS" name="dotsPen.js"/>-->
             <h:outputScript library="JS" name="as1.js"/>
-            <h:outputScript library="JS" name="grapg_drawer.js"/>
+            <h:outputScript library="JS" name="graph_drawer.js"/>
         </ui:define>
 
         <ui:define name="header">
@@ -61,9 +60,9 @@
                 <div class="r">
                     <p:fieldset>
                         <h:outputLabel>Please input R:</h:outputLabel>
-                            <ace:sliderEntry value="#{dots.dot.r}">
+<!--                            <ace:sliderEntry value="#{dots.dot.r}">-->
 
-                            </ace:sliderEntry>
+<!--                            </ace:sliderEntry>-->
                         <span style="color:red">*</span>
                     </p:fieldset>
                 </div>

@@ -11,19 +11,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/icefaces-4.3.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/icefaces-ace-4.3.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/hibernate-core-4.3.6.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/primefaces-10.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/hibernate-core-4.3.6.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/icefaces-4.3.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/icefaces-ace-4.3.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/primefaces-10.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/icefaces_4_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/primefaces_10_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Primefaces.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataBase/DataBaseStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataBase/DataBaseStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/icefaces-4.3.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/icefaces-4.3.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/icefaces-ace-4.3.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/icefaces-ace-4.3.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/CSS/main_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/CSS/main_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/JS/grapg_drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/JS/grapg_drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/JS/grapg_drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/JS/graph_drawer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/CSS/main_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/CSS/main_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/grapg_drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/grapg_drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/grapg_drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/graph_drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/artifacts/Lab3_new_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/artifacts/Lab3_new_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__javax_javaee_web_api_8_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__javax_jws_javax_jws_api_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__javax_mvc_javax_mvc_api_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__javax_xml_soap_javax_xml_soap_api_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__javax_xml_ws_jaxws_api_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/Lab3_new.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/src/main/java/itmo/lab3_new/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/src/main/java/itmo/lab3_new/HelloResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/src/main/java/itmo/lab3_new/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/src/main/resources/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3_new/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,21 +106,21 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.11074197" />
+    <property name="project.structure.side.proportion" value="0.3264368" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/java/Data" />
       <recent name="$PROJECT_DIR$/src/main/java" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/JS" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/HTML" />
       <recent name="$PROJECT_DIR$/src/main/webapp/templates" />
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/JS" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/CSS" />
     </key>
@@ -262,7 +298,7 @@
       <workItem from="1678488618076" duration="16500000" />
       <workItem from="1678522003046" duration="38000" />
       <workItem from="1678991855156" duration="3835000" />
-      <workItem from="1679043233045" duration="16094000" />
+      <workItem from="1679043233045" duration="20414000" />
     </task>
     <servers />
   </component>
