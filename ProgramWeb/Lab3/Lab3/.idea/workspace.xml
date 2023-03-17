@@ -12,6 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/hibernate-core-4.3.6.Final.jar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/primefaces-10.0.0.jar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/hibernate-core-4.3.6.Final.jar" afterDir="false" />
@@ -99,6 +100,45 @@
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/JS/clockJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/JS/clock_drawer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/index_template.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/index_template.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/hibernate_core_4_3_6_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/primefaces_10_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hibernate-core-4.3.6.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/Dot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/Dots.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/DotsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/NumberDot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/Timer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/UserDate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/Validator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/ValidatorInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/ValidatorInputY.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataBase/DataBaseStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/CSS/main_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/Components/graph.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/JS/as1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/JS/grapg_drawer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/main_template.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/main.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/templates/main_template.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Lab3_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Lab3_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/HelloResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/CSS/index_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/CSS/index_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/HTML/clock.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/Components/clock.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/JS/clockJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/JS/clock_drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/index_template.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/index_template.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war" afterDir="false" />
+>>>>>>> parent of 518e6f2 (update)
       <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/com/example/lab3/HelloApplication.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/com/example/lab3/HelloResource.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/com/example/lab3/HelloServlet.class" beforeDir="false" />
@@ -111,6 +151,9 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab3/HelloApplication.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab3/HelloResource.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab3/HelloServlet.class" beforeDir="false" />
+<<<<<<< HEAD
+>>>>>>> parent of 518e6f2 (update)
+=======
 >>>>>>> parent of 518e6f2 (update)
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -164,8 +207,11 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+=======
+>>>>>>> parent of 518e6f2 (update)
 =======
 >>>>>>> parent of 518e6f2 (update)
       <recent name="$PROJECT_DIR$/src/main/webapp" />
@@ -354,7 +400,11 @@
       <workItem from="1678522003046" duration="38000" />
       <workItem from="1678991855156" duration="3835000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1679043233045" duration="20414000" />
+=======
+      <workItem from="1679043233045" duration="9536000" />
+>>>>>>> parent of 518e6f2 (update)
 =======
       <workItem from="1679043233045" duration="9536000" />
 >>>>>>> parent of 518e6f2 (update)
