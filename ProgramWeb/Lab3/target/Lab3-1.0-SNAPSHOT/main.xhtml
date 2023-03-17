@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ace="http://www.icefaces.org/icefaces/components"
+>
+
+<h:head>
+    <ui:define name="title">P32131 Чжоу Хунсян 13109</ui:define>
+</h:head>
+<h:body onload="drawGraphic()">
+    <ui:composition template="templates/main_template.xhtml">
+
+        <ui:define name="css">
+            <h:outputStylesheet library="CSS" name="main_style.css"/>
+        </ui:define>
+
+        <ui:define name="scripts">
+<!--            <h:outputScript library="JS" name="graphDrawsPen.js"/>-->
+<!--            <h:outputScript library="JS" name="dotsPen.js"/>-->
+            <h:outputScript library="JS" name="as1.js"/>
+            <h:outputScript library="JS" name="grapg_drawer.js"/>
+        </ui:define>
+
+        <ui:define name="header">
+            <div id="header_col">
+                <a id="forkMe" href="https://github.com/Tolia-GH/ITMO-PE">
+                    View on GitHub
+                    <img src="resources/img/blacktocat.png" alt=""/>
+                </a>
+
+                <h1 id="title">Lab 3</h1>
+                <h2 id="author">P32131 Чжоу Хунсян 13109</h2>
+            </div>
+        </ui:define>
+
+        <ui:define name="graph">
+            <ui:include src="resources/Components/graph.html"/>
+        </ui:define>
+
+        <ui:define name="visibleForm">
+            <h:form id="requestForm">
+                <div class="x">
+                    <p:fieldset>
+                        <h:outputLabel>Please input X: </h:outputLabel>
+                        <h:inputText id="X" required="true" a:placeholder="from -3 to 3" value="#{dots.dot.x}"/>
+                        <span style="color:red">*</span>
+                    </p:fieldset>
+                    <br/>
+                </div>
+                <div class="y">
+                    <p:outputLabel>Please input Y:</p:outputLabel>
+                    <p:spinner id="xSpinner" value="#{dots.dot.y}" stepFactor="0.1" min="-5" max="5"/>
+                    <span style="color:red">*</span>
+                </div>
+                <div class="r">
+                    <p:fieldset>
+                        <h:outputLabel>Please input R:</h:outputLabel>
+                            <ace:sliderEntry value="#{dots.dot.r}">
+
+                            </ace:sliderEntry>
+                        <span style="color:red">*</span>
+                    </p:fieldset>
+                </div>
+                <br/>
+                <h:commandButton id="visible-submit" value="Submit" action="#{dots.addDot}" onclick="updateInput('click-graph')">
+                </h:commandButton>
+            </h:form>
+        </ui:define>
+
+        <!--for drawing dots on canvas-->
+        <ui:define name="invisibleForm">
+            <h:form id="canvasForm" style="visibility: hidden">
+                <div class="x">
+                    <h:inputText id="canvasX" value="#{dots.dot.x}">
+                    </h:inputText>
+                </div>
+                <div class="r">
+                    <h:inputText id="canvasR" value="#{dots.dot.r}">
+                    </h:inputText>
+                </div>
+                <div class="y">
+                    <h:inputText id="canvasY" value="#{dots.dot.y}">
+                    </h:inputText>
+                </div>
+                <h:commandButton id="submitClick" action="#{dots.addDot}" onclick="updateClick('click-graph')">
+                    <f:ajax render="table click-graph" execute="canvasForm"/>
+                </h:commandButton>
+                <p:commandButton id="Flusher" style="visibility: hidden">
+                </p:commandButton>
+            </h:form>
+        </ui:define>
+
+
+
+        <!--table is set properly-->
+        <ui:define name="table">
+            <div id="div_table">
+                <h:dataTable value="#{dots.dotsList}" var="o" id="table" width="400px" align="center" border="1">
+                    <h:column>
+                        <f:facet name="header">X</f:facet>#{o.x}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Y</f:facet>#{o.y}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">R</f:facet>#{o.r}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Result</f:facet>#{o.hit}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Time</f:facet>#{o.date.dateString}
+                    </h:column>
+                </h:dataTable>
+            </div>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>
