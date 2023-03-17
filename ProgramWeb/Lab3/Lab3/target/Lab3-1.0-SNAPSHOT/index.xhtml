@@ -3,17 +3,20 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<head>
+    <ui:define name="title">P32131 Чжоу Хунсян 13109</ui:define>
+</head>
 <h:body>
     <ui:composition template="templates/index_template.xhtml">
 
-        <ui:define name="scripts">
-            <h:outputScript library="JS" name="clockJS.js"/>
-        </ui:define>
-
         <ui:define name="css">
             <h:outputStylesheet library="CSS" name="index_style.css"/>
+        </ui:define>
+
+        <ui:define name="scripts">
+            <h:outputScript library="JS" name="clock_drawer.js"/>
         </ui:define>
 
         <ui:define name="header">
@@ -29,11 +32,11 @@
         </ui:define>
 
         <ui:define name="content">
-            <br></br>
-            <ui:include src="resources/HTML/clock.html"/>
-            <br></br>
+            <br/>
+            <ui:include src="resources/Components/clock.html"/>
+            <br/>
             <div class="link">
-                <h:link id="linkText" value="Main page" outcome="main"/>
+                <h:link class="linkTest" outcome="main.xhtml">Main Page</h:link>
             </div>
         </ui:define>
     </ui:composition>

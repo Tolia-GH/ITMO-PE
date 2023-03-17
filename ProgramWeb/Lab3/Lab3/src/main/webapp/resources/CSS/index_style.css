@@ -1,3 +1,9 @@
+body {
+    background-color: #f2f2f2;
+    margin: auto;
+    text-align-all: center;
+}
+
 .header {
     padding: 20px;
     text-align: center;
@@ -21,22 +27,24 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
-    vertical-align: center;
+    vertical-align: middle;
+    text-decoration: unset;
 
     color: #fff;
     font-weight: 700;
 }
 
 #forkMe:hover {
-    background: #006cc4;
+    background: #077fe3;
+    text-decoration: underline;
 }
 
 h1, h2 {
     display: block;
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 
     font-family: "Times New Roman", serif;
 
@@ -47,7 +55,7 @@ h1, h2 {
     color: #fff;
     font-size: 42px;
     font-weight: 700;
-    text-shadow: #111 0px 0px 10px
+    text-shadow: #111 0 0 10px
 }
 
 #author {
@@ -55,13 +63,7 @@ h1, h2 {
     font-size: 24px;
     font-weight: 300;
     background: none;
-    text-shadow: #111 0px 0px 10px
-}
-
-body {
-    background-color: #f2f2f2;
-    font-family: "Times New Roman", serif;
-    color: #212121;
+    text-shadow: #111 0 0 10px
 }
 
 .clock {
@@ -87,20 +89,37 @@ body {
     margin: 0 auto;
     width: 120px;
     height: 35px;
-}
 
-#linkText {
+    text-decoration: unset;
+}
+.link:hover {
+    display: block;
+    background: #d2d5de;
+    border-radius: 4px;
     text-align: center;
-    vertical-align: center;
-    font-size: 24px;
-    color: #212121;
-    font-weight: 700;
-}
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    right: 0;
 
-.content {
     margin: 0 auto;
-    text-align: center;
+    width: 120px;
+    height: 35px;
 }
+
+.linkTest {
+    vertical-align: middle;
+    color: #212121;
+    font-size: 24px;
+    font-weight: 700;
+
+    text-decoration: unset;
+}
+
+.linkTest:hover {
+    text-decoration: underline;
+}
+
 
 
 

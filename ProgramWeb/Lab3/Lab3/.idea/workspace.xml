@@ -11,10 +11,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../Algorithm&amp;DataStructures/Practice/2.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Algorithm&amp;DataStructures/Practice/3.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Algorithm&amp;DataStructures/Practice/4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/hibernate_core_4_3_6_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/primefaces_10_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hibernate-core-4.3.6.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/Dot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/Dots.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/DotsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/NumberDot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/Timer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/UserDate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/Validator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/ValidatorInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/ValidatorInputY.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataBase/DataBaseStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/CSS/main_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/Components/graph.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/JS/as1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/JS/grapg_drawer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/main_template.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/main.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/templates/main_template.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Lab3_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Lab3_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/HelloResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/CSS/index_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/CSS/index_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/HTML/clock.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/Components/clock.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/JS/clockJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/JS/clock_drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/index_template.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/index_template.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/com/example/lab3/HelloApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/com/example/lab3/HelloResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/com/example/lab3/HelloServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/faces-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/CSS/index_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/CSS/index_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/HTML/clock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/clockJS.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/templates/index_template.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/templates/index_template.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab3/HelloApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab3/HelloResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab3/HelloServlet.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +73,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="jsf" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -39,6 +84,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2MqIJDDxVffWhSgfNC3Dd81a2el" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -49,23 +97,35 @@
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.11074197" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/structure" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/JS" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/CSS" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/src/main/java/Data" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/JS" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/HTML" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/templates" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/JS" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/CSS" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/clock" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="DataBase" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -140,20 +200,6 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GlassfishConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings>
-        <option name="DOMAIN" value="" />
-        <option name="PRESERVE" value="false" />
-        <option name="COMPATIBILITY" value="false" />
-        <option name="VIRTUAL_SERVER" />
-        <option name="USERNAME" value="admin" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="GlassFish" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -234,18 +280,6 @@
     <configuration name="JS debug" type="JavascriptDebugType" uri="http://localhost:8080/Lab3-1.0-SNAPSHOT">
       <method v="2" />
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings />
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="GlassFish Server.GlassFish 5.0.0" />
       <item itemvalue="JavaScript Debug.JS debug" />
@@ -262,6 +296,8 @@
       <updated>1678488616673</updated>
       <workItem from="1678488618076" duration="16500000" />
       <workItem from="1678522003046" duration="38000" />
+      <workItem from="1678991855156" duration="3835000" />
+      <workItem from="1679043233045" duration="9536000" />
     </task>
     <servers />
   </component>

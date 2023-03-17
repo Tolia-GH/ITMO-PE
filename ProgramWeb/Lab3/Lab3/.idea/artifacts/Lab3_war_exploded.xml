@@ -13,6 +13,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="Lab3" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.20" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
