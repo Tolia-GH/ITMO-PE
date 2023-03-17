@@ -5,9 +5,13 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
+<<<<<<< HEAD
       xmlns:p="http://primefaces.org/ui"
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
 >
+=======
+      xmlns:p="http://primefaces.org/ui">
+>>>>>>> parent of 518e6f2 (update)
 
 <h:head>
     <ui:define name="title">P32131 Чжоу Хунсян 13109</ui:define>
@@ -45,19 +49,12 @@
         <ui:define name="visibleForm">
             <h:form id="requestForm">
                 <div class="x">
-                    <p:fieldset>
-                        <h:outputLabel>Please input X: </h:outputLabel>
-                        <h:inputText id="X" required="true" a:placeholder="from -3 to 3" value="#{dots.dot.x}"/>
-                        <span style="color:red">*</span>
-                    </p:fieldset>
-                    <br/>
-                </div>
-                <div class="y">
-                    <p:outputLabel>Please input Y:</p:outputLabel>
-                    <p:spinner id="xSpinner" value="#{dots.dot.y}" stepFactor="0.1" min="-5" max="5"/>
-                    <span style="color:red">*</span>
+                    Choose your x:<span style="color:red">*</span><br/>
+                    <p:spinner id="X" required="true" min="-5.0" max="5.0" stepFactor="0.1" value="#{dots.dot.x}" onchange="spinnerChange()">
+                    </p:spinner>
                 </div>
                 <div class="r">
+<<<<<<< HEAD
                     <p:fieldset>
                         <h:outputLabel>Please input R:</h:outputLabel>
 <!--                            <ace:sliderEntry value="#{dots.dot.r}">-->
@@ -65,9 +62,19 @@
 <!--                            </ace:sliderEntry>-->
                         <span style="color:red">*</span>
                     </p:fieldset>
+=======
+                    Choose your r:<span style="color:red">*</span><br/>
+                    <p:spinner id="R" required="true" min="0.1" max="3.0" stepFactor="0.1" value="#{dots.dot.r}" onchange="spinnerChange()">
+                    </p:spinner>
+>>>>>>> parent of 518e6f2 (update)
                 </div>
-                <br/>
-                <h:commandButton id="visible-submit" value="Submit" action="#{dots.addDot}" onclick="updateInput('click-graph')">
+                <div class="y">
+                    Input your y:<span style="color:red">*</span><br/>
+                    <h:inputText id="Y" value="#{dots.dot.y}" required="true">
+                    </h:inputText><br/>
+                    <h:message for="Y" style="color:red" id="errorY"/>
+                </div>
+                <h:commandButton id="visible-submit" value="Add" action="#{dots.addDot}" onclick="updateInput('click-graph')">
                 </h:commandButton>
             </h:form>
         </ui:define>
