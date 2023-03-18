@@ -17,12 +17,30 @@
         <junit.version>5.9.2</junit.version>
     </properties>
 
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>Primefaces Repo</id>-->
+<!--            <url>https://mvnrepository.com/artifact/org.primefaces/primefaces</url>-->
+<!--        </repository>-->
+<!--        <repository>-->
+<!--            <id>Eclipse Repo</id>-->
+<!--            <url>http://download.eclipse.org/rt/eclipselink/maven.repo</url>-->
+<!--        </repository>-->
+<!--    </repositories>-->
+
     <dependencies>
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
             <version>12.0.0</version>
+            <classifier>jakarta</classifier>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.icefaces</groupId>-->
+<!--            <artifactId>icefaces-ace</artifactId>-->
+<!--            <version>4.3.0</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -38,8 +56,6 @@
             <artifactId>json</artifactId>
             <version>20230227</version>
         </dependency>
-
-
 <!--        <dependency>-->
 <!--            <groupId>com.sun.faces</groupId>-->
 <!--            <artifactId>jsf-api</artifactId>-->
@@ -70,11 +86,11 @@
             <artifactId>hibernate-annotations</artifactId>
             <version>3.5.6-Final</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>javax</groupId>-->
-<!--            <artifactId>javaee-api</artifactId>-->
-<!--            <version>8.0.1</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>8.0.1</version>
+        </dependency>
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
@@ -96,8 +112,25 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.26</version>
+            <version>RELEASE</version>
+            <scope>compile</scope>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.oracle.ojdbc</groupId>-->
+<!--            <artifactId>ojdbc8</artifactId>-->
+<!--            <version>19.3.0.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.eclipse.persistence</groupId>-->
+<!--            <artifactId>eclipselink</artifactId>-->
+<!--            <version>2.7.1</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.oracle.ojdbc</groupId>-->
+<!--            <artifactId>orai18n</artifactId>-->
+<!--            <version>19.3.0.0</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>

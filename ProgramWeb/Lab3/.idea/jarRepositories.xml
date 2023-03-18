@@ -16,5 +16,10 @@
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="Primefaces Repo" />
+      <option name="name" value="Primefaces Repo" />
+      <option name="url" value="https://mvnrepository.com/artifact/org.primefaces/primefaces" />
+    </remote-repository>
   </component>
 </project>
