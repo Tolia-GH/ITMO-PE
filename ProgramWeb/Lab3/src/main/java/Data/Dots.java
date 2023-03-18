@@ -29,8 +29,8 @@ public class Dots implements Serializable {
             DotsTable dotToTable = new DotsTable(dot.getX(),Double.parseDouble(dot.getY()), dot.getR(), dot.getDate());
             try{
                 storage.addNewDot(dotToTable);
-            }catch (Exception e){
-                e.getMessage();
+            } catch (Exception e){
+                e.printStackTrace();
             }
             table.add(dotToTable);
             dot = new Dot();

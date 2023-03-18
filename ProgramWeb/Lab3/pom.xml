@@ -30,18 +30,23 @@
 <!--            <id>Icefaces mvn Repo</id>-->
 <!--            <url>https://mvnrepository.com/artifact/org.icefaces/icefaces-ace</url>-->
 <!--        </repository>-->
-        <repository>
-            <id>Icefaces Repo</id>
-            <url>http://anonsvn.icefaces.org/repo/maven2/releases/</url>
-        </repository>
+<!--        <repository>-->
+<!--            <id>Icefaces Repo</id>-->
+<!--            <url>http://anonsvn.icefaces.org/repo/maven2/releases/</url>-->
+<!--        </repository>-->
     </repositories>
 
     <dependencies>
         <dependency>
-            <groupId>org.icefaces</groupId>
-            <artifactId>icefaces-ace</artifactId>
-            <version>3.1.0</version>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-api</artifactId>
+            <version>2.2.18</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.icefaces</groupId>-->
+<!--            <artifactId>icefaces-ace</artifactId>-->
+<!--            <version>4.2.0</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
@@ -63,11 +68,7 @@
             <artifactId>json</artifactId>
             <version>20230227</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.sun.faces</groupId>-->
-<!--            <artifactId>jsf-api</artifactId>-->
-<!--            <version>2.2.18</version>-->
-<!--        </dependency>-->
+
 <!--        <dependency>-->
 <!--            <groupId>com.sun.faces</groupId>-->
 <!--            <artifactId>jsf-impl</artifactId>-->

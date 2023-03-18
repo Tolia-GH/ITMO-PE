@@ -101,7 +101,25 @@ h1, h2 {
     text-align: center;
 }
 
-#xSpinner {
-    width: 153px;
+#formField {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 }
+
+.inputCol {
+    padding: 8px;
+    text-align: center;
+}
+
+.ui-spinner-input.ui-inputfield.ui-state-default.ui-corner-all {
+    padding: 8px;
+    text-align: center;
+}
+
+#rSlider {
+    width: auto;
+}
+
+
 

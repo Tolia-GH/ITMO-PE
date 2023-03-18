@@ -7,7 +7,6 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui"
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
-      xmlns:ace="http://www.icefaces.org/icefaces/components"
 >
 
 <h:head>
@@ -44,33 +43,29 @@
 
         <ui:define name="visibleForm">
             <h:form id="requestForm">
-                <p:fieldset>
+                <p:fieldset id="formField">
                     <div class="x">
-                        <p:fieldset>
-                            <h:outputLabel>Please input X: </h:outputLabel>
-                            <span style="color:red">*</span>
-                            <h:inputText id="X" required="true" a:placeholder="from -3 to 3" value="#{dots.dot.x}"/>
-                        </p:fieldset>
-                        <br/>
+                        <h:outputLabel>Please input X: </h:outputLabel>
+                        <span style="color:red">*</span>
+                        <p:inputText class="inputCol" id="xText" required="true" a:placeholder="from -3 to 3" value="#{dots.dot.x}"/>
                     </div>
+                    <br/>
                     <div class="y">
-                        <p:fieldset>
-                            <h:outputLabel>Please input Y:</h:outputLabel>
-                            <span style="color:red">*</span>
-                            <p:spinner value="#{dots.dot.y}" stepFactor="0.1" min="-5" max="5"/>
-                        </p:fieldset>
-                        <br/>
+                        <h:outputLabel>Please input Y:</h:outputLabel>
+                        <span style="color:red">*</span>
+                        <p:spinner id="ySpinner" stepFactor="0.1" min="-5" max="5"/>
                     </div>
+                    <br/>
                     <div class="r">
-                        <p:fieldset>
-                            <h:outputLabel>Please input R:</h:outputLabel>
-                            <span style="color:red">*</span>
-                            <ace:sliderEntry />
-                        </p:fieldset>
+                        <h:outputLabel>Please input R:</h:outputLabel>
+                        <span style="color:red">*</span>
+                        <p:inputText class="inputCol" id="rText" value="#{dots.dot.r}"/>
+                        <br/>
+                        <p:slider id="rSlider" for="rText" step="0.5" minValue="1" maxValue="4"/>
                     </div>
                 </p:fieldset>
                 <br/>
-                <h:commandButton id="visible-submit" value="Submit" action="#{dots.addDot}" onclick="updateInput('click-graph')">
+                <h:commandButton id="visible-submit" value="Submit" action="#{dots.addDot}" onclick="">
                 </h:commandButton>
             </h:form>
         </ui:define>

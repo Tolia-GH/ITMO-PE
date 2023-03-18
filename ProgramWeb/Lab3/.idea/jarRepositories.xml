@@ -12,6 +12,11 @@
       <option name="url" value="http://anonsvn.icefaces.org/repo/maven2/releases/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="Icefaces mvn Repo" />
+      <option name="name" value="Icefaces mvn Repo" />
+      <option name="url" value="https://mvnrepository.com/artifact/org.icefaces/icefaces-ace" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="snapshots" />
       <option name="name" value="snapshots" />
       <option name="url" value="http://anonsvn.icefaces.org/repo/maven2/releases/" />
