@@ -17,7 +17,10 @@
 <!--        <servlet-name>Faces Servlet</servlet-name>-->
 <!--        <url-pattern>*.xhtml</url-pattern>-->
 <!--    </servlet-mapping>-->
-
+<!--    <context-param>-->
+<!--        <param-name>org.icefaces.mandatoryResourceConfiguration</param-name>-->
+<!--        <param-value>dataTable panel chart menu menuItem menuBar dateTimeEntry textEntry dialog pushButton maskedEntry</param-value>-->
+<!--    </context-param>-->
 
     <welcome-file-list>
         <welcome-file>index.xhtml</welcome-file>

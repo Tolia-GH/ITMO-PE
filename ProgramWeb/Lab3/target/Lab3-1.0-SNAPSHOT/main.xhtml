@@ -44,28 +44,31 @@
 
         <ui:define name="visibleForm">
             <h:form id="requestForm">
-                <div class="x">
-                    <p:fieldset>
-                        <h:outputLabel>Please input X: </h:outputLabel>
-                        <span style="color:red">*</span>
-                        <h:inputText id="X" required="true" a:placeholder="from -3 to 3" value="#{dots.dot.x}"/>
-                    </p:fieldset>
-                    <br/>
-                </div>
-                <div class="y">
-                    <p:fieldset>
-                        <h:outputLabel>Please input Y:</h:outputLabel>
-                        <span style="color:red">*</span>
-                        <p:spinner value="#{dots.dot.y}" stepFactor="0.1" min="-5" max="5"/>
-                    </p:fieldset>
-                </div>
-                <div class="r">
-                    <p:fieldset>
-                        <h:outputLabel>Please input R:</h:outputLabel>
-                        <span style="color:red">*</span>
-                        <ace:sliderEntry />
-                    </p:fieldset>
-                </div>
+                <p:fieldset>
+                    <div class="x">
+                        <p:fieldset>
+                            <h:outputLabel>Please input X: </h:outputLabel>
+                            <span style="color:red">*</span>
+                            <h:inputText id="X" required="true" a:placeholder="from -3 to 3" value="#{dots.dot.x}"/>
+                        </p:fieldset>
+                        <br/>
+                    </div>
+                    <div class="y">
+                        <p:fieldset>
+                            <h:outputLabel>Please input Y:</h:outputLabel>
+                            <span style="color:red">*</span>
+                            <p:spinner value="#{dots.dot.y}" stepFactor="0.1" min="-5" max="5"/>
+                        </p:fieldset>
+                        <br/>
+                    </div>
+                    <div class="r">
+                        <p:fieldset>
+                            <h:outputLabel>Please input R:</h:outputLabel>
+                            <span style="color:red">*</span>
+                            <ace:sliderEntry />
+                        </p:fieldset>
+                    </div>
+                </p:fieldset>
                 <br/>
                 <h:commandButton id="visible-submit" value="Submit" action="#{dots.addDot}" onclick="updateInput('click-graph')">
                 </h:commandButton>

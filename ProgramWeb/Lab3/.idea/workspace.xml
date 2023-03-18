@@ -10,99 +10,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__backport_util_concurrent_backport_util_concurrent_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_api_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_el_el_api_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_api_8_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_icefaces_icefaces_1_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_icefaces_icefaces_comps_1_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20230227.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_owasp_encoder_encoder_1_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_primefaces_primefaces_jakarta_12_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_el_javax_el_api_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_portlet_portlet_api_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_faces_2_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_icefaces_icefaces_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_icefaces_icefaces_ace_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_icepush_icepush_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/FastInfoset-1.2.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/icefaces-3.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/icefaces-ace-3.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/icepush-3.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/javax.el-api-2.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/javax.faces-2.1.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/javax.servlet-api-3.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/jsp-api-2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/mail-1.4.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/portlet-api-2.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/Lab3_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Lab3_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/Dot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/Dots.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/DotsTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/NumberDot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/Timer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/UserDate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/Validator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/ValidatorInput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/ValidatorInputY.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/DataBase/DataBaseStorage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/META-INF/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/faces-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/antlr4-runtime-4.10.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/byte-buddy-1.12.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/checker-qual-3.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/classmate-1.5.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/hibernate-annotations-3.5.6-Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/hibernate-commons-annotations-3.2.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/hibernate-commons-annotations-6.0.6.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/hibernate-core-6.1.7.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/hibernate-entitymanager-5.6.15.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/hibernate-jpa-2.0-api-1.0.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/istack-commons-runtime-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/jakarta.activation-2.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/jakarta.inject-api-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/jakarta.persistence-api-3.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/jakarta.transaction-api-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/jakarta.xml.bind-api-3.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/jandex-2.4.2.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/javax.persistence-api-2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/jaxb-core-3.0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/jaxb-runtime-3.0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.4.3.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/lombok-1.18.26.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/postgresql-42.5.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.5.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/lib/txw2-3.0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/index.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/main.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/CSS/index_style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/CSS/main_style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/Components/clock.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/Components/graph.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/as1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/clock_drawer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/grapg_drawer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/img/blacktocat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/templates/index_template.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/templates/main_template.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Data/Dot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Data/Dots.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Data/DotsTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Data/NumberDot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Data/Timer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Data/UserDate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Data/Validator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Data/ValidatorInput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Data/ValidatorInputY.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataBase/DataBaseStorage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/main.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -381,7 +318,7 @@
       <workItem from="1678522003046" duration="38000" />
       <workItem from="1678991855156" duration="3835000" />
       <workItem from="1679043233045" duration="16094000" />
-      <workItem from="1679086765948" duration="12579000" />
+      <workItem from="1679086765948" duration="18079000" />
     </task>
     <servers />
   </component>
