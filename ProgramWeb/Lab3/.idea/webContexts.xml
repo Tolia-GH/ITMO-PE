@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/index.xhtml" value="file://$PROJECT_DIR$/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/main.xhtml" value="file://$PROJECT_DIR$/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/resources/CSS" value="file://$PROJECT_DIR$/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/resources/clock.html" value="file://$PROJECT_DIR$/src/main/webapp/resources" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/resources/clock/clock.html" value="file://$PROJECT_DIR$/src/main/webapp/resources/clock" />
+      </map>
+    </option>
+  </component>
+</project>
