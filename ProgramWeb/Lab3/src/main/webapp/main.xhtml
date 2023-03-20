@@ -6,7 +6,6 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
 >
 
 <h:head>
@@ -47,72 +46,52 @@
                     <div class="x">
                         <h:outputLabel>Please input X: </h:outputLabel>
                         <span style="color:red">*</span>
-                        <p:inputText class="inputCol" id="xText" required="true" a:placeholder="from -3 to 3" value="#{dots.dot.x}"/>
+                        <h:inputText class="inputCol" id="xText" required="true" requiredMessage="X can not be null!"
+                                     placeholder="from -3 to 3" value="#{points.point.x}"/>
                     </div>
                     <br/>
                     <div class="y">
                         <h:outputLabel>Please input Y:</h:outputLabel>
                         <span style="color:red">*</span>
-                        <p:spinner id="ySpinner" stepFactor="0.1" min="-5" max="5"/>
+                        <p:spinner id="ySpinner" required="true" requiredMessage="Y can not be null!"
+                                   stepFactor="0.1" min="-5" max="5" rotate="true" value="#{points.point.y}"/>
                     </div>
                     <br/>
                     <div class="r">
                         <h:outputLabel>Please input R:</h:outputLabel>
                         <span style="color:red">*</span>
-                        <p:inputText class="inputCol" id="rText" value="#{dots.dot.r}"/>
+                        <p:inputText class="inputCol" placeholder="from 1 to 4" id="rText"
+                                     required="true" requiredMessage="R can not be null!" value="#{points.point.r}"/>
                         <br/>
                         <p:slider id="rSlider" for="rText" step="0.5" minValue="1" maxValue="4"/>
                     </div>
                 </p:fieldset>
                 <br/>
-                <h:commandButton id="visible-submit" value="Submit" action="#{dots.addDot}" onclick="">
+                <h:commandButton id="visible-submit" value="Submit" action="#{points.addPoint}">
                 </h:commandButton>
             </h:form>
         </ui:define>
-
-        <!--for drawing dots on canvas-->
-        <ui:define name="invisibleForm">
-            <h:form id="canvasForm" style="visibility: hidden">
-                <div class="x">
-                    <h:inputText id="canvasX" value="#{dots.dot.x}">
-                    </h:inputText>
-                </div>
-                <div class="r">
-                    <h:inputText id="canvasR" value="#{dots.dot.r}">
-                    </h:inputText>
-                </div>
-                <div class="y">
-                    <h:inputText id="canvasY" value="#{dots.dot.y}">
-                    </h:inputText>
-                </div>
-                <h:commandButton id="submitClick" action="#{dots.addDot}" onclick="updateClick('click-graph')">
-                    <f:ajax render="table click-graph" execute="canvasForm"/>
-                </h:commandButton>
-            </h:form>
-        </ui:define>
-
-
 
         <!--table is set properly-->
         <ui:define name="table">
             <div id="div_table">
-                <h:dataTable value="#{dots.dotsList}" var="o" id="table" width="400px" align="center" border="1">
-                    <h:column>
-                        <f:facet name="header">X</f:facet>#{o.x}
-                    </h:column>
-                    <h:column>
-                        <f:facet name="header">Y</f:facet>#{o.y}
-                    </h:column>
-                    <h:column>
-                        <f:facet name="header">R</f:facet>#{o.r}
-                    </h:column>
-                    <h:column>
-                        <f:facet name="header">Result</f:facet>#{o.hit}
-                    </h:column>
-                    <h:column>
-                        <f:facet name="header">Time</f:facet>#{o.date.dateString}
-                    </h:column>
-                </h:dataTable>
+<!--                <h:dataTable value="#{points}" var="pointOut" id="table" width="300px" align="center" border="1">-->
+<!--                    <h:column>-->
+<!--                        <f:facet name="header">X</f:facet>#{pointOut.x}-->
+<!--                    </h:column>-->
+<!--                    <h:column>-->
+<!--                        <f:facet name="header">Y</f:facet>#{pointOut.y}-->
+<!--                    </h:column>-->
+<!--                    <h:column>-->
+<!--                        <f:facet name="header">R</f:facet>#{pointOut.r}-->
+<!--                    </h:column>-->
+<!--&lt;!&ndash;                    <h:column>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <f:facet name="header">Result</f:facet>#{pointOut.hit}&ndash;&gt;-->
+<!--&lt;!&ndash;                    </h:column>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <h:column>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <f:facet name="header">Time</f:facet>#{pointOut.timeUsage.dateString}&ndash;&gt;-->
+<!--&lt;!&ndash;                    </h:column>&ndash;&gt;-->
+<!--                </h:dataTable>-->
             </div>
         </ui:define>
     </ui:composition>
