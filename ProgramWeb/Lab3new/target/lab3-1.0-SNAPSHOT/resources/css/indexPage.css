@@ -1,0 +1,37 @@
+.column {
+    float: left;
+}
+.column.side{
+    width: 25%;
+}
+.column.middle {
+    width: 50%;
+}
+.main-part-index{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+.topnav {
+    overflow: hidden;
+    background-color: dodgerblue;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: lightblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}

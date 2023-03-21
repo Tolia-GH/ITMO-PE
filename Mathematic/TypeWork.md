@@ -191,7 +191,7 @@ $$
 
 Найдите площадь области, ограниченной кривыми, заданными в декартовых координатах
 
-<div align=center><img src="pic/TypeWork-1.png"></div>
+<div align=center><img src="pic/TypeWork-1.png" width= "500"></div>
 <center>График Функция</center>
 
 $$
@@ -228,14 +228,14 @@ $$S=S_1-2S\Delta=64\pi-2(16\pi-\frac{128}{3})=32\pi+\frac{256}{3}$$
 
 $$y^2-2y=4x\quad -1\le x\le 0$$
 
-<div align=center><img src="pic/TypeWork-2.png"></div>
+<div align=center><img src="pic/TypeWork-2.png" width="800"></div>
 <center>График Функция</center>
 
 Очевидно, что L равна его обратной фукцией в части $(-1\le y\le 0)$:
 
 $$x^2-2x=4y\quad -1\le y\le 0$$
 
-<div align=center><img src="pic/TypeWork-3.png"></div>
+<div align=center><img src="pic/TypeWork-3.png" width="800"></div>
 <center>График Функция</center>
 
 $$\begin{split}
@@ -492,7 +492,7 @@ $$\begin{split}
     &z_{\max}(-2,\frac{5}{2})=13.5
 \end{split}$$
 
-<div align=center><img src="pic/TypeWork-6.png"></div>
+<div align=center><img src="pic/TypeWork-6.png"width="800"></div>
 <center>График Функция</center>
 
 ## Задание №7

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<project name="Lab3" basedir="." default="build">
+    <property name="src.dir"     value="src/main/java"/>
+    <property name="lib.dir"     value="lib"/>
+    <property name="build.dir"   value="build"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="target.dir"     value="target"/>
+
+    <target name="compile">
+        <echo>This is compiled!</echo>
+        <mkdir dir="${classes.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="true">
+            <classpath>
+                <fileset dir="lib" >
+                    <include name="*.jar" />
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="build" depends="compile">
+        <echo>This is build!</echo>
+        <mkdir dir="${target.dir}"/>
+        <jar destfile="${target.dir}/${ant.project.name}.jar" basedir="${build.dir}">
+            <zipfileset dir="${lib.dir}" prefix="libs"/>
+        </jar>
+    </target>
+
+    <target name="clean">
+        <echo>This is clean!</echo>
+        <delete dir="${build.dir}"/>
+        <delete dir="${target.dir}"/>
+    </target>
+
+    <target name="test" depends="build">
+        <echo>This is test!</echo>
+    </target>
+
+    <target name="scp" depends="build">
+        <echo>This is scp</echo>
+        <scp File="${target.dir}/${ant.project.name}.jar" port="2222" Todir="s291300:hvf133@helios.se.ifmo.ru:~/"  Trust="True"/>
+    </target>
+
+    <property name="cur.env" value="num"/>
+    <target name="alt">
+        <echo>This is alt!</echo>
+        <replaceregexp
+                flags="g"
+                file="${src.dir}/Data/NumberDot.java"
+                match="number"
+                replace="${cur.env}" />
+    </target>
+
+    <target name="realt">
+        <echo>This is realt!</echo>
+        <replaceregexp
+                flags="g"
+                file="${src.dir}/Data/NumberDot.java"
+                match="${cur.env}"
+                replace="number" />
+    </target>
+
+</project>

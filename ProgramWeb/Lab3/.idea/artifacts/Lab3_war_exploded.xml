@@ -15,7 +15,7 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.sun.faces:jsf-api:2.2.18" />
-          <element id="library" level="project" name="Maven: org.primefaces:primefaces:jakarta:12.0.0" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:12.0.0" />
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.11.0" />
           <element id="library" level="project" name="Maven: org.owasp.encoder:encoder:1.2.3" />
           <element id="library" level="project" name="Maven: org.json:json:20230227" />
@@ -47,7 +47,7 @@
           <element id="library" level="project" name="Maven: javax:javaee-api:8.0.1" />
           <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.6.2" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
-          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.26" />
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.20" />
         </element>
       </element>
       <element id="directory" name="META-INF">
