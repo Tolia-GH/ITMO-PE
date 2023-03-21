@@ -23,23 +23,23 @@ public class Dots implements Serializable {
     public Dots(){ }
 
     public void addDot(){
-        if(Validator.validateValues(dot)){
-            dot = new Dot(dot.getX(),dot.getY()+"", dot.getR());
+        if (Validator.validateValues(dot)) {
+            dot = new Dot(dot.getX(),dot.getY(), dot.getR());
             dotsList.add(dot);
-            DotsTable dotToTable = new DotsTable(dot.getX(),Double.parseDouble(dot.getY()), dot.getR(), dot.getDate());
-            try{
+            DotsTable dotToTable = new DotsTable(dot.getX(), dot.getY(), dot.getR(), dot.getDate());
+            try {
                 storage.addNewDot(dotToTable);
-            }catch (Exception e){
-                e.getMessage();
+            } catch (Exception e){
+                e.printStackTrace();
             }
             table.add(dotToTable);
             dot = new Dot();
         }
     }
 
-    public void delete(){
+    public void delete() {
         this.dotsList.clear();
-        for(DotsTable removed:table){
+        for (DotsTable removed:table) {
             storage.deleteDot(removed);
         }
         this.table.clear();

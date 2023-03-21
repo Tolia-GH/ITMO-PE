@@ -3,9 +3,9 @@ package Data;
 public class Validator {
     public static boolean validateValues(Dot dot){
         double x = dot.getX();
-        double y = Double.parseDouble(dot.getY());
+        double y = dot.getY();
         double r = dot.getR();
-        return (x >= -5 && x <= 5) && (y >= -3 && y <= 3) && (r >= 0.1 && r <= 3);
+        return (x >= -3 && x <= 3) && (y >= -5 && y <= 5) && (r >= 1 && r <= 4);
     }
     public static boolean validateRange(Double x, Double y, Double r){
         //0<=x<=r,-r<=y<=0
