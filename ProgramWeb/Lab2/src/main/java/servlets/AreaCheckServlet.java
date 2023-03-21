@@ -2,10 +2,9 @@ package servlets;
 
 import beans.Point;
 import beans.PointsList;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
 
 import java.io.IOException;
 

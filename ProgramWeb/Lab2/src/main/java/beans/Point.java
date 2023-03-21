@@ -62,7 +62,4 @@ public class Point implements Serializable {
         this.R = R;
         this.res = res;
     }
-
-
-
 }
