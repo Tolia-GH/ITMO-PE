@@ -1,11 +1,6 @@
 let canvas;
 let ctx;
 
-let n = 0;
-let pointsX = [];
-let pointsY = [];
-let pointsR = [];
-
 function drawGraphic() {
     ctx.strokeStyle = "#373737"
     ctx.moveTo(0,0);
@@ -113,9 +108,9 @@ function drawPoints(x,y,r,hit) {
 
     console.log("'" + hit + "'");
 
-    if (hit === "true") {
+    if (hit) {
         ctx.fillStyle = "#00ff00";
-    } else if (hit === "false"){
+    } else {
         ctx.fillStyle = "#ff0000";
     }
 
@@ -124,18 +119,30 @@ function drawPoints(x,y,r,hit) {
     ctx.save();
 }
 
-function updateCanvas() {
-    let table = document.getElementById("table");
-
-    for (var i = 1; i < table.rows.length; i++) {
-        drawPoints(
-            table.rows[i].cells[1].innerHTML,
-            table.rows[i].cells[2].innerHTML,
-            table.rows[i].cells[3].innerHTML,
-            table.rows[i].cells[4].innerHTML
-        )
+function validate(x,y,r) {
+    // console.log("validating..." + x + ", " + y + ", " + r);
+    // console.log(2 * x + r);
+    // console.log(y)
+    if(x >= 0 && y >= 0 && x <= r && y <= r) {
+        return true;
     }
+    else if (x < 0 && y > 0 && (2 * x) > y - r) {
+        return true;
+    } else return x < 0 && y < 0 && x ** 2 + y ** 2 <= (r/2) ** 2;
 }
+
+// function updateCanvas() {
+//     let table = document.getElementById("table");
+//
+//     for (let i = 1; i < table.rows.length; i++) {
+//         drawPoints(
+//             table.rows[i].cells[1].innerHTML,
+//             table.rows[i].cells[2].innerHTML,
+//             table.rows[i].cells[3].innerHTML,
+//             table.rows[i].cells[4].innerText
+//         )
+//     }
+// }
 
 function clickCanvas() {
     document.getElementById("requestForm:errorMessage").innerText = "";
@@ -147,32 +154,31 @@ function clickCanvas() {
     let br = canvas.getBoundingClientRect();
     let left = br.left;
     let top = br.top;
-    r = document.getElementById("requestForm:rInput").value;
+    rIn = document.getElementById("requestForm:rInput").value;
 
     let event = window.event;
-    if (r !== 0 && r != null && r !== "") {
-        let x = ((event.clientX - left - 150)/65 * 0.5 * r).toFixed(2);
-        let y = ((150 - (event.clientY - top))/65 * 0.5 * r).toFixed(2);
+    if (rIn !== 0 && rIn != null && rIn !== "") {
+        let x = ((event.clientX - left - 150)/65 * 0.5 * rIn).toFixed(2);
+        let y = ((150 - (event.clientY - top))/65 * 0.5 * rIn).toFixed(2);
 
         document.getElementById("canvasForm:canvasX").value = x;
         document.getElementById("canvasForm:canvasY").value = y;
-        document.getElementById("canvasForm:canvasR").value = r;
+        document.getElementById("canvasForm:canvasR").value = rIn;
         document.getElementById("canvasForm:submitCanvas").click();
 
-        //drawPoints(x,y,r)
+        drawPoints(x,y,rIn,validate(x,y,rIn));
         //updateCanvas()
 
-        console.log("Clicking on: x=" + x + ", y =" + y + ", r=" + r);
+        console.log("Clicking on: x=" + x + ", y =" + y + ", r=" + rIn);
+        //location.reload();
     } else {
         document.getElementById("requestForm:errorMessage").innerText = "Error: R unchecked!"
         console.error("R unchecked!")
     }
 }
-
 window.onload=function () {
     canvas = document.getElementById("graph_canvas");
     ctx = canvas.getContext("2d");
 
     drawGraphic();
-    updateCanvas();
 };

@@ -138,14 +138,12 @@ function clickCanvas() {
         let y = (150 - (event.clientY - top))/65 * 0.5 * r;
 
         setHiddenForm(x,y,r);
-        drawPoints(x,y,r);
+        //drawPoints(x,y,r);
         storePoint(x,y,r)
         document.getElementById("hiddenForm").submit();
         clearHiddenForm();
 
         console.log("Clicking on: x=" + x + ", y =" + y + ", r=" + r);
-
-
 
     } else {
         document.getElementById("errorR").innerText = "Error: R unchecked!"

@@ -28,7 +28,12 @@
                 </a>
                 <h1 id="title">Lab 3</h1>
                 <h2 id="author">P32131 Чжоу Хунсян 13109</h2>
+                <div class="link">
+                    <h:link class="linkTest" outcome="index.xhtml">Head Page</h:link>
+                </div>
             </div>
+
+
         </ui:define>
 
         <ui:define name="graph">
@@ -79,12 +84,12 @@
                     <h:inputText id="canvasX" value="#{dots.dot.x}">
                     </h:inputText>
                 </div>
-                <div class="r">
-                    <h:inputText id="canvasR" value="#{dots.dot.r}">
-                    </h:inputText>
-                </div>
                 <div class="y">
                     <h:inputText id="canvasY" value="#{dots.dot.y}">
+                    </h:inputText>
+                </div>
+                <div class="r">
+                    <h:inputText id="canvasR" value="#{dots.dot.r}">
                     </h:inputText>
                 </div>
                 <h:commandButton id="submitCanvas" action="#{dots.addDot}">

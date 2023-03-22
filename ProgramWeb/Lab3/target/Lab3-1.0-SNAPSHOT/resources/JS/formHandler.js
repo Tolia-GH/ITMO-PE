@@ -1,19 +1,18 @@
-let x,y,r;
-
-function init() {
-
-}
+let xIn,yIn,rIn;
 
 function submitData() {
     console.log("submitting data...")
 
     document.getElementById("requestForm:errorMessage").innerText = "";
-    x = document.getElementById("requestForm:xInput").value;
-    console.log("x=" + x);
+    xIn = document.getElementById("requestForm:xInput").value;
+    yIn = document.getElementById("requestForm:yInput").value;
+    rIn = document.getElementById("requestForm:rInput").value;
+    console.log("x=" + xIn + ", y=" + yIn + ", r=" + rIn);
 
-    if (checkData(x)) {
+    if (checkData(xIn)) {
 
         document.getElementById("requestForm:send").click();
+        //location.reload();
         //updateCanvas();
 
     } else {
