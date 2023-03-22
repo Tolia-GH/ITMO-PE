@@ -17,7 +17,7 @@ function submitData() {
         //updateCanvas();
 
     } else {
-        console.log("Error: input error!")
+        console.error("Error: input error!")
     }
 }
 

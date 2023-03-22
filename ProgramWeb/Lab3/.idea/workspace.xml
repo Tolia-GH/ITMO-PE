@@ -10,29 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/JS/formHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/formHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Program/Prog_Lab_8/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Program/Prog_Lab_8/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/web/js/clientHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/web/js/clientHandler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Dot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Dot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Data/Dots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Dots.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataBase/DataBaseStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataBase/DataBaseStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/DotsTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/DotsTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/Components/graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/Components/graph.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/CSS/main_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/CSS/main_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/JS/formHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/JS/formHandler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/JS/graph_drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/JS/graph_drawer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/Dot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/Dot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/Dots.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/Dots.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/Validator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/Validator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/DataBase/DataBaseStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/DataBase/DataBaseStorage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/Components/graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/Components/graph.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/CSS/main_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/CSS/main_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/formHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/formHandler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/graph_drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/graph_drawer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Data/Dot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data/Dot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Data/Dots.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data/Dots.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Data/Validator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data/Validator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataBase/DataBaseStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataBase/DataBaseStorage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +303,7 @@
       <workItem from="1678522003046" duration="38000" />
       <workItem from="1678991855156" duration="3835000" />
       <workItem from="1679043233045" duration="16094000" />
-      <workItem from="1679086765948" duration="79540000" />
+      <workItem from="1679086765948" duration="83515000" />
     </task>
     <servers />
   </component>

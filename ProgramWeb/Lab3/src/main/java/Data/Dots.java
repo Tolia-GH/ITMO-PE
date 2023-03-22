@@ -37,18 +37,6 @@ public class Dots implements Serializable {
         }
     }
 
-    public void delete() {
-        this.dotsList.clear();
-        for (DotsTable removed:table) {
-            storage.deleteDot(removed);
-        }
-        this.table.clear();
-    }
-
-    public void deleteone(Dot dot){
-        this.dotsList.remove(dot);
-    }
-
     public List<Dot> getDotsList() {
         return dotsList;
     }

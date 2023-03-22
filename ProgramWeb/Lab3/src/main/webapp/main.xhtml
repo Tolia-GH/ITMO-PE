@@ -40,23 +40,22 @@
                 <p:fieldset id = "formField">
                     <div class="x">
                         Please input x:<span style="color:red">*</span>
-                        <br/>
                         <p:inputText class="inputCol" id="xInput" value="#{dots.dot.x}" required="true" placeholder="from -3 to 3">
                         </p:inputText><br/>
                     </div>
                     <br/>
                     <div class="y">
                         Please input y:<span style="color:red">*</span>
-                        <br/>
                         <p:spinner id="yInput" widgetVar="yInput" required="true" min="-5" max="5.0" stepFactor="0.1" rotate="true" value="#{dots.dot.y}">
                         </p:spinner>
                     </div>
                     <br/>
                     <div class="r">
                         Please input r:<span style="color:red">*</span>
-                        <br/>
                         <p:inputText class="inputCol" id="rInput" required="true" value="#{dots.dot.r}" placeholder="from 1 to 4">
                         </p:inputText>
+                        <br/>
+                        <br/>
                         <p:slider for="rInput" minValue="1" maxValue="4" step="0.5"/>
                     </div>
 
@@ -64,11 +63,11 @@
                 </p:fieldset>
                 <br/>
                 <h:commandButton id="submit" value="Submit" onclick="submitData()">
-                    <f:ajax render="errorMesage" execute="requestForm"/>
+                    <f:ajax render="graph_canvas errorMesage" execute="requestForm"/>
                 </h:commandButton>
 
                 <h:commandButton id="send" style="visibility: hidden" action="#{dots.addDot()}">
-                    <f:ajax render="table errorMesage" execute="requestForm"/>
+                    <f:ajax render="graph_canvas table errorMesage" execute="requestForm"/>
                 </h:commandButton>
             </h:form>
         </ui:define>
@@ -89,7 +88,7 @@
                     </h:inputText>
                 </div>
                 <h:commandButton id="submitCanvas" action="#{dots.addDot}">
-                    <f:ajax render="table" execute="canvasForm"/>
+                    <f:ajax render="table graph_canvas" execute="canvasForm"/>
                 </h:commandButton>
             </h:form>
         </ui:define>
