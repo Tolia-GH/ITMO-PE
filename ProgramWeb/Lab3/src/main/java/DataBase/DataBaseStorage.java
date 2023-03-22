@@ -52,10 +52,10 @@ public class DataBaseStorage implements Serializable {
                 ps.setDouble(5,dot.getY());
                 ps.executeUpdate();
             }catch (SQLException e){
-                e.printStackTrace();
+                //e.printStackTrace();
             }
         }catch (SQLException e){
-            e.printStackTrace();
+            //e.printStackTrace();
         };
     }
     public void deleteDot(DotsTable dot){

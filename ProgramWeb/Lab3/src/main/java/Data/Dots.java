@@ -24,7 +24,7 @@ public class Dots implements Serializable {
 
     public void addDot(){
         if (Validator.validateValues(dot)) {
-            dot = new Dot(dot.getX(),dot.getY(), dot.getR());
+            dot = new Dot(dotsList.size() + 1, dot.getX(),dot.getY(), dot.getR());
             dotsList.add(dot);
             DotsTable dotToTable = new DotsTable(dot.getX(), dot.getY(), dot.getR(), dot.getDate());
             try {

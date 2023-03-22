@@ -9,14 +9,16 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 public class Dot implements Serializable {
+    private int id;
     private Double x;
     private Double y;
     private Double r;
-    private boolean hit = true;
+    private boolean hit;
     private UserDate date;
 
 
-    public Dot(Double x, Double y, Double r){
+    public Dot(int id, Double x, Double y, Double r){
+        this.id = id;
         this.x = x;
         this.y = y;
         this.r = r;

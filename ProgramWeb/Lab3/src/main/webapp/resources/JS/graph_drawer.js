@@ -98,16 +98,9 @@ function drawGraphic() {
     ctx.save();
 }
 
-function storePoint(x,y,r) {
-    console.log("Storing " + n + "-th point...");
-    pointsX[n] = x;
-    pointsY[n] = y;
-    pointsR[n] = r;
-    ++n;
-}
-
 function drawPoints(x,y,r,hit) {
     ctx.restore();
+    console.log("drawing point:" + x + ", " + y + ", " + r + ", " + hit);
 
     let canvasX = (x/r) * 130 + 150;
     let canvasY = 150 - (y/r) * 130;
@@ -116,7 +109,7 @@ function drawPoints(x,y,r,hit) {
     ctx.beginPath();
     ctx.arc(canvasX,canvasY,2,0,2 * Math.PI);
     ctx.closePath();
-    if (hit === "True") {
+    if (hit === "true") {
         ctx.fillStyle = "green";
     } else {
         ctx.fillStyle = "red";
@@ -127,30 +120,52 @@ function drawPoints(x,y,r,hit) {
     ctx.save();
 }
 
-function clickCanvas() {
-    console.log("Clicking on canvas...")
-    document.getElementById("errorR").innerText = "";
+// function updateCanvas() {
+//     let table = document.getElementById("table");
+//
+//     for (var i = 1; i < table.rows.length; i++) {
+//         console.log("drawing point: " +
+//             table.rows[i].cells[0].innerHTML + ", " +
+//             table.rows[i].cells[1].innerHTML + ", " +
+//             table.rows[i].cells[2].innerHTML + ", " +
+//             table.rows[i].cells[3].innerHTML
+//         )
+//         drawPoints(
+//             table.rows[i].cells[0].innerHTML,
+//             table.rows[i].cells[1].innerHTML,
+//             table.rows[i].cells[2].innerHTML,
+//             table.rows[i].cells[3].innerHTML
+//         )
+//     }
+// }
 
-    let canvas = document.getElementById("canvas");
+function clickCanvas() {
+    document.getElementById("requestForm:errorMessage").innerText = "";
+    console.log("Clicking on canvas...")
+    //document.getElementById("errorMessage").innerText = "";
+
+    let canvas = document.getElementById("graph_canvas");
 
     let br = canvas.getBoundingClientRect();
     let left = br.left;
     let top = br.top;
+    r = document.getElementById("requestForm:rInput").value;
 
     let event = window.event;
-    if (r !== 0 && r != null) {
-        let x = (event.clientX - left - 150)/65 * 0.5 * r;
-        let y = (150 - (event.clientY - top))/65 * 0.5 * r;
+    if (r !== 0 && r != null && r !== "") {
+        let x = ((event.clientX - left - 150)/65 * 0.5 * r).toFixed(2);
+        let y = ((150 - (event.clientY - top))/65 * 0.5 * r).toFixed(2);
 
-        //setHiddenForm(x,y,r);
-        drawPoints(x,y,r);
-        storePoint(x,y,r)
-        document.getElementById("hiddenForm").submit();
-        //clearHiddenForm();
+        document.getElementById("canvasForm:canvasX").value = x;
+        document.getElementById("canvasForm:canvasY").value = y;
+        document.getElementById("canvasForm:canvasR").value = r;
+        document.getElementById("canvasForm:submitCanvas").click();
+
+        drawPoints(x,y,r)
 
         console.log("Clicking on: x=" + x + ", y =" + y + ", r=" + r);
     } else {
-        document.getElementById("errorR").innerText = "Error: R unchecked!"
+        document.getElementById("requestForm:errorMessage").innerText = "Error: R unchecked!"
         console.log("R unchecked!")
     }
 }
@@ -160,4 +175,5 @@ window.onload=function () {
     ctx = canvas.getContext("2d");
 
     drawGraphic();
+    //updateCanvas();
 };

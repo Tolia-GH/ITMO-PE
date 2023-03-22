@@ -107,7 +107,7 @@ function getR(radio) {
         }
     }
     if (checkedR === false) {
-        document.getElementById("errorR").innerText = "Error: R can not be null!"
+        document.getElementById("errorR").innerText = "Error: R can not be null!";
     }
 
     return false;

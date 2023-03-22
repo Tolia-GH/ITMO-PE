@@ -10,14 +10,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lab2/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/Lab2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Lab2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/src/main/java/beans/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/src/main/java/beans/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/src/main/java/servlets/AreaCheckServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/src/main/java/servlets/AreaCheckServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/target/classes/beans/Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/target/classes/beans/PointsList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/target/classes/servlets/AreaCheckServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/target/classes/servlets/ControllerServlet.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/JS/formHandler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/formHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Program/Prog_Lab_8/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Program/Prog_Lab_8/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab2/web/js/clientHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/web/js/clientHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Dot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Dot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Dots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Dots.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataBase/DataBaseStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataBase/DataBaseStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/Components/graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/Components/graph.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/JS/graph_drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/JS/graph_drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/Dot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/Dot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/Dots.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/Dots.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/Validator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/Data/Validator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/DataBase/DataBaseStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/DataBase/DataBaseStorage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/main.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/Components/graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/Components/graph.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/graph_drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/resources/JS/graph_drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Data/Dot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data/Dot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Data/Dots.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data/Dots.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Data/Validator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data/Validator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataBase/DataBaseStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataBase/DataBaseStorage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +48,8 @@
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="jsf" />
-        <option value="JavaScript File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -64,7 +79,9 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2MqIJDDxVffWhSgfNC3Dd81a2el" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -72,6 +89,7 @@
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
@@ -297,7 +315,7 @@
       <workItem from="1678522003046" duration="38000" />
       <workItem from="1678991855156" duration="3835000" />
       <workItem from="1679043233045" duration="16094000" />
-      <workItem from="1679086765948" duration="60784000" />
+      <workItem from="1679086765948" duration="79540000" />
     </task>
     <servers />
   </component>
@@ -314,5 +332,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
