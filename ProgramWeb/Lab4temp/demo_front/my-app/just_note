@@ -1,0 +1,418 @@
+//mainForm without react-redux
+import React from "react";
+import $ from "jquery";
+import '../../assets/css/mainForm.css';
+
+export class CanvasForm extends React.Component{
+    constructor(pros) {
+        super(pros);
+        this.state={
+            X:"0",
+            Y:"0",
+            R:"0"
+        }
+        this.handleY=this.handleY.bind(this);
+        this.submit=this.submit.bind(this);
+    }
+
+    handleY(event){
+        this.setState({Y:event.target.value});
+    }
+
+    submit(){
+        $.ajax({
+                url: "api/getDot",
+                method:"POST",
+                data:{
+                    X:this.state.X,
+                    Y:this.state.Y,
+                    R:this.state.R
+                },
+                async:false,
+                success:function (res){
+                    if(res.wrong) {
+                        alert(res.message);
+                    }else {
+                        alert("dot is hit:"+res.hit)
+                    }
+                }
+            }
+        )
+    }
+
+    render(){
+        return(
+            <form id={"canvas_form"}>
+                choose your x:<br/>
+                <button type={"button"} name={"X"} className={"X"} onClick={()=>this.setState({X:"-5"})}>-5</button>
+                <button type={"button"} name={"X"} className={"X"} onClick={()=>this.setState({X:"-4"})}>-4</button>
+                <button type={"button"} name={"X"} className={"X"} onClick={()=>this.setState({X:"-3"})}>-3</button>
+                <button type={"button"} name={"X"} className={"X"} onClick={()=>this.setState({X:"-2"})}>-2</button>
+                <button type={"button"} name={"X"} className={"X"} onClick={()=>this.setState({X:"-1"})}>-1</button>
+                <button type={"button"} name={"X"} className={"X"} onClick={()=>this.setState({X:"0"})}>0</button>
+                <button type={"button"} name={"X"} className={"X"} onClick={()=>this.setState({X:"1"})}>1</button>
+                <button type={"button"} name={"X"} className={"X"} onClick={()=>this.setState({X:"2"})}>2</button>
+                <button type={"button"} name={"X"} className={"X"} onClick={()=>this.setState({X:"3"})}>3</button>
+                <br/>
+                input Y:<br/>
+                <input type={"text"} value={this.state.Y} onChange={this.handleY}/>
+                <br/>
+                choose your R:<br/>
+                <button type={"button"} name={"R"} className={"R"} onClick={()=>this.setState({R:"0"})}>0</button>
+                <button type={"button"} name={"R"} className={"R"} onClick={()=>this.setState({R:"1"})}>1</button>
+                <button type={"button"} name={"R"} className={"R"} onClick={()=>this.setState({R:"2"})}>2</button>
+                <button type={"button"} name={"R"} className={"R"} onClick={()=>this.setState({R:"3"})}>3</button>
+                <button type={"button"} name={"R"} className={"R"} onClick={()=>this.setState({R:"4"})}>4</button>
+                <button type={"button"} name={"R"} className={"R"} onClick={()=>this.setState({R:"5"})}>5</button>
+                <br/>
+                <button onClick={this.submit}>Add</button>
+            </form>
+        )
+    }
+}
+
+//mainGraph without react-redux
+import React from "react";
+
+export class CanvasGraphComponent extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        this.drawBackground();
+    }
+
+    drawBackground(){
+        const x = 175;
+        const y = 150;
+        const r = 100;
+        const pen = this.refs.canvas.getContext("2d");
+        //background
+        pen.fillStyle = "white" ;
+        pen.beginPath();
+        pen.clearRect(0,0,2*x,2*y);
+        pen.rect(0,0,2*x, 2*y);
+        pen.closePath();
+        pen.fill();
+
+        //axis
+        pen.beginPath();
+        pen.strokeStyle = "black";
+        pen.font = "20px Verdana";
+        pen.strokeRect(0,0,2*x,2*y);
+        //y
+        pen.moveTo(x, 0);
+        pen.lineTo(x, 2*y);
+        //x
+        pen.moveTo(0, y);
+        pen.lineTo(2*x, y);
+        //arrow of y
+        pen.moveTo(x-7,7);
+        pen.lineTo(x,0);
+        pen.moveTo(x+7,7);
+        pen.lineTo(x,0);
+        //arrow of x
+        pen.moveTo(2*x-7,y-7);
+        pen.lineTo(2*x,y);
+        pen.moveTo(2*x-7,y+7);
+        pen.lineTo(2*x,y);
+        pen.stroke();
+
+        //clear a range and set it's transparency
+        pen.fillStyle = "orange";
+        pen.globalAlpha = 0.5;
+
+        //fourth quadrant
+        pen.beginPath();
+        pen.rect(x,y,r,r);
+        pen.closePath();
+        pen.fill();
+
+        //first quadrant
+        pen.beginPath();
+        pen.moveTo(x,y);
+        pen.arc(x,y,r,1.5*Math.PI,2*Math.PI);
+        pen.closePath();
+        pen.fill();
+
+        //third quadrant
+        pen.beginPath();
+        pen.moveTo(x,y);
+        pen.lineTo(x,y+100);
+        pen.lineTo(x-r/2,y);
+        pen.fill();
+        pen.closePath();
+
+        //find R
+        //onx
+        const length = 2.5
+        pen.beginPath();
+        pen.font = "20px Verdana";
+        pen.moveTo(x-3/2*r,y+length);
+        pen.lineTo(x-3/2*r,y-length);
+        pen.moveTo(x-r,y+length);
+        pen.lineTo(x-r,y-length);
+        pen.moveTo(x-r/2,y+length);
+        pen.lineTo(x-r/2,y-length);
+        pen.moveTo(x-r/2,y+length);
+        pen.lineTo(x-r/2,y-length);
+        pen.moveTo(x+r/2,y+length);
+        pen.lineTo(x+r/2,y-length);
+        pen.moveTo(x+r,y+length);
+        pen.lineTo(x+r,y-length);
+        pen.moveTo(x+3/2*r,y+length);
+        pen.lineTo(x+3/2*r,y-length);
+        //ony
+        pen.moveTo(x-length,y-r);
+        pen.lineTo(x+length,y-r);
+        pen.moveTo(x-length,y-1/2*r);
+        pen.lineTo(x+length,y-1/2*r);
+        pen.moveTo(x-length,y+1/2*r);
+        pen.lineTo(x+length,y+1/2*r);
+        pen.moveTo(x-length,y+r);
+        pen.lineTo(x+length,y+r);
+        pen.stroke();
+        //put R
+        pen.fillStyle = "black";
+        pen.font = "15px Verdana";
+        pen.fillText("-1.5", x-1.5*r-20, y+8*length);
+        pen.fillText("-1", x-r-10, y+8*length);
+        pen.fillText("-0.5", x-0.5*r-15, y+8*length);
+        pen.fillText("0.5", x+0.5*r-10, y+8*length);
+        pen.fillText("0.5", x-10, y+8*length);
+        pen.fillText("1", x+r-5, y+8*length);
+        pen.fillText("1.5", x+1.5*r-15, y+8*length);
+
+        pen.fillText("1",x+8,y-r+5);
+        pen.fillText("0.5",x+8,y-0.5*r+5);
+        pen.fillText("-0.5",x+8,y+0.5*r+5);
+        pen.fillText("-1",x+8,y+r+5);
+        pen.stroke();
+        pen.closePath();
+    }
+
+    componentWillUnmount(){
+        this.clearCanvas();
+    }
+
+    clearCanvas(){
+        const x = 175;
+        const y = 150;
+        const rubbish = this.refs.canvas.getContext("2d");
+        rubbish.clearRect(0,0,2*x,2*y);
+    }
+
+    render() {
+        return (<canvas ref={"canvas"} width={350} height={300}/>);
+    }
+}
+
+////////////不遵守原則但是可以防止刷新即上傳表單
+import React from "react";
+import $ from "jquery";
+import '../../assets/css/mainForm.css';
+import PropTypes from 'prop-types'
+import {connect} from "react-redux";
+import {GetR,GetX,GetY,AddDot,Actions} from "./reduxStore/action/action";
+
+export class CanvasForm extends React.Component{
+    constructor(props) {
+        super(props);
+        this.toBackFont = this.toBackFont.bind(this);
+    }
+
+    toBackFont(x,y,r){
+        $.ajax({
+                url: "api/getDot",
+                method:"POST",
+                data:{
+                    X:x,
+                    Y:y,
+                    R:r
+                },
+                async:false,
+                success:function (res){
+                    if(res.wrong) {
+                        alert(res.message);
+                    }else {
+                        alert("x="+res.x+" y="+res.y+" r="+res.r+" hit="+res.hit+" date="+res.date);
+                    }
+                }
+            }
+        )
+    }
+    render(){
+                const { X,Y,R,getX,getY,getR} = this.props;
+                return(
+                    <form id={"canvas_form"}>
+                            choose your x:<br/>
+                            <button type={"button"} name={"X"} className={"X"} onClick={()=>getX(-5)}>-5</button>
+                            <button type={"button"} name={"X"} className={"X"} onClick={()=>getX(-4)}>-4</button>
+                            <button type={"button"} name={"X"} className={"X"} onClick={()=>getX(-3)}>-3</button>
+                            <button type={"button"} name={"X"} className={"X"} onClick={()=>getX(-2)}>-2</button>
+                            <button type={"button"} name={"X"} className={"X"} onClick={()=>getX(-1)}>-1</button>
+                            <button type={"button"} name={"X"} className={"X"} onClick={()=>getX(0)}>0</button>
+                            <button type={"button"} name={"X"} className={"X"} onClick={()=>getX(1)}>1</button>
+                            <button type={"button"} name={"X"} className={"X"} onClick={()=>getX(2)}>2</button>
+                            <button type={"button"} name={"X"} className={"X"} onClick={()=>getX(3)}>3</button>
+                            <br/>
+                            input Y:<br/>
+                            <input type={"text"} name={"Y"} className={"Y"} onChange={getY}/>
+                            <br/>
+                            choose your R:<br/>
+                            <button type={"button"} name={"R"} className={"R"} onClick={()=>getR(0)}>0</button>
+                            <button type={"button"} name={"R"} className={"R"} onClick={()=>getR(1)}>1</button>
+                            <button type={"button"} name={"R"} className={"R"} onClick={()=>getR(2)}>2</button>
+                            <button type={"button"} name={"R"} className={"R"} onClick={()=>getR(3)}>3</button>
+                            <button type={"button"} name={"R"} className={"R"} onClick={()=>getR(4)}>4</button>
+                            <button type={"button"} name={"R"} className={"R"} onClick={()=>getR(5)}>5</button>
+                            <br/>
+                            <button onClick={()=>this.toBackFont(X,Y,R)}>Add</button>
+                    </form>
+                )
+        }
+}
+
+CanvasForm.propTypes = {
+        X:PropTypes.number.isRequired,
+        Y:PropTypes.number.isRequired,
+        R:PropTypes.number.isRequired,
+        Dots:PropTypes.array.isRequired,
+        getX:PropTypes.func.isRequired,
+        getY:PropTypes.func.isRequired,
+        getR:PropTypes.func.isRequired,
+        addDot:PropTypes.func.isRequired
+}
+
+function dotStateToPros(state){
+        return{
+                X:state.X,
+                Y:state.Y,
+                R:state.R,
+                Dots:state.Dots
+        }
+}
+
+function dotDispatchToProps(dispatch){
+        return{
+            getX:(x)=>dispatch(GetX(x)),
+            getR:(r)=>dispatch(GetR(r)),
+            getY:(event)=>dispatch(GetY(event.target.value)),
+            addDot:(x,y,r,hit,date)=>(dispatch(AddDot(x,y,r,hit,date))),
+        }
+}
+
+export const MainForm = connect(dotStateToPros,dotDispatchToProps)(CanvasForm);
+
+//login without react-redux
+import React from "react";
+import $ from 'jquery';
+import {createBrowserHistory} from "history";
+export class Login extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {username: "",password:""};
+        this.setPassword=this.setPassword.bind(this);
+        this.setUserName=this.setUserName.bind(this);
+        this.login=this.login.bind(this);
+        this.setState = this.setState.bind(this);
+
+    }
+
+
+    login() {
+        let pw = this.state.password;
+        let un = this.state.username;
+        let bridge = this;
+        $.ajax({
+                url: "api/main",
+                method:"POST",
+                data:{
+                    password: pw,
+                    username: un
+                },
+                async:false,
+                success:function (res){
+                    if(res.success){
+                        const history = createBrowserHistory();
+                        history.push('/main');
+                    }else {
+                        alert(res.message);
+                    }
+                }
+            }
+        );
+    }
+    setUserName(event){
+        this.setState({username:event.target.value});
+    }
+    setPassword(event){
+        this.setState({password:event.target.value});
+    }
+    render() {
+        return (
+            <form id={"login_form"}>
+                <label>
+                    Name:
+                    <input type="text" value={this.state.username} onChange={this.setUserName}/>
+                </label>
+                <br/>
+                <label>
+                    Password:
+                    <input type="password" value={this.state.password} onChange={this.setPassword}/>
+                </label>
+                <br/>
+                <br/>
+                <button onClick={this.login}>Log in</button>
+            </form>
+        );
+    }
+}
+////table
+                <Table data={Dots}>
+                    <Column width={100} sort fixed resizable>
+                        <HeaderCell>X</HeaderCell>
+                        <Cell dataKey="x" />
+                    </Column>
+                    <Column width={100} sort resizable>
+                        <HeaderCell>Y</HeaderCell>
+                        <Cell dataKey="y" />
+                    </Column>
+                    <Column width={100} sort resizable>
+                        <HeaderCell>R</HeaderCell>
+                        <Cell dataKey="r" />
+                    </Column>
+                    <Column width={100} sort resizable>
+                        <HeaderCell>Hit</HeaderCell>
+                        <Cell dataKey="hit" />
+                    </Column>
+                    <Column width={100} sort resizable>
+                        <HeaderCell>Date</HeaderCell>
+                        <Cell dataKey="date" />
+                    </Column>
+                </Table>
+            <table>
+                <thead>
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Hit</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                {
+                    Dots.map((ele)=>{
+                        return <tr>
+                            <th width={60}>{ele.x}</th>
+                            <th width={60}>{ele.y}</th>
+                            <th width={60}>{ele.r}</th>
+                            <th width={60}>{ele.hit+""}</th>
+                            <th width={200}>{ele.date}</th>
+                        </tr>
+                    })
+                }
+                </tbody>
+            </table>

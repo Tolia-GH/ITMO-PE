@@ -1,0 +1,15 @@
+.R,.X{
+    margin-right: 20px;
+}
+.R:hover,.X:hover{
+    box-shadow: inset 0 -4px 0 0 rgba(0,0,0,0.6), 0 0 8px 0 rgba(0,0,0,0.5);
+}
+.checkedR,.checkedX{
+    position: relative;
+    top: 4px;
+    box-shadow: inset 0 3px 5px 0 rgba(0,0,0,0.2);
+    outline: 0;
+}
+.margin_but{
+    margin-right: 20px;
+}
