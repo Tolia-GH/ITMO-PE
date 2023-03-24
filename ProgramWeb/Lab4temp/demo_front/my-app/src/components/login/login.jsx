@@ -10,31 +10,37 @@ class Login extends React.Component {
     render() {
         const {password,username,setPassword,setUsername,login,toRegister}=this.props;
         return (
-            <div className={"form_field"}>
-                <form id={"login_form"} className={"form-horizontal"}>
-                    <div className={"form-group"}>
-                        <label className={"col-xs-2 col-sm-1"}>
-                            Username:
-                        </label>
-                        <div className={"col-xs-10 col-sm-2"}>
-                            <input className={"form-control"} type="text" value={username} onChange={setUsername}/>
-                        </div>
-                    </div>
-                    <div className={"form-group"}>
-                        <label className={"col-xs-2 col-sm-1"}>
-                            Password:
-                        </label>
-                        <div className={"col-xs-10 col-sm-2"}>
-                            <input className={"form-control"} type="password" value={password} onChange={setPassword}/>
-                        </div>
-                    </div>
-                    <div>
-                        <button onClick={()=>login(username,password)} className={"col-xs-2 col-sm-1 .btn-primary margin_but"}>Log in</button>
-                        <button onClick={()=>toRegister()} className={"col-xs-2 col-sm-1 .btn-primary"}>register</button>
-                    </div>
-                </form>
+            <div>
+                <div className={"header_col"}>
+                    <a id={"fork_me"} href={"https://github.com/Tolia-GH/ITMO-PE"}>
+                        View on GitHub
+                    </a>
+                    <h1 id={"web_title"}>Lab4</h1>
+                    <h2 id={"web_author"}>P32131 Чжоу Хунсян 13109</h2>
+                </div>
+                <div className={"form_block"}>
+                    <form id={"login_form"} className={"form-horizontal"}>
+                        <fieldset className={"form-field"}>
+                            <div className={"form-group"}>
+                                <label>
+                                    Username:
+                                </label>
+                                <input className={"form_input"} type="text" value={username} onChange={setUsername}/>
+                            </div>
+                            <div className={"form-group"}>
+                                <label>
+                                    Password:
+                                </label>
+                                <input className={"form_input"} type="password" value={password} onChange={setPassword}/>
+                            </div>
+                            <div id={"buttons_set"}>
+                                <button onClick={()=>login(username,password)} className={"click_button"}>Log in</button>
+                                <button onClick={()=>toRegister()} className={"click_button"}>register</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
-
         );
     }
 }

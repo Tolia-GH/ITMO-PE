@@ -9,30 +9,38 @@ class RegisterBasic extends React.Component {
     render() {
         const {password, username,signUp,setUsername,setPassword} = this.props;
         return (
-            <div className={"form_field"}>
-            <form id={"register_form"} className={"form-horizontal"}>
-                <div>
-                    Now you can sign up your own account!
+            <div>
+                <div className={"header_col"}>
+                    <a id={"fork_me"} href={"https://github.com/Tolia-GH/ITMO-PE"}>
+                        View on GitHub
+                    </a>
+                    <h1 id={"web_title"}>Lab4</h1>
+                    <h2 id={"web_author"}>P32131 Чжоу Хунсян 13109</h2>
                 </div>
-                <div className={"form-group"}>
-                    <label className={"col-xs-2 col-sm-1"}>
-                        Name:
-                    </label>
-                    <div className={"col-xs-10 col-sm-2"}>
-                        <input type="text" className={"form-control"} value={username} onChange={setUsername}/>
-                    </div>
+                <div className={"form_block"}>
+                    <form id={"register_form"} className={"form-horizontal"}>
+                        <h3>
+                            Create new account
+                        </h3>
+                        <fieldset className={"form-field"}>
+
+                            <div className={"form-group"}>
+                                <label>
+                                    Name:
+                                </label>
+                                <input type="text" className={"form_input"} value={username} onChange={setUsername}/>
+                            </div>
+                            <div className={"form-group"}>
+                                <label>
+                                    Password:
+                                </label>
+                                <input type="password" className={"form_input"} value={password} onChange={setPassword}/>
+                            </div>
+                            <button id={"sign_up"} onClick={() => signUp(username, password)}>Sign up</button>
+                        </fieldset>
+                    </form><br/>
+                    <a href={"/"}>Home</a>
                 </div>
-                <div className={"form-group"}>
-                    <label className={"col-xs-2 col-sm-1"}>
-                     Password:
-                    </label>
-                    <div className={"col-xs-10 col-sm-2"}>
-                        <input type="password" className={"form-control"} value={password} onChange={setPassword}/>
-                    </div>
-                </div>
-                <button onClick={() => signUp(username, password)}>Sign up</button>
-            </form><br/>
-            <a href={"/"}>Home</a>
             </div>
         );
     }
