@@ -1,6 +1,6 @@
 import React from "react";
 import $ from "jquery";
-import '../../assets/css/addtional.css';
+import '../../assets/css/user_entry.css';
 import PropTypes from 'prop-types';
 import {connect} from "react-redux";
 import {addDot, GetR, GetX, GetY} from "../reduxStore/action/action";
@@ -8,7 +8,7 @@ import {addDot, GetR, GetX, GetY} from "../reduxStore/action/action";
 //pure ui component,which only deal with view
 class CanvasForm extends React.Component{
     render(){
-        const { X,Y,R,getX,getY,getR,submitForm} = this.props;
+        const {X,Y,R,getX,getY,getR,submitForm} = this.props;
         let username = window.sessionStorage.getItem("username");
         if(username===null||username===""){
             return (<div>Ah,ha. Seems that you try to bypass login</div>);

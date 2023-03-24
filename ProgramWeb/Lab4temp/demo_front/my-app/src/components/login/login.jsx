@@ -4,34 +4,37 @@ import {createBrowserHistory} from "history";
 import PropTypes from 'prop-types';
 import {getPassword,getUsername} from "../reduxStore/action/action";
 import {connect} from "react-redux";
-import '../../assets/css/addtional.css';
+import '../../assets/css/user_entry.css';
 
 class Login extends React.Component {
     render() {
         const {password,username,setPassword,setUsername,login,toRegister}=this.props;
         return (
-            <form id={"login_form"} className={"form-horizontal"}>
-                <div className={"form-group"}>
-                    <label className={"col-xs-2 col-sm-1"}>
-                        Username:
-                    </label>
-                    <div className={"col-xs-10 col-sm-2"}>
-                    <input className={"form-control"} type="text" value={username} onChange={setUsername}/>
+            <div className={"form_field"}>
+                <form id={"login_form"} className={"form-horizontal"}>
+                    <div className={"form-group"}>
+                        <label className={"col-xs-2 col-sm-1"}>
+                            Username:
+                        </label>
+                        <div className={"col-xs-10 col-sm-2"}>
+                            <input className={"form-control"} type="text" value={username} onChange={setUsername}/>
+                        </div>
                     </div>
-                </div>
-                <div className={"form-group"}>
-                    <label className={"col-xs-2 col-sm-1"}>
-                        Password:
-                    </label>
-                    <div className={"col-xs-10 col-sm-2"}>
-                        <input className={"form-control"} type="password" value={password} onChange={setPassword}/>
-                     </div>
-                </div>
-                <div>
-                    <button onClick={()=>login(username,password)} className={"col-xs-2 col-sm-1 .btn-primary margin_but"}>Log in</button>
-                    <button onClick={()=>toRegister()} className={"col-xs-2 col-sm-1 .btn-primary"}>register</button>
-                </div>
-            </form>
+                    <div className={"form-group"}>
+                        <label className={"col-xs-2 col-sm-1"}>
+                            Password:
+                        </label>
+                        <div className={"col-xs-10 col-sm-2"}>
+                            <input className={"form-control"} type="password" value={password} onChange={setPassword}/>
+                        </div>
+                    </div>
+                    <div>
+                        <button onClick={()=>login(username,password)} className={"col-xs-2 col-sm-1 .btn-primary margin_but"}>Log in</button>
+                        <button onClick={()=>toRegister()} className={"col-xs-2 col-sm-1 .btn-primary"}>register</button>
+                    </div>
+                </form>
+            </div>
+
         );
     }
 }

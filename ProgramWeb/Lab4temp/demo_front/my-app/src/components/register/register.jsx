@@ -3,12 +3,13 @@ import PropTypes from "prop-types";
 import $ from "jquery";
 import {getPassword, getUsername} from "../reduxStore/action/action";
 import {connect} from "react-redux";
+import '../../assets/css/user_entry.css'
 
 class RegisterBasic extends React.Component {
     render() {
         const {password, username,signUp,setUsername,setPassword} = this.props;
         return (
-            <div>
+            <div className={"form_field"}>
             <form id={"register_form"} className={"form-horizontal"}>
                 <div>
                     Now you can sign up your own account!
