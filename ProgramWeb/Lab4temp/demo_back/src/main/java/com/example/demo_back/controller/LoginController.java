@@ -1,7 +1,7 @@
 package com.example.demo_back.controller;
 
 import com.example.demo_back.JPAdatabase.AccountJpa;
-import com.example.demo_back.dto.LoginResponse;
+import com.example.demo_back.response.LoginResponse;
 import com.example.demo_back.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,7 +24,7 @@ public class LoginController {
         if (request.getParameter("username") == null || request.getParameter("password") == null || request.getParameter("username").equals("") || request.getParameter("password").equals("")) {
             LoginResponse loginResponse = new LoginResponse();
             loginResponse.setSuccess(false);
-            loginResponse.setMessage("Username or password can't be empty");
+            loginResponse.setMessage("Username or password can't be empty!");
             return loginResponse;
         }
         System.out.print("username=" + request.getParameter("username") + " password=" + request.getParameter("password") + "\n");
@@ -32,15 +32,15 @@ public class LoginController {
         String password = request.getParameter("password");
         password = passwordSHA(password);
         List<AccountJpa> list = accountService.findAccountByName(username);
-        if (list.size() == 1&&list.get(0).getPassword().equals(password)) {
+        if (list.size() == 1 && list.get(0).getPassword().equals(password)) {
             LoginResponse loginResponse = new LoginResponse();
             loginResponse.setSuccess(true);
-            loginResponse.setMessage("Access");
+            loginResponse.setMessage("Welcome, " + request.getParameter("username"));
             return loginResponse;
         } else {
             LoginResponse loginResponse = new LoginResponse();
             loginResponse.setSuccess(false);
-            loginResponse.setMessage("Denied");
+            loginResponse.setMessage("Username or Password error!");
             return loginResponse;
         }
     }

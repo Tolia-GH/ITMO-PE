@@ -76,7 +76,7 @@ function register(username,password){
                 username: username
             },
             async:false,
-            success:function (res){
+            success:function (res) {
                 if(res.success){
                     alert("success");
                 }else {

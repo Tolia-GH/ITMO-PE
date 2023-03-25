@@ -215,6 +215,11 @@ h3 {
     font-size: 18px;
     font-weight: 200;
 }
+th {
+    font-family: Arial;
+    font-weight: lighter;
+    font-size: 16px;
+}
 
 @media screen and (max-width: 718px) {
 

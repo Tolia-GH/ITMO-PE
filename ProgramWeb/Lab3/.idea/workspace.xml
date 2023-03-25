@@ -10,13 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1ddd205-d084-45ef-9a76-a23ca63ca0e4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1ddd205-d084-45ef-9a76-a23ca63ca0e4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DataBase/DataBaseStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataBase/DataBaseStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/DataBase/DataBaseStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lab3-1.0-SNAPSHOT/WEB-INF/classes/DataBase/DataBaseStorage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataBase/DataBaseStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataBase/DataBaseStorage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/JPAdatabase/AccountJpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/JPAdatabase/AccountJpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/controller/GetDotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/controller/GetDotController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/dto/DotResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/response/DotResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/dto/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/response/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/dto/ResultSignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/response/ResultSignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,18 +263,6 @@
         </option>
       </method>
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings />
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="GlassFish Server.GlassFish 5.0.0" />
       <item itemvalue="JBoss/WildFly Server.JBoss/WildFly 26.1.3.Final" />
@@ -289,6 +282,7 @@
       <workItem from="1679043233045" duration="16094000" />
       <workItem from="1679086765948" duration="95548000" />
       <workItem from="1679656242916" duration="8029000" />
+      <workItem from="1679747363112" duration="3885000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,7 @@
 package com.example.demo_back.controller;
 
 import com.example.demo_back.JPAdatabase.AccountJpa;
-import com.example.demo_back.dto.ResultSignUp;
+import com.example.demo_back.response.ResultSignUp;
 import com.example.demo_back.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +22,7 @@ public class RegisterController {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         List<AccountJpa> list = accountService.findAccountByName(username);
-        if(list.size()>0){
+        if(list.size() > 0){
             ResultSignUp resultSignUp = new ResultSignUp();
             resultSignUp.setSuccess(false);
             resultSignUp.setMessage("Username existed");
@@ -32,7 +32,7 @@ public class RegisterController {
             accountService.addAccount(username,password);
             ResultSignUp resultSignUp = new ResultSignUp();
             resultSignUp.setSuccess(true);
-            resultSignUp.setMessage("success");
+            resultSignUp.setMessage("Account create successfully");
             return resultSignUp;
         }
     }

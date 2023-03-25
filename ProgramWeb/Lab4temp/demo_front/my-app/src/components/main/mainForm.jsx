@@ -38,7 +38,7 @@ class CanvasForm extends React.Component{
                                     Please input Y:
                                 </label>
                                 <div className={"col-xs-10 col-sm-2"}>
-                                    <input type={"text"} name={"Y"} className={"form_input"} value={Y} onChange={getY}/>
+                                    <input type={"text"} name={"Y"} className={"form_input"} value={Y} placeholder={"from -5 to 5"} onChange={getY}/>
                                 </div>
                             </div>
                             <div className={"form-group"}>

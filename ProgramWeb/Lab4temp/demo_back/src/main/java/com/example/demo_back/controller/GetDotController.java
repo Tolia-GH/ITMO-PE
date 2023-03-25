@@ -1,7 +1,7 @@
 package com.example.demo_back.controller;
 
 import com.example.demo_back.configuration.bean.Dot;
-import com.example.demo_back.dto.DotResponse;
+import com.example.demo_back.response.DotResponse;
 import com.example.demo_back.service.DotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,13 +22,13 @@ public class GetDotController {
             Double X = Double.parseDouble(request.getParameter("X"));
             Double Y = Double.parseDouble(request.getParameter("Y"));
             Integer R = Integer.parseInt(request.getParameter("R"));
-            if(Y > 4.0||Y <- 4.0){
+            if(Y > 5.0||Y <- 5.0){
                 DotResponse responseDot = new DotResponse();
-                responseDot.setMessage("Please make sure your y is not bigger than 3, and not smaller than -3\n");
+                responseDot.setMessage("Please make sure your y is not bigger than 5, and not smaller than -5\n");
                 return responseDot;
             }else if(X > 4 || X < -4){
                 DotResponse responseDot = new DotResponse();
-                responseDot.setMessage("Please make sure your X is not bigger than -5, and not smaller than 3\n");
+                responseDot.setMessage("Please make sure your X is not bigger than 4, and not smaller than -4\n");
                 return responseDot;
             }/*
             here is spring bean, i finished it at beginning. But in fact it's not important in this lab(

@@ -14,5 +14,4 @@ public class AccountJpa{
     private String username;
     @Column(nullable = false,name="Password")
     private String password;
-
 }
