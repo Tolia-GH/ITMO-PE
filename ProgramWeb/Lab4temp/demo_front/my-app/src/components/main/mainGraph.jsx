@@ -127,27 +127,27 @@ function drawBackground(refs,R){
     pen.stroke();
 
     //clear a range and set it's transparency
-    pen.fillStyle = "orange";
-    pen.globalAlpha = 0.5;
+    pen.fillStyle = "#2f9aff";
+    pen.globalAlpha = 0.8;
 
     //fourth quadrant
     pen.beginPath();
-    pen.rect(x,y,r,r);
+    pen.rect(x,y-r,r,r);
     pen.closePath();
     pen.fill();
 
     //first quadrant
     pen.beginPath();
-    pen.moveTo(x,y);
-    pen.arc(x,y,r,1.5*Math.PI,2*Math.PI);
+    pen.moveTo(x, y);
+    pen.arc(x, y,r/2,0.5 * Math.PI, Math.PI);
     pen.closePath();
     pen.fill();
 
     //third quadrant
     pen.beginPath();
-    pen.moveTo(x,y);
-    pen.lineTo(x,y+r);
-    pen.lineTo(x-r/2,y);
+    pen.moveTo(x, y);
+    pen.lineTo(x,y-r);
+    pen.lineTo(x-r/2, y);
     pen.fill();
     pen.closePath();
 
@@ -217,13 +217,13 @@ function drawDot(Dot,pen,R){
     if(Dot.hit){
         pen.fillStyle = "green";
     }else {
-        pen.fillStyle = "blue";
+        pen.fillStyle = "red";
     }
     let xDraw = translateInputX(Dot.x,R,x,r);
     let yDraw = translateInputY(Number(Dot.y),R,y,r);
     pen.arc(xDraw, yDraw, 2, 0,360,false);
     pen.fill();
-    pen.stroke();
+    //pen.stroke();
     pen.closePath();
 }
 function translateInputY(inputY,inputR,coordinateY,coordinateR){
