@@ -1,6 +1,6 @@
 package com.example.demo_back.controller;
 
-import com.example.demo_back.dao.AccountJpa;
+import com.example.demo_back.JPAdatabase.AccountJpa;
 import com.example.demo_back.dto.LoginResponse;
 import com.example.demo_back.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -8,18 +8,22 @@
 <!--        <param-name>javax.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL</param-name>-->
 <!--        <param-value>true</param-value>-->
 <!--    </context-param>-->
-<!--    <servlet>-->
-<!--        <servlet-name>Faces Servlet</servlet-name>-->
-<!--        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>-->
-<!--        <load-on-startup>1</load-on-startup>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>Faces Servlet</servlet-name>-->
-<!--        <url-pattern>*.xhtml</url-pattern>-->
-<!--    </servlet-mapping>-->
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
 <!--    <context-param>-->
 <!--        <param-name>org.icefaces.mandatoryResourceConfiguration</param-name>-->
 <!--        <param-value>dataTable panel chart menu menuItem menuBar dateTimeEntry textEntry dialog pushButton maskedEntry</param-value>-->
+<!--    </context-param>-->
+<!--    <context-param>-->
+<!--        <param-name>javax.faces.DEFAULT_SUFFIX</param-name>-->
+<!--        <param-value>.jsp</param-value>-->
 <!--    </context-param>-->
 
     <welcome-file-list>

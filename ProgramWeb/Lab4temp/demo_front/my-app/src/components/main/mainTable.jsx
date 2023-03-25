@@ -13,7 +13,6 @@ class Table extends React.Component{
         }
         return(
             <div className={"table_block"}>
-                {/*<a onClick={Home} href={"/"}>Home</a>*/}
                 <table className={"result_table"} >
                     <thead>
                     <tr>
@@ -26,7 +25,7 @@ class Table extends React.Component{
                     </thead>
                     <tbody>
                     {
-                        Dots.map((ele,key)=>{
+                        Dots.map((ele,key) => {
                             return <tr key={key}>
                                 <th width={60}>{ele.x}</th>
                                 <th width={60}>{ele.y}</th>

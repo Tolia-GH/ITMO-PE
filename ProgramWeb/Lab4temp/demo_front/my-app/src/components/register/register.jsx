@@ -27,7 +27,7 @@ class RegisterBasic extends React.Component {
 
                             <div className={"form-group"}>
                                 <label>
-                                    Name:
+                                    Username:
                                 </label>
                                 <input type="text" className={"form_input"} value={username} onChange={setUsername}/>
                             </div>

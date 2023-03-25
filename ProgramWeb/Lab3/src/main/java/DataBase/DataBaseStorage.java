@@ -17,26 +17,6 @@ import java.sql.SQLException;
 
 @NoArgsConstructor
 public class DataBaseStorage implements Serializable {
-    private static SessionFactory sessionFactory = null;
-
-    public static SessionFactory getSessionFactory() {
-        if(sessionFactory==null){
-            Configuration configuration = new Configuration().configure();
-            configuration.addAnnotatedClass(DotsTable.class);
-            ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
-                    .applySettings(configuration.getProperties()).build();
-            sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-        }
-        return sessionFactory;
-    }
-
-    public void addDot(DotsTable dot){
-        Session session = getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
-        session.save(dot);
-        transaction.commit();
-        session.close();
-    }
 
     public void addNewDot(DotsTable dot) throws Exception{
         String url = "jdbc:postgresql://localhost:5432/postgres";
@@ -57,12 +37,5 @@ public class DataBaseStorage implements Serializable {
         }catch (SQLException e){
             e.printStackTrace();
         }
-    }
-    public void deleteDot(DotsTable dot){
-        Session session = getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
-        session.delete(dot);
-        transaction.commit();
-        session.close();
     }
 }

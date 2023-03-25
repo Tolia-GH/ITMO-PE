@@ -1,7 +1,7 @@
 package com.example.demo_back.service;
 
-import com.example.demo_back.dao.DotJpa;
-import com.example.demo_back.dao.DotRepository;
+import com.example.demo_back.JPAdatabase.DotJpa;
+import com.example.demo_back.JPAdatabase.DotRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

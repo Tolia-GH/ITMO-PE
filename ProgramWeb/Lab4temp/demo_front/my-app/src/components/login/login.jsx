@@ -34,7 +34,7 @@ class Login extends React.Component {
                                 <input className={"form_input"} type="password" value={password} onChange={setPassword}/>
                             </div>
                             <div id={"buttons_set"}>
-                                <button onClick={()=>login(username,password)} id={"login"} className={"click_button"}>Log in</button>
+                                <button onClick={()=>login(username, password)} id={"login"} className={"click_button"}>Log in</button>
                                 <button onClick={()=>toRegister()} id={"signup"} className={"click_button"}>Sign up</button>
                             </div>
                         </fieldset>

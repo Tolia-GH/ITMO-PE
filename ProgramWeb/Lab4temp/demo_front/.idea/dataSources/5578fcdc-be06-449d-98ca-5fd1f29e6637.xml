@@ -4264,12 +4264,14 @@ sequence|table|24625|24626|1
     <sequence id="266" parent="264" name="account_jpa_id_seq">
       <DataType>integer|0s</DataType>
       <ObjectId>24616</ObjectId>
+      <Outdated>1</Outdated>
       <StateNumber>2037</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="267" parent="264" name="dot_jpa_id_seq">
       <DataType>integer|0s</DataType>
       <ObjectId>24625</ObjectId>
+      <Outdated>1</Outdated>
       <StateNumber>2038</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
