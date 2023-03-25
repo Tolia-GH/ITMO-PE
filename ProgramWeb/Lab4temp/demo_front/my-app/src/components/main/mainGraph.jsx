@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import $ from "jquery";
 import {addDot} from "../reduxStore/action/action";
+
 //pure ui
-const x = 175;
+const x = 150;
 const y = 150;
 const r = 100;
 class CanvasGraphComponent extends React.Component {
@@ -36,8 +37,8 @@ class CanvasGraphComponent extends React.Component {
             return (<div> </div>);
         }
         return (
-            <canvas ref={"canvas"} id={"clickGraph"} width={350} height={300} onClick={(event)=>{
-            clickGraph(document.getElementById("clickGraph").getBoundingClientRect(),event,R);}}/>
+            <canvas ref={"canvas"} id={"click_graph"} width={300} height={300} onClick={(event)=>{
+            clickGraph(document.getElementById("click_graph").getBoundingClientRect(),event,R);}}/>
             );
     }
 }

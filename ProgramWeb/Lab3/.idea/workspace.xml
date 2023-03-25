@@ -10,23 +10,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a8aa748-c0d4-4302-a70f-834df14b2218" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/.idea/demo_front.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/.idea/demo_front.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/configuration/bean/Dot.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/configuration/bean/Dot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/controller/GetDotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/controller/GetDotController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/dto/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_back/src/main/java/com/example/demo_back/dto/LoginResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/0.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/1.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/10.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/11.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/12.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/13.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/14.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/14.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/15.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/15.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/3.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/4.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/5.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/6.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/7.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/8.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/9.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/index.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/src/assets/css/user_entry.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/src/assets/css/user_entry.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/src/assets/css/user_entry.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/src/components/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/src/components/login/login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/src/components/main/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/src/components/main/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/src/components/main/mainForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/src/components/main/mainForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/src/components/main/mainGraph.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/src/components/main/mainGraph.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/src/components/main/mainTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/src/components/main/mainTable.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/src/components/register/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4temp/demo_front/my-app/src/components/register/register.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -299,7 +310,7 @@
       <workItem from="1678991855156" duration="3835000" />
       <workItem from="1679043233045" duration="16094000" />
       <workItem from="1679086765948" duration="95548000" />
-      <workItem from="1679656242916" duration="2520000" />
+      <workItem from="1679656242916" duration="3748000" />
     </task>
     <servers />
   </component>

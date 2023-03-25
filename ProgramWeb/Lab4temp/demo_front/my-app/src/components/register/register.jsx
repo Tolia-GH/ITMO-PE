@@ -3,11 +3,12 @@ import PropTypes from "prop-types";
 import $ from "jquery";
 import {getPassword, getUsername} from "../reduxStore/action/action";
 import {connect} from "react-redux";
-import '../../assets/css/user_entry.css'
+import '../../assets/css/page_style.css'
+import {Link} from "react-router-dom";
 
 class RegisterBasic extends React.Component {
     render() {
-        const {password, username,signUp,setUsername,setPassword} = this.props;
+        const {password, username, signUp, setUsername, setPassword} = this.props;
         return (
             <div>
                 <div className={"header_col"}>
@@ -38,8 +39,9 @@ class RegisterBasic extends React.Component {
                             </div>
                             <button id={"sign_up"} onClick={() => signUp(username, password)}>Sign up</button>
                         </fieldset>
-                    </form><br/>
-                    <a href={"/"}>Home</a>
+                    </form>
+
+                    <Link className={"link"} to={"/"}><button id={"back"} className={"click_button"}>Back</button></Link>
                 </div>
             </div>
         );

@@ -4,7 +4,7 @@ import {createBrowserHistory} from "history";
 import PropTypes from 'prop-types';
 import {getPassword,getUsername} from "../reduxStore/action/action";
 import {connect} from "react-redux";
-import '../../assets/css/user_entry.css';
+import '../../assets/css/page_style.css';
 
 class Login extends React.Component {
     render() {
@@ -22,20 +22,20 @@ class Login extends React.Component {
                     <form id={"login_form"} className={"form-horizontal"}>
                         <fieldset className={"form-field"}>
                             <div className={"form-group"}>
-                                <label>
+                                <label className={"var_label"}>
                                     Username:
                                 </label>
                                 <input className={"form_input"} type="text" value={username} onChange={setUsername}/>
                             </div>
                             <div className={"form-group"}>
-                                <label>
+                                <label className={"var_label"}>
                                     Password:
                                 </label>
                                 <input className={"form_input"} type="password" value={password} onChange={setPassword}/>
                             </div>
                             <div id={"buttons_set"}>
-                                <button onClick={()=>login(username,password)} className={"click_button"}>Log in</button>
-                                <button onClick={()=>toRegister()} className={"click_button"}>register</button>
+                                <button onClick={()=>login(username,password)} id={"login"} className={"click_button"}>Log in</button>
+                                <button onClick={()=>toRegister()} id={"signup"} className={"click_button"}>Sign up</button>
                             </div>
                         </fieldset>
                     </form>

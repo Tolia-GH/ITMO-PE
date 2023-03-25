@@ -2,24 +2,26 @@ import * as React from 'react';
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import {createBrowserHistory} from "history";
+import {Link} from "react-router-dom";
+
 class Table extends React.Component{
     render() {
         const {Dots,Home} = this.props;
         let username = window.sessionStorage.getItem("username");
-        if(username===null||username===""){
+        if(username === null || username === ""){
             return (<div> </div>);
         }
         return(
-            <div>
-                <a onClick={Home} href={"/"}>Home</a>
-                <table className={"table table-striped table-bordered table-hover table-condensed"}>
+            <div className={"table_block"}>
+                {/*<a onClick={Home} href={"/"}>Home</a>*/}
+                <table className={"result_table"} >
                     <thead>
                     <tr>
-                        <th>X</th>
-                        <th>Y</th>
-                        <th>R</th>
-                        <th>Hit</th>
-                        <th>Date</th>
+                        <th width={60}>X</th>
+                        <th width={60}>Y</th>
+                        <th width={60}>R</th>
+                        <th width={60}>Hit</th>
+                        <th width={200}>Date</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -49,7 +51,7 @@ function mapStateToProps(state){
         Dots:state.dot.Dots,
     };
 }
-function mapFunToProps(dispatch){
+function mapFunToProps(dispatch) {
     return{
         Home:()=>{
             window.sessionStorage.clear();

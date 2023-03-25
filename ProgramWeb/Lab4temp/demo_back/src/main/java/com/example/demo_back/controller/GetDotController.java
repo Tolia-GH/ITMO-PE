@@ -25,11 +25,11 @@ public class GetDotController {
             Double X = Double.parseDouble(request.getParameter("X"));
             Double Y = Double.parseDouble(request.getParameter("Y"));
             Integer R = Integer.parseInt(request.getParameter("R"));
-            if(Y>3.0||Y<-3.0){
+            if(Y > 4.0||Y <- 4.0){
                 ResponseDot responseDot = new ResponseDot();
                 responseDot.setMessage("Please make sure your y is not bigger than 3, and not smaller than -3\n");
                 return responseDot;
-            }else if(X>3||X<-5){
+            }else if(X > 4 || X < -4){
                 ResponseDot responseDot = new ResponseDot();
                 responseDot.setMessage("Please make sure your X is not bigger than -5, and not smaller than 3\n");
                 return responseDot;

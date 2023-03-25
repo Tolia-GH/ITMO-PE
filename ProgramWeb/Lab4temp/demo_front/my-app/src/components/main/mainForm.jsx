@@ -1,9 +1,9 @@
 import React from "react";
 import $ from "jquery";
-import '../../assets/css/user_entry.css';
 import PropTypes from 'prop-types';
 import {connect} from "react-redux";
 import {addDot, GetR, GetX, GetY} from "../reduxStore/action/action";
+import {Link} from "react-router-dom";
 
 //pure ui component,which only deal with view
 class CanvasForm extends React.Component{
@@ -14,51 +14,57 @@ class CanvasForm extends React.Component{
             return (<div>Ah,ha. Seems that you try to bypass login</div>);
         }else {
             return (
-                <div>
-                    <form id={"canvas_form"} role={"form"}>
-                        <div className={"form-group"}>
-                            <label>
-                                choose your x:
-                            </label>
-                            <div>
-                                <button type={"button"} name={"X"} className={"X"} onClick={() => getX(-5)}>-5</button>
-                                <button type={"button"} name={"X"} className={"X"} onClick={() => getX(-4)}>-4</button>
-                                <button type={"button"} name={"X"} className={"X"} onClick={() => getX(-3)}>-3</button>
-                                <button type={"button"} name={"X"} className={"X"} onClick={() => getX(-2)}>-2</button>
-                                <button type={"button"} name={"X"} className={"X"} onClick={() => getX(-1)}>-1</button>
-                                <button type={"button"} name={"X"} className={"X"} onClick={() => getX(0)}>0</button>
-                                <button type={"button"} name={"X"} className={"X"} onClick={() => getX(1)}>1</button>
-                                <button type={"button"} name={"X"} className={"X"} onClick={() => getX(2)}>2</button>
-                                <button type={"button"} name={"X"} className={"X"} onClick={() => getX(3)}>3</button>
+                <div className={"form_block"}>
+                    <fieldset className={"form-field"}>
+                        <form id={"canvas_form"} role={"form"}>
+                            <div className={"form-group"}>
+                                <label>
+                                    Please input X:
+                                </label>
+                                <div>
+                                    <button type={"button"} name={"X"} className={"X"} onClick={() => getX(-4)}>-4</button>
+                                    <button type={"button"} name={"X"} className={"X"} onClick={() => getX(-3)}>-3</button>
+                                    <button type={"button"} name={"X"} className={"X"} onClick={() => getX(-2)}>-2</button>
+                                    <button type={"button"} name={"X"} className={"X"} onClick={() => getX(-1)}>-1</button>
+                                    <button type={"button"} name={"X"} className={"X"} onClick={() => getX(0)}>0</button>
+                                    <button type={"button"} name={"X"} className={"X"} onClick={() => getX(1)}>1</button>
+                                    <button type={"button"} name={"X"} className={"X"} onClick={() => getX(2)}>2</button>
+                                    <button type={"button"} name={"X"} className={"X"} onClick={() => getX(3)}>3</button>
+                                    <button type={"button"} name={"X"} className={"X"} onClick={() => getX(4)}>4</button>
+                                </div>
                             </div>
-                        </div>
-                        <div className={"form-group"}>
-                            <label>
-                                input Y:
-                            </label>
-                            <br/>
-                            <div className={"col-xs-10 col-sm-2"}>
-                                <input type={"text"} name={"Y"} className={"form-control"} value={Y} onChange={getY}/>
+                            <div className={"form-group"}>
+                                <label>
+                                    Please input Y:
+                                </label>
+                                <div className={"col-xs-10 col-sm-2"}>
+                                    <input type={"text"} name={"Y"} className={"form_input"} value={Y} onChange={getY}/>
+                                </div>
                             </div>
-                        </div>
-                        <br/>
-                        <div className={"form-group"}>
-                            <label>
-                                choose your R:
-                            </label>
-                            <div>
-                                <button type={"button"} name={"R"} className={"R"} onClick={() => getR(0)}>0</button>
-                                <button type={"button"} name={"R"} className={"R"} onClick={() => getR(1)}>1</button>
-                                <button type={"button"} name={"R"} className={"R"} onClick={() => getR(2)}>2</button>
-                                <button type={"button"} name={"R"} className={"R"} onClick={() => getR(3)}>3</button>
-                                <button type={"button"} name={"R"} className={"R"} onClick={() => getR(4)}>4</button>
-                                <button type={"button"} name={"R"} className={"R"} onClick={() => getR(5)}>5</button>
+                            <div className={"form-group"}>
+                                <label>
+                                    Please input R:
+                                </label>
+                                <div>
+                                    <button type={"button"} name={"X"} className={"X"} onClick={() => getR(-4)}>-4</button>
+                                    <button type={"button"} name={"X"} className={"X"} onClick={() => getR(-3)}>-3</button>
+                                    <button type={"button"} name={"X"} className={"X"} onClick={() => getR(-2)}>-2</button>
+                                    <button type={"button"} name={"X"} className={"X"} onClick={() => getR(-1)}>-1</button>
+                                    <button type={"button"} name={"R"} className={"R"} onClick={() => getR(0)}>0</button>
+                                    <button type={"button"} name={"R"} className={"R"} onClick={() => getR(1)}>1</button>
+                                    <button type={"button"} name={"R"} className={"R"} onClick={() => getR(2)}>2</button>
+                                    <button type={"button"} name={"R"} className={"R"} onClick={() => getR(3)}>3</button>
+                                    <button type={"button"} name={"R"} className={"R"} onClick={() => getR(4)}>4</button>
+                                </div>
                             </div>
-                        </div>
-                        <div className={"form-group"}>
-                          <button onClick={(event) => submitForm(X, Y, R, event)}>Add</button>
-                        </div>
-                    </form>
+                            <div className={"form-group"}>
+                                <button id={"submit"} onClick={(event) => submitForm(X, Y, R, event)}>Submit</button>
+                            </div>
+                        </form>
+                    </fieldset>
+
+
+                    <Link className={"link"} to={"/"}><button id={"back"} className={"click_button"}>Back</button></Link>
                 </div>
             );
         }

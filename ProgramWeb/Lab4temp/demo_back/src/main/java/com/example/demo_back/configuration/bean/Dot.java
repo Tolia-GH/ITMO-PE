@@ -27,7 +27,7 @@ public class Dot implements Serializable {
         }else if((x>=0&&y<=0) && x<=r && y>=-r){
             this.hit = true;
         }else {
-            this.hit = (x<=0&&y<=0) && x>=-r/2 && y>=-2*x-r;
+            this.hit = (x<=0&&y<=0) && x>=-(r/2) && y>=-2*x-r;
         }
     }
     private void toDateString(){

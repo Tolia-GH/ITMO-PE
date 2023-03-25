@@ -1,4 +1,5 @@
 package com.example.demo_back.dto;
+
 public class LoginResponse {
     private boolean success;
     private String message;
