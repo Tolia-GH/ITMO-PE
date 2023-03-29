@@ -5,8 +5,8 @@ import $ from "jquery";
 import {addDot} from "../reduxStore/action/action";
 
 //pure ui
-const x = 150;
-const y = 150;
+const x = 155;
+const y = 155;
 const r = 100;
 class CanvasGraphComponent extends React.Component {
     componentDidMount() {
@@ -37,7 +37,7 @@ class CanvasGraphComponent extends React.Component {
             return (<div> </div>);
         }
         return (
-            <canvas ref={"canvas"} id={"click_graph"} width={300} height={300} onClick={(event)=>{
+            <canvas ref={"canvas"} id={"click_graph"} width={310} height={310} onClick={(event)=>{
             clickGraph(document.getElementById("click_graph").getBoundingClientRect(),event,R);}}/>
             );
     }
@@ -96,7 +96,7 @@ function mapDispatchToProps(dispatch){
 function drawBackground(refs,R){
     const pen = refs;
     //background
-    pen.fillStyle = "white" ;
+    pen.fillStyle = "#f6f8fa" ;
     pen.beginPath();
     pen.clearRect(0,0,2*x,2*y);
     pen.rect(0,0,2*x, 2*y);
@@ -104,10 +104,12 @@ function drawBackground(refs,R){
     pen.fill();
 
     //axis
-    pen.beginPath();
-    pen.strokeStyle = "black";
-    pen.font = "20px Verdana";
+    pen.strokeStyle = "#f6f8fa";
     pen.strokeRect(0,0,2*x,2*y);
+    pen.beginPath();
+    pen.strokeStyle = "#373737";
+    pen.font = "20px Arial";
+
     //y
     pen.moveTo(x, 0);
     pen.lineTo(x, 2*y);
@@ -126,7 +128,7 @@ function drawBackground(refs,R){
     pen.lineTo(2*x,y);
     pen.stroke();
 
-    //clear a range and set it's transparency
+    //clear a range and set its transparency
     pen.fillStyle = "#2f9aff";
     pen.globalAlpha = 0.8;
 
@@ -155,7 +157,7 @@ function drawBackground(refs,R){
     //onx
     const length = 2.5
     pen.beginPath();
-    pen.font = "20px Verdana";
+    pen.font = "20px Arial";
     pen.moveTo(x-3/2*r,y+length);
     pen.lineTo(x-3/2*r,y-length);
     pen.moveTo(x-r,y+length);
@@ -181,15 +183,15 @@ function drawBackground(refs,R){
     pen.lineTo(x+length,y+r);
     pen.stroke();
     //put R
-    pen.fillStyle = "black";
-    pen.font = "15px Verdana";
-    pen.fillText(-1.5*R+"", x-1.5*r-20, y+8*length);
+    pen.fillStyle = "#373737";
+    pen.font = "15px Arial";
+    //pen.fillText(-1.5*R+"", x-1.5*r-20, y+8*length);
     pen.fillText(-1*R+"", x-r-10, y+8*length);
     pen.fillText(-0.5*R+"", x-0.5*r-15, y+8*length);
     pen.fillText(0.5*R+"", x+0.5*r-10, y+8*length);
     pen.fillText("0", x-10, y+8*length);
     pen.fillText(1*R+"", x+r-5, y+8*length);
-    pen.fillText(1.5*R+"", x+1.5*r-15, y+8*length);
+    //pen.fillText(1.5*R+"", x+1.5*r-15, y+8*length);
 
     pen.fillText(R+"",x+8,y-r+5);
     pen.fillText(0.5*R+"",x+8,y-0.5*r+5);
@@ -199,10 +201,9 @@ function drawBackground(refs,R){
     pen.closePath();
 }
 function clearCanvas(refs){
-    const x = 175;
-    const y = 150;
-    const rubbish = refs;
-    rubbish.clearRect(0,0,2*x,2*y);
+    const x = 155;
+    const y = 155;
+    refs.clearRect(0,0,2*x,2*y);
 }
 function drawDots(Dots,refs,R){
     const pen = refs;
@@ -221,7 +222,7 @@ function drawDot(Dot,pen,R){
     }
     let xDraw = translateInputX(Dot.x,R,x,r);
     let yDraw = translateInputY(Number(Dot.y),R,y,r);
-    pen.arc(xDraw, yDraw, 2, 0,360,false);
+    pen.arc(xDraw, yDraw, 3, 0,360,false);
     pen.fill();
     //pen.stroke();
     pen.closePath();

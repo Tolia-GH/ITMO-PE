@@ -63,9 +63,6 @@ class CanvasForm extends React.Component{
                             </div>
                         </form>
                     </fieldset>
-
-
-                    <Link className={"link"} to={"/"}><button id={"back"} className={"click_button"}>Back</button></Link>
                 </div>
             );
         }

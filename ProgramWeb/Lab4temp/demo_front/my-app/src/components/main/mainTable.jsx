@@ -1,8 +1,6 @@
 import * as React from 'react';
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
-import {createBrowserHistory} from "history";
-import {Link} from "react-router-dom";
 
 class Table extends React.Component{
     render() {

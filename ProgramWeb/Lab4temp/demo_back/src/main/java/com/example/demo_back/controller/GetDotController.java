@@ -24,7 +24,7 @@ public class GetDotController {
             Integer R = Integer.parseInt(request.getParameter("R"));
 
             String Username = request.getParameter("Username");//
-            System.out.println(Username);//
+            //System.out.println(Username);//
 
             if(Y > 5.0||Y <- 5.0){
                 DotResponse responseDot = new DotResponse();
@@ -51,7 +51,7 @@ public class GetDotController {
             return new DotResponse(newDot.getOwner(), newDot.getX(),newDot.getY(),newDot.getR(),newDot.getHit(),newDot.getDate(),"success\n",false);
         }catch (NumberFormatException e){
             DotResponse responseDot = new DotResponse();
-            responseDot.setMessage("Please input a available number for Y(like 2, -1.0, 1.5)\n");
+            responseDot.setMessage("Please input a available number for Y\n");
             return responseDot;
         }
     }

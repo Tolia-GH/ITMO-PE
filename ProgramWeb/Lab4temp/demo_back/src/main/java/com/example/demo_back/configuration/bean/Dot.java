@@ -35,7 +35,7 @@ public class Dot implements Serializable {
         }
     }
     private void toDateString(){
-        SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat ft = new SimpleDateFormat("dd.MM HH:mm");
         this.date = ft.format(new Date());
     }
 }
