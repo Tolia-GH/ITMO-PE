@@ -7,20 +7,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-public class DotBean implements BasicBean, Serializable {
+public class DotBean implements Serializable {
     private List<Dot> dotsList = new ArrayList<>();
 
     public int getNum(){
         return this.dotsList.size();
     }
 
-    @Override
     public Dot addDot(Dot dot) {
         this.dotsList.add(dot);
         return dot;
     }
 
-    @Override
     public Dot deleteDot(Dot dot) {
         this.dotsList.remove(dot);
         return dot;

@@ -8,12 +8,14 @@ import java.util.Date;
 
 @Data
 public class Dot implements Serializable {
+    private String owner;//
     private Double x;
     private Double y;
     private Integer r;
     private Boolean hit;
     private String date;
-    public Dot(Double X,Double Y, Integer R){
+    public Dot(String owner, Double X,Double Y, Integer R){
+        this.owner = owner;
         this.x = X;
         this.y = Y;
         this.r = R;

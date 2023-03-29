@@ -6,6 +6,7 @@ import '../../assets/css/page_style.css'
 
 export class Main extends React.Component {
     render() {
+        //document.getElementById("welcome_msg").innerText = window.sessionStorage.getItem("username");
         return (
             <div>
                 <div className={"header_col"}>
@@ -15,6 +16,7 @@ export class Main extends React.Component {
                     <h1 id={"web_title"}>Lab4</h1>
                     <h2 id={"web_author"}>P32131 Чжоу Хунсян 13109</h2>
                 </div>
+
                 <MainGraph/>
                 <MainForm/>
                 <MainTable/>

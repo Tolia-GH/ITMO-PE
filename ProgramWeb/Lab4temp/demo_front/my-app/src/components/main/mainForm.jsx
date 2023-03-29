@@ -13,6 +13,7 @@ class CanvasForm extends React.Component{
         if(username===null||username===""){
             return (<div>Ah,ha. Seems that you try to bypass login</div>);
         }else {
+            //alert("Welcome! " + username);
             return (
                 <div className={"form_block"}>
                     <fieldset className={"form-field"}>
@@ -92,7 +93,7 @@ function mapStateToPros(state){
 function mapDispatchToProps(dispatch){
     return{
         getX:(x)=>dispatch(GetX(x)),
-        getR:(r)=>dispatch(GetR(r)),
+        getR:(R)=>dispatch(GetR(R)),
         getY:(event)=>dispatch(GetY(event.target.value)),
         submitForm:(x,y,r,event)=>{
             event.preventDefault();

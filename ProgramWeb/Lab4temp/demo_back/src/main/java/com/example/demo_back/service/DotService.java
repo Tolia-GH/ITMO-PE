@@ -10,8 +10,9 @@ public class DotService {
     @Autowired
     DotRepository dotRepository;
 
-    public void addDot(Double x, Double y,Integer r,Boolean hit,String date){
+    public void addDot(String owner, Double x, Double y,Integer r,Boolean hit,String date){
         DotJpa dotJpa = new DotJpa();
+        dotJpa.setOwner(owner);
         dotJpa.setX(x);
         dotJpa.setY(y);
         dotJpa.setR(r);

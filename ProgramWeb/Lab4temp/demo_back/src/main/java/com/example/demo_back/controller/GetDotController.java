@@ -22,6 +22,10 @@ public class GetDotController {
             Double X = Double.parseDouble(request.getParameter("X"));
             Double Y = Double.parseDouble(request.getParameter("Y"));
             Integer R = Integer.parseInt(request.getParameter("R"));
+
+            String Username = request.getParameter("Username");//
+            System.out.println(Username);//
+
             if(Y > 5.0||Y <- 5.0){
                 DotResponse responseDot = new DotResponse();
                 responseDot.setMessage("Please make sure your y is not bigger than 5, and not smaller than -5\n");
@@ -42,9 +46,9 @@ public class GetDotController {
             //create new one
             registry.registerSingleton("dotBean", bean);
             */
-            Dot newDot = new Dot(X, Y, R);
-            dotService.addDot(newDot.getX(),newDot.getY(),newDot.getR(),newDot.getHit(),newDot.getDate());
-            return new DotResponse(newDot.getX(),newDot.getY(),newDot.getR(),newDot.getHit(),newDot.getDate(),"success\n",false);
+            Dot newDot = new Dot(Username, X, Y, R);
+            dotService.addDot(newDot.getOwner(), newDot.getX(),newDot.getY(),newDot.getR(),newDot.getHit(),newDot.getDate());
+            return new DotResponse(newDot.getOwner(), newDot.getX(),newDot.getY(),newDot.getR(),newDot.getHit(),newDot.getDate(),"success\n",false);
         }catch (NumberFormatException e){
             DotResponse responseDot = new DotResponse();
             responseDot.setMessage("Please input a available number for Y(like 2, -1.0, 1.5)\n");

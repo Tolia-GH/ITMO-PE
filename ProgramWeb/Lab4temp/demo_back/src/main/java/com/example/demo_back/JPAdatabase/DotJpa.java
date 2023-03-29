@@ -10,6 +10,8 @@ public class DotJpa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(nullable = false,name = "owner")
+    private String owner;
     @Column(nullable = false,name="X")
     private Double x;
     @Column(nullable = false,name="Y")

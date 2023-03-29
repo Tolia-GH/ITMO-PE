@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class DotResponse {
+    private String owner;
     private Double x;
     private Double y;
     private Integer r;
@@ -11,7 +12,8 @@ public class DotResponse {
     private String date;
     private String message;
     private boolean wrong = false;
-    public DotResponse(Double X, Double Y, Integer R, Boolean hit, String date, String message, boolean wrong){
+    public DotResponse(String owner, Double X, Double Y, Integer R, Boolean hit, String date, String message, boolean wrong){
+        this.owner = owner;
         this.x = X;
         this.y = Y;
         this.r = R;
@@ -21,6 +23,7 @@ public class DotResponse {
         this.wrong = wrong;
     }
     public DotResponse(){
+        this.owner = "";
         this.x = 0.0;
         this.y = 0.0;
         this.r = 0;
