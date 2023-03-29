@@ -27,7 +27,9 @@ public class LoginController {
             loginResponse.setMessage("Username or password can't be empty!");
             return loginResponse;
         }
+
         System.out.print("username=" + request.getParameter("username") + " password=" + request.getParameter("password") + "\n");
+
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         password = passwordSHA(password);

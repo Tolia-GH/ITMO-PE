@@ -29,7 +29,7 @@ public class Dot implements Serializable {
         } else if(x < 0 && y > 0) {
             this.hit = (2 * x + r) > y;
         } else if (x < 0 && y < 0) {
-            this.hit = x * x + y * y <= (r/2) * (r/2);
+            this.hit = 4 * x * x + 4 * y * y <= r * r;
         } else {
             this.hit = false;
         }

@@ -35,7 +35,7 @@ public class GetDotController {
                 responseDot.setMessage("Please make sure your X is not bigger than 4, and not smaller than -4\n");
                 return responseDot;
             }/*
-            here is spring bean, i finished it at beginning. But in fact it's not important in this lab(
+            here is spring bean, I finished it at beginning. But in fact it's not important in this lab(
             //get bean
             DotBean bean = (DotBean) DemoBackApplication.AC.getBean("dotBean");
             //destroy old one

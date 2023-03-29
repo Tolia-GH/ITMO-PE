@@ -5,6 +5,8 @@ import com.example.demo_back.JPAdatabase.DotRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class DotService {
     @Autowired
@@ -19,5 +21,9 @@ public class DotService {
         dotJpa.setHit(hit);
         dotJpa.setDate(date);
         dotRepository.save(dotJpa);
+    }
+
+    public List<DotJpa> findAllByOwner(String owner) {
+        return dotRepository.getAllByOwner(owner);
     }
 }

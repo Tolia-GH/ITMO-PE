@@ -20,6 +20,5 @@ public class AccountService {
     }
 
    public List<AccountJpa> findAccountByName(String username){
-        return accountRepository.findByUsername(username);
-    }
+        return accountRepository.findByUsername(username);}
 }
