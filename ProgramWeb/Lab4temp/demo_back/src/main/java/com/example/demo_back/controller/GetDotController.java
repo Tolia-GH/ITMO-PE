@@ -1,14 +1,17 @@
 package com.example.demo_back.controller;
 
+import com.example.demo_back.JPAdatabase.DotJpa;
 import com.example.demo_back.configuration.bean.Dot;
 import com.example.demo_back.response.DotResponse;
 import com.example.demo_back.service.DotService;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 public class GetDotController {
@@ -48,10 +51,16 @@ public class GetDotController {
             */
             Dot newDot = new Dot(Username, X, Y, R);
             dotService.addDot(newDot.getOwner(), newDot.getX(),newDot.getY(),newDot.getR(),newDot.getHit(),newDot.getDate());
-            return new DotResponse(newDot.getOwner(), newDot.getX(),newDot.getY(),newDot.getR(),newDot.getHit(),newDot.getDate(),"success\n",false);
+
+            List<DotJpa> fetchedList = dotService.findAllByOwner(Username);
+            for (DotJpa dot :
+                    fetchedList) {
+                System.out.println(dot.getOwner() + ", " + dot.getX() + ", " + dot.getY() + ", " + dot.getR() + ", " + dot.getHit());
+            }
+            return new DotResponse(fetchedList, newDot.getOwner(), newDot.getX(),newDot.getY(),newDot.getR(),newDot.getHit(),newDot.getDate(),"success\n",false);
         }catch (NumberFormatException e){
             DotResponse responseDot = new DotResponse();
-            responseDot.setMessage("Please input a available number for Y\n");
+            responseDot.setMessage("Please input an available number for Y\n");
             return responseDot;
         }
     }

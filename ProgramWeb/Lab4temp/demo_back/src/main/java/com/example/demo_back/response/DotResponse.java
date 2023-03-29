@@ -1,9 +1,13 @@
 package com.example.demo_back.response;
 
+import com.example.demo_back.JPAdatabase.DotJpa;
 import lombok.Data;
+
+import java.util.List;
 
 @Data
 public class DotResponse {
+    private List<DotJpa> dotList;
     private String owner;
     private Double x;
     private Double y;
@@ -12,7 +16,8 @@ public class DotResponse {
     private String date;
     private String message;
     private boolean wrong = false;
-    public DotResponse(String owner, Double X, Double Y, Integer R, Boolean hit, String date, String message, boolean wrong){
+    public DotResponse(List<DotJpa> list, String owner, Double X, Double Y, Integer R, Boolean hit, String date, String message, boolean wrong){
+        this.dotList = list;
         this.owner = owner;
         this.x = X;
         this.y = Y;

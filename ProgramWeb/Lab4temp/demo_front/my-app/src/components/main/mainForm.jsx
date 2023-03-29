@@ -109,6 +109,7 @@ function mapDispatchToProps(dispatch){
                     if(res.wrong) {
                         alert(res.message);
                     }else {
+
                         dispatch(addDot(res.x,res.y+"",res.r,res.hit,res.date));
                         //alert("x="+res.x+" y="+res.y+" r="+res.r+" hit="+res.hit+" date="+res.date);
                     }
