@@ -1,8 +1,10 @@
 package com.example.demo_back.controller;
 
 import com.example.demo_back.JPAdatabase.AccountJpa;
+import com.example.demo_back.JPAdatabase.DotJpa;
 import com.example.demo_back.response.LoginResponse;
 import com.example.demo_back.service.AccountService;
+import com.example.demo_back.service.DotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +20,8 @@ import java.util.List;
 public class LoginController {
     @Autowired
     AccountService accountService;
+    @Autowired
+    DotService dotService;
     @PostMapping("/main")
     @ResponseBody
     public LoginResponse main(HttpServletRequest request) {
@@ -35,9 +39,15 @@ public class LoginController {
         password = passwordSHA(password);
         List<AccountJpa> list = accountService.findAccountByName(username);
         if (list.size() == 1 && list.get(0).getPassword().equals(password)) {
+            List<DotJpa> fetchedList = dotService.findAllByOwner(username);
+
             LoginResponse loginResponse = new LoginResponse();
             loginResponse.setSuccess(true);
             loginResponse.setMessage("Welcome, " + request.getParameter("username"));
+            loginResponse.setDotList(fetchedList);
+            for (DotJpa dot : loginResponse.getDotList()) {
+                System.out.println(dot.getOwner() + ", " + dot.getX() + ", " + dot.getY() + ", " + dot.getR() + ", " + dot.getHit());
+            }
             return loginResponse;
         } else {
             LoginResponse loginResponse = new LoginResponse();

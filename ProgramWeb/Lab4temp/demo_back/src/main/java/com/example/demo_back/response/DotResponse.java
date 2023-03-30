@@ -3,6 +3,7 @@ package com.example.demo_back.response;
 import com.example.demo_back.JPAdatabase.DotJpa;
 import lombok.Data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -28,6 +29,7 @@ public class DotResponse {
         this.wrong = wrong;
     }
     public DotResponse(){
+        this.dotList = new ArrayList<>();
         this.owner = "";
         this.x = 0.0;
         this.y = 0.0;

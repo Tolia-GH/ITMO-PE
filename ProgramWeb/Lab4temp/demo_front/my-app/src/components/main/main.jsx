@@ -4,6 +4,7 @@ import {MainTable} from "./mainTable";
 import React from "react";
 import '../../assets/css/page_style.css'
 import {Link} from "react-router-dom";
+import ResultTable from "./mainResult";
 
 export class Main extends React.Component {
     render() {
@@ -20,7 +21,7 @@ export class Main extends React.Component {
                 <Link className={"link"} to={"/"}><button id={"back"} className={"click_button"}>Back</button></Link>
                 <MainGraph/>
                 <MainForm/>
-                <MainTable/>
+                <ResultTable/>
             </div>
         )
     }

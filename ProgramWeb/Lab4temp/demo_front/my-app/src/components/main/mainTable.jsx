@@ -5,7 +5,9 @@ import {connect} from "react-redux";
 class Table extends React.Component{
     render() {
         const {Dots,Home} = this.props;
+
         let username = window.sessionStorage.getItem("username");
+        //const list = JSON.parse(sessionStorage.getItem("list"));
         if(username === null || username === ""){
             return (<div> </div>);
         }
@@ -50,9 +52,7 @@ function mapStateToProps(state){
 }
 function mapFunToProps(dispatch) {
     return{
-        Home:()=>{
-            window.sessionStorage.clear();
-        }
+
     }
 }
 export const MainTable = connect(mapStateToProps,mapFunToProps)(Table);

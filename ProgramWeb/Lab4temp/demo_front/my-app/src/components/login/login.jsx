@@ -2,7 +2,7 @@ import React from "react";
 import $ from 'jquery';
 import {createBrowserHistory} from "history";
 import PropTypes from 'prop-types';
-import {getPassword,getUsername} from "../reduxStore/action/action";
+import {addDot, clearDots, getPassword, getUsername} from "../reduxStore/action/action";
 import {connect} from "react-redux";
 import '../../assets/css/page_style.css';
 
@@ -60,35 +60,77 @@ function mapStateToProps(state){
         }
     )
 }
-function sendAccount(username,password){
-    $.ajax({
-            url: "api/main",
-            method:"POST",
-            data:{
-                password: password,
-                username: username
-            },
-            async:false,
-            success:function (res){
-                if(res.success){
-                    window.sessionStorage.setItem("username",username);
-                    window.sessionStorage.setItem("password",password);
-                    const history = createBrowserHistory();
-                    history.push('/main');
-                }else {
-                    //dispatch(clearAccount());
-                    alert(res.message);
-                }
-            }
-        }
-    );
-}
+// function sendAccount(username,password){
+//     $.ajax({
+//             url: "api/main",
+//             method:"POST",
+//             data:{
+//                 password: password,
+//                 username: username
+//             },
+//             async:false,
+//             success:function (res){
+//                 if(res.success) {
+//                     let listContent = "";
+//                     //dispatch(clearDots());
+//                     res.dotList.map((ele) => {
+//                         listContent = listContent + "\n" + ele.x + ", " + ele.y + ", " + ele.r + ", " + ele.hit + ", " + ele.date;
+//                     //     //dispatch(addDot(ele.x,ele.y+"",ele.r,ele.hit,ele.date));
+//                      })
+//                     alert(listContent);
+//                     //window.sessionStorage.setItem("list",res.dotList)
+//
+//                     window.sessionStorage.setItem("username",username);
+//                     window.sessionStorage.setItem("password",password);
+//                     const history = createBrowserHistory();
+//                     history.push('/main');
+//                 }else {
+//                     //dispatch(clearAccount());
+//                     alert(res.message);
+//                 }
+//             }
+//         }
+//     );
+// }
 function doDispatchToProps(dispatch){
     return({
         setUsername:(event)=>dispatch(getUsername(event.target.value)),
         setPassword:(event)=>dispatch(getPassword(event.target.value)),
         login:(username,password)=>{
-            sendAccount(username,password,dispatch);
+            //sendAccount(username,password,dispatch);
+            $.ajax({
+                    url: "api/main",
+                    method:"POST",
+                    data:{
+                        password: password,
+                        username: username
+                    },
+                    async:false,
+                    success:function (res){
+                        if(res.success) {
+                            //let listContent = "";
+
+                            //alert(listContent);
+                            window.sessionStorage.setItem("list",JSON.stringify(res.dotList));
+
+                            window.sessionStorage.setItem("username",username);
+                            window.sessionStorage.setItem("password",password);
+                            const history = createBrowserHistory();
+                            history.push('/main');
+
+                            dispatch(clearDots());
+                            res.dotList.map((ele) => {
+                                //listContent = listContent + "\n" + ele.x + ", " + ele.y + ", " + ele.r + ", " + ele.hit + ", " + ele.date;
+                                dispatch(addDot(ele.x,ele.y+"",ele.r,ele.hit,ele.date));
+                            })
+                        }else {
+                            //dispatch(clearAccount());
+                            alert(res.message);
+                        }
+                    }
+                }
+            );
+
         },
         toRegister:()=>{
             const history = createBrowserHistory();

@@ -117,6 +117,7 @@ function mapDispatchToProps(dispatch){
                             dispatch(addDot(ele.x,ele.y+"",ele.r,ele.hit,ele.date));
                         })
                         //alert(listContent);
+                        window.sessionStorage.setItem("list",JSON.stringify(res.dotList));
 
 
                         //alert("x="+res.x+" y="+res.y+" r="+res.r+" hit="+res.hit+" date="+res.date);
