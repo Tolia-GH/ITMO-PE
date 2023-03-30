@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import $ from "jquery";
-import {addDot} from "../reduxStore/action/action";
+import {addDot, clearDots} from "../reduxStore/action/action";
 
 //pure ui
 const x = 155;
@@ -83,7 +83,15 @@ function mapDispatchToProps(dispatch){
                         if(res.wrong) {
                             alert(res.message);
                         }else {
-                            dispatch(addDot(res.x,res.y+"",res.r,res.hit,res.date));
+                            let listContent = "";
+                            dispatch(clearDots());
+                            res.dotList.map((ele) => {
+                                //listContent = listContent + "\n" + ele.x + ", " + ele.y + ", " + ele.r + ", " + ele.hit + ", " + ele.date;
+                                dispatch(addDot(ele.x,ele.y+"",ele.r,ele.hit,ele.date));
+                            })
+                            //alert(listContent);
+
+                            //dispatch(addDot(res.x,res.y+"",res.r,res.hit,res.date));
                             //alert("x="+res.x+" y="+res.y+" r="+res.r+" hit="+res.hit+" date="+res.date);
                         }
                     }

@@ -7,7 +7,8 @@ export const Actions={
     GET_USERNAME:'GET_USERNAME',
     GET_PASSWORD:'GET_PASSWORD',
     LOG_IN:'LOG_IN',
-    READ_ACCOUNT:'READ_ACCOUNT'
+    READ_ACCOUNT:'READ_ACCOUNT',
+    CLEAR_DOTS:'CLEAR_DOTS'
 }
 export function GetX(x){
     return{
@@ -54,5 +55,10 @@ export function readAccount(username,password){
         type:Actions.READ_ACCOUNT,
         password:username,
         username:password
+    }
+}
+export function clearDots() {
+    return {
+        type:Actions.CLEAR_DOTS
     }
 }

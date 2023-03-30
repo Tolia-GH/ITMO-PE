@@ -5,6 +5,8 @@ import {combineReducers} from "redux";
 function addDotReducer(state=DotsState,action){
     switch (action.type) {
         //浅拷贝
+        case Actions.CLEAR_DOTS:
+            return {...state, Dots: []}
         case Actions.GET_FORM_X:
             return Object.assign({},state,{X:action.x});
         case Actions.GET_FORM_Y:

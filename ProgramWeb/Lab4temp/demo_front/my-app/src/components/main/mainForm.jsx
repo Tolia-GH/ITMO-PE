@@ -1,8 +1,8 @@
 import React from "react";
 import $ from "jquery";
-import PropTypes from 'prop-types';
+import PropTypes, {element} from 'prop-types';
 import {connect} from "react-redux";
-import {addDot, GetR, GetX, GetY} from "../reduxStore/action/action";
+import {addDot, clearDots, GetR, GetX, GetY} from "../reduxStore/action/action";
 import {Link} from "react-router-dom";
 
 //pure ui component,which only deal with view
@@ -110,7 +110,15 @@ function mapDispatchToProps(dispatch){
                         alert(res.message);
                     }else {
 
-                        dispatch(addDot(res.x,res.y+"",res.r,res.hit,res.date));
+                        let listContent = "";
+                        dispatch(clearDots());
+                        res.dotList.map((ele) => {
+                            //listContent = listContent + "\n" + ele.x + ", " + ele.y + ", " + ele.r + ", " + ele.hit + ", " + ele.date;
+                            dispatch(addDot(ele.x,ele.y+"",ele.r,ele.hit,ele.date));
+                        })
+                        //alert(listContent);
+
+
                         //alert("x="+res.x+" y="+res.y+" r="+res.r+" hit="+res.hit+" date="+res.date);
                     }
                 }
