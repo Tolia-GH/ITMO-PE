@@ -1,6 +1,5 @@
 import {MainForm} from "./mainForm";
 import {MainGraph} from "./mainGraph";
-import {MainTable} from "./mainTable";
 import React from "react";
 import '../../assets/css/page_style.css'
 import {Link} from "react-router-dom";
