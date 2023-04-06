@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="214.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.UIController.RemoveByIDUI">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="22.0" layoutY="33.0" prefHeight="23.0" prefWidth="100.0" spacing="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <Label minHeight="30.0" text="ID" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="149.0" layoutY="33.0" prefHeight="29.0" prefWidth="169.0" spacing="15.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <TextField fx:id="IDField" minHeight="30.0" prefHeight="30.0" prefWidth="115.0" />
+         </children>
+      </VBox>
+      <Label layoutX="80.0" layoutY="14.0" text="Remove By ID" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="confirmButton" layoutX="11.0" layoutY="127.0" mnemonicParsing="false" onAction="#confirm" prefHeight="30.0" prefWidth="282.0" text="%confirm" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="9.0" />
+      <Button fx:id="clearButton" layoutX="11.0" layoutY="172.0" mnemonicParsing="false" onAction="#clear" prefHeight="30.0" prefWidth="282.0" text="%clear" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="9.0" />
+      <Label fx:id="errorMessage" layoutX="11.0" layoutY="100.0" prefHeight="17.0" prefWidth="150.0" textFill="RED" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="9.0" />
+   </children>
+</AnchorPane>

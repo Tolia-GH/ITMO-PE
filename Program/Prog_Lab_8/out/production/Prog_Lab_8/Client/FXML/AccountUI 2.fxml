@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="223.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.UIController.AccountUI">
+   <children>
+      <Label layoutX="29.0" layoutY="63.0" text="%username" />
+      <Label layoutX="30.0" layoutY="113.0" text="%password" AnchorPane.leftAnchor="30.0" />
+      <Button fx:id="loginButton" layoutX="14.0" layoutY="202.0" mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="127.0" text="%login" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" />
+      <PasswordField fx:id="passwordField" layoutX="111.0" layoutY="108.0" prefHeight="27.0" prefWidth="174.0" AnchorPane.rightAnchor="15.0" />
+      <TextField fx:id="usernameField" layoutX="111.0" layoutY="58.0" prefHeight="27.0" prefWidth="174.0" AnchorPane.rightAnchor="15.0" />
+      <Button fx:id="registerButton" layoutX="159.0" layoutY="202.0" mnemonicParsing="false" onAction="#register" prefHeight="27.0" prefWidth="127.0" text="%register" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <Label fx:id="errorMassage" layoutX="15.0" layoutY="150.0" prefHeight="17.0" prefWidth="265.0" textFill="RED" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <HBox layoutX="30.0" layoutY="34.0" prefHeight="27.0" prefWidth="240.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#setRu" prefHeight="27.0" prefWidth="60.0" text="ru" />
+            <Button mnemonicParsing="false" onAction="#setEt" prefHeight="27.0" prefWidth="60.0" text="et" />
+            <Button mnemonicParsing="false" onAction="#setHr" prefHeight="27.0" prefWidth="60.0" text="hr" />
+            <Button mnemonicParsing="false" onAction="#setEs" prefHeight="27.0" prefWidth="60.0" text="es" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
