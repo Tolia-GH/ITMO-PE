@@ -3,6 +3,7 @@
 ## 阅读索引
 
 - [ ] [Lecture](Lecture.md)
+- [ ] [Test](Test.md)
 
 
 <style type="text/css">
