@@ -1,2 +1,4 @@
 theme: jekyll-theme-slate
 markdown: kramdown
+kramdown:
+    math_engine: katex
