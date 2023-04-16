@@ -4,6 +4,7 @@
 
 - [ ] [Lecture](Lecture.md)
 - [ ] [Test](Test.md)
+- [ ] [Labs](Labs.md)
 
 
 <style type="text/css">
