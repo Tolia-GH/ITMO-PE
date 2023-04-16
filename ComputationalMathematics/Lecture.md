@@ -10,7 +10,7 @@
     </script>
 </head>
 
-## [MainPage](../index.md)/[Algorithm&DataStructures](README.md)/Lecture
+## [MainPage](../index.md)/[Computatioonal&Mathematics](README.md)/Lecture
 
 课程总计 108 学时，包含：
 - 讲座 - 16 小时
