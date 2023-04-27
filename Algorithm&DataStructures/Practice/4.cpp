@@ -15,7 +15,7 @@ int main()
     // search day k
 
     //scanf("%d%d%d%d%d", &a, &b, &c, &d, &k);
-    //I don't know why there will be WA while using scanf() and printf() in test 23
+    //I don't know why there will be WA while using `scanf()` and `printf()` instead `cin` and `cout` in test 23
 
     cin >> a >> b >> c >> d >> k;
 

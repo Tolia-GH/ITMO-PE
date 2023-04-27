@@ -10,7 +10,7 @@ int main() {
         scanf("%d", &flowers[i]);
     }
 
-    if (n < 3) {//for flowers less than 3
+    if (n < 3) {//for flowers less than 3, the longest length must be n
         printf("%d %d", 1, n);
         return 0;
     }
