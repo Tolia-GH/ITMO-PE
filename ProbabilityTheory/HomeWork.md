@@ -207,3 +207,4 @@ $$P(X\ge A)\le\frac{M(X)}{A}$$
 $$P(X\ge80)\le\frac{M(X)}{80}=\frac{16}{80}=\frac{1}{5}$$
 
 $$P(X\le80)\ge1-\frac{1}{5}=\frac{4}{5}=0.8$$
+
