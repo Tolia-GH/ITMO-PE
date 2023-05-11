@@ -4,6 +4,7 @@
 
 - [x] [Texts](Texts.md)
 - [x] [Gramma](gramma.md)
+- [ ] [Structures](Structures.md)
 - [ ] [HomeWork](HomeWork.md)
 - [ ] [HomeWork2](HomeWork2.md)
 
