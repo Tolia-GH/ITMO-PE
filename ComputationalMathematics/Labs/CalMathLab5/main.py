@@ -168,7 +168,7 @@ def functionAnalyze():
         for c in coefficientArray:
             if not is_digit(c):
                 raise Error("Error: only accept input float number")
-        if len(coefficientArray) < 2:
+        if len(coefficientArray) < 3:
             raise Error("Error: Please make sure that you only input 2 num")
         function = SecondFunction(float(coefficientArray[0]), float(coefficientArray[1]), float(coefficientArray[2]))
     else:
