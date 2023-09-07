@@ -568,7 +568,7 @@ try:
         powerFunction = powerSolver.solve()
         powerFunction.doAnalyze(Points)
         print("| φ(x)=ax^b           | %-30s | %8.6f | %8.6f | %8.6f |" % (powerFunction.toString(), powerFunction.S, powerFunction.delta, powerFunction.R2))
-        xRange = np.arange(min(X) - 1, max(X) + 1, 0.1)
+        xRange = np.arange(min(X), max(X) + 1, 0.1)
         yRange = [powerFunction.getValue(xi) for xi in xRange]
         labelPower = "φ(x)=" + powerFunction.toString()
         plt.plot(xRange, yRange, "black", label=labelPower)
