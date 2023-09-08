@@ -67,6 +67,10 @@ class AbstractFunction(ABC):
         pass
 
     @abstractmethod
+    def getDeviationL(self, n: int, points: [], x: float):
+        pass
+
+    @abstractmethod
     def toString(self):
         pass
 
@@ -85,6 +89,29 @@ class LinerFunction(AbstractFunction):  # y = ax + b
 
     def getFirstDer(self, x: float):
         return self.a
+
+    def getDeviationL(self, n: int, points: [], x: float):
+        ABS = 1
+        fDerX = []
+        if n == 0:
+            i = 0
+            while i <= n:
+                fDerX.append(self.getFirstDer(points[i].x))
+                i = i + 1
+        if n >= 1:
+            i = 0
+            while i <= n:
+                fDerX.append(0)
+                i = i + 1
+        M = max(fDerX)
+
+        i = 0
+        while i <= n:
+            ABS = ABS * (x - points[i].x)
+            i = i + 1
+        ABS = abs(ABS)
+        R = M / math.factorial(n + 1) * ABS
+        return R
 
     def toString(self):
         return "f(x)=" + str(round(self.a, 4)) + "x" + str(round(self.b, 4))
@@ -109,6 +136,34 @@ class SecondFunction(AbstractFunction):  # y = ax^2 + bx +c
 
     def getSecondDer(self, x: float):
         return 2 * self.a
+
+    def getDeviationL(self, n: int, points: [], x: float):
+        ABS = 1
+        fDerX = []
+        if n == 0:
+            i = 0
+            while i <= n:
+                fDerX.append(self.getFirstDer(points[i].x))
+                i = i + 1
+        if n == 1:
+            i = 0
+            while i <= n:
+                fDerX.append(self.getSecondDer(points[i].x))
+                i = i + 1
+        if n >= 2:
+            i = 0
+            while i <= n:
+                fDerX.append(0)
+                i = i + 1
+        M = max(fDerX)
+
+        i = 0
+        while i <= n:
+            ABS = ABS * (x - points[i].x)
+            i = i + 1
+        ABS = abs(ABS)
+        R = M / math.factorial(n + 1) * ABS
+        return R
 
     def toString(self):
         return "f(x)=" + str(round(self.a, 4)) + "x^2" + str(round(self.b, 4)) + "x" + str(round(self.c, 4))
@@ -139,6 +194,39 @@ class SinFunction(AbstractFunction):  # y = asin(bx) + c
 
     def getForthDer(self, x: float):
         return self.a * math.sin(x)
+
+    def getDeviationL(self, n: int, points: [], x: float):
+        ABS = 1
+        fDerX = []
+        if n % 4 == 0:
+            i = 0
+            while i <= n:
+                fDerX.append(self.getFirstDer(points[i].x))
+                i = i + 1
+        if n % 4 == 1:
+            i = 0
+            while i <= n:
+                fDerX.append(self.getSecondDer(points[i].x))
+                i = i + 1
+        if n % 4 == 2:
+            i = 0
+            while i <= n:
+                fDerX.append(self.getThirdDer(points[i].x))
+                i = i + 1
+        if n % 4 == 3:
+            i = 0
+            while i <= n:
+                fDerX.append(self.getForthDer(points[i].x))
+                i = i + 1
+        M = max(fDerX)
+
+        i = 0
+        while i <= n:
+            ABS = ABS * (x - points[i].x)
+            i = i + 1
+        ABS = abs(ABS)
+        R = M / math.factorial(n + 1) * ABS
+        return R
 
     def toString(self):
         return "f(x)=" + str(round(self.a, 4)) + "sin(" + str(round(self.b, 4)) + "x) + " + str(round(self.c, 4))
@@ -392,17 +480,28 @@ def functionAnalyze():
     yRange = [function.getValue(x) for x in xRange]
     plt.plot(xRange, yRange, "black", label="Original")
 
-    yByLagrange = LagrangeAnalyze(Points, x, True, True)
-    print("Result coordinate Y by Lagrange: %.40f" % yByLagrange)
-    xRange = np.arange(min(xList), max(xList) + 0.01, 0.01)
-    yRangeL = [LagrangeAnalyze(Points, x, False, False) for x in xRange]
-    plt.plot(xRange, yRangeL, "red", label="Lagrange")
+    # Lagrange
+    try:
+        yByLagrange = LagrangeAnalyze(Points, x, True, True)
+        print("Result coordinate Y by Lagrange: %.40f" % yByLagrange)
 
-    yByGauss = GaussAnalyze(Points, x, True)
-    print("Result coordinate Y by Gauss: %.40f" % yByGauss)
-    xRange = np.arange(min(xList), max(xList) + 0.01, 0.01)
-    yRangeG = [GaussAnalyze(Points, x, False) for x in xRange]
-    plt.plot(xRange, yRangeG, "blue", label="Gauss")
+        print("Deviation by LagrangeL %.40f" % function.getDeviationL(len(Points) - 1, Points, x))
+
+        xRange = np.arange(min(xList), max(xList) + 0.01, 0.01)
+        yRangeL = [LagrangeAnalyze(Points, x, False, False) for x in xRange]
+        plt.plot(xRange, yRangeL, "red", label="Lagrange")
+    except Error as error:
+        print(error)
+
+    # Gauss
+    try:
+        yByGauss = GaussAnalyze(Points, x, True)
+        print("Result coordinate Y by Gauss: %.40f" % yByGauss)
+        xRange = np.arange(min(xList), max(xList) + 0.01, 0.01)
+        yRangeG = [GaussAnalyze(Points, x, False) for x in xRange]
+        plt.plot(xRange, yRangeG, "blue", label="Gauss")
+    except Error as error:
+        print(error)
 
     plt.legend()
     plt.show()
