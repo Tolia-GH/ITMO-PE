@@ -25,6 +25,20 @@ def is_digit(d: str):  # judge whether a string is number
     return True
 
 
+def printTable(table: []):
+    i = 0
+    stringTable = "x     y     \n"
+    while i < len(table):
+        j = 0
+        while j < len(table[i]):
+            stringTable = stringTable + ("%5.3f" % table[i][j]) + " "
+            j = j + 1
+        stringTable = stringTable + "\n"
+        i = i + 1
+    print(stringTable)
+    return
+
+
 class Point:
     x: float
     y: float
@@ -92,11 +106,95 @@ class SecondFunction(AbstractFunction):
 
 
 def LagrangeAnalyze(points: [], x: float):
-    return 0
+    li = []
+    res = 0
+    i = 0
+
+    while i < len(points):
+        yi = points[i].getY()
+
+        j = 0
+        lag = 1
+        while j < len(points):
+            if i != j:
+                lag = lag * (x - points[j].getX()) / (points[i].getX() - points[j].getX())
+            j = j + 1
+
+        li.append(lag)
+        print("l%d = %f" % (i, lag))
+
+        res = res + yi * lag
+        i = i + 1
+
+    return res
+
+
+def getH(points: []):
+    h = points[1].x - points[0].x
+    i = 2
+    while i < len(points):
+        if (points[i].x - points[i - 1].x) - h > 0.0001:
+            # Due to the loss of precision in floating-point binary calculation,
+            # it is considered that if the difference between 2 numbers is less than 0.0001, then they are equal
+            raise Error("These points are not equal distance")
+        i = i + 1
+    return h
 
 
 def GaussAnalyze(points: [], x: float):
-    return 0
+    n = len(points)  # number of points
+    middle = int((n - 1) / 2)  # center point index
+    h = getH(points)  # distance between 2 x
+    x0 = points[middle].x
+    y0 = points[middle].y
+    t = (x - x0) / h
+    table = []
+
+    res = y0
+
+    i = 0
+    while i < len(points):  # store xi and yi to Gauss table
+        line = []
+        table.append(line)
+
+        table[i].append(points[i].x)
+        table[i].append(points[i].y)
+        i = i + 1
+
+    i = 2
+    while i < (len(points) + 1):  # get delta i yi
+        j = 0
+        while j < (len(points) - i + 1):
+            table[j].append(table[j + 1][i - 1] - table[j][i - 1])
+            j = j + 1
+        i = i + 1
+    printTable(table)
+
+    i = 1
+    tPart = 1
+    while i < len(points):
+        if x < x0:
+            tPart = tPart * (t - (i - 1)/2)
+            dyPart = table[int(middle - (i + 1) / 2)][i + 1]
+            res = res + tPart / math.factorial(i) * dyPart
+            i = i + 1
+
+            tPart = tPart * (t + i/2)
+            dyPart = table[int(middle - i / 2)][i + 1]
+            res = res + tPart / math.factorial(i) * dyPart
+            i = i + 1
+        if x > x0:
+            tPart = tPart * (t + (i - 1)/2)
+            dyPart = table[int(middle - (i-1) / 2)][i + 1]
+            res = res + tPart / math.factorial(i) * dyPart
+            i = i + 1
+
+            tPart = tPart * (t - i/2)
+            dyPart = table[int(middle - i / 2)][i + 1]
+            res = res + tPart / math.factorial(i) * dyPart
+            i = i + 1
+
+    return res
 
 
 def EnterToContinue():
@@ -135,9 +233,9 @@ def pointsAnalyze():
     print()
 
     yByLagrange = LagrangeAnalyze(Points, x)
-    yByGauss = GaussAnalyze(Points, x)
-
     print("Result coordinate Y by Lagrange: %.4f" % yByLagrange)
+
+    yByGauss = GaussAnalyze(Points, x)
     print("Result coordinate Y by Gauss: %.4f" % yByGauss)
 
 
@@ -203,9 +301,9 @@ def functionAnalyze():
     print()
 
     yByLagrange = LagrangeAnalyze(Points, x)
-    yByGauss = GaussAnalyze(Points, x)
-
     print("Result coordinate Y by Lagrange: %.4f" % yByLagrange)
+
+    yByGauss = GaussAnalyze(Points, x)
     print("Result coordinate Y by Gauss: %.4f" % yByGauss)
 
 
