@@ -71,7 +71,7 @@ class AbstractFunction(ABC):
         pass
 
 
-class LinerFunction(AbstractFunction):
+class LinerFunction(AbstractFunction):  # y = ax + b
     a = 0
     b = 0
 
@@ -83,11 +83,14 @@ class LinerFunction(AbstractFunction):
     def getValue(self, x: float):
         return self.a * x + self.b
 
+    def getFirstDer(self, x: float):
+        return self.a
+
     def toString(self):
         return "f(x)=" + str(round(self.a, 4)) + "x" + str(round(self.b, 4))
 
 
-class SecondFunction(AbstractFunction):
+class SecondFunction(AbstractFunction):  # y = ax^2 + bx +c
     a = 0
     b = 0
     c = 0
@@ -101,11 +104,47 @@ class SecondFunction(AbstractFunction):
     def getValue(self, x: float):
         return self.a * x * x + self.b * x + self.c
 
+    def getFirstDer(self, x: float):
+        return 2 * self.a * x + self.b
+
+    def getSecondDer(self, x: float):
+        return 2 * self.a
+
     def toString(self):
         return "f(x)=" + str(round(self.a, 4)) + "x^2" + str(round(self.b, 4)) + "x" + str(round(self.c, 4))
 
 
-def LagrangeAnalyze(points: [], x: float):
+class SinFunction(AbstractFunction):  # y = asin(bx) + c
+    a = 0
+    b = 0
+    c = 0
+
+    def __init__(self, a: float, b: float, c: float):
+        super().__init__()
+        self.a = a
+        self.b = b
+        self.c = c
+
+    def getValue(self, x: float):
+        return self.a * math.sin(self.b * x) + self.c
+
+    def getFirstDer(self, x: float):
+        return self.a * math.cos(x)
+
+    def getSecondDer(self, x: float):
+        return -self.a * math.sin(x)
+
+    def getThirdDer(self, x: float):
+        return -self.a * math.cos(x)
+
+    def getForthDer(self, x: float):
+        return self.a * math.sin(x)
+
+    def toString(self):
+        return "f(x)=" + str(round(self.a, 4)) + "sin(" + str(round(self.b, 4)) + "x) + " + str(round(self.c, 4))
+
+
+def LagrangeAnalyze(points: [], x: float, showProcess: bool, showDeviation: bool):
     li = []
     res = 0
     i = 0
@@ -120,8 +159,9 @@ def LagrangeAnalyze(points: [], x: float):
                 lag = lag * (x - points[j].getX()) / (points[i].getX() - points[j].getX())
             j = j + 1
 
-        li.append(lag)
-        print("l%d = %f" % (i, lag))
+        if showProcess:
+            li.append(lag)
+            print("l%d = %f" % (i, lag))
 
         res = res + yi * lag
         i = i + 1
@@ -136,13 +176,15 @@ def getH(points: []):
         if (points[i].x - points[i - 1].x) - h > 0.0001:
             # Due to the loss of precision in floating-point binary calculation,
             # it is considered that if the difference between 2 numbers is less than 0.0001, then they are equal
-            raise Error("These points are not equal distance")
+            raise Error("Can't solve by Gauss: These points are not equal distance")
         i = i + 1
     return h
 
 
-def GaussAnalyze(points: [], x: float):
+def GaussAnalyze(points: [], x: float, showProcess: bool):
     n = len(points)  # number of points
+    if n % 2 == 0:
+        raise Error("Can't solve by Gauss: number of points should be odd")
     middle = int((n - 1) / 2)  # center point index
     h = getH(points)  # distance between 2 x
     x0 = points[middle].x
@@ -168,28 +210,30 @@ def GaussAnalyze(points: [], x: float):
             table[j].append(table[j + 1][i - 1] - table[j][i - 1])
             j = j + 1
         i = i + 1
-    printTable(table)
+
+    if showProcess:
+        printTable(table)
 
     i = 1
     tPart = 1
     while i < len(points):
         if x < x0:
-            tPart = tPart * (t - (i - 1)/2)
+            tPart = tPart * (t - (i - 1) / 2)
             dyPart = table[int(middle - (i + 1) / 2)][i + 1]
             res = res + tPart / math.factorial(i) * dyPart
             i = i + 1
 
-            tPart = tPart * (t + i/2)
+            tPart = tPart * (t + i / 2)
             dyPart = table[int(middle - i / 2)][i + 1]
             res = res + tPart / math.factorial(i) * dyPart
             i = i + 1
         if x > x0:
-            tPart = tPart * (t + (i - 1)/2)
-            dyPart = table[int(middle - (i-1) / 2)][i + 1]
+            tPart = tPart * (t + (i - 1) / 2)
+            dyPart = table[int(middle - (i - 1) / 2)][i + 1]
             res = res + tPart / math.factorial(i) * dyPart
             i = i + 1
 
-            tPart = tPart * (t - i/2)
+            tPart = tPart * (t - i / 2)
             dyPart = table[int(middle - i / 2)][i + 1]
             res = res + tPart / math.factorial(i) * dyPart
             i = i + 1
@@ -232,11 +276,33 @@ def pointsAnalyze():
     print("Analyzing...")
     print()
 
-    yByLagrange = LagrangeAnalyze(Points, x)
-    print("Result coordinate Y by Lagrange: %.4f" % yByLagrange)
+    xList = []
+    yList = []
 
-    yByGauss = GaussAnalyze(Points, x)
-    print("Result coordinate Y by Gauss: %.4f" % yByGauss)
+    for point in Points:
+        xList.append(point.x)
+        yList.append(point.y)
+
+    xPoints = np.array(xList)
+    yPoints = np.array(yList)
+
+    plt.plot(xPoints, yPoints, 'o')
+
+    yByLagrange = LagrangeAnalyze(Points, x, True, True)
+    print("Result coordinate Y by Lagrange: %.40f" % yByLagrange)
+
+    xRange = np.arange(min(xList), max(xList) + 0.01, 0.01)
+    yRangeL = [LagrangeAnalyze(Points, x, False, False) for x in xRange]
+    plt.plot(xRange, yRangeL, "red", label="Lagrange")
+
+    yByGauss = GaussAnalyze(Points, x, True)
+    print("Result coordinate Y by Gauss: %.40f" % yByGauss)
+    xRange = np.arange(min(xList), max(xList) + 0.01, 0.01)
+    yRangeG = [GaussAnalyze(Points, x, False) for x in xRange]
+    plt.plot(xRange, yRangeG, "blue", label="Gauss")
+
+    plt.legend()
+    plt.show()
 
 
 def functionAnalyze():
@@ -247,7 +313,8 @@ def functionAnalyze():
     print("Please choose type of function: ")
     print("1 - Liner function: f(x) = ax + b")
     print("2 - Quadratic function： f(x) = ax^2 + bx + c")
-    functionIndex = int(input("Enter your choice {1, 2}: "))
+    print("3 - Sin function: f(x) = asin(bx) + c")
+    functionIndex = int(input("Enter your choice {1, 2, 3}: "))
     print()
 
     function: AbstractFunction
@@ -267,8 +334,17 @@ def functionAnalyze():
             if not is_digit(c):
                 raise Error("Error: only accept input float number")
         if len(coefficientArray) < 3:
-            raise Error("Error: Please make sure that you only input 2 num")
+            raise Error("Error: Please make sure that you only input 3 num")
         function = SecondFunction(float(coefficientArray[0]), float(coefficientArray[1]), float(coefficientArray[2]))
+    elif functionIndex == 3:
+        coefficientString = input("Please input coefficients of function by format 'a b c'")
+        coefficientArray = coefficientString.split(" ")
+        for c in coefficientArray:
+            if not is_digit(c):
+                raise Error("Error: only accept input float number")
+        if len(coefficientArray) < 3:
+            raise Error("Error: Please make sure that you only input 3 num")
+        function = SinFunction(float(coefficientArray[0]), float(coefficientArray[1]), float(coefficientArray[2]))
     else:
         raise Error("Error: only accept inputs '1' or '2'")
 
@@ -300,11 +376,36 @@ def functionAnalyze():
     print("Analyzing...")
     print()
 
-    yByLagrange = LagrangeAnalyze(Points, x)
-    print("Result coordinate Y by Lagrange: %.4f" % yByLagrange)
+    xList = []
+    yList = []
 
-    yByGauss = GaussAnalyze(Points, x)
-    print("Result coordinate Y by Gauss: %.4f" % yByGauss)
+    for point in Points:
+        xList.append(point.x)
+        yList.append(function.getValue(point.x))
+
+    xPoints = np.array(xList)
+    yPoints = np.array(yList)
+
+    plt.plot(xPoints, yPoints, 'o')
+
+    xRange = np.arange(min(xList), max(xList) + 0.01, 0.01)
+    yRange = [function.getValue(x) for x in xRange]
+    plt.plot(xRange, yRange, "black", label="Original")
+
+    yByLagrange = LagrangeAnalyze(Points, x, True, True)
+    print("Result coordinate Y by Lagrange: %.40f" % yByLagrange)
+    xRange = np.arange(min(xList), max(xList) + 0.01, 0.01)
+    yRangeL = [LagrangeAnalyze(Points, x, False, False) for x in xRange]
+    plt.plot(xRange, yRangeL, "red", label="Lagrange")
+
+    yByGauss = GaussAnalyze(Points, x, True)
+    print("Result coordinate Y by Gauss: %.40f" % yByGauss)
+    xRange = np.arange(min(xList), max(xList) + 0.01, 0.01)
+    yRangeG = [GaussAnalyze(Points, x, False) for x in xRange]
+    plt.plot(xRange, yRangeG, "blue", label="Gauss")
+
+    plt.legend()
+    plt.show()
 
 
 EnterToContinue()
