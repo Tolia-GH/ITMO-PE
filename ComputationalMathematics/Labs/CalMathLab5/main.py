@@ -308,21 +308,25 @@ def GaussAnalyze(points: [], x: float, showProcess: bool):
         if x < x0:
             tPart = tPart * (t - (i - 1) / 2)
             dyPart = table[int(middle - (i + 1) / 2)][i + 1]
+            # print(dyPart)
             res = res + tPart / math.factorial(i) * dyPart
             i = i + 1
 
             tPart = tPart * (t + i / 2)
             dyPart = table[int(middle - i / 2)][i + 1]
+            # print(dyPart)
             res = res + tPart / math.factorial(i) * dyPart
             i = i + 1
         if x > x0:
             tPart = tPart * (t + (i - 1) / 2)
             dyPart = table[int(middle - (i - 1) / 2)][i + 1]
+            # print(dyPart)
             res = res + tPart / math.factorial(i) * dyPart
             i = i + 1
 
             tPart = tPart * (t - i / 2)
             dyPart = table[int(middle - i / 2)][i + 1]
+            # print(dyPart)
             res = res + tPart / math.factorial(i) * dyPart
             i = i + 1
 
@@ -484,9 +488,7 @@ def functionAnalyze():
     try:
         yByLagrange = LagrangeAnalyze(Points, x, True, True)
         print("Result coordinate Y by Lagrange: %.40f" % yByLagrange)
-
-        print("Deviation by LagrangeL %.40f" % function.getDeviationL(len(Points) - 1, Points, x))
-
+        #  print("Deviation by LagrangeL %.40f" % function.getDeviationL(len(Points) - 1, Points, x))
         xRange = np.arange(min(xList), max(xList) + 0.01, 0.01)
         yRangeL = [LagrangeAnalyze(Points, x, False, False) for x in xRange]
         plt.plot(xRange, yRangeL, "red", label="Lagrange")
