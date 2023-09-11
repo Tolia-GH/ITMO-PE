@@ -253,6 +253,10 @@ try:
                      color="green")
             count = count + 1
 
+        xRange = np.arange(leftI, rightI, 0.01)
+        yRange = [function.getTrueY(xi) for xi in xRange]
+        plt.plot(xRange, yRange, color="black", label="Точное решение")
+
         plt.legend()
         plt.show()
 except Error as e:
