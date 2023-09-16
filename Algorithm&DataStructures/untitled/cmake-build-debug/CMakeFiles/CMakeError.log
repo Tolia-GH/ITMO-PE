@@ -1,0 +1,30 @@
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /Users/2398768715qq.com/Documents/GitHub/ITMO-PE/Algorithm&DataStructures/untitled/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-T1kDdo
+
+Run Build Command(s):/opt/homebrew/Cellar/cmake/3.24.1/bin/ctest -f Makefile cmTC_63e31/fast && Test project /Users/2398768715qq.com/Documents/GitHub/ITMO-PE/Algorithm&DataStructures/untitled/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-T1kDdo
+No tests were found!!!
+
+
+Cannot copy output executable
+  ''
+to destination specified by COPY_FILE:
+  '/Users/2398768715qq.com/Documents/GitHub/ITMO-PE/Algorithm&DataStructures/untitled/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin'
+Recorded try_compile output location doesn't exist:
+  /Users/2398768715qq.com/Documents/GitHub/ITMO-PE/Algorithm&DataStructures/untitled/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-T1kDdo/cmTC_63e31
+
+
+Detecting CXX compiler ABI info failed to compile with the following output:
+Change Dir: /Users/2398768715qq.com/Documents/GitHub/ITMO-PE/Algorithm&DataStructures/untitled/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pT1Lo6
+
+Run Build Command(s):/opt/homebrew/Cellar/cmake/3.24.1/bin/ctest -f Makefile cmTC_6436d/fast && Test project /Users/2398768715qq.com/Documents/GitHub/ITMO-PE/Algorithm&DataStructures/untitled/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pT1Lo6
+No tests were found!!!
+
+
+Cannot copy output executable
+  ''
+to destination specified by COPY_FILE:
+  '/Users/2398768715qq.com/Documents/GitHub/ITMO-PE/Algorithm&DataStructures/untitled/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin'
+Recorded try_compile output location doesn't exist:
+  /Users/2398768715qq.com/Documents/GitHub/ITMO-PE/Algorithm&DataStructures/untitled/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pT1Lo6/cmTC_6436d
+
+

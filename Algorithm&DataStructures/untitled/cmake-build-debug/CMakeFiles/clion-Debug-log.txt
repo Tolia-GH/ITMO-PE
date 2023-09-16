@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/opt/homebrew/Cellar/cmake/3.24.1/bin/ctest -DCMAKE_C_COMPILER=/opt/homebrew/Cellar/gcc/12.2.0/bin/gcc-12 -DCMAKE_CXX_COMPILER=/opt/homebrew/Cellar/gcc/12.2.0/bin/g++-12 -G "CodeBlocks - Unix Makefiles" -S /Users/2398768715qq.com/Documents/GitHub/ITMO-PE/Algorithm&DataStructures/untitled -B /Users/2398768715qq.com/Documents/GitHub/ITMO-PE/Algorithm&DataStructures/untitled/cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/2398768715qq.com/Documents/GitHub/ITMO-PE/Algorithm&DataStructures/untitled/cmake-build-debug
