@@ -1,41 +1,66 @@
-#include <cstdio>
-#include <cstdlib>
 #include <iostream>
+#include <map>
+#include <stack>
+#include <vector>
 
 using namespace std;
-
-int main() {
-    int n;
-    int k;
-    int coordinates[1000000000];
-
-    cin >> n >> k;
-
-    for (int i = 0; i < n; i ++) {
-        cin >> coordinates[i];
-    }
-
-    int left = 0;
-    int right = coordinates[n - 1] - coordinates[0] + 1;
-    int middle = (left + right) / 2;
-    int last = coordinates[0];
-
-    while (left < right) {
-        int c = 1;
-
-        for (int i = 1; i < n; ++i) {
-            if (coordinates[i] - last > middle) {
-                last = coordinates[i];
-                c++;
+bool isNumber(const string str)
+{
+    for(int i = 0 ; i < str.size(); i++){
+        if(i==0){
+            if(str[i]!='-'&&!isdigit(str[i])){
+                return false;
+            }
+        }else{
+            if(!isdigit(str[i])){
+                return false;
             }
         }
+    }
+    return true;
+}
 
-        if (c >= k) {
-            left = middle + 1;
-        } else {
-            right = middle;
+int main(){
+    map<string,stack<long>> maps;
+    vector<vector<string>> remove;
+    vector<string> start;
+    remove.emplace_back(start);
+    string s;
+    while(getline(cin,s)){
+        if(!s.compare("{")){
+            vector<string> new_remove;
+            remove.push_back(new_remove);
+        }else if(!s.compare("}")){
+            for(auto i: remove.back()){
+                if(maps.find(i)->second.size()<=1){
+                    maps.erase(i);
+                }else{
+                    maps[i].pop();
+                }
+            }
+            remove.pop_back();
+        }else{
+            size_t position = s.find("=",0);
+            string sub1 = s.substr(0,position);
+            string sub2 = s.substr(position+1,s.size()-position-1);
+            //a = 1
+            if(isNumber(sub2)){
+                maps[sub1].emplace(stol(sub2));
+                remove.back().emplace_back(sub1);
+            }
+                //a=b
+            else{
+                remove.back().emplace_back(sub1);
+                if(!maps[sub2].empty()){
+                    long result =maps[sub2].top();
+                    maps[sub1].emplace(result);
+                    cout<<result<<endl;
+                }else{
+                    maps[sub1].emplace(0);
+                    cout<<0<<endl;
+                }
+            }
         }
     }
-
-    cout << left;
+    return 0;
 }

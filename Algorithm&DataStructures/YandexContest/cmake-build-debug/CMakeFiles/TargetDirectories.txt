@@ -1,0 +1,3 @@
+D:/Users/ProgramEngineering/GitHub/ITMO-PE/Algorithm&DataStructures/YandexContest/cmake-build-debug/CMakeFiles/test.cpp.dir
+D:/Users/ProgramEngineering/GitHub/ITMO-PE/Algorithm&DataStructures/YandexContest/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Users/ProgramEngineering/GitHub/ITMO-PE/Algorithm&DataStructures/YandexContest/cmake-build-debug/CMakeFiles/rebuild_cache.dir
