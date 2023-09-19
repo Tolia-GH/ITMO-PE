@@ -5,8 +5,9 @@
 - [x] [Texts](Texts.md)
 - [x] [Gramma](gramma.md)
 - [ ] [Structures](Structures.md)
-- [ ] [HomeWork](HomeWork.md)
-- [ ] [HomeWork2](HomeWork2.md)
+- [x] [HomeWork](HomeWork.md)
+- [x] [HomeWork2](HomeWork2.md)
+- [ ] [HomeWork3](HomeWork3.md)
 
 <style type="text/css">
     #footer {
