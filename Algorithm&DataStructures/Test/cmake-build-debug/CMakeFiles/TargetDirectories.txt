@@ -1,0 +1,3 @@
+D:/Users/ProgramEngineering/GitHub/ITMO-PE/Algorithm&DataStructures/Test/cmake-build-debug/CMakeFiles/Test.dir
+D:/Users/ProgramEngineering/GitHub/ITMO-PE/Algorithm&DataStructures/Test/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Users/ProgramEngineering/GitHub/ITMO-PE/Algorithm&DataStructures/Test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
