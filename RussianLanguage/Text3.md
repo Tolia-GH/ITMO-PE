@@ -1,6 +1,5 @@
-## [MainPage](../index.md)/[Rusian Language](README.md)/Text3
+## [MainPage](../index.md)/[Rusian Language](README.md)/Text3<!-- omit in toc -->
 
-- [MainPage/Rusian Language/Text3](#mainpagerusian-languagetext3)
 - [1 УДИВИТЕЛЬНЫЕ СВОЙСТВА ВОДЫ](#1-удивительные-свойства-воды)
 
 
