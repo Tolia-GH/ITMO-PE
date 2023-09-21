@@ -10,7 +10,7 @@
     </script>
 </head>
 
-# Labs
+## [MainPage](../index.md)/[Computatioonal&Mathematics](README.md)/Labs
 
 ## Лабораторная работа 1. «Решение системы линейных алгебраических уравнений СЛАУ»
 

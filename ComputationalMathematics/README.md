@@ -5,6 +5,7 @@
 - [ ] [Lecture](Lecture.md)
 - [ ] [Test](Test.md)
 - [ ] [Labs](Labs.md)
+- [ ] [Exam](Exam.md)
 
 
 <style type="text/css">
