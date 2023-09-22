@@ -377,7 +377,7 @@ class SolverForSystem:
     b: float
     accuracy: float
     '''
-    0.1x^2+x+0.2y-0.3=0
+    0.1x^2+x+0.2y^2-0.3=0
     0.2x^2+y-0.1xy-0.7=0
     '''
 
