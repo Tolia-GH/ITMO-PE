@@ -1,3 +1,16 @@
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
+
+
 ## [MainPage](../index.md)/[Computatioonal&Mathematics](README.md)/Exam
 
 - [1.Основные свойства численных методов.(数字方法的主要特性)](#1основные-свойства-численных-методов数字方法的主要特性)
