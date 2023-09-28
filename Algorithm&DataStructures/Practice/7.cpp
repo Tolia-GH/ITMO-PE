@@ -79,12 +79,6 @@ int main() {
     //bubbleSort(stringS, lengthS);
     quickSort(stringS, 0, lengthS);
 
-//    for (int i = 0; i < lengthS; ++i) {
-//        cout << stringS[i];
-//
-//    }
-//    cout << endl;
-
     for(int i = 0; i< lengthS - 1; i++) {
         if (stringS[i + 1] == stringS[i]) {
             if (topIndex == 0 || topLetters[topIndex - 1] != stringS[i]) {

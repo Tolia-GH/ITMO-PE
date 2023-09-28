@@ -67,5 +67,3 @@ int main() {
         std::cout<<findPartMin(i)<<" ";
     }
 }
-
-

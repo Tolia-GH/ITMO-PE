@@ -37,6 +37,8 @@ int main() {
 
     bubbleSort(nums, count);
 
+    //qsort(nums, 3, sizeof(char *), compare);
+
     for (int i = 0; i < count; i++) {
         cout << nums[i];
     }

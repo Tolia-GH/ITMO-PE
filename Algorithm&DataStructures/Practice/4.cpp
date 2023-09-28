@@ -9,7 +9,7 @@ int main()
 {
     int a, b, c, d, k;
     //number of bacteria,
-    // number of bacterias created by 1 bacterium every day,
+    // number of bacterias created by 1 bacteria everyday,
     // every day usage of bacteria
     // container capacity of bacterias
     // search day k
