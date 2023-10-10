@@ -61,6 +61,8 @@
 - 游戏历史
 - 游戏机制
 
+Example 1
+
 ```prolog
 %facts%
 age(son,22).
@@ -146,4 +148,215 @@ uncle(A,B):-possibility_u1(A,B);possibility_u2(A,B).
 aunt(A,B):- uncle(C,B),wife(A,C).
 grandparent(A,B):-parent(C,B), parent(A,C).
 is_adult(A):- age(A,Age),Age>18.
+```
+
+Example 2
+```prolog
+% 定义宝可梦
+pokemon(charmander, fire, 50).
+pokemon(squirtle, water, 50).
+
+% 定义宝可梦招式
+move(flamethrower, fire, 30).
+move(water_gun, water, 25).
+
+% 主循环
+start_battle :-
+    write('宝可梦对战开始！'), nl,
+    choose_pokemon(Pokemon1),
+    choose_pokemon(Pokemon2),
+    battle(Pokemon1, Pokemon2).
+
+% 玩家选择宝可梦
+choose_pokemon(Pokemon) :-
+    write('请选择一个宝可梦 (charmander/squirtle)： '),
+    read(Pokemon),
+    (   pokemon(Pokemon, _, _) ->
+        write('你选择了 '), write(Pokemon), nl
+    ;   write('无效的宝可梦，请重新选择。'), nl,
+        choose_pokemon(Pokemon)
+    ).
+
+% 进行对战
+battle(Pokemon1, Pokemon2) :-
+    write(Pokemon1), write(' 对战 '), write(Pokemon2), nl,
+    write('请选择一个招式 (flamethrower/water_gun)： '),
+    read(Move),
+    (   move(Move, Type, Power),
+        pokemon(Pokemon1, Type, HP1),
+        pokemon(Pokemon2, Type, HP2),
+        NewHP2 is HP2 - Power,
+        NewHP2 > 0 ->
+        write(Pokemon1), write(' 使用 '), write(Move), write(' 攻击了 '), write(Pokemon2), nl,
+        write(Pokemon2), write(' 的HP减少到 '), write(NewHP2), nl,
+        battle(Pokemon2, Pokemon1, NewHP2, HP1)
+    ;   write('无效的招式，请重新选择。'), nl,
+        battle(Pokemon1, Pokemon2)
+    ).
+
+% 宝可梦2反击
+battle(Pokemon1, Pokemon2, HP2, HP1) :-
+    write(Pokemon2), write(' 反击了 '), write(Pokemon1), nl,
+    write(Pokemon1), write(' 的HP减少到 '), write(HP1), nl,
+    (   HP1 > 0 ->
+        write('请选择一个招式 (flamethrower/water_gun)： '),
+        read(Move),
+        (   move(Move, Type, Power),
+            pokemon(Pokemon2, Type, _),
+            NewHP1 is HP1 - Power,
+            NewHP1 > 0 ->
+            write(Pokemon2), write(' 使用 '), write(Move), write(' 攻击了 '), write(Pokemon1), nl,
+            write(Pokemon1), write(' 的HP减少到 '), write(NewHP1), nl,
+            battle(Pokemon1, Pokemon2, HP2, NewHP1)
+        ;   write('无效的招式，请重新选择。'), nl,
+            battle(Pokemon1, Pokemon2, HP2, HP1)
+        )
+    ;   write(Pokemon1), write(' 被打败了！游戏结束。'), nl
+    ).
+
+% 主入口
+:- start_battle.
+
+```
+
+```prolog
+% 宝可梦属性
+pokemon(皮卡丘, 电).
+pokemon(杰尼龟, 水).
+pokemon(小火龙, 火).
+
+% 宝可梦技能
+skill(电击, 电, 30).
+skill(水枪, 水, 25).
+skill(火焰牙, 火, 28).
+
+% 宝可梦对战规则
+can_attack(X, Y) :- 
+    pokemon(X, TypeX),
+    pokemon(Y, TypeY),
+    skill(_, TypeX, _),
+    skill(_, TypeY, _),
+    X \= Y.
+
+% 攻击计算
+attack(Pokemon, Skill, Damage) :-
+    pokemon(Pokemon, Type),
+    skill(Skill, Type, Power),
+    Damage is Power.
+
+% 对战逻辑
+battle(Pokemon1, Pokemon2) :-
+    can_attack(Pokemon1, Pokemon2),
+    write(Pokemon1), write(' 使用技能：'), read(Skill),
+    attack(Pokemon1, Skill, Damage),
+    write(Pokemon1), write(' 对 '), write(Pokemon2), write(' 造成了 '), write(Damage), write(' 点伤害！'), nl,
+    NewHP is 100 - Damage,
+    write(Pokemon2), write(' 的剩余生命值为 '), write(NewHP), nl.
+
+% 主入口
+start_battle :-
+    write('请输入第一个宝可梦：'), read(Pokemon1),
+    write('请输入第二个宝可梦：'), read(Pokemon2),
+    battle(Pokemon1, Pokemon2).
+```
+
+```prolog
+% 定义宝可梦的属性（名字、类型、HP、攻击力）
+pokemon(charmander, fire, 60, 50).
+pokemon(squirtle, water, 65, 45).
+pokemon(bulbasaur, grass, 70, 40).
+
+% 定义宝可梦的招式（名字、类型、威力）
+move(flamethrower, fire, 40).
+move(watergun, water, 35).
+move(vine_whip, grass, 30).
+
+% 玩家选择宝可梦
+choose_pokemon(Pokemon) :-
+    write('请选择宝可梦 (charmander/squirtle/bulbasaur)： '),
+    read(Pokemon),
+    (   pokemon(Pokemon, _, _, _) ->
+        write('你选择了：'), write(Pokemon), nl
+    ;   write('无效的选择，请重新选择。'), nl,
+        choose_pokemon(Pokemon)
+    ).
+
+% 玩家选择招式
+choose_move(Move) :-
+    write('请选择招式 (flamethrower/watergun/vine_whip)： '),
+    read(Move),
+    (   move(Move, _, _) ->
+        write('你使用了：'), write(Move), nl
+    ;   write('无效的选择，请重新选择。'), nl,
+        choose_move(Move)
+    ).
+
+% 宝可梦对战
+battle :-
+    write('宝可梦对战开始！'), nl,
+    choose_pokemon(PlayerPokemon),
+    choose_pokemon(ComputerPokemon),
+    battle_loop(PlayerPokemon, ComputerPokemon).
+
+% 宝可梦对战主循环
+battle_loop(PlayerPokemon, ComputerPokemon) :-
+    write('玩家选择招式：'), nl,
+    choose_move(PlayerMove),
+    random_move(ComputerMove),
+    perform_move(PlayerMove, PlayerPokemon, ComputerPokemon, NewComputerPokemon),
+    perform_move(ComputerMove, NewComputerPokemon, PlayerPokemon, NewPlayerPokemon),
+    display_battle_status(NewPlayerPokemon, NewComputerPokemon),
+    (   has_won(NewPlayerPokemon) ->
+        write('恭喜你，你赢了！'), nl
+    ;   has_won(NewComputerPokemon) ->
+        write('电脑赢了，再接再厉！'), nl
+    ;   battle_loop(NewPlayerPokemon, NewComputerPokemon)
+    ).
+
+% 随机选择电脑招式
+random_move(Move) :-
+    random_member(Move, [flamethrower, watergun, vine_whip]).
+
+% 执行招式
+perform_move(Move, Attacker, Defender, NewDefender) :-
+    move(Move, Type, Power),
+    pokemon(Defender, DefType, HP, DefHP),
+    calculate_damage(Type, Power, DefType, Damage),
+    NewDefHP is max(0, DefHP - Damage),
+    NewDefender =.. [pokemon, Defender, DefType, HP, NewDefHP].
+
+% 计算伤害
+calculate_damage(Type, Power, DefType, Damage) :-
+    effectiveness(Type, DefType, Multiplier),
+    Damage is Power * Multiplier.
+
+% 计算招式效果
+effectiveness(fire, grass, 2.0).
+effectiveness(fire, water, 0.5).
+effectiveness(water, fire, 2.0).
+effectiveness(water, grass, 0.5).
+effectiveness(grass, water, 2.0).
+effectiveness(grass, fire, 0.5).
+effectiveness(_, _, 1.0).
+
+% 显示战斗状态
+display_battle_status(PlayerPokemon, ComputerPokemon) :-
+    write('玩家的宝可梦：'), nl,
+    display_pokemon(PlayerPokemon),
+    write('电脑的宝可梦：'), nl,
+    display_pokemon(ComputerPokemon).
+
+% 显示宝可梦信息
+display_pokemon(pokemon(Name, Type, HP, _)) :-
+    write('名字：'), write(Name), nl,
+    write('类型：'), write(Type), nl,
+    write('HP：'), write(HP), nl.
+
+% 判断是否赢得比赛
+has_won(pokemon(_, _, HP, _)) :-
+    HP =< 0.
+
+% 主入口
+:- battle.
+
 ```
