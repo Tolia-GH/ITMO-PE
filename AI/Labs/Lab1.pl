@@ -2,16 +2,16 @@
 :- dynamic atk/2.
 
 % define characters `character(name).`
-character(noelle).
-character(klee).
-character(ganyu).
-character(keqing).
-character(ayaka).
-character(kokomi).
-character(nahida).
-character(nilou).
-character(lynette).
-character(neuvilette).
+character('Noelle').
+character('Klee').
+character('Ganyu').
+character('Keqing').
+character('Ayaka').
+character('Kokomi').
+character('Nahida').
+character('Nilou').
+character('Lynette').
+character('Neuvilette').
 
 % define enemies `enemy(enemyName).`
 monster(slime).
@@ -27,28 +27,28 @@ boss(childe).
 boss(azhdaha).
 
 % define the nation of characters `nation(characterName, nation).`
-nation(noelle, moundstalt).
-nation(klee, moundstalt).
-nation(ganyu, liyue).
-nation(keqing, liyue).
-nation(ayaka, inazuma).
-nation(kokomi, inazuma).
-nation(nahida, sumeru).
-nation(nilou, sumeru).
-nation(lynette, fontaine).
-nation(neuvilette, fontaine).
+nation('Noelle', moundstalt).
+nation('Klee', moundstalt).
+nation('Ganyu', liyue).
+nation('Keqing', liyue).
+nation('Ayaka', inazuma).
+nation('Kokomi', inazuma).
+nation('Nahida', sumeru).
+nation('Nilou', sumeru).
+nation('Lynette', fontaine).
+nation('Neuvilette', fontaine).
 
 % define HP of character `hp(characterName, hitpoints).`
-hp(noelle, 12071).
-hp(klee, 10287).
-hp(ganyu, 9797).
-hp(keqing, 13103).
-hp(ayaka, 12858).
+hp('Noelle', 12071).
+hp('Klee', 10287).
+hp('Ganyu', 9797).
+hp('Keqing', 13103).
+hp('Ayaka', 12858).
 hp(komiomi, 13471).
-hp(nahida, 10360).
-hp(nilou, 15185).
-hp(lynette, 12937).
-hp(neuvilette, 14695).
+hp('Nahida', 10360).
+hp('Nilou', 15185).
+hp('Lynette', 12937).
+hp('Neuvilette', 14695).
 
 % define HP of monsters `hp(enemyName, hp).`
 hp(slime, hp).
@@ -64,16 +64,16 @@ hp(childe, hp).
 hp(azhdaha, hp).
 
 % define ATK of character `atk(characterName, atk).`
-atk(noelle, 701).
-atk(klee, 352).
-atk(ganyu, 943).
-atk(keqing, 323).
-atk(ayaka, 796).
+atk('Noelle', 701).
+atk('Klee', 352).
+atk('Ganyu', 943).
+atk('Keqing', 323).
+atk('Ayaka', 796).
 atk(komiomi, 799).
-atk(nahida, 626).
-atk(nilou, 348).
-atk(lynette, 232).
-atk(neuvilette, 208).
+atk('Nahida', 626).
+atk('Nilou', 348).
+atk('Lynette', 232).
+atk('Neuvilette', 208).
 
 % define atk of monsters `atk(enemyName, atk).`
 atk(slime, atk).
@@ -103,28 +103,28 @@ atk(filletBlade, 401).
 atk(amenomaKageuchi, 454).
 
 % define elementType of character `elementType(characterName, element).`
-elementType(noelle, geo).
-elementType(klee, pyro).
-elementType(ganyu, cryo).
-elementType(keqing, electro).
-elementType(ayaka, cryo).
-elementType(kokomi, hydro).
-elementType(nahida, dendro).
-elementType(nilou, hydro).
-elementType(lynette, anemo).
-elementType(neuvilette, hydro).
+elementType('Noelle', geo).
+elementType('Klee', pyro).
+elementType('Ganyu', cryo).
+elementType('Keqing', electro).
+elementType('Ayaka', cryo).
+elementType('Kokomi', hydro).
+elementType('Nahida', dendro).
+elementType('Nilou', hydro).
+elementType('Lynette', anemo).
+elementType('Neuvilette', hydro).
 
 % define weaponType of character `useWeaponType(characterName, weaponType).`
-useWeaponType(noelle, claymore).
-useWeaponType(klee, catalyst).
-useWeaponType(ganyu, bow).
-useWeaponType(keqing, sword).
-useWeaponType(ayaka, sword).
-useWeaponType(kokomi, catalyst).
-useWeaponType(nahida, catalyst).
-useWeaponType(nilou, sword).
-useWeaponType(lynette, sword).
-useWeaponType(neuvilette, catalyst).
+useWeaponType('Noelle', claymore).
+useWeaponType('Klee', catalyst).
+useWeaponType('Ganyu', bow).
+useWeaponType('Keqing', sword).
+useWeaponType('Ayaka', sword).
+useWeaponType('Kokomi', catalyst).
+useWeaponType('Nahida', catalyst).
+useWeaponType('Nilou', sword).
+useWeaponType('Lynette', sword).
+useWeaponType('Neuvilette', catalyst).
 
 % define weapons `weapon(name).`
 weapon(bloodtaintedGreatsword). % 沐浴龙血的剑
