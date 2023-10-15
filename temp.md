@@ -1,15 +1,136 @@
-在解放战争的战场中，中国红军面临着敌人的重重围剿，当时我们迫切需要跳出敌人的包围圈，为此我们需要度过一条水流很激烈的河。当时敌人已经烧毁了所有的船，炸毁了多有的桥。仅剩一座泸定桥还剩下几条跨越河流的钢索。为了渡过这条河，我们的红军战士必须要顶着敌人的重机枪阵地和炮火，以及空军的袭击，携带着木板攀爬着这些钢索，一边战斗一边铺设木版一边前进。战况十分困难，但是我们最终取得了胜利，战胜了敌人，建立了现在的中国。这些牺牲的战士是我们的英雄，虽然他们牺牲了，但是他们坚强的意志和不怕死的精神流传了下来，他们重生了，活在了我们的心中
+% define characters `character(name).`
+character('Noelle').
+character('Klee').
+character('Ganyu').
+character('Keqing').
+character('Ayaka').
+character('Kokomi').
+character('Nahida').
+character('Nilou').
+character('Lynette').
+character('Neuvilette').
 
-На поле боя Освободительной войны Китайская Красная Армия столкнулась с тяжелым окружением и подавлением со стороны врага.В то время нам нужно было срочно выскочить из окружения врага. Для этого нам нужно было пересечь реку с сильным течением. В то время враг сжег все корабли и взорвал все мостов кроме одного моста называется Лудинг с только несколько стальными тросами через реку. Чтобы форсировать реку, нашим красноармейцам приходилось выдерживать позиции крупнокалиберных пулеметов и артиллерийский огонь врага, а также атаки авиации, нести деревянные доски и карабкаться по этими стальными тросами, укладывая деревянные доски в ходе боя и наступления. Ситуация была очень сложной, но мы в конце концов победили, переправились через реку, разгромили врага и основали Новый Китай. Эти принесенные в жертву воины - герои нашей нации. Хотя они умерли, их сильная воля и бесстрашный дух перешли к нам. Они перерождили и живут в наших сердцах.
+% define enemies `enemy(enemyName).`
+monster(slime).
+monster(hilichurl).
+monster(ruinGuard).
+monster(treasureHoarders).
+monster(nobushi).
+monster(eremite).
 
-Кристаллография — наука о кристаллах, их структуре, возникновении и свойствах. Исторически кристаллография возникла в рамках минералогии как наука, которая описы- вает идеальные кристаллы. В настоящее время кристаллогра- фия активно развивается в связи с потребностями электрони- ки и физики твёрдого тела. Кристаллы широко применяются в электронных устройствах1, а для этого необходимы всё более глубокие знания их свойств.
+% define Boss `Boss(BossName).`
+boss('Stormterror').
+boss('Childe').
+boss('Azhdaha').
 
-Очередной шаг в изучении свойств наиболее известных при- родных кристаллов — снежинок — сделал профессор физики из Калифорнийского технологического института К. Либбрехт. В его лаборатории снежинки выращивают2 искусственно.
+% define the nation of characters `nation(characterName, nation).`
+nation('Noelle', moundstalt).
+nation('Klee', moundstalt).
+nation('Ganyu', liyue).
+nation('Keqing', liyue).
+nation('Ayaka', inazuma).
+nation('Kokomi', inazuma).
+nation('Nahida', sumeru).
+nation('Nilou', sumeru).
+nation('Lynette', fontaine).
+nation('Neuvilette', fontaine).
 
-«Я пытаюсь выяснить динамику формирования кристал- лов на молекулярном уровне. Это непростая задача, и ледяные кристаллы скрывают3 множество секретов», — комментирует профессор.
+% define elementType of character `elementType(characterName, element).`
+elementType('Noelle', geo).
+elementType('Klee', pyro).
+elementType('Ganyu', cryo).
+elementType('Keqing', electro).
+elementType('Ayaka', cryo).
+elementType('Kokomi', hydro).
+elementType('Nahida', dendro).
+elementType('Nilou', hydro).
+elementType('Lynette', anemo).
+elementType('Neuvilette', hydro).
 
-Снежинка — сложная симметричная структура, состоя- щая из кристалликов льда. Вариантов снежинок в природе — огромное множество. До сих пор не удалось найти среди сне- жинок двух одинаковых по форме. Предполагается, что в 1 м3 снега находится 350 млн снежинок и каждая из них уникаль- на. Снежинки, как правило, бывают в виде шести- и двенадца- тилучевых звёздочек, шестиугольных пластинок, шестигран- ных призм. Особенности роста кристаллов в воздухе связаны с наличием4 в нём водяного пара.
+% define weaponType of character `useWeaponType(characterName, weaponType).`
+useWeaponType('Noelle', claymore).
+useWeaponType('Klee', catalyst).
+useWeaponType('Ganyu', bow).
+useWeaponType('Keqing', sword).
+useWeaponType('Ayaka', sword).
+useWeaponType('Kokomi', catalyst).
+useWeaponType('Nahida', catalyst).
+useWeaponType('Nilou', sword).
+useWeaponType('Lynette', sword).
+useWeaponType('Neuvilette', catalyst).
 
-Для изучения характеристик снежинок профессор Либ- брехт с 2001 года начал делать фотографии природных сне- жинок и создавать их сравнительную классификацию. Чтобы структура этих снежинок была отчётливо5 видна на фотогра- фиях, Либбрехт разработал специальную фотокамеру, в кото- рую встроил микроскоп. Многочисленные фотографии искус- ственных снежинок, которые выращивались в лаборатории, позволили учёному выявить6 нестабильности роста кристал- лов снежинок, что раньше ещё никому не удавалось. «Эти нестабильности очень важны для понимания процесса роста кристаллов, но объяснить их с научной точки зрения пока ещё сложно», — комментирует учёный.
+% define weapons `weapon(name).`
+weapon('Bloodtainted Great Sword'). % 沐浴龙血的剑
+weapon('Rain Slasher'). % 雨裁
+weapon('Magic Guider'). % 魔法导论
+weapon('Skyward Atlas'). % 天空之卷
+weapon('Oath Sworn Eye'). % 证誓之明瞳
+weapon('Solar Pearl'). % 匣里日月
+weapon('Tome Of The Eternal Flowl'). % 万世流涌大典
+weapon('Amos Bow'). % 阿莫斯之弓
+weapon('Fading Twilight'). % 落霞
+weapon('Silver Sword'). % 银剑
+weapon('Fillet Blade'). % 吃虎鱼刀
+weapon('Amenoma Kageuchi'). % 天目影打刀
 
-Японский учёный Накая Укитиро называл снег «письмом с небес, написанным тайными иероглифами». Он первым соз- дал классификацию снежинок. Именем Накая Укитиро на- зван единственный в мире музей снежинок, расположенный на острове Хоккайдо.
+% define weaponType `weaponType(weaponName, weaponType).`
+weaponType('Bloodtainted Great Sword', claymore).
+weaponType('Rain Slasher', claymore).
+weaponType('Magic Guider', catalyst).
+weaponType('Skyward Atlas', catalyst).
+weaponType('Oath Sworn Eye', catalyst).
+weaponType('Solar Pearl', catalyst).
+weaponType('Tome Of The Eternal Flowl', catalyst).
+weaponType('Amos Bow', bow).
+weaponType('Fading Twilight', bow).
+weaponType('Silver Sword', sword).
+weaponType('Fillet Blade', sword).
+weaponType('Amenoma Kageuchi', sword).
+
+% define rules %
+isObject(ObjectName) :-
+    character(ObjectName), !;
+    monster(ObjectName), !;
+    boss(ObjectName).
+
+%define weather a character can use this weapon
+canUseWeapon(CharacterNAme,WeaponName) :- 
+    character(CharacterNAme),
+    weapon(WeaponName),
+    useWeaponType(CharacterNAme, Type),
+    weaponType(WeaponName, Type).
+
+%define weather the objectA will attack objectB
+areEnemy(ObjectA, ObjectB) :-  
+    character(ObjectA), monster(ObjectB), !;
+    character(ObjectA), boss(ObjectB), !;
+    monster(ObjectA), character(ObjectB), !;
+    boss(ObjectA), character(ObjectB).
+
+areFriendly(ObjectA, ObjectB) :-
+    character(ObjectA), character(ObjectB) ->  
+    (   nation(ObjectA, Nation),
+        nation(ObjectB, Nation)
+    ), !;
+    monster(ObjectA), monster(ObjectB), !;
+    boss(ObjectA), monster(ObjectB).
+
+areNeutral(ObjectA, ObjectB) :-
+    character(ObjectA), character(ObjectB) ->  
+    (   nation(ObjectA, NationA),
+        nation(ObjectB, NationB),
+        NationA \= NationB
+    ).
+
+attack(ObjectA, ObjectB) :-
+    call(areFriendly(ObjectA, ObjectB)) ->  
+    (   write(ObjectA),
+        write(' will not attack '),
+        write(ObjectB),
+        write(', because they are friendly.')
+    ), !;
+    (   write(ObjectA),
+        write(' attack '),
+        write(ObjectB),
+        write('!'), nl
+    ).

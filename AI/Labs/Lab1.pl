@@ -1,3 +1,6 @@
+:- dynamic hp/2.
+:- dynamic atk/2.
+
 % define characters `character(name).`
 character(noelle).
 character(klee).
@@ -9,6 +12,19 @@ character(nahida).
 character(nilou).
 character(lynette).
 character(neuvilette).
+
+% define enemies `enemy(enemyName).`
+monster(slime).
+monster(hilichurl).
+monster(ruinGuard).
+monster(treasureHoarders).
+monster(nobushi).
+monster(eremite).
+
+% define Boss `Boss(BossName).`
+boss(stormterror).
+boss(childe).
+boss(azhdaha).
 
 % define the nation of characters `nation(characterName, nation).`
 nation(noelle, moundstalt).
@@ -34,6 +50,19 @@ hp(nilou, 15185).
 hp(lynette, 12937).
 hp(neuvilette, 14695).
 
+% define HP of monsters `hp(enemyName, hp).`
+hp(slime, hp).
+hp(hilichurl, hp).
+hp(ruinGuard, hp).
+hp(treasureHoarders, hp).
+hp(nobushi, hp).
+hp(eremite, hp).
+
+% define HP of boss `hp(bossName, hp).`
+hp(stormterror, hp).
+hp(childe, hp).
+hp(azhdaha, hp).
+
 % define ATK of character `atk(characterName, atk).`
 atk(noelle, 701).
 atk(klee, 352).
@@ -45,6 +74,33 @@ atk(nahida, 626).
 atk(nilou, 348).
 atk(lynette, 232).
 atk(neuvilette, 208).
+
+% define atk of monsters `atk(enemyName, atk).`
+atk(slime, atk).
+atk(hilichurl, atk).
+atk(ruinGuard, atk).
+atk(treasureHoarders, atk).
+atk(nobushi, atk).
+atk(eremite, atk).
+
+% define atk of boss `atk(bossName, atk).`
+atk(stormterror, atk).
+atk(childe, atk).
+atk(azhdaha, atk).
+
+% define atk of weapons
+atk(bloodtaintedGreatsword, 354).
+atk(rainslasher, 510).
+atk(magicGuide, 354).
+atk(skywardAtlas, 674).
+atk(oathswornEye, 565).
+atk(solarPearl, 510).
+atk(tomeOfTheEternalFlow, 542).
+atk(amosbow, 608).
+atk(fadingTwilight, 565).
+atk(silverSword, 243).
+atk(filletBlade, 401).
+atk(amenomaKageuchi, 454).
 
 % define elementType of character `elementType(characterName, element).`
 elementType(noelle, geo).
@@ -98,41 +154,49 @@ weaponType(silverSword, sword).
 weaponType(filletBlade, sword).
 weaponType(amenomaKageuchi, sword).
 
-% define enemies `enemy(enemyName).`
-enemy(slime).
-enemy(hilichurl).
-enemy(ruinGuard).
-enemy(treasureHoarders).
-enemy(nobushi).
-enemy(eremite).
+% define rules %
+object(ObjectName) :-
+    character(ObjectName), !;
+    monster(ObjectName), !;
+    boss(ObjectName).
 
-% define Boss `Boss(BossName).`
-boss(stormterror).
-boss(childe).
-boss(azhdaha).
+%define weather a character can use this weapon
+canUseWeapon(CharacterNAme,WeaponName) :- 
+    character(CharacterNAme),
+    weapon(WeaponName),
+    useWeaponType(CharacterNAme, Type),
+    weaponType(WeaponName, Type).
 
-% define HP of enemies `hp(enemyName, hp).`
-hp(slime, hp).
-hp(hilichurl, hp).
-hp(ruinGuard, hp).
-hp(treasureHoarders, hp).
-hp(nobushi, hp).
-hp(eremite, hp).
+%define weather the objectA will attack objectB
+areEnemy(ObjectA, ObjectB) :-  
+    character(ObjectA), monster(ObjectB), !;
+    character(ObjectA), boss(ObjectB), !;
+    monster(ObjectA), character(ObjectB), !;
+    boss(ObjectA), character(ObjectB).
 
-% define HP of boss `hp(bossName, hp).`
-hp(stormterror, hp).
-hp(childe, hp).
-hp(azhdaha, hp).
+areFriendly(ObjectA, ObjectB) :-
+    character(ObjectA), character(ObjectB) ->  
+    (   nation(ObjectA, Nation),
+        nation(ObjectB, Nation)
+    ), !;
+    monster(ObjectA), boss(ObjectB), !;
+    boss(ObjectA), monster(ObjectB).
 
-% define atk of enemies `atk(enemyName, atk).`
-atk(slime, atk).
-atk(hilichurl, atk).
-atk(ruinGuard, atk).
-atk(treasureHoarders, atk).
-atk(nobushi, atk).
-atk(eremite, atk).
+areNeutral(ObjectA, ObjectB) :-
+    character(ObjectA), character(ObjectB) ->  
+    (   nation(ObjectA, NationA),
+        nation(ObjectB, NationB),
+        NationA \= NationB
+    ).
 
-% define atk of boss `atk(bossName, atk).`
-atk(stormterror, atk).
-atk(childe, atk).
-atk(azhdaha, atk).
+equip(CharacterName, WeaponName) :-
+    canUseWeapon(CharacterName, WeaponName) ->  
+    (   atk(CharacterName, X),
+        write('The ATK of '), write(CharacterName), write(' is: '), write(X), nl,
+        atk(WeaponName, Y),
+        NewX is X + Y,
+        write('New ATK of '), write(CharacterName), write(' is: '), write(NewX), nl,
+        retract(atk(CharacterName, X)),
+        asserta(atk(CharacterName, NewX))
+    ).
+    
