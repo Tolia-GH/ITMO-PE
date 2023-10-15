@@ -6,6 +6,8 @@
 
 ## 阅读索引
 
+[MarkDown LaTeX 教程](Guide.md)
+
 ### 大一
 - [OPD](/OPD/README.md)
 - [编程](/Program/README.md)
