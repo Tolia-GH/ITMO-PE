@@ -1,4 +1,0 @@
-help
-info
-show
-head
