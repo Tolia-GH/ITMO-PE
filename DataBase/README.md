@@ -2,8 +2,7 @@
 
 ## 阅读索引
 
-- [ ] [Lecture](Lecture.md)
-- [ ] [Labs](Labs.md)
+- [ ] [Lab 1](./Labs/Lab1.md)
 
 
 <style type="text/css">
