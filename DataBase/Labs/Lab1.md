@@ -92,6 +92,8 @@ psql -h pg -d studs
 
   ![](Lab1_DataBaseStructure.svg)
 
+  [Source](https://lucid.app/lucidchart/6edbd86a-1ef8-45ba-957b-8046df96f354/edit?viewport_loc=-322%2C-474%2C2474%2C2302%2C0_0&invitationId=inv_7bb712dd-866d-43a2-a8f2-8ac4f506e6da)
+
 ## DataBase Data
 
 - ### Enum
