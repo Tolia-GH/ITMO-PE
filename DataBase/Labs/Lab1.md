@@ -174,7 +174,7 @@ status   | attribute
     5         | found
     6         | lead
     7         | follow
-    8         | perform previous duties as a pilot
+    8         | perform duties
 
   - #### Status
     
