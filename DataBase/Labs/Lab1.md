@@ -12,14 +12,21 @@
 
 ## [MainPage](../../index.md)/[DataBase](../README.md)/Lab 1
 
-- [Описаеие работы](#описаеие-работы)
-  - [Вариант: 310930](#вариант-310930)
-- [Выполнение работы](#выполнение-работы)
-  - [DataBase Structure](#database-structure)
-  - [DataBase Data](#database-data)
-  - [Creation in SQL](#creation-in-sql)
+студент: Чжоу Хунсян
+группа: P33131
+вариант: 310930
 
-# Описаеие работы
+- [1 Текст задания.](#1-текст-задания)
+- [2 Описание предметной области.](#2-описание-предметной-области)
+- [3 Список сущностей и их классификацию](#3-список-сущностей-и-их-классификацию)
+- [4 Инфологическая модель](#4-инфологическая-модель)
+- [5 Даталогическая модель](#5-даталогическая-модель)
+  - [DataBase Data](#database-data)
+- [6 Реализация даталогической модели на SQL](#6-реализация-даталогической-модели-на-sql)
+  - [Data Insert in SQL](#data-insert-in-sql)
+- [7 Вывод по работе](#7-вывод-по-работе)
+
+# 1 Текст задания.
 
 Для выполнения лабораторной работы №1 необходимо:  
 要完成实验室工作 1，您必须：
@@ -78,7 +85,9 @@ psql -h pg -d studs
 3. DDL
 4. DML
 
-## Вариант: 310930
+# 2 Описание предметной области.
+
+**Вариант: 310930**
 
 **Описание предметной области, по которой должна быть построена доменная модель:**  
 **应为其构建领域模型的主题领域的描述：**
@@ -86,13 +95,30 @@ psql -h pg -d studs
 > Удобно устроившись перед экраном, Олвин огляделся в поисках своего робота. К его изумлению, тот исчез. Но затем он все-таки обнаружил его -- в маленьком углублении под закругляющимся потолком: робот уютно устроился в этой нише. Он привел Мастера через пространства космоса на Землю, а затем в качестве слуги проследовал за ним в Лиз. Теперь же, словно и не было всех этих минувших эпох, он изготовился снова выполнять свои старые пилотские обязанности.  
 > 阿尔文舒适地坐在屏幕前，环顾四周寻找他的机器人。 让他惊讶的是，他竟然消失了。 但后来他终于在弧形天花板下的一个小凹处找到了它：机器人舒适地坐落在这个壁龛中。 他带领主人穿越太空来到地球，然后跟随他来到莉兹作为仆人。 现在，就像所有这些过去的时代从未发生过一样，他准备再次履行他以前的飞行员职责。
 
-# Выполнение работы
+# 3 Список сущностей и их классификацию
 
-## DataBase Structure
+DataBase | Classification
+---------|---------------
+PROCESS  | enum
+character| core entity
+actionList| core entity
+locations| core entity
+relations| assosiation
+actions  | assosiation
+movement | assosiation
+status   | attribute
 
-  ![](Lab1_DataBaseStructure.svg)
+# 4 Инфологическая модель
+
+  ![](Lab1_DataStructure.svg)
 
   [Source](https://lucid.app/lucidchart/6edbd86a-1ef8-45ba-957b-8046df96f354/edit?viewport_loc=-322%2C-474%2C2474%2C2302%2C0_0&invitationId=inv_7bb712dd-866d-43a2-a8f2-8ac4f506e6da)
+
+# 5 Даталогическая модель
+
+  ![](Lab1_DataLogic.svg)
+
+  [Source](https://lucid.app/lucidchart/237ba2e1-11ed-4a3c-8225-5d98a25779f0/edit?viewport_loc=-116%2C-424%2C1611%2C2177%2C0_0&invitationId=inv_4f533a7b-dc89-4e8b-893a-d96ab4aba409)
 
 ## DataBase Data
 
@@ -112,84 +138,90 @@ psql -h pg -d studs
 
     character_id | character_name
     -------------|---------------
-    0            | Olvin
-    1            | Robot
+    1            | Olvin
+    2            | Robot
 
   - #### Locations
     
     location_id | location_name
     ------------|--------------
-    0           | in front of the screen
-    1           | in a small recess under the curved ceiling
-    2           | space
-    3           | to the Earth
-    4           | to Liz
+    1           | in front of the screen
+    2           | in a small recess under the curved ceiling
+    3           | space
+    4           | to the Earth
+    5           | to Liz
 
 
   - #### ActionList
     
     action_id | action_name
     ----------|------------
-    0         | sit
-    1         | find
-    2         | feel
-    3         | disapear
-    4         | found
-    5         | lead
-    6         | follow
-    7         | perform previous duties as a pilot
+    1         | sit
+    2         | find
+    3         | feel
+    4         | disapear
+    5         | found
+    6         | lead
+    7         | follow
+    8         | perform previous duties as a pilot
 
   - #### Status
     
     status_id | status_name
     ----------|------------
-    0         | comfortably
-    1         | looking around
-    2         | surprised
-    3         | finally
-    4         | like all these past times never happened
+    1         | comfortably
+    2         | looking around
+    3         | surprised
+    4         | finally
+    5         | like all these past times never happened
 
 - ### Relationships
 
   - #### Relations
 
-    relation_id | relation_name | subject | object
-    ------------|---------------|---------|-------
-    0           | master        | 0       | 1
-    1           | servant       | 1       | 0
+    relation_id | relation_name | relation_subject | relation_object
+    ------------|---------------|------------------|----------------
+    1           | master        | 1                | 2
+    2           | servant       | 2                | 1
 
   - #### Actions
 
-    action_id | action | subject | object | location| status | process
-    ----------|--------|---------|--------|---------|--------|--------
-    0         | 0      | 0       | null   | 0       | 0      | DOING
-    1         | 1      | 0       | 1      | null    | 1      | DOING
-    2         | 2      | 0       | null   | null    | 2      | DONE
-    3         | 3      | 1       | null   | null    | null   | DONE
-    4         | 4      | 0       | 1      | 1       | 3      | DONE
-    5         | 0      | 1       | null   | 1       | 0      | DOING
-    6         | 5      | 1       | 0      | 3       | null   | DONE
-    7         | 6      | 1       | 0      | 4       | null   | DONE
-    8         | 7      | 0       | null   | null    | 4      | TODO
+    action_id | action | action_subject | action_object | location | status | process
+    ----------|--------|----------------|---------------|----------|--------|--------
+    1         | 1      | 1              | null          | 1        | 1      | DOING
+    2         | 2      | 1              | 2             | null     | 2      | DOING
+    3         | 3      | 1              | null          | null     | 3      | DONE
+    4         | 4      | 2              | null          | null     | null   | DONE
+    5         | 5      | 1              | 2             | 2        | 4      | DONE
+    6         | 1      | 2              | null          | 2        | 1      | DOING
+    7         | 6      | 2              | 1             | 4        | null   | DONE
+    8         | 7      | 2              | 1             | 5        | null   | DONE
+    9         | 8      | 1              | null          | null     | 5      | TODO
 
   - #### Movements
 
-    movement_id | character | starting_location | destination_location 
-    ------------|-----------|-------------------|---------------------
-    0           | 1         | 2                 | 3
-    1           | 0         | 2                 | 3
-    2           | 1         | 3                 | 4
-    3           | 0         | 3                 | 4
+    movement_id | movement_subject | starting_location | destination_location 
+    ------------|------------------|-------------------|---------------------
+    1           | 2                | 3                 | 4
+    2           | 1                | 3                 | 4
+    3           | 2                | 4                 | 5
+    4           | 1                | 4                 | 5
 
-## Creation in SQL
+# 6 Реализация даталогической модели на SQL
 
 ```sql
--- create enum 'PROCESS'
+CREATE DATABASE dateabaseLab1;
+
+\c dateabaseLab1;
+```
+
+```sql
+--create enum 'Process'
 CREATE TYPE PROCESS AS ENUM (
     'TODO',
     'DOING',
-    'DONW'
-);
+    'DONE'
+    );
 
 --create table 'Characters'
 CREATE TABLE Characters (
@@ -208,4 +240,96 @@ CREATE TABLE ActionList (
     action_id SERIAL PRIMARY KEY,
     action_name VARCHAR(64)
 );
+
+--create table 'Status'
+CREATE TABLE Status (
+    status_id SERIAL PRIMARY KEY,
+    status_name VARCHAR(64)
+);
+
+--create table 'Relations'
+CREATE TABLE Relations (
+    relation_id SERIAL PRIMARY KEY,
+    relation_name VARCHAR(64),
+    relation_subject INT REFERENCES Characters(character_id),
+    relation_object INT REFERENCES Characters(character_id)
+);
+
+--create table 'Actions'
+CREATE TABLE Actions (
+    action_id SERIAL PRIMARY KEY,
+    action INT REFERENCES ActionList(action_id),
+    action_subject INT REFERENCES Characters(character_id),
+    action_object INT REFERENCES Characters(character_id),
+    location INT REFERENCES Locations(location_id),
+    status INT REFERENCES Status(status_id),
+    process PROCESS
+);
+
+--create table 'Movements'
+CREATE TABLE Movements (
+    movement_id SERIAL PRIMARY KEY,
+    movement_subject VARCHAR(64),
+    starting_location INT REFERENCES Characters(character_id),
+    destination_location INT REFERENCES Characters(character_id)
+);
 ```
+
+## Data Insert in SQL
+
+```sql
+INSERT INTO characters (character_name) values
+    ('Olvin'),
+    ('Robot');
+
+INSERT INTO locations (location_name) values
+    ('in front of the screen'),
+    ('in a small recess under the curved ceiling'),
+    ('space'),
+    ('to the Earth'),
+    ('to Liz');
+
+INSERT INTO actionlist (action_name) values
+    ('sit'),
+    ('find'),
+    ('feel'),
+    ('disappear'),
+    ('found'),
+    ('lead'),
+    ('follow'),
+    ('perform previous duties as a pilot');
+
+INSERT INTO status (status_name) values
+    ('comfortably'),
+    ('looking around'),
+    ('surprised'),
+    ('finally'),
+    ('like all these past times never happened');
+
+INSERT INTO relations (relation_name, relation_subject, relation_object) values
+    ('master', 1, 2),
+    ('servant', 2, 1);
+
+INSERT INTO actions (action, action_subject, action_object, location, status, process) values
+    (1, 1, null, 1, 1, 'DOING'),
+    (2, 1, 2, null, 2, 'DOING'),
+    (3, 1, null, null, 3, 'DONE'),
+    (4, 2, null, null, null, 'DONE'),
+    (5, 1, 2, 2, 4, 'DONE'),
+    (1, 2, null, 2, 1, 'DOING'),
+    (6, 2, 1, 4, null, 'DONE'),
+    (7, 2, 1, 5, null, 'DONE'),
+    (8, 1, null, null, 5, 'TODO');
+
+INSERT INTO movements (movement_subject, starting_location, destination_location) values
+    (2, 3, 4),
+    (1, 3, 4),
+    (2, 4, 5),
+    (1, 4, 5);
+```
+
+# 7 Вывод по работе
+
+1. Изучил как составать инфологическую модель и даталогическую модель.
+2. Изучил как Реализовать даталогическую модель в PostgreSQL и заполнить таблицы данными
+
