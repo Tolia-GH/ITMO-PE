@@ -26,6 +26,11 @@
 - [信息安全方法论](/InformationSecurity/README.md)
 - [概率论](/ProbabilityTheory/README.md)
 
+### 大三
+
+- [数据库](/DataBase/README.md)
+- [AI 系统](/AI/README.md)
+
 ## 版权声明
 - 本项目所有非代码文本内容遵循 [CC BY-NC-SA 3.0 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)
 - 本项目所有代码文本内容遵循 [MIT Lisense](LICENSE)
