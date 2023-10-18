@@ -221,7 +221,7 @@ CREATE TYPE PROCESS AS ENUM (
     'TODO',
     'DOING',
     'DONE'
-    );
+);
 
 --create table 'Characters'
 CREATE TABLE Characters (
