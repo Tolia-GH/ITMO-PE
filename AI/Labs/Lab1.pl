@@ -119,19 +119,28 @@ elementType('Nilou', hydro).
 elementType('Lynette', anemo).
 elementType('Neuvilette', hydro).
 
-reactionFrozen(cyro, hydro).
+reactionFrozen(cryo, hydro).
+reactionFrozen(hydro, cryo).
 reactionVaporize(pyro, hydro).
+reactionVaporize(hydro, pyro).
 reactionElectroCharge(electro, hydro).
+reactionElectroCharge(hydro, electro).
 reactionOverload(pyro, electro).
-reactionSuperconduct(cyro, eletro).
+reactionOverload(electro, pyro).
+reactionSuperconduct(cryo, electro).
+reactionSuperconduct(electro, cryo).
 reactionBurning(pyro, dendro).
+reactionBurning(dendro, pyro).
 reactionSwirl(anemo, pyro).
 reactionSwirl(anemo, hydro).
-reactionSwirl(anemo, cyro).
+reactionSwirl(anemo, cryo).
 reactionSwirl(anemo, electro).
-reactionMelt(cyro, pyro).
-
-
+reactionSwirl(pyro, anemo).
+reactionSwirl(hydro, anemo).
+reactionSwirl(cryo, anemo).
+reactionSwirl(electro, anemo).
+reactionMelt(cryo, pyro).
+reactionMelt(pyro, cryo).
 
 % define weaponType of character `useWeaponType(characterName, weaponType).`
 useWeaponType('Noelle', claymore).
@@ -175,12 +184,12 @@ weaponType('Amenoma Kageuchi', sword).
 
 % define rules %
 mob(ObjectName) :-
-    character(ObjectName), !;
-    monster(ObjectName), !;
+    character(ObjectName);
+    monster(ObjectName);
     boss(ObjectName).
 
 isConnected(NationA, NationB) :-
-    border(NationA, NationB), !;
+    border(NationA, NationB);
     border(NationB, NationA).
 
 %define weather a character can use this weapon
@@ -190,32 +199,49 @@ canUseWeapon(CharacterNAme, WeaponName) :-
     useWeaponType(CharacterNAme, Type),
     weaponType(WeaponName, Type).
 
+willCauseReaction(CharacterA, CharacterB) :-
+    elementType(CharacterA, ElementA), 
+    elementType(CharacterB, ElementB),
+    (   reactionFrozen(ElementA, ElementB);
+    	reactionVaporize(ElementA, ElementB);
+    	reactionElectroCharge(ElementA, ElementB);
+    	reactionOverload(ElementA, ElementB);
+    	reactionSuperconduct(ElementA, ElementB);
+    	reactionBurning(ElementA, ElementB);
+    	reactionSwirl(ElementA, ElementB);
+    	reactionMelt(ElementA, ElementB)
+    ).
+
 %define weather the objectA will attack objectB
 areEnemy(ObjectA, ObjectB) :-
     mob(ObjectA), mob(ObjectB),
-    character(ObjectA), monster(ObjectB), !;
-    character(ObjectA), boss(ObjectB), !;
-    monster(ObjectA), character(ObjectB), !;
-    boss(ObjectA), character(ObjectB).
+    character(ObjectA),
+    (	monster(ObjectB);
+    	boss(ObjectB)
+    );
+    (   monster(ObjectA), character(ObjectB)
+    );
+    (   boss(ObjectA), character(ObjectB)
+    ).
 
 areFriendly(ObjectA, ObjectB) :-
     mob(ObjectA), mob(ObjectB),
-    character(ObjectA), character(ObjectB) ->  
-    (   nation(ObjectA, Nation),
-        nation(ObjectB, Nation)
-    ), !;
-    monster(ObjectA), boss(ObjectB), !;
-    boss(ObjectA), monster(ObjectB), !;
-    monster(ObjectA), monster(ObjectB), !;
+    (   character(ObjectA), character(ObjectB), 
+    	nation(ObjectA, NationA),
+    	nation(ObjectB, NationB),
+        NationA == NationB
+    );
+    monster(ObjectA), boss(ObjectB);
+    boss(ObjectA), monster(ObjectB);
+    monster(ObjectA), monster(ObjectB);
     boss(ObjectA), boss(ObjectB).
 
 areNeutral(ObjectA, ObjectB) :-
     mob(ObjectA), mob(ObjectB),
-    character(ObjectA), character(ObjectB) ->  
-    (   nation(ObjectA, NationA),
-        nation(ObjectB, NationB),
-        NationA \= NationB
-    ).
+    character(ObjectA), character(ObjectB),
+    nation(ObjectA, NationA),
+    nation(ObjectB, NationB),
+    NationA \= NationB.
 
 equip(CharacterName, WeaponName) :-
     canUseWeapon(CharacterName, WeaponName) ->  
@@ -239,17 +265,17 @@ printStatus(Object) :-
     write('ATK: '),
     write(ATK), nl.
 
-hit(ObjectA, ObjectB, HP_A, HP_B, ATK_A, ATK_B) :-
-    printStatus(ObjectA),
-    hp(CharacterName, HP_C),
-    hp(EnemyName, HP_E),
-    atk(CharacterName, ATK_C),
-    atk(EnemyName, ATK_E),
-    NewHP_E is HP_E - ATK_C,
-    write(CharacterName),
+hit(ObjectA, ObjectB) :-
+    hp(ObjectA, HP_A),
+    hp(ObjectB, HP_B),
+    atk(ObjectA, ATK_A),
+    atk(ObjectB, ATK_B),
+    write(ObjectA),
     write(' cause '),
-    write(ATK_C),
-    write(' damage!')
+    write(ATK_A),
+    write(' damage '),
+	write('to '),
+	write(ObjectB).
 
 attack(CharacterName, EnemyName) :-
     areEnemy(CharacterName, EnemyName) ->  
@@ -259,19 +285,15 @@ attack(CharacterName, EnemyName) :-
         write('!'), nl,
     	write('Choose a equipment:'),
         read(Equipment),
-        equip(CharacterName, Equipment),
-    	
-        hp(CharacterName, HP_C), 
-    	hp(EnemyName, HP_E),
-        atk(CharacterName, ATK_C),
-        atk(EnemyName, ATK_E),
-        NewATK_C = ATK_C,
-        NewATK_E = ATK_E,
-        NewHP_C = HP_C,
-        NewHP_E = HP_E,
-    	NewHP_C > 0; NewHP_E > 0 ->  
-    	(   hit(CharacterName, EnemyName, NewHP_C, NewHP_E, NewATK_C, NewATK_E)
-        )
+        canUseWeapon(CharacterName, Equipment) ->  
+    	(   equip(CharacterName, Equipment),
+        	hit(CharacterName, EnemyName)
+        );
+    	write(CharacterName),
+        write(' can not use '),
+    	write(Equipment),
+        write(', Choose another!'), nl,
+    	attack(CharacterName, EnemyName)
     ), !;
     (   write(CharacterName),
         write(' will not attack '),
