@@ -1,8 +1,0 @@
-    write('Element type of '),
-    write(CharacterA),
-    write(' is: '),
-    write(ElementA), nl,
-    write('Element type of '),
-    write(CharacterB),
-    write(' is: '),
-    write(ElementB),
