@@ -1,4 +1,4 @@
-## [MainPage](../index.md)/[Rusian Language](README.md)/ПРОЦЕСС ПРОГРАММНОЙ ИНЖЕНЕРИИ
+## [MainPage](../../index.md)/[Rusian Language](../README.md)/ПРОЦЕСС ПРОГРАММНОЙ ИНЖЕНЕРИИ
 >
 А.С. Бондаренко, магистрант
 П.К. Ярыгин, магистрант

@@ -1,4 +1,4 @@
-## [MainPage](../index.md)/[Rusian Language](README.md)/Texts
+## [MainPage](../../index.md)/[Rusian Language](../README.md)/Texts
 
 - [Основный курс](#основный-курс)
   - [Технологии Будушего](#технологии-будушего)
