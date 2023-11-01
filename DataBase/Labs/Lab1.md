@@ -235,26 +235,26 @@ CREATE TYPE PROCESS AS ENUM (
 );
 
 --create table 'Characters'
-CREATE TABLE Characters (
-    character_id SERIAL PRIMARY KEY,
-    character_name VARCHAR(64)
+CREATE TABLE characters (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(64)
 );
 
 --create table 'Locations'
-CREATE TABLE Locations (
-    location_id SERIAL PRIMARY KEY,
-    location_name VARCHAR(64)
+CREATE TABLE locations (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(64)
 );
 
 --create table 'ActionList'
-CREATE TABLE ActionList (
-    action_id SERIAL PRIMARY KEY,
+CREATE TABLE events (
+    id SERIAL PRIMARY KEY,
     action_name VARCHAR(64)
 );
 
 --create table 'Status'
 CREATE TABLE Status (
-    status_id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     status_name VARCHAR(64)
 );
 
@@ -343,4 +343,3 @@ INSERT INTO movements (movement_subject, starting_location, destination_location
 
 1. Изучил как составать инфологическую модель и даталогическую модель.
 2. Изучил как Реализовать даталогическую модель в PostgreSQL и заполнить таблицы данными
-
