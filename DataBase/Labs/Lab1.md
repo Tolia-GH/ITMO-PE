@@ -178,7 +178,7 @@ status   | attribute
 
   - #### Status
     
-    status_id | status_name
+    status_id | description
     ----------|------------
     1         | comfortably
     2         | looking around
@@ -221,12 +221,6 @@ status   | attribute
 # 6 Реализация даталогической модели на SQL
 
 ```sql
-CREATE DATABASE dateabaseLab1;
-
-\c dateabaseLab1;
-```
-
-```sql
 --create enum 'Process'
 CREATE TYPE PROCESS AS ENUM (
     'TODO',
@@ -237,70 +231,79 @@ CREATE TYPE PROCESS AS ENUM (
 --create table 'Characters'
 CREATE TABLE characters (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(64)
+    name VARCHAR(64) NOT NULL
 );
 
 --create table 'Locations'
 CREATE TABLE locations (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(64)
+    name VARCHAR(64) NOT NULL
 );
 
 --create table 'ActionList'
 CREATE TABLE events (
     id SERIAL PRIMARY KEY,
-    action_name VARCHAR(64)
+    name VARCHAR(64) NOT NULL
 );
 
 --create table 'Status'
-CREATE TABLE Status (
+CREATE TABLE status (
     id SERIAL PRIMARY KEY,
-    status_name VARCHAR(64)
+    description VARCHAR(64) NOT NULL
 );
 
 --create table 'Relations'
-CREATE TABLE Relations (
-    relation_id SERIAL PRIMARY KEY,
-    relation_name VARCHAR(64),
-    relation_subject INT REFERENCES Characters(character_id),
-    relation_object INT REFERENCES Characters(character_id)
+CREATE TABLE relations (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(64) NOT NULL,
+    subject INT NOT NULL,
+    FOREIGN KEY (subject) REFERENCES characters(id),
+    object INT NOT NULL,
+    FOREIGN KEY (object) REFERENCES Characters(id)
 );
 
 --create table 'Actions'
-CREATE TABLE Actions (
-    action_id SERIAL PRIMARY KEY,
-    action INT REFERENCES ActionList(action_id),
-    action_subject INT REFERENCES Characters(character_id),
-    action_object INT REFERENCES Characters(character_id),
-    location INT REFERENCES Locations(location_id),
-    status INT REFERENCES Status(status_id),
-    process PROCESS
+CREATE TABLE actions (
+    id SERIAL PRIMARY KEY,
+    event INT REFERENCES events(id) NOT NULL,
+    subject INT NOT NULL,
+    FOREIGN KEY (subject) REFERENCES characters(id),
+    object INT,
+    FOREIGN KEY (object) REFERENCES characters(id),
+    location INT,
+    FOREIGN KEY (location) REFERENCES locations(id),
+    status INT UNIQUE,
+    FOREIGN KEY (status) REFERENCES status(id),
+    process PROCESS NOT NULL
 );
 
 --create table 'Movements'
-CREATE TABLE Movements (
-    movement_id SERIAL PRIMARY KEY,
-    movement_subject VARCHAR(64),
-    starting_location INT REFERENCES Characters(character_id),
-    destination_location INT REFERENCES Characters(character_id)
+CREATE TABLE movements (
+    id SERIAL PRIMARY KEY,
+    subject INT,
+    FOREIGN KEY (subject) REFERENCES characters(id),
+    starting_location INT,
+    FOREIGN KEY (starting_location) REFERENCES locations(id),
+    destination_location INT,
+    FOREIGN KEY (destination_location) REFERENCES locations(id)
 );
 ```
 
 ## Data Insert in SQL
 
 ```sql
-INSERT INTO characters (character_name) values
-    ('Olvin'),
+INSERT INTO characters (name) values
+    ('Alvin'),
     ('Robot');
 
-INSERT INTO locations (location_name) values
+INSERT INTO locations (name) values
     ('in front of the screen'),
     ('in a small recess under the curved ceiling'),
     ('space'),
     ('to the Earth'),
     ('to Liz');
 
-INSERT INTO actionlist (action_name) values
+INSERT INTO events (name) values
     ('sit'),
     ('find'),
     ('feel'),
@@ -310,29 +313,30 @@ INSERT INTO actionlist (action_name) values
     ('follow'),
     ('perform previous duties as a pilot');
 
-INSERT INTO status (status_name) values
+INSERT INTO status (description) values
     ('comfortably'),
     ('looking around'),
     ('surprised'),
+    ('snugly'),
     ('finally'),
     ('like all these past times never happened');
 
-INSERT INTO relations (relation_name, relation_subject, relation_object) values
+INSERT INTO relations (name, subject, object) values
     ('master', 1, 2),
     ('servant', 2, 1);
 
-INSERT INTO actions (action, action_subject, action_object, location, status, process) values
+INSERT INTO actions (event, subject, object, location, status, process) values
     (1, 1, null, 1, 1, 'DOING'),
     (2, 1, 2, null, 2, 'DOING'),
     (3, 1, null, null, 3, 'DONE'),
     (4, 2, null, null, null, 'DONE'),
-    (5, 1, 2, 2, 4, 'DONE'),
-    (1, 2, null, 2, 1, 'DOING'),
+    (5, 1, 2, 2, 5, 'DONE'),
+    (1, 2, null, 2, 4, 'DOING'),
     (6, 2, 1, 4, null, 'DONE'),
     (7, 2, 1, 5, null, 'DONE'),
-    (8, 1, null, null, 5, 'TODO');
+    (8, 1, null, null, 6, 'TODO');
 
-INSERT INTO movements (movement_subject, starting_location, destination_location) values
+INSERT INTO movements (subject, starting_location, destination_location) values
     (2, 3, 4),
     (1, 3, 4),
     (2, 4, 5),
