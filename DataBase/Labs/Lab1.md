@@ -34,6 +34,7 @@
 - [5 Даталогическая модель](#5-даталогическая-модель)
   - [DataBase Data](#database-data)
 - [6 Реализация даталогической модели на SQL](#6-реализация-даталогической-модели-на-sql)
+  - [Создание таблиц](#создание-таблиц)
   - [Data Insert in SQL](#data-insert-in-sql)
 - [7 Вывод по работе](#7-вывод-по-работе)
 
@@ -121,13 +122,13 @@ status   | attribute
 
 # 4 Инфологическая модель
 
-  ![](Lab1_DataStructure.svg)
+  ![](Lab1_DataLogic.svg)
 
   [Source](https://lucid.app/lucidchart/6edbd86a-1ef8-45ba-957b-8046df96f354/edit?viewport_loc=-322%2C-474%2C2474%2C2302%2C0_0&invitationId=inv_7bb712dd-866d-43a2-a8f2-8ac4f506e6da)
 
 # 5 Даталогическая модель
 
-  ![](Lab1_DataLogic.svg)
+  ![](Lab1_DataStructure.svg)
 
   [Source](https://lucid.app/lucidchart/237ba2e1-11ed-4a3c-8225-5d98a25779f0/edit?viewport_loc=-116%2C-424%2C1611%2C2177%2C0_0&invitationId=inv_4f533a7b-dc89-4e8b-893a-d96ab4aba409)
 
@@ -219,6 +220,14 @@ status   | attribute
     4           | 1                | 4                 | 5
 
 # 6 Реализация даталогической модели на SQL
+
+## Создание таблиц
+
+```
+ssh -p 2222 s336184@se.ifmo.ru
+pgNE,9243
+```
+
 
 ```sql
 --create enum 'Process'
@@ -346,4 +355,4 @@ INSERT INTO movements (subject, starting_location, destination_location) values
 # 7 Вывод по работе
 
 1. Изучил как составать инфологическую модель и даталогическую модель.
-2. Изучил как Реализовать даталогическую модель в PostgreSQL и заполнить таблицы данными
+2. Изучил как реализовать даталогическую модель в PostgreSQL и заполнить таблицы данными
