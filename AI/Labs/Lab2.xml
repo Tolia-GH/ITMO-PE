@@ -61,7 +61,34 @@
         <ObjectProperty IRI="#canUseWeapon"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#causeReactionBurningWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causeReactionElectroChargeWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causeReactionFrozenWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causeReactionMeltWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causeReactionOverloadWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causeReactionSuperconductWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causeReactionVaporizeWith"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#characterProperties"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#elementProperty"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isBelongTo"/>
@@ -2445,6 +2472,116 @@
         <NamedIndividual IRI="#TreasureHoarders"/>
         <NamedIndividual IRI="#StormTerror"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <NamedIndividual IRI="#anemo"/>
+        <NamedIndividual IRI="#cryo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <NamedIndividual IRI="#anemo"/>
+        <NamedIndividual IRI="#electro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <NamedIndividual IRI="#anemo"/>
+        <NamedIndividual IRI="#hydro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <NamedIndividual IRI="#anemo"/>
+        <NamedIndividual IRI="#pyro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionFrozenWith"/>
+        <NamedIndividual IRI="#cryo"/>
+        <NamedIndividual IRI="#hydro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionMeltWith"/>
+        <NamedIndividual IRI="#cryo"/>
+        <NamedIndividual IRI="#pyro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSuperconductWith"/>
+        <NamedIndividual IRI="#cryo"/>
+        <NamedIndividual IRI="#electro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <NamedIndividual IRI="#cryo"/>
+        <NamedIndividual IRI="#anemo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionBurningWith"/>
+        <NamedIndividual IRI="#dendro"/>
+        <NamedIndividual IRI="#pyro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionElectroChargeWith"/>
+        <NamedIndividual IRI="#electro"/>
+        <NamedIndividual IRI="#hydro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionOverloadWith"/>
+        <NamedIndividual IRI="#electro"/>
+        <NamedIndividual IRI="#pyro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSuperconductWith"/>
+        <NamedIndividual IRI="#electro"/>
+        <NamedIndividual IRI="#cryo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <NamedIndividual IRI="#electro"/>
+        <NamedIndividual IRI="#anemo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionElectroChargeWith"/>
+        <NamedIndividual IRI="#hydro"/>
+        <NamedIndividual IRI="#electro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionFrozenWith"/>
+        <NamedIndividual IRI="#hydro"/>
+        <NamedIndividual IRI="#cryo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <NamedIndividual IRI="#hydro"/>
+        <NamedIndividual IRI="#anemo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionVaporizeWith"/>
+        <NamedIndividual IRI="#hydro"/>
+        <NamedIndividual IRI="#pyro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionBurningWith"/>
+        <NamedIndividual IRI="#pyro"/>
+        <NamedIndividual IRI="#dendro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionMeltWith"/>
+        <NamedIndividual IRI="#pyro"/>
+        <NamedIndividual IRI="#cryo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionOverloadWith"/>
+        <NamedIndividual IRI="#pyro"/>
+        <NamedIndividual IRI="#electro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <NamedIndividual IRI="#pyro"/>
+        <NamedIndividual IRI="#anemo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionVaporizeWith"/>
+        <NamedIndividual IRI="#pyro"/>
+        <NamedIndividual IRI="#hydro"/>
+    </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#ability"/>
         <ObjectProperty IRI="#characterProperties"/>
@@ -2458,7 +2595,43 @@
         <ObjectProperty IRI="#ability"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causeReactionBurningWith"/>
+        <ObjectProperty IRI="#elementProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causeReactionElectroChargeWith"/>
+        <ObjectProperty IRI="#elementProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causeReactionFrozenWith"/>
+        <ObjectProperty IRI="#elementProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causeReactionMeltWith"/>
+        <ObjectProperty IRI="#elementProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causeReactionOverloadWith"/>
+        <ObjectProperty IRI="#elementProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causeReactionSuperconductWith"/>
+        <ObjectProperty IRI="#elementProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <ObjectProperty IRI="#elementProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causeReactionVaporizeWith"/>
+        <ObjectProperty IRI="#elementProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#characterProperties"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#elementProperty"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -2481,6 +2654,18 @@
         <ObjectProperty IRI="#relationship"/>
         <ObjectProperty IRI="#characterProperties"/>
     </SubObjectPropertyOf>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#causeReactionElectroChargeWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#causeReactionFrozenWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#causeReactionOverloadWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#causeReactionVaporizeWith"/>
+    </SymmetricObjectProperty>
     <SymmetricObjectProperty>
         <ObjectProperty IRI="#isEnemyTo"/>
     </SymmetricObjectProperty>
@@ -2512,6 +2697,38 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#canUseWeapon"/>
         <Class IRI="#character"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causeReactionBurningWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causeReactionElectroChargeWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causeReactionFrozenWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causeReactionMeltWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causeReactionOverloadWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causeReactionSuperconductWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causeReactionVaporizeWith"/>
+        <Class IRI="#element"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isBelongTo"/>
@@ -2576,6 +2793,38 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#canUseWeapon"/>
         <Class IRI="#sword"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#causeReactionBurningWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#causeReactionElectroChargeWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#causeReactionFrozenWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#causeReactionMeltWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#causeReactionOverloadWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#causeReactionSuperconductWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#causeReactionVaporizeWith"/>
+        <Class IRI="#element"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isBelongTo"/>
