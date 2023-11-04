@@ -302,6 +302,58 @@
         <Class abbreviatedIRI="owl:Thing"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#boss"/>
+        <Class IRI="#character"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#boss"/>
+        <Class IRI="#monster"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#bow"/>
+        <Class IRI="#catalyst"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#bow"/>
+        <Class IRI="#claymore"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#bow"/>
+        <Class IRI="#polearm"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#bow"/>
+        <Class IRI="#sword"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#catalyst"/>
+        <Class IRI="#claymore"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#catalyst"/>
+        <Class IRI="#polearm"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#catalyst"/>
+        <Class IRI="#sword"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#character"/>
+        <Class IRI="#monster"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#claymore"/>
+        <Class IRI="#polearm"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#claymore"/>
+        <Class IRI="#sword"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#polearm"/>
+        <Class IRI="#sword"/>
+    </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#sword"/>
         <NamedIndividual IRI="#AmenomaKageuchi"/>
@@ -2582,6 +2634,196 @@
         <NamedIndividual IRI="#pyro"/>
         <NamedIndividual IRI="#hydro"/>
     </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">796</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12858</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">450</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Childe"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">400</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Childe"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">943</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">9797</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">150</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">323</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">13103</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Klee"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">352</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Klee"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10287</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">799</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">13471</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">232</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12937</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">626</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10360</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">208</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">14695</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">348</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15185</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">250</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">701</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12071</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">300</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Slime"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Slime"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">13000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5000</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#ability"/>
         <ObjectProperty IRI="#characterProperties"/>
@@ -2681,6 +2923,33 @@
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="#canUseWeapon"/>
     </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#causeReactionBurningWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#causeReactionElectroChargeWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#causeReactionFrozenWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#causeReactionMeltWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#causeReactionOverloadWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#causeReactionSuperconductWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#causeReactionVaporizeWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#elementProperty"/>
+    </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#isEnemyTo"/>
     </IrreflexiveObjectProperty>
@@ -2866,6 +3135,34 @@
         <ObjectProperty IRI="#isFriendlyTo"/>
         <ObjectProperty IRI="#isNeutralTo"/>
     </DisjointObjectProperties>
+    <DataPropertyDomain>
+        <DataProperty IRI="#atk"/>
+        <Class IRI="#boss"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#atk"/>
+        <Class IRI="#character"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#atk"/>
+        <Class IRI="#monster"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#atk"/>
+        <Class IRI="#weapon"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hp"/>
+        <Class IRI="#boss"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hp"/>
+        <Class IRI="#character"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hp"/>
+        <Class IRI="#monster"/>
+    </DataPropertyDomain>
 </Ontology>
 
 
