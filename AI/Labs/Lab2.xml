@@ -3064,64 +3064,8 @@
         <Class IRI="#sword"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#causeReactionBurningWith"/>
-        <Class IRI="#element"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#causeReactionElectroChargeWith"/>
-        <Class IRI="#element"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#causeReactionFrozenWith"/>
-        <Class IRI="#element"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#causeReactionMeltWith"/>
-        <Class IRI="#element"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#causeReactionOverloadWith"/>
-        <Class IRI="#element"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#causeReactionSuperconductWith"/>
-        <Class IRI="#element"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#causeReactionSwirlWith"/>
-        <Class IRI="#element"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#causeReactionVaporizeWith"/>
-        <Class IRI="#element"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#isBelongTo"/>
         <Class IRI="#nation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isEnemyTo"/>
-        <Class IRI="#boss"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isEnemyTo"/>
-        <Class IRI="#character"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isEnemyTo"/>
-        <Class IRI="#monster"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isFriendlyTo"/>
-        <Class IRI="#boss"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isFriendlyTo"/>
-        <Class IRI="#character"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isFriendlyTo"/>
-        <Class IRI="#monster"/>
     </ObjectPropertyRange>
     <DisjointObjectProperties>
         <ObjectProperty IRI="#isEnemyTo"/>
