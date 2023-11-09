@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-08T08:30:59.154Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="qyPA2V0kWjWX5VkLZmXl" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-09T09:45:17.682Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="MavazPIuzkp3u9bLPOa_" version="22.0.8" type="github">
   <diagram name="第 1 页" id="N7jdsIERB-vte-1zk_kU">
     <mxGraphModel dx="1033" dy="1125" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
       <root>
@@ -37,16 +37,16 @@
         <mxCell id="T3BMxGhGBOosbabUrvsc-36" value="entrance" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="420" y="690" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="T3BMxGhGBOosbabUrvsc-39" value="organize mangement" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="T3BMxGhGBOosbabUrvsc-39" value="organization mangement" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="420" y="150" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="T3BMxGhGBOosbabUrvsc-41" value="create&lt;br&gt;organize" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="T3BMxGhGBOosbabUrvsc-41" value="create&lt;br&gt;organization" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="590" y="119" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="T3BMxGhGBOosbabUrvsc-42" value="modify&lt;br&gt;organization" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="590" y="190" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="T3BMxGhGBOosbabUrvsc-43" value="delete&lt;br&gt;organize" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="T3BMxGhGBOosbabUrvsc-43" value="delete&lt;br&gt;organization" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="760" y="250" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="T3BMxGhGBOosbabUrvsc-48" value="include" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="T3BMxGhGBOosbabUrvsc-39" target="T3BMxGhGBOosbabUrvsc-42">
@@ -121,10 +121,10 @@
             <mxPoint x="620" y="391" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="T3BMxGhGBOosbabUrvsc-69" value="search organize" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="T3BMxGhGBOosbabUrvsc-69" value="search organization" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="420" y="230" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="T3BMxGhGBOosbabUrvsc-70" value="join organize" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="T3BMxGhGBOosbabUrvsc-70" value="join&lt;br&gt;organization" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="590" y="265" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="T3BMxGhGBOosbabUrvsc-71" value="extend" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="T3BMxGhGBOosbabUrvsc-69" target="T3BMxGhGBOosbabUrvsc-70">
@@ -134,7 +134,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="T3BMxGhGBOosbabUrvsc-72" value="search project" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="420" y="461" width="100" height="40" as="geometry" />
+          <mxGeometry x="420" y="451" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="T3BMxGhGBOosbabUrvsc-73" value="join project" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="590" y="491" width="100" height="40" as="geometry" />
@@ -268,7 +268,7 @@
         <mxCell id="T3BMxGhGBOosbabUrvsc-115" value="discuss" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="560" y="571" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="T3BMxGhGBOosbabUrvsc-116" value="browse organize" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="T3BMxGhGBOosbabUrvsc-116" value="browse organization" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="420" y="300" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="T3BMxGhGBOosbabUrvsc-117" value="extend" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="T3BMxGhGBOosbabUrvsc-116" target="T3BMxGhGBOosbabUrvsc-70">
@@ -311,6 +311,9 @@
           <mxGeometry x="950" y="250" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="T3BMxGhGBOosbabUrvsc-147" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;strokeColor=#CC0000;" edge="1" parent="1" source="T3BMxGhGBOosbabUrvsc-127" target="T3BMxGhGBOosbabUrvsc-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="T3BMxGhGBOosbabUrvsc-167" value="" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="T3BMxGhGBOosbabUrvsc-127" target="T3BMxGhGBOosbabUrvsc-129">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="T3BMxGhGBOosbabUrvsc-127" value="owner" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#CC0000;" vertex="1" parent="1">
