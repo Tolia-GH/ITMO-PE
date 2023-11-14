@@ -246,6 +246,48 @@
     <Declaration>
         <NamedIndividual IRI="#pyro"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#boss"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isEnemyTo"/>
+            <Class IRI="#character"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#character"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#canUsePowerOf"/>
+            <Class IRI="#element"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#character"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#canUseWeapon"/>
+            <Class IRI="#weapon"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#character"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isEnemyTo"/>
+            <Class IRI="#boss"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#character"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isEnemyTo"/>
+            <Class IRI="#monster"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#monster"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isEnemyTo"/>
+            <Class IRI="#character"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#boss"/>
         <Class IRI="#mob"/>
@@ -2949,15 +2991,6 @@
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#elementProperty"/>
-    </IrreflexiveObjectProperty>
-    <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="#isEnemyTo"/>
-    </IrreflexiveObjectProperty>
-    <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="#isFriendlyTo"/>
-    </IrreflexiveObjectProperty>
-    <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="#isNeutralTo"/>
     </IrreflexiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#canUsePowerOf"/>
