@@ -2,7 +2,14 @@
 
 ## 阅读索引
 
-- [ ] [Lab 1](./Labs/Lab1.md)
+Lecture
+- [ ] [Lecture 1](./Lecture/Lecture1.md)
+- [ ] [Lecture 2](./Lecture/Lecture2.md)
+- [ ] [Lecture 3](./Lecture/Lecture3.md)
+
+Labs
+- [ ] [Lab 1](./Labs/Lab1/Lab1.md)
+- [ ] [Lab 2](./Labs/Lab2/Lab2.md)
 
 
 <style type="text/css">
