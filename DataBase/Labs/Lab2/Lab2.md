@@ -43,7 +43,8 @@
   - [movements](#movements)
 - [4 Отношения в 3NF.](#4-отношения-в-3nf)
 - [5 Отношения в BCNF](#5-отношения-в-bcnf)
-- [6 Денормализации](#6-денормализации)
+- [6 Денормализация](#6-денормализация)
+- [7 Выводы](#7-выводы)
 
 # 1 Текст задания.
 
@@ -65,13 +66,13 @@
 
 ## Инфологическая модель
 
-  ![](Lab2_DataLogic.svg)
+  ![](.Lab2_DataLogic.svg)
 
   [Source](https://lucid.app/lucidchart/6edbd86a-1ef8-45ba-957b-8046df96f354/edit?viewport_loc=-322%2C-474%2C2474%2C2302%2C0_0&invitationId=inv_7bb712dd-866d-43a2-a8f2-8ac4f506e6da)
 
 ## Даталогическая модель
 
-  ![](Lab2_DataStructure.svg)
+  ![](./Lab2_DataStructure.svg)
 
   [Source](https://lucid.app/lucidchart/237ba2e1-11ed-4a3c-8225-5d98a25779f0/edit?viewport_loc=-116%2C-424%2C1611%2C2177%2C0_0&invitationId=inv_4f533a7b-dc89-4e8b-893a-d96ab4aba409)
 
@@ -86,41 +87,58 @@
 
 ## charaters
 
+key: id
+
 - id -> name
 - name -> id
 
 ## events
+
+key: id
 
 - id -> name
 - name -> id
 
 ## locations
 
+key: id
+
 - id -> name
 - name -> id
 
 ## status
+
+key: id
 
 - id -> name
 - name -> id
 
 ## groups
 
+key: id
+
 - id -> name
 - name -> id
 
 ## group_member
+
+key: id
 
 id -> group
 id -> member
 
 ## relations
 
+key: id
+
 id -> name
 id -> subject
 id -> object
 
 ## actions
+
+key: id
+
 id -> event
 id -> subject
 id -> object
@@ -129,6 +147,8 @@ id -> status
 id -> process
 
 ## movements
+
+key: id
 
 id -> character
 id -> starting_location
@@ -159,5 +179,112 @@ id -> destination_location
 - Все имеющиеся таблицы приведены к 3NF. 
 - Все детерминанты — первичные ключи – то есть тоже потенциальные ключи.
 
-# 6 Денормализации
+# 6 Денормализация
+
+- 3NF -> 2NF -> 1NF
+
+  actions | events | locations | status
+  --------|--------|-----------|-------
+  id(PK) | id(PK) | id(PK) | id(PK)
+  event(FK) | name | name | name
+  subject(FK) | 
+  object(FK) | 
+  location(FK) |
+  status(FK) |
+  process | 
+
+  actions | events | locations | status 
+  --------|--------|-----------|-------
+  id -> event | id -> name | id -> name | id -> name
+  id -> subject | name -> id | name -> id | name -> id
+  id -> object
+  id -> location
+  id -> status
+  id -> process
+
+  |actions|
+  |-------|
+  |id(PK)|
+  |event_id|
+  |event_name|
+  |subject(FK)|
+  |object(FK)|
+  |location_id|
+  |location_name|
+  |status_id|
+  |status_name|
+  |process|
+
+  |actions|
+  |-------|
+  |id -> event_id|
+  |id -> subject|
+  |id -> object|
+  |id -> location_id|
+  |id -> status_id|
+  |id -> process|
+  |id -> event_name|
+  |id -> location_name|
+  |id -> status_name|
+  |event_id -> event_name|
+  |location_id -> location_name|
+  |status_id -> status_name|
+
+  |actions|
+  |-------|
+  |event_id(key)|
+  |event_name|
+  |subject(FK)|
+  |object(FK)|
+  |location_id(key)|
+  |location_name|
+  |status_id(key)|
+  |status_name(key)|
+  |process|
+
+  |actions|
+  |-------|
+  |event_id -> event_name|
+  |location_id -> location_name|
+  |status_id -> status_name|
+
+  ---
+
+  movements | locations
+  ----------|----------
+  id(PK) | id(PK)
+  character(FK) | name
+  starting_location(FK) | 
+  destination_location(FK) |
+
+  movements | locations
+  ----------|----------
+  id -> character | id -> name
+  id -> starting_location | name -> id
+  id -> destination_location | 
+
+  |movements|
+  |---------|
+  |id(PK)|
+  |character(FK)|
+  |starting_location_id|
+  |starting_location_name|
+  |destination_location_id|
+  |destination_location_name|
+
+  |movements|
+  |---------|
+  |id -> character|
+  |id -> starting_location_id|
+  |id -> destination_location_id|
+  |id -> starting_location_name|
+  |id -> destination_location_name|
+  |starting_location_id -> starting_location_name|
+  |destination_location_id -> destination_location_name|
+
+  ![](./Lab2_Denormalize.svg)
+
+# 7 Выводы
+
+
 
