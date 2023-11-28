@@ -1,66 +1,19 @@
-#include <iostream>
-#include <deque>
 #include <cstdio>
-#include <cstdlib>
-#include <string>
-#include <cstring>
 
 using namespace std;
 
+char ch;
 int n;
 
-inline void read(int &num) {
-    num = 0;
-    short flag = 1;
-    char ch = getchar();
-    while(ch < '0' || ch > '9') {
-
-        if(ch == '-')flag = -1;
-        ch = getchar();
-    }
-    while(ch >= '0' && ch <= '9') {
-        num = (num << 3) + (num << 1) + (ch ^ 48);
-        ch = getchar();
-    }
-    num *= flag;
-}
-
-void doProcess() {
-    deque<int> left, right;
-    char request;
-    int id;
-    loop: for (int i = 0; i < n; ++i) {
-
-        request = getchar();
-
-        switch (request) {
-            case '+':
-                read(id);
-                right.push_back(id);
-                break;
-            case '*':
-                read(id);
-                right.push_front(id);
-                break;
-            case '-':
-                cout << left.front() << endl;
-                left.pop_front();
-                break;
-            case '\n':
-                --i;
-        }
-
-        if (left.size() < right.size()) {
-            left.push_back(right.front());
-            right.pop_front();
-        }
-    }
-}
-
 int main() {
-    read(n);
+    scanf("%c", &ch);
+    scanf("%d", &n);
 
-    doProcess();
+    for (int i = 0; i < n; ++i) {
+        
+    }
+    
+    
 
     return 0;
 }
