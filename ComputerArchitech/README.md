@@ -3,7 +3,9 @@
 ## 阅读索引
 
 - [ ] [Lecture](Lecture.md)
-- [ ] [Test](Test.md)
+- [x] [Essay1](Essay1.md)
+- [x] [Essay2](Essay2.md)
+- [x] [Essay3](Essay3.md)
 - [ ] [Labs](Labs.md)
 - [ ] [Exam](Exam.md)
 
