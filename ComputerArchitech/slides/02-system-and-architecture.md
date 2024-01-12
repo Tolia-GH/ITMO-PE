@@ -79,7 +79,7 @@ Technical details:
     - Automated testing for dialogue systems based on a property-based approach
       基于属性的方法自动测试对话系统
 
-----
+---
 
 ### Курс <br/> Системная инженерия: Архитектурное моделирование компьютерных систем <br> 系统工程：计算机系统的架构建模
 
@@ -93,7 +93,7 @@ Technical details:
 
 --- закон Хофштадтера 霍夫施塔特定律
 
-----
+---
 
 Причины: 原因：
 
