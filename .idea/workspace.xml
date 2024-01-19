@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79dacbcf-d2f8-4724-9614-83a9772a3d56" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AI/Labs/Lab5/WineDataset.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI/Labs/Lab5/Student_Performance.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI/Labs/Lab5/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AI/Labs/Lab5/main.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="79dacbcf-d2f8-4724-9614-83a9772a3d56" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +108,7 @@
       <workItem from="1705229429513" duration="2107000" />
       <workItem from="1705231568725" duration="329000" />
       <workItem from="1705231925456" duration="12860000" />
-      <workItem from="1705611900571" duration="3257000" />
+      <workItem from="1705611900571" duration="3962000" />
     </task>
     <servers />
   </component>
