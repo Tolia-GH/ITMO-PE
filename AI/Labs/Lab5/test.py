@@ -1,81 +1,110 @@
-import numpy as np
 import pandas as pd
+import random
 
-# 生成示例数据
-np.random.seed(42)
-num_samples = 100
-X1 = 2 * np.random.rand(num_samples, 1)
-X2 = 3 * np.random.rand(num_samples, 1)
-y = 4 + 2 * X1 + 3 * X2 + np.random.randn(num_samples, 1)
 
-# 将数据转为DataFrame
-data = pd.DataFrame(np.column_stack([X1, X2, y]), columns=['X1', 'X2', 'Y'])
+# 1. 从CSV文件中读取数据并进行预处理
+def preprocess_data(file_path):
+    # 读取CSV文件
+    data = pd.read_csv(file_path)
 
-# 可视化数据集的统计数据
-print("统计数据:")
-print(data.describe())
+    # 处理缺失值
+    data = data.dropna()
 
-# 处理缺失值（这里示例数据没有缺失值，实际应用中可能需要处理）
-# 处理分类特征编码（这里示例数据没有分类特征，实际应用中可能需要处理）
+    # 分类特征编码
+    data = pd.get_dummies(data)
 
-# 标准化数据
-def standardize_data(data):
-    mean = data.mean()
-    std = data.std()
-    standardized_data = (data - mean) / std
-    return standardized_data, mean, std
+    # 缩放（这里简化为不进行缩放，实际情况可能需要根据数据情况进行标准化或归一化）
 
-X_std, X_mean, X_std_dev = standardize_data(data[['X1', 'X2']])
-y_std, y_mean, y_std_dev = standardize_data(data[['Y']])
+    return data
 
-# 将数据分为训练数据集和测试数据集
-def train_test_split(X, y, test_size=0.2):
-    num_samples = len(X)
-    num_test = int(test_size * num_samples)
-    indices = np.random.permutation(num_samples)
-    test_indices = indices[:num_test]
-    train_indices = indices[num_test:]
-    X_train, X_test = X.iloc[train_indices], X.iloc[test_indices]
-    y_train, y_test = y.iloc[train_indices], y.iloc[test_indices]
-    return X_train, X_test, y_train, y_test
 
-X_train, X_test, y_train, y_test = train_test_split(X_std, y_std)
+# 2. 实现k近邻方法
+class KNN:
+    def __init__(self, k, features):
+        self.k = k
+        self.features = features
 
-# 使用最小二乘法实现线性回归
-def linear_regression(X, y):
-    X_b = np.c_[np.ones((len(X), 1)), X]
-    theta_best = np.linalg.inv(X_b.T.dot(X_b)).dot(X_b.T).dot(y)
-    return theta_best
+    def fit(self, X_train, y_train):
+        self.X_train = X_train
+        self.y_train = y_train
 
-# 训练模型
-theta_model1 = linear_regression(X_train, y_train)
+    def predict(self, X_test):
+        predictions = []
+        for test_point in X_test:
+            distances = [self.distance(test_point, train_point) for train_point in self.X_train]
+            k_nearest_indices = sorted(range(len(distances)), key=lambda i: distances[i])[:self.k]
+            k_nearest_labels = [self.y_train[i] for i in k_nearest_indices]
+            prediction = max(set(k_nearest_labels), key=k_nearest_labels.count)
+            predictions.append(prediction)
+        return predictions
 
-# 预测测试集
-X_test_b = np.c_[np.ones((len(X_test), 1)), X_test]
-y_pred = X_test_b.dot(theta_model1)
+    def distance(self, point1, point2):
+        # 欧几里德距离
+        return sum((x - y) ** 2 for x, y in zip(point1, point2)) ** 0.5
 
-# 评估性能
-def r2_score(y_true, y_pred):
-    ssr = ((y_pred - y_true) ** 2).sum()
-    sst = ((y_true - y_true.mean()) ** 2).sum()
-    r2 = 1 - (ssr / sst)
-    return r2
 
-r2_model1 = r2_score(y_test.values, y_pred)
+# 3. 构建两个具有不同特征集的 k-NN 模型
+def build_model1(data, k_values):
+    random_features = random.sample(list(data.columns), 3)  # 随机选择3个特征
+    X_model1 = data[random_features]
+    y_model1 = data['Wine']  # 请替换成实际的目标列名
 
-# 打印模型1的结果
-print("模型1 - 系数:")
-print(theta_model1)
-print("模型1 - R^2 分数:", r2_model1)
-print()
+    models = {}
+    for k in k_values:
+        knn_model = KNN(k, random_features)
+        knn_model.fit(X_model1.values, y_model1.values)
+        models[f'Model1_k={k}'] = knn_model
 
-# 构建其他两个模型（这里只是示例，实际应用中需要根据问题进行选择）
+    return models
 
-# 比较三个模型的结果
-# 这里只是简单地比较 R^2 分数，实际应用中可能需要更复杂的比较和评估
-# if r2_model1 > r2_model2 and r2_model1 > r2_model3:
-#     print("模型1表现最好")
-# elif r2_model2 > r2_model1 and r2_model2 > r2_model3:
-#     print("模型2表现最好")
-# else:
-#     print("模型3表现最好")
+
+def build_model2(data, k_values):
+    fixed_features = ['Alcohol', 'Malic Acid', 'Magnesium']  # 请替换成实际的特征列名
+    X_model2 = data[fixed_features]
+    y_model2 = data['Wine']  # 请替换成实际的目标列名
+
+    models = {}
+    for k in k_values:
+        knn_model = KNN(k, fixed_features)
+        knn_model.fit(X_model2.values, y_model2.values)
+        models[f'Model2_k={k}'] = knn_model
+
+    return models
+
+
+# 4. 对于每个模型，在不同的 k 值下对测试数据集进行评估，构造误差矩阵
+def evaluate_model(model, X_test, y_test):
+    confusion_matrix = pd.DataFrame(0, index=model.keys(), columns=model.keys())
+
+    for model_name, knn_model in model.items():
+        predictions = knn_model.predict(X_test.values)
+        for true_label, predicted_label in zip(y_test.values, predictions):
+            confusion_matrix.loc[true_label, predicted_label] += 1
+
+    return confusion_matrix
+
+
+# 使用示例
+file_path = 'WineDataset.csv'  # 请替换成实际的文件路径
+k_values = [3, 5, 10]
+
+# 1. 数据预处理
+wine_data = preprocess_data(file_path)
+
+# 2. 构建模型1和模型2
+model1 = build_model1(wine_data, k_values)
+model2 = build_model2(wine_data, k_values)
+
+# 3. 假设有测试数据集 X_test 和真实标签 y_test，这里仅作示例，实际使用时请替换成真实的测试数据
+X_test = wine_data.sample(frac=0.2)  # 从数据中随机选择一部分作为测试数据
+y_test = X_test['Wine']  # 请替换成实际的目标列名
+
+# # 4. 评估模型1和模型2
+# confusion_matrix_model1 = evaluate_model(model1, X_test, y_test)
+# confusion_matrix_model2 = evaluate_model(model2, X_test, y_test)
+#
+# print("Confusion Matrix for Model 1:")
+# print(confusion_matrix_model1)
+#
+# print("\nConfusion Matrix for Model 2:")
+# print(confusion_matrix_model2)
