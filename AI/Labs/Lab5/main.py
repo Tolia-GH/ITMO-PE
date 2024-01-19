@@ -55,44 +55,41 @@ class KNNClassifier:
     def euclidean_distance(self, x1, x2):
         return sum((a - b) ** 2 for a, b in zip(x1, x2)) ** 0.5
 
+    def f1_score(self, y_test, pred):
+        # Classes = [TP, FP, TN, FN]
+        y_test = np.array(y_test).flatten()
+        pred = np.array(pred)
+        self.TP = 0
+        self.FP = 0
+        self.TN = 0
+        self.FN = 0
 
+        classes = list(set(y_test.tolist()))
+        for i, cur_class in enumerate(classes):
+            for idx, (el1, el2) in enumerate(zip(y_test, pred)):
+                if (el1 == el2 == cur_class):
+                    self.TP += 1
+                if (el2 == cur_class and el1 != el2):
+                    self.FP += 1
+                if (el1 == el2 and el1 != cur_class):
+                    self.TN += 1
+                if (el1 != el2 and el1 != cur_class):
+                    self.FN += 1
 
-def my_f1_score(y_test, pred):
-    # Classes = [TP, FP, TN, FN]
-    y_test = np.array(y_test).flatten()
-    pred = np.array(pred)
-    TP = 0
-    FP = 0
-    TN = 0
-    FN = 0
+        return self.TP / (self.TP + (1 / (len(classes))) * (self.FP + self.FN))
 
-    classes = list(set(y_test.tolist()))
-    classes_stats = [[0, 0, 0, 0]] * len(classes)
-    for i, cur_class in enumerate(classes):
-        for idx, (el1, el2) in enumerate(zip(y_test, pred)):
-            if (el1 == el2 == cur_class):
-                TP += 1
-                classes_stats[i][0] += 1
-            if (el2 == cur_class and el1 != el2):
-                FP += 1
-                classes_stats[i][1] += 1
-            if (el1 == el2 and el1 != cur_class):
-                classes_stats[i][2] += 1
-                TN += 1
-            if (el1 != el2 and el1 != cur_class):
-                classes_stats[i][3] += 1
-                FN += 1
+K = [3, 5, 10]
+for k in K:
+    print("k = %d" % k)
+    model = KNNClassifier(k)
+    model.fit(x_train, y_train)
+    pred = model.predict(x_test)
 
-    return TP / (TP + (1 / (len(classes))) * (FP + FN))
-
-
-model = KNNClassifier(k=3)
-model.fit(x_train, y_train)
-pred = model.predict(x_test)
-
-print(np.array(pred))
-print(np.array(y_test).flatten())
-print("F1 score:", my_f1_score(y_test, pred))
+    print(np.array(pred))
+    print(np.array(y_test).flatten())
+    print("F1 score:", model.f1_score(y_test, pred))
+    print("matrix: TP=%4d FP=%4d" % (model.TP, model.FP))
+    print("        TN=%4d FN=%4d" % (model.TN, model.FN))
 
 print("end")
 
