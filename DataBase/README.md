@@ -10,6 +10,8 @@ Lecture
 Labs
 - [ ] [Lab 1](./Labs/Lab1/Lab1.md)
 - [ ] [Lab 2](./Labs/Lab2/Lab2.md)
+- [ ] [Lab 3](./Labs/Lab2/Lab2.md)
+- [ ] [Lab 4](./Labs/Lab2/Lab2.md)
 
 
 <style type="text/css">
