@@ -213,7 +213,7 @@
 **Задание**
 
 1. Для студентов с четным порядковым номером в группе – датасет с [классификацией грибов](https://archive.ics.uci.edu/ml/datasets/Mushroom), а нечетным – [датасет с данными про оценки студентов инженерного и педагогического факультетов](https://archive.ics.uci.edu/dataset/856/higher+education+students+performance+evaluation) (для данного датасета нужно ввести метрику: студент успешный/неуспешный на основании грейда)    
-   对于组中人数为偶数的学生 - 包含[蘑菇分类]的数据集(https://archive.ics.uci.edu/ml/datasets/Mushroom)  
+   对于组中人数为偶数的学生 - 包含[蘑菇分类](https://archive.ics.uci.edu/ml/datasets/Mushroom)  的数据集
 
    和奇数 – [包含工程和教育学院学生成绩数据的数据集](https://archive.ics.uci.edu/dataset/856/higher+education+students+performance+evaluation)（对于此数据集您需要输入指标：根据成绩成功/不成功的学生）
 2. Отобрать **случайным** образом sqrt(n) признаков  
