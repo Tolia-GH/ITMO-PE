@@ -13,6 +13,21 @@ Labs
 - [ ] [Lab 3](./Labs/Lab2/Lab2.md)
 - [ ] [Lab 4](./Labs/Lab2/Lab2.md)
 
+```sql
+select * from issue where supporter_id = 3;
+
+select * from device where room_id = 3;
+
+select * from sensor where room_id = 2;
+
+select script_id, condition_text from script inner join condition_script cs on script.id = cs.script_id where script_id = 1;
+
+select * from script inner join schedule_script ss on script.id = ss.script_id where script_id = 1;
+
+select * from script inner join list_action_script las on script.id = las.script_id where script_id = 1;
+
+```
+
 
 <style type="text/css">
     #footer {
