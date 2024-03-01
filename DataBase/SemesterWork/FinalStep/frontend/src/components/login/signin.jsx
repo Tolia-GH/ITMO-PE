@@ -117,9 +117,8 @@ export default function SignIn() {
                             variant="contained"
                             sx={{ mt: 2, mb: 2 }}
                             onClick={() => {
+                                alert(username + "\n" + password)
                                 sendAccount(username, password)
-                                // alert(username)
-                                // alert(password)
                             }}
                         >
                             Sign In

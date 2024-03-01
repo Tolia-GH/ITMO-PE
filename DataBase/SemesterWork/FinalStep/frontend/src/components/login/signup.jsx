@@ -3,16 +3,15 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
+import $ from 'jquery';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
+import {useState} from "react";
 
 function Copyright(props) {
     return (
@@ -28,20 +27,52 @@ function Copyright(props) {
 }
 
 export default function SignUp() {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
+
+
+    const [state, setState] = useState({
+        age: 0,
+        gender: 'man',
+        firstName: '?',
+        lastName: '?',
+        country: 'RUSSIA',
+        city: 'Moscow',
+        street: '?',
+        phone:'?',
+        email:'?',
+        password:'',
+    })
+
+    const handleChange = (event) => {
+        const name = event.target.name;
+        setState({
+            ...state,
+            [name]: event.target.value,
         });
     };
 
-    const [gender, setGender] = React.useState('');
-
-    const handleChange = (event) => {
-        setGender(event.target.value);
-    };
+    function sendAccount(firstName, lastName, password, age, phone, email, gender) {
+        $.ajax({
+            url: "api/signup",
+            method:"POST",
+            data:{
+                password: password,
+                username: firstName + " " + lastName,
+                gender: gender,
+                age: age,
+                phone: phone,
+                email: email,
+            },
+            async:false,
+            success:function (res){
+                if(res.success){
+                    alert('Account add success')
+                }else {
+                    //dispatch(clearAccount());
+                    alert(res.message);
+                }
+            }
+        });
+    }
 
     return (
         <Container component="main" maxWidth="xs">
@@ -60,17 +91,18 @@ export default function SignUp() {
                 <Typography component="h1" variant="h5">
                     Sign up
                 </Typography>
-                <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+                <Box component="form" noValidate sx={{ mt: 3 }}>
                     <Grid container spacing={2}>
                         <Grid item xs={12} sm={6}>
                             <TextField
-                                autoComplete="given-name"
+                                autoComplete="fname"
                                 name="firstName"
                                 required
                                 fullWidth
                                 id="firstName"
                                 label="First Name"
                                 autoFocus
+                                onChange={handleChange}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -80,7 +112,8 @@ export default function SignUp() {
                                 id="lastName"
                                 label="Last Name"
                                 name="lastName"
-                                autoComplete="family-name"
+                                autoComplete="lname"
+                                onChange={handleChange}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -91,6 +124,7 @@ export default function SignUp() {
                                 label="Email Address"
                                 name="email"
                                 autoComplete="email"
+                                onChange={handleChange}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -101,6 +135,7 @@ export default function SignUp() {
                                 label="Phone Number"
                                 name="phone"
                                 autoComplete="phone"
+                                onChange={handleChange}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -112,6 +147,7 @@ export default function SignUp() {
                                 type="password"
                                 id="password"
                                 autoComplete="new-password"
+                                onChange={handleChange}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -122,6 +158,7 @@ export default function SignUp() {
                                 label="Age"
                                 id="age"
                                 autoComplete="age"
+                                onChange={handleChange}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -130,7 +167,7 @@ export default function SignUp() {
                                 <Select
                                     labelId="genderLabel"
                                     id="gedner"
-                                    value={gender}
+                                    value={state.gender}
                                     label="Gender"
                                     onChange={handleChange}
                                 >
@@ -146,6 +183,10 @@ export default function SignUp() {
                         fullWidth
                         variant="contained"
                         sx={{ mt: 3, mb: 2 }}
+                        onClick={() => {
+                            alert(state.firstName + " " + state.lastName + "\n" + state.password + "\n" + state.age + "\n" + state.email + "\n" + state.phone + "\n" + state.gender)
+                            sendAccount(state.firstName,state.lastName,state.password,state.age,state.phone,state.email,state.gender)}
+                        }
                     >
                         Sign Up
                     </Button>
