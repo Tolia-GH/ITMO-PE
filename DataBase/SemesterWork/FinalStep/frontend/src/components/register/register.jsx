@@ -15,8 +15,8 @@ class RegisterBasic extends React.Component {
                     <a id={"fork_me"} href={"https://github.com/Tolia-GH/ITMO-PE"}>
                         View on GitHub
                     </a>
-                    <h1 id={"web_title"}>Lab4</h1>
-                    <h2 id={"web_author"}>P32131 Чжоу Хунсян 13109</h2>
+                    <h1 id={"web_title"}>Smart Home</h1>
+                    <h2 id={"web_author"}>P33131 Чжоу Хунсян 13109</h2>
                 </div>
                 <div className={"form_block"}>
                     <form id={"register_form"} className={"form-horizontal"}>
