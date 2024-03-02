@@ -8,6 +8,9 @@ import java.util.List;
 
 @Repository
 public interface UserRepo extends JpaRepository<UserJPA, Integer> {
+    @Query(value = "select max(id) from UserJPA")
+    List<Integer> findLatestUserId();
+
     @Query(value="select A from UserJPA A where A.contactJPA.email = ?1 ")
     List<UserJPA> findUserJpaByEmail(String email);
 

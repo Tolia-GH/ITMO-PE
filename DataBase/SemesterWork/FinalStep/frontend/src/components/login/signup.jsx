@@ -52,11 +52,12 @@ export default function SignUp() {
 
     function sendAccount(firstName, lastName, password, age, phone, email, gender) {
         $.ajax({
-            url: "api/signup",
+            url: "api/signUp",
             method:"POST",
             data:{
                 password: password,
-                username: firstName + " " + lastName,
+                firstName: firstName,
+                lastName: lastName,
                 gender: gender,
                 age: age,
                 phone: phone,

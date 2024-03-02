@@ -2,6 +2,7 @@ package com.demo.backend.controller;
 
 import com.demo.backend.databaseJPA.account.UserJPA;
 import com.demo.backend.response.AccountResponse;
+import com.demo.backend.security.PasswordSecurity;
 import com.demo.backend.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -35,7 +36,7 @@ public class SignInController {
         String password = request.getParameter("password");
 
         System.out.println("username=" + username + ", password=" + password);
-        // password = passwordSHA(password);
+        // password = PasswordSecurity.passwordSHA(password);
         System.out.println("passwordSHA=" + password);
 
         String regexPhone = "\\+[1-9]+[0-9]*";
@@ -65,17 +66,5 @@ public class SignInController {
             accountResponse.setMessage("Login by Email");
         }
         return accountResponse;
-    }
-
-    private String passwordSHA(String password){
-        byte [] bytes = password.getBytes();
-        try {
-            MessageDigest messageDigest = MessageDigest.getInstance("SHA");
-            messageDigest.update(bytes);
-            return new BigInteger(messageDigest.digest()).toString();
-        }catch (NoSuchAlgorithmException e){
-            e.printStackTrace();
-            return null;
-        }
     }
 }

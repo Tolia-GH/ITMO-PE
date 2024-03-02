@@ -83,11 +83,11 @@ INSERT INTO condition_script (id, script_id, condition_text) VALUES
     (2, 3, 'Humidity < 30');
 
 -- Inserting data into contact table
-INSERT INTO contact (id, user_id, email, phone_num) VALUES
-    (1, 1, 'john.doe@example.com', '+71112223344'),
-    (2, 2, 'jane.smith@example.com', '+82223334455'),
-    (3, 3, 'bob.johnson@example.com', '+33334445566'),
-    (4, 4, 'zhang.san@example.com', '+91112224433');
+INSERT INTO contact (user_id, email, phone_num) VALUES
+    (1, 'john.doe@example.com', '+71112223344'),
+    (2, 'jane.smith@example.com', '+82223334455'),
+    (3, 'bob.johnson@example.com', '+33334445566'),
+    (4, 'zhang.san@example.com', '+91112224433');
 
 -- Inserting data into list_action_script table
 INSERT INTO list_action_script (id, script_id, action_id) VALUES

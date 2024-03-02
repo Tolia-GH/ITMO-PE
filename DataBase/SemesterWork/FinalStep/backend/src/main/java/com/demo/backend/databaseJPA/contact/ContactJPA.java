@@ -1,5 +1,6 @@
 package com.demo.backend.databaseJPA.contact;
 
+import com.demo.backend.databaseJPA.account.UserJPA;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Table(name = "contact", schema = "smart_home")
 public class ContactJPA {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Column(nullable = false,name="user_id")
     private Integer user_id;
     @Column(nullable = false,name="email")
