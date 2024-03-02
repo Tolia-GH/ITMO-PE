@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afcc4807-f207-4e36-ad66-530491e6a5f7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/FinalStep/frontend/src/components/login/signin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/FinalStep/frontend/src/components/login/signin.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/frontend/src/components/login/signup.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/FinalStep/frontend/src/components/login/signup.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FinalStep/backend/web/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +21,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2d5fWvWJuICUC83kDqueCU87mM4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,6 +42,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Facets",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.6655173",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
