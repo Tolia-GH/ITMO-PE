@@ -31,7 +31,7 @@ export default function SignUp() {
 
     const [state, setState] = useState({
         age: 0,
-        gender: 'man',
+        gender: '?',
         firstName: '?',
         lastName: '?',
         country: 'RUSSIA',
@@ -165,14 +165,19 @@ export default function SignUp() {
                             <FormControl fullWidth>
                                 <InputLabel id="genderLabel">Gender</InputLabel>
                                 <Select
+                                    native
+                                    value={state.gender}
+                                    inputProps={{
+                                        name: 'gender',
+                                        id: 'gender-native-simple',
+                                    }}
                                     labelId="genderLabel"
                                     id="gedner"
-                                    value={state.gender}
                                     label="Gender"
                                     onChange={handleChange}
                                 >
-                                    <MenuItem value="MALE">Male</MenuItem>
-                                    <MenuItem value="FEMALE">Female</MenuItem>
+                                    <option value="MALE">Male</option>
+                                    <option value="FEMALE">Female</option>
                                 </Select>
                             </FormControl>
                         </Grid>

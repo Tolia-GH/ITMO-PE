@@ -1,7 +1,7 @@
 package com.demo.backend.controller;
 
 import com.demo.backend.databaseJPA.account.UserJPA;
-import com.demo.backend.response.SignInResponse;
+import com.demo.backend.response.AccountResponse;
 import com.demo.backend.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.List;
 import java.util.regex.Pattern;
 
 @Controller
@@ -21,15 +20,15 @@ public class SignInController {
     AccountService accountService;
     @PostMapping("/signIn")
     @ResponseBody
-    public SignInResponse main(HttpServletRequest request) {
-        SignInResponse signInResponse = new SignInResponse();
+    public AccountResponse main(HttpServletRequest request) {
+        AccountResponse accountResponse = new AccountResponse();
         if (request.getParameter("username") == null ||
                 request.getParameter("password") == null ||
                 request.getParameter("username").equals("") ||
                 request.getParameter("password").equals("")) {
-            signInResponse.setSuccess(false);
-            signInResponse.setMessage("Username or password can't be empty!");
-            return signInResponse;
+            accountResponse.setSuccess(false);
+            accountResponse.setMessage("Username or password can't be empty!");
+            return accountResponse;
         }
 
         String username = request.getParameter("username");
@@ -42,20 +41,30 @@ public class SignInController {
         String regexPhone = "\\+[1-9]+[0-9]*";
         String regexEmail = ".*@.+\\.com";
 
+        UserJPA userJPA;
+
         if (Pattern.matches(regexPhone, username)) {
-            List<UserJPA> list = accountService.findAccountByPhone(username);
-            if (list.size() == 1 && list.get(0).getPassword().equals(password)) {
-                signInResponse.setSuccess(true);
-                signInResponse.setMessage("Success");
+            userJPA = accountService.findAccountByPhone(username);
+            if (userJPA.getPassword().equals(password)) {
+                accountResponse.setSuccess(true);
+                accountResponse.setMessage("Success");
             } else {
-                signInResponse.setSuccess(false);
-                signInResponse.setMessage("Phone number or password wrong!");
+                accountResponse.setSuccess(false);
+                accountResponse.setMessage("Phone number or password wrong!");
             }
         } else if (Pattern.matches(regexEmail, username)) {
-            signInResponse.setSuccess(true);
-            signInResponse.setMessage("Login by Email");
+            userJPA = accountService.findAccountByEmail(username);
+            if (userJPA.getPassword().equals(password)) {
+                accountResponse.setSuccess(true);
+                accountResponse.setMessage("Success");
+            } else {
+                accountResponse.setSuccess(false);
+                accountResponse.setMessage("Email or password wrong!");
+            }
+            accountResponse.setSuccess(true);
+            accountResponse.setMessage("Login by Email");
         }
-        return signInResponse;
+        return accountResponse;
     }
 
     private String passwordSHA(String password){
