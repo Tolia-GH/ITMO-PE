@@ -33,7 +33,7 @@ export default function SignIn() {
     const [username,setUsername] = useState('')
     function sendAccount(username, password) {
         $.ajax({
-            url: "api/signIn",
+            url: "api/login",
             method: "Post",
             data: {
                 username: username,
