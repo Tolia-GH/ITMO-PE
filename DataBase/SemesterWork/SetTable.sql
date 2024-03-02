@@ -8,7 +8,7 @@ CREATE TYPE SCRIPT_TYPE AS ENUM ('CONDITIONAL','SCHEDULE');
 CREATE TYPE COUNTRY AS ENUM('US','UK','RUSSIAN','CHINA','FRANCE');
 CREATE TYPE CITY AS ENUM('Shanghai', 'Beijing', 'Shenzhen', 'Guangzhou', 'Chengdu','Paris', 'Marseille', 'Lyon', 'Toulouse','Cambridge', 'Edinburgh',  'London', 'Liverpool','New York', 'Los Angeles', 'Chicago', 'Boston');
 CREATE TYPE ROOM_TYPE AS ENUM('KITCHEN','BEDROOM','BATHROOM','LIVING');
-CREATE TYPE GENDER AS ENUM ('MAN','WOMAN');
+CREATE TYPE GENDER AS ENUM ('MALE','FEMALE');
 
 -- Create Table
 CREATE TABLE IF NOT EXISTS family(

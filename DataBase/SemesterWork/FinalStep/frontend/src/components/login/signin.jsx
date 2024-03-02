@@ -33,7 +33,7 @@ export default function SignIn() {
     const [username,setUsername] = useState('')
     function sendAccount(username, password) {
         $.ajax({
-            url: "api/login",
+            url: "api/signIn",
             method: "Post",
             data: {
                 username: username,
@@ -45,6 +45,8 @@ export default function SignIn() {
                     window.sessionStorage.setItem("username",username);
                     window.sessionStorage.setItem("password",password);
                     window.sessionStorage.setItem("id",res.id);
+                    console.log(res.message)
+                    alert(res.message)
                     const history = createBrowserHistory();
                     history.push('/main');
                 }else {
