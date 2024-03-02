@@ -4,7 +4,7 @@ i int = 0;
 names varchar(64)[] = array ['Peter','Bob','John','Tomas','Alex','Anna'];
 BEGIN
     while i < 100000 loop
-            insert into "user"(username,gender,password,age) values (names[i%6+1],'MAN',random()*1000,28);
+            insert into "user"(username,gender,password,age) values (names[i%6+1],'MALE',random()*1000,28);
             i = i + 1;
 end loop;
 return query select * from "user" limit 500;
@@ -62,7 +62,7 @@ DECLARE
     i int = 0;
     houses house_type[] = array ['APARTMENTS', 'VILLAS', 'HIGH-END','ORDINARY'];
 BEGIN
-    while i < 10000 loop
+    while i < 100000 loop
             insert into house(address_id, house_type) VALUES (i+1,houses[i%4+1]);
             i = i + 1;
         end loop;
@@ -92,7 +92,7 @@ DECLARE
     i int = 0;
     ft device_type[] = array ['AIR_CONDITION','LIGHT', 'HUMIDIFIER', 'BATHTUB', 'OUTLET','CURTAINS', 'FAN', 'CAMERA', 'WATER_HEATER'];
 BEGIN
-    while i < 30000 loop
+    while i < 300000 loop
             insert into device(room_id, manufacture, device_type) values (i+1,'xiaomi',ft[i%9+1]),(i+1,'xiaomi',ft[i%9+1]);
             i = i + 1;
         end loop;
@@ -104,10 +104,10 @@ select fill_device();
 create or replace function fill_sensor() returns setof sensor as $$
 DECLARE
     i int = 0;
-    ft sensor[] = array ['TEMPERATURE', 'HUMIDITY', 'SMOKE'];
+    ft sensor_type[] = array ['TEMPERATURE', 'HUMIDITY', 'SMOKE'];
 BEGIN
-    while i < 30000 loop
-            insert into sensor(room_id, manufacture, sensor_type) values (i+1,'xiaomi',ft[i%9+1]),(i+1,'xiaomi',ft[i%3+1]);
+    while i < 300000 loop
+            insert into sensor(room_id, manufacture, sensor_type) values (i+1,'xiaomi',ft[i%3+1]),(i+1,'xiaomi',ft[i%3+1]);
             i = i + 1;
         end loop;
     return query select * from sensor limit 500;
@@ -115,17 +115,17 @@ end;
 $$ language plpgsql;
 select fill_sensor();
 
-create or replace function fill_action() returns setof action as $$
+create or replace function fill_action() returns setof device_action as $$
 DECLARE
     i int = 0;
     ft device_type[] = array ['AIR_CONDITION','LIGHT', 'HUMIDIFIER', 'BATHTUB', 'OUTLET','CURTAINS', 'FAN', 'CAMERA', 'WATER_HEATER'];
 BEGIN
     while i < 9 loop
-            insert into action(type_furniture, action_type, description) values (ft[i%9+1],'TURN_ON','Test'),  (ft[i%9+1],'TURN_OFF','Test')
+            insert into device_action(device_type, action_type, description) values (ft[i%9+1],'TURN_ON','Test'),  (ft[i%9+1],'TURN_OFF','Test')
                                                                        ,  (ft[i%9+1],'SWITCH_OFF','Test'),  (ft[i%9+1],'SWITCH_OFF','Test');
             i = i + 1;
         end loop;
-    return query select * from action limit 500;
+    return query select * from device_action limit 500;
 end;
 $$ language plpgsql;
 select fill_action();
@@ -135,7 +135,7 @@ DECLARE
     i int = 0;
 BEGIN
     while i < 10000 loop
-            insert into contact(user_id, email, phone)  VALUES (i+1,to_char(i,'9999999')||'@gmail.com',to_char(i,'99999999')) ;
+            insert into contact(user_id, email, phone_num)  VALUES (i+1,to_char(i,'9999999')||'@gmail.com',to_char(i,'99999999')) ;
             i = i + 1;
         end loop;
     return query select * from contact limit 500;
@@ -146,13 +146,13 @@ select fill_contact();
 create or replace function fill_script() returns setof script as $$
 DECLARE
     i int = 0;
-    st script_type [] = array ['CONDITIONAL','SCHEDULE'];
+    st script_type[] = array ['CONDITIONAL','SCHEDULE'];
 BEGIN
     while i < 10000000 loop
             if i < 5000000 then
-                insert into script(creator_name, type)  VALUES ('Tom',st[1]) ;
+                insert into script(creator, script_type)  VALUES (i%1000+1,st[1]) ;
             elsif i < 10000000 then
-                insert into script(creator_name, type)  VALUES ('Tom',st[2]) ;
+                insert into script(creator, script_type)  VALUES (i%1000+1,st[2]) ;
             end if;
             i = i + 1;
         end loop;
