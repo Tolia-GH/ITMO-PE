@@ -34,7 +34,7 @@ public class SignUpController {
 
     @PostMapping("/signUp")
     @ResponseBody
-    public AccountResponse main(HttpServletRequest request) {
+    public AccountResponse signUp(HttpServletRequest request) {
         AccountResponse accountResponse = new AccountResponse();
 
         printRequestData(request);

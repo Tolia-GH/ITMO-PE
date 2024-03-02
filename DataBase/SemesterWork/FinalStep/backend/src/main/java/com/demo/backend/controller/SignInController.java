@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.math.BigInteger;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.regex.Pattern;
 
 @Controller
@@ -21,12 +18,12 @@ public class SignInController {
     AccountService accountService;
     @PostMapping("/signIn")
     @ResponseBody
-    public AccountResponse main(HttpServletRequest request) {
+    public AccountResponse signIn(HttpServletRequest request) {
         AccountResponse accountResponse = new AccountResponse();
         if (request.getParameter("username") == null ||
                 request.getParameter("password") == null ||
-                request.getParameter("username").equals("") ||
-                request.getParameter("password").equals("")) {
+                request.getParameter("username").isEmpty() ||
+                request.getParameter("password").isEmpty()) {
             accountResponse.setSuccess(false);
             accountResponse.setMessage("Username or password can't be empty!");
             return accountResponse;
