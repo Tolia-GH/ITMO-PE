@@ -10,7 +10,6 @@ import javax.persistence.*;
 @Table(name = "contact", schema = "smart_home")
 public class ContactJPA {
     @Id
-
     @Column(nullable = false,name="user_id")
     private Integer user_id;
     @Column(nullable = false,name="email")

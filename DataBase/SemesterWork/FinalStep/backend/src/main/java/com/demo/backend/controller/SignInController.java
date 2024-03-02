@@ -36,7 +36,7 @@ public class SignInController {
         String password = request.getParameter("password");
 
         System.out.println("username=" + username + ", password=" + password);
-        // password = PasswordSecurity.passwordSHA(password);
+        password = PasswordSecurity.passwordSHA(password);
         System.out.println("passwordSHA=" + password);
 
         String regexPhone = "\\+[1-9]+[0-9]*";
