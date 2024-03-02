@@ -54,9 +54,9 @@ public class SignUpController {
                 accountResponse.setSuccess(false);
                 accountResponse.setMessage("This phone number or email is already be used");
             } else {
+                //Integer id = accountService.findLatestUserId();
+                accountService.addAccount(firstName, lastName, password, gender, age);
                 Integer id = accountService.findLatestUserId();
-                accountService.addAccount(id, firstName, lastName, password, gender, age);
-//                Integer id = accountService.findLatestUserId();
                 contactService.addContact(id, phone, email);
                 accountResponse.setSuccess(true);
                 accountResponse.setMessage("Success");

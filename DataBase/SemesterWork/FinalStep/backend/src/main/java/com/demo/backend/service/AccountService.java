@@ -17,7 +17,7 @@ public class AccountService {
     @Autowired
     private ContactRepo contactRepo;
 
-    public void addAccount(Integer id, String firstName, String lastName, String password, String gender, Integer age) {
+    public void addAccount(String firstName, String lastName, String password, String gender, Integer age) {
         UserJPA userJPA = new UserJPA();
         // userJPA.setId(id);
         userJPA.setUsername(firstName + " " + lastName);
@@ -30,7 +30,7 @@ public class AccountService {
         if (userRepo.findLatestUserId().isEmpty()) {
             return 1;
         }
-        return userRepo.findLatestUserId().get(0) + 1;
+        return userRepo.findLatestUserId().get(0);
     }
 
     public UserJPA findAccountByEmail(String email){
