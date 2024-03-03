@@ -1,9 +1,9 @@
 -- Inserting data into "user" table
 INSERT INTO "user" (id, password, gender, username, age) VALUES
-    (1, '91dfd9ddb4198affc5c194cd8ce6d338fde470e2', 'MAN', 'John Doe', 25),
-    (2, '7c4a8d09ca3762af61e59520943dc26494f8941b', 'WOMAN', 'Jane Smith', 30),
-    (3, '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 'MAN', 'Bob Johnson', 22),
-    (4, '6adfb183a4a2c94a2f92dab5ade762a47889a5a1', 'WOMAN', 'Zhang San', 24);
+    (1, '91dfd9ddb4198affc5c194cd8ce6d338fde470e2', 'MALE', 'John Doe', 25),
+    (2, '7c4a8d09ca3762af61e59520943dc26494f8941b', 'FEMALE', 'Jane Smith', 30),
+    (3, '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 'MALE', 'Bob Johnson', 22),
+    (4, '6adfb183a4a2c94a2f92dab5ade762a47889a5a1', 'FEMALE', 'Zhang San', 24);
 
 INSERT INTO family(id, name, info) VALUES
     (1, 'family of John', '3 people family'),
@@ -83,11 +83,11 @@ INSERT INTO condition_script (id, script_id, condition_text) VALUES
     (2, 3, 'Humidity < 30');
 
 -- Inserting data into contact table
-INSERT INTO contact (id, user_id, email, phone_num) VALUES
-    (1, 1, 'john.doe@example.com', '123-456-7890'),
-    (2, 2, 'jane.smith@example.com', '987-654-3210'),
-    (3, 3, 'bob.johnson@example.com', '555-123-4567'),
-    (4, 4, 'zhang.san@example.com', '222-333-4444');
+INSERT INTO contact (user_id, email, phone_num) VALUES
+    (1, 'john.doe@example.com', '+71112223344'),
+    (2, 'jane.smith@example.com', '+82223334455'),
+    (3, 'bob.johnson@example.com', '+33334445566'),
+    (4, 'zhang.san@example.com', '+91112224433');
 
 -- Inserting data into list_action_script table
 INSERT INTO list_action_script (id, script_id, action_id) VALUES
