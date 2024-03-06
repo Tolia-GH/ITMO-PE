@@ -15,7 +15,7 @@
               <node kind="schema" qname="@" />
             </node>
             <node kind="database" qname="studs">
-              <node kind="schema" negative="1" />
+              <node kind="schema" qname="smart_home" />
             </node>
           </node>
         </introspection-scope>

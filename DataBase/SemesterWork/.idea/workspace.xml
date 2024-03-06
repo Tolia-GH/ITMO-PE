@@ -5,28 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afcc4807-f207-4e36-ad66-530491e6a5f7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/39facc08-932d-4f86-9a8b-f9c82947f8b1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/39facc08-932d-4f86-9a8b-f9c82947f8b1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/FinalStep 2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/FinalStep.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/backend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/backend/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/backend/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/backend/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/backend/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/backend/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/backend/src/main/java/com/demo/backend/BackendApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/backend/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/backend/src/test/java/com/demo/backend/BackendApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/backend/web/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/frontend 2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/frontend 3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/frontend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/frontend/src/components/login/signin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/FinalStep/frontend/src/components/login/signin.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalStep/frontend/src/setupProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/FinalStep/frontend/src/setupProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/39facc08-932d-4f86-9a8b-f9c82947f8b1/storage_v2/_src_/database/studs.ww2LBg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/39facc08-932d-4f86-9a8b-f9c82947f8b1/storage_v2/_src_/database/studs.ww2LBg/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/39facc08-932d-4f86-9a8b-f9c82947f8b1/storage_v2/_src_/database/studs.ww2LBg/schema/smart_home.lU1XlA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/39facc08-932d-4f86-9a8b-f9c82947f8b1/storage_v2/_src_/database/studs.ww2LBg/schema/smart_home.lU1XlA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/39facc08-932d-4f86-9a8b-f9c82947f8b1/storage_v2/_src_/database/studs.ww2LBg/schema/smart_home.lU1XlA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/39facc08-932d-4f86-9a8b-f9c82947f8b1/storage_v2/_src_/database/studs.ww2LBg/schema/smart_home.lU1XlA.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FillTable.sql" beforeDir="false" afterPath="$PROJECT_DIR$/FillTable.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +31,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -76,7 +62,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.6655173",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -85,10 +71,68 @@
   "keyToStringList": {
     "DatabaseDriversLRU": [
       "postgresql"
+    ],
+    "RunConfigurationTargetLRU": [
+      "39facc08-932d-4f86-9a8b-f9c82947f8b1/database/\"studs\"/schema/\"Semester_SmartHome\"",
+      "39facc08-932d-4f86-9a8b-f9c82947f8b1/database/\"studs\"/schema/\"smart_home\""
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.BackendApplication">
+  <component name="RunManager" selected="Database Script.SetIndex">
+    <configuration name="DropIndex" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/DropIndex.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DropTable" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/DropTables.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DropTrigger" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/DropTrigger.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FillTable" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/FillTable.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="InsertData" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/InsertData.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SetIndex" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/SetIndex.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SetTable" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/SetTable.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SetTrigger" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/SetTrigger.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TruncateTable" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/TruncateTable.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="SemesterWork" />
       <method v="2">
@@ -105,7 +149,6 @@
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <module name="SemesterWork" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.demo.backend.BackendApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,6 +165,15 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Database Script.TruncateTable" />
+      <item itemvalue="Database Script.SetTable" />
+      <item itemvalue="Database Script.DropTable" />
+      <item itemvalue="Database Script.InsertData" />
+      <item itemvalue="Database Script.FillTable" />
+      <item itemvalue="Database Script.SetIndex" />
+      <item itemvalue="Database Script.SetTrigger" />
+      <item itemvalue="Database Script.DropTrigger" />
+      <item itemvalue="Database Script.DropIndex" />
       <item itemvalue="npm.start" />
       <item itemvalue="Spring Boot.BackendApplication" />
     </list>
@@ -142,6 +194,7 @@
       <workItem from="1709302896179" duration="6357000" />
       <workItem from="1709341745529" duration="130000" />
       <workItem from="1709341896425" duration="262000" />
+      <workItem from="1709342224360" duration="17676000" />
     </task>
     <servers />
   </component>
