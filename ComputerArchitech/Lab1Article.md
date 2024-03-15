@@ -63,13 +63,13 @@ Also, we can block the web access in the proccess of domain resolving by hijacki
 
 Here is the organizational structure of the domain name:
 
-![]()
+![](./Lab1Article-3.png)
 
 As we can see, the domain names are organized in a tree structure.The top of the tree represents the root server. The next level below the root is composed of the well-known general domains such as .com, .net, and .cn and national domains such as .cn and .uk, which are called top-level domains. Next are the third and fourth level domains, and so on.
 
 Now, let's learn about the Proccess of DNS resolution. Since the domain name information is distributed and stored on multiple DNS servers, the search process of domain name information is performed recursively like this
 
-![]()
+![](./Lab1Article-4.png)
 
 For example, we send a resolve request of `www.zdns.cn` to Domain Name Server. The Domain name server will send the request to root server, then will get the response and send request to the server of the top level, and then the second level and so on. and finally we got the IP address from the last level, and then begin to link to the Web server.
 
@@ -81,7 +81,7 @@ $ dig math.stackexchange.com
 
 After inputing the command above, we will get an output like this:
 
-![]()
+![](./Lab1Article-5.png)
 
 - The first part is query parameters and statistics.
 - The second part is the query content.  
