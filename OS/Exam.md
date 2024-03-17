@@ -111,3 +111,40 @@
 106. Слаб-аллокаторы SLAB/SLUB/SLOB.
 107. Copy on write и pagefault в Linux.
 108. Замещение страниц в Linux. Kswapd
+
+### 1. Архитектура компьютерных систем. Архитектура Фон-Неймана и Гарвардская архитектура. Принципы архитектуры Фон-Неймана. Архитектуры NUMA и UMA.计算机系统架构。 冯诺依曼建筑和哈佛建筑。 冯诺依曼架构的原理。 NUMA 和 UMA 架构。
+
+![](./pic/Exam1-1.png)
+
+Существует два основных вида архитектуры: Фон-неймана  и Гарвардская. Основное различие между архитекторами заключается в том, как они используют память.有两种主要的建筑类型：冯诺依曼和哈佛。架构师之间的主要区别在于他们使用内存的方式。
+
+- Архитектура Фон-Неймана и Гарвардская архитектура.
+  В то фон Неймана данные и команды хранятся в одной и  той же памяти, в то время как в  Гарвардской есть отдельная память для команд, отдельная для хранения данных.  
+  而冯诺依曼的数据和指令存储在同一个内存中，而在哈佛有一个单独的内存用于指令，分别用于存储数据。
+
+- Принципы архитектуры Фон-Неймана：
+  - принцип однородности памяти.Инструкции и данные хранятся в одной памяти и визуально неразличимы в памяти.  
+    记忆同质性原则。 其原理是指令和数据存储在同一个内存中，并且在内存中从外表上看是无法区分的。
+  - принцип адресности.Память состоит из пронумерованных ячеек, каждая из которых хранит данные и легко доступна для процессора.   
+    瞄准原则。 根据冯诺依曼架构的原理，内存由编号的单元组成，每个单元都存储数据并随时可供处理器使用。
+  - принцип программного управления. Любая программа состоит из набора инструкций, которые автоматически выполняются процессором последовательно в определенном порядке, заданном программистом.   
+    程序控制原理。任何程序都由一组指令组成，这些指令由处理器按照程序员设定的特定顺序依次自动执行。
+  - принцип двоичного кодирования.данные и команды кодируем нулями и единичками.  
+    二进制编码原理。数据和命令用零和一编码。
+
+- NUMA — Non Uniform Memory Access
+
+  ![](./pic/Exam1-2.png)
+
+  A memory architecture designed for multiprocessor computers, memory access times depend on the location of the memory relative to the processor. Under NUMA, a processor can access its own local memory a bit faster than non-local memory (memory located on another processor, or memory shared between processors).  
+  是一种为多处理器的电脑设计的内存架构，内存访问时间取决于内存相对于处理器的位置。在NUMA下，处理器访问它自己的本地内存的速度比非本地内存（内存位于另一个处理器，或者是处理器之间共享的内存）快一些。
+  The characteristic of non-uniform memory access architecture is that the shared memory is physically distributed, and the collection of all these memories is the global address space. So the time for the processor to access these memories is not the same, obviously the speed of accessing local memory is faster than accessing global shared memory or remote access to foreign memory. In addition, memory in NUMA may be hierarchical: local memory, intra-group shared memory, global shared memory.   
+  非统一内存访问架构的特点是：被共享的内存物理上是分布式的，所有这些内存的集合就是全局地址空间。所以处理器访问这些内存的时间是不一样的，显然访问本地内存的速度要比访问全局共享内存或远程访问外地内存要快些。另外，NUMA 中内存可能是分层的：本地内存，群内共享内存，全局共享内存。
+
+- UMA — Uniform Memory Access
+  ![](./pic/Exam1-3.png)
+
+  Все процессоры в UMA-архитектуре используют физическую память одновременно. UMA 架构中的所有处理器同时使用物理内存。
+  Проблемой данной архитектуры является то, что, соединяющая банки памяти и CPU системная шина, является «узким местом», что сокращает скорость доступа к данным разных CPU при взаимной конкуренции за ресурсы. 这种架构的问题在于，连接内存组和 CPU 的系统总线是一个“瓶颈”，降低了不同 CPU 访问数据的速度，相互竞争资源。
+  
+  
