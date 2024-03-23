@@ -1,17 +1,14 @@
-## [MainPage](../index.md)/DataBase
+## [MainPage](../index.md)/Computer Vision
 
 ## 阅读索引
 
 Lecture
-- [ ] [Lecture 1](./Lecture/Lecture1.md)
-- [ ] [Lecture 2](./Lecture/Lecture2.md)
-- [ ] [Lecture 3](./Lecture/Lecture3.md)
+- [ ] [Lecture 1]()
 
-Labs
-- [x] [Lab 1](./Labs/Lab1/Lab1.md)
-- [x] [Lab 2](./Labs/Lab2/Lab2.md)
-- [x] [Lab 3](./Labs/Lab2/Lab2.md)
-- [x] [Lab 4](./Labs/Lab2/Lab2.md)
+
+Practice
+- [ ] [Practice 1]()
+
 
 
 <style type="text/css">
