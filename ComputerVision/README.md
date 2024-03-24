@@ -10,7 +10,6 @@ Practice
 - [ ] [Practice 1]()
 
 
-
 <style type="text/css">
     #footer {
         position: relative;
