@@ -14,13 +14,14 @@
 - [编程](/Program/README.md)
 - [离散数学](/DiscreteMathematics/README.md)
 - [哲学](/Philosophy/README.md)
+- [数学](/Mathematic/README.md)
 
 ### 大二
 
-- [数学](/Mathematic/README.md)
+- [公开演讲](/PublicSpeaking/README.md)
 - [物理](/Physics/README.md)
 - [俄语](/RussianLanguage/README.md)
-- [编程语言](/ProgramLanguagea/README.md)
+- [编程语言](/ProgramLanguage/README.md)
 - [网络编程](/ProgramWeb/README.md)
 - [算法与数据结构](/Algorithm&DataStructures/README.md)
 - [计算数学](/ComputationalMathematics/README.md)
@@ -29,9 +30,15 @@
 
 ### 大三
 
+- [讲故事](/StoryTelling/README.md)
+- [职业生涯管理](/CarreerManagement/README.md)
 - [数据库](/DataBase/README.md)
 - [AI 系统](/AI/README.md)
 - [操作系统](/OS/README.md)
+- [软件系统架构](/ProgramSystemArchitech/README.md)
+- [计算机架构](/ComputerArchitech/README.md)
+- [系统软件](/SystemSoftware/README.md)
+- [计算机视觉](/ComputerVision/README.md)
 
 ## 版权声明
 - 本项目所有非代码文本内容遵循 [CC BY-NC-SA 3.0 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)

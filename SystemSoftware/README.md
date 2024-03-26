@@ -1,8 +1,14 @@
-## [MainPage](../index.md)/Program System Architech
+## [MainPage](../index.md)/Rusian Language
 
 ## 阅读索引
 
-
+- [x] [Texts](Texts.md)
+- [ ] [Text3](Text3.md)
+- [x] [Gramma](gramma.md)
+- [ ] [Structures](Structures.md)
+- [x] [HomeWork](HomeWork.md)
+- [x] [HomeWork2](HomeWork2.md)
+- [ ] [HomeWork3](HomeWork3.md)
 
 <style type="text/css">
     #footer {
