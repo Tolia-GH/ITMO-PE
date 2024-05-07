@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "LinuxBasic1_3_1",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "LinuxBasic1_3_1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LinuxBasic1_3_1-Debug-a652c7019be024c32397.json",
+					"name" : "LinuxBasic1_3_1",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Tolia/Documents/GitHub/ITMO-PE/SystemSoftware/LinuxBasic1.3-1/cmake-build-debug",
+		"source" : "C:/Users/Tolia/Documents/GitHub/ITMO-PE/SystemSoftware/LinuxBasic1.3-1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
