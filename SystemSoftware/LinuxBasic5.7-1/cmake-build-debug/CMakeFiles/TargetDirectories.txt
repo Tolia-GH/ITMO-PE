@@ -1,0 +1,3 @@
+C:/Users/Tolia/Documents/GitHub/ITMO-PE/SystemSoftware/LinuxBasic5.7-1/cmake-build-debug/CMakeFiles/LinuxBasic5_7_1.dir
+C:/Users/Tolia/Documents/GitHub/ITMO-PE/SystemSoftware/LinuxBasic5.7-1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Tolia/Documents/GitHub/ITMO-PE/SystemSoftware/LinuxBasic5.7-1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
