@@ -1,13 +1,15 @@
-## 项目介绍
-圣彼得堡 ITMO 大学软件工程专业第二个学期的学习资料整理
+## 项目介绍 About this Wiki
+Study materials for software engineering at ITMO University in St. Petersburg  
+圣彼得堡 ITMO 大学软件工程专业的学习资料整理
 
-## 关于我们
+## 关于我们 About US
+We are international students sponsored by the China Scholarship Council (CSC) to study at ITMO University in Russia. We are committed to knowledge sharing, collaborative learning, and common progress. We hope to hone ourselves and benefit future generations by maintaining this project.  
 我们是中国教育部留学基金委员会（CSC）公派至俄罗斯 ITMO 大学的留学生。我们致力于知识共享，合作学习，共同进步，希望通过对本项目的维护，磨砺自己，造福后人。
 
-## 阅读索引
+## 阅读索引 Index
 
-[MarkDown LaTeX 教程](Guide.md)  
-[测试页面](temp.md)
+[MarkDown LaTeX Guide](Guide.md)  
+[Test](temp.md)
 
 - [俄语 Russian Language](/RussianLanguage/README.md)
 
@@ -69,7 +71,7 @@
     <a href="https://markdown.com.cn/">markdown</a>, 
     <a href="https://www.latex-project.org/">LaTeX</a>
     <br>
-    Copyright © 2022 | 
+    Copyright © 2020 | 
     <a href="https://tolia-gh.github.io">Tolia</a>
     <br>
     All Rights Reserved.
