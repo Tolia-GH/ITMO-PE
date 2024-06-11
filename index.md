@@ -9,36 +9,38 @@
 [MarkDown LaTeX 教程](Guide.md)  
 [测试页面](temp.md)
 
+- [俄语 Russian Language](/RussianLanguage/README.md)
+
 ### 大一
 - [OPD](/OPD/README.md)
-- [编程](/Program/README.md)
-- [离散数学](/DiscreteMathematics/README.md)
-- [哲学](/Philosophy/README.md)
-- [数学](/Mathematic/README.md)
+- [编程 Programming](/Program/README.md)
+- [离散数学 Discrete Mathematics](/DiscreteMathematics/README.md)
+- [哲学 Philosophy](/Philosophy/README.md)
+- [数学 Mathematics](/Mathematic/README.md)
 
 ### 大二
 
-- [公开演讲](/PublicSpeaking/README.md)
-- [物理](/Physics/README.md)
-- [俄语](/RussianLanguage/README.md)
-- [编程语言](/ProgramLanguage/README.md)
-- [网络编程](/ProgramWeb/README.md)
-- [算法与数据结构](/Algorithm&DataStructures/README.md)
-- [计算数学](/ComputationalMathematics/README.md)
-- [信息安全方法论](/InformationSecurity/README.md)
-- [概率论](/ProbabilityTheory/README.md)
+- [公开演讲 Public Speaking](/PublicSpeaking/README.md)
+- [物理 Physics](/Physics/README.md)
+- [编程语言 Program Language](/ProgramLanguage/README.md)
+- [网络编程 Web Programming](/ProgramWeb/README.md)
+- [算法与数据结构 Algorithms&Data Structure](/Algorithm&DataStructures/README.md)
+- [计算数学 Computational Mathematics](/ComputationalMathematics/README.md)
+- [信息安全方法论 Theory of Information Security](/InformationSecurity/README.md)
+- [概率论 Theory of Probability](/ProbabilityTheory/README.md)
 
 ### 大三
 
-- [讲故事](/StoryTelling/README.md)
-- [职业生涯管理](/CarreerManagement/README.md)
-- [数据库](/DataBase/README.md)
-- [AI 系统](/AI/README.md)
-- [操作系统](/OS/README.md)
-- [软件系统架构](/ProgramSystemArchitech/README.md)
-- [计算机架构](/ComputerArchitech/README.md)
-- [系统软件](/SystemSoftware/README.md)
-- [计算机视觉](/ComputerVision/README.md)
+- [讲故事 Story Telling](/StoryTelling/README.md)
+- [职业生涯管理 Carreer Management](/CarreerManagement/README.md)
+- [数据库 DataBase](/DataBase/README.md)
+- [AI 系统 AI System](/AI/README.md)
+- [操作系统 OS](/OS/README.md)
+- [软件系统架构 Program System Architech](/ProgramSystemArchitech/README.md)
+- [计算机架构 Computer Architech](/ComputerArchitech/README.md)
+- [系统软件 System Software](/SystemSoftware/README.md)
+- [计算机视觉 Computer Vision](/ComputerVision/README.md)
+- [分布式存储 Distributed Database](/DistributedDataBase/README.md)
 
 ## 版权声明
 - 本项目所有非代码文本内容遵循 [CC BY-NC-SA 3.0 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)
