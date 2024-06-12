@@ -1,3 +1,5 @@
+## [MainPage](../../index.md)/[Probability Theory](../README.md)/PracticeWork 6
+
 # Практическая работа
 
 Вариант 4

@@ -8,14 +8,14 @@
 - [ ] [Test3](../404.md)
 - [ ] [Test4](../404.md)
 - [ ] [Test5](../404.md)
-- [x] [作业指导](Homeworks.md)
-- [ ] [作业1](../404.md)
-- [ ] [作业2](../404.md)
-- [ ] [作业3](../404.md)
-- [x] [作业4](DZ/DZ4.md)
-- [x] [作业5](DZ/DZ5.md)
-- [x] [作业6](DZ/DZ6.md)
-- [x] [学期作业](FinalWork.md)
+- [x] [HomeWork Guide](Homeworks.md)
+- [ ] [HomeWork 1](../404.md)
+- [ ] [HomeWork 2](../404.md)
+- [ ] [HomeWork 3](../404.md)
+- [x] [HomeWork 4](DZ/DZ4.md)
+- [x] [HomeWork 5](DZ/DZ5.md)
+- [x] [HomeWork 6](DZ/DZ6.md)
+- [x] [FinalWork](FinalWork.md)
 
 <style type="text/css">
     #footer {

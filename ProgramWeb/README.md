@@ -2,7 +2,7 @@
 
 ## 阅读索引
 
-- [ ] [Рубеж](Rubiesh.md)
+- [x] [Рубеж](Rubiesh.md)
 
 <style type="text/css">
     #footer {

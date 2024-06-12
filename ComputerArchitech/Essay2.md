@@ -1,3 +1,5 @@
+## [MainPage](../index.md)/[Computer Architech](README.md)/Essay 2
+
 # How technology loses out in companies, countries & continents and what to do about it
 
 ## Основные мысли

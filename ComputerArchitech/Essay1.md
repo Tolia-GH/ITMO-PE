@@ -1,3 +1,5 @@
+## [MainPage](../index.md)/[Computer Architech](README.md)/Essay 1
+
 # The future of Programming
 
 ## Основные мысли

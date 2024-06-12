@@ -3,12 +3,12 @@
 ## 阅读索引
 
 - [Labs](./Labs.md)
-  - [x] [Lab 5](../404.md)
-  - [x] [Lab 6](../404.md)
+  - [ ] [Lab 5](../404.md)
+  - [ ] [Lab 6](../404.md)
   - [ ] [Lab 7](../404.md)
   - [ ] [Lab 8](../404.md)
 - [ ] [Рубеж](../404.md)
-- [ ] [Exam](Exam.md)
+- [x] [Exam](Exam.md)
 
 <style type="text/css">
     #footer {

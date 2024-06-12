@@ -2,9 +2,10 @@
 
 ## 阅读索引
 
-- [ ] [Lecture](Lecture.md)
-- [ ] [Labs](Labs.md)
-- [ ] [HomeWork](HomeWork.md)
+- [x] [Lecture](Lecture.md)
+- [ ] [Practice 5](PracticeWork/PracticeWork6.md)
+- [x] [Practice 6](PracticeWork/PracticeWork6.md)
+- [x] [HomeWork](HomeWork.md)
 
 
 <style type="text/css">

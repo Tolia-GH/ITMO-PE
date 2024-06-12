@@ -9,14 +9,14 @@
   - [x] [Lab 1.04](Labs/Lab1.04.md)
   - [x] [Lab 1.07](Labs/Lab1.07.md)
   - [x] [Lab 1.09](Labs/Lab1.09.md)
-  - [ ] [Lab 3.13](Labs/Lab3.13.md)
-  - [ ] [Lab 3.07](Labs/Lab3.07.md)
-  - [ ] [Lab 3.03](Labs/Lab3.03.md)
-  - [ ] [Lab 3.05](Labs/Lab3.05.md)
-- [ ] [HomeWork](HomeWork.md)
+  - [x] [Lab 3.13](Labs/Lab3.13.md)
+  - [x] [Lab 3.07](Labs/Lab3.07.md)
+  - [x] [Lab 3.03](Labs/Lab3.03.md)
+  - [x] [Lab 3.05](Labs/Lab3.05.md)
+- [x] [HomeWork](HomeWork.md)
 - [x] [Practice](Practice.md)
 - [x] [Exam1](Exam1.md)
-- [ ] [Exam2](Exam2.md)
+- [x] [Exam2](Exam2.md)
 
 <style type="text/css">
     #footer {

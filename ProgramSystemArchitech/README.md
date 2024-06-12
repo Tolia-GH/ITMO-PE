@@ -2,7 +2,10 @@
 
 ## 阅读索引
 
-
+Lab1
+![](Lab1.png)
+Lab1
+![](PrograsmSystemLab1.drawio)
 
 <style type="text/css">
     #footer {

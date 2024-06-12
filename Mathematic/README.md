@@ -6,10 +6,10 @@
 - [x] [Linear Algebra](LinearAlgebra.md)
 - [x] [Типовой расчет](TypeWork.md)
 - [x] [Расчетно-графическая работа 1](GraphicWork1/GraphicWork.md)
-- [ ] [Расчетно-графическая работа 2](GraphicWork2/GraphicWork.md)
-- [ ] [HomeWork](HomeWork/Task.md)
-- [ ] [Test](Test.md)
-- [ ] [Exam](Exam.md)
+- [x] [Расчетно-графическая работа 2](GraphicWork2/GraphicWork.md)
+- [x] [HomeWork](HomeWork/Task.md)
+- [x] [Test](Test.md)
+- [x] [Exam](Exam.md)
 
 <style type="text/css">
     #footer {

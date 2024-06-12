@@ -2,7 +2,7 @@
 
 ## 阅读索引
 
-- [ ] [Lecture](Lecture.md)
+- [x] [Lecture](Lecture.md)
 
 
 <style type="text/css">

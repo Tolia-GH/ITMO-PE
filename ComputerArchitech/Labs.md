@@ -1,4 +1,4 @@
-## [MainPage](../index.md)/[AI System](README.md)/Labs <!-- omit from toc -->
+## [MainPage](../index.md)/[Computer Architech](README.md)/Labs <!-- omit from toc -->
 
 ### Лабораторная работа №1. Техническая проблема
 

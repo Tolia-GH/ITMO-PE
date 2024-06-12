@@ -1,12 +1,12 @@
-# 离散作业
+## [MainPage](../index.md)/[Discrete Mathematics](README.md)/HomeWork
 
-## 作业1
+## HomeWork1
 
-## 作业2
+## HomeWork2
 
-## 作业3
+## HomeWork3
 
-## 作业4 
+## HomeWork4 
 
 ### Графо-теоретический подход к синтезу топологии
 

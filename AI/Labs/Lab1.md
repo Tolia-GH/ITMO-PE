@@ -1,4 +1,4 @@
-## [MainPage](../index.md)/[AI System](README.md)/Lab1
+## [MainPage](../../index.md)/[AI System](../README.md)/Lab1
 
 # Лабораторная 1. Создание базы знаний и выполнение запросов в Prolog<!-- omit from toc -->
 

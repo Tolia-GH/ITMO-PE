@@ -1,9 +1,9 @@
-## [MainPage](../index.md)/Probability Theory
+## [MainPage](../index.md)/Theory of Information Security
 
 ## 阅读索引
 
-- [ ] [Lecture](Lecture.md)
-- [ ] [Labs](Labs.md)
+- [x] [Lecture](Lecture.md)
+- [x] [Labs](Labs.md)
 
 
 <style type="text/css">

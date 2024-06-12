@@ -1,4 +1,4 @@
-# System Software
+## [MainPage](../index.md)/[System Software](README.md)/Intro
 
 ## Раздел 1. Основы системного программирования
 
