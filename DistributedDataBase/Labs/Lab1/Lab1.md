@@ -10,7 +10,7 @@
   </script>
 </head>
 
-## [MainPage](../../../index.md)/[DataBase](../../README.md)/Lab 1
+## [MainPage](../../../index.md)/[Distributed DataBase](../../README.md)/Lab 1
 
 <center>
 <p>Университет ИТМО</p>

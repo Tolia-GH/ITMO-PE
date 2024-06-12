@@ -11,15 +11,13 @@ password: Di2oaLyDd20js6Ox
 ```
 
 Lecture
-- [ ] [Lecture 1](./Lecture/Lecture1.md)
-- [ ] [Lecture 2](./Lecture/Lecture2.md)
-- [x] [Lecture 3](./Lecture/Lecture3.md)
+- [ ] [Lecture1](./Lecture/Lecture1.md)
 
 Labs
 - [x] [Lab 1](./Labs/Lab1/Lab1.md)
 - [x] [Lab 2](./Labs/Lab2/Lab2.md)
-- [x] [Lab 3](./Labs/Lab2/Lab2.md)
-- [x] [Lab 4](./Labs/Lab2/Lab2.md)
+- [ ] [Lab 3](../404.md)
+- [ ] [Lab 4](../404.md)
 
 SemesterWork
 

@@ -1,4 +1,4 @@
-## [MainPage](../../../index.md)/[DataBase](../../README.md)/Lab 2
+## [MainPage](../../../index.md)/[Distributed DataBase](../../README.md)/Lab 2
 
 <center>
 <p>Университет ИТМО</p>

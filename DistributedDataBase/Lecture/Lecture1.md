@@ -10,4 +10,7 @@
     </script>
 </head>
 
-## [MainPage](../../index.md)/[Algorithm&DataStructures](../README.md)/Lecture 3
+## [MainPage](../../index.md)/[Ditributed DataBase](../README.md)/Lecture
+
+# Лекция 
+
