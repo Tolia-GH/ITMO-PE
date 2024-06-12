@@ -13,14 +13,14 @@ We are international students sponsored by the China Scholarship Council (CSC) t
 
 - [俄语 Russian Language](/RussianLanguage/README.md)
 
-### 大一
+### 大一 Grade 1
 - [OPD](/OPD/README.md)
 - [编程 Programming](/Program/README.md)
 - [离散数学 Discrete Mathematics](/DiscreteMathematics/README.md)
 - [哲学 Philosophy](/Philosophy/README.md)
 - [数学 Mathematics](/Mathematic/README.md)
 
-### 大二
+### 大二 Grade 2
 
 - [公开演讲 Public Speaking](/PublicSpeaking/README.md)
 - [物理 Physics](/Physics/README.md)
@@ -31,7 +31,7 @@ We are international students sponsored by the China Scholarship Council (CSC) t
 - [信息安全方法论 Theory of Information Security](/InformationSecurity/README.md)
 - [概率论 Theory of Probability](/ProbabilityTheory/README.md)
 
-### 大三
+### 大三 Grade 3
 
 - [讲故事 Story Telling](/StoryTelling/README.md)
 - [职业生涯管理 Carreer Management](/CarreerManagement/README.md)
@@ -44,7 +44,7 @@ We are international students sponsored by the China Scholarship Council (CSC) t
 - [计算机视觉 Computer Vision](/ComputerVision/README.md)
 - [分布式存储 Distributed Database](/DistributedDataBase/README.md)
 
-## 版权声明
+## 版权声明 Copyrights
 - 本项目所有非代码文本内容遵循 [CC BY-NC-SA 3.0 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)
 - 本项目所有代码文本内容遵循 [MIT Lisense](LICENSE)
 
