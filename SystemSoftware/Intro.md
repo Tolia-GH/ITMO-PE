@@ -84,7 +84,7 @@ https://stepik.org/join-class/fa3703037123ba9161cdbaa43ed7e55b69e2da5a
 Лекция 1. Создание и завершение потоков
 - Возможности и организация библиотеки glibc.
 - Управление потоками (pthread_create, pthread_cancel, cancellation point, InterruptedException и др.), получение результатов выполнения потока.
-- Cancellation points
+- Cancellation points2.
 - Освобождение ресурсов (cleanup_push, cleanup_pop, обработка InterruptedException)
 
 讲座 1. 创建和终止线程
