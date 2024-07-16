@@ -3,7 +3,7 @@
 ## 阅读索引
 
 Lecture
-- [ ] [Lecture 1]()
+- [ ] [Lecture 1](./Lecture.md)
 
 
 Practice
