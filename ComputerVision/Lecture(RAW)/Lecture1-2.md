@@ -1,10 +1,12 @@
-## [MainPage](../../index.md)/[Computer Vision](../README.md)/Lecture1-2(RAW)
+## [MainPage](../../index.md)/[Computer Vision](../README.md)/[Lecture1-2](../Lecture.md)/RAW
 
-语音识别：Youtube 转文本
-标点：ChatGPT 4o
-翻译：ChatGPT 4o
+语音识别：Youtube 转文本 
+校对与标点：ChatGPT 4o 
+翻译：ChatGPT 4o   
 
 ![](../pic/Lecture1-3.1.png)
+
+# Повышение разрешения <br> 超分辨率技术
 
 ![](../pic/Lecture1-2.4.png)
 

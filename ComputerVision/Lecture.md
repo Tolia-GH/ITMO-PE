@@ -2,12 +2,15 @@
 
 课程链接：[开放教育](https://apps.openedu.ru/learning/course/course-v1:ITMOUniversity+COMPVIS+spring_2024_ITMO_bac/home)
 
-- [Введение. Предобработка изображений 介绍 图像预处理](#введение-предобработка-изображений-介绍-图像预处理)
+- [Chapter 1: Введение. Предобработка изображений 介绍 图像预处理](#chapter-1-введение-предобработка-изображений-介绍-图像预处理)
   - [О курсе 关于课程](#о-курсе-关于课程)
-  - [Введение. Объект изучения. Процесс формирования изображения](#введение-объект-изучения-процесс-формирования-изображения)
+  - [1.1 Введение. Объект изучения. Процесс формирования изображения](#11-введение-объект-изучения-процесс-формирования-изображения)
+  - [1.2 Повышение разрешения](#12-повышение-разрешения)
+  - [1.3 Основные цветовые преобразования в составе комбинированной схемы коррекции цвета](#13-основные-цветовые-преобразования-в-составе-комбинированной-схемы-коррекции-цвета)
+  - [1.4 Дополнительные цветовые преобразования в составе комбинированной схемы коррекции цвета](#14-дополнительные-цветовые-преобразования-в-составе-комбинированной-схемы-коррекции-цвета)
 
 
-# Введение. Предобработка изображений <br>介绍 图像预处理
+# Chapter 1: Введение. Предобработка изображений <br>介绍 图像预处理
 
 ## О курсе 关于课程
 
@@ -29,8 +32,36 @@
 
 Самарин Алексей Владимирович
 
-## Введение. Объект изучения. Процесс формирования изображения
+## 1.1 Введение. Объект изучения. Процесс формирования изображения
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jxsKSIpaoHw?si=mxwW_LSgerkMNM06" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - [视频课程链接(Youtube)](https://www.youtube.com/watch?v=jxsKSIpaoHw&t=1s)
 
 - [视频课程原文及翻译](./Lecture(RAW)/Lecture1-1.md)
+
+## 1.2 Повышение разрешения
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/roEJDiJg3X4?si=EA0rlTTuC3Iw172x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=roEJDiJg3X4)
+
+- [视频课程原文及翻译](./Lecture(RAW)/Lecture1-2.md)
+
+## 1.3 Основные цветовые преобразования в составе комбинированной схемы коррекции цвета
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KES76i-Cv4c?si=nvb_EY3HPyTvZELY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=KES76i-Cv4c)
+
+- [视频课程原文及翻译](./Lecture(RAW)/Lecture1-3.md)
+
+## 1.4 Дополнительные цветовые преобразования в составе комбинированной схемы коррекции цвета
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0yBdAqbvu9w?si=hN7RXbqsjHi5L3R2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=0yBdAqbvu9w)
+
+- [视频课程原文及翻译](./Lecture(RAW)/Lecture1-4.md)
+
+
