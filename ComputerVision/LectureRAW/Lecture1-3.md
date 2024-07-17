@@ -1,7 +1,7 @@
 ## [MainPage](../../index.md)/[Computer Vision](../README.md)/[Lecture1-3](../Lecture.md)/RAW
 
-语音识别：Youtube 转文本 
-校对与标点：ChatGPT 4o 
+语音识别：Youtube 转文本  
+断句与标点：ChatGPT 4o  
 翻译：ChatGPT 4o   
 
 <!-- ![](../pic/Lecture1-4.1.png) -->

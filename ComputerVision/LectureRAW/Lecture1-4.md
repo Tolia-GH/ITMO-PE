@@ -1,8 +1,8 @@
 ## [MainPage](../../index.md)/[Computer Vision](../README.md)/[Lecture1-4](../Lecture.md)/RAW
 
-语音识别：Sonix.ai
-校对与标点：ChatGPT 4o
-翻译：Google
+语音识别：Sonix.ai  
+断句与标点：ChatGPT 4o  
+翻译：Google  
 
 ![](../pic/Lecture1-5.1.png)
 
