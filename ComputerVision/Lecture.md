@@ -38,7 +38,7 @@
 
 - [视频课程链接(Youtube)](https://www.youtube.com/watch?v=jxsKSIpaoHw&t=1s)
 
-- [视频课程原文及翻译](./Lecture(RAW)/Lecture1-1.md)
+- [视频课程原文及翻译](./LectureRAW/Lecture1-1.md)
 
 ## 1.2 Повышение разрешения
 
@@ -46,7 +46,7 @@
 
 - [视频课程链接(Youtube)](https://www.youtube.com/watch?v=roEJDiJg3X4)
 
-- [视频课程原文及翻译](./Lecture(RAW)/Lecture1-2.md)
+- [视频课程原文及翻译](./LectureRAW/Lecture1-2.md)
 
 ## 1.3 Основные цветовые преобразования в составе комбинированной схемы коррекции цвета
 
@@ -54,7 +54,7 @@
 
 - [视频课程链接(Youtube)](https://www.youtube.com/watch?v=KES76i-Cv4c)
 
-- [视频课程原文及翻译](./Lecture(RAW)/Lecture1-3.md)
+- [视频课程原文及翻译](./LectureRAW/Lecture1-3.md)
 
 ## 1.4 Дополнительные цветовые преобразования в составе комбинированной схемы коррекции цвета
 
@@ -62,6 +62,6 @@
 
 - [视频课程链接(Youtube)](https://www.youtube.com/watch?v=0yBdAqbvu9w)
 
-- [视频课程原文及翻译](./Lecture(RAW)/Lecture1-4.md)
+- [视频课程原文及翻译](./LectureRAW/Lecture1-4.md)
 
 
