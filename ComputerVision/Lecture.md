@@ -17,12 +17,16 @@
   - [2.6 Функции потерь и метрики качества 损失函数和质量指标](#26-функции-потерь-и-метрики-качества-损失函数和质量指标)
 - [3. Детектирование объектов](#3-детектирование-объектов)
   - [3.1 Введение. Классическая схема сканирующего окна для детектирования объектов 介绍。用于物体检测的经典扫描窗口设计](#31-введение-классическая-схема-сканирующего-окна-для-детектирования-объектов-介绍用于物体检测的经典扫描窗口设计)
-  - [3.1 Введение. Классическая схема сканирующего окна для детектирования объектов 介绍。用于物体检测的经典扫描窗口设计](#31-введение-классическая-схема-сканирующего-окна-для-детектирования-объектов-介绍用于物体检测的经典扫描窗口设计-1)
   - [3.2 Глубокие нейросетевые архитектуры для детектирования объектов общего плана 用于检测一般物体的深度神经网络架构](#32-глубокие-нейросетевые-архитектуры-для-детектирования-объектов-общего-плана-用于检测一般物体的深度神经网络架构)
   - [3.3 Глубокие нейросетевые архитектуры для детектирования текстовых фрагментов на изображении 用于检测图像中文本片段的深度神经网络架构](#33-глубокие-нейросетевые-архитектуры-для-детектирования-текстовых-фрагментов-на-изображении-用于检测图像中文本片段的深度神经网络架构)
   - [3.4 Глубокие нейросетевые архитектуры для детектирования человеческих лиц 用于检测人脸的深度神经网络架构](#34-глубокие-нейросетевые-архитектуры-для-детектирования-человеческих-лиц-用于检测人脸的深度神经网络架构)
   - [3.5 Оценка качества детектирования 检测质量评估](#35-оценка-качества-детектирования-检测质量评估)
 - [4. Трекинг](#4-трекинг)
+  - [4.1 Введение. Общая схема трекинга объектов. Базовые принципы распознавания движения в кадре 介绍 对象跟踪的一般方案 帧内运动识别的基本原理](#41-введение-общая-схема-трекинга-объектов-базовые-принципы-распознавания-движения-в-кадре-介绍-对象跟踪的一般方案-帧内运动识别的基本原理)
+  - [4.2 Априорная локализация объектов. 对象的先验定位](#42-априорная-локализация-объектов-对象的先验定位)
+  - [4.3 Трекинг ключевых точек. Детектирование и дескрипторы ключевых точек 跟踪关键点 关键点检测和描述符](#43-трекинг-ключевых-точек-детектирование-и-дескрипторы-ключевых-точек-跟踪关键点-关键点检测和描述符)
+  - [4.4 Трекинг на основе вычисления оптического потока 基于光流计算的跟踪](#44-трекинг-на-основе-вычисления-оптического-потока-基于光流计算的跟踪)
+  - [4.5 Глубокие нейросетевые архитектуры для трекинга объектов 用于对象跟踪的深度神经网络架构](#45-глубокие-нейросетевые-архитектуры-для-трекинга-объектов-用于对象跟踪的深度神经网络架构)
 - [5. Сегментация](#5-сегментация)
 - [6. Генерация изображений](#6-генерация-изображений)
 - [7. Конструирование признаков](#7-конструирование-признаков)
@@ -55,15 +59,11 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jxsKSIpaoHw?si=mxwW_LSgerkMNM06" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=jxsKSIpaoHw&t=1s)
-
 - [视频课程原文及翻译](./LectureRAW/Lecture1-1.md)
 
 ## 1.2 Повышение разрешения <br>超分辨率
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/roEJDiJg3X4?si=EA0rlTTuC3Iw172x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=roEJDiJg3X4)
 
 - [视频课程原文及翻译](./LectureRAW/Lecture1-2.md)
 
@@ -71,15 +71,11 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KES76i-Cv4c?si=nvb_EY3HPyTvZELY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=KES76i-Cv4c)
-
 - [视频课程原文及翻译](./LectureRAW/Lecture1-3.md)
 
 ## 1.4 Дополнительные цветовые преобразования в составе комбинированной схемы коррекции цвета <br>作为组合色彩校正方案一部分的附加色彩变换
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0yBdAqbvu9w?si=hN7RXbqsjHi5L3R2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=0yBdAqbvu9w)
 
 - [视频课程原文及翻译](./LectureRAW/Lecture1-4.md)
 
@@ -89,15 +85,11 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lAnudqhAo5k?si=glebJP8g2AVQ0eQA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=lAnudqhAo5k)
-
 - [视频课程原文及翻译](./LectureRAW/Lecture2-1.md)
 
 ## 2.2 Классические/базовые дескрипторы изображений <br>经典/基本图像描述符
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Vkrhju1RC5w?si=SrM2G0ZVpEw6WNTb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=Vkrhju1RC5w)
 
 - [视频课程原文及翻译](./LectureRAW/Lecture2-2.md)
 
@@ -105,15 +97,11 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5iYkaNPcDBg?si=q8_f-avbOdjDww10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=5iYkaNPcDBg)
-
 - [视频课程原文及翻译](./LectureRAW/Lecture2-3.md)
 
 ## 2.4 Современные нейросетевые архитектуры классификации изображений <br>用于图像分类的现代神经网络架构
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tUz2Nvp5kq4?si=VkfgV3Ee4C2YYnq1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=tUz2Nvp5kq4)
 
 - [视频课程原文及翻译](./LectureRAW/Lecture2-4.md)
 
@@ -121,15 +109,11 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4KtIL3Bvtj4?si=YmO3gH4EOTHyIfSb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=4KtIL3Bvtj4)
-
 - [视频课程原文及翻译](./LectureRAW/Lecture2-5.md)
 
 ## 2.6 Функции потерь и метрики качества <br>损失函数和质量指标
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mGxyP5Al9Oo?si=dKgh_5RFU12MUJbL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=mGxyP5Al9Oo)
 
 - [视频课程原文及翻译](./LectureRAW/Lecture2-6.md)
 
@@ -139,23 +123,11 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NorGQOiuvAU?si=9PQYzLWfxDGGHPA6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=NorGQOiuvAU)
-
-- [视频课程原文及翻译](./LectureRAW/Lecture3-1.md)
-
-## 3.1 Введение. Классическая схема сканирующего окна для детектирования объектов <br>介绍。用于物体检测的经典扫描窗口设计
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NorGQOiuvAU?si=9PQYzLWfxDGGHPA6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=NorGQOiuvAU)
-
 - [视频课程原文及翻译](./LectureRAW/Lecture3-1.md)
 
 ## 3.2 Глубокие нейросетевые архитектуры для детектирования объектов общего плана <br>用于检测一般物体的深度神经网络架构
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_62KGeJoVWo?si=PQk3krzwunLGQdcV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=_62KGeJoVWo)
 
 - [视频课程原文及翻译](./LectureRAW/Lecture3-2.md)
 
@@ -163,15 +135,11 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-4CpxaaRIpo?si=3hhpm7clpcFXta7R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=-4CpxaaRIpo)
-
 - [视频课程原文及翻译](./LectureRAW/Lecture3-3.md)
 
 ## 3.4 Глубокие нейросетевые архитектуры для детектирования человеческих лиц <br>用于检测人脸的深度神经网络架构
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/66eVZZ9xnfE?si=hAcIvpMMtXbI4WtI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=66eVZZ9xnfE)
 
 - [视频课程原文及翻译](./LectureRAW/Lecture3-4.md)
 
@@ -179,11 +147,39 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RdAROKVirq8?si=pjGqlMQdR76X9vtl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=RdAROKVirq8)
-
 - [视频课程原文及翻译](./LectureRAW/Lecture3-5.md)
 
 # 4. Трекинг
+
+## 4.1 Введение. Общая схема трекинга объектов. Базовые принципы распознавания движения в кадре <br>介绍 对象跟踪的一般方案 帧内运动识别的基本原理
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RcReFoLUC2o?si=m9OLvQVP5JZcTDzq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程原文及翻译](./LectureRAW/Lecture4-1.md)
+
+## 4.2 Априорная локализация объектов. <br>对象的先验定位
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cnnCRjpyNRY?si=BCvL11mze7RMo4uQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程原文及翻译](./LectureRAW/Lecture4-2.md)
+
+## 4.3 Трекинг ключевых точек. Детектирование и дескрипторы ключевых точек <br>跟踪关键点 关键点检测和描述符
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9ldZFocs_pk?si=_i8V7a0SAVJKqP3I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程原文及翻译](./LectureRAW/Lecture4-3.md)
+
+## 4.4 Трекинг на основе вычисления оптического потока <br>基于光流计算的跟踪
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0rZjaTwI6bM?si=4YE5LkRNfxnDGUwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程原文及翻译](./LectureRAW/Lecture4-4.md)
+
+## 4.5 Глубокие нейросетевые архитектуры для трекинга объектов <br>用于对象跟踪的深度神经网络架构
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qnY9t25wqpA?si=7ECEJDhqRNoxtc0C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程原文及翻译](./LectureRAW/Lecture4-5.md)
 
 # 5. Сегментация
 
