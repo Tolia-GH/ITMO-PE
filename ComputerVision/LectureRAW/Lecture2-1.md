@@ -1,4 +1,4 @@
-## [MainPage](../../index.md)/[Computer Vision](../README.md)/[Lecture2-1](./Lecture2-x.md)/RAW
+## [MainPage](../../index.md)/[Computer Vision](../README.md)/[Lecture](../Lecture.md)/2-1 RAW
 
 语音识别：科大讯飞  
 断句与标点：chatGPT 4o  

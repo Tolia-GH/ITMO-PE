@@ -10,11 +10,17 @@
   - [1.4 Дополнительные цветовые преобразования в составе комбинированной схемы коррекции цвета 作为组合色彩校正方案一部分的附加色彩变换](#14-дополнительные-цветовые-преобразования-в-составе-комбинированной-схемы-коррекции-цвета-作为组合色彩校正方案一部分的附加色彩变换)
 - [2. Классификация изображений 图像分类](#2-классификация-изображений-图像分类)
   - [2.1 Введение. Классические/не нейросетевые/общие методы для классификации изображений 经典/非神经网络/图像分类的通用方法](#21-введение-классическиене-нейросетевыеобщие-методы-для-классификации-изображений-经典非神经网络图像分类的通用方法)
-  - [2.2 Классические/базовые дескрипторы изображений](#22-классическиебазовые-дескрипторы-изображений)
-  - [2.3 Основные конструктивные элементы нейросетевых классификаторов изображений](#23-основные-конструктивные-элементы-нейросетевых-классификаторов-изображений)
-  - [2.4 Современные нейросетевые архитектуры классификации изображений](#24-современные-нейросетевые-архитектуры-классификации-изображений)
-  - [2.5 Основные методы оптимизации градиентного спуска](#25-основные-методы-оптимизации-градиентного-спуска)
-  - [2.6 Функции потерь и метрики качества](#26-функции-потерь-и-метрики-качества)
+  - [2.2 Классические/базовые дескрипторы изображений 经典/基本图像描述符](#22-классическиебазовые-дескрипторы-изображений-经典基本图像描述符)
+  - [2.3 Основные конструктивные элементы нейросетевых классификаторов изображений 神经网络图像分类器的基本结构要素](#23-основные-конструктивные-элементы-нейросетевых-классификаторов-изображений-神经网络图像分类器的基本结构要素)
+  - [2.4 Современные нейросетевые архитектуры классификации изображений 用于图像分类的现代神经网络架构](#24-современные-нейросетевые-архитектуры-классификации-изображений-用于图像分类的现代神经网络架构)
+  - [2.5 Основные методы оптимизации градиентного спуска 基本梯度下降优化技术](#25-основные-методы-оптимизации-градиентного-спуска-基本梯度下降优化技术)
+  - [2.6 Функции потерь и метрики качества 损失函数和质量指标](#26-функции-потерь-и-метрики-качества-损失函数和质量指标)
+- [3. Детектирование объектов](#3-детектирование-объектов)
+- [4. Трекинг](#4-трекинг)
+- [5. Сегментация](#5-сегментация)
+- [6. Генерация изображений](#6-генерация-изображений)
+- [7. Конструирование признаков](#7-конструирование-признаков)
+- [8. Stereo vision](#8-stereo-vision)
 
 
 # 1. Введение. Предобработка изображений <br>介绍 图像预处理
@@ -79,44 +85,56 @@
 
 - [视频课程链接(Youtube)](https://www.youtube.com/watch?v=lAnudqhAo5k)
 
-- [视频课程原文及翻译](./LectureRAW/Lecture1-x.md)
+- [视频课程原文及翻译](./LectureRAW/Lecture2-1.md)
 
-## 2.2 Классические/базовые дескрипторы изображений
+## 2.2 Классические/базовые дескрипторы изображений <br>经典/基本图像描述符
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Vkrhju1RC5w?si=SrM2G0ZVpEw6WNTb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - [视频课程链接(Youtube)](https://www.youtube.com/watch?v=Vkrhju1RC5w)
 
-- [视频课程原文及翻译](./LectureRAW/Lecture1-x.md)
+- [视频课程原文及翻译](./LectureRAW/Lecture2-2.md)
 
-## 2.3 Основные конструктивные элементы нейросетевых классификаторов изображений
+## 2.3 Основные конструктивные элементы нейросетевых классификаторов изображений <br>神经网络图像分类器的基本结构要素
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5iYkaNPcDBg?si=q8_f-avbOdjDww10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - [视频课程链接(Youtube)](https://www.youtube.com/watch?v=5iYkaNPcDBg)
 
-- [视频课程原文及翻译](./LectureRAW/Lecture1-x.md)
+- [视频课程原文及翻译](./LectureRAW/Lecture2-3.md)
 
-## 2.4 Современные нейросетевые архитектуры классификации изображений
+## 2.4 Современные нейросетевые архитектуры классификации изображений <br>用于图像分类的现代神经网络架构
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tUz2Nvp5kq4?si=VkfgV3Ee4C2YYnq1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - [视频课程链接(Youtube)](https://www.youtube.com/watch?v=tUz2Nvp5kq4)
 
-- [视频课程原文及翻译](./LectureRAW/Lecture1-x.md)
+- [视频课程原文及翻译](./LectureRAW/Lecture2-4.md)
 
-## 2.5 Основные методы оптимизации градиентного спуска
+## 2.5 Основные методы оптимизации градиентного спуска <br>基本梯度下降优化技术
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4KtIL3Bvtj4?si=YmO3gH4EOTHyIfSb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - [视频课程链接(Youtube)](https://www.youtube.com/watch?v=4KtIL3Bvtj4)
 
-- [视频课程原文及翻译](./LectureRAW/Lecture1-x.md)
+- [视频课程原文及翻译](./LectureRAW/Lecture2-5.md)
 
-## 2.6 Функции потерь и метрики качества
+## 2.6 Функции потерь и метрики качества <br>损失函数和质量指标
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mGxyP5Al9Oo?si=dKgh_5RFU12MUJbL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - [视频课程链接(Youtube)](https://www.youtube.com/watch?v=mGxyP5Al9Oo)
 
-- [视频课程原文及翻译](./LectureRAW/Lecture1-x.md)
+- [视频课程原文及翻译](./LectureRAW/Lecture2-6.md)
+
+# 3. Детектирование объектов
+
+# 4. Трекинг
+
+# 5. Сегментация
+
+# 6. Генерация изображений
+
+# 7. Конструирование признаков
+
+# 8. Stereo vision

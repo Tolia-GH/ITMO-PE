@@ -1,4 +1,4 @@
-## [MainPage](../../index.md)/[Computer Vision](../README.md)/[Lecture2-4](./Lecture2-x.md)/RAW
+## [MainPage](../../index.md)/[Computer Vision](../README.md)/[Lecture](../Lecture.md)/2-4 RAW
 
 语音识别：Youtube 转文本  
 断句与标点：  
