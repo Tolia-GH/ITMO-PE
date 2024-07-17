@@ -16,6 +16,12 @@
   - [2.5 Основные методы оптимизации градиентного спуска 基本梯度下降优化技术](#25-основные-методы-оптимизации-градиентного-спуска-基本梯度下降优化技术)
   - [2.6 Функции потерь и метрики качества 损失函数和质量指标](#26-функции-потерь-и-метрики-качества-损失函数和质量指标)
 - [3. Детектирование объектов](#3-детектирование-объектов)
+  - [3.1 Введение. Классическая схема сканирующего окна для детектирования объектов 介绍。用于物体检测的经典扫描窗口设计](#31-введение-классическая-схема-сканирующего-окна-для-детектирования-объектов-介绍用于物体检测的经典扫描窗口设计)
+  - [3.1 Введение. Классическая схема сканирующего окна для детектирования объектов 介绍。用于物体检测的经典扫描窗口设计](#31-введение-классическая-схема-сканирующего-окна-для-детектирования-объектов-介绍用于物体检测的经典扫描窗口设计-1)
+  - [3.2 Глубокие нейросетевые архитектуры для детектирования объектов общего плана 用于检测一般物体的深度神经网络架构](#32-глубокие-нейросетевые-архитектуры-для-детектирования-объектов-общего-плана-用于检测一般物体的深度神经网络架构)
+  - [3.3 Глубокие нейросетевые архитектуры для детектирования текстовых фрагментов на изображении 用于检测图像中文本片段的深度神经网络架构](#33-глубокие-нейросетевые-архитектуры-для-детектирования-текстовых-фрагментов-на-изображении-用于检测图像中文本片段的深度神经网络架构)
+  - [3.4 Глубокие нейросетевые архитектуры для детектирования человеческих лиц 用于检测人脸的深度神经网络架构](#34-глубокие-нейросетевые-архитектуры-для-детектирования-человеческих-лиц-用于检测人脸的深度神经网络架构)
+  - [3.5 Оценка качества детектирования 检测质量评估](#35-оценка-качества-детектирования-检测质量评估)
 - [4. Трекинг](#4-трекинг)
 - [5. Сегментация](#5-сегментация)
 - [6. Генерация изображений](#6-генерация-изображений)
@@ -128,6 +134,54 @@
 - [视频课程原文及翻译](./LectureRAW/Lecture2-6.md)
 
 # 3. Детектирование объектов
+
+## 3.1 Введение. Классическая схема сканирующего окна для детектирования объектов <br>介绍。用于物体检测的经典扫描窗口设计
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NorGQOiuvAU?si=9PQYzLWfxDGGHPA6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=NorGQOiuvAU)
+
+- [视频课程原文及翻译](./LectureRAW/Lecture3-1.md)
+
+## 3.1 Введение. Классическая схема сканирующего окна для детектирования объектов <br>介绍。用于物体检测的经典扫描窗口设计
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NorGQOiuvAU?si=9PQYzLWfxDGGHPA6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=NorGQOiuvAU)
+
+- [视频课程原文及翻译](./LectureRAW/Lecture3-1.md)
+
+## 3.2 Глубокие нейросетевые архитектуры для детектирования объектов общего плана <br>用于检测一般物体的深度神经网络架构
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_62KGeJoVWo?si=PQk3krzwunLGQdcV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=_62KGeJoVWo)
+
+- [视频课程原文及翻译](./LectureRAW/Lecture3-2.md)
+
+## 3.3 Глубокие нейросетевые архитектуры для детектирования текстовых фрагментов на изображении <br>用于检测图像中文本片段的深度神经网络架构
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-4CpxaaRIpo?si=3hhpm7clpcFXta7R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=-4CpxaaRIpo)
+
+- [视频课程原文及翻译](./LectureRAW/Lecture3-3.md)
+
+## 3.4 Глубокие нейросетевые архитектуры для детектирования человеческих лиц <br>用于检测人脸的深度神经网络架构
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/66eVZZ9xnfE?si=hAcIvpMMtXbI4WtI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=66eVZZ9xnfE)
+
+- [视频课程原文及翻译](./LectureRAW/Lecture3-4.md)
+
+## 3.5 Оценка качества детектирования <br>检测质量评估
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RdAROKVirq8?si=pjGqlMQdR76X9vtl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程链接(Youtube)](https://www.youtube.com/watch?v=RdAROKVirq8)
+
+- [视频课程原文及翻译](./LectureRAW/Lecture3-5.md)
 
 # 4. Трекинг
 
