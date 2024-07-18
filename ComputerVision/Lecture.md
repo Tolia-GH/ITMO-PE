@@ -38,15 +38,15 @@
   - [6.3 Архитектуры на основе GANов 基于 GAN 的架构](#63-архитектуры-на-основе-ganов-基于-gan-的架构)
   - [6.4 VAE. Принцип работы VAE, reparameterization trick VAE 的工作原理，重新参数化技巧](#64-vae-принцип-работы-vae-reparameterization-trick-vae-的工作原理重新参数化技巧)
 - [7. Конструирование признаков](#7-конструирование-признаков)
-  - [7.1](#71)
-  - [7.2](#72)
-  - [7.3](#73)
-  - [7.4](#74)
+  - [7.1 Введение. Базовые контурные примитивы и алгоритмы их вычисления 介绍 基本轮廓基元及其计算算法](#71-введение-базовые-контурные-примитивы-и-алгоритмы-их-вычисления-介绍-基本轮廓基元及其计算算法)
+  - [7.2 Комплексные контурные признаки. Понижение размерности. Признаки на основе ключевых точек 复杂的轮廓特征 降维 基于关键点的特征](#72-комплексные-контурные-признаки-понижение-размерности-признаки-на-основе-ключевых-точек-复杂的轮廓特征-降维-基于关键点的特征)
+  - [7.3 Перцептивное хэширование 感知哈希](#73-перцептивное-хэширование-感知哈希)
+  - [7.4 Нейросетевые дескрипторы. Feature engineering в общем пайплайне системы компьютерного зрения 神经网络描述符。计算机视觉系统通用流程中的特征工程](#74-нейросетевые-дескрипторы-feature-engineering-в-общем-пайплайне-системы-компьютерного-зрения-神经网络描述符计算机视觉系统通用流程中的特征工程)
 - [8. Stereo vision](#8-stereo-vision)
-  - [8.1](#81)
-  - [8.2](#82)
-  - [8.3](#83)
-  - [8.4](#84)
+  - [8.1 Постановка задачи. Основные типы, принципы работы и устройство механизмов стереозрения 问题的表述 立体视觉机构的基本类型、工作原理和设计](#81-постановка-задачи-основные-типы-принципы-работы-и-устройство-механизмов-стереозрения-问题的表述-立体视觉机构的基本类型工作原理和设计)
+  - [8.2 Описание принципов работы стереопары в терминах проективной геометрии 用射影几何描述立体对的工作原理](#82-описание-принципов-работы-стереопары-в-терминах-проективной-геометрии-用射影几何描述立体对的工作原理)
+  - [8.3 Ректификация изображений. Карта расхождений и поиск глубины 图像校正 视差图和深度搜索](#83-ректификация-изображений-карта-расхождений-и-поиск-глубины-图像校正-视差图和深度搜索)
+  - [8.4 Алгоритмы стереосопоставления 立体匹配算法](#84-алгоритмы-стереосопоставления-立体匹配算法)
 
 
 # 1. Введение. Предобработка изображений <br>介绍 图像预处理
@@ -251,36 +251,52 @@
 
 # 7. Конструирование признаков
 
-## 7.1 
+## 7.1 Введение. Базовые контурные примитивы и алгоритмы их вычисления <br>介绍 基本轮廓基元及其计算算法
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rnk-NSk4Law?si=l-D1qALjl4otdfLe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - [视频课程原文及翻译](./LectureRAW/Lecture7-1.md)
 
-## 7.2 
+## 7.2 Комплексные контурные признаки. Понижение размерности. Признаки на основе ключевых точек <br>复杂的轮廓特征 降维 基于关键点的特征
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DG4TlpusvPE?si=4Kz-8aQ551WCpdav" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - [视频课程原文及翻译](./LectureRAW/Lecture7-2.md)
 
-## 7.3 
+## 7.3 Перцептивное хэширование <br>感知哈希
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5EDeX2xkx3o?si=639DHLs4gPJ7-MaW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - [视频课程原文及翻译](./LectureRAW/Lecture7-3.md)
 
-## 7.4 
+## 7.4 Нейросетевые дескрипторы. Feature engineering в общем пайплайне системы компьютерного зрения <br>神经网络描述符。计算机视觉系统通用流程中的特征工程
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Yse-p-JPElc?si=VMPAJaCW_pP5Bf2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - [视频课程原文及翻译](./LectureRAW/Lecture7-4.md)
 
 # 8. Stereo vision
 
-## 8.1 
+## 8.1 Постановка задачи. Основные типы, принципы работы и устройство механизмов стереозрения <br>问题的表述 立体视觉机构的基本类型、工作原理和设计
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UFFr0ASuCZ8?si=iRFRpZPMxDdXMPbv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - [视频课程原文及翻译](./LectureRAW/Lecture8-1.md)
 
-## 8.2 
+## 8.2 Описание принципов работы стереопары в терминах проективной геометрии <br>用射影几何描述立体对的工作原理
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RV0ujaXjIFU?si=mYKLKM3aFsjcoDyf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - [视频课程原文及翻译](./LectureRAW/Lecture8-2.md)
 
-## 8.3 
+## 8.3 Ректификация изображений. Карта расхождений и поиск глубины <br>图像校正 视差图和深度搜索
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mxomQueMQg4?si=rdRL39-MFBvGrtyC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - [视频课程原文及翻译](./LectureRAW/Lecture8-3.md)
 
-## 8.4 
+## 8.4 Алгоритмы стереосопоставления <br>立体匹配算法
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SqHyRgd4V3I?si=dpVJ3F50vzEBh4Ji" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - [视频课程原文及翻译](./LectureRAW/Lecture8-4.md)

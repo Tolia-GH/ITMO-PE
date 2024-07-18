@@ -1,8 +1,8 @@
 ## [MainPage](../../index.md)/[Computer Vision](../README.md)/[Lecture](../Lecture.md)/3-4 RAW
 
-语音识别：Youtube 转文本
-断句与标点：chatGPT 4o
-翻译：chatGPT
+语音识别：Youtube 转文本  
+断句与标点：chatGPT 4o  
+翻译：chatGPT  
 
 # Глубокие нейросетевые архитектуры для детектирования человеческих лиц <br>用于检测人脸的深度神经网络架构
 
