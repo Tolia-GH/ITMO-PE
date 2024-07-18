@@ -28,9 +28,25 @@
   - [4.4 Трекинг на основе вычисления оптического потока 基于光流计算的跟踪](#44-трекинг-на-основе-вычисления-оптического-потока-基于光流计算的跟踪)
   - [4.5 Глубокие нейросетевые архитектуры для трекинга объектов 用于对象跟踪的深度神经网络架构](#45-глубокие-нейросетевые-архитектуры-для-трекинга-объектов-用于对象跟踪的深度神经网络架构)
 - [5. Сегментация](#5-сегментация)
+  - [5.1 Постановка задачи. Основные типы, принципы работы и устройство механизмов стереозрения 问题的表述。立体视觉机构的基本类型、工作原理和设计](#51-постановка-задачи-основные-типы-принципы-работы-и-устройство-механизмов-стереозрения-问题的表述立体视觉机构的基本类型工作原理和设计)
+  - [5.2 Описание принципов работы стереопары в терминах проективной геометрии 用射影几何描述立体对的工作原理](#52-описание-принципов-работы-стереопары-в-терминах-проективной-геометрии-用射影几何描述立体对的工作原理)
+  - [5.3 Ректификация изображений. Карта расхождений и поиск глубины 图像校正。视差图和深度搜索](#53-ректификация-изображений-карта-расхождений-и-поиск-глубины-图像校正视差图和深度搜索)
+  - [5.4 Алгоритмы стереосопоставления 立体匹配算法](#54-алгоритмы-стереосопоставления-立体匹配算法)
 - [6. Генерация изображений](#6-генерация-изображений)
+  - [6.1 Введение. Авторегрессионные модели генерации изображений 介绍 自回归图像生成模型](#61-введение-авторегрессионные-модели-генерации-изображений-介绍-自回归图像生成模型)
+  - [6.2 GANы и их проблемы GAN 及其问题](#62-ganы-и-их-проблемы-gan-及其问题)
+  - [6.3 Архитектуры на основе GANов 基于 GAN 的架构](#63-архитектуры-на-основе-ganов-基于-gan-的架构)
+  - [6.4 VAE. Принцип работы VAE, reparameterization trick VAE 的工作原理，重新参数化技巧](#64-vae-принцип-работы-vae-reparameterization-trick-vae-的工作原理重新参数化技巧)
 - [7. Конструирование признаков](#7-конструирование-признаков)
+  - [7.1](#71)
+  - [7.2](#72)
+  - [7.3](#73)
+  - [7.4](#74)
 - [8. Stereo vision](#8-stereo-vision)
+  - [8.1](#81)
+  - [8.2](#82)
+  - [8.3](#83)
+  - [8.4](#84)
 
 
 # 1. Введение. Предобработка изображений <br>介绍 图像预处理
@@ -183,8 +199,88 @@
 
 # 5. Сегментация
 
+## 5.1 Постановка задачи. Основные типы, принципы работы и устройство механизмов стереозрения <br>问题的表述。立体视觉机构的基本类型、工作原理和设计
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZJWYqMflbeQ?si=h0Et6yUA8tMo3uTe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程原文及翻译](./LectureRAW/Lecture5-1.md)
+
+## 5.2 Описание принципов работы стереопары в терминах проективной геометрии <br>用射影几何描述立体对的工作原理
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SB8-Lo8ivjs?si=imdaPwVRd4pk5DgT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程原文及翻译](./LectureRAW/Lecture5-2.md)
+
+## 5.3 Ректификация изображений. Карта расхождений и поиск глубины <br>图像校正。视差图和深度搜索
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QZEwXTp3WH0?si=pGaWZ-LT8bZ5gtID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程原文及翻译](./LectureRAW/Lecture5-3.md)
+
+## 5.4 Алгоритмы стереосопоставления <br>立体匹配算法
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/X5XrjWecGrI?si=uaz1u0oPmN2d1ZY5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程原文及翻译](./LectureRAW/Lecture5-4.md)
+
 # 6. Генерация изображений
+
+## 6.1 Введение. Авторегрессионные модели генерации изображений <br>介绍 自回归图像生成模型
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sxgmp-DP7L8?si=CWB0NRpptEQp-WKN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程原文及翻译](./LectureRAW/Lecture6-1.md)
+
+## 6.2 GANы и их проблемы <br>GAN 及其问题
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DgfkOMwHU70?si=DVuWsPkhs0_umNd4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程原文及翻译](./LectureRAW/Lecture6-2.md)
+
+## 6.3 Архитектуры на основе GANов <br>基于 GAN 的架构
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vg0f9vY2dH8?si=7fDNkE8FnrULWI9z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程原文及翻译](./LectureRAW/Lecture6-3.md)
+
+## 6.4 VAE. Принцип работы VAE, reparameterization trick <br>VAE 的工作原理，重新参数化技巧
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e_yv6eFdNZ4?si=UFOsy3OcTcRzAo51" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [视频课程原文及翻译](./LectureRAW/Lecture6-4.md)
 
 # 7. Конструирование признаков
 
+## 7.1 
+
+- [视频课程原文及翻译](./LectureRAW/Lecture7-1.md)
+
+## 7.2 
+
+- [视频课程原文及翻译](./LectureRAW/Lecture7-2.md)
+
+## 7.3 
+
+- [视频课程原文及翻译](./LectureRAW/Lecture7-3.md)
+
+## 7.4 
+
+- [视频课程原文及翻译](./LectureRAW/Lecture7-4.md)
+
 # 8. Stereo vision
+
+## 8.1 
+
+- [视频课程原文及翻译](./LectureRAW/Lecture8-1.md)
+
+## 8.2 
+
+- [视频课程原文及翻译](./LectureRAW/Lecture8-2.md)
+
+## 8.3 
+
+- [视频课程原文及翻译](./LectureRAW/Lecture8-3.md)
+
+## 8.4 
+
+- [视频课程原文及翻译](./LectureRAW/Lecture8-4.md)
