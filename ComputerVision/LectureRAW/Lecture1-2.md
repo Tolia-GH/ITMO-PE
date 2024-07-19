@@ -4,7 +4,7 @@
 断句与标点：ChatGPT 4o  
 翻译：ChatGPT 4o   
 
-![](../pic/Lecture1-3.1.png)
+<!-- ![](../pic/Lecture1-3.1.png) -->
 
 # Повышение разрешения <br> 超分辨率技术
 
