@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="ConputerVision" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="ConputerVision" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="deeplearning" project-jdk-type="Python SDK" />
 </project>
