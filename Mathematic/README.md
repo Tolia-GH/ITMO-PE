@@ -7,7 +7,7 @@
 - [x] [Типовой расчет](./TypeWork.md)
 - [x] [Расчетно-графическая работа 1](./GraphicWork1.md)
 - [x] [Расчетно-графическая работа 2](./GraphicWork2.md)
-- [x] [Расчетно-графическая работа 3](./GraphicWork3.ipynb)
+- [x] [Расчетно-графическая работа 3](./GraphicWork3.ipynb) (jupyter notebook)
 - [x] [HomeWork](HomeWork/Task.md)
 - [x] [Test](Test.md)
 - [x] [Exam](Exam.md)
