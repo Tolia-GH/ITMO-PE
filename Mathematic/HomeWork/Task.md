@@ -10,7 +10,7 @@
   </script>
 </head>
 
-## [MainPage](../index.md)/[Mathematics](README.md)/HomeWork
+## [MainPage](../../index.md)/[Mathematics](../README.md)/HomeWork
 
 ## Задание 1
 

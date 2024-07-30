@@ -1,9 +1,9 @@
-## [MainPage](../index.md)/Probability Theory
+## [MainPage](../index.md)/Theory of Information Security
 
 ## 阅读索引
 
-- [ ] [Lecture](Lecture.md)
-- [ ] [Labs](Labs.md)
+- [x] [Lecture](Lecture.md)
+- [x] [Labs](Labs.md)
 
 
 <style type="text/css">
@@ -29,7 +29,7 @@
     <a href="https://markdown.com.cn/">markdown</a>, 
     <a href="https://www.latex-project.org/">LaTeX</a>
     <br>
-    Copyright © 2022 | 
+    Copyright © 2020 | 
     <a href="https://tolia-gh.github.io">Tolia</a>
     <br>
     All Rights Reserved.

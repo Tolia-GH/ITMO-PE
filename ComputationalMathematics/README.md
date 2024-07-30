@@ -2,10 +2,10 @@
 
 ## 阅读索引
 
-- [ ] [Lecture](Lecture.md)
-- [ ] [Test](Test.md)
-- [ ] [Labs](Labs.md)
-- [ ] [Exam](Exam.md)
+- [x] [Lecture](Lecture.md)
+- [x] [Test](Test.md)
+- [x] [Labs](Labs.md)
+- [x] [Exam](Exam.md)
 
 
 <style type="text/css">
@@ -31,7 +31,7 @@
     <a href="https://markdown.com.cn/">markdown</a>, 
     <a href="https://www.latex-project.org/">LaTeX</a>
     <br>
-    Copyright © 2022 | 
+    Copyright © 2020 | 
     <a href="https://tolia-gh.github.io">Tolia</a>
     <br>
     All Rights Reserved.

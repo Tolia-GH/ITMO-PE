@@ -2,9 +2,10 @@
 
 ## 阅读索引
 
-- [ ] [Lecture](Lecture.md)
-- [ ] [Labs](Labs.md)
-- [ ] [HomeWork](HomeWork.md)
+- [x] [Lecture](Lecture.md)
+- [ ] [Practice 5](PracticeWork/PracticeWork6.md)
+- [x] [Practice 6](PracticeWork/PracticeWork6.md)
+- [x] [HomeWork](HomeWork.md)
 
 
 <style type="text/css">
@@ -30,7 +31,7 @@
     <a href="https://markdown.com.cn/">markdown</a>, 
     <a href="https://www.latex-project.org/">LaTeX</a>
     <br>
-    Copyright © 2022 | 
+    Copyright © 2020 | 
     <a href="https://tolia-gh.github.io">Tolia</a>
     <br>
     All Rights Reserved.

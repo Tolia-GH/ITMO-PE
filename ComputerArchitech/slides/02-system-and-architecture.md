@@ -79,7 +79,7 @@ Technical details:
     - Automated testing for dialogue systems based on a property-based approach
       基于属性的方法自动测试对话系统
 
-----
+---
 
 ### Курс <br/> Системная инженерия: Архитектурное моделирование компьютерных систем <br> 系统工程：计算机系统的架构建模
 
@@ -93,7 +93,7 @@ Technical details:
 
 --- закон Хофштадтера 霍夫施塔特定律
 
-----
+---
 
 Причины: 原因：
 
@@ -236,7 +236,8 @@ Technical details:
 
 ![](../fig/CPS-elements-evolution.png)
 
-Примеры КФС: гироскутер; безопасные, энергоэффективные вращающиеся двери; провис проводов и передаваемая мощность.
+Примеры КФС: гироскутер; безопасные, энергоэффективные вращающиеся двери; провис проводов и передаваемая мощность.  
+FSC 示例：悬浮滑板； 安全、节能的旋转门； 线垂和传输功率。
 
 *Extra*: [Пенской А.В., Понятие киберфизической системы считать вредным](https://ryukzak.github.io/2019/11/15/cps-concept.html)
 
@@ -259,6 +260,7 @@ Technical details:
 ### Система как совокупность частей 系统作为一组部件
 
 <div class="row"><div class="col">
+
 System is a combination of interacting elements organized to achieve one or more stated purposes  
 系统是为了实现一个或多个既定目的而组织的相互作用元素的组合
 

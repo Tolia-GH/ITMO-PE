@@ -3,12 +3,12 @@
 ## 阅读索引
 
 - [Labs](./Labs.md)
-  - [x] [Lab 5](../404.md)
-  - [x] [Lab 6](../404.md)
+  - [ ] [Lab 5](../404.md)
+  - [ ] [Lab 6](../404.md)
   - [ ] [Lab 7](../404.md)
   - [ ] [Lab 8](../404.md)
 - [ ] [Рубеж](../404.md)
-- [ ] [Exam](Exam.md)
+- [x] [Exam](Exam.md)
 
 <style type="text/css">
     #footer {
@@ -33,7 +33,7 @@
     <a href="https://markdown.com.cn/">markdown</a>, 
     <a href="https://www.latex-project.org/">LaTeX</a>
     <br>
-    Copyright © 2022 | 
+    Copyright © 2020 | 
     <a href="https://tolia-gh.github.io">Tolia</a>
     <br>
     All Rights Reserved.

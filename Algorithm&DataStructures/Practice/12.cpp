@@ -1,69 +1,73 @@
-//
-// Created by 2398768715 on 2023/4/24.
-//
-#include <iostream>
-#include <algorithm>
-#define MAX 100001
+#include "iostream"
+#include "deque"
+#include "vector"
 
+using namespace std;
 
 int n, k;
-int num[150001];
-std::pair<int,int> min;
+deque<int> window;
 
-std::pair<int,int> quickFindMin(int left, int right) {
-    if (left == right) {//when subset only contains one element
-        return std::make_pair(num[left],left);
-    } else if (left == right - 1) {//when subset only contains two elements
-        return num[left] > num[right] ? std::make_pair(num[right],right) : std::make_pair(num[left],left);
-    } else {//when subset contains more than two elements
-        int mid = (left + right) / 2;//divide the set into two part
+inline void read(int &num) {//fast read
+    num = 0;
+    short flag = 1;
+    char ch = getchar();
+    while (ch < '0' || ch > '9') {
+        if (ch == '-') flag = -1;
+        ch = getchar();
+    }
+    while (ch >= '0' && ch <= '9') {
+        num = (num << 3) + (num << 1) + (ch ^ 48);
+        ch = getchar();
+    }
+    num *= flag;
+}
 
-        std::pair<int,int> left_part = quickFindMin(left, mid);//recoil left part
-        std::pair<int,int> right_part = quickFindMin(mid + 1, right);//recoil right part
+inline void write (int num) {//fast write
+    if (num == 0) return;
+    write(num / 10);
+    putchar(num % 10 + '0');
+}
 
-        return left_part.first < right_part.first ? left_part : right_part;//compare left part and right part
+void getFirstRes(vector<int> nums) {
+        for (int i = 0; i < k; ++i) {
+        while (!window.empty() && nums[i] < nums[window.back()]) {
+            window.pop_back();
+        }
+
+        window.push_back(i);
+    }
+
+    cout << nums[window.front()] << " ";
+}
+
+void getSecondRes(vector<int> nums) {
+    for (int i = k; i < n; ++i) {
+        if (!window.empty() && window.front() == i - k) window.pop_front();
+        
+        while (!window.empty() && nums[i] < nums[window.back()]) {
+            window.pop_back();
+        }
+        window.push_back(i);
+        cout << nums[window.front()] << " ";
     }
 }
 
-int findPartMin(int i) {
-    if (i - 1 == min.second) {
-//        minValue = MAX;
-//        for (int j = i; j < i+k; ++j) {
-//            if (num[j] < minValue) {
-//                minValue = num[j];
-//                minIndex = j;
-//            }
-//        }
-        min = quickFindMin(i,i+k-1);
-        return min.first;
-    } else {
-        if (min.first > num[i+k-1]) {
-            min.first = num[i+k-1];
-            min.second = i+k-1;
-        }
-
-        return min.first;
+void getRes() {
+    vector<int> nums(n);//get nums[]
+    for (int i = 0; i < n; ++i) {
+        read(nums[i]);
     }
+
+    getFirstRes(nums);
+    getSecondRes(nums);
+
 }
 
 int main() {
-    std::cin >> n >> k;
-    for (int i = 0; i < n; ++i) {
-        std::cin >> num[i];
-    }
+    read(n);
+    read(k);
 
-//    minValue = MAX;
-//    for (int i = 0; i < n; ++i) {//find the minValue and minIndex of the first part
-//        if (num[i] < minValue) {
-//            minValue = num[i];
-//            minIndex = i;
-//        }
-//    }
-//    cout<<minValue<<" ";
-    min = quickFindMin(0,k-1);
-    std::cout<<min.first<<" ";
+    getRes();
 
-    for (int i = 1; i <= n-k; ++i) {
-        std::cout<<findPartMin(i)<<" ";
-    }
+    return 0;
 }

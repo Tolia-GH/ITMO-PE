@@ -1,0 +1,3148 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/2398768715qq.com/ontologies/2023/10/AI-Lab2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/2398768715qq.com/ontologies/2023/10/AI-Lab2">
+    <Prefix name="" IRI="http://www.semanticweb.org/2398768715qq.com/ontologies/2023/10/AI-Lab2/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#boss"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#bow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#catalyst"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#character"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#claymore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#element"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#mob"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#monster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#nation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#polearm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sword"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#weapon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ability"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#canUsePowerOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#canUseWeapon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causeReactionBurningWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causeReactionElectroChargeWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causeReactionFrozenWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causeReactionMeltWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causeReactionOverloadWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causeReactionSuperconductWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causeReactionVaporizeWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#characterProperties"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#elementProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isBelongTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEnemyTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isNeutralTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#relationship"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#atk"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AmenomaKageuchi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AmosBow"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ayaka"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BloodtaintedGreatSword"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Childe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DragonsBane"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Eremite"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FadingTwilight"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FilletBlade"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fontaine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ganyu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Inazumi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Keqing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Klee"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kokomi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Liyue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lynette"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MagicGuide"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MissiveWindspear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Moundstalt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nahida"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nilou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nobushi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Noelle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OathSwornEye"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RainSlasher"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SilverSword"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SkywardAtlas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SolarPearl"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#StormTerror"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sumeru"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TomeOfTheEternalFlow"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#anemo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cryo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dendro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#electro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#geo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hydro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pyro"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#boss"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isEnemyTo"/>
+            <Class IRI="#character"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#character"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#canUsePowerOf"/>
+            <Class IRI="#element"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#character"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#canUseWeapon"/>
+            <Class IRI="#weapon"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#character"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isEnemyTo"/>
+            <Class IRI="#boss"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#character"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isEnemyTo"/>
+            <Class IRI="#monster"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#monster"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isEnemyTo"/>
+            <Class IRI="#character"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#boss"/>
+        <Class IRI="#mob"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#bow"/>
+        <Class IRI="#weapon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#catalyst"/>
+        <Class IRI="#weapon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#character"/>
+        <Class IRI="#mob"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#claymore"/>
+        <Class IRI="#weapon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#element"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#item"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#mob"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#monster"/>
+        <Class IRI="#mob"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#nation"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#polearm"/>
+        <Class IRI="#weapon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sword"/>
+        <Class IRI="#weapon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#weapon"/>
+        <Class IRI="#item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#boss"/>
+        <Class IRI="#character"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#boss"/>
+        <Class IRI="#monster"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#bow"/>
+        <Class IRI="#catalyst"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#bow"/>
+        <Class IRI="#claymore"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#bow"/>
+        <Class IRI="#polearm"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#bow"/>
+        <Class IRI="#sword"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#catalyst"/>
+        <Class IRI="#claymore"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#catalyst"/>
+        <Class IRI="#polearm"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#catalyst"/>
+        <Class IRI="#sword"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#character"/>
+        <Class IRI="#monster"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#claymore"/>
+        <Class IRI="#polearm"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#claymore"/>
+        <Class IRI="#sword"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#polearm"/>
+        <Class IRI="#sword"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#sword"/>
+        <NamedIndividual IRI="#AmenomaKageuchi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#bow"/>
+        <NamedIndividual IRI="#AmosBow"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#character"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#boss"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#claymore"/>
+        <NamedIndividual IRI="#BloodtaintedGreatSword"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#boss"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#polearm"/>
+        <NamedIndividual IRI="#DragonsBane"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#monster"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#bow"/>
+        <NamedIndividual IRI="#FadingTwilight"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#sword"/>
+        <NamedIndividual IRI="#FilletBlade"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#nation"/>
+        <NamedIndividual IRI="#Fontaine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#character"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#monster"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#nation"/>
+        <NamedIndividual IRI="#Inazumi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#character"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#character"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#character"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#nation"/>
+        <NamedIndividual IRI="#Liyue"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#character"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#catalyst"/>
+        <NamedIndividual IRI="#MagicGuide"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#polearm"/>
+        <NamedIndividual IRI="#MissiveWindspear"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#nation"/>
+        <NamedIndividual IRI="#Moundstalt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#character"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#character"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#character"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#monster"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#character"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#catalyst"/>
+        <NamedIndividual IRI="#OathSwornEye"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#claymore"/>
+        <NamedIndividual IRI="#RainSlasher"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#monster"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#sword"/>
+        <NamedIndividual IRI="#SilverSword"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#catalyst"/>
+        <NamedIndividual IRI="#SkywardAtlas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#monster"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#catalyst"/>
+        <NamedIndividual IRI="#SolarPearl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#boss"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#nation"/>
+        <NamedIndividual IRI="#Sumeru"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#catalyst"/>
+        <NamedIndividual IRI="#TomeOfTheEternalFlow"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#monster"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#element"/>
+        <NamedIndividual IRI="#anemo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#element"/>
+        <NamedIndividual IRI="#cryo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#element"/>
+        <NamedIndividual IRI="#dendro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#element"/>
+        <NamedIndividual IRI="#electro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#element"/>
+        <NamedIndividual IRI="#geo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#element"/>
+        <NamedIndividual IRI="#hydro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#element"/>
+        <NamedIndividual IRI="#pyro"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUsePowerOf"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#cryo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#AmenomaKageuchi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#FilletBlade"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#SilverSword"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isBelongTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#Inazumi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Childe"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUsePowerOf"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#cryo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#AmosBow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#FadingTwilight"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isBelongTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#Liyue"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUsePowerOf"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#electro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#AmenomaKageuchi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#FilletBlade"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#SilverSword"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isBelongTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#Liyue"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUsePowerOf"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#pyro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#MagicGuide"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#OathSwornEye"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#SkywardAtlas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#SolarPearl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#TomeOfTheEternalFlow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isBelongTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#Moundstalt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Klee"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUsePowerOf"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#hydro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#MagicGuide"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#OathSwornEye"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#SkywardAtlas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#SolarPearl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#TomeOfTheEternalFlow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isBelongTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#Inazumi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUsePowerOf"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#anemo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#AmenomaKageuchi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#FilletBlade"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#SilverSword"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isBelongTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#Fontaine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUsePowerOf"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#dendro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#MagicGuide"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#OathSwornEye"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#SkywardAtlas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#SolarPearl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#TomeOfTheEternalFlow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isBelongTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#Sumeru"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUsePowerOf"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#hydro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#MagicGuide"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#OathSwornEye"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#SkywardAtlas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#SolarPearl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#TomeOfTheEternalFlow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isBelongTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#Fontaine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUsePowerOf"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#hydro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#AmenomaKageuchi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#FilletBlade"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#SilverSword"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isBelongTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#Sumeru"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUsePowerOf"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#geo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#BloodtaintedGreatSword"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#RainSlasher"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isBelongTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#Moundstalt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#Slime"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#Ayaka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#Ganyu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#Keqing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#Klee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#Kokomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#Lynette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#Nahida"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#Nilou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#Noelle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#Childe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#Eremite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#Nobushi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#Slime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <NamedIndividual IRI="#StormTerror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <NamedIndividual IRI="#anemo"/>
+        <NamedIndividual IRI="#cryo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <NamedIndividual IRI="#anemo"/>
+        <NamedIndividual IRI="#electro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <NamedIndividual IRI="#anemo"/>
+        <NamedIndividual IRI="#hydro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <NamedIndividual IRI="#anemo"/>
+        <NamedIndividual IRI="#pyro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionFrozenWith"/>
+        <NamedIndividual IRI="#cryo"/>
+        <NamedIndividual IRI="#hydro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionMeltWith"/>
+        <NamedIndividual IRI="#cryo"/>
+        <NamedIndividual IRI="#pyro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSuperconductWith"/>
+        <NamedIndividual IRI="#cryo"/>
+        <NamedIndividual IRI="#electro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <NamedIndividual IRI="#cryo"/>
+        <NamedIndividual IRI="#anemo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionBurningWith"/>
+        <NamedIndividual IRI="#dendro"/>
+        <NamedIndividual IRI="#pyro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionElectroChargeWith"/>
+        <NamedIndividual IRI="#electro"/>
+        <NamedIndividual IRI="#hydro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionOverloadWith"/>
+        <NamedIndividual IRI="#electro"/>
+        <NamedIndividual IRI="#pyro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSuperconductWith"/>
+        <NamedIndividual IRI="#electro"/>
+        <NamedIndividual IRI="#cryo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <NamedIndividual IRI="#electro"/>
+        <NamedIndividual IRI="#anemo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionElectroChargeWith"/>
+        <NamedIndividual IRI="#hydro"/>
+        <NamedIndividual IRI="#electro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionFrozenWith"/>
+        <NamedIndividual IRI="#hydro"/>
+        <NamedIndividual IRI="#cryo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <NamedIndividual IRI="#hydro"/>
+        <NamedIndividual IRI="#anemo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionVaporizeWith"/>
+        <NamedIndividual IRI="#hydro"/>
+        <NamedIndividual IRI="#pyro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionBurningWith"/>
+        <NamedIndividual IRI="#pyro"/>
+        <NamedIndividual IRI="#dendro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionMeltWith"/>
+        <NamedIndividual IRI="#pyro"/>
+        <NamedIndividual IRI="#cryo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionOverloadWith"/>
+        <NamedIndividual IRI="#pyro"/>
+        <NamedIndividual IRI="#electro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <NamedIndividual IRI="#pyro"/>
+        <NamedIndividual IRI="#anemo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#causeReactionVaporizeWith"/>
+        <NamedIndividual IRI="#pyro"/>
+        <NamedIndividual IRI="#hydro"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">796</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Ayaka"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12858</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">450</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Azhidaha"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Childe"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">400</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Childe"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Eremite"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">943</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Ganyu"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">9797</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">150</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Hilichurl"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">323</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Keqing"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">13103</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Klee"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">352</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Klee"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10287</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">799</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Kokomi"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">13471</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">232</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Lynette"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12937</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">626</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Nahida"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10360</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">208</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Neuvilette"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">14695</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">348</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Nilou"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15185</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">250</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Nobushi"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">701</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Noelle"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12071</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">300</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#RuinGuard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#Slime"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#Slime"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#StormTerror"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">13000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#atk"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp"/>
+        <NamedIndividual IRI="#TreasureHoarders"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5000</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ability"/>
+        <ObjectProperty IRI="#characterProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#canUsePowerOf"/>
+        <ObjectProperty IRI="#ability"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <ObjectProperty IRI="#ability"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causeReactionBurningWith"/>
+        <ObjectProperty IRI="#elementProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causeReactionElectroChargeWith"/>
+        <ObjectProperty IRI="#elementProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causeReactionFrozenWith"/>
+        <ObjectProperty IRI="#elementProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causeReactionMeltWith"/>
+        <ObjectProperty IRI="#elementProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causeReactionOverloadWith"/>
+        <ObjectProperty IRI="#elementProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causeReactionSuperconductWith"/>
+        <ObjectProperty IRI="#elementProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <ObjectProperty IRI="#elementProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causeReactionVaporizeWith"/>
+        <ObjectProperty IRI="#elementProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#characterProperties"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#elementProperty"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isBelongTo"/>
+        <ObjectProperty IRI="#characterProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <ObjectProperty IRI="#relationship"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <ObjectProperty IRI="#relationship"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <ObjectProperty IRI="#relationship"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#relationship"/>
+        <ObjectProperty IRI="#characterProperties"/>
+    </SubObjectPropertyOf>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#causeReactionElectroChargeWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#causeReactionFrozenWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#causeReactionOverloadWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#causeReactionVaporizeWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isEnemyTo"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isNeutralTo"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#canUsePowerOf"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#canUseWeapon"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#causeReactionBurningWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#causeReactionElectroChargeWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#causeReactionFrozenWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#causeReactionMeltWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#causeReactionOverloadWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#causeReactionSuperconductWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#causeReactionVaporizeWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#elementProperty"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#canUsePowerOf"/>
+        <Class IRI="#character"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <Class IRI="#character"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causeReactionBurningWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causeReactionElectroChargeWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causeReactionFrozenWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causeReactionMeltWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causeReactionOverloadWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causeReactionSuperconductWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causeReactionSwirlWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causeReactionVaporizeWith"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isBelongTo"/>
+        <Class IRI="#character"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <Class IRI="#boss"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <Class IRI="#character"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <Class IRI="#monster"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <Class IRI="#boss"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <Class IRI="#character"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <Class IRI="#monster"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <Class IRI="#boss"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <Class IRI="#character"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isNeutralTo"/>
+        <Class IRI="#monster"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#canUsePowerOf"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <Class IRI="#bow"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <Class IRI="#catalyst"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <Class IRI="#claymore"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <Class IRI="#polearm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#canUseWeapon"/>
+        <Class IRI="#sword"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isBelongTo"/>
+        <Class IRI="#nation"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#isEnemyTo"/>
+        <ObjectProperty IRI="#isNeutralTo"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#isFriendlyTo"/>
+        <ObjectProperty IRI="#isNeutralTo"/>
+    </DisjointObjectProperties>
+    <DataPropertyDomain>
+        <DataProperty IRI="#atk"/>
+        <Class IRI="#boss"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#atk"/>
+        <Class IRI="#character"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#atk"/>
+        <Class IRI="#monster"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#atk"/>
+        <Class IRI="#weapon"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hp"/>
+        <Class IRI="#boss"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hp"/>
+        <Class IRI="#character"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hp"/>
+        <Class IRI="#monster"/>
+    </DataPropertyDomain>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

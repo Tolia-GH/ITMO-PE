@@ -1,136 +1,360 @@
-% define characters `character(name).`
-character('Noelle').
-character('Klee').
-character('Ganyu').
-character('Keqing').
-character('Ayaka').
-character('Kokomi').
-character('Nahida').
-character('Nilou').
-character('Lynette').
-character('Neuvilette').
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
 
-% define enemies `enemy(enemyName).`
-monster(slime).
-monster(hilichurl).
-monster(ruinGuard).
-monster(treasureHoarders).
-monster(nobushi).
-monster(eremite).
+# [主页](../README.md)/[MathsLanguage](./readme.md)/重点知识点+知识点
 
-% define Boss `Boss(BossName).`
-boss('Stormterror').
-boss('Childe').
-boss('Azhdaha').
+## <mark>Урок 1和3</mark>
 
-% define the nation of characters `nation(characterName, nation).`
-nation('Noelle', moundstalt).
-nation('Klee', moundstalt).
-nation('Ganyu', liyue).
-nation('Keqing', liyue).
-nation('Ayaka', inazuma).
-nation('Kokomi', inazuma).
-nation('Nahida', sumeru).
-nation('Nilou', sumeru).
-nation('Lynette', fontaine).
-nation('Neuvilette', fontaine).
+<!--我不建议使用无序列表记录生词
 
-% define elementType of character `elementType(characterName, element).`
-elementType('Noelle', geo).
-elementType('Klee', pyro).
-elementType('Ganyu', cryo).
-elementType('Keqing', electro).
-elementType('Ayaka', cryo).
-elementType('Kokomi', hydro).
-elementType('Nahida', dendro).
-elementType('Nilou', hydro).
-elementType('Lynette', anemo).
-elementType('Neuvilette', hydro).
+我更推荐使用表格，因为表格的数据可以直接与 Excel，SQL 数据库等其他数据形式转换
 
-% define weaponType of character `useWeaponType(characterName, weaponType).`
-useWeaponType('Noelle', claymore).
-useWeaponType('Klee', catalyst).
-useWeaponType('Ganyu', bow).
-useWeaponType('Keqing', sword).
-useWeaponType('Ayaka', sword).
-useWeaponType('Kokomi', catalyst).
-useWeaponType('Nahida', catalyst).
-useWeaponType('Nilou', sword).
-useWeaponType('Lynette', sword).
-useWeaponType('Neuvilette', catalyst).
+也就是说，如果未来有更进一步的打算，无论是做一个俄语生词数据库还是做一个背词程序，表格形式的单词数据都可以直接转换使用-->
 
-% define weapons `weapon(name).`
-weapon('Bloodtainted Great Sword'). % 沐浴龙血的剑
-weapon('Rain Slasher'). % 雨裁
-weapon('Magic Guider'). % 魔法导论
-weapon('Skyward Atlas'). % 天空之卷
-weapon('Oath Sworn Eye'). % 证誓之明瞳
-weapon('Solar Pearl'). % 匣里日月
-weapon('Tome Of The Eternal Flowl'). % 万世流涌大典
-weapon('Amos Bow'). % 阿莫斯之弓
-weapon('Fading Twilight'). % 落霞
-weapon('Silver Sword'). % 银剑
-weapon('Fillet Blade'). % 吃虎鱼刀
-weapon('Amenoma Kageuchi'). % 天目影打刀
+|单词|意义|
+|:----:|:----:|
+|цифра=знак|符号|
+|буква|字母|
+|скобка|括号|
+|Натуральные число|自然数|
+|целые слова|整数|
+|счёт|数目|
+|один=единица|一个，单位|
+|последовательность|顺序|
+|однозначный|单义的，一位的|
+|двухзначный|两位的|
+|трёхзначный|三位的|
+|четырёхзначный|四位的|
+|арифметические действия|运算方式|
 
-% define weaponType `weaponType(weaponName, weaponType).`
-weaponType('Bloodtainted Great Sword', claymore).
-weaponType('Rain Slasher', claymore).
-weaponType('Magic Guider', catalyst).
-weaponType('Skyward Atlas', catalyst).
-weaponType('Oath Sworn Eye', catalyst).
-weaponType('Solar Pearl', catalyst).
-weaponType('Tome Of The Eternal Flowl', catalyst).
-weaponType('Amos Bow', bow).
-weaponType('Fading Twilight', bow).
-weaponType('Silver Sword', sword).
-weaponType('Fillet Blade', sword).
-weaponType('Amenoma Kageuchi', sword).
+- 知识点
+  - <mark>加法 сложение +</mark>  
+    складывать/сложить
+   
+    $$a+b=c$$  
 
-% define rules %
-isObject(ObjectName) :-
-    character(ObjectName), !;
-    monster(ObjectName), !;
-    boss(ObjectName).
+    |a|b|c|
+    |:----:|:----:|:----:|
+    |первое слагаемое 加数|второе слагаемое 加数 |сумма 和| 
 
-%define weather a character can use this weapon
-canUseWeapon(CharacterNAme,WeaponName) :- 
-    character(CharacterNAme),
-    weapon(WeaponName),
-    useWeaponType(CharacterNAme, Type),
-    weaponType(WeaponName, Type).
+  - <mark>减法 вычитание -</mark>  
+    вычитать/вычесть
+    
+    $$a-b=c$$ 
 
-%define weather the objectA will attack objectB
-areEnemy(ObjectA, ObjectB) :-  
-    character(ObjectA), monster(ObjectB), !;
-    character(ObjectA), boss(ObjectB), !;
-    monster(ObjectA), character(ObjectB), !;
-    boss(ObjectA), character(ObjectB).
+    |a|b|c|
+    |:----:|:----:|:----:|
+    |уменьшавмое 被减数|вычитаемое 减数|разность 差| 
 
-areFriendly(ObjectA, ObjectB) :-
-    character(ObjectA), character(ObjectB) ->  
-    (   nation(ObjectA, Nation),
-        nation(ObjectB, Nation)
-    ), !;
-    monster(ObjectA), monster(ObjectB), !;
-    boss(ObjectA), monster(ObjectB).
+  - <mark>乘法 умножение ×</mark>  
+    умножать/умножить
 
-areNeutral(ObjectA, ObjectB) :-
-    character(ObjectA), character(ObjectB) ->  
-    (   nation(ObjectA, NationA),
-        nation(ObjectB, NationB),
-        NationA \= NationB
-    ).
+    $$a\times b=c$$ 
 
-attack(ObjectA, ObjectB) :-
-    call(areFriendly(ObjectA, ObjectB)) ->  
-    (   write(ObjectA),
-        write(' will not attack '),
-        write(ObjectB),
-        write(', because they are friendly.')
-    ), !;
-    (   write(ObjectA),
-        write(' attack '),
-        write(ObjectB),
-        write('!'), nl
-    ).
+    |a|b|c|
+    |:----:|:----:|:----:|
+    |первый множитель 乘数|второй множитель 乘数|произведение 积|
+
+  - <mark>除法 деление ÷</mark>  
+    делить/разделить
+
+    $$a÷b=c$$  
+
+    |a|b|c|
+    |:----:|:----:|:----:|
+    |делимое 被除数|делитель 除数|частное 商| 
+
+    |符号|俄语|
+    |:----:|:----:|
+    |+|плюс|
+    |-|минус|
+    |*|умножить на|
+    |:|разделить на|
+    |=|равно|
+    |>|больше|
+    |<|меньше|
+
+
+    ## <mark>урок 4和5</mark>
+    生词
+    |单词|意义|
+    |:----:|:----:|
+    |префикс|前缀|
+    |суффикс|后缀|
+    |числитель|分子|
+    |знаменатель|分母|
+    |дробь|分数|
+    |сокращать-сократить|减少|
+    |приводить-привести|带到，换算|
+    |вычитать-вычесть|减去,扣除|
+
+    <mark>语法点</mark>
+    1. x/y
+       1. 若x为1，则分子x表示为одна，而分母y全为<mark>阴性形式的序列数</mark>，例：1/3=одна/третья
+       2. 若x大于1，则分子x仅2为две其余保持不变，例：3为три，4为четыре，5为пять,而分母y变为<mark>序列数的复二形式</mark>例：4为четвёртых，5为пятых
+    2. 加减乘数中差值倍数关系
+        1. +或-差了多少数表示为на сколько
+        2. *或/差了多少倍关系表示为во сколько раз
+        3. 总表达式为<mark>x больше/меньше,чем y на что/во сколько раз</mark>
+   
+    字母读音
+    |字母|读音|
+    |:----:|:----:|
+    |Aa|а|
+    |Bb|бэ|
+    |Cc|цэ|
+    |Dd|дэ|
+    |Ee|е|
+    |Ff|эф|
+    |Gg|гэ(жэ)|
+    |Hh|аш|
+    |Ii|и|
+    |Jj|жи|
+    |Kk|ка|
+    |Ll|эль|
+    |Mm|эм|
+    |Nn|эн|
+    |Oo|о|
+    |Pp|пэ|
+    |Qq|ку|
+    |Rr|эр|
+    |Ss|эс|
+    |Tt|тэ|
+    |Uu|у|
+    |Vv|вэ|
+    |Ww|дубль-вэ|
+    |Xx|икс|
+    |Yy|игрек|
+    |Zz|зэт|
+
+
+## <mark>Урок 6和7</mark>
+知识点
+ 
+1.  $a^{n}$
+    1. a - основание степени底数
+    2. n - показатель степени指数
+    3. $a^{n}$ - степени指数函数
+    4. 读法要求
+       1. а в какой степени
+       2. а в степени(число)
+    5. 常规形式 (1,4,5...) 
+       1. $a^{1}$-а в первой степени/a в степени 1
+       2. $a^{4}$-а в четвёртой степени/a в степени 4
+    6. 特殊形式（2，3）
+       1. $a^{2}$-а квадрат/а в квадрате
+       2. $a^{3}$-а куб/а в кубе 
+    7. 多项式运算
+       1. ax+y-а в степени икс плюс игрек
+       2. $(a+b)^{2}$-а плюс б в квадрате
+       3. $a^{2}$+$b^{2}$-а квадрвт плюс б квадрат
+2. x больше/меньше чего
+ 
+|0|нуля|
+|:----:|:----:|
+|1|единицы,одного|
+|2,3,4|двух,трёж,четырёх|
+|5,6 и.т.д|пяти,шести и.т.д|
+
+3. $\sqrt[n]{a}$
+    1. a - подкоренное выражение
+    2. n - показатель корня
+    3. $\sqrt[]{}$ - знак корня
+    4. 表达形式
+       1. корень какой степени из чего(适用于4以后的开方数) 表达例子
+          1. $\sqrt[4]{a}$ - корень четвёртой степени из а 
+       2. корень степени 1格数字或字母相加减из чего 表达例子：
+          1. $\sqrt[n+1]{a}$ - корень степени эн плюс единица из а
+       3. 特殊形式
+          1. $\sqrt[]{a}$ - корень квадратный из а
+          2. $\sqrt[3]{a}$ - корень кубический из а
+          3. $\sqrt[n]{a}$ - корень энной степени из а
+
+## <mark>Урок 9</mark>
+1. Равенства и неравенства(等式与不等式)
+    1. (не)равен чему
+          1. x,y,z
+          2. результат
+    2. (не)равна чему
+          1. сумма和,разность差
+          2. единица 1
+    3. (не)равно чему
+          1. произведение积,частное商,отношение比值
+          2. 除x,y,z之外的字母
+    4. (не)равны чему
+          1. 字母和字母相等,例:x и y равны
+    5. 提问:чему равен x? 
+
+|术语|意义|
+|:----:|:----:|
+|арифметические операции|算术运算|
+|решение|解答|
+|действие|运算|
+|скобки|括号|
+|компоненты|组分|
+|множитель|乘数，因子|
+|делитель делимое деление|除数 被除数 除法|
+|разделить с остатком|带有余数除法|
+|частное неполное частное|商 有余数的商|
+|алгебраическая суммма|代数和|
+|разложить на простые множителм|分解为质数因子|
+|целые числа|整数|
+|общий делитель|公因数|
+|остаток|余数|
+|цифры|字母|
+|разность|差|
+|натуральные числа|自然数|
+|пример|例子|
+|простое число|质数|
+|ответ|答案|
+|составное число|合数|
+|взаимно простые числа|公质数|
+|неположительные числа|非正数|
+|модуль числа а|a的模|
+|неотрицательные числа|非负数|
+|наибольший общий делитель|最大公约数|
+|абсолютная величина числа а|a的绝对值|
+|наименьшее общее кратное|最小公倍数|
+|положительные числа|正数|
+|отрицательные числа|负数|
+|чётные числа|偶数|
+|нечётные числа|奇数|
+|противоположные числа|相反数|
+|обыкновенная(простая)дробь|普通分数|
+|числитель|分子|
+|знаменатель|分母|
+|основное свойство дроби|分数的主要性质|
+|сократить дробь|约分|
+|обший знаменатель|公分母|
+|привести к общему знаменателю|通分|
+|правильная дробь|真分数|
+|неправильная дробь|假分数|
+|смешанное число|带分数|
+|целая часть|整数部分|
+|дробная часть|分数部分|
+|остаток|余数|
+|десятичная дробь|小数分数|
+|десятичные знаки|小数符号|
+|обратное число|倒数|
+|противоположные числа|相反数|
+|период|循环,周期|
+|периодическая дробь|循环分数(小数)|
+|непериодическая дробь|非循环性分数|
+|рациональное число|有理数|
+|иррациональное число|无理数|
+|действительные числа|实数|
+|вещественные числа|实数|
+|прямая|直线|
+|числовая ось|实数直线|
+|числовая прямая|实数直线|
+|начало отсчета|原点|
+|единичный отрезок|单位线段|
+|положительное направление|正方向|
+|отрицательное направление|负方向|
+|отрезок|线段|
+|точка|点|
+|длина|长度|
+|координата|坐标|
+|числовые интервалы|数值区间|
+|интервалы|区间|
+|полуинтервал|半区间|
+|характеристическое свойство|特征属性|
+|свойство коммутативности|交换律|
+|свойства дистрибутивности|分布特性|
+|свойства ассоциативности|关联性特性|
+|разность множеств|差集|
+|множества равны|集合相等|
+|пересечение|交集|
+|объединение|并集|
+|индекс|索引|
+|индексное множество|索引集|
+|дополнение|补集|
+|симметрическая разность|对称差异|
+|универсальное множество|全集 U|
+|истинно|真的|
+|ложно|错的|
+|диаграммы Венна-Эйлера|欧拉韦恩图|
+|доказательство|证明|
+|теорема|定理|
+|компоненты|成分|
+|пропорция|比率|
+|члены пропорции|比例项|
+|крайние члены пропорции|比例极项|
+|средние члены пропорции|比例中项|
+|стандартный вид числа|数字的标准形式|
+|арифметический корень|算术根|
+|неизвестный член пропорции|未知比例项|
+|переменная|变量|
+|выражение с переменной|变量表达式|
+|коэффициент|系数|
+|одночлен|单项式|
+|степень одночлена|单项式的幂|
+|привести подобные члены|合并同类项|
+|многочлен|多项式|
+|степень многочлена|多项式的幂|
+|коэффициент при старшем члене|首项系数|
+|формулы сокращённого умножения|缩写乘法公式|
+|формула Бином Ньютона|牛顿二项式|
+|число сочетаний из n по k|从 n 到 k 的组合数|
+|имеет смысл|有意义|
+|арифметическая  дробь|算术分数|
+|алгебраическая дробь|代数分数|
+|область определения (D) алгебраической дроби|代数分数(D)的定义域|
+|иррациональное выражение|非理性表达|
+|||
+
+
+## 学案
+множество(集合)состоит из чего(元素)=содержить что(4)什么由什么组成
+дано=у меня есть
+число кратно чему(3)整除，例:
+x:y=2 значит икс кратен игреку
+若x:y=2.5 значит икс не кратен игреку不整除
+назовите числа,кратные числу=какие числа кратны числу
+|符号|俄语|意义|
+|:----:|:----:|:----:|
+|[ ]|квадратные скобки|闭区间|
+|( )|круглые скобки|开区间|
+
+## 数学符号
+![](/MathsLanguage/pic/0029.png)
+
+
+## 专有名词
+![](/MathsLanguage/pic/0001.jpg)
+![](/MathsLanguage/pic/0002.jpg)
+![](/MathsLanguage/pic/0003.jpg)
+![](/MathsLanguage/pic/0004.jpg)
+![](/MathsLanguage/pic/0005.jpg)
+![](/MathsLanguage/pic/0006.jpg)
+![](/MathsLanguage/pic/0007.jpg)
+![](/MathsLanguage/pic/0008.jpg)
+![](/MathsLanguage/pic/0009.jpg)
+![](/MathsLanguage/pic/0010.jpg)
+![](/MathsLanguage/pic/0011.jpg)
+![](/MathsLanguage/pic/0012.jpg)
+![](/MathsLanguage/pic/0013.jpg)
+![](/MathsLanguage/pic/0014.jpg)
+![](/MathsLanguage/pic/0015.jpg)
+![](/MathsLanguage/pic/0016.jpg)
+![](/MathsLanguage/pic/0017.jpg)
+![](/MathsLanguage/pic/0018.jpg)
+![](/MathsLanguage/pic/0019.jpg)
+![](/MathsLanguage/pic/0020.jpg)
+![](/MathsLanguage/pic/0021.jpg)
+![](/MathsLanguage/pic/0022.jpg)
+![](/MathsLanguage/pic/0023.jpg)
+![](/MathsLanguage/pic/0024.jpg)
+![](/MathsLanguage/pic/0025.jpg)
+![](/MathsLanguage/pic/0026.jpg)
+![](/MathsLanguage/pic/0027.jpg)
+![](/MathsLanguage/pic/0028.jpg)

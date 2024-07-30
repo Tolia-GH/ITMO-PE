@@ -1,0 +1,1 @@
+DROP TABLE characters, events, locations, movements, relations, status, actions;

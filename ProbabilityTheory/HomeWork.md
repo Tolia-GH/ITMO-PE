@@ -1,3 +1,5 @@
+## [MainPage](../index.md)/[Probability Theory](./README.md)/HomeWork
+
 # Состав домашних заданий
 
 ## Домашнее задание No1 (теория вероятностей) Вариант 24

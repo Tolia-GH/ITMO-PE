@@ -2,16 +2,16 @@
 
 ## 阅读索引
 
-- [x] [实验要求](LabRequests.md)
-- [x] [教材指引](Guide.md)
+- [x] [Labs Guide](LabRequests.md)
+- [x] [TextBook Guide](Guide.md)
 - [x] [Lab5](OPD_Lab_5/Lab5.md)
 - [x] [Lab6](OPD_Lab_6/Lab6.md)
 - [x] [Рубеж](Rubiesh.md)
-- [ ] [Exam](Exam.md)
-- [x] [幻灯片1梳理](OPDpart1.md)
-- [x] [幻灯片2梳理](OPDpart2.md)
-- [ ] [幻灯片3详解](OPDpart3.md)
-- [ ] [幻灯片4详解](OPDpart4.md)
+- [x] [Exam](Exam.md)
+- [x] [Slide 1](OPDpart1.md)
+- [x] [Slide 2](OPDpart2.md)
+- [ ] [Slide 3](OPDpart3.md)
+- [ ] [Slide 4](OPDpart4.md)
 
 <style type="text/css">
     #footer {
@@ -36,7 +36,7 @@
     <a href="https://markdown.com.cn/">markdown</a>, 
     <a href="https://www.latex-project.org/">LaTeX</a>
     <br>
-    Copyright © 2022 | 
+    Copyright © 2020 | 
     <a href="https://tolia-gh.github.io">Tolia</a>
     <br>
     All Rights Reserved.

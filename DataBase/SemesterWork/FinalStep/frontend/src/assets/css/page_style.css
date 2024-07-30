@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+}
+body,html {
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+.header_col {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 40px;
+    text-align: center;
+
+    font-family: Arial, cursive;
+
+    min-width: 240px;
+    margin: 0 0 14px 0;
+    display: block;
+
+    background: #373737;
+}
+
+#fork_me {
+    top: 0;
+    right: 30px;
+    z-index: 10;
+    display: block;
+    position: absolute;
+    padding: 10px 10px 10px 10px;
+    background: #0090ff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    vertical-align: middle;
+    text-decoration: unset;
+
+    color: #fff;
+    font-weight: 700;
+}
+
+#fork_me:hover {
+    background: #077fe3;
+    text-decoration: underline;
+}
+
+h1, h2 {
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+
+    vertical-align: baseline;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: inherit;
+    margin-bottom: 12px;
+}
+
+#web_title {
+    color: #fff;
+    font-size: 52px;
+    font-weight: bolder;
+    text-shadow: #111 0 0 10px
+}
+#web_author {
+    color: #fff;
+    font-size: 36px;
+    font-weight: inherit;
+    background: none;
+    text-shadow: #111 0 0 10px
+}
+
+.form_block {
+    width: 312px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+    font-family: Arial, serif;
+    font-size: 18px;
+    color: #373737;
+
+    border: 10px #373737;
+}
+.form-field {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 12px;
+    background-color: #F6F8FA;
+    border-color: #d0d7de;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+}
+.form-group {
+    margin: 0 auto;
+    text-align: center;
+}
+.form_input {
+    height: 30px;
+    width: 280px;
+    text-align: center;
+    font-size: 18px;
+    border-color: #d0d7de;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+#buttons_set {
+    text-align: center;
+}
+.click_button {
+    width: 137px;
+    height: 36px;
+    border-radius: 4px;
+    border-width: 0;
+    background-color: #0090ff;
+
+    font-size: 18px;
+    color: #fff;
+}
+.click_button:hover {
+    background-color: #077fe3;
+}
+#login {
+    margin-right: 5px;
+}
+#signup {
+    margin-left: 5px;
+}
+#sign_up {
+    width: 286px;
+    height: 36px;
+    border-radius: 4px;
+    border-width: 0;
+    background-color: #0090ff;
+
+    font-size: 18px;
+    color: #fff;
+}
+#sign_up:hover {
+    background-color: #077fe3;
+}
+.X, .R {
+    width: 31px;
+    height: 32px;
+    margin: 12px 0;
+
+    font-size: 16px;
+    color: #373737;
+}
+#submit {
+    width: 286px;
+    height: 36px;
+    border-radius: 4px;
+    border-width: 0;
+    background-color: #0090ff;
+
+    font-size: 18px;
+    color: #fff;
+}
+#submit:hover {
+    background-color: #077fe3;
+}
+.link {
+    text-decoration: unset;
+}
+#back {
+    background-color: #f6f8fa;
+    width: 312px;
+    color: #2a2a2a;
+
+    margin: 12px auto;
+    display: block;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d0d7de;
+
+}
+#back:hover {
+    background-color: #e6e6ea;
+}
+#click_graph {
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #d0d7de;
+    border-style: solid;
+}
+.table_block {
+    width: 312px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+    font-family: Arial, serif;
+    font-size: 18px;
+    color: #373737;
+
+    border: 10px #373737;
+    border-radius: 4px;
+}
+.result_table {
+    display: table;
+    margin: 12px 0;
+    padding: 12px;
+    text-align: center;
+
+    background-color: #F6F8FA;
+    border-color: #d0d7de;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+
+    font-family: Arial cursive;
+    font-size: 18px;
+    font-weight: 200;
+}
+th {
+    font-family: Arial;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 718px) {
+
+}
+
+@media screen and (min-width: 719px) and (max-width: 1109px) {
+
+}
+
+@media screen and (min-width: 1110px) {
+
+}

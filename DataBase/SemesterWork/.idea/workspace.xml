@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="afcc4807-f207-4e36-ad66-530491e6a5f7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/39facc08-932d-4f86-9a8b-f9c82947f8b1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/39facc08-932d-4f86-9a8b-f9c82947f8b1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/39facc08-932d-4f86-9a8b-f9c82947f8b1/storage_v2/_src_/database/studs.ww2LBg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/39facc08-932d-4f86-9a8b-f9c82947f8b1/storage_v2/_src_/database/studs.ww2LBg/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/39facc08-932d-4f86-9a8b-f9c82947f8b1/storage_v2/_src_/database/studs.ww2LBg/schema/smart_home.lU1XlA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/39facc08-932d-4f86-9a8b-f9c82947f8b1/storage_v2/_src_/database/studs.ww2LBg/schema/smart_home.lU1XlA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/39facc08-932d-4f86-9a8b-f9c82947f8b1/storage_v2/_src_/database/studs.ww2LBg/schema/smart_home.lU1XlA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/39facc08-932d-4f86-9a8b-f9c82947f8b1/storage_v2/_src_/database/studs.ww2LBg/schema/smart_home.lU1XlA.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FillTable.sql" beforeDir="false" afterPath="$PROJECT_DIR$/FillTable.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2d5fWvWJuICUC83kDqueCU87mM4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "/Users/2398768715qq.com/Documents/GitHub/ITMO-PE/DataBase/SemesterWork",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.6655173",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "RunConfigurationTargetLRU": [
+      "39facc08-932d-4f86-9a8b-f9c82947f8b1/database/\"studs\"/schema/\"Semester_SmartHome\"",
+      "39facc08-932d-4f86-9a8b-f9c82947f8b1/database/\"studs\"/schema/\"smart_home\""
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Database Script.SetIndex">
+    <configuration name="DropIndex" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/DropIndex.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DropTable" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/DropTables.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DropTrigger" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/DropTrigger.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FillTable" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/FillTable.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="InsertData" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/InsertData.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SetIndex" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/SetIndex.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SetTable" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/SetTable.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SetTrigger" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/SetTrigger.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TruncateTable" type="DatabaseScript">
+      <script-file value="$PROJECT_DIR$/TruncateTable.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="39facc08-932d-4f86-9a8b-f9c82947f8b1" namespace="database/&quot;studs&quot;/schema/&quot;smart_home&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="SemesterWork" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="SemesterWork" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.demo.backend.BackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/FinalStep/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Database Script.TruncateTable" />
+      <item itemvalue="Database Script.SetTable" />
+      <item itemvalue="Database Script.DropTable" />
+      <item itemvalue="Database Script.InsertData" />
+      <item itemvalue="Database Script.FillTable" />
+      <item itemvalue="Database Script.SetIndex" />
+      <item itemvalue="Database Script.SetTrigger" />
+      <item itemvalue="Database Script.DropTrigger" />
+      <item itemvalue="Database Script.DropIndex" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="Spring Boot.BackendApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afcc4807-f207-4e36-ad66-530491e6a5f7" name="Changes" comment="" />
+      <created>1709302894876</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709302894876</updated>
+      <workItem from="1709302896179" duration="6357000" />
+      <workItem from="1709341745529" duration="130000" />
+      <workItem from="1709341896425" duration="262000" />
+      <workItem from="1709342224360" duration="17676000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

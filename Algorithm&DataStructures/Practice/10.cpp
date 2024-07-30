@@ -7,6 +7,8 @@
 
 using namespace std;
 
+int n;
+
 inline void read(int &num) {
     num = 0;
     short flag = 1;
@@ -23,11 +25,8 @@ inline void read(int &num) {
     num *= flag;
 }
 
-int main() {
-    int n;
-    read(n);
+void doProcess() {
     deque<int> left, right;
-
     char request;
     int id;
     loop: for (int i = 0; i < n; ++i) {
@@ -56,6 +55,12 @@ int main() {
             right.pop_front();
         }
     }
+}
+
+int main() {
+    read(n);
+
+    doProcess();
 
     return 0;
 }

@@ -69,7 +69,7 @@ $$\sigma_{\left\langle t\right\rangle}=\sqrt{\frac{1}{N\left(N-1\right)}\sum_{i=
     <a href="https://markdown.com.cn/">markdown</a>, 
     <a href="https://www.latex-project.org/">LaTeX</a>
     <br>
-    Copyright © 2022 | 
+    Copyright © 2020 | 
     <a href="https://tolia-gh.github.io">Tolia</a>
     <br>
     All Rights Reserved.

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/SemesterWork/DropIndex.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/SemesterWork/DropTables.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/SemesterWork/DropTrigger.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/SemesterWork/FillTable.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/SemesterWork/InsertData.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/SemesterWork/SetIndex.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/SemesterWork/SetTable.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/SemesterWork/SetTrigger.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/SemesterWork/TruncateTable.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/SemesterWork/business.sql" dialect="PostgreSQL" />
+  </component>
+</project>
