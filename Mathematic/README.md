@@ -2,11 +2,12 @@
 
 ## 阅读索引
 
-- [x] [Advanced Mathematics](AdvancedMathematics.md)
-- [x] [Linear Algebra](LinearAlgebra.md)
-- [x] [Типовой расчет](TypeWork.md)
-- [x] [Расчетно-графическая работа 1](GraphicWork1/GraphicWork.md)
-- [x] [Расчетно-графическая работа 2](GraphicWork2/GraphicWork.md)
+- [x] [Advanced Mathematics](./AdvancedMathematics.md)
+- [x] [Linear Algebra](./LinearAlgebra.md)
+- [x] [Типовой расчет](./TypeWork.md)
+- [x] [Расчетно-графическая работа 1](./GraphicWork1.md)
+- [x] [Расчетно-графическая работа 2](./GraphicWork2.md)
+- [x] [Расчетно-графическая работа 3](./GraphicWork3.ipynb)
 - [x] [HomeWork](HomeWork/Task.md)
 - [x] [Test](Test.md)
 - [x] [Exam](Exam.md)
