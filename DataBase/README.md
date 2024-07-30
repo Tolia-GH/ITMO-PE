@@ -21,7 +21,7 @@ Labs
 - [x] [Lab 3](./Labs/Lab3/Lab3.md)
 - [x] [Lab 4](./Labs/Lab4/Lab4.md)
 
-- [x] [SemesterWork]()
+- [x] [SemesterWork (link to ITMO-Labs)](https://github.com/Tolia-GH/ITMO-Labs/tree/main/DataBase/SemesterWork)
 
 
 
