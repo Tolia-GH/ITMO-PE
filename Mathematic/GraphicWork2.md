@@ -10,7 +10,7 @@
   </script>
 </head>
 
-## [MainPage](../../index.md)/[Mathematics](../README.md)/Graphic Work
+## [MainPage](../index.md)/[Mathematics](./README.md)/Graphic Work
 
 Вариант 3
 
