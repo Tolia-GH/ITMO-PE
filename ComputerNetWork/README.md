@@ -4,6 +4,7 @@
 
 - [ ] [Lecture](Lecture.md)
 - [ ] [HomeWork](HomeWork.md)
+- [ ] [DZ](DZ.md)
 - [ ] [Labs](Labs.md)
 
 
