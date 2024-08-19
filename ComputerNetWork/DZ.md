@@ -1,4 +1,4 @@
-<head>
+<!-- <head>
   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -8,7 +8,7 @@
       }
     });
   </script>
-</head>
+</head> -->
 
 ## [MainPage](../../../index.md)/[DataBase](../../README.md)/Lab 1
 
@@ -59,19 +59,19 @@
 | О      | СЕ  | Ю      | DE  | о      | ЕЕ  | ю      | FE  |        |     |
 | П      | CF  | Я      | DF  | п      | EF  | я      | FF  |
 
-исходное сообщение: 
+Исходное сообщение: 
 ```text
 Чжоу Х.
 ```
-в шестнадцатеричном коде: 
+В шестнадцатеричном коде: 
 ```
 D7 Е6 ЕЕ F3 20 D5 2Е
 ```
-в двоичном коде: 
+В двоичном коде: 
 ```
 1101 0111 1110 0110 1110 1110 1111 0011 0010 0000 1101 0101 0011 0000
 ```
-длина сообщения: 7 байта (56 бит)
+Длина сообщения: 7 байта (56 бит)
 
 Пропускная способность канала связи (C): 1Гбит/c
 
