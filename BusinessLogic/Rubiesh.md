@@ -8,12 +8,6 @@
   - [Билет 2](#билет-2)
       - [1. Spring Boot зачем нужен, как применяется, отличие от Spring обычного  为什么需要Spring Boot，如何使用，与普通Spring的区别](#1-spring-boot-зачем-нужен-как-применяется-отличие-от-spring-обычного--为什么需要spring-boot如何使用与普通spring的区别)
       - [2. Программное и декларативное выполнение транзакций в spring  Spring 中事务的编程式和声明式执行](#2-программное-и-декларативное-выполнение-транзакций-в-spring--spring-中事务的编程式和声明式执行)
-    - [Spring 中事务的编程式和声明式执行](#spring-中事务的编程式和声明式执行)
-      - [1. 编程式事务管理（Programmatic Transaction Management）](#1-编程式事务管理programmatic-transaction-management)
-        - [编程式事务示例：](#编程式事务示例)
-      - [2. 声明式事务管理（Declarative Transaction Management）](#2-声明式事务管理declarative-transaction-management)
-        - [声明式事务示例：](#声明式事务示例)
-      - [3. 编程式与声明式事务管理的对比](#3-编程式与声明式事务管理的对比)
       - [3. Нарисовать BPMN 2.0 диаграмму: 1 ноября и 1 апреля должны отчислять студентов у которых хотя бы одна Академ. задолженность. 画一张 BPMN 2.0 图：11 月 1 日和 4 月 1 日，至少有一项学术债务的学生必须被开除。](#3-нарисовать-bpmn-20-диаграмму-1-ноября-и-1-апреля-должны-отчислять-студентов-у-которых-хотя-бы-одна-академ-задолженность-画一张-bpmn-20-图11-月-1-日和-4-月-1-日至少有一项学术债务的学生必须被开除)
   - [Билет 3](#билет-3)
       - [1. BPMN и моделирование бизнес процессов.BPMN 和业务流程建模。](#1-bpmn-и-моделирование-бизнес-процессовbpmn-和业务流程建模)
@@ -25,7 +19,7 @@
       - [3. Spring MVC rest. Штука, которая переводит деньги, и проверяет не превышен ли лимит переводов за месяц. Spring MVC 的 REST 接口：一个用于转账的功能，并检查当月的转账额度是否已超限。](#3-spring-mvc-rest-штука-которая-переводит-деньги-и-проверяет-не-превышен-ли-лимит-переводов-за-месяц-spring-mvc-的-rest-接口一个用于转账的功能并检查当月的转账额度是否已超限)
   - [Билет 5](#билет-5)
       - [1. Основные концепции использующиеся в разработке бизнес логики. 开发业务逻辑时使用的基本概念。](#1-основные-концепции-использующиеся-в-разработке-бизнес-логики-开发业务逻辑时使用的基本概念)
-      - [2. Выполнение. Распределенные транзакции в Spring и Jakarta EE. 执行。 Spring 和 Jakarta EE 中的分布式事务。](#2-выполнение-распределенные-транзакции-в-spring-и-jakarta-ee-执行-spring-和-jakarta-ee-中的分布式事务)
+      - [2. Выполнение. Распределенные транзакции в Spring и Jakarta EE. 实现。Spring 和 Jakarta EE 中的分布式事务。](#2-выполнение-распределенные-транзакции-в-spring-и-jakarta-ee-实现spring-和-jakarta-ee-中的分布式事务)
       - [3. BPMN для управления ядерным реактором. Исключение несанкционированной ядерной реакции с помощью отрицательной обратной связи. (BPMN для ядерного реактора. Должен реализовывать аварийную остановку) 用于核反应堆控制的 BPMN。使用负反馈消除未经授权的核反应。 （核反应堆BPMN。应实施紧急停堆）](#3-bpmn-для-управления-ядерным-реактором-исключение-несанкционированной-ядерной-реакции-с-помощью-отрицательной-обратной-связи-bpmn-для-ядерного-реактора-должен-реализовывать-аварийную-остановку-用于核反应堆控制的-bpmn使用负反馈消除未经授权的核反应-核反应堆bpmn应实施紧急停堆)
   - [Билет 6](#билет-6)
       - [1. Описание bpmn 2.0. принципы построения, основные элементы.bpmn 2.0 的说明。构建原则、基本要素。](#1-описание-bpmn-20-принципы-построения-основные-элементыbpmn-20-的说明构建原则基本要素)
@@ -135,6 +129,8 @@
 
 #### 3. Диаграмма BPMN 2.0 для бизнес-процесса управления автомашина по продаже кофе (кофе-машина). Автомат должен уметь приготавливать несколько видов кофе, добавлять в кофе сливки и сахар и принимать к оплате наличные и карты и выдавать сдачу.<br>管理咖啡自动售货机（咖啡机）的业务流程的 BPMN 2.0 图。该机器必须能够准备多种类型的咖啡、向咖啡中添加奶油和糖、接受现金和银行卡付款以及找零。
 
+![](./pic/Rubiesh1-1.png)
+
 [https://drive.google.com/file/d/1FcBR5zZ-QivXPxe4VO8fiK0eQmv7iv9E/view?usD=sharing](https://drive.google.com/file/d/1FcBR5zZ-QivXPxe4VO8fiK0eOmy7iy9E/view?usp=sharing)
 можете исправлять если что, я хз, как это адекватно сделать
 
@@ -216,8 +212,9 @@
 
 在 Spring 框架中，事务管理是一个非常重要的功能，用于确保数据的一致性和完整性。Spring 提供了两种处理事务的方式：编程式事务管理（Programmatic Transaction Management） 和 声明式事务管理（Declarative Transaction Management）。它们在使用场景和实现方式上有着显著的区别。
 
-1. 编程式事务管理（Programmatic Transaction Management）
-编程式事务管理要求开发者手动管理事务的开始、提交和回滚。这种方式虽然提供了对事务的细粒度控制，但也增加了代码的复杂性，因为开发者必须显式地处理每个事务的生命周期。
+1. **编程式事务管理（Programmatic Transaction Management）**
+   
+   编程式事务管理要求开发者手动管理事务的开始、提交和回滚。这种方式虽然提供了对事务的细粒度控制，但也增加了代码的复杂性，因为开发者必须显式地处理每个事务的生命周期。
 
    - 优点: 灵活性高，适合复杂的事务场景，可以对事务的每个细节进行控制。
    - 缺点: 代码冗长，难以维护。开发者必须确保在出现异常时正确处理事务的回滚。
@@ -249,7 +246,7 @@
     ```
    在这个例子中，开发者手动控制事务的开始、提交和回滚。PlatformTransactionManager 提供了对事务的直接控制，transactionManager.getTransaction() 用于开始事务，transactionManager.commit() 提交事务，而 transactionManager.rollback() 在出现异常时回滚事务。
 
-2. 声明式事务管理（Declarative Transaction Management）
+2. **声明式事务管理（Declarative Transaction Management）**
 
    声明式事务管理不需要显式地在代码中管理事务，而是通过注解或 XML 配置来定义事务的边界。Spring AOP（面向切面编程）会自动在方法执行前后处理事务的开启、提交和回滚。开发者只需要在适当的地方使用注解，框架会自动管理事务。
 
@@ -270,67 +267,7 @@
 
     在这个例子中，@Transactional 注解用于声明该方法是事务性的。Spring 在方法执行前会自动开启事务，方法执行后根据情况自动提交或回滚事务。这大大简化了事务管理的工作，使得代码更加简洁。
 
-### Spring 中事务的编程式和声明式执行
-
-在 Spring 框架中，事务管理是一个非常重要的功能，用于确保数据的一致性和完整性。Spring 提供了两种处理事务的方式：**编程式事务管理（Programmatic Transaction Management）** 和 **声明式事务管理（Declarative Transaction Management）**。它们在使用场景和实现方式上有着显著的区别。
-
-#### 1. 编程式事务管理（Programmatic Transaction Management）
-
-编程式事务管理要求开发者手动管理事务的开始、提交和回滚。这种方式虽然提供了对事务的细粒度控制，但也增加了代码的复杂性，因为开发者必须显式地处理每个事务的生命周期。
-
-- **优点**: 灵活性高，适合复杂的事务场景，可以对事务的每个细节进行控制。
-- **缺点**: 代码冗长，难以维护。开发者必须确保在出现异常时正确处理事务的回滚。
-
-##### 编程式事务示例：
-```java
-public class MyService {
-
-    @Autowired
-    private PlatformTransactionManager transactionManager;
-
-    public void performOperation() {
-        // 获取事务定义
-        DefaultTransactionDefinition def = new DefaultTransactionDefinition();
-        TransactionStatus status = transactionManager.getTransaction(def);
-
-        try {
-            // 业务逻辑
-            someDatabaseOperation();
-
-            // 提交事务
-            transactionManager.commit(status);
-        } catch (Exception e) {
-            // 事务回滚
-            transactionManager.rollback(status);
-            throw e;
-        }
-    }
-}
-```
-在这个例子中，开发者手动控制事务的开始、提交和回滚。`PlatformTransactionManager` 提供了对事务的直接控制，`transactionManager.getTransaction()` 用于开始事务，`transactionManager.commit()` 提交事务，而 `transactionManager.rollback()` 在出现异常时回滚事务。
-
-#### 2. 声明式事务管理（Declarative Transaction Management）
-
-声明式事务管理不需要显式地在代码中管理事务，而是通过注解或 XML 配置来定义事务的边界。Spring AOP（面向切面编程）会自动在方法执行前后处理事务的开启、提交和回滚。开发者只需要在适当的地方使用注解，框架会自动管理事务。
-
-- **优点**: 简洁、易于维护，减少了开发者手动管理事务的负担，减少了代码的复杂度。
-- **缺点**: 灵活性不如编程式事务管理，但对于大多数场景已经足够。
-
-##### 声明式事务示例：
-```java
-@Service
-public class MyService {
-
-    @Transactional
-    public void performOperation() {
-        // 业务逻辑
-        someDatabaseOperation();
-    }
-}
-```
-在这个例子中，`@Transactional` 注解用于声明该方法是事务性的。Spring 在方法执行前会自动开启事务，方法执行后根据情况自动提交或回滚事务。这大大简化了事务管理的工作，使得代码更加简洁。
-
-#### 3. 编程式与声明式事务管理的对比
+3. 编程式与声明式事务管理的对比
 
 | 对比项                 | 编程式事务管理                         | 声明式事务管理                      |
 |------------------------|----------------------------------------|------------------------------------|
@@ -348,27 +285,442 @@ public class MyService {
 
 #### 3. Нарисовать BPMN 2.0 диаграмму: 1 ноября и 1 апреля должны отчислять студентов у которых хотя бы одна Академ. задолженность. <br>画一张 BPMN 2.0 图：11 月 1 日和 4 月 1 日，至少有一项学术债务的学生必须被开除。
 
+在 BPMN 2.0 过程中，我们可以使用“事件”、“任务”、“网关”等元素来表示逻辑流程。针对你描述的情况，以下是该流程的简单解释，之后可以用图形化的工具去画出完整的 BPMN 2.0 图：
+
+1. **开始事件**：流程从一个开始事件启动，通常用圆圈表示。
+2. **检查日期**：使用一个任务节点来检查当前日期。
+3. **分支网关**：根据日期，使用条件判断网关来分支。这里会有两个主要分支：
+   - **11 月 1 日**：如果日期是 11 月 1 日，继续流程。
+   - **4 月 1 日**：如果日期是 4 月 1 日，继续流程。
+   - **其他日期**：结束流程，因为只有在特定日期才会进行下一步操作。
+4. **检查学术债务**：在正确的日期范围内，执行另一个任务来检查学生是否有学术债务。
+5. **分支网关**：再次使用网关，判断是否至少有一项学术债务：
+   - **有债务**：如果学生有学术债务，进入下一个步骤。
+   - **无债务**：如果没有债务，结束流程。
+6. **开除学生**：如果学生在上述条件下符合标准，执行开除任务。
+7. **结束事件**：整个流程结束，用一个圆圈带实线表示。
+
 ## Билет 3
 
 #### 1. BPMN и моделирование бизнес процессов.<br>BPMN 和业务流程建模。
 
+1. 什么是 BPMN
+   
+   BPMN（Business Process Model and Notation，业务流程模型与标注）是一种用于业务流程建模的标准化图形符号方法。它帮助企业以可视化的方式描述、分析和优化业务流程，并使业务分析师、开发人员和管理人员能够通过统一的语言理解和交流复杂的业务流程。
+
+2. BPMN 的核心组件
+   
+   BPMN 包含以下几类主要元素：
+
+   事件（Event）：表示流程中的某一时刻的状态变化。分为开始事件、结束事件和中间事件。
+   活动（Activity）：代表流程中的任务或操作，可以是简单任务或复合任务。
+   网关（Gateway）：用于控制流程的分支、合并或决策，常见的有并行网关和排他网关。
+   顺序流（Sequence Flow）：表示活动之间的执行顺序。
+   泳道（Swimlane）：用于划分不同角色或部门的责任。
+
+   这些元素共同构建了一个完整的业务流程模型，帮助理解业务中的每个操作步骤及其交互关系。
+
+   ![](./pic/Rubiesh3-1.png)
+
+3. BPMN 的作用
+   
+   BPMN 的主要功能包括：
+
+   统一的业务流程表示：通过标准化的符号和规则，BPMN 帮助业务人员和技术团队使用相同的语言交流。
+   可视化流程优化：通过流程建模，可以直观识别瓶颈、冗余流程，从而进行优化。
+   支持流程自动化：BPMN 模型可用于业务流程管理系统（BPMS）实现自动化执行。
+4. 业务流程建模
+   
+   业务流程建模是描述企业内部业务操作如何运作的技术，通过对任务、角色、数据流的详细描述，帮助组织识别潜在的效率问题和改进机会。BPMN 作为业务流程建模的工具，可以帮助企业更清晰地理解和分析复杂的工作流。
+
 #### 2. Политика безопасности в корпоративных приложения, зачем, за что отвечают, особенности реализации на уровне Бизнес-логики<br>企业应用程序中的安全策略、原因、它们负责什么、业务逻辑级别的实现功能
 
+1. Зачем нужны политики безопасности в корпоративных приложениях?  
+   为什么企业应用程序需要安全策略？
+
+   Политики безопасности в корпоративных приложениях необходимы для защиты данных, систем и ресурсов от различных угроз, таких как несанкционированный доступ, утечки данных, внутренние угрозы и кибератаки. Основные причины:  
+   企业应用程序中的安全策略用于保护数据、系统和资源，防止未经授权的访问、数据泄露、内部威胁以及网络攻击等风险。主要原因包括：
+
+   **Защита конфиденциальных данны**х: Корпоративные приложения часто обрабатывают конфиденциальную информацию, такую как персональные данные клиентов, финансовые отчеты и коммерческую тайну.  
+   保护敏感数据: 企业应用程序通常处理敏感信息，例如客户的个人数据、财务报告和商业机密。安全策略可防止未经授权的访问。
+
+   Соответствие нормативным требованиям: Различные отрасли обязаны соблюдать законы и нормативы (GDPR, HIPAA, SOX и т. д.).  
+   符合法律法规要求: 各行业需要遵守法律法规（如GDPR、HIPAA、SOX等），这些法规要求实施严格的安全措施。
+
+   Защита от внешних атак: Приложения могут быть объектами кибератак, таких как взломы, DDoS-атаки и фишинговые атаки.  
+   防范外部攻击: 应用程序可能成为网络攻击的目标，如入侵、DDoS攻击和钓鱼攻击。安全策略可将这些风险降到最低。
+
+   Защита от внутренних угроз: Политики безопасности помогают предотвратить случайные или умышленные действия сотрудников, которые могут привести к утечке данных.  
+   防止内部威胁: 安全策略有助于防止员工的意外或恶意行为，这些行为可能导致数据泄露或系统故障。
+
+2. За что отвечают политики безопасности?  
+   安全策略的职责
+
+   - Аутентификация: Удостоверение личности пользователя (например, через пароли, двухфакторную аутентификацию, биометрические данные).  
+     身份验证: 验证用户身份（例如通过密码、双因素认证或生物特征）。这可以防止未经授权的人员访问系统。
+
+   - Авторизация: Определение прав доступа пользователя к определенным ресурсам и действиям в системе.  
+     授权: 确定用户是否有权访问特定资源或执行特定操作。例如，人力资源人员可以访问员工的个人数据，而其他员工则不能。
+
+   - Журналирование и мониторинг: Отслеживание действий пользователей в системе для выявления подозрительных действий.  
+     日志记录和监控: 记录用户在系统中的操作，以便发现可疑行为或安全事件。
+
+   - Шифрование данных: Обеспечение защиты данных как в процессе передачи, так и при хранении, используя криптографические методы.  
+     数据加密: 在传输和存储过程中使用加密技术保护数据。
+
+   - Управление уязвимостями: Обнаружение и устранение уязвимостей в приложениях для предотвращения атак.  
+     漏洞管理: 发现并修复应用程序中的漏洞，以防止攻击。
+
+3. Особенности реализации на уровне бизнес-логики  
+   业务逻辑级别的安全实现特点
+
+   На уровне бизнес-логики реализуются многие аспекты политики безопасности, особенно в крупных корпоративных системах. Бизнес-логика определяет, какие данные и функции доступны конкретным пользователям, а также каким образом должны быть обработаны данные с учетом требований безопасности.  
+   在企业应用程序的业务逻辑层，很多安全措施都会被具体实现，尤其是大型企业系统。业务逻辑层负责确定哪些用户可以访问哪些数据和功能，并确保数据在处理过程中符合安全要求。
+
+   Основные аспекты реализации безопасности на уровне бизнес-логики:  
+   业务逻辑层安全实现的主要方面：
+
+   - Ролевое управление доступом (RBAC): Права доступа распределяются на основе ролей, присвоенных пользователям (например, администратор, менеджер, обычный пользователь).  
+     基于角色的访问控制 (RBAC): 权限基于用户的角色进行分配（如管理员、经理、普通用户）。业务逻辑通过检查用户角色来确定哪些操作允许执行。
+
+     Пример: Бизнес-логика проверяет, имеет ли пользователь с ролью "Менеджер" доступ к изменению статуса заказов, а другие роли — нет.  
+     示例: 业务逻辑会检查只有角色为“经理”的用户才能更改订单状态，其他角色的用户则不能。
+
+   - Контроль на уровне атрибутов (ABAC): Доступ управляется на основе атрибутов (например, время, местоположение, должность).  
+     基于属性的访问控制 (ABAC - Attribute-Based Access Control)：访问权限根据用户的属性来决定，如时间、地点或职位等。业务逻辑可以根据这些属性动态调整访问权限。
+   - Разделение данных по уровню чувствительности: Бизнес-логика должна учитывать, какие данные считаются конфиденциальными, и обеспечивать соответствующие меры их защиты.  
+     数据敏感性级别：业务逻辑应对不同敏感级别的数据采取不同的安全措施。
+
+   - Логирование и аудиты: Важная функция на уровне бизнес-логики — логирование всех операций, особенно связанных с критичными изменениями в системе.  
+     日志记录和审核功能 (Logging and Auditing)：业务逻辑会记录用户操作，特别是涉及敏感信息的操作，以便后续审计。
+     
+   - Верификация данных на входе: Бизнес-логика должна обрабатывать валидацию данных для защиты от инъекций SQL, XSS и других атак.  
+     输入验证 (Input Validation)：业务逻辑需要验证输入数据，以防止SQL注入、XSS攻击等。 
+      
+   - Ограничение по времени выполнения задач: Некоторые действия могут быть разрешены только в определённое время (например, рабочие часы).  
+     任务执行时间限制：某些操作只能在特定时间内进行，业务逻辑可用来限制这些行为。
+
+4. Примеры механизмов безопасности в бизнес-логике  
+   业务逻辑层的安全机制实例
+
+- Квоты и лимиты: Лимиты на количество операций, которые может выполнять пользователь за определённый период.  
+  配额和限额 (Quotas and Limits)：限制用户在一定时间段内可以执行的操作数量。业务逻辑可以设置每日提现限额等。
+- Восстановление после ошибок: Если система сталкивается с ошибкой, бизнес-логика может предусмотреть меры для безопасного завершения операций.  
+  故障恢复 (Error Recovery)：当系统遇到安全问题时，业务逻辑可以确保安全终止操作，并通知相关人员。
+
+- Многоуровневая проверка прав доступа: Для особо чувствительных операций может требоваться утверждение несколькими уровнями.  
+  多级权限检查 (Multi-level Authorization)：对于某些高风险操作，业务逻辑可以要求多重验证。
+
 #### 3. Написать класс, реализующий транзакцию, которая получает Почку, Seller и Buyer и совершает акт купли-продажи. Причем продавец не может суммарно продать, а покупатель купить более 2 почек.<br>编写一个类，实现一个交易，该交易接收一个Kidney（肾）、Seller（卖家）和Buyer（买家），并执行买卖行为。卖家不能累计出售超过2个肾，买家也不能购买超过2个肾。
+
+```java
+class KidneyService {
+    @Autowired
+    private KidneyRepository kidneyRepo;
+    @Autowired
+    private SellerRepository sellerRepo;
+    @Autowired
+    private BuyerRepository buyerRepo;
+    @Transactional
+    public void kidneyTrading(Kidney kidney, Seller s, Buyer b) {
+        Seller seller = sellerRepo.findSellerByld(s.getld());
+        Buyer buyer - buyerRepo.findSellerByld(b.getld());
+        
+        List<Kidney> sellerSoldKidneys - seller.getSoldKidneys();
+        List<Kidney> buyerBoughtKidneys - buyer.getBoughtKidneys();
+        
+        if (sellerSoldKidneys >= 2 || buyerBoughtKidneys >- 2)
+            throw new KidneyLimitExceededException("Fuck trading"); //extends RuntimeException
+        sellerSoldKidneys.add(kidney);
+        buyerBoughtKidneys.add(kidney);
+        
+        kidney.setOwner(buyer);
+        // He обязательно
+        
+        kidneyRepo.save(kidney);
+        sellerRepo.save(seller);
+        buyerRepo.save(buyer);
+    }
+}
+```
+
+P.S. Я нихуя не понял, что хотят, можно реализовать еще 1000 разными способами
+в зависимости от того, что Цопа блядь имеет в виду  
+附：我他妈的不明白他们想要什么，你可以用 1000 多种不同的方式来实现它，这取决于 Tsopa 的想法
 
 ## Билет 4
 
 #### 1. BPMN
 
+1. 什么是 BPMN
+   
+   BPMN（Business Process Model and Notation，业务流程模型与标注）是一种用于业务流程建模的标准化图形符号方法。它帮助企业以可视化的方式描述、分析和优化业务流程，并使业务分析师、开发人员和管理人员能够通过统一的语言理解和交流复杂的业务流程。
+
+2. BPMN 的核心组件
+   
+   BPMN 包含以下几类主要元素：
+
+   事件（Event）：表示流程中的某一时刻的状态变化。分为开始事件、结束事件和中间事件。
+   活动（Activity）：代表流程中的任务或操作，可以是简单任务或复合任务。
+   网关（Gateway）：用于控制流程的分支、合并或决策，常见的有并行网关和排他网关。
+   顺序流（Sequence Flow）：表示活动之间的执行顺序。
+   泳道（Swimlane）：用于划分不同角色或部门的责任。
+
+   这些元素共同构建了一个完整的业务流程模型，帮助理解业务中的每个操作步骤及其交互关系。
+
+3. BPMN 的作用
+   
+   BPMN 的主要功能包括：
+
+   统一的业务流程表示：通过标准化的符号和规则，BPMN 帮助业务人员和技术团队使用相同的语言交流。
+   可视化流程优化：通过流程建模，可以直观识别瓶颈、冗余流程，从而进行优化。
+   支持流程自动化：BPMN 模型可用于业务流程管理系统（BPMS）实现自动化执行。
+4. 业务流程建模
+   
+   业务流程建模是描述企业内部业务操作如何运作的技术，通过对任务、角色、数据流的详细描述，帮助组织识别潜在的效率问题和改进机会。BPMN 作为业务流程建模的工具，可以帮助企业更清晰地理解和分析复杂的工作流。
+
 #### 2. Spring security (роли и т.д.)
 
+Spring Security 是一个强大的安全框架，用于为 Spring 应用程序提供身份验证、授权和其他安全相关功能。
+
+1. Что такое роли и зачем они нужны?  
+   什么是角色？为什么需要角色？
+
+   Роли – это абстракция прав доступа, которая определяет, какие действия может выполнять пользователь в системе. Роли обычно основываются на должностных обязанностях пользователей, например, "администратор", "пользователь", "менеджер".  
+   在安全系统中，角色是对用户权限的抽象，它定义了用户可以在系统中执行哪些操作。角色通常是根据用户的职能或职责划分的（如“管理员”、“用户”、“经理”）。
+
+   Зачем нужны роли?  
+   为什么需要角色？
+
+   - Упрощение управления правами: Вместо того чтобы задавать права для каждого пользователя, можно назначить права ролям, а затем присваивать роли пользователям.  
+     简化权限管理：而不是为每个用户单独定义权限，系统通过将权限赋予角色，然后将角色赋予用户来管理权限。
+
+   - Увеличение безопасности: С помощью ролей администраторы могут четко определять, какие пользователи могут получить доступ к определенным ресурсам.  
+     安全性增强：通过角色，管理员可以清晰定义系统中哪些用户可以访问哪些资源。
+
+2. Как управлять ролями в Spring Security?  
+   如何在 Spring Security 中管理角色？
+
+   在 Spring Security 中，角色管理通过 GrantedAuthority 和 Role 进行。Spring Security 将角色视为权限的一部分，每个角色通常以 ROLE_ 开头。
+
+   主要概念：Основные концепции:
+
+   - GrantedAuthority (предоставленные права): Это интерфейс, который представляет права пользователя в системе. Роли являются конкретной реализацией этих прав.  
+     GrantedAuthority（授权权限）：这是 Spring Security 中的一个接口，它表示某个用户在系统中的权限。角色是 GrantedAuthority 的一种具体实现。
+
+   - Role (роль): Это набор прав, назначаемых пользователю в системе.  
+     Role（角色）：角色是在系统中分配给用户的权限集。
+   
+   使用注解管理角色 Управление ролями с аннотациями
+
+   Spring Security 提供了几种注解来简化角色管理，常见的有：
+
+   `@Secured`：指定用户必须具备某些角色才能访问特定方法。
+
+   ```java
+   @Secured("ROLE_ADMIN")
+   public String adminOnlyMethod() {
+       // 只有具有 ROLE_ADMIN 角色的用户才能访问此方法
+       // Только пользователи с ролью ROLE_ADMIN могут получить доступ к этому методу
+   }
+   ```
+
+   `@PreAuthorize`：允许基于表达式的权限控制，可以更加灵活。
+
+   ```java
+   @PreAuthorize("hasRole('ROLE_USER')")
+   public String userOnlyMethod() {
+       // 具有 ROLE_USER 角色的用户可以访问
+       // Доступ только для пользователей с ролью ROLE_USER
+   }
+
+   ```
+   
+   `@PostAuthorize`：在方法执行后检查权限。
+
+   ```
+   @PostAuthorize("returnObject.owner == authentication.name")
+   public String ownerOnlyMethod() {
+       // 只有方法返回的对象与当前用户匹配时，才允许访问
+       // Доступ разрешен, если возвращаемый объект принадлежит текущему пользователю
+   }
+   ```
+
+3. Как настроить роли и права?  
+   如何配置角色和权限？
+
+   - 基于内存的角色配置 Настройка ролей в памяти
+
+     ```java
+     @Configuration
+     public class SecurityConfig extends WebSecurityConfigurerAdapter {
+         @Override
+         protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+             auth.inMemoryAuthentication()
+                 .withUser("user").password("{noop}password").roles("USER")
+                 .and()
+                 .withUser("admin").password("{noop}admin").roles("ADMIN");
+         }
+     }
+     ```
+
+   - Управление ролями на основе базы данных  
+     基于数据库的角色管理
+
+     ```java
+     @Service
+     public class MyUserDetailsService implements UserDetailsService {
+
+         @Autowired
+         private UserRepository userRepository;
+
+         @Override
+         public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+             User user = userRepository.findByUsername(username);
+             if (user == null) {
+                 throw new UsernameNotFoundException("User not found");
+             }
+
+             return new org.springframework.security.core.userdetails.User(
+                 user.getUsername(),
+                 user.getPassword(),
+                 mapRolesToAuthorities(user.getRoles())
+             );
+         }
+
+         private Collection<? extends GrantedAuthority> mapRolesToAuthorities(Collection<Role> roles) {
+             return roles.stream()
+                         .map(role -> new SimpleGrantedAuthority(role.getName()))
+                         .collect(Collectors.toList());
+         }
+     }
+     ```
+
+     В этом коде мы загружаем пользователя из базы данных и преобразуем роли в объекты GrantedAuthority, которые понятны Spring Security.  
+     在此代码中，我们从数据库中获取用户信息，并将用户角色映射为 Spring Security 可识别的 GrantedAuthority。
+
+4. Динамические роли и права
+
+   有时需要根据业务逻辑动态分配权限。在这种情况下，Spring Security 允许基于业务需求动态定义角色和权限。
+
+   Права на основе бизнес-логики: Хранение прав в базе данных позволяет гибко изменять доступ к ресурсам в зависимости от текущих потребностей.
+   基于业务逻辑的权限：通过在数据库或外部系统中存储用户权限，可以在运行时动态调整用户的访问级别。
+
 #### 3. Spring MVC rest. Штука, которая переводит деньги, и проверяет не превышен ли лимит переводов за месяц. <br>Spring MVC 的 REST 接口：一个用于转账的功能，并检查当月的转账额度是否已超限。
+
+```java
+@RestController
+public class Moneycontroller {
+    final UserRepository userRepository;
+    
+    @Autowired
+    public Moneycontroller(UserRepository UserRepository) {
+        this.userRepository = UserRepository;
+    }
+    
+    @PostMapping("/transfer")
+    @Transactional
+    public void transferMoney(@RequestParam long from, @RequestParam long to, @RequestParam long amount) {
+        User sender = userRepository.getByld(from);
+        User receiver = userRepository.getByld(to);
+        
+        if (sender.getTransferLimit() < sender.calculateMonthlyTransferredAmount() + amount) {
+            throw new TransferLimitExceededException();
+        }
+        
+        if (sender.getBalance() < amount) {
+            throw new NotEnoughMoneyException();
+        }
+        
+        sender.setBalance(sender.getBalance() - amount);
+        receiver.setBalance(receiver.getBalance() + amount);
+    }
+}
+```
 
 ## Билет 5
 
 #### 1. Основные концепции использующиеся в разработке бизнес логики. <br>开发业务逻辑时使用的基本概念。
 
-#### 2. Выполнение. Распределенные транзакции в Spring и Jakarta EE. <br>执行。 Spring 和 Jakarta EE 中的分布式事务。
+1. 业务逻辑（Business Logic）：业务逻辑是指应用程序中实现业务规则和流程的部分。它包含了特定于业务的逻辑，用于处理数据和执行特定的任务。
+2. 服务层（Service Layer）：服务层是业务逻辑的主要部分，负责处理业务操作并协调不同的数据访问对象（DAO）
+3. 数据访问对象（DAO）：数据访问对象（DAO）是用于与数据库交互的模式。DAO 提供了与持久层的接口，隐藏了底层数据库的复杂性。
+4. 模型（Model）：模型代表业务实体，通常对应于数据库中的表。模型包含了与实体相关的数据和行为。
+5. 控制器（Controller）：控制器负责处理用户输入并调用相应的服务层方法。
+6. 事务管理（Transaction Management）：事务管理确保在业务操作中数据的一致性和完整性。它处理数据库操作的提交和回滚，以防止部分操作导致数据不一致。
+7. 验证（Validation）：验证是确保输入数据符合业务规则的过程。可以在控制器或服务层进行数据验证。
+8. 安全性（Security）：安全性是保护业务逻辑和数据的关键部分。使用如 Spring Security 等框架来管理用户认证和授权。
+9. 事件驱动架构（Event-Driven Architecture）：事件驱动架构通过事件的发布和订阅来促进不同模块之间的解耦。这种方法允许应用程序对特定事件作出反应。
+10. 状态机（State Machine）：状态机用于建模复杂的业务流程，允许系统在不同状态之间转换。它适用于需要跟踪状态变化的场景。
+
+#### 2. Выполнение. Распределенные транзакции в Spring и Jakarta EE. <br>实现。Spring 和 Jakarta EE 中的分布式事务。
+
+1. 分布式事务的概念
+   
+   分布式事务是指涉及多个资源（如数据库、消息队列等）的事务。
+
+   在分布式环境中，需要确保所有参与者的操作要么全部成功，要么全部失败，以保持数据一致性。
+
+2. XA 协议
+   
+   XA 协议是处理分布式事务的标准，它提供了一种两阶段提交协议（2PC）。
+
+   - 第一阶段：准备阶段，所有参与者都准备提交，但不执行。
+   - 第二阶段：提交阶段，协调者决定是否提交所有参与者的操作。
+
+3. Spring 中的分布式事务
+   Spring提供灵活的事务管理，支持声明式和编程式事务，能够与多种事务管理器（如JTA、Hibernate等）集成。
+   在 Spring 中，可以使用 Bitronix 或 Atomikos 等事务管理器来支持分布式事务。
+
+   ```java
+   @Configuration
+   @EnableTransactionManagement
+   @EnableJpaRepositories(basePackages = "com.blps.lab1.databaseJPA")
+   public class TransactionManagementConfig {
+
+       @Bean(name = "bitronixTransactionManager")
+       public BitronixTransactionManager bitronixTransactionManager() throws Throwable {
+           BitronixTransactionManager transactionManager = TransactionManagerServices.getTransactionManager();
+           transactionManager.setTransactionTimeout(10000);// 设置超时时间
+           return transactionManager;
+       }
+
+       @Bean
+       public PlatformTransactionManager platformTransactionManager() {
+           return new JpaTransactionManager(entityManagerFactory().getObject());
+       }
+   }
+   ```
+
+4. Jakarta EE 中的分布式事务
+   Jakarta EE 使用 Java Transaction API (JTA) 来处理分布式事务。
+
+   - 事务管理器：Jakarta EE 容器提供一个内置的事务管理器。
+
+   - @Transactional 注解：可以在 EJB 和 CDI bean 上使用来管理事务。
+
+   ```java
+   @Stateless
+   public class MyEJB {
+
+       @Inject
+       private UserTransaction userTransaction;
+
+       public void performDistributedTransaction() {
+           try {
+               userTransaction.begin();
+
+               // 执行数据库操作
+               // Execute database operations
+
+               userTransaction.commit();
+           } catch (Exception e) {
+               userTransaction.rollback();
+           }
+       }
+   }
+   ``` 
+
 
 #### 3. BPMN для управления ядерным реактором. Исключение несанкционированной ядерной реакции с помощью отрицательной обратной связи. (BPMN для ядерного реактора. Должен реализовывать аварийную остановку) <br>用于核反应堆控制的 BPMN。使用负反馈消除未经授权的核反应。 （核反应堆BPMN。应实施紧急停堆）
 
@@ -376,9 +728,114 @@ public class MyService {
 
 #### 1. Описание bpmn 2.0. принципы построения, основные элементы.<br>bpmn 2.0 的说明。构建原则、基本要素。
 
+1. BPMN 2.0 简介
+   BPMN 2.0（业务流程建模符号 2.0） 是一种标准化的图形表示法，用于业务流程的建模和描述。它为不同的利益相关者（如业务分析师、技术开发人员和管理人员）提供了一个统一的模型，促进了沟通与理解。
+
+2. 构建原则
+   - 可视化：BPMN 2.0 通过图形化的方式展示流程，使其易于理解和沟通。
+   - 一致性：所有 BPMN 元素具有明确的定义和语义，确保模型的一致性。
+   - 可扩展性：BPMN 2.0 允许用户根据需求扩展和自定义模型，满足不同场景的需求。
+   - 适应性：支持建模不同类型的业务流程，包括核心业务流程、支持流程和管理流程。
+
+3. 基本要素
+   1. 流程元素
+      - 事件（Event）：表示流程中的某个发生的事情，分为开始事件、结束事件和中间事件。  
+      - 活动（Activity）：表示需要执行的工作，可以是任务（Task）或子流程（Sub-Process）。  
+      - 网关（Gateway）：用于控制流程的分支和合并，支持不同的逻辑判断。
+   2. 连接元素
+      - 序列流（Sequence Flow）：表示流程中的活动顺序。  
+      - 消息流（Message Flow）：表示不同参与者之间的信息传递。  
+      - 关联（Association）：用于连接文本注释和流程元素。  
+   4. 泳道元素
+      - 泳道（Lane）：用于组织和区分不同角色或部门的活动。
+      - 池（Pool）：表示参与者的边界，可以包含一个或多个泳道。
+
+
 #### 2. Spring Security. Что, зачем, почему. Аннотации, файлы конфигурации.<br>Spring Security，是什么，用处，为什么，注释，配置文件
 
+1. 什么是 Spring Security
+   
+   Spring Security 是一个功能强大且高度可定制的身份验证和访问控制框架。它是 Spring 生态系统中的一部分，提供了保护应用程序的安全机制。
+
+2. 为什么需要 Spring Security
+   
+   - 安全性：保护应用程序免受未授权访问、数据泄露和攻击。
+   - 身份验证：确保用户身份的合法性，支持多种身份验证机制（如表单登录、JWT、OAuth2 等）。
+   - 授权：根据用户角色和权限控制对资源的访问。
+   - 灵活性：能够与不同的认证提供者（如 LDAP、数据库等）集成，提供可扩展的安全方案。
+  
+3. Spring Security 的注释
+
+   Spring Security 提供了多种注释，用于声明安全性和访问控制。常用的注释包括：
+   - @EnableWebSecurity：启用 Spring Security 的 Web 安全支持。
+   - @PreAuthorize：在方法执行之前进行授权检查。
+   - @PostAuthorize：在方法执行之后进行授权检查。
+   - @Secured：对方法进行安全性检查，允许指定的角色访问。
+   - @RolesAllowed：限制某个方法只能被具有指定角色的用户访问。
+
+4. Spring Security 的配置文件
+   Spring Security 的配置可以通过 Java 配置类或 XML 配置文件实现。以下是使用 Java 配置类的示例：
+
+   ```java
+   @Configuration
+   @EnableWebSecurity
+   public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+       @Override
+       protected void configure(HttpSecurity http) throws Exception {
+           http
+               .authorizeRequests()
+                   .antMatchers("/public/**").permitAll() // 允许所有用户访问 /public/** 路径
+                   .anyRequest().authenticated() // 其他请求需要身份验证
+                   .and()
+               .formLogin() // 使用表单登录
+                   .loginPage("/login") // 自定义登录页面
+                   .permitAll() // 允许所有用户访问登录页面
+                   .and()
+               .logout() // 登出配置
+                   .permitAll();
+       }
+
+       @Override
+       protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+           auth
+               .inMemoryAuthentication() // 使用内存中的用户存储
+                   .withUser("user").password("{noop}password").roles("USER") // 创建一个用户
+                   .and()
+                   .withUser("admin").password("{noop}admin").roles("ADMIN"); // 创建一个管理员
+       }
+   }
+   ```
+
 #### 3. REST API для системы быстрых платежей с проверкой месячного ограничения переводов в 100 000 р<br>用于快速支付系统的 REST API，可检查每月 100,000 卢布的转账限额
+
+```java
+@RestController
+public class Moneycontroller {
+    final UserRepository userRepository;
+    @Autowired
+    public Moneycontroller(UserRepository UserRepository) {
+        this.userRepository = UserRepository;
+    }
+    @PostMapping("/transfer")
+    @Transactional
+    public void transferMoney(@RequestParam long from, @RequestParam long to, @RequestParam long amount) {
+        User sender = userRepository.getByld(from);
+        User receiver = userRepository.getByld(to);
+
+        if (sender.getTransferLimit() < sender.calculateMonthlyTransferredAmount() + amount) {
+            throw new TransferLimitExceededException();
+        }
+
+        if (sender.getBalance() < amount) {
+            throw new NotEnoughMoneyException();
+        }
+        
+        sender.setBalance(sender.getBalance() - amount);
+        receiver.setBalance(receiver.getBalance() + amount);
+    }
+}
+```
 
 ## Билет 7
 
@@ -386,7 +843,117 @@ public class MyService {
 
 #### 2. JAAS (спизжено с конспекта) <br>2. JAAS
 
+1. **JAAS 简介**
+
+   **JAAS（Java 身份验证和授权服务）** 是 Java 平台的一部分，用于提供基于角色的访问控制。  
+   **JAAS (Java Authentication and Authorization Service)** is a part of the Java platform that provides role-based access control.
+
+   它允许开发人员在 Java 应用程序中实现身份验证（确定用户的身份）和授权（确定用户是否有权访问资源）的功能。  
+   It allows developers to implement authentication (determining the identity of the user) and authorization (determining whether a user has permission to access resources) in Java applications.
+
+2. **JAAS 的主要组件**
+
+   JAAS 主要包括以下组件：
+
+   - **登录模块（Login Module）**：
+     - 登录模块负责处理用户的身份验证。  
+       **Login Module**: The login module is responsible for handling user authentication.
+
+   - **Subject**：
+     - Subject 表示一个用户或一组用户，包含其身份和相关的安全凭证。  
+       **Subject**: A subject represents a user or a group of users and contains their identities and associated security credentials.
+
+   - **Callback Handler**：
+     - 用于与用户交互，获取用户的凭证（如用户名和密码）。  
+       **Callback Handler**: Used for interacting with the user to obtain user credentials (like username and password).
+
+   - **登录配置文件**：
+     - 配置文件指定哪些登录模块可以用于身份验证，并定义其顺序。  
+       **Login Configuration**: The configuration file specifies which login modules can be used for authentication and defines their order.
+
+3. **JAAS 的工作流程**
+
+   JAAS 的工作流程通常如下：
+
+   1. **用户请求登录**：用户通过提供凭证（如用户名和密码）请求访问受保护的资源。  
+      **User Requests Login**: The user requests access to protected resources by providing credentials (like username and password).
+
+   2. **创建 Subject**：JAAS 创建一个 Subject 对象以表示该用户。  
+      **Create Subject**: JAAS creates a Subject object to represent the user.
+
+   3. **调用登录模块**：JAAS 调用配置的登录模块进行身份验证。  
+      **Invoke Login Module**: JAAS invokes the configured login modules to perform authentication.
+
+   4. **验证凭证**：登录模块验证用户的凭证，如果验证通过，则将用户的身份和权限添加到 Subject。  
+      **Validate Credentials**: The login module validates the user’s credentials; if successful, it adds the user’s identity and permissions to the Subject.
+
+   5. **访问控制**：在身份验证成功后，应用程序可以根据用户的角色和权限控制访问。  
+      **Access Control**: Once authentication is successful, the application can control access based on the user’s roles and permissions.
+
+4. **示例代码**
+
+   以下是使用 JAAS 进行身份验证的简单示例：
+
+   ```java
+   import javax.security.auth.login.LoginContext;
+   import javax.security.auth.login.LoginException;
+
+   public class JAASExample {
+       public static void main(String[] args) {
+           try {
+               LoginContext lc = new LoginContext("MyLoginModule");
+               lc.login(); // 执行登录
+               System.out.println("登录成功");
+
+               // 执行受保护的操作
+           } catch (LoginException e) {
+               System.out.println("登录失败: " + e.getMessage());
+           }
+       }
+   }
+   ```
+
+在此示例中，我们创建了一个 `LoginContext` 对象，并使用指定的登录模块进行身份验证。  
+In this example, we create a `LoginContext` object and use the specified login module for authentication.
+
+1. **总结**
+
+JAAS 是 Java 平台上实现安全性的关键工具，提供了一种灵活的方法来处理用户身份验证和授权。  
+JAAS is a key tool for implementing security in the Java platform, providing a flexible way to handle user authentication and authorization.
+
+通过使用登录模块、Subject 和回调处理程序，开发人员可以构建安全的 Java 应用程序，并有效地控制对资源的访问。  
+By using login modules, Subjects, and callback handlers, developers can build secure Java applications and effectively control access to resources.
+
 #### 3. Написать класс (валидатор) для автобуса, который позволяет покупать пассажиру билет. Деньги не списываются, если у человека недостаточно средств. Если человек уже оплатил и второй раз прикладывает карту, то средства не списываются. А также обнуляется билет по окончанию дня у данного пассажира. <br> 为允许乘客购买车票的公共汽车编写一个类（验证器）。如果一个人没有足够的资金，钱不会被注销。如果一个人已经付款并再次申请该卡，则不会扣除资金。乘客的机票也会在当天结束时重置。
+
+```java
+@RestController
+public class Buscontroller {
+    public static final long PRICE = 666;
+
+    private final PassengerRepository passengerRepository;
+
+    @Autowired
+    public BusController(PassengerRepository passengerRepository) {
+        this.passengerRepository = passengerRepository;
+    }
+
+    @PostMapping
+    public void pay(long passengerld) {
+        User passenger = passengerRepository.getByld(passengerld);
+        
+        if (passenger.getBalance() < PRICE ) {
+            throw new NotEnoughMoneyException();
+        }
+
+        if (passenger.getEastPaidvay() == LocalDateTime.now().toLocalDate()) {
+            return; // уже оплачено
+        }
+        
+        passenger.setBalance(passenger.getBalance() - PRICE);
+    }
+}
+```
 
 # Rubiesh 2
 
