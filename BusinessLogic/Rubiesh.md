@@ -1,4 +1,4 @@
-# Rubiesh 1
+## [MainPage](../index.md)/[Business Logic](README.md)/Rubiesh
 
 - [Rubiesh 1](#rubiesh-1)
   - [Билет 1](#билет-1)

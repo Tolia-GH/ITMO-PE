@@ -45,6 +45,7 @@ We are international students sponsored by the China Scholarship Council (CSC) t
 - [系统软件 System Software](/SystemSoftware/README.md)
 - [计算机视觉 Computer Vision](/ComputerVision/README.md)
 - [分布式存储 Distributed Database](/DistributedDataBase/README.md)
+- [业务逻辑](/BusinessLogic/README.md)
 
 ## 版权声明 Copyrights
 - 本项目所有非代码文本内容遵循 [CC BY-NC-SA 3.0 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)
