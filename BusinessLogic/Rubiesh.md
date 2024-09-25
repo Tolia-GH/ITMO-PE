@@ -429,7 +429,7 @@ class KidneyService {
         List<Kidney> sellerSoldKidneys - seller.getSoldKidneys();
         List<Kidney> buyerBoughtKidneys - buyer.getBoughtKidneys();
         
-        if (sellerSoldKidneys >= 2 || buyerBoughtKidneys >- 2)
+        if (sellerSoldKidneys >= 2 || buyerBoughtKidneys >= 2)
             throw new KidneyLimitExceededException("Fuck trading"); //extends RuntimeException
         sellerSoldKidneys.add(kidney);
         buyerBoughtKidneys.add(kidney);
