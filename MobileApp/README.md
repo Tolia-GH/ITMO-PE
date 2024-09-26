@@ -2,20 +2,10 @@
 
 ## 阅读索引
 
-Database SSH connection:
-```text
-host: helios.cs.ifmo.ru
-port: 2222
-username: s336184
-password: Di2oaLyDd20js6Ox
-```
-
 Lecture
 - [Lecture 1](./Lectures/1.md)
 
 Labs
-
-
 
 <style type="text/css">
     #footer {
