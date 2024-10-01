@@ -668,6 +668,39 @@ void checkExtraPointsNotInArea() {
 }
 ```
 
+```java
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class ShapeTest {
+
+    // 假设的验证方法，实际应根据您的图形验证逻辑来实现
+    public boolean isPointValid(int x, int y) {
+        // 这里可以放置验证逻辑，示例逻辑如下
+        switch (x) {
+            case 10:
+                return y == 20; // 点 A
+            case 30:
+                return y == 40; // 点 B
+            case 50:
+                return y == 60; // 点 C（预期失败）
+            case 70:
+                return y == 80; // 点 D
+            default:
+                return false; // 其他点无效
+        }
+    }
+
+    @Test
+    public void testPoints() {
+        assertTrue(isPointValid(10, 20), "点 A 测试失败");
+        assertTrue(isPointValid(30, 40), "点 B 测试失败");
+        assertFalse(isPointValid(50, 60), "点 C 测试成功（预期失败）");
+        assertTrue(isPointValid(70, 80), "点 D 测试失败");
+    }
+}
+```
+
 ## Вопрос 6 (21.01.2022)
 
 - You have just bought a new flat (a house if you prefer prefer). It will be the home of you. There is nothing in it, just walls without furniture, wallpaper, etc. Please describe your "Core" integration strategy to make the home suitable for living as quickly as possible.  
