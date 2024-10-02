@@ -3,6 +3,7 @@
 ## 阅读索引
 
 - [Rubiesh](Rubiesh.md)
+- [Exam](Exam.md)
 
 <style type="text/css">
     #footer {
