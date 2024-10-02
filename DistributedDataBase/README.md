@@ -16,8 +16,10 @@ Lecture
 Labs
 - [x] [Lab 1](../404.md)
 - [x] [Lab 2](./Labs/Lab2/Lab2.md)
-- [ ] [Lab 3](../404.md)
+- [x] [Lab 3](../404.md)
 - [ ] [Lab 4](../404.md)
+
+- [ ] [Exam](./Exam.md)
 
 SemesterWork
 
