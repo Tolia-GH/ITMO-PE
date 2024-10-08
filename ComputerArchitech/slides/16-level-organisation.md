@@ -81,7 +81,7 @@
 
 ### Банки памяти (Memory Bank) 记忆库
 
-<div class="row"><div class="col">
+
 
 - Память имеет большее адресное пространство, чем процессор.  
   内存具有比处理器更大的地址空间。
@@ -90,7 +90,7 @@
 
 ![even-odd-memory-banks](../fig/even-odd-memory-banks.jpg)
 
-</div><div class="col">
+
 
 - Расширение машинного слова:  
   机器字扩展：
@@ -109,7 +109,7 @@
     - подать на память в качестве старших бит.  
       作为最高有效位提交到内存。
 
-</div></div>
+
 
 ----
 
@@ -121,7 +121,7 @@
 
 ### Сегментная память (Segmentation) 分段内存
 
-<div class="row"><div class="col">
+
 
 - Сегментная адресация памяти -- способ логической адресации памяти, где адрес: сегмент + смещение.  
   段内存寻址是逻辑内存寻址的一种方法，其中地址：段+偏移量。
@@ -130,17 +130,17 @@
 - Смещение -- адрес ячейки памяти относительно начала сегмента.  
   偏移量 - 内存单元相对于段开头的地址。
 
-</div><div class="col">
+
 
 ![paging-and-segmentation](../fig/paging-and-segmentation.png)
 
-</div></div>
+
 
 ----
 
 #### Сегментная память. Назначение 分段记忆。 目的
 
-<div class="row"><div class="col">
+
 
 1. Независимая адресация внутри задач относительно сегментов.  
    任务内相对于段的独立寻址。
@@ -151,24 +151,24 @@
 4. Предоставление одного сегмента памяти разным потокам команд для взаимодействия.  
    提供一个内存段给不同的命令流交互。
 
-</div><div class="col">
+
 
 ![segment_map_table](../fig/segment_map_table.jpg)
 
-</div></div>
+
 
 ----
 
 ### Виртуальная память 虚拟内存
 
-<div class="row"><div class="col">
+
 
 ПО использует виртуальные адреса, транслируемые на лету в физические.  
 该软件使用动态转换为物理地址的虚拟地址。
 
 ![](../fig/virtual-memory-process.png)
 
-</div><div class="col">
+
 
 - Развитие и упрощение сегментной памяти.  
   段存储器的开发和简化。
@@ -181,7 +181,7 @@
 - Совмещает дисковую и основную память. Отчасти -- кеш.  
   结合磁盘和主内存。 部分 - 缓存。
 
-</div></div>
+
 
 ----
 
@@ -196,7 +196,7 @@
 
 #### Сегментная память. Анализ 分段记忆。 分析
 
-<div class="row"><div class="col">
+
 
 ##### Segmentation Advantages
 
@@ -213,7 +213,7 @@
 - Segment tables are smaller than page tables, and take up less memory.  
   段表比页表小，占用内存也少。
 
-</div><div class="col">
+
 
 ##### Segmentation Disadvantages
 
@@ -228,13 +228,13 @@
 - Hard to program and make compilers.  
   很难编程和制作编译器。
 
-</div></div>
+
 
 ----
 
 #### Виртуальная память. Анализ 虚拟内存。 分析
 
-<div class="row"><div class="col">
+
 
 ##### Paging Advantages
 
@@ -245,7 +245,7 @@
 - Frames do not have to be contiguous.  
   帧不必是连续的。
 
-</div><div class="col">
+
 
 ##### Paging Disadvantages
 
@@ -254,7 +254,7 @@
 - Не позволяет осуществить изоляцию внутри процесса.  
   不允许在进程内进行隔离。
 
-</div></div>
+
 
 ---
 
@@ -318,22 +318,22 @@
 - **Erlang/OTP**. Green threads are implemented within a virtual machine. The internal scheduler (counting the number of executed instructions for each thread) allows the virtual machine to ensure an even distribution of processor time and meet the requirements of soft real-time. [Erlang Scheduler: what does it do?](https://erlang.org/pipermail/erlang-questions/2001-April/003132.html)  
   **Erlang/OTP**。 绿色线程在虚拟机内实现。 内部调度器（计算每个线程执行的指令数）使虚拟机能够确保处理器时间的均匀分配，满足软实时的要求。 [Erlang Scheduler：它有什么作用？](https://erlang.org/pipermail/erlang-questions/2001-April/003132.html)
 
-<div class="row"><div class="col">
+
 
 - **Golang**. Go-routines. It is a compromise between native threads (since it is a compiled language in machine code) and native threads (the language's run-time tracks key points of the algorithm that would interrupt the execution stream without the operating system).  
   **Golang**。 Go 例程。 它是本机线程（因为它是机器代码中的编译语言）和本机线程（该语言的运行时跟踪算法的关键点，这些关键点将在没有操作系统的情况下中断执行流）之间的折衷方案。
 
-</div><div class="col">
+
 
 ![](../fig/go-goroutine-schedule.jpg)
 
-</div></div>
+
 
 ---
 
 ## Детерминизм многопоточного программирования 多线程编程的确定性
 
-<div class="row"><div class="col">
+
 
 ```c
 // Глобальные переменные с
@@ -354,7 +354,7 @@ void* thread2(void* unused) {
 }
 ```
 
-</div><div class="col">
+
 
 ```c
 while (1) {
@@ -378,7 +378,7 @@ while (1) {
 }
 ```
 
-</div></div>
+
 
 Возможна ли остановка алгоритма? 是否可以停止算法？ <br/> (источник: [Другой взгляд на многопоточность](https://habr.com/en/post/590339/))
 
@@ -390,7 +390,7 @@ while (1) {
 
 ### Architectural specification 架构规范
 
-<div class="row"><div class="col">
+
 
 Architecture 架构
 : is fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution [ISO 42010].  
@@ -403,37 +403,37 @@ Architectural specification 架构规范
 The most popular type of architectural specification describes the selected layer of the system, and we call it "horizontal".  
 最流行的架构规范类型描述了系统的选定层，我们称之为“水平”。
 
-</div><div class="col">
+
 
 ![](../fig/hor-arch-desc.png) <!-- .element: height="250px" -->
 
 ![](../fig/hor-arch-desc-processes.png) <!-- .element: height="250px" -->
 
-</div></div>
+
 
 ----
 
 ### Подход к рассмотрению архитектуры 考虑架构的方法
 
-<div class="row"><div class="col">
+
 
 ![](../fig/platform-based-design.png)
 
 Горизонтальный 水平的
 
-</div><div class="col">
+
 
 ![](../fig/vertical-horizontal-arch.png) <!-- .element: height="550px" -->
 
 Вертикальный 垂直的
 
-</div></div>
+
 
 ----
 
 ### Architectural specification (vertical) 建筑规范（垂直）
 
-<div class="row"><div class="col">
+
 
 1. Specification of layers and their relationship.  
    层的规范及其关系。
@@ -442,11 +442,11 @@ The most popular type of architectural specification describes the selected laye
 3. Relationship -- evaluation or actualization.  
    关系——评价或实现。
 
-</div><div class="col">
+
 
 ![](../fig/osi-model.png)
 
-</div></div>
+
 
 ----
 
@@ -465,25 +465,25 @@ The most popular type of architectural specification describes the selected laye
 
 ----
 
-<div class="row"><div class="col">
+
 
 ![](../fig/style-layered-1.png)  <!-- .element: class="fullscreen" -->
 
 ![](../fig/style-layered-2.png)  <!-- .element: class="fullscreen" -->
 
-</div><div class="col">
+
 
 ![](../fig/style-layered-3.png) <!-- .element: height="250px" -->
 
 ![](../fig/style-layered-4.png) <!-- .element: height="250px" -->
 
-</div></div>
+
 
 ----
 
 ### Модифицированный граф актуализации 修改后的更新图
 
-<div class="row"><div class="col">
+
 
 - Представления ВС в рамках различных ВПл вне зависимости от стадии жизненного цикла.  
   各种国内流离失所者中飞机的代表，无论生命周期的哪个阶段。
@@ -494,17 +494,17 @@ The most popular type of architectural specification describes the selected laye
 - Последовательная актуализация спецификаций в физический процесс не позволяет включить в рассмотрение спецификации, используемые для верификации.  
   将规范一致更新到物理过程中不允许包含用于验证的规范。
 
-</div><div class="col">
+
 
 ![](../fig/actualization-graph-adv.png)
 
-</div></div>
+
 
 ----
 
 ### Модель-процесс-вычислитель 模型过程计算机
 
-<div class="row"><div class="col">
+
 
 - Модель (конфигурация) вычислительного процесса, описывающая вычислительный процесс в рамках ВПл.  
   计算过程的模型（配置），描述VPL框架内的计算过程。
@@ -515,15 +515,15 @@ The most popular type of architectural specification describes the selected laye
 - Компонент ВП -- атомарный или составной шаг вычислителя.  
   VP 组件是计算器的原子或复合步骤。
 
-</div><div class="col">
+
 
 ![](../fig/mvp-1.png)
 
-</div></div>
+
 
 ----
 
-<div class="row"><div class="col">
+
 
 - Вычислительный механизм (ВМх) -- часть вычислителя, обеспечивающая компонент ВП.  
   计算机制(CMx) - 提供VP 组件的计算机的一部分。
@@ -536,11 +536,11 @@ The most popular type of architectural specification describes the selected laye
 - Отношение трансляции -- формальное соответствие двух моделей друг другу.  
   翻译关系是两个模型相互之间的正式对应关系。
 
-</div><div class="col">
+
 
 ![](../fig/mvp-2.png)
 
-</div></div>
+
 
 ---
 
@@ -590,7 +590,7 @@ The most popular type of architectural specification describes the selected laye
 Классификация базируется на понятии потока, под которым понимается последовательность элементов, команд или данных, обрабатываемая процессором:  
 该分类基于线程的概念，线程是由处理器处理的元素、命令或数据的序列：
 
-<div class="row"><div class="col">
+
 
 - **SISD (single instruction stream / single data stream)**  
   **SISD（单指令流/单数据流）**
@@ -604,11 +604,11 @@ The most popular type of architectural specification describes the selected laye
 - **MIMD (multiple instruction stream / multiple data stream)**  
   **MIMD（多指令流/多数据流）**
 
-</div><div class="col">
+
 
 ![Таксономия Флинна](../fig/flynns-taxonomy.png)
 
-</div></div>
+
 
 ----
 

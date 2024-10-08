@@ -104,7 +104,7 @@ Reduced Operands Set Computer (скорее шутка, чем термин)
 
 #### Особенности стековых процессоров 堆栈处理器的特点
 
-<div class="row"><div class="col">
+
 
 1. Система команд высокого уровня.  
    高层指挥系统。
@@ -118,7 +118,7 @@ Reduced Operands Set Computer (скорее шутка, чем термин)
 3. Threads.
 4. Cache-friendly.
 
-</div><div class="col">
+
 
 ![](../fig/proc-stack-classes.png)
 
@@ -128,13 +128,13 @@ Reduced Operands Set Computer (скорее шутка, чем термин)
     - структурами данных.  
       数据结构。
 
-</div></div>
+
 
 ----
 
 ### G144A12
 
-<div class="row"><div class="col">
+
 
 - F18A -- асинхронный форт процессор. 异步堡垒处理器。
 - G11A12 -- multi-computer. 多电脑。
@@ -147,13 +147,13 @@ Reduced Operands Set Computer (скорее шутка, чем термин)
 - With completely programmable I/O pins.  
   具有完全可编程的 I/O 引脚。
 
-</div><div class="col">
+
 
 Безумный стековый процессор из реального мира: 疯狂的现实世界堆栈处理器： [link](https://cyberleninka.ru/article/n/protsessory-greenarrays-ga144/pdf)
 
 ![_GA144_](../fig/GA144.jpg) <!-- .element height="500px" -->
 
-</div></div>
+
 
 ---
 
@@ -177,7 +177,7 @@ Reduced Operands Set Computer (скорее шутка, чем термин)
 
 ### Суперскалярный процессор 超标量处理器
 
-<div class="row"><div class="col">
+
 
 Скалярная величина 标量
 : величина, которая может быть представлена числом (целочисленным или с плавающей точкой). 可以用数字（整数或浮点）表示的值。
@@ -189,14 +189,14 @@ Reduced Operands Set Computer (скорее шутка, чем термин)
 - если выполняется одна операция на стадии `Instruction Execute`, то много ресурсов простаивают.  
   如果在“指令执行”阶段执行一项操作，则许多资源处于空闲状态。
 
-</div><div class="col">
+
 
 ![Concept of a superscalar processor](../fig/superscalar-processor.gif)
 
 Решение: анализ потока инструкций на лету и автоматическая (прозрачная для программиста) параллелизация.  
 解决方案：动态分析指令流并自动（对程序员透明）并行化。
 
-</div></div>
+
 
 ----
 
@@ -211,7 +211,7 @@ Notes: 18-600 Foundations of Computer Systems, Carnegie Mellon University, J.P. 
 
 ### Very Long Instruction Word (VLIW) 超长指令字
 
-<div class="row"><div class="col">
+
 
 - Упростим процессор и улучшим энергопотребление, переложив работу на компилятор!  
   让我们通过将工作转移给编译器来简化处理器并提高功耗！
@@ -220,7 +220,7 @@ Notes: 18-600 Foundations of Computer Systems, Carnegie Mellon University, J.P. 
 - Длинная инструкция включает группу параллельных инструкций для разных исполнителей.  
   长指令包括一组针对不同执行器的并行指令。
 
-</div><div class="col">
+
 
 ![](../fig/vliw-instruction.png)
 
@@ -233,7 +233,7 @@ Notes: 18-600 Foundations of Computer Systems, Carnegie Mellon University, J.P. 
 - Поток управления. Процедуры. Спекулятивные вычисления.  
   控制流。 程序。 推测性计算。
 
-</div></div>
+
 
 ----
 

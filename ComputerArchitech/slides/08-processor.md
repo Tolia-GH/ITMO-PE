@@ -30,16 +30,12 @@
 
 ## Информационный процессор 信息处理器
 
-<div class="row"><div class="col">
-
 Информационный процессор 信息处理器
 : система (электрическая, механическая или биологическая), которая принимает информацию (последовательность символов или состояний) в одной форме и обрабатывает (преобразует) ее в другую форму.  
 一种系统（电气、机械或生物），以一种形式获取信息（一系列符号或状态）并将其处理（转换）为另一种形式。
 
 Например: исходный сигнал в статистику, посредством алгоритмического процесса.  
 例如：通过算法过程将原始信号转化为统计数据。
-
-</div><div class="col">
 
 ![_Information processor by Wikipedia_](../fig/information-processing-system.png)
 
@@ -55,8 +51,6 @@
 2. 处理器
 3. 储存
 4. 结论
-
-</div></div>
 
 ----
 
@@ -159,8 +153,6 @@ HW позволяет решать широкий круг задач, наст�
 
 ----
 
-<div class="row"><div class="col">
-
 [Микро]процессор 微处理器
 : цифровая схема, которая выполняет операции с некоторым внешним источником данных, обычно памятью или другим потоком данных.  
 对某些外部数据源（通常是内存或其他数据流）执行操作的数字电路。
@@ -171,8 +163,6 @@ HW позволяет решать широкий круг задач, наст�
 : Типичный микроконтроллер сочетает функции процессора и периферийных устройств, содержит ОЗУ и (или) ПЗУ.  
 典型的微控制器结合了处理器和外围设备的功能，并包含 RAM 和/或 ROM。
 
-</div><div class="col">
-
 <!-- ![](../fig/microprocessor-and-periph.gif) -->
 
 ![](../fig/microcontroller-and-microprocessor.png)
@@ -181,17 +171,11 @@ HW позволяет решать широкий круг задач, наст�
 : обычно часть компьютерной памяти, в которой хранится выполняемый машинный код, а также входные, выходные и промежуточные данные.  
 通常是计算机内存的一部分，用于存储可执行机器代码以及输入、输出和中间数据。
 
-</div></div>
-
 ----
-
-<div class="row"><div class="col">
 
 Встраиваемая/встроенная система (embedded system) 嵌入式系统
 : специализированная микропроцессорная система управления, контроля и мониторинга, концепция разработки которой заключается в том, что такая система будет работать, будучи встроенной непосредственно в устройство, которым она управляет.  
 ：一种专门的微处理器控制、控制和监测系统，其设计理念是这样的系统将在直接内置于其控制的设备中的同时运行。
-
-</div><div class="col">
 
 ![](../fig/embedded-system-applications.jpg)
 
@@ -199,8 +183,6 @@ HW позволяет решать широкий круг задач, наст�
 片上系统（SoC、片上系统、SoC）
 : электронная схема, выполняющая функции целого устройства (например, компьютера) и размещённая на одной интегральной схеме.  
 执行整个设备（例如计算机）功能并放置在单个集成电路上的电子电路。
-
-</div></div>
 
 ----
 
@@ -239,8 +221,6 @@ HW позволяет решать широкий круг задач, наст�
 : (Instruction Set Architecture -- ISA) абстрактная модель процессора, формирующая интерфейс взаимодействия между программным обеспечением и процессором, затрагивающая:  
 （指令集架构 - ISA）一种抽象处理器模型，形成软件和处理器之间的接口，影响：
 
-<div class="row"><div class="col">
-
 1. типы данных; 数据类型；
 2. систему регистров; 注册系统；
 3. методы адресации; 寻址方法；
@@ -249,11 +229,7 @@ HW позволяет решать широкий круг задач, наст�
 6. обработку прерываний и исключений; 处理中断和异常；
 7. методы ввода и вывода. 输入输出方式。
 
-</div><div class="col">
-
 ![](../fig/isa-as-interface.png)<!-- .element height="275px" -->
-
-</div></div>
 
 Производительность, энергопотребление и задержки обычно не рассматриваются. 通常不考虑性能、功耗和延迟。
 
@@ -307,18 +283,12 @@ Notes: ECE C61 Computer Architecture Lecture 3 – Instruction Set
 
 #### Stack Processor 堆栈处理器
 
-<div class="row"><div class="col">
-
 - Данные хранятся и обрабатываются на стеке.  
   数据在堆栈上存储和处理。
 - Указание операндов не требуется (только сама операция).  
   不需要指定操作数（只需操作本身）。
 
-</div><div class="col">
-
 ![](../fig/isa-stack-example.png)
-
-</div></div>
 
 ----
 
@@ -397,8 +367,6 @@ one rssb 1
 
 ## Архитектуры универсальных процессоров 通用处理器架构
 
-<div class="row"><div class="col">
-
 1. Машина Тьюринга 图灵机
 2. Редукционные компьютеры (Reduction Machines) 减速机
 3. Потоковые машины (Dataflow Machines) 数据流机器
@@ -406,8 +374,6 @@ one rssb 1
 5. High-Level Language Computer Architecture. Stack computers 高级语言计算机体系结构。 堆栈计算机
 6. В стиле фон Неймана $\Longrightarrow$ 冯·诺依曼的风格 $\Longrightarrow$
 7. и так далее...
-
-</div><div class="col">
 
 ### В стиле фон Неймана 冯·诺依曼风格
 
@@ -419,16 +385,12 @@ one rssb 1
 6. Вводы-вывод. Прерывания 输入-输出。 中断
 7. Параллелизм уровня команд. [S/M]I[S/M]D. SIMT. Изоляция 命令级并行性。 [S/M]I[S/M]D。 SIMT。 绝缘
 
-</div></div>
-
 Can Programming be Liberated from the von Neumann Style? <br/> Backus, John. 1977 Turing Award Lecture  
 编程能否从冯诺依曼风格中解放出来？ <br/>巴克斯，约翰。 1977年图灵奖演讲
 
 ---
 
 ## Машина Тьюринга 图灵机
-
-<div class="row"><div class="col">
 
 Машина Тьюринга включает:  
 图灵机包括：
@@ -446,11 +408,7 @@ Can Programming be Liberated from the von Neumann Style? <br/> Backus, John. 197
 - читать и записывать в ячейки символы конечного алфавита.  
   将有限字母表的字符读写到单元格中。
 
-</div><div class="col">
-
 ![](../fig/turing_machine_fun.jpg)
-
-</div></div>
 
 ----
 
@@ -467,19 +425,13 @@ Can Programming be Liberated from the von Neumann Style? <br/> Backus, John. 197
 
 ## Редукционные компьютеры 还原计算机
 
-<div class="row"><div class="col">
-
 Graph Reduction machine 图形缩减机
 
 ![](../fig/proc-reduction-simple.png)
 
 [An Architecture for Combinator Graph Reduction (TIGRE)](https://users.ece.cmu.edu/~koopman/tigre/index.html)
 
-</div><div class="col">
-
 ![](../fig/proc-reduction-calls.png)
-
-</div></div>
 
 - В основе лямбда-исчисление и комбинаторная логика.  
   基于 lambda 演算和组合逻辑。
@@ -495,8 +447,6 @@ Notes: В аппаратуре встречается редко. Часто в�
 
 ## Потоковые машины (Dataflow Machines)
 
-<div class="row"><div class="col">
-
 Dataflow architectures 数据流架构
 : the executability and execution of instructions is solely determined based on the availability of input arguments to the instructions. The order of instruction execution is unpredictable.  
 指令的可执行性和执行完全取决于指令输入参数的可用性。 指令执行的顺序是不可预测的。
@@ -509,20 +459,14 @@ Dataflow architectures 数据流架构
   让我们记住计算
 - Пример:  TTA
 
-</div><div class="col">
-
 ![](../fig/proc-dataflow-arch.jpg)
 
 Приходите в [NITTA](https://ryukzak.github.io/projects/nitta/) -- Dataflow со стат. планированием.  
 来到 [NITTA](https://ryukzak.github.io/projects/nitta/) -- 带统计数据的数据流。 规划。
 
-</div></div>
-
 ---
 
 ## Машина фон Неймана
-
-<div class="row"><div class="col">
 
 - Логическое развитие машины Тьюринга.  
   图灵机的逻辑发展。
@@ -534,11 +478,7 @@ Dataflow architectures 数据流架构
 - Призвана быть максимально простой в реализации и производстве.  
   计得在实施和生产中尽可能简单
 
-</div><div class="col">
-
 ![](../fig/von-neumann.png)
-
-</div></div>
 
 ----
 
@@ -689,8 +629,6 @@ Dataflow architectures 数据流架构
 3. 操作数的数量（1、2 或更多）。
 4. 操作数和结果的排列。 寻址。
 
-<div class="row"><div class="col">
-
 - Подразумеваемый адрес (часть Opcode)  
   隐含地址（操作码的一部分）
 - Непосредственная адресация (hardcode)  
@@ -699,8 +637,6 @@ Dataflow architectures 数据流架构
   直接寻址（用数字表示）
 - Относительная (базовая) адресация (`addr + base`)  
   相对（基址）寻址（`addr + base`）
-
-</div><div class="col">
 
 - Укороченная адресация
 - Регистровая адресация
@@ -716,16 +652,12 @@ Dataflow architectures 数据流架构
 - 堆栈寻址
 - 自动递增和自动递减
 
-</div></div>
-
 1. Кодирование инструкций. Простота декодирования и компактность.  
 2. 编码说明。 易于解码且紧凑。
 
 ----
 
 ### Устройство. Control Unit и DataPath 设备。 控制单元和数据路径
-
-<div class="row"><div class="col">
 
 Control Unit 控制单元
 : is a component of a computer's central processing unit (CPU) that directs the operation of the processor. A CU typically uses a binary decoder to convert coded instructions into timing and control signals that direct the operation of the other units.  
@@ -735,8 +667,5 @@ Datapath 数据路径
 : is the ALU, the set of registers, and the CPU's internal bus(es) that allow data to flow between them.  
 是 ALU、一组寄存器以及允许数据在它们之间流动的 CPU 内部总线。
 
-</div><div class="col">
-
 ![](../fig/proc-control-unit-and-datapath.jpg)
 
-</div></div>

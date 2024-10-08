@@ -30,15 +30,15 @@
 
 ### Устройство. Control Unit и DataPath (повтор) 设备。 控制单元和数据路径（重复）
 
-<div class="row"><div class="col">
+
 
 ![](../fig/von-neumann.png)
 
-</div><div class="col">
+
 
 ![](../fig/proc-control-unit-and-datapath.jpg)
 
-</div></div>
+
 
 ----
 
@@ -54,7 +54,7 @@
 3. 操作数的数量（1、2 或更多）。
 4. 操作数和结果的排列。 寻址。
 
-<div class="row"><div class="col">
+
 
 - Подразумеваемый адрес <br/> (часть Opcode)
 - Непосредственная адресация (hardcode)
@@ -66,7 +66,7 @@
 - 直接寻址<br/>（用数字表示）
 - 相对（基址）寻址（`addr + base`）
 
-</div><div class="col">
+
 
 - Укороченная адресация
 - Регистровая адресация
@@ -82,7 +82,7 @@
 - 堆栈寻址
 - 自动递增和自动递减
 
-</div></div>
+
 
 1. Кодирование инструкций. Простота декодирования и компактность.  
   编码说明。 易于解码且紧凑。
@@ -120,7 +120,7 @@
 
 ### Пример исполнения команды 命令执行示例
 
-<div class="row"><div class="col">
+
 
 ![_Пример процессора из семейства фон Неймана_](../fig/von-neumann-example.png)
 
@@ -128,7 +128,7 @@
 Add 34 + [03] -> [01] (4 байта)
 ```
 
-</div><div class="col">
+
 
 ```text
 1. Чтение инструкции
@@ -153,7 +153,7 @@ Add 34 + [03] -> [01] (4 байта)
   - DMem[AR].DIN <- Acc
 ```
 
-</div></div>
+
 
 ---
 
@@ -211,7 +211,7 @@ Notes: ECE C61 Computer Architecture Lecture 3 – Instruction Set
 
 ![_Гарвардская архитектура_](../fig/von-neuman-vs-harvard-architecture.png)
 
-<div class="row"><div class="col">
+
 
 Узкое место архитектуры фон Неймана (Принстонская) -- память:  
 冯·诺依曼（普林斯顿）架构的瓶颈是内存：
@@ -223,7 +223,7 @@ Notes: ECE C61 Computer Architecture Lecture 3 – Instruction Set
 - 访问数据
 - 非同时访问
 
-</div><div class="col">
+
 
 Отличие Гарвардской архитектуры:  
 哈佛架构的区别：
@@ -233,7 +233,7 @@ Notes: ECE C61 Computer Architecture Lecture 3 – Instruction Set
 - каналы инструкций и данных физически разделены  
   指令和数据通道在物理上是分开的
 
-</div></div>
+
 
 ----
 
@@ -296,7 +296,7 @@ Notes: ECE C61 Computer Architecture Lecture 3 – Instruction Set
 
 $Y = A * X + B$
 
-<div class="row"><div class="col">
+
 
 ```text
 load R1 <- A
@@ -307,7 +307,7 @@ add R5 <- R4 + R3
 store Y <- R5
 ```
 
-</div><div class="col">
+
 
 ```text
 load R1 <- A
@@ -317,7 +317,7 @@ lfn R4 <- R1 * R2 + c
 store Y <- R4
 ```
 
-</div></div>
+
 
 ```text
 load R1 <- A
@@ -326,20 +326,20 @@ add R1 <- R1 + C
 store Y <- R1
 ```
 
-<div class="row"><div class="col">
+
 
 ```text
 mul R1 <- A * B
 add Y <- R1 + C
 ```
 
-</div><div class="col">
+
 
 ```text
 lfn Y <- A * B + C
 ```
 
-</div></div>
+
 
 *Вопрос*: Какой состав команд лучше и почему?  
 *问题*：哪种命令组成更好，为什么？
@@ -355,7 +355,7 @@ CISC
 : is a computer architecture in which single instructions can execute several low-level operations (a load from memory, an arithmetic operation, and a memory store) or are capable of multi-step operations or addressing modes within single instructions.  
 是一种计算机体系结构，其中单个指令可以执行多个低级操作（从内存加载、算术运算和内存存储），或者能够在单个指令内执行多步操作或寻址模式。
 
-<div class="row"><div class="col">
+
 
 Причины появления: 出现原因：
 
@@ -375,7 +375,7 @@ CISC
 - 最小化程序量。
 - 最大限度地减少间接费用。
 
-</div><div class="col">
+
 
 Проблемы: 问题：
 
@@ -386,13 +386,13 @@ CISC
 - Сложно генерировать эффективный машинный код.  
 - 难以生成高效的机器代码。
 
-</div></div>
+
 
 ----
 
 ### Реализация Control Unit 实现控制单元
 
-<div class="row"><div class="col">
+
 
 Hardwired 硬连线
 : при помощи аппаратных комбинационных схем, декодирующих инструкции в последовательности сигналов.  
@@ -406,19 +406,19 @@ Microcoded 微编码
 :  программа, реализующая набор инструкций процессора.  
 实现一组处理器指令的程序。
 
-</div><div class="col">
+
 
 ![](../fig/processor-hardwires-and-microcoded.gif)
 
 ![Microcode decoding_](../fig/microcode-decode.png)
 
-</div></div>
+
 
 ----
 
 #### Микропрограммное управление 固件控制
 
-<div class="row"><div class="col">
+
 
 Достоинства: 优点
 
@@ -431,7 +431,7 @@ Microcoded 微编码
 4. Генерация ISA под задачу (сократить объём, повысить эффективность), см. [УВК «Самсон» -- базовая ЭВМ РВСН](https://www.computer-museum.ru/articles/sistemi_kompleksi/90/).  
 5. 任务的ISA生成（减少体积，提高效率），参见 [УВК «Самсон» -- базовая ЭВМ РВСН](https://www.computer-museum.ru/articles/sistemi_kompleksi/90/).  
 
-</div><div class="col">
+
 
 Недостатки: 缺陷
 
@@ -450,21 +450,21 @@ Microcoded 微编码
 5. Микрокод привносит все проблемы программирования (сложность, отладка, методы).  
    微代码介绍了编程的所有问题（复杂性、调试、技术）。
 
-</div></div>
+
 
 ----
 
 #### No Instruction Set Computing (NISC) 无指令集计算 (NISC)
 
-<div class="row"><div class="col">
+
 
 ![_CISC with microcode_](../fig/cisc.png)
 
-</div><div class="col">
+
 
 ![_NISC_](../fig/nisc.png)
 
-</div></div>
+
 
 ----
 

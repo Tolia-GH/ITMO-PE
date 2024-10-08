@@ -1346,7 +1346,7 @@ CISC 仍然存在，因为：
 - Конфликт всегда связан с записью в регистр.  
   冲突始终与写入寄存器有关。
 
-<div class="row"><div class="col">
+
 
 - RAW -- Read after Write <br/> (Data-dependency)
 
@@ -1369,11 +1369,11 @@ i1. R3 <- R1 + R2
 i2. R3 <- R4 + R5
 ```
 
-</div><div class="col">
+
 
 ![Data hazard in the pipelined execution](./fig/pipeline-data-hazard.png)
 
-</div></div>
+
 
 ----
 
@@ -1449,7 +1449,7 @@ pic -- 2; i7 -- 14; p4 -- 20; xeon -- 30; <br/> Xelerated X10q Network Processor
 is a loop transformation technique that helps to optimize the execution time of a program. We basically remove or reduce iterations. Loop unrolling increases the program’s speed by eliminating loop control instruction and loop test instructions.  
 是一种循环转换技术，有助于优化程序的执行时间。 我们基本上删除或减少迭代。 循环展开通过消除循环控制指令和循环测试指令来提高程序的速度。
 
-<div class="row"><div class="col">
+
 
 ```c
 for (int x = 0; x < 100; x++) {
@@ -1457,7 +1457,7 @@ for (int x = 0; x < 100; x++) {
 }
 ```
 
-</div><div class="col">
+
 
 ```c
 for (int x = 0; x < 100; x += 5 ) {
@@ -1469,7 +1469,7 @@ for (int x = 0; x < 100; x += 5 ) {
 }
 ```
 
-</div></div>
+
 
 ----
 

@@ -137,7 +137,7 @@ Technical details:
 
 ###  具有主要软件组件的系统
 
-<div class="row"><div class="col">
+
 
 **Software-intensive systems**: are systems in which software development and/or integration are dominant considerations (i.e., most complex systems these days). This includes computer-based systems ranging from individual software applications, information systems, embedded systems, software product lines and product families and systems-of-systems.
 
@@ -145,11 +145,11 @@ Technical details:
 
 --- ISO/IEC/IEEE 42010
 
-</div><div class="col">
+
 
 ![](../fig/HW-SW-support-cost.png)
 
-</div></div>
+
 
 ---
 
@@ -203,11 +203,11 @@ Technical details:
 
 #### Реальное время 即时的
 
-<div class="row"><div class="col">
+
 
 ![](../fig/realtime.jpg)
 
-</div><div class="col">
+
 
 - Реальное время /= быстро
 - Реальное время /= абсолютная точность
@@ -228,7 +228,7 @@ Technical details:
     - Видео кодек и видео плеер.
       视频编解码器和视频播放器。 <!-- .element: class="fragment" -->
 
-</div></div>
+
 
 ----
 
@@ -259,7 +259,7 @@ FSC 示例：悬浮滑板； 安全、节能的旋转门； 线垂和传输功�
 
 ### Система как совокупность частей 系统作为一组部件
 
-<div class="row"><div class="col">
+
 
 System is a combination of interacting elements organized to achieve one or more stated purposes  
 系统是为了实现一个或多个既定目的而组织的相互作用元素的组合
@@ -270,14 +270,14 @@ NOTE 1 A system may be considered as a product or as the services it provides.
 NOTE 2 In practice, the interpretation of its meaning is frequently clarified by the use of an associative noun, e.g. aircraft system. Alternatively the word system may be substituted simply by a context dependent synonym, e.g. aircraft, though this may then obscure a system principles perspective.  
 注 2：在实践中，其含义的解释经常通过使用关联名词来澄清，例如： 飞机系统。 或者，单词系统可以简单地由上下文相关的同义词代替，例如 飞机，尽管这可能会掩盖系统原理的观点。
 
-</div><div class="col">
+
 
 ![](../fig/modeling-complex-system-composition.png)
 
 Так ли это важно?  
 它真的那么重要吗？
 
-</div></div>
+
 
 ----
 
@@ -292,7 +292,7 @@ NOTE 2 In practice, the interpretation of its meaning is frequently clarified by
 
 ### Операционное окружение 操作环境
 
-<div class="row"><div class="col">
+
 
 The environment in which systems are deployed. The problem or opportunity in response to which the system has been developed, exists in this environment.  
 系统部署的环境。 系统开发所针对的问题或机会存在于该环境中。
@@ -300,11 +300,11 @@ The environment in which systems are deployed. The problem or opportunity in res
 The operational environment is a significant factor in defining the needed system capabilities, desired stakeholder outcomes and benefits, and constraints.  
 操作环境是定义所需系统功能、期望的利益相关者结果和收益以及约束的重要因素。
 
-</div><div class="col">
+
 
 ![](../fig/operational-environment-and-enabling-systems.png)
 
-</div></div>
+
 
 ---
 
@@ -390,7 +390,7 @@ The operational environment is a significant factor in defining the needed syste
 Some critical questions for the success of the system may be missed.  
 系统成功的一些关键问题可能会被忽略。
 
-<div class="row"><div class="col">
+
 
 - Question is beyond the competence of the developer.
 - Template design dominates.
@@ -403,13 +403,13 @@ Some critical questions for the success of the system may be missed.
 - 将一项任务替换为另一项任务。
 - 设计时优先级安排效率低下。
   
-</div><div class="col">
+
 
 ### Постановка задачи техническим специалистом 技术专家的任务说明
 
 ![](../fig/communication-problem-senior-and-junior.png)
 
-</div></div>
+
 
 ----
 

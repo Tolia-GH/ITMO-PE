@@ -10,7 +10,7 @@
     </script>
 </head>
 
-## [MainPage](../index.md)/[Computer NetWork](README.md)/HomeWork
+## [MainPage](../../../index.md)/[Computer Network](../../README.md)/HomeWork
 
 # Учебно-исследовательская работа: «Методы кодирования в компьютерных сетях» <br> 教育和研究工作：“计算机网络中的编码方法”
 

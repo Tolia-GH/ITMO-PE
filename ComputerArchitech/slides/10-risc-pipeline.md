@@ -26,23 +26,23 @@
 
 ## Reduced Instruction Set Computer 精简指令集计算机
 
-<div class="row"><div class="col">
+
 
 RISC 精简指令集计算机
 : подход к проектированию процессоров, где быстродействие увеличивается за счёт такого кодирования упрощённого набора инструкций.  
 一种处理器设计方法，通过对一组简化的指令进行编码来提高性能。
 
-</div><div class="col">
+
 
 ![_RISC_](../fig/risc.png)
 
-</div></div>
+
 
 ----
 
 ### RISC. Предпосылки и особенности 精简指令集计算机。 背景与特点
 
-<div class="row"><div class="col">
+
 
 1. Сложные операции: 操作复杂：
     - встречаются редко;  
@@ -60,7 +60,7 @@ RISC 精简指令集计算机
 6. Параллелизм уровня инструкций (pipeline).  
    指令级并行性（管道）。
 
-</div><div class="col">
+
 
 ![CISC vs RISC instruction_](../fig/cisc-risc-instruction.png)
 
@@ -71,21 +71,21 @@ RISC 精简指令集计算机
 - Простой машинный код.  
   简单的机器代码。
 
-</div></div>
+
 
 ---
 
 ### RISC. Pipeline. 精简指令集计算机。 管道。 <br/> Параллелизм уровня инструкций 指令级并行性
 
-<div class="row"><div class="col">
+
 
 ![](../fig/prod-task-centric.png)<!-- .element height="350px" -->
 
-</div><div class="col">
+
 
 ![](../fig/prod-task-pipelined.png)<!-- .element height="350px" -->
 
-</div></div>
+
 
 Разбиваем обработку инструкции на несколько этапов и выполняем их параллельно для разных команд. 我们将指令处理分为几个阶段，并针对不同的命令并行执行它们。
 
@@ -147,15 +147,15 @@ RISC 精简指令集计算机
 
 ### RISC. Работа конвейера 精简指令集计算机。 输送机操作
 
-<div class="row"><div class="col">
+
 
 ![](../fig/proc-risc-pipeline-vs-non-pipeline.jpg)
 
-</div><div class="col">
+
 
 ![](../fig/proc-risc-pipeline.jpg)
 
-</div></div>
+
 
 ----
 
@@ -223,7 +223,7 @@ RISC 精简指令集计算机
 - Конфликт всегда связан с записью в регистр.  
   冲突始终与写入寄存器有关。
 
-<div class="row"><div class="col">
+
 
 ##### RAW -- Read after Write <br/> (Data-dependency)
 
@@ -246,11 +246,11 @@ i1. R3 <- R1 + R2
 i2. R3 <- R4 + R5
 ```
 
-</div><div class="col">
+
 
 ![Data hazard in the pipelined execution](../fig/pipeline-data-hazard.png)
 
-</div></div>
+
 
 ----
 
@@ -326,7 +326,7 @@ pic -- 2; i7 -- 14; p4 -- 20; xeon -- 30; <br/> Xelerated X10q Network Processor
 is a loop transformation technique that helps to optimize the execution time of a program. We basically remove or reduce iterations. Loop unrolling increases the program’s speed by eliminating loop control instruction and loop test instructions.  
 是一种循环转换技术，有助于优化程序的执行时间。 我们基本上删除或减少迭代。 循环展开通过消除循环控制指令和循环测试指令来提高程序的速度。
 
-<div class="row"><div class="col">
+
 
 ```c
 for (int x = 0; x < 100; x++) {
@@ -334,7 +334,7 @@ for (int x = 0; x < 100; x++) {
 }
 ```
 
-</div><div class="col">
+
 
 ```c
 for (int x = 0; x < 100; x += 5 ) {
@@ -346,7 +346,7 @@ for (int x = 0; x < 100; x += 5 ) {
 }
 ```
 
-</div></div>
+
 
 ----
 
@@ -361,7 +361,7 @@ For each processor core that is physically present, the operating system address
 
 ##### Branch Prediction 分支预测
 
-<div class="row"><div class="col">
+
 
 - Статическое предсказание: 静态预测：
     - `do {<предсказанный переход 预测的转换>} while(условие 条件); ...`
@@ -371,11 +371,11 @@ For each processor core that is physically present, the operating system address
       从指定地址开始转换的累积计数器
     - И т.п.
 
-</div><div class="col">
+
 
 ![](../fig/proc-branch-prediction.png)
 
-</div></div>
+
 
 ----
 
@@ -436,7 +436,7 @@ for (unsigned i = 0; i < 100000; ++i) {
 - `cmov` не требует сброса конвейера при невыполнении условия.  
   如果不满足条件，`cmov` 不需要重置管道。
 
-<div class="row"><div class="col">
+
 
 ```asm
 cmp data[j], 128
@@ -449,7 +449,7 @@ add sum, rcx
 
 `-O0`
 
-</div><div class="col">
+
 
 ```asm
 cmp edx, 127
@@ -459,7 +459,7 @@ add rbx, edx ;rbx = sum
 
 `-O3`
 
-</div></div>
+
 
 ----
 
@@ -473,7 +473,7 @@ add rbx, edx ;rbx = sum
 
 ### RISC. Практика
 
-<div class="row"><div class="col">
+
 
 Почему RISC не победил CISC? Или победил? 为什么RISC没有打败CISC？ 还是他赢了？
 
@@ -492,11 +492,11 @@ add rbx, edx ;rbx = sum
 
 </div> <!-- .element: class="fragment" -->
 
-</div><div class="col">
+
 
 ![](../fig/cisc-vs-risc-meme.jpg)
 
-</div></div>
+
 
 ---
 
@@ -519,15 +519,15 @@ add rbx, edx ;rbx = sum
 
 ### Распределение регистров. Выражения 登记分配。 表达式
 
-<div class="row"><div class="col">
+
 
 ![](../fig/proc-prog-instruction-selection.png)
 
-</div><div class="col">
+
 
 ![](../fig/proc-prog-reg-allocations.png)
 
-</div></div>
+
 
 - Не все регистры одинаковы (особенно в CISC).  
   并非所有寄存器都是相同的（特别是在 CISC 中）。
@@ -542,7 +542,7 @@ add rbx, edx ;rbx = sum
 
 ### Процедуры. Функции. Subroutine 程序。 功能。 子程序
 
-<div class="row"><div class="col">
+
 
 1. Один вход. Один выход. jmp  
    一个入口。 一个出口。 jmp
@@ -567,10 +567,10 @@ add rbx, edx ;rbx = sum
 5. Сброс регистров. 复位寄存器。
 6. inline
 
-</div><div class="col">
+
 
 ![](../fig/prog-reenterance-procedure.png)
 
 ![](../fig/prog-recursive-procedure.png)
 
-</div></div>
+

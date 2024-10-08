@@ -55,16 +55,16 @@
 
 ## Кооперативная многозадачность (Cooperative Multitasking) 协作多任务处理
 
-<div class="row"><div class="col">
+
 
 Многозадачность, при которой *следующая задача* выполняется, когда *текущая задача* явно объявит о готовности отдать процессорное время.  
 多任务处理，其中当“当前任务”明确宣布准备放弃 CPU 时间时，执行“下一个任务”。
 
-</div><div class="col">
+
 
 ![](../fig/threads-cooprative.gif)
 
-</div></div>
+
 
 1. Активная программа получает всё процессорное время.  
    活动程序接收所有处理器时间。
@@ -79,7 +79,7 @@
 
 ### Cooperative Multitasking. Подходы 协作多任务处理。 方法
 
-<div class="row"><div class="col">
+
 
 Уровень реализации: 实施级别：
 
@@ -93,11 +93,11 @@
 3. Через конечные автоматы  
    通过有限状态机 <br/> (см. "Программный ввод-вывод")
 
-</div><div class="col">
+
 
 ![](../fig/node-js-event-loop.png)
 
-</div></div>
+
 
 ----
 
@@ -115,7 +115,7 @@
 
 ### Cooperative Multitasking. Анализ 协作多任务处理。 分析
 
-<div class="row"><div class="col">
+
 
 #### Преимущества CM 好处
 
@@ -124,7 +124,7 @@
 2. Контроль за ресурсами со стороны приложения.  
    应用程序对资源的控制。
 
-</div><div class="col">
+
 
 #### Недостатки CM
 
@@ -135,7 +135,7 @@
 3. Сложность интерактивных приложений. Балансировка ресурсов между потоками (разные авторы).  
    交互式应用程序的复杂性。 平衡线程之间的资源（各个作者）。
 
-</div></div>
+
 
 ---
 
@@ -143,16 +143,16 @@
 
 (истинная многозадачность)
 
-<div class="row"><div class="col">
+
 
 ОС передаёт управление между программами в случае завершения операций ввода-вывода, событий в аппаратуре компьютера, истечения таймеров и квантов времени, поступления сигналов.  
 当输入/输出操作完成、计算机硬件中的事件、定时器和时间片到期以及接收到信号时，操作系统在程序之间转移控制。
 
-</div><div class="col">
+
 
 ![](../fig/threads-preemptive.gif)
 
-</div></div>
+
 
 1. Переключение процессов происходит буквально между любыми двумя инструкциями.  
    进程切换确实发生在任意两条指令之间
@@ -182,7 +182,7 @@ Offtopic: [Checkpoint/Restore In Userspace, or CRIU](https://criu.org/Main_Page)
 
 ### Preemptive Multitasking. Анализ 抢占式多任务处理。 分析
 
-<div class="row"><div class="col">
+
 
 #### Преимущества PM
 
@@ -191,7 +191,7 @@ Offtopic: [Checkpoint/Restore In Userspace, or CRIU](https://criu.org/Main_Page)
 2. Интерактивные системы (почти мгновенная реакция).  
    交互式系统（几乎瞬时响应）。
 
-</div><div class="col">
+
 
 #### Недостатки PM
 
@@ -200,7 +200,7 @@ Offtopic: [Checkpoint/Restore In Userspace, or CRIU](https://criu.org/Main_Page)
 2. "Тяжесть" потоков на уровне процессора.  
    处理器级别线程的“重量”。
 
-</div></div>
+
 
 Примечания: 笔记：
 
@@ -247,7 +247,7 @@ Offtopic: [Checkpoint/Restore In Userspace, or CRIU](https://criu.org/Main_Page)
 
 ### Система прерываний (Interruptions) 中断系统
 
-<div class="row"><div class="col">
+
 
 Позволяет сигнализировать процессору о том, что текущий поток управления должен:  
 允许您向处理器发出信号，表明当前控制线程应该：
@@ -261,11 +261,11 @@ Offtopic: [Checkpoint/Restore In Userspace, or CRIU](https://criu.org/Main_Page)
 4. по завершении выполнения обработчика прерывания управление должно быть **возвращено** исходному потоку управления с восстановлением состояния.  
    中断处理程序完成后，控制权必须**返回**到原始控制线程并恢复状态。
 
-</div><div class="col">
+
 
 ![](../fig/interop-processing.png)
 
-</div></div>
+
 
 ----
 
@@ -309,7 +309,7 @@ Offtopic: [Checkpoint/Restore In Userspace, or CRIU](https://criu.org/Main_Page)
 
 #### Система прерываний. Устройство 中断系统。 设备
 
-<div class="row"><div class="col">
+
 
 1. Обычно на аппаратном уровне (контроллер прерываний). Скорость критична.  
    通常在硬件级别（中断控制器）。 速度至关重要。
@@ -318,13 +318,13 @@ Offtopic: [Checkpoint/Restore In Userspace, or CRIU](https://criu.org/Main_Page)
 3. Обработчик прерываний по возможности компактен и быстр. Практика отложенных вызовов: фиксация отложенной процедуры, её запуск в обычном режиме.  
    中断处理程序尽可能紧凑且快速。 练习延迟调用：修复延迟过程，在正常模式下运行它。
 
-</div><div class="col">
+
 
 ![](../fig/interrupts-in-computer-architecture.png)
 
 ![](../fig/interrupts-in-computer-architecture-process.jpg) <!-- .element: height="250px" -->
 
-</div></div>
+
 
 ---
 
@@ -336,21 +336,21 @@ Offtopic: [Checkpoint/Restore In Userspace, or CRIU](https://criu.org/Main_Page)
 A watchdog timer is an *electronic or software* timer that is used to detect and recover from computer malfunctions.  
 看门狗定时器是一种“电子或软件”定时器，用于检测计算机故障并从中恢复。
 
-<div class="row"><div class="col">
+
 
 ![](../fig/simple-watchdog-timer.gif)
 
-</div><div class="col">
+
 
 ![](../fig/simple-watchdog-timer-process.jpg)
 
-</div></div>
+
 
 ----
 
 ### Система прерываний. Ввод-вывод. SPI 中断系统。 输入输出。 SPI
 
-<div class="row"><div class="col">
+
 
 Варианты: 选项：
 
@@ -367,7 +367,7 @@ A watchdog timer is an *electronic or software* timer that is used to detect and
     - по завершении передачи основной поток получает доступ к буферу.  
       传输完成后，主线程可以访问缓冲区。   
 
-</div><div class="col">
+
 
 ![](../fig/io-spi-wave-diagram.png)
 
@@ -375,7 +375,7 @@ A watchdog timer is an *electronic or software* timer that is used to detect and
 
 (программно-управляемый <br/> ввод-вывод)
 
-</div></div>
+
 
 ---
 
@@ -384,16 +384,16 @@ A watchdog timer is an *electronic or software* timer that is used to detect and
 Как уйти от программно-управляемого ввода-вывода?  
 如何摆脱软件控制的 I/O？
 
-<div class="row"><div class="col">
+
 
 Прямой доступа к памяти (Direct Memory Access, DMA). Позволяет процессору отдать команду на перенос данных контроллеру DMA, который её реализует независимо и уведомляет процессор о результатах через систему прерываний.  
 直接内存访问 (DMA)。 允许处理器发出命令传输数据到DMA控制器，DMA控制器独立实现并通过中断系统将结果通知处理器。
 
-</div><div class="col">
+
 
 ![_Direct Memory Access_](../fig/dma-block-diagram-ru.png)
 
-</div></div>
+
 
 Другой вариант: каналы (процессоры) ввода-вывода. Позволяют процессору определить программу для взаимодействия с внешним устройством. ISA канала адаптирована для ввода-вывода (пример: автоматическая конвертация форматов). Сегодня применяется редко, раньше часто применялся в мэйнфрэймах.  
 另一种选择：I/O 通道（处理器）。 允许处理器定义与外部设备通信的程序。 通道 ISA 适用于 I/O（例如：自动格式转换）。 现在它很少被使用，以前它经常在大型机中使用。
