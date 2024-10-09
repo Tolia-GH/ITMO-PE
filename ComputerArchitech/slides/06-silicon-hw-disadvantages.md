@@ -25,11 +25,11 @@
 
 ### *Вопрос*: Проблема разбега в двоированной системе
 
-<div class="row"><div class="col">
+
 
 ![](../fig/signal-lines-len.png)
 
-</div><div class="col">
+
 
 `P1` и `P2` -- идентичные процессоры, с идентичным ПО, с единым тактовым сигналом.  
 “P1”和“P2”是相同的处理器，具有相同的软件和单个时钟信号。
@@ -40,7 +40,7 @@
 Почему процессоры могут регулярно выдавать разные значения?  
 为什么处理器会定期产生不同的值？
 
-</div></div>
+
 
 ----
 
@@ -78,35 +78,35 @@
 
 ### Выращиваем монокристалл кремния (буля) 生长硅单晶（晶锭）
 
-<div class="row"><div class="col">
+
 
 ![](../fig/circuit-crystal-process.png)
 
-</div><div class="col">
+
 
 ![](../fig/circuit-crystal.jpg)
 
-</div></div>
+
 
 ----
 
 ### Производим подложку будущих чипов (Wafer) 我们生产未来芯片的基板（晶圆）
 
-<div class="row"><div class="col">
+
 
 ![](../fig/circuit-wafer.jpg)
 
-</div><div class="col">
+
 
 ![](../fig/circuit-wafer-on-hand.png)
 
-</div></div>
+
 
 ----
 
 ### Фотолитография и "море" транзисторов 光刻与晶体管的“海洋”
 
-<div class="row"><div class="col">
+
 
 "свет-шаблон-фоторезист"  
 “光-模板-光刻胶”
@@ -120,11 +120,11 @@
 - 通过光掩模曝光。
 - 去除废光刻胶。
 
-</div><div class="col">
+
 
 ![](../fig/circuit-mask.png)
 
-</div></div>
+
 
 ----
 
@@ -148,27 +148,27 @@
 
 ### Корпус и контакты 外壳和触点
 
-<div class="row"><div class="col">
+
 
 ![](../fig/circuit-wire-bonding.png)
 
-</div><div class="col">
+
 
 ![](../fig/bga-inside.png)
 
-</div></div>
+
 
 ---
 
 #### Современный степпер (засветка фотошаблона) 现代步进机（光掩模照明）
 
-<div class="row"><div class="col">
+
 
 ![](../fig/asml-fabric-1.jpg)
 
 [источник](https://habr.com/ru/company/dcmiran/blog/490682/)
 
-</div><div class="col">
+
 
 <div>
 
@@ -179,7 +179,7 @@
 
 </div> <!-- .element: class="fragment" -->
 
-</div></div>
+
 
 ----
 
@@ -214,7 +214,7 @@
 **Moore's law** is the observation that the number of transistors in a dense integrated circuit (IC) doubles about every two years.  
 **摩尔定律** 是指密集集成电路 (IC) 中的晶体管数量大约每两年翻一番。
 
-<div class="row"><div class="col">
+
 
 - закон Амдала (фундаментальное ограничение на параллелизм, к нему мы вернемся позднее)
 - накладные расходы на параллельные вычисления
@@ -225,11 +225,11 @@
 - 并行编程的客观复杂性
 - 数据传送
 
-</div><div class="col">
+
 
 ![](../fig/amdahls-law-ru.png)
 
-</div></div>
+
 
 ----
 
@@ -272,7 +272,7 @@ software system 软件系统
 
 ### Производство 生产
 
-<div class="row"><div class="col">
+
 
 1. Логистика
 2. Склады
@@ -294,11 +294,11 @@ software system 软件系统
 7. 分配
 8. 保修维修
 
-</div><div class="col">
+
 
 ![](../fig/manufacturing-is-meme.png)
 
-</div></div>
+
 
 ----
 
@@ -327,31 +327,31 @@ software system 软件系统
 
 ### Оловянные нитевидные кристаллы в электронной технике 电子产品中的锡须
 
-<div class="row"><div class="col">
+
 
 ![](../fig/whisker-1.jpg)
 
-</div><div class="col">
+
 
 ![](../fig/whisker-2.jpg)
 
-</div><div class="col">
+
 
 ![](../fig/whisker-3.jpg)
 
-</div></div>
+
 
 ----
 
-<div class="row"><div class="col">
+
 
 ![](../fig/whisker-40.jpg)
 
-</div><div class="col">
+
 
 ![](../fig/whisker-50.jpg)
 
-</div></div>
+
 
 [источник](https://alex-avr2.livejournal.com/211190.html)
 
@@ -359,7 +359,7 @@ software system 软件系统
 
 ### Варианты замены устаревшей аппаратуры 更换过时设备的选项
 
-<div class="row"><div class="col">
+
 
 1. Перепроектирование на новой элементной базе (сохранение интерфейсов и ПО).
 2. Модульная организация и стандартизированные интерфейсы. Имитация элементов. Парадокс Тесея.
@@ -371,17 +371,17 @@ software system 软件系统
 3. 虚拟化（启动软件）。
 4. 用户体验问题（80年代的计算机允许您在现代计算机加载时在数据库中输入条目）。
 
-</div><div class="col">
+
 
 ![](../fig/ship-of-theseus.jpg)
 
-</div></div>
+
 
 ----
 
 ### Сложность внесения изменений 难以做出改变
 
-<div class="row"><div class="col">
+
 
 1. Чем совершеннее технология, тем сложнее внести изменения. 技术越先进，改变就越困难。
     - Навесной монтаж: перерезал один провод, припаял другой. 
@@ -399,20 +399,20 @@ software system 软件系统
     - [Почему управление одним реле с помощью ARM-процессора -- это нормально?](https://alex-avr2.livejournal.com/177508.html)  
       为什么使用 ARM 处理器控制一个继电器是正常的？
 
-</div><div class="col">
+
 
 ![](../fig/voyager.jpeg)
 
 *Примечание*: речь о применении "патча", а не о его разработке.  
 *注意*：这是关于应用“补丁”，而不是开发它。
 
-</div></div>
+
 
 ----
 
 ### Почему сложность изменений -- это хорошо? 为什么变革的复杂性是一件好事？
 
-<div class="row"><div class="col">
+
 
 <div>
 
@@ -440,8 +440,8 @@ software system 软件系统
 
 </div> <!-- .element: class="fragment" -->
 
-</div><div class="col">
+
 
 ![](../fig/geek-and-poke-fail.png)
 
-</div></div>
+

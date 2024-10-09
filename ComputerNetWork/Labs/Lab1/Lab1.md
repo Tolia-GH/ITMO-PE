@@ -10,7 +10,7 @@
     </script>
 </head>
 
-## [MainPage](../index.md)/[Computer NetWork](README.md)/Lab1
+## [MainPage](../../../index.md)/[Computer Network](../../README.md)/Lab 1
 
 # Лабораторные работы по дисциплине «Компьютерные сети» «Моделирование компьютерных сетей в среде NetEmul»
 

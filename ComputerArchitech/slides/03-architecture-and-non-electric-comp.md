@@ -95,7 +95,7 @@ Software architecture (en) is the set of design decisions which, if made incorre
 
 ---
 
-<div class="row"><div class="col">
+
 
 ## Примеры ошибок 错误示例
 
@@ -105,11 +105,11 @@ Software architecture (en) is the set of design decisions which, if made incorre
 Теперь несколько примеров из практики.  
 现在一些实践中的例子。
 
-</div><div class="col">
+
 
 ![](../fig/geek-and-poke-fail.png)<!-- .element: height="600px" -->
 
-</div></div>
+
 
 ----
 
@@ -147,7 +147,7 @@ Notes: План: вырезать на лазере. Синие точки -- о
 
 Из описания формата JSON: 从JSON格式描述来看：
 
-<div class="row"><div class="col">
+
 
 ```text
 number 
@@ -168,7 +168,7 @@ digit
     onenine 
 ```
 
-</div><div class="col">
+
 
 ```text
 onenine 
@@ -184,7 +184,7 @@ exponent
     'e' sign digits
 ```
 
-</div></div>
+
 
 Что такое number?
 
@@ -253,7 +253,7 @@ exponent
 
 ### Арифмометр 加法器 <br/> Логарифмическая линейка и Ко 计算尺与 Ko
 
-<div class="row"><div class="col">
+
 
 #### Арифмометр 加法器
 
@@ -266,11 +266,11 @@ exponent
 Расчёт производится по шагам (алгоритмически), с учётом переноса между разрядами.  
 计算是分步骤（算法）进行的，考虑到数字之间的传输。
 
-</div><div class="col">
+
 
 ![](../fig/arithmometer.jpg)
 
-</div></div>
+
 
 ----
 

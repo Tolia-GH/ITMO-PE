@@ -40,7 +40,7 @@ Computer program 电脑程序
 
 ### Изменение программы компьютера 更改计算机程序
 
-<div class="row"><div class="col">
+
 
 1. Легко заменяется прямо у пользователя.  
    用户可直接轻松更换。
@@ -55,14 +55,14 @@ Computer program 电脑程序
     - Воспроизводимость сборки 构建可重复性 ([bazel](https://bazel.build), [nixos](https://nixos.org), [docker](https://www.docker.com)).
     - GitFlow -- зачем так сложно? 为什么这么难？
 
-</div><div class="col">
+
 
 ![](../fig/monkeyuser-final-patch.png)
 
 *Примечание*: речь о применении "патча", а не о его разработке.  
 *注意*：这是关于应用“补丁”，而不是开发它。
 
-</div></div>
+
 
 ----
 
@@ -90,7 +90,7 @@ Notes: Поддержка множества версий и их совмест
 
 ### Программируемые логические контроллеры 可编程逻辑控制器
 
-<div class="row"><div class="col">
+
 
 Автоматизация при помощи релейных схем:  
 使用继电器电路的自动化：
@@ -106,7 +106,7 @@ Notes: Поддержка множества версий и их совмест
 
 ![](../fig/plc-photo.jpg)<!-- .element: height="200px" -->
 
-</div><div class="col">
+
 
 ПЛК 可编程逻辑控制器
 : специальная разновидность электронной вычислительной машины.  
@@ -123,7 +123,7 @@ Notes: Поддержка множества версий и их совмест
 - 在困难条件下运行；
 - 专注于使用机器和机制。
 
-</div></div>
+
 
 ----
 
@@ -138,7 +138,7 @@ Notes: Поддержка множества версий и их совмест
 
 #### Программирование ПЛК
 
-<div class="row"><div class="col">
+
 
 IEC 61131 
 : standard for programmable controllers  
@@ -155,20 +155,20 @@ IEC 61131
 - 顺序功能图
 - 结构化文本
 
-</div><div class="col">
+
 
 ![](../fig/plc-langs.jpg)
 
 IEC 61499 -- Standard for distributed Automation. Рассмотрим ближе к концу курса в контексте распределённых платформ.  
 IEC 61499——分布式自动化标准。 让我们在分布式平台的背景下进一步了解本课程的结尾。
 
-</div></div>
+
 
 ----
 
 ### Программируемые логические интегральные схемы 可编程逻辑集成电路
 
-<div class="row"><div class="col">
+
 
 ПЛИС 可编程逻辑集成电路
 : интегральная микросхема, используемая для создания конфигурируемых цифровых электронных схем. 用于创建可配置数字电子电路的集成电路。
@@ -180,11 +180,11 @@ IEC 61499——分布式自动化标准。 让我们在分布式平台的背景�
 - "[Ре]конфигурируется", а не "программируется".  
   “[重新]配置”而不是“编程”。
 
-</div><div class="col">
+
 
 ![](../fig/fpga-design-flow.jpg)<!-- .element: height="550px" -->
 
-</div></div>
+
 
 ----
 
@@ -221,7 +221,7 @@ IEC 61499——分布式自动化标准。 让我们在分布式平台的背景�
 
 ## Модель вычислений 计算模型
 
-<div class="row"><div class="col">
+
 
 1. Процесс компьютерной системы может быть описан моделью/спецификацией/программой.
 2. MoC предоставляет язык для описания моделей процессов.
@@ -234,7 +234,7 @@ IEC 61499——分布式自动化标准。 让我们在分布式平台的背景�
 4. MoC描述了决定模型和计算机行为的执行规则（不一定是确定性的）。
 5. MoC 相对于真实计算机来说是简约的。
 
-</div><div class="col">
+
 
 Model of Computation -- MoC
 
@@ -242,13 +242,13 @@ Model of Computation -- MoC
 
 [Источник](https://www.researchgate.net/publication/337394921_Pathways_to_cellular_supremacy_in_biocomputing)
 
-</div></div>
+
 
 ----
 
 ### MoC. Последовательные модели <br/> Sequential models 顺序模型
 
-<div class="row"><div class="col">
+
 
 allows describing a sequential process, which process can be represented as a sequence of state transitions:  
 允许描述一个顺序过程，该过程可以表示为一系列状态转换：
@@ -264,19 +264,19 @@ allows describing a sequential process, which process can be represented as a se
 - 图灵机
 - 冯·诺依曼机
 
-</div><div class="col">
+
 
 ![](../fig/moc-sequential.png)
 
 ![](../fig/fsm.png)
 
-</div></div>
+
 
 ----
 
 ### MoC. Функциональные модели <br/> Functional models 函数模型
 
-<div class="row"><div class="col">
+
 
 represent a computational process 表示一个计算过程 <br/> in symbol form and a set of reduction rules: 以符号形式和一组归约规则：
 
@@ -291,17 +291,17 @@ represent a computational process 表示一个计算过程 <br/> in symbol form 
 
 [Пример символьного расчёта факториала](https://www.cl.cam.ac.uk/teaching/Lectures/funprog-jrh-1996/all.pdf)
 
-</div><div class="col">
+
 
 ![](../fig/lambda-calculus-process.png)<!-- .element: height="550px" -->
 
-</div></div>
+
 
 ----
 
 ### MoC. Параллельные модели <br/> Concurrent models 并发模型
 
-<div class="row"><div class="col">
+
 
 applied for a system which process includes several interacting processes and these interactions (usually, internal process behavior described on different MoC):  
 应用于一个系统，该系统的进程包括多个交互进程以及这些交互（通常是不同MoC上描述的内部进程行为）：
@@ -319,13 +319,13 @@ applied for a system which process includes several interacting processes and th
 - 互动网
 - 演员模型。
 
-</div><div class="col">
+
 
 ![](../fig/moc-kahn-process-network-model.jpg)<!-- .element: height="230px" -->
 
 ![](../fig/moc-sdf.jpg)<!-- .element: height="260px" -->
 
-</div></div>
+
 
 ----
 
@@ -346,7 +346,7 @@ Programming style, also known as code style 编程风格，也称为代码风格
 
 ### MoC. Практика 实践
 
-<div class="row"><div class="col">
+
 
 1. Computer Science. Формальные модели.  
    计算机科学。 正式模型。
@@ -365,13 +365,13 @@ Programming style, also known as code style 编程风格，也称为代码风格
     - для экспертизы.
       用于检查。
 
-</div><div class="col">
+
 
 ![](../fig/mdd.png)
 
 ![](../fig/xuml-diagram.png)
 
-</div></div>
+
 
 ---
 

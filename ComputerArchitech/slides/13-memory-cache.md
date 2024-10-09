@@ -24,14 +24,14 @@
 
 ## Устройство памяти с произвольным доступом 随机存取存储器设备
 
-<div class="row"><div class="col">
+
 
 Массив ячеек памяти $4x3$ <br/> (4 слова по 3 бита)  
 存储单元数组 $4x3$ <br/>（4 个字，3 位）
 
 ![_Memory array_](../fig/memory-array.png)
 
-</div><div class="col">
+
 
 - `Address` -- адрес ячейки памяти шириной 2 бита.  
   `Address` -- 2 位宽的存储单元地址。
@@ -44,7 +44,7 @@
 - `stored bit` -- ячейка памяти.  
   `存储位` -- 存储单元。
 
-</div></div>
+
 
 ----
 
@@ -64,7 +64,7 @@ Notes: <https://computationstructures.org/lectures/caches/caches.html>
 
 ### Read Only Memory (ROM) Cell 只读存储器 (ROM) 单元
 
-<div class="row"><div class="col">
+
 
 Память только для чтения.  
 只读存储器。
@@ -77,17 +77,17 @@ Notes: <https://computationstructures.org/lectures/caches/caches.html>
 - Пережигание перемычек (однократное программирование, см. [PROM](https://ru.wikipedia.org/wiki/PROM)).  
   跳线烧坏（一次性编程，请参阅 [PROM](https://ru.wikipedia.org/wiki/PROM)）。
 
-</div><div class="col">
+
 
 ![_ROM_](../fig/rom.png) <!-- .element height="600px" -->
 
-</div></div>
+
 
 ---
 
 ### Static Random Access Memory (SRAM) 静态随机存取存储器 (SRAM)
 
-<div class="row"><div class="col">
+
 
 Хранение данных при помощи **состояния группы транзисторов**. Особенности:  
 使用**一组晶体管的状态**存储数据。 特点：
@@ -99,11 +99,11 @@ Notes: <https://computationstructures.org/lectures/caches/caches.html>
 - требует довольно большое количество транзисторов (низкая плотность ячеек).  
   需要相当大量的晶体管（低单元密度）。
 
-</div><div class="col">
+
 
 ![](../fig/memory-sram-cell.png)
 
-</div></div>
+
 
 ----
 
@@ -133,7 +133,7 @@ Notes: <https://computationstructures.org/lectures/caches/caches.html>
 
 ### Dynamic Random Access Memory (DRAM) 动态随机存取存储器 (DRAM)
 
-<div class="row"><div class="col">
+
 
 Динамическая память, состояние хранится **в конденсаторе**.  
 动态存储器，状态存储**在电容器**中。
@@ -151,11 +151,11 @@ Notes: <https://computationstructures.org/lectures/caches/caches.html>
 - один транзистор и конденсатор на ячейку памяти.  
   每个存储单元一个晶体管和一个电容器。
 
-</div><div class="col">
+
 
 ![_DRAM_](../fig/dram.png)
 
-</div></div>
+
 
 ----
 
@@ -188,7 +188,7 @@ Notes: <https://computationstructures.org/lectures/caches/caches.html>
 
 ## Кеширование 缓存
 
-<div class="row"><div class="col">
+
 
 Кеш 缓存
 : промежуточный буфер с быстрым доступом, содержащий информацию, которая может быть запрошена с наибольшей вероятностью.  
@@ -203,11 +203,11 @@ Notes: <https://computationstructures.org/lectures/caches/caches.html>
 - Смена интерфейса (процессор -- кеш -- память).  
   接口的改变（处理器-高速缓存-内存）。
 
-</div><div class="col">
+
 
 ![](../fig/memory-access-patterns.png)
 
-</div></div>
+
 
 ----
 
@@ -228,7 +228,7 @@ Notes: [John L. Hennessy, David A. Patterson Новый золотой век д
 
 ### Принцип функционирования кеша 缓存的工作原理
 
-<div class="row"><div class="col">
+
 
 1. Кеш состоит из набора записей (блоков кеша, кеш-линий).  
    缓存由一组条目（缓存块、缓存行）组成
@@ -241,11 +241,11 @@ Notes: [John L. Hennessy, David A. Patterson Новый золотой век д
 5. Память может быть изменена вне зависимости от кеша: DMA, другое ядро.  
    无论缓存如何，内存都可以更改：DMA、不同核心。
 
-</div><div class="col">
+
 
 ![_Отображение кеша на память_](../fig/cache-basic.png)
 
-</div></div>
+
 
 ---
 
@@ -285,7 +285,7 @@ Notes: [John L. Hennessy, David A. Patterson Новый золотой век д
 
 #### Виды кеш-промахов 缓存未命中的类型
 
-<div class="row"><div class="col">
+
 
 - **По чтению инструкций**. Самая большая задержка. Процессор вынужден простаивать в ожидании инструкции.  
   **通过阅读指令**。 最大的延迟。 处理器在等待指令时被迫空闲。
@@ -294,17 +294,17 @@ Notes: [John L. Hennessy, David A. Patterson Новый золотой век д
 - **По записи данных**. Минимальная задержка, т.к. запись может быть поставлена в очередь.  
   **通过记录数据**。 最小延迟，因为 该条目可以排队。
 
-</div><div class="col">
+
 
 ![](../fig/cache-miss-meme.jpg)
 
-</div></div>
+
 
 ----
 
 ### Кеш. Вытеснение / замещение 缓存。 置换/更换
 
-<div class="row"><div class="col">
+
 
 - Эвристика предсказания, какая строка вероятнее всего не потребуется для последующих операций.  
   用于预测后续操作最有可能不需要哪一行的启发式方法。
@@ -323,19 +323,19 @@ Notes: [John L. Hennessy, David A. Patterson Новый золотой век д
     - Victim Cache.  
       受害者缓存。
 
-</div><div class="col">
+
 
 ![Sequence: A B C D E D F](../fig/cache-lru-example.png)
 
 Access sequence: 访问顺序： `A B C D E D F`
 
-</div></div>
+
 
 ----
 
 #### Pseudo-LRU 伪LRU
 
-<div class="row"><div class="col">
+
 
 - Each node of the tree has a one-bit flag denoting "go left to insert a pseudo-LRU element" or "go right to insert a pseudo-LRU element".  
   树的每个节点都有一个一位标志，表示“向左插入伪 LRU 元素”或“向右插入伪 LRU 元素”。
@@ -344,19 +344,19 @@ Access sequence: 访问顺序： `A B C D E D F`
 - To invert nodes on the path from the root to a leaf.  
   反转从根到叶的路径上的节点。
 
-</div><div class="col">
+
 
 ![](../fig/cache-plru.png)
 
 Access sequence: `A B C D E`
 
-</div></div>
+
 
 ----
 
 #### Уровни кеширования в процессорах 1 处理器 1 中的缓存级别
 
-<div class="row"><div class="col">
+
 
 - `L0` (Level 0 Cache, опция) -- специализированный кеш для: стека, целых чисел или с плавающей точкой. Обычно доступ за такт.  
   `L0`（0 级缓存，选项）- 专用缓存：堆栈、整数或浮点。 通常按时钟访问。
@@ -371,17 +371,17 @@ Access sequence: `A B C D E`
     - Pentium 4 -- кеширование инструкций на уровне микроинструкций.  
       Pentium 4 - 在微指令级别缓存指令。
 
-</div><div class="col">
+
 
 ![](../fig/proc-cache-hierarchy.jpg)
 
-</div></div>
+
 
 ----
 
 #### Уровни кеширования в процессорах 2 2 个处理器中的高速缓存级别
 
-<div class="row"><div class="col">
+
 
 - `L2`, обычно часть процессора. От 128 Кбайт до 1-12 Мбайт. Обычно разделяется между ядрами.  
   “L2”，通常是处理器的一部分。 从 128 KB 到 1-12 MB。 通常在核心之间共享。
@@ -393,8 +393,8 @@ Access sequence: `A B C D E`
 L0--L3 -- SRAM; L4 -- DRAM. Зачем столько?  
 L0--L3——SRAM； L4——DRAM。 为什么这么多？
 
-</div><div class="col">
+
 
 ![](../fig/proc-cache-hierarchy.jpg)
 
-</div></div>
+

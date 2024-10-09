@@ -10,7 +10,7 @@
   </script>
 </head>
 
-## [MainPage](../../../index.md)/[DataBase](../../README.md)/Lab 1
+## [MainPage](../../../index.md)/[Computer Network](../../README.md)/DZ
 
 <center>
 <p>Университет ИТМО<br>Факультет ФПИ и КТ</p>

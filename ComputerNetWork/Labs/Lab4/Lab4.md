@@ -10,7 +10,7 @@
     </script>
 </head>
 
-## [MainPage](../index.md)/[Computer NetWork](README.md)/Lab2
+## [MainPage](../../../index.md)/[Computer Network](../../README.md)Lab 4
 
 # Лабораторная работа №4 <br> «Анализ трафика компьютерных сетей с помощью утилиты Wireshark»
 
