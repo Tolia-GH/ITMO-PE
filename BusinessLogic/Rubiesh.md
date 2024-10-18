@@ -29,7 +29,7 @@
   - [Билет 7：](#билет-7-1)
       - [1. планировщик задачи: что зачем и где](#1-планировщик-задачи-что-зачем-и-где)
       - [2. camunda: компоненты, возможности](#2-camunda-компоненты-возможности)
-      - [3. Java класс с JMS для оповещения рецензентов о проверке научных статей](#3-java-класс-с-jms-для-оповещения-рецензентов-о-проверке-научных-статей)
+      - [3. Java класс с JMS для оповещения рецензентов о проверке научных статей  带有 JMS 的 Java 类，用于通知审稿人有关科学文章的审阅情况](#3-java-класс-с-jms-для-оповещения-рецензентов-о-проверке-научных-статей--带有-jms-的-java-类用于通知审稿人有关科学文章的审阅情况)
   - [Билет 8：](#билет-8)
       - [1. основные компоненты bpms](#1-основные-компоненты-bpms)
       - [2. Протоколы MQTT их плюсы и минусы](#2-протоколы-mqtt-их-плюсы-и-минусы)
@@ -1048,6 +1048,29 @@ BPMS通过系统化的业务流程管理，能够大幅提升企业的整体运�
 
 #### 3. Написать планировщик, используя Java SE, который запускается каждый день в 00.00 и отправляет сообщения от студентов преподавателю, когда тот проверит рубежку. Во избежание ddos атаки интервал между сообщениями 5 секунд. <br> 使用 Java SE 编写一个调度程序，每天 00:00 运行，并在老师检查里程碑时将学生的消息发送给老师。为了避免ddos攻击，消息之间的间隔为5秒。
 
+```java
+class PingTsopa {
+    private final ScheduledExecutorService scheduler =
+            Executors.newScheduledThreadPool(1);
+    public void pingScheduledTask() {
+        final Runnable ping = new Runnable() {
+            ScheduledFuture<?> taskHandle = msgScheduler.schedule(new Runnable() {
+                public void run() {
+                    sendSpamToTsopa();
+                }
+            }, 5, TimeUnit.SECONDS);
+        };
+        long midnight = LocalDateTime.now()
+                .until(LocalDate.now().plusDays(1).atStartOfDay(), ChronoUnit.MINUTES);
+        scheduler.scheduleAtFixedRate(ping, //runnable
+                midnight - System.currentTimeMillis(), // initialDelay
+                TimeUnit.DAYS.toMillis(1) //period
+                TimeUnit.MILISECONDS //unit
+        );
+    }
+}
+```
+
 ## Билет ?:
 
 #### 1. Active mq, архитектура, +/-, область применения <br> Active mq、架构、+/-、范围
@@ -1150,6 +1173,28 @@ BPM生命周期的五个阶段（设计、建模、执行、监控、优化）�
 Жизненный цикл BPM помогает компаниям постоянно совершенствовать свои процессы, повышая их эффективность и адаптируя к изменяющимся условиям рынка.
 
 #### 3. С помощью jakarta ee сделать планировщик: Блокировать стулом дверь аудитории после 5 минут от начала пары, если лектор в аудитории и включил проектор и при этом в аудитории есть пара. Получить расписание можно по isu api. <br> 使用 jakarta ee 制定计划：如果讲师在观众席中并且已打开投影仪并且观众席中有一对夫妇，则在课程开始 5 分钟后用椅子挡住教室门。您可以使用 isu api 获取时间表。
+
+```java
+@Singleton
+public class ChairSetterBean implements ChairSetter {
+    @Inject
+    private AudienceService audienceService;
+    @Inject
+    private ISUapi isuAPI;
+
+    @Schedules({
+            @Schedule(dayOfWeek = "1, 2, 3, 4, 5, 6", hour = "8", minute = "25"),
+            @Schedule(dayOfWeek = "1, 2, 3, 4, 5, 6", hour = "10", minute = "5"),
+            @Schedule(dayOfWeek = "1, 2, 3, 4, 5, 6", hour = "11", minute = "45")
+    })
+    public void setChair() {
+        if (!audienceService.isProfessorInAudience() || !audienceService.isProjectorOn() ||
+                !isuAPI.isLessonInAudienceNow())
+            return;
+        audienceService.setChairInAuditory();
+    }
+}
+```
 
 ## Билет ?:
 
@@ -1320,6 +1365,48 @@ JBPM（Java Business Process Management）和Camunda BPMN都是用来实现业�
 Camunda BPM 提供了一个全面的业务流程管理解决方案，涵盖了从设计、执行到监控的各个环节。它通过图形化的工具、灵活的API、以及广泛的集成能力，为企业提供了高效管理业务流程的手段。
 
 #### 3. Написать Quartz, который каждый день в 10 и 22 проверяет у пациентов температуру, если было уже в 2 раза превышение, то вызвать врачей для проведения теста ПЦР, если тест положительный, то ограничить пациента и всех, кто с ним контактировал на 10 дней, все методы для работы с врачами уже есть <br> 写信给Quartz，每天10点和22点检查病人的体温，如果已经高了一倍，那就打电话给医生进行PCR检测，如果检测结果呈阳性，那就限制病人和所有接触过的人他呆了10天，仅此而已。已经有与医生合作的方法了
+
+
+
+```java
+public class CovidJob implements Job {
+    @Autowired
+    PatientService pService;
+    @Autowired
+    DoctorService dService;
+    public void execute(JobExecutionContext arg0) throws JobExecutionException {
+        List<Patient> patients = pService.getAllPatients();
+        for (Pacient p : pacients) {
+            if (p.getTemperatureIncresement() > 2) {
+                bool res = dService.makePCR(p);
+                if (res = true) {
+                    dService.imprison(p, 10);
+                    dService.imprison(p.getContactedPatients(), 10);
+                }
+            }
+        }
+    }
+}
+public class Main {
+    public static void main(String args[]) {
+        SchedulerFactory schedFact = new StdSchedulerFactory();
+        try {
+            Scheduler sched = schedFact.getScheduler();
+            JobDetail covidJob = JobBuilder.newJob(CovidJob.class)
+                    .withIdentity("CovidJob", "group1")
+                    .build();
+            Trigger covidTrigger = TriggerBuilder.newTrigger()
+                    .withIdentity("covidTrigger", "group1")
+                    .withSchedule(CronScheduleBuilder.cronSchedule("0 10,22 * * *"))
+                            .build();
+            sched.scheduleJob(covidJob, covidTrigger);
+            sched.start();
+        } catch (ScheduledException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 ## Билет 3:
 
@@ -1635,6 +1722,35 @@ Camunda 支持通过 Cockpit 来实时监控业务流程和流程实例的执行
 
 #### 3. Планировщик на Spring: просыпается каждые 5 минут рабочего времени с 11:00 до 17:00 (по будням), исключая обеденные перерыв с 13:00 до 15:00 и выполняет: <br> 春季调度程序：从 11:00 到 17:00（工作日），每 5 分钟工作时间唤醒一次，不包括 13:00 到 15:00 的午休时间，并执行：
 
+```java
+@EnableScheduling
+public class RobotScheduledTask {
+    //At every 5th minute from 0 through 55 past
+    //every hour from 11 through 13 and every hour from 15 through 17
+    //on every day-of-week from Monday through Friday
+    @Scheduled(cron = "0-55/5 11-13,15-17 * * 1-5")
+    public void scheduleTask() {
+        List<Student> outweared = checkOutwear();
+        List<Chair> chairsWithWrongAngle = checkChairAngles();
+        List<Student> studentInWrongChairs = chairsWithWrongAngle
+                .stream()
+                .map(c -> c.getStudent())
+                .collect(Collectors.toList());
+        List<Student> studentsWithFood = checkFood();
+        List<Student> studentsWithDrinks = checkDrinks();
+        List<Student> students = getAllStudentsInAudience();
+        for (Student s : students) {
+            int fuckups = 0;
+            if (outweared.constins(s)) fuckups++;
+            if (studentInWrongChairs.constins(s)) fuckups++;
+            if (studentsWithFood.constins(s)) fuckups++;
+            if (studentsWithDrinks.constins(s)) fuckups++;
+            if (fuckups >= 2) printLetter(s);
+        }
+    }
+}
+```
+
 ## Билет 4:
 
 #### 1. Модели поставки сообщений в JMS <br> JMS 消息传递模型
@@ -1778,6 +1894,23 @@ Eclipse开发者工具是Eclipse 上面的一组插件，你可以在自己的�
 
 #### 3. Написать планировщик в cron, который каждый день в 5 утра кроме января, июля и августа будет запускать три скрипта <br> 在 cron 中编写一个调度程序，除了一月、七月和八月之外，每天早上 5 点运行三个脚本
 
+```
+0 5 * 2-6,9-12 * /path/to/script1.sh
+0 5 * 2-6,9-12 * /path/to/script2.sh
+0 5 * 2-6,9-12 * /path/to/script3.sh
+```
+解释：
+`0 5 * 2-6,9-12 *`: 这部分定义了调度时间。
+
+- `0`: 在每小时的第 0 分钟开始执行，即正点。
+- `5`: 早上 5 点。
+- `*`: 每天。
+- `2-6,9-12`: 每年的二月到六月（2-6），以及九月到十二月（9-12）。这排除了一月（1）、七月（7）和八月（8）。
+- `*`: 每一天。
+- `/path/to/script1.sh`: 指定要运行的第一个脚本的路径，依次为第二个和第三个脚本。
+
+
+
 ## Билет 6:
 
 #### 1. Асинхронная обработка в jms <br> jms中的异步处理
@@ -1833,6 +1966,29 @@ JMS 异步处理的基本流程
 
 #### 3. Написать планировщик, используя Java SE, который запускается каждый день в 00.00 и отправляет сообщения от студентов преподавателю, когда тот проверит рубежку. Во избежание ddos атаки интервал между сообщениями 5 секунд <br> 使用 Java SE 编写一个调度程序，每天 00:00 运行，并在老师检查里程碑时将学生的消息发送给老师。为避免ddos攻击，消息间隔为5秒
 
+```java
+class PingTsopa {
+    private final ScheduledExecutorService scheduler =
+            Executors.newScheduledThreadPool(1);
+    public void pingScheduledTask() {
+        final Runnable ping = new Runnable() {
+            ScheduledFuture<?> taskHandle = msgScheduler.schedule(new Runnable() {
+                public void run() {
+                    sendSpamToTsopa();
+                }
+            }, 5, TimeUnit.SECONDS);
+        };
+        long midnight = LocalDateTime.now()
+                .until(LocalDate.now().plusDays(1).atStartOfDay(), ChronoUnit.MINUTES);
+        scheduler.scheduleAtFixedRate(ping, //runnable
+                midnight - System.currentTimeMillis(), // initialDelay
+                TimeUnit.DAYS.toMillis(1) //period
+                TimeUnit.MILISECONDS //unit
+        );
+    }
+}
+```
+
 ## Билет 7：
 
 #### 1. планировщик задачи: что зачем и где
@@ -1875,7 +2031,39 @@ Camunda — это набор приложений Modeler, Task List, BPMN Engi
 - Optimize - 用于分析和优化业务流程的（付费）应用程序。
 
 
-#### 3. Java класс с JMS для оповещения рецензентов о проверке научных статей
+#### 3. Java класс с JMS для оповещения рецензентов о проверке научных статей <br> 带有 JMS 的 Java 类，用于通知审稿人有关科学文章的审阅情况
+
+```java
+import javax.naming.InitialContext;
+
+public class Publisher {
+
+    public static void main(String[] args) throws Exception {
+        // get the initial context
+        InitialContext ctx = new InitialContext();
+
+        Topic topic = (Topic) ctx.lookup("topic/reviewersTopic");
+
+        TopicConnectionFactory connectionFactory = (TopicConnectionFactory) ctx.lookup("topic/connectionFactory");
+
+        TopicConnection topicConnection = connectionFactory.createTopicConnection();
+
+        TopicSession topicSession = topicConnection.createTopicSession(false, Session.AUTO_ACKNOWLEDGE);
+
+        TopicPublisher topicPublisher = topicSession.createPublisher(topic);
+
+        topicPublisher.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
+        
+        TextMessage message = topicSession.createTextMessage();
+        
+        message.setText("You can review new research articles");
+        
+        topicPublisher.publish(message);
+        
+        topicSession.close();
+    }
+}
+```
 
 ## Билет 8：
 
@@ -1957,6 +2145,46 @@ Camunda — это набор приложений Modeler, Task List, BPMN Engi
 
 
 #### 3. Написать Quartz, который каждый день в 10 и 22 проверяет у пациентов температуру, если было уже в 2 раза превышение, то вызвать врачей для проведения теста ПЦР, если тест положительный, то ограничить пациента и всех, кто с ним контактировал на 10 дней, все методы для работы с врачами уже есть
+
+```java
+public class CovidJob implements Job {
+    @Autowired
+    PatientService pService;
+    @Autowired
+    DoctorService dService;
+    public void execute(JobExecutionContext arg0) throws JobExecutionException {
+        List<Patient> patients = pService.getAllPatients();
+        for (Pacient p : pacients) {
+            if (p.getTemperatureIncresement() > 2) {
+                bool res = dService.makePCR(p);
+                if (res = true) {
+                    dService.imprison(p, 10);
+                    dService.imprison(p.getContactedPatients(), 10);
+                }
+            }
+        }
+    }
+}
+public class Main {
+    public static void main(String args[]) {
+        SchedulerFactory schedFact = new StdSchedulerFactory();
+        try {
+            Scheduler sched = schedFact.getScheduler();
+            JobDetail covidJob = JobBuilder.newJob(CovidJob.class)
+                    .withIdentity("CovidJob", "group1")
+                    .build();
+            Trigger covidTrigger = TriggerBuilder.newTrigger()
+                    .withIdentity("covidTrigger", "group1")
+                    .withSchedule(CronScheduleBuilder.cronSchedule("0 10,22 * * *"))
+                            .build();
+            sched.scheduleJob(covidJob, covidTrigger);
+            sched.start();
+        } catch (ScheduledException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 ## Билет 9：
 
@@ -2095,6 +2323,35 @@ Camunda通过将流程执行的数据持久化到数据库中来管理事务。�
 
 #### 3. Планировщик на Spring: просыпается каждые 5 минут рабочего времени с 11:00 до 17:00 (по будням), исключая обеденные перерыв с 13:00 до 15:00 и выполняет:
 
+```java
+@EnableScheduling
+public class RobotScheduledTask {
+    //At every 5th minute from 0 through 55 past
+    //every hour from 11 through 13 and every hour from 15 through 17
+    //on every day-of-week from Monday through Friday
+    @Scheduled(cron = "0-55/5 11-13,15-17 * * 1-5")
+    public void scheduleTask() {
+        List<Student> outweared = checkOutwear();
+        List<Chair> chairsWithWrongAngle = checkChairAngles();
+        List<Student> studentInWrongChairs = chairsWithWrongAngle
+                .stream()
+                .map(c -> c.getStudent())
+                .collect(Collectors.toList());
+        List<Student> studentsWithFood = checkFood();
+        List<Student> studentsWithDrinks = checkDrinks();
+        List<Student> students = getAllStudentsInAudience();
+        for (Student s : students) {
+            int fuckups = 0;
+            if (outweared.constins(s)) fuckups++;
+            if (studentInWrongChairs.constins(s)) fuckups++;
+            if (studentsWithFood.constins(s)) fuckups++;
+            if (studentsWithDrinks.constins(s)) fuckups++;
+            if (fuckups >= 2) printLetter(s);
+        }
+    }
+}
+```
+
 ## Билет 10：
 
 #### 1. планировщик задачи: что зачем и где <br> 任务调度程序：什么、为什么以及在哪里
@@ -2185,6 +2442,61 @@ RabbitMQ 是一个开源的消息代理软件，它实现了高级消息队列�
 RabbitMQ 是一个功能强大的消息代理，适用于各种应用场景。通过提供可靠的消息传递和灵活的路由机制，RabbitMQ 在现代分布式系统和微服务架构中发挥了重要作用。选择 RabbitMQ 可以帮助提高系统的可扩展性和灵活性，优化应用程序之间的通信。
 
 #### 3. Написать JMS сервер прием и передача
+
+```java
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.stereotype.Component;
+
+@Component
+public class JmsSender {
+
+    private final JmsTemplate jmsTemplate;
+
+    public JmsSender(JmsTemplate jmsTemplate) {
+        this.jmsTemplate = jmsTemplate;
+    }
+
+    public void sendMessage(String destination, String message) {
+        jmsTemplate.convertAndSend(destination, message);
+        System.out.println("Sent message: " + message);
+    }
+}
+```
+
+```java
+import org.springframework.jms.annotation.JmsListener;
+import org.springframework.stereotype.Component;
+
+@Component
+public class JmsReceiver {
+
+    @JmsListener(destination = "test.queue")
+    public void receiveMessage(String message) {
+        System.out.println("Received message: " + message);
+    }
+}
+```
+
+```java
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/jms")
+public class JmsController {
+
+    private final JmsSender jmsSender;
+
+    public JmsController(JmsSender jmsSender) {
+        this.jmsSender = jmsSender;
+    }
+
+    @PostMapping("/send")
+    public String sendMessage(@RequestParam String message) {
+        jmsSender.sendMessage("test.queue", message);
+        return "Message sent: " + message;
+    }
+}
+```
 
 ## Билет 11：
 
