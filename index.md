@@ -47,6 +47,11 @@ We are international students sponsored by the China Scholarship Council (CSC) t
 - [业务逻辑 Business Logic](/BusinessLogic/README.md)
 - [软件测试 Program Test](/ProgramTest/README.md)
 
+### Grade 4
+
+- [软件工程经济 Economics Software Engineering](/EconomicsSoftwareEngineering/README.md)
+- [建模 Modeling](/Modeling/README.md)
+
 ## 版权声明 Copyrights
 
 - 本项目所有非代码文本内容遵循 [CC BY-NC-SA 3.0 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)

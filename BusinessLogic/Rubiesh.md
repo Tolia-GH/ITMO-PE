@@ -966,8 +966,6 @@ public class Buscontroller {
 
 #### 1. Распределённая обработка в JMS (Jakarta Messaging) <br> JMS（Jakarta Messaging）中的分布式处理
 
-这段话存在一些拼写错误和描述不准确的地方，以下是修改后的版本：
-
 JMS基本概念
 
 JMS是什么  
@@ -1006,7 +1004,6 @@ JMS定义了用于访问消息中间件的接口，但不提供具体的实现�
 - **Non-JMS Client**: 使用JMS Provider的本地API编写的应用程序，用来替代JMS API实现收发消息的功能，通常会提供其他的一些特性，例如：CORBA、RMI等。
 - **Administered Objects**: 预定义的JMS对象，通常在Provider规范中有定义，提供给JMS客户端来访问，例如：ConnectionFactory和Destination。
 
-这是修改后的内容，修正了拼写错误和一些不准确的描述。
 
 #### 2. BPMS описание, плюсы, минусы <br> BPMS 描述、优点、缺点
 
