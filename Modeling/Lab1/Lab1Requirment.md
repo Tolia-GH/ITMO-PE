@@ -1,4 +1,4 @@
-## [MainPage](../index.md)/[Economics Software Engineering](./README.md)/Labs
+## [MainPage](../../index.md)/[Economics Software Engineering](../README.md)/Labs
 
 
 ### Учебно-исследовательская работа 1 (УИР 1) : «Обработка результатов измерений: статистический анализ числовой последовательности» <br> 教育和研究工作 1 (URI 1)：“测量结果的处理：数字序列的统计分析”
