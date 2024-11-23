@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.3.00.100">
+    <devices>
+        <dev id="D4954A58-E638-4909-BFDB-FC5A9C787366" name="S1" poe="0" model="S5700" settings="" system_mac="4C-1F-CC-53-6A-36" com_port="2000" bootmode="0" cx="151.000000" cy="359.000000" edit_left="178" edit_top="413">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="24" />
+            </slot>
+        </dev>
+        <dev id="0433C42B-17C4-4a8c-8947-2AB397CF8454" name="S2" poe="0" model="S5700" settings="" system_mac="4C-1F-CC-E6-16-E9" com_port="2001" bootmode="0" cx="543.000000" cy="359.000000" edit_left="570" edit_top="413">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="24" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="D4954A58-E638-4909-BFDB-FC5A9C787366" destDeviceID="0433C42B-17C4-4a8c-8947-2AB397CF8454">
+            <interfacePair lineName="Copper" srcIndex="11" srcBoundRectIsMoved="1" srcBoundRect_X="221.183762" srcBoundRect_Y="386.000000" srcOffset_X="-13.000000" srcOffset_Y="39.000000" tarIndex="11" tarBoundRectIsMoved="1" tarBoundRect_X="526.816223" tarBoundRect_Y="386.000000" tarOffset_X="-37.000000" tarOffset_Y="39.000000" />
+            <interfacePair lineName="Copper" srcIndex="9" srcBoundRectIsMoved="1" srcBoundRect_X="229.183762" srcBoundRect_Y="394.000000" srcOffset_X="-22.000000" srcOffset_Y="8.000000" tarIndex="9" tarBoundRectIsMoved="1" tarBoundRect_X="534.816223" tarBoundRect_Y="394.000000" tarOffset_X="-47.000000" tarOffset_Y="5.000000" />
+            <interfacePair lineName="Copper" srcIndex="10" srcBoundRectIsMoved="1" srcBoundRect_X="213.183762" srcBoundRect_Y="378.000000" srcOffset_X="-5.000000" srcOffset_Y="35.000000" tarIndex="10" tarBoundRectIsMoved="1" tarBoundRect_X="518.816223" tarBoundRect_Y="378.000000" tarOffset_X="-30.000000" tarOffset_Y="34.000000" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips />
+</topo>
