@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="79dacbcf-d2f8-4724-9614-83a9772a3d56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ITMO-PE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ITMO-PE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modeling/Lab2/Lab2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Modeling/Lab2/Lab2.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modeling/Lab2/Lab2Requirment.md" beforeDir="false" afterPath="$PROJECT_DIR$/Modeling/Lab2/Lab2Requirment.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modeling/Lab2/Report2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Modeling/Lab2/Report2.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modeling/Lab2/Matrix.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +52,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.Matrix.executor": "Run",
+    "Python.System2.executor": "Run",
     "Python.main.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -83,7 +81,7 @@
       <recent name="C:\Users\Tolia\Documents\GitHub\ITMO-PE\AI\Labs\Lab5" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Matrix">
+  <component name="RunManager" selected="Python.System2">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="ITMO-PE" />
       <option name="ENV_FILES" value="" />
@@ -125,6 +123,9 @@
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Modeling/Lab2" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -132,6 +133,26 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Modeling/Lab2/Matrix.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="System2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ITMO-PE" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Modeling/Lab2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Modeling/Lab2/System2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -168,6 +189,9 @@
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../ITMO/Grade-4/modeling/lab1/lab1" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -208,6 +232,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.System2" />
         <item itemvalue="Python.Matrix" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.test" />
@@ -217,8 +242,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
-        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PY-242.21829.153" />
+        <option value="bundled-python-sdk-464836ebc622-b74155a9e76b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.21829.153" />
       </set>
     </attachedChunks>
   </component>
@@ -257,6 +282,7 @@
       <workItem from="1730309224213" duration="13254000" />
       <workItem from="1730355290830" duration="2369000" />
       <workItem from="1732750618071" duration="1109000" />
+      <workItem from="1732765918653" duration="1438000" />
     </task>
     <servers />
   </component>
