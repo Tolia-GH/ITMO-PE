@@ -110,7 +110,7 @@ admin_s336184    ALL=(ALL:ALL) ALL
 
 2. Добавить admin_s336184 в группу sudo, и можно использовать команд `sudo` для получения root правы
 ```
-parallels@ubuntu-linux-22-04-desktop:~$ sudo usermod -g sudo test
+parallels@ubuntu-linux-22-04-desktop:~$ sudo usermod -g sudo admin_s336184
 ```
 
 3. Изменить файл /etc/passwd
@@ -121,6 +121,22 @@ parallels@ubuntu-linux-22-04-desktop:~$ sudo vipw
 
 ```
 admin_s336184:x:0:1003::/home/admin_s336184:/bin/sh
+```
+
+Проверение разниц прав между admin_s336184 и s336184
+
+Разница 1: admin_s3336184 может достигать /root, а s336184 нет
+
+```
+# изменить пользователь admin_s336184
+$ su - admin_s336184
+$ sudo ls /root  # 成功列出 root 目录内容
+snap
+
+# изменить пользователь s336184
+$ su - s336184
+$ sudo ls /root
+s336184 is not in the sudoers file. This incident will be reported.
 ```
 
 ## Вывод
