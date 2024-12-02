@@ -125,7 +125,21 @@ admin_s336184:x:0:1003::/home/admin_s336184:/bin/sh
 
 Проверение разниц прав между admin_s336184 и s336184
 
-Разница 1: admin_s3336184 может достигать /root, а s336184 нет
+Разница 1: admin_s3336184 может использовать комманд `sudo`, а s336184 нет
+
+```
+# изменить пользователь admin_s336184
+$ su - admin_s336184
+$ sudo ls
+...
+
+# изменить пользователь s336184
+$ su - s336184
+$ sudo ls
+s336184 is not in the sudoers file. This incident will be reported.
+```
+
+Разница 2: admin_s3336184 может достигать /root, а s336184 нет
 
 ```
 # изменить пользователь admin_s336184
@@ -135,8 +149,21 @@ snap
 
 # изменить пользователь s336184
 $ su - s336184
-$ sudo ls /root
-s336184 is not in the sudoers file. This incident will be reported.
+$ ls /root
+ls: cannot open directory '/root': Permission denied
+```
+
+Разница 3: admin_s3336184 может управлять сервисы систем, а s336184 нет
+
+```
+# изменить пользователь admin_s336184
+su - admin_s336184
+sudo systemctl restart sshd  
+# успешно перезагрузить сервис SSH
+
+# изменить пользователь s336184
+su - s336184
+systemctl restart sshd  # 显示 "You need to be root to perform this."
 ```
 
 ## Вывод
