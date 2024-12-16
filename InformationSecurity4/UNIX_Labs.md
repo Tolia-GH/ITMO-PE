@@ -87,8 +87,10 @@ https://habr.com/ru/articles/469667/
 
 ### Основная часть 主要部分
 
-1. Установите утилиту AppArmor sudo apt install apparmor-utils apparmor-profiles Напишите bash-скрипт который будет создавать файл в директории log , записывать в него что-то, читать из него и затем удалять.  
-   安装 AppArmor 实用程序 sudo apt install apparmor-utils apparmor-profiles 编写一个 bash 脚本，该脚本将在日志目录中创建一个文件，向其中写入内容，从中读取内容，然后将其删除。
+1. Установите утилиту AppArmor sudo apt install apparmor-utils apparmor-profiles  
+   安装 AppArmor 实用程序 sudo apt install apparmor-utils apparmor-profiles  
+   Напишите bash-скрипт который будет создавать файл в директории log , записывать в него что-то, читать из него и затем удалять.   
+   编写一个 bash 脚本，该脚本将在日志目录中创建一个文件，向其中写入内容，从中读取内容，然后将其删除。
 2. Создайте директорию log. Выдайте файлу права на исполнение. Запустите файл, покажите вывод ./file  
    创建日志目录。赋予文件可执行权限。运行文件，显示输出 ./file
 3. Создайте профиль безопасности для данной программы sudo aa-genprof ./file Покажите результат выполнения программы  
