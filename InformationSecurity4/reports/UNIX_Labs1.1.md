@@ -99,7 +99,7 @@ passwd: password updated successfully
 
 1. Добавить пользователь в файле /etc/sudoers
 ```
-parallels@ubuntu-linux-22-04-desktop:~$ sudo vi /etc/sudoers
+parallels@ubuntu-linux-22-04-desktop:~$ sudo visudo
 ```
 
 ```
