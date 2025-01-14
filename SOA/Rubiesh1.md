@@ -492,13 +492,15 @@ Spring Web MVC:
 - View -- отвечает за отображение данных модели. 
 - Controller -- обрабатывает запрос пользователя, создаёт соответствующую модель и передаёт её для отображения в представление.
 
+По определению HandlerMapping — интерфейс, который реализуется объектами, которые определяют отображение между запросами и объектами обработчиков.
+
 Dispatcher Servlet: 
 - Обрабатывает все запросы и формирует ответы на них. 
 - Связывает между собой все элементы архитектуры Spring MVC. 
 - Обычный сервлет -- конфигурируется в web.xml.
 Обработка запроса:
 
-![](./pic/Rubiesh1-7png.png)
+![](./pic/Rubiesh1-6.png)
 
 1. DispatcherServlet получает запрос. 
 2. DispatcherServlet отправляет задачу выбора подходящего контроллера в HandlerMapping. HandlerMapping выбирает контроллер, который сопоставляется с URL-адресом входящего запроса, и возвращает (выбранный обработчик) и контроллер в DispatcherServlet. 
@@ -782,64 +784,683 @@ spring.data.rest.detection-strategy=visibility/all/default/annotatiion
 
 #### 1. что-то про soa <br> 关于 soa 的一些事情
 
+SOA— это стиль архитектуры программного обеспечения, который предполагает модульное приложение, состоящее из дискретных и слабосвязанных программных агентов, которые выполняют конкретные функции.
+
+Концепция SOA заключается в следующем: приложение может быть спроектировано и построено таким образом, что его модули легко интегрируются и могут быть легко использованы повторно.
+
+Сервис-ориентированная архитектура (SOA) – это метод разработки программного обеспечения, который использует программные компоненты, называемые сервисами, для создания бизнес-приложений. Каждый сервис предоставляет бизнес-возможности, и сервисы также могут взаимодействовать друг с другом на разных платформах и языках. Разработчики применяют SOA для многократного использования сервисов в различных системах или объединения нескольких независимых сервисов для выполнения сложных задач.
+
+Плюсы SOA
+- Повторное использование сервисов
+- Эффективное обслуживание
+
+Легче создавать, обновлять и отлаживать небольшие сервисы, чем большие блоки кода в монолитных приложениях
+- Более высокая надежность
+
+Службы легче отлаживать и тестировать, чем огромные куски кода, как в монолитах. Это, в свою очередь, делает продукты на основе SOA более надежными.
+
+Минусы:
+- Сложность в управлении
+
+Каждый сервис должен обеспечивать своевременную доставку сообщений. Количество этих сообщений может превышать миллион за один раз, что затрудняет управление всеми службами.
+- сложности с реализацией асинхронной связи между приложениями;
+- большое время отклика, трудности организации обмена большими объемами данных, обусловленные тем, что XML дает надежность, но не скорость (существуют альтернативы XML — в частности, JSON);
+
+
 #### 2. Особенности, схожесть и отличие ssl и tls <br> ssl和tls的特点、异同
+
+SSL:
+- Криптографический протокол.
+- Использует асимметричную криптографию для аутентификации ключей обмена, симметричное шифрование для сохранения конфиденциальности, коды аутентификации сообщений для целостности сообщений.
+- Со временем должен быть исключен в пользу TLS.
+
+TLS:
+- Основан на SSL 3.0.
+- Актуальная версия -- 1.3 (2018 г.).
+- Обратно совместим с SSL v3.
+
+Безопасность транспортного уровня (TLS) является преемником протокола SSL. TLS — это улучшенная версия SSL. Он работает почти так же, как SSL, используя шифрование для защиты передачи данных и информации. Эти два термина часто взаимозаменяемы в отрасли, хотя SSL по-прежнему широко используется.
+
+Самое фундаментальное различие между этими протоколами заключается в том, как они устанавливают соединения.
+
+| TLS-сертификат                                                         | SSL-сертификат                                                                         |
+|------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| Сертификаты TLS также известны как «безопасность уровня передачи».     | SSL-сертификаты также известны как Secure Sockets Layer.                               |
+| По сравнению с SSL, TLS — более простой протокол.                      | SSL — более сложный для реализации протокол, чем TLS.                                  |
+| TLS имеет четыре версии, из которых версия TLS 1.3 является последней. | Принимая во внимание, что SSL имеет три версии, из которых SSL 3 0 является последней. |
+| Протокол TLS обеспечивает более высокий уровень безопасности, чем SSL. | Все версии протокола SSL сравнительно подвержены уязвимостям.                          |
+| Протокол TLS был выпущен в 1999 году.                                  | Между тем, SSL v2.0 был выпущен в 1995 году и v3.0 в 1996 году.                        |
+| TLS поддерживает Fortezza (алгоритм)                                   | SSL не поддерживает алгоритм Fortezza.                                                 |
+| Сертификаты TLS имеют сложный процесс проверки                         | Сертификаты SSL предлагают простой процесс проверки.                                   |
+
+TLS лучше, чем SSL.
+
+В значительной степени из-за известных уязвимостей безопасности протокол SSL устарел.
+
+Самые последние версии TLS также обеспечивают повышение производительности и другие улучшения.
+
+TLS не только более безопасен и производителен, но и поддерживается большинством современных веб-браузеров. Например, Google Chrome давно прекратил поддержку SSL 3.0, а большинство основных браузеров планируют прекратить поддержку TLS 1.0 и TLS 1.1 к 2020 году.
+
 
 #### 3. spring data rest сервис к репозиторию <br> spring data Rest服务到存储库
 
+```java
+@Entity
+@Data
+public class WebsiteUser {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    private String name;
+    private String email;
+}
+```
+
+Репозиторий для доступа к бд:
+
+```java
+@RepositoryRestResource(collectionResourceRel = "users", path = "users")
+public interface UserRepository extends PagingAndSortingRepository<WebsiteUser, Long> {
+    List<WebsiteUser> findByName(@Param("name") String name);
+}
+```
+
+Класс запуска приложения:
+
+```java
+@SpringBootApplication
+public class SpringDataRestApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(SpringDataRestApplication.class, args);
+    }
+}
+```
+
 #### 4. (Alternative)  Дан Spring Data Rest репозиторий с 1 методом public, который наследует crudrepository. Сделать так, чтобы все методы паблик стали доступны <br> （替代方案）给定一个带有 1 个公共方法的 Spring Data Rest 存储库，该存储库继承 crudrepository。使所有公共方法可用
+
+Добавляем в application.properties:
+
+```java
+spring.data.rest.detected-stratagy=annotation
+```
+
+Далее навешиваем на все public методы аннотацию @RestResource
+
+```java
+@Repository
+public interface CarRepository extends Repository<Car, Long> {
+    @RestResource(exported = false)
+    public Car save(Car car);
+}
+```
+
+Или же можно просто в application.properties указать:
+
+```java
+spring.data.rest.detected-stratagy=default
+```
 
 ### Вариант 7
 
 #### 1. Создание контроллера в спринг <br> 在 Spring 中创建控制器
 
+См. [Вариант 4 Особенности разработки RESTful на Spring](#1-особенности-разработки-restful-на-spring--spring-restful开发的特点)
+
 #### 2. Криптография в веб приложениях <br> Web 应用程序中的密码学
 
+Сертификаты - Используются для проверки принадлежности открытого ключа его реальному владельцу.
+
+Сначала клиент устанавливает соединение с сервером и настраивает ключи для шифрования передаваемых данных. Он отправляет информацию о себе, какие поддерживает шифрования и случайное число.
+
+После чего сервер делает то же самое, только выбирает какое шифрование использовать.
+
+Вся суть в том что это работает на открытом и закрытом ключе. Закрытый ключ хранится у клиента и сервера. А открытый доступен всем, даже злоумышленнику, если он его украдет. Через открытый ключ происходит шифрование, а через закрытый дешифровка.
+
+То есть, как только Клиент и Сервер обмениваются своими ключами - это происходит не зашифровано. А уже данные, когда начинают обмениваться - уже происходит шифрование их.
+
+Так работает SSL/TSL поверх обычно http протокола. -> https
+
+![](./pic/Rubiesh1-7.png)
+
+![](./pic/Rubiesh1-8.png)
+
 #### 3. Jax-rs казино Jax-rs
+
+```java
+@Data
+public class SlotMachine {
+    private Long id;
+    private Double winChanse;
+    private Double getMany;
+    private Double priceOneGame;
+    private Double jackpot;
+}
+@Data
+public class ResultGame {
+    private Long id;
+    private Long slotMachineId;
+    private Boolean win;
+    private Boolean jackpot;
+    private Double bet;
+    private Double winSum;
+}
+
+@Path("/slots")
+public class SlotMachineService {
+    
+    private Repository rep = new Repository();
+    
+    private SlotMachineGameService game = new SlotMachineGameService();
+    
+    @POST
+    @Consumes("application/json")
+    public SlotMachine createSlotMachine(SlotMachine slotMachine) {
+        return Mapper.mapSlotMachine(rep.createSlotMachine(Mapper.mapSlotMachineEntity(slotMachine)));
+    }
+
+    @GET
+    @Produces("application/json")
+    public List<SlotMachine> getSlotMachines() {
+        return rep.getSlotMachines().stream().map(Mapper::mapSlotMachine).collect(Clollection.toList());
+    }
+    
+    @GET
+    @Path("{id}")
+    @Produces("application/json")
+    public SlotMachine getSlotMachine(@PathParam("id") Long id) {
+        return Mapper.mapSlotMachine(rep.getSlotMachine(id));
+    }
+
+    @PUT
+    @Path("{id}")
+    @Consumes("application/json")
+    public ResultGame betSlotMachine(@PathParam("id") Long id, @QueryParam("bet") Double bet) {
+        return game.initGame(id, bet);
+    }
+
+    @GET
+    @Path("{id}/games/{gameId}")
+    @Produces("application/json")
+    public ResultGame getSlotMachine(@PathParam("id") Long id, @PathParam("gameId") Long gameId) {
+        return game.getGameInSlotMachine(id, gameId);
+    }
+
+    @DELETE
+    @Path("{id}")
+    @Consumes("application/json")
+    public void deleteSlotMachine(@PathParam("id") Long id) {
+        rep.deleteSlotMachine(id);
+    }
+}
+
+```
 
 ### Вариант 8
 
 #### 1. Jax-rs ключевые моменты <br> Jax-rs 要点
 
+Jax-rs - Спецификация API для разработки веб сервисов Особенности:
+- Позволяет создавать REST API к компонентам с помощью аннотаций
+- Часть Java EE – работает на любом сервере приложений.
+- Внутри сервисов доступны API всех компонентов Java EE.
+- Аннотации можно применять внутри любых компонентов
+
+Основные аннотации:
+- `@Path` – путь (URL) к ресурсу или методу
+- `@GET`, `@PUT`, `@POST`, `@DELETE` и `@HEAD` – метод HTTP-запроса, который будет
+обработан ресурсом.
+- `@Produces` – тип возвращаемого контента (text/html etc)
+- `@Consumes` – тип обрабатываемого контента (text/json etc).
+
+Вспомогательные аннотации:
+- `@PathParam` – отображает элемент иерархии URL на параметр метода.
+- `@QueryParam` – отображает параметр из URL на параметр метода.
+- `@MatrixParam` – отображает матричный параметр HTTP-запроса на параметр метода.
+- `@HeaderParam` – отображает заголовок HTTP-запроса на параметр метода.
+- `@CookieParam` – отображает cookie на параметр метода.
+- `@FormParam` – отображает параметр POSTзапроса на параметр метода.
+- `@DefaultValue` – определяет значение по умолчанию для параметра метода.
+- `@Context` – позволяет получить контекстно связанный объект (например, `@Context HttpServletRequest request`)
+
+Порядок разработки сервиса на JAX-RS:
+- Создаём проект (в случае Maven можно использовать архетип maven-archetype-webapp).
+- Добавляем зависимости JAX-RS (если версия JDK < 7).
+- Создаём описание представления ресурса (например, с помощью JAXB).
+- Создаём ресурс REST (сам веб-сервис).
+- Регистрируем ресурс.
+
+Описание представления ресурса.
+- Опционально - в принципе, может передавать что угодно
+- В каноническом варианте реализуется с помощью аннотаций JAXB – `@XmlRootElement`, `@XmlAttribute`, `@XmlElement` и т.д
+
 #### 2. Spring data rest особенности отличия от spring mvc rest <br> Spring Data Rest 与 Spring MVC Rest 的区别
 
+Основные особенности Spring Data Rest:
+
+- Ресурсы описываются в формате HAL.
+  - Hypertext Application Language (HAL)
+  - “Work-in-progress” стандарт для описания hypermedia-resources.
+  - Гипермедиа -- расширение гипертекста (+ графика, видео, звук и т.д.).
+  - Две нотации -- JSON и XML.
+- 3 основных вида ресурсов -- коллекция (collection), элемент (item - отдельные элементы коллекции) и ассоциация (association - взаимодействие с ресурсами вложенными в свойства основного).
+- Поддерживается постраничный вывод.
+- Для коллекций поддерживается динамическая фильтрация.
+- Специальный вид ресурсов -- поисковый (search resources) для вызова методов,
+формирующих поисковые запросы
+- Поддерживаются JPA, MongoDB, Neo4j, GemFire и Cassandra.
+
+Отличия от Spring MVC REST:
+- В отличие от Spring MVC Rest, где контроллеры реализуются самостоятельно, в
+Spring Data Rest достаточно описать ресурсы с помощью аннотаций в репозиториях (учитывая стратегии экспорта).
+
 #### 3. Управление банкоматом на сервлетах <br> 使用 servlet 管理 ATM
+
+```java
+@WebServlet(name = "AtmServlet", urlPatterns = "/atm")
+public class AtmServlet extends HttpServlet {
+
+    private AtmService atmService = new AtmService();
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+        long user_id = request.getParameter("user_id");
+        long balance = atmService.getBalance(user_id); // узнать баланс
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+        long user_id = request.getParameter("user_id");
+        long sum = request.getParameter("sum");
+        atmService.addBanknotes(user_id, sum); // положить наличные
+    }
+
+    @Override
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response) {
+        long user_id = request.getParameter("user_id");
+        long sum = request.getParameter("sum");
+        atmService.getCash(user_id); // снять наличные
+    } 
+}
+```
 
 ### Вариант 9
 
 #### 1. Понятие ресурса в RESTful. Виды ресурсов <br> RESTful 中资源的概念。资源类型
 
+Ресурс — это ключевая абстракция, на которой концентрируется протокол HTTP: это объект с типом, связанными данными, отношениями с другими ресурсами и набором методов, которые с ним работают.
+
+Он похож на экземпляр объекта в ООП языке, с той разницей, что для ресурса определено только несколько стандартных методов (соответствующих стандартным методам HTTP: GET, POST, PUT и DELETE), а экземпляр объекта обычно имеет много методов.
+
+
+На ресурс указывает URI.  
+Два вида ресурсов:
+  - Осуществляющие манипуляции с данными.
+  - Выполняющие какие-либо операции.
+
+| Метод  | Ресурс, манипулирующий данными <br> https://api.example.com/collection                     | Ресурс, выполняющий операции <br> https://api.example.com/clusters/1234/create-vm |
+|--------|----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| POST   |                                                                                        | Вызывает операцию, интерфейс к которой предоставляет ресурс                   |
+| GET    | Возвращает объект в теле ответа                                                        | Возвращает статус асинхронной операции в теле ответа                          |
+| PUT    | Загружает объект из тела запроса на ресурс                                             |                                                                               |
+| PATCH  | Обновляет какую-либо часть содержимого ресурса в соответствии с данными в теле запроса |                                                                               |
+| DELETE | Удаляет содержимое ресурса.                                                            | Отменяет асинхронную операцию                                                 |
+|        | Последующий запрос GET вернёт HTTP 404.                                                |                                                                               |
+
 #### 2. KeyStore и TrustStore в Java. Утилита keytool <br> Java 中的 KeyStore 和 TrustStore。密钥工具实用程序
 
+| Keystore | Truststore |
+|---|---|
+| Хранятся приватные ключи и сертификаты (клиентские или серверные) | Хранятся доверенные сертификаты (корневые самоподписанные СА root) |
+| Необходим для настройки SSL на сервере | Необходим для успешного подключения к серверу на клиентской стороне |
+| Клиент будет хранить свой приватный ключ и сертификат в keystore | Сервер будет валидировать клиента при двусторонней аутентификации на основании сертификатов в truststore |
+| Используется API <br> `javax.net.ssl.keyStore` | Используется API <br> `javax.net.ssl.trustStore` |
+
+- В JDK/JRE есть truststore “по умолчанию” -- $JAVA_HOME/lib/security/cacerts.
+- Пароль -- changeit.
+- Сервер приложений обычно идёт в комплекте со своими keystore и truststore.
+
+Keytool - утилита предназначена для работы с хранилищами JKS (Java KeyStore): может генерировать пары открытый ключ / закрытый ключ и сохранять их в хранилище ключей. Позволяет:
+- Создавать ключи ( keytool -genkey ...)
+- Создать запрос сертификата (CSR) для существующего Java keystore ( keytool-certreq ...)
+- Загрузить корневой или промежуточный CA сертификат (keytool -import
+-trustcacerts ...)
+- Импортировать доверенный сертификат (keytool -import -trustcacerts ...)
+- Сгенерировать самоподписанный сертификат и keystore (keytool -genkey ...)
+- Посмотреть список сертификатов (keytool -list ...) или конкретный сертификат (keytool -printcert ...)
+- Удалить сертификат (keytool -delete ...)
+
+И многое другое (см -help)
+
+
 #### 3. Написать веб-сервис на JAX-RS, который управляет шлагбаумом <br> 在 JAX-RS 中编写一个控制屏障的 Web 服务
+
+```java
+@Data
+public class Barrier {
+    private String address;
+    private Boolean status;
+}
+
+@Path("/barriers")
+public class BarrierService {
+
+    private Repository rep = new Repository();
+    
+    @POST
+    @Consumes("application/json")
+    public Barrier createBarrier(Barrier barrier) {
+        return Mapper.mapBarrier(rep.createBarrier(Mapper.mapBarrierEntity(barrier)));
+    }
+
+    @GET
+    @Produces("application/json")
+    public List<Barrier> getBarriers() {
+        return rep.getBarriers().stream().map(Mapper::mapBarrier).collect(Clollection.toList());
+    }
+
+    @GET
+    @Path("{id}")
+    @Produces("application/json")
+    public Barrier getBarrier(@PathParam("id") Long id) {
+        return Mapper.mapBarrier(rep.getBarrier(id));
+    }
+
+    @PUT
+    @Path("{id}/open")
+    @Consumes("application/json")
+    public void open(@PathParam("id") Long id) {
+        rep.openBarrier(id);
+    }
+
+    @PUT
+    @Path("{id}/close")
+    @Consumes("application/json")
+    public void close(@PathParam("id") Long id) {
+        rep.closeBarrier(id);
+    }
+
+    @DELETE
+    @Path("{id}")
+    @Consumes("application/json")
+    public void deleteBarrier(@PathParam("id") Long id) {
+        rep.deleteBarrier(id);
+    }
+```
 
 ### Вариант 10
 
 #### 1. Языки спецификации веб-сервисов <br> Web 服务规范语言
 
+- Их много.
+- Позволяют декларативно описать, что “умеет” веб-сервис.
+- Существуют как для RESTful, так и для SOAP.
+- Могут быть использованы для построения реестров веб-сервисов.
+- Могут быть использованы для автогенерации кода сервиса и/или клиента.
+
+WSDL (англ. Web Services Description Language) — язык описания веб-сервисов и доступа к ним, основанный на языке XML.
+
+Каждый документ WSDL 1.1 можно разбить на следующие логические части:
+1. определение типов данных (types) — определение вида отправляемых и получаемых сервисом XML-сообщений
+2. элементы данных (message) — сообщения, используемые web-сервисом
+3. абстрактные операции (portType) — список операций, которые могут быть выполнены с сообщениями
+1. связывание сервисов (binding) — способ, которым сообщение будет доставлено
+
+Пример:
+
+```xml
+▼ <mesaage name- ExecuteDeliveryRequestResponse">
+    <part name-"parameters" element-"tns:ExecuteDeliveryRequestReaponse"/> 
+  </message>
+▼ <portType name-"TurtlebotPublishersInterface">
+  ► <operation name-"ExecuteCoffeeRequest">...</operation>
+  ▼ <operation name-"ExecuteDeliveryRequest">
+    <input
+    waam:Action-"https//soap.turtlebot.mybot.org/TurtlebotPublishereInterface/Ex
+    message-"tns:Exec uteDeliveryRequest"/>
+    <output
+    vsam:Action-"http://soap.turtlebot.mybot.org/TurtlebotPublishersInterface/Ex
+    message-"tns:ExecuteDeliveryRequestReaponse"/>
+    </operation>
+  </portType>
+► <binding name-"TurtlebotPublishersWebServicePortBinding"
+  type-"tns : TurtlebotPublishersinterface">...</binding>
+▼ <service name-"TurtlebotPublishers<eb8ervice8ervice">
+  ▼ <port name-"TurtlebotPublishersWebServicePort”
+    binding-"tns:TurtlebotPublishersWebServicePortBinding">
+      <soap:address location-"http://192.168.100.11:5555/turtlesim_publisher_ws"/>
+    </port>
+  </service>
+```
+
+Также см. [2 часть Варианта 1. Всё про SOAP](#1-все-про-soap--关于-soap-的一切)
+
 #### 2. Архитектура spring web mvc <br> Spring Web MVC架构
 
+[](#1-особенности-разработки-restful-на-spring--spring-restful开发的特点)
+
 #### 3. Последовательность команд для конфигурации двунаправленного взаимодействия двух серверов приложений WildFly путём взаимного вызова Restful веб-сервисов <br> 通过相互调用 Restful Web 服务来配置两个 WildFly 应用程序服务器之间双向交互的命令序列
+
+
+- Генерируем серверный сертификат:
+
+  ```
+  keytool -genkeypair -alias localhost -keyalg RSA -keysize 2048 -validity 365 -keystore 
+  server.keystore -dname "cn=Server Administrator,o=Acme,c=GB" -keypass secret
+  -storepass secret
+  ```
+
+- Копируем keystore на сервер приложений:
+  
+  ```
+  cp server.keystore $JBOSS_HOME/standalone/configuration
+  ```
+
+- Генерируем клиентский сертификат:
+  
+  ```
+  keytool -genkeypair -alias client -keyalg RSA -keysize 2048 -validity 365 -keystore 
+  client.keystore -dname "CN=client" -keypass secret -storepass secret
+  ```
+- Экспортируем содержимое клиентского и серверного keystore в файлы сертификатов:
+  
+  ```
+  keytool -exportcert -keystore server.keystore -alias localhost -keypass secret -storepass 
+  secret -file server.crt
+  ```
+  
+  ```
+  keytool -exportcert -keystore client.keystore -alias client -keypass secret -storepass 
+  secret -file client.crt
+  ```
+
+- Импортируем сертификаты в клиентский и серверный truststore:
+  
+  ```
+  keytool -importcert -keystore server.truststore -storepass secret -alias client -trustcacerts 
+  -file client.crt -noprompt
+  ```
+
+  ```
+  keytool -importcert -keystore client.truststore -storepass secret -alias localhost 
+  -trustcacerts -file server.crt -noprompt
+  ```
+- Копируем клиентский truststore в конфигурацию сервера приложений: 
+  
+  ```
+  cp client.truststore $JBOSS_HOME/standalone/configuration
+  ```
 
 ### Вариант 11
 
 #### 1. Структура SOA приложения <br> 构建 SOA 应用程序
 
+Любая SOA-система состоит из трёх видов “блоков”: 
+- Поставщик (service provider):
+  - создает веб-службу и предоставляет информацию о ней в реестр службы.
+  - Решает, какой сервис предоставлять
+  - Решает вопросы безопасности и доступности
+- Брокер (broker) / реестр (registry) / репозиторий (repository).
+  - Делает информацию о веб-сервисе доступной для любого потенциального запрашивающего.
+  - Есть публичные брокеры (доступны всем), и частные (доступные узкому кругу лиц)
+- Потребитель (requester / consumer).
+  - находит записи в реестре брокера, используя различные операции поиска, а затем привязывается к поставщику услуг, чтобы вызвать одну из его веб-служб.
+  - Должен передать сервис, необходимый потребителям, брокерам, связать с соответствующим сервисом и затем использовать.
+
+![](./pic/Rubiesh1-9.png)
+
 #### 2. Виды ресурсов в Spring Data REST <br> Spring Data REST 中的资源类型
 
+Основные особенности Spring Data Rest:
+- Ресурсы описываются в формате HAL.
+  - Hypertext Application Language (HAL)
+  - “Work-in-progress” стандарт для описания hypermedia-resources.
+  - Гипермедиа -- расширение гипертекста (+ графика, видео, звук и т.д.).
+  - Две нотации -- JSON и XML.
+- 3 основных вида ресурсов -- коллекция (collection), элемент (item - отдельные элементы коллекции) и ассоциация (association - взаимодействие с ресурсами вложенными в свойства основного).
+- Поддерживается постраничный вывод.
+- Для коллекций поддерживается динамическая фильтрация.
+- Специальный вид ресурсов -- поисковый (search resources) для вызова методов, формирующих поисковые запросы
+- Поддерживаются JPA, MongoDB, Neo4j, GemFire и Cassandra.
+
 #### 3. Написать спецификацию (url'ы) сервиса по записи студентов на курсы. <br> 为学生注册课程的服务编写规范 (url)。
+
+```
+paths:
+    /students/{student-id}/courses:
+        get:
+            description: Get all available courses for student with id ={student-id}
+            responses:
+                '200':
+                        description: List of courses
+                        content:
+                            application/json:
+                                schema:
+                                    $ref: '#/components/schemas/courses'
+                '500':
+                        description: Server error, try again later.
+    /students/{student-id}/courses/{course-id}:
+        post:
+            description: enroll a student with id = {student-id} in the course with id = {course-id}
+            responses:
+                 '201':
+                        description: Successful  enrollment
+                 '404':
+                        description: Unsuccessful  enrollment (bad id)
+                 '500':
+                        description: Server error, try again later.
+        delete:
+            Description: remove a student with id = {student-id} from the course with id = {course-id}
+            parameters:
+            - name: reason
+                in: query
+                description: reason for unsubscription
+                schema:
+                    type: string
+            responses:
+                 '200':
+                        description: Successful  unsubscription
+                 '404':
+                        description: Unsuccessful  unsubscription (bad id)
+                 '500':
+                        description: Server error, try again later.
+```
 
 ### Вариант 12
 
 #### 1. Описание представления ресурса JAX-RS <br> JAX-RS 资源视图的描述
 
+Путь (URL) к ресурсу (или к методу) задается с помощью аннотации `@Path`
+
+- `@GET`, `@PUT`, `@POST`, `@DELETE` и `@HEAD` – метод HTTP-запроса, который будет обработан ресурсом.
+
+Описание представления ресурса:
+- Опционально - в принципе, может передавать что угодно
+- В каноническом варианте реализуется с помощью аннотаций JAXB –
+`@XmlRootElement`, `@XmlAttribute`, `@XmlElement` и т.д
+
+Например:
+
+```java
+(...)
+@XmlRootElement(name = "student")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Student {
+    @XmlAttribute
+    private Integer id;
+
+    @XmlElement
+    private String name;
+    (...)
+}
+```
+
+```java
+(...)
+@XmlRootElement(name = "student")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Configuration {
+    @XmlAttribute
+    private Integer size;
+
+    @XmlElement
+    private List<Student> students;
+    (...)
+}
+```
+
 #### 2. Криптография в приложениях на Java: особенности, стандарты, протоколы <br> Java 应用程序中的密码学：特性、标准、协议
 
+Есть спецификация Java Cryptography Architecture (JCA, не путать с Java Connector Architecture!).
+Протоколы -- TLS / SSL.
+- Клиентом и сервером являются веб-сервисы.
+- Используется инфраструктура JRE / JDK и сервера приложений.
+
+См. [9.2](#2-keystore-и-truststore-в-java-утилита-keytool--java-中的-keystore-和-truststore密钥工具实用程序)
+
 #### 3. Restful-сервис на базе сервлета, реализующий механизм управления номеронабирателем телефонного аппарата. Номеронабиратель должен поддерживать функции локальных, междугородних и международных звонков, а также автодозвон <br> 基于 Servlet 的 Restful 服务，实现管理电话拨号器的机制。拨号器必须支持本地、长途、国际电话以及自动拨号功能
+
+```java
+public class PhoneServlet extends HttpServlet {
+    static final long serialVersionUID = 1L;
+
+    private Phones phones; // back-end bean
+    
+    // Executed when servlet is first loaded into container.
+
+    @Override
+    public void init() {
+        this.phones = new Phones();
+        novels.setSevletContext(this.getServletContext());
+    }
+
+    // GET /phones
+    // GET /phones?id=1
+    @Override
+    public void doGet(HttpServletRequest request, HttpServletResponse response) {
+        //...
+        sendResponse(response, phones.toXml(novel));
+    }
+
+    @Override
+    public void doPost(HttpServletRequest request, HttpServletResponse
+    response) {
+        String phone = request.getParameter("phone");
+        //...
+    }
+}
+
+```
 
 ### Вариант 13
 
 #### 1. СОА - особенности, плюсы и минусы <br> SOA——特点、优点和缺点
 
+[](#1-что-то-про-soa--关于-soa-的一些事情)
+
 #### 2. SSL/TLS - особенности, отличия и сходства <br> SSL/TLS - 特性、差异和相似之处
 
+[](#2-особенности-схожесть-и-отличие-ssl-и-tls--ssl和tls的特点异同)
+
 #### 3. Дан Spring Data Rest репозиторий с 1 методом public, который наследует crudrepository. Сделать так, чтобы все методы паблик стали доступны <br> 给定一个带有 1 个公共方法的 Spring Data Rest 存储库，该方法继承 crudrepository。使所有公共方法可用
+
+[](#4-alternative--дан-spring-data-rest-репозиторий-с-1-методом-public-который-наследует-crudrepository-сделать-так-чтобы-все-методы-паблик-стали-доступны--替代方案给定一个带有-1-个公共方法的-spring-data-rest-存储库该存储库继承-crudrepository使所有公共方法可用)
