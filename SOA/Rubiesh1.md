@@ -838,7 +838,8 @@ public class DuckServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         long width = request.getParameter("width");
         long height = request.getParameter("height");
-        long length = request.getParameter("length"); duckService.addDuck(width, height, length);
+        long length = request.getParameter("length"); 
+        duckService.addDuck(width, height, length);
     }
     @Override 
     protected void doPut(HttpServletRequest request, HttpServletResponse response) {
@@ -907,9 +908,9 @@ public class DuckServlet extends HttpServlet {
    - Не требуется, если используем Spring Boot.  
      如果使用 Spring Boot，则无需配置.
    - Задается в классе RepositoryRestMvcConfiguration, который необходимо импортировать в конфигурацию приложения.  
-     如果不使用，则需要在应用程序配置中导入
+     如果不使用，则需要在应用程序配置中导入 RepositoryRestMvcConfiguration 类
    - Изменяется путем регистрации своего конфигуратора RepositoryRestConfigurer или наследования от класса адаптера RepositoryRestConfigurerAdapter.  
-     配置可以通过注册自定义的 RepositoryRestConfigurer 或继承 RepositoryRestConfigurerAdapter 类来更改.
+     通过注册自定义的 RepositoryRestConfigurer 或继承 RepositoryRestConfigurerAdapter 类来更改.
 
 2. Выбираем стратегию экспорта репозитория.  
    选择存储库导出的策略.
@@ -973,8 +974,8 @@ paths:
                         description: Successful  command execution
                 '404':
                         description: Unsuccessful command execution (command does not exist)
-                        '500':
-                                description: Server error, try again later.
+                '500':
+                        description: Server error, try again later.
                 delete:
                     description: delete last digit in code
                     responses:
