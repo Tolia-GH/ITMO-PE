@@ -712,10 +712,10 @@ public class SimpleBookController {
 
 ```java
 @RestController
-@RequestMapping("books")
+@RequestMapping("books-rest")
 public class SimpleBookController {
     @GetMapping("/{id}", produces = "application/json")
-    public @ResponseBody Book getBook(@PathVariable int id) {
+    public Book getBook(@PathVariable int id) {
         return findBookById(id);
     }
 
@@ -833,10 +833,9 @@ public class DuckServlet extends HttpServlet {
     @Override protected void doGet(HttpServletRequest request, HttpServletResponse response) { List<Duck> ducks = duckService.getDucks();
     }
     @Override protected void doPost(HttpServletRequest request, HttpServletResponse response) {
-    long width = request.getParameter("width");
-    long height =
-    .getParameter("height");
-    long length = request.getParameter("length"); duckService.addDuck(width, height, length);
+        long width = request.getParameter("width");
+        long height = request.getParameter("height");
+        long length = request.getParameter("length"); duckService.addDuck(width, height, length);
     }
     @Override protected void doPut(HttpServletRequest request, HttpServletResponse response) {
         long id = request.getParameter("id");
