@@ -830,20 +830,24 @@ keytool -storepasswd -new new_storepass -keystore keystore.jks
 @WebServlet(name = "DuckServlet", urlPatterns = "/duck")
 public class DuckServlet extends HttpServlet {
     private DuckService duckService = new DuckService();
-    @Override protected void doGet(HttpServletRequest request, HttpServletResponse response) { 
+    @Override 
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) { 
         List<Duck> ducks = duckService.getDucks();
     }
-    @Override protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+    @Override 
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         long width = request.getParameter("width");
         long height = request.getParameter("height");
         long length = request.getParameter("length"); duckService.addDuck(width, height, length);
     }
-    @Override protected void doPut(HttpServletRequest request, HttpServletResponse response) {
+    @Override 
+    protected void doPut(HttpServletRequest request, HttpServletResponse response) {
         long id = request.getParameter("id");
         duckService.updateDuck(id);
     }
 
-    @Override protected void doDelete(HttpServletRequest request, HttpServletResponse response) {
+    @Override 
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response) {
         long id = request.getParameter("id");
         duckService.deleteDuck(id);
     }
