@@ -53,6 +53,7 @@ We are international students sponsored by the China Scholarship Council (CSC) t
 - [软件工程经济 Economics Software Engineering](/EconomicsSoftwareEngineering/README.md)
 - [建模 Modeling](/Modeling/README.md)
 - [面向服务架构 SOA](/SOA/README.md)
+- [信息安全 Info Security](/InformationSecurity4/README.md)
 
 ## 版权声明 Copyrights
 
