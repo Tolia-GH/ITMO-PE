@@ -55,6 +55,10 @@ We are international students sponsored by the China Scholarship Council (CSC) t
 - [面向服务架构 SOA](/SOA/README.md)
 - [信息安全 Info Security](/InformationSecurity4/README.md)
 
+### VKR
+
+- [VKR](/VKR/README.md)
+
 ## 版权声明 Copyrights
 
 - 本项目所有非代码文本内容遵循 [CC BY-NC-SA 3.0 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)
