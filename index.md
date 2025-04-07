@@ -58,6 +58,7 @@ We are international students sponsored by the China Scholarship Council (CSC) t
 ### VKR
 
 - [VKR](/VKR/README.md)
+- [KMU](/VKR/KMU.md)
 
 ## 版权声明 Copyrights
 
