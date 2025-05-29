@@ -292,8 +292,8 @@
 - 代码
 
   - 行内代码
-    - 样例：`public stativ void main(String[] args) {}`
-    - 源码：`` `public stativ void main(String[] args) {}` ``
+    - 样例：`public static void main(String[] args) {}`
+    - 源码：`` `public static void main(String[] args) {}` ``
   - 多行代码
     - 样例：
 
@@ -306,9 +306,9 @@
       ```
     - 源码：技术原因无法展示，只需要在代码块前一行在合适的缩进位置添加三个反单引号（键盘按键位于 Esc 键下方）以及所使用的代码语言，然后在代码块的后一行的对应缩进位置添加三个反单引号即可。
       ```markdown
-      \`\`\`
+      \```
 
-      \`\`\`
+      \```
       ```
 
 ### 2. $\LaTeX$
