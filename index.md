@@ -54,11 +54,9 @@ We are international students sponsored by the China Scholarship Council (CSC) t
 - [建模 Modeling](/Modeling/README.md)
 - [面向服务架构 SOA](/SOA/README.md)
 - [信息安全 Info Security](/InformationSecurity4/README.md)
+- [管理系统和网络 Administration Systems and Networks](/AdministrationSystemsAndNetworks/README.md)
 
 ### VKR
-
-- [VKR](/VKR/README.md)
-- [KMU](/VKR/KMU.md)
 
 ## 版权声明 Copyrights
 
