@@ -1,56 +1,23 @@
 # ITMO Program Engineering
 
-## 项目介绍 About this Wiki
-Study materials for software engineering at ITMO University in St. Petersburg  
-圣彼得堡 ITMO 大学软件工程专业的学习资料整理
+## 项目介绍 About this Project
+This project primarily collects textual materials from disciplines of the Software Engineering program at ITMO University. For the source code of the lab works, please visit the [ITMO-Labs](https://github.com/Tolia-GH/ITMO-Labs) repository.  
+本项目主要收集了ITMO大学软件工程专业各学科的文本材料，有关实验程序的源代码请访问 [ITMO-Labs](https://github.com/Tolia-GH/ITMO-Labs) 仓库
 
 ## 关于我们 About US
 We are international students sponsored by the China Scholarship Council (CSC) to study at ITMO University in Russia. We are committed to knowledge sharing, collaborative learning, and common progress. We hope to hone ourselves and benefit future generations by maintaining this project.  
 我们是中国教育部留学基金委员会（CSC）公派至俄罗斯 ITMO 大学的留学生。我们致力于知识共享，合作学习，共同进步，希望通过对本项目的维护，磨砺自己，造福后人。
 
-## 阅读索引 Index
+## 阅读指引 Introduction
 
-[MarkDown LaTeX Guide](Guide.md)  
-[Test](temp.md)
+For more details, please visit the project's [public website](https://tolia-gh.github.io/ITMO-PE/).  
+详情请访问本项目[公开网站](https://tolia-gh.github.io/ITMO-PE/)  
 
-- [俄语 Russian Language](/RussianLanguage/README.md)
+If you find any problems or mistakes in this project, please feel free to submit a Mistake Report in the Issue section.  
+如您在本仓库材料中发现了问题和错误，欢迎在 Issue 中提交 Mistake report
 
-### 大一 Grade 1
-- [OPD](/OPD/README.md)
-- [编程 Programming](/Program/README.md)
-- [离散数学 Discrete Mathematics](/DiscreteMathematics/README.md)
-- [哲学 Philosophy](/Philosophy/README.md)
-- [数学 Mathematics](/Mathematic/README.md)
-
-### 大二 Grade 2
-
-- [公开演讲 Public Speaking](/PublicSpeaking/README.md)
-- [物理 Physics](/Physics/README.md)
-- [编程语言 Program Language](/ProgramLanguage/README.md)
-- [网络编程 Web Programming](/ProgramWeb/README.md)
-- [算法与数据结构 Algorithms&Data Structure](/Algorithm&DataStructures/README.md)
-- [计算数学 Computational Mathematics](/ComputationalMathematics/README.md)
-- [信息安全方法论 Theory of Information Security](/InformationSecurity/README.md)
-- [概率论 Theory of Probability](/ProbabilityTheory/README.md)
-
-### 大三 Grade 3
-
-- [讲故事 Story Telling](/StoryTelling/README.md)
-- [职业生涯管理 Carreer Management](/CarreerManagement/README.md)
-- [数据库 DataBase](/DataBase/README.md)
-- [AI 系统 AI System](/AI/README.md)
-- [操作系统 OS](/OS/README.md)
-- [软件系统架构 Program System Architech](/ProgramSystemArchitech/README.md)
-- [计算机架构 Computer Architech](/ComputerArchitech/README.md)
-- [系统软件 System Software](/SystemSoftware/README.md)
-- [计算机视觉 Computer Vision](/ComputerVision/README.md)
-- [分布式存储 Distributed Database](/DistributedDataBase/README.md)
-- [业务逻辑 Business Logic](/BusinessLogic/README.md)
-
-### Grade 4
-
-- [软件工程经济 Economics Software Engineering](/EconomicsSoftwareEngineering/README.md)
-- [KMU](/VKR/KMU.md)
+Due to limited personal energy, I was unable to fully compile and organize all materials and content for all subjects. I hope that future users of this repository will actively participate in contributing to complete the content and ensure the continued transmission of this information. Thank you all.  
+由于个人精力有限，未能收录全部学科的所有材料及内容梳理，希望使用本仓库的后续来者能够积极参与贡献补全内容，将该仓库资料传承下去，拜托各位了。。。
 
 ## 版权声明 Copyrights
 - 本项目所有非代码文本内容遵循 [CC BY-NC-SA 3.0 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)
