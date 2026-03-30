@@ -78,6 +78,15 @@
 18 | Influence of parameters on mechanical properties of poly (L ‐ lactic acid) helical stents | Zhao G,Liu J, Liu M, et al | Journalof Biomedical Materials Research Part B: Applied Biomaterials | 2022 | 110(7) | 1705 | 1712 | 是 | 否 
 19 | Strengthen oriented poly (L-lactic acid)monofilaments via mechanical training | Zhang Y, Dong X, Zhang C, et al | International Journal of Biological Macromolecules | 2024 | 263 | 129975 | 129975 | 是 | 否 
 20 | Modified Theoretical Model Predicts Radial Support Capacity of Polymer Braided Stents | Hu X, Liu Q, Chen L, et al | Computer Methods and Programs in Biomedicine | 2024 | 246 | 108063 | 108063 | 是 | 否 
+21 | Strength and toughness of semicrystalline polymer fibers: Influenceof molecular chain entanglement | Zhang C, Liu W, Ma S, et al | Polymer | 2024 | 304 | 127119 | 127119 | 是 | 否 
+22 | Design strategy of poly(L ‐ lactic acid)mixed braided stent: The influence of braiding ratio of thick and thin monofilaments | Zhang C, Hu X, Wang B, et al | Journal of Applied Polymer Science | 2024 | 141(11) | 55100 | 55100 | 是 | 否 
+23 | Different properties of poly (L-lactic acid) monofilaments and its corresponding braided springs after constrained and unconstrained annealing | Zhao G, Ma S, Li X, et al | Journal of Biomaterials Applications | 2022 | 37(3) | 517 | 526 | 是 | 否 
+24 | Key factors of mechanical strength and toughness in oriented poly (L-lactic acid) monofilaments for a bioresorbable self- expanding stent | Wang B, Liu M, Liu J, et al | Langmuir | 2022 | 38(44) | 13477 | 13487 | 是 | 否 
+25 | Mixed-braided stent: An effective way to improve comprehensiv e mechanical properties of poly (L-lactic acid)self- expandable braided stent | Liu M, Tian Y, Cheng J, et al | Journal of the Mechanical Behavior of Biomedical Materials | 2022 | 128 | 105123 | 105123 | 是 | 否 
+26 | Incorporating the Hybrid Deformable Model for Improving the Performance of Abdominal CT Segmentation via Multi- Scale Feature Fusion Network | Liang X, Li N, Zhang Z, et al | Medical Image Analysis | 2021 | 73 | 102156 | 102156 | 是 | 否 
+27 | Dissected aorta segmentation using convolutional neural networks | Lyu T, Yang G, Zhao X, et al | Computer methods and programs in biomedicine | 2021 | 211 | 106417 | 106417 | 是 | 否 
+28 | Convolutional squeeze-and-excitation network for ECG arrhythmia detection | Ge R, Shen T, Zhou Y, et al | Artificial Intelligence in Medicine | 2021 | 121 | 102181 | 102181 | 是 | 否 
+29 | Tagnet: A transformer-based axial guided network for bile duct segmentation | Zhou G Q, Zhao F, Yang Q H, et al | Biomedical Signal Processing and Control | 2023 | 86 | 105244 | 105244 | 是 | 否 
 
 ### 五、项目申请专利情况
 
@@ -103,4 +112,14 @@
 18 | 一种肝及肝肿瘤的医学图像分割方法、系统、终端以及存储介质 | 齐恒; 周寿军; 李娜 | 中国 | CN114881910A | 2022-08-09 | 国家知识产权局
 19 | 超声穿刺针 | 陈静涛; 周寿军; 滕皋军 | 中国 | CN213722285U | 2021-07-20 | 国家知识产权局
 20 | 超声穿刺针 | 陈静涛; 滕皋军; 周寿军 | 中国 | CN111265289A | 2020-06-12 | 国家知识产权局
+21 | 基于肝内血管配准的手术导航系统 | 温铁祥; 王澄; 周寿军; 李迟迟; 王磊; 张毅 ; 陆建 | 中国 | CN112971982B | 2022-08-19 | 国家知识产权局
+22 | 一种基于CT与DSA的3D-2D血管弹性配准方法 | 贺建安; 陈阳 | 中国 | CN114419117A | 2022-04-29 | 国家知识产权局
+23 | 一种基于深度序列信息融合的冠脉造影图像分割方法 | 陈阳；高雨枫；周寿军 | 中国 | CN113592766B | 2022-09-02 | 国家知识产权局
+24 | 一种X射线透视图像下基于深度分割网络和最短路径算法的导丝分割方法 | 陈阳; 李浩凯 | 中国 | CN113269788B | 2024-03-29 | 国家知识产权局
+25 | 一种基于频域监督和动态卷积的临床图像中病变区域分割方法 | 王浩林; 周光泉; 王凯妮 | 中国 | CN116797615A | 2023-09-22 | 国家知识产权局
+26 | 一种基于自适应频域学习和抗混叠复数卷积的临床图像病变分类方法 | 周光泉; 王凯妮 | CN116309542B | 2026-02-13 | 国家知识产权局
+
+
+
+
 
