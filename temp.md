@@ -22,7 +22,7 @@
 14 | Imaging microglia surveillance during sleep-wake cycles in freely behaving mice | Gu X, Zhao Z, Chen X,et al | Elife | 2023 | 12 | 86749 | 86749 | 是 | 否
 15 | Locoregional treatmentsfor hepatocellular carcinoma: Current evidenceand future directions | Inchingolo R, Posa A, Mariappan M, et al | World journal of gastroenterology | 2019 | 25(32) | 4614 | 4628 | 是 | 否
 16 | Injectable composite hydrogel based on carbon particles for photothermal therapy of bone tumor and bone regeneration | Wei C, Jin X, Wu C, et al | Journalof Materials Science & Technology | 2022 | 118 | 64 | 72 | 是 | 否
-17 | Graphene-based nanomaterials for stimuli-sensitive controlled delivery of the rapeutic molecules ｜ Khakpour E, Salehi S, NaghibS M, et al ｜ Frontiers in Bioengineering and Biotechnology ｜ 2023 ｜ 11 ｜ 1129768 ｜ 1129768 ｜ 是 | 否
+17 | Graphene-based nanomaterials for stimuli-sensitive controlled delivery of the rapeutic molecules | Khakpour E, Salehi S, NaghibS M, et al | Frontiers in Bioengineering and Biotechnology | 2023 | 11 | 1129768 | 1129768 | 是 | 否
 18 | A customizable cost-effective design for printed circuit board-based nanolayered gold screen-printed electrode: From fabrication to bioapplications | Ghorban zadeh S, Naghib S M, Sadr A, et al | Frontiers in Bioengineering and Biotechnology | 2022 | 10 | 1036224 | 1036224 | 是 | 否
 19 | Simulating evaluation method on heating performances of magnetic nanoparticles with temperature-dependent heating efficiencies in tumorhyperthermia | Ding S W, Wu C W, Yu X G, et al | Magnetochemistry | 2022 | 8(6) | 63 | 63 | 是 | 否
 20 | Effect of Al3+ doping on magnetic properties of Zn-Mn ferrite nanoparticles for magnetic induction hyperthermia. Journal of Magnetism and Magnetic Materials | Yu X, Rahman M M, Yang R, et al | Journal of Magnetism and Magnetic Materials | 2024 | 591 | 171724 | 171724 | 是 | 否
@@ -117,7 +117,7 @@
 23 | 一种基于深度序列信息融合的冠脉造影图像分割方法 | 陈阳；高雨枫；周寿军 | 中国 | CN113592766B | 2022-09-02 | 国家知识产权局
 24 | 一种X射线透视图像下基于深度分割网络和最短路径算法的导丝分割方法 | 陈阳; 李浩凯 | 中国 | CN113269788B | 2024-03-29 | 国家知识产权局
 25 | 一种基于频域监督和动态卷积的临床图像中病变区域分割方法 | 王浩林; 周光泉; 王凯妮 | 中国 | CN116797615A | 2023-09-22 | 国家知识产权局
-26 | 一种基于自适应频域学习和抗混叠复数卷积的临床图像病变分类方法 | 周光泉; 王凯妮 | CN116309542B | 2026-02-13 | 国家知识产权局
+26 | 一种基于自适应频域学习和抗混叠复数卷积的临床图像病变分类方法 | 周光泉; 王凯妮 | 中国 | CN116309542B | 2026-02-13 | 国家知识产权局
 
 
 
