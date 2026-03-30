@@ -50,6 +50,57 @@
 9 | 放射粒子内放疗介入手术机器人的多脏器分割方法及介质 | 朱建军; 王澄; 滕皋军 | 中国 | CN113192025B | 2025-03-04 | 国家知识产权局
 10 | 一种ICG/Fe(III)- NBs纳米气泡、制备方法及应用 | 杨莉; 滕皋军; 顾宁; 张卫华; 安艳丽 | 中国 | CN118370818A | 2024-07-23 | 国家知识产权局
 11 | 基于多注意力的肝脏血管分割方法及系统 | 滕皋军; 朱建军; 王澄; 陆建 | 中国 | CN113409320A | 2021-09-17 | 国家知识产权局
-12 | 一种可降解的组合物及其制备方法和应用 | 朱海东; 滕皋军; 刘琳琳; 陆骊工; 陈磊; 王澄; 陆建 | 中国 | CN113289075B | 2022-09-30 | 国家知识产
-权局
+12 | 一种可降解的组合物及其制备方法和应用 | 朱海东; 滕皋军; 刘琳琳; 陆骊工; 陈磊; 王澄; 陆建 | 中国 | CN113289075B | 2022-09-30 | 国家知识产权局
+
+## 地方课题2提交
+
+### 四、项⽬已取得的学术成果
+
+序号 | 论⽂篇名或专著名 | 作者 | 刊名或出版社 | 出版年份 | 卷号(期号) | 开始⻚码 | 结束⻚码 | 是否为SCI/EI | 是否为NATURE/SCIENCE/CELL主刊
+---|---|---|---|---|---|---|---|---|---
+1 | A Precise Calibration Method for the Robot- Assisted Percutaneous Puncture System | Li J, Li M, Zeng Q, et al | Electronics | 2023 | 12(23) | 4857 | 4857 | 是 | 否
+2 | An adaptive control method and learning strategy for ultrasound- guided puncture robot | Li T, Zeng Q, Li J, et al | Electronics | 2024 | 13(3) | 580 | 580 | 是 | 否 
+3 | Iterative stripe artifact correction framework for TOF- MRA | Li N, Zhou S, Zhao G, et al | Computers in Biology and Medicine | 2021 | 134 | 104456 | 104456 | 是 | 否  
+4 | Semi- supervised segmentation of coronary DSA using mixed networks and multi- strategies | Pu Y, Zhang Q, Qian C, et al | Computers in Biology and Medicine | 2023 | 156 | 106493 | 106493 | 是 | 否  
+5 | Context- aware network fusing transformer and V-Net for semi-supervised segmentation of 3D left atrium | Zhao C, Xiang S, Wang Y, et al | Expert Systems with Applications | 2023 | 214 | 119105 | 119105 | 是 | 否  
+6 | Towards real time guide wire shape extraction in fluoroscopic sequences: a two phase deep learning scheme to extract sparse curvilinear structures | Chen K, Qin W, Xie Y, et al | Computerized Medical Imagingand Graphics | 2021 | 94 | 101989 | 101989 | 是 | 否  
+7 | Deformable transformer for endoscopic videosuper- resolution | Song X, Tang H, Yang C, et al | Biomedical Signal Processing and Control | 2022 | 77 | 103827 | 103827 | 是 | 否 
+8 | Online hard patch mining using shape models and bandit algorithm formulti-organ segmentation | He J, Zhou G, Zhou S, et al | Ieee Journal of Biomedical and Health Informatics | 2021 | 26(6) | 2648 | 2659 | 是 | 否 
+9 | A novel multi-D oF surgical robotic system for brachytherapy onliver tumor: design and control | Lin X, Zhou S, Wen T, et al | International Journal of Computer Assisted Radiology and Surgery | 2021 | 16(6) | 1003 | 1014 | 是 | 否  
+10 | Guidewire simulation of endovascular intervention: A systematic review | Qiu J, Ming J, Qian C, et al | The International Journal of Medical Robotics and Computer Assisted Surgery | 2022 | 18(6) | 2444 | 2444 | 是 | 否 
+11 | DIOR: Deep iterative optimization- based residual- learning for limited-angle CT reconstruction | Hu D, Zhang Y, Liu J, et al | IEEE Transactions on Medical Imaging | 2022 | 41(7) | 1778 | 1790 | 是 | 否 
+12 | A multiple catheter tips tracking method in X ‐ray fluoroscopy images by a new lightweight segmentation network and Bayesian filtering | Tang H, Li H K, Yang C F, et al | The International Journal of Medical Robotics and Computer Assisted Surgery | 2023 | 19(6) | 2569 | 2569 | 是 | 否 
+13 | An improved matrix ‐ based endovascular guidewire position simulation using fusiform ternary tree | Qiu J, Lyu T, Chen Y, et al | The International Journal of Medical Robotics and Computer Assisted Surgery | 2020 | 16(6) | 1 | 11 | 是 | 否 
+14 | Evaluation of mechanical properties of poly (l ‐lactic acid) braided stents with axial stiffeners | Zhao G, Liu Q, Tian Y, et al | Journal of Applied Polymer Science | 2022 | 139(23) | 52242 | 52242 | 是 | 否 
+15 | Dlgnet: A dual-branch lesion-aware network with the supervised gaussian mixture model for colon lesions classification in colonoscopy images | Wang K N, Zhuang S, Ran Q Y, et al | Medical Image Analysis | 2023 | 87 | 102832 | 102832 | 是 | 否 
+16 | Discriminativ e feature representation for Noisy image quality assessment | Gu Y, Tang H, Lv T, et al | Multimedia Tools and Applications | 2020 | 79 | 7783 | 7809 | 是 | 否 
+17 | Evaluation of poly (L-lactic acid)monofilament swith high mechanical performance in vitro degradation | Zhao G, Wang B, Li X, et al | Journal of Materials Science | 2022 | 57(11) | 6361 | 6371 | 是 | 否 
+18 | Influence of parameters on mechanical properties of poly (L ‐ lactic acid) helical stents | Zhao G,Liu J, Liu M, et al | Journalof Biomedical Materials Research Part B: Applied Biomaterials | 2022 | 110(7) | 1705 | 1712 | 是 | 否 
+19 | Strengthen oriented poly (L-lactic acid)monofilaments via mechanical training | Zhang Y, Dong X, Zhang C, et al | International Journal of Biological Macromolecules | 2024 | 263 | 129975 | 129975 | 是 | 否 
+20 | Modified Theoretical Model Predicts Radial Support Capacity of Polymer Braided Stents | Hu X, Liu Q, Chen L, et al | Computer Methods and Programs in Biomedicine | 2024 | 246 | 108063 | 108063 | 是 | 否 
+
+### 五、项目申请专利情况
+
+序号 | 专利题名 | 专利申请者(所有者) | 专利国别 | 专利号 | 公告（公开）日期 | 获取和访问路径
+---|---|---|---|---|---|---
+1 | 一种基于扩散模型与生成对抗网络的图像分割方法及装置 | 蒲尧; 张智清; 钱程; 曾泉; 周寿军; 李涛; 郑福琛 | 中国 | CN117314930A | 2023-12-29 | 国家知识产权局
+2 | 超声机器人扫描控制方法、装置、设备及存储介质 | 李涛; 周寿军; 曾泉; 钱程; 曾伟斌; 蒲尧 | 中国 | CN116175584A | 2023-05-30 | 国家知识产权局
+3 | 一种基于扩散模型与生成对抗网络的图像分割方法及装置 | 蒲尧; 张智清; 钱程; 曾泉; 周寿军; 李涛; 郑福琛 | 中国 | CN117314930A | 2023-12-29 | 国家知识产权局
+4 | 一种穿刺活检针 | 安超; 吴沛宏; 郑福琛; 周寿军; 钱程; 曾泉 | 中国 | CN221730798U | 2024-09-20 | 国家知识产权局
+5 | 机械臂参数辨识补偿方法及系统 | 曾伟斌; 周寿军; 李涛; 曾泉 ; 李声啸; 蒲尧 | 中国 | CN116442215A | 2023-07-18 | 国家知识产权局
+6 | 超声机器人扫描控制方法、装置、设备及存储介质 | 李涛; 周寿军; 曾泉; 钱程; 曾伟斌; 蒲尧 | 中国 | CN116175584A | 2023-05-30 | 国家知识产权局
+7 | 一种导丝推送装置和血管介入机器人 | 钱程; 曾泉; 周寿军 | 中国 | CN115671509B | 2024-11-15 | 国家知识产权局
+8 | 图像分割模型训练方法、装置、设备及存储介质 | 蒲尧; 周寿军 | 中国 | CN115375706A | 2022-11-22 | 国家知识产权局
+9 | 一种超声辅助扫查手术机器人控制方法及系统 | 李涛; 曾泉; 周寿军; 钱程 | 中国 | CN115227404A | 2022-10-25 | 国家知识产权局
+10 | 一种机械臂光学定位方法及装置 | 曾伟斌; 曾泉; 周寿军; 李声啸; 王浩乾 | 中国 | CN117084785A | 2023-11-21 | 国家知识产权局
+11 | 一种基于超声图像的穿刺针实时检测方法及装置 | 余韩梅; 钱程; 周寿军; 赵福星; 陈静涛; 蒲尧 | 中国 | CN114820650A | 2022-07-29 |  国家知识产权局
+12 | 一种穿刺针平面的实时重建方法及装置 | 李声啸; 曾泉; 周寿军 | 中国 | CN116797650A | 2023-09-22 | 国家知识产权局
+13 | 一种面向腔道粒子支架释放的机器人系统 | 钱程; 陈静涛; 周寿军 | 中国  | CN113941082B | 2023-11-14 | 国家知识产权局
+14 | 一种CT兼容的肺部穿刺活检系统及方法 | 陈静涛; 钱程; 周寿军; 曾泉 | 中国 | CN113940733B | 2023-08-15 | 国家知识产权局
+15 | 一种困难样本挖掘方法、系统、终端以及存储介质 | 贺建安; 周寿军; 游超云 | 中国 | CN113920079B | 2024-11-15 | 国家知识产权局
+16 | 一种血管中心线提取方法、系统、终端以及存储介质 | 游超云; 周寿军; 贺建安 | 中国 | CN113902689B | 2024-10-25 | 国家知识产权局
+17 | 一种面向胆道穿刺的机器人穿刺定位方法及装置 | 陈静涛; 周寿军; 钱程; 曾泉 ; 林晓锋; 温铁祥 | 中国 | CN113558735A | 2021-10-29 | 国家知识产权局
+18 | 一种肝及肝肿瘤的医学图像分割方法、系统、终端以及存储介质 | 齐恒; 周寿军; 李娜 | 中国 | CN114881910A | 2022-08-09 | 国家知识产权局
+19 | 超声穿刺针 | 陈静涛; 周寿军; 滕皋军 | 中国 | CN213722285U | 2021-07-20 | 国家知识产权局
+20 | 超声穿刺针 | 陈静涛; 滕皋军; 周寿军 | 中国 | CN111265289A | 2020-06-12 | 国家知识产权局
 
