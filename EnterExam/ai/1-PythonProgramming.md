@@ -2,7 +2,7 @@
 
 ### 1. Списковые включения и генераторы <br> 列表推导式与生成器 (List Comprehension and Generator)
 
-Python 推导式是一种根据已有可迭代对象（iterable）快速创建新数据结构的方法，从一个数据序列构建另一个新的数据序列，用一行代码完成循环 + 条件判断 + 数据转换。适用于生成列表（list）、字典（dict）、集合（set）和生成器（generator）。
+Python 推导式是一种根据已有可迭代对象（iterable）快速创建新数据结构的方法，从一个数据序列构建另一个新的数据序列，用一行代码完成循环 + 条件判断 + 数据转换。适用于生成列表（list）、字典（dict）、集合（set）和生成器（Generator）。
 
 ---
 
@@ -156,7 +156,7 @@ exchange={
 
 ---
 
-生成器表达式用于生成一个生成器Generator，其语法如下：
+生成器表达式用于生成一个生成器，其语法如下：
 
 ```python
 generator=(
@@ -171,7 +171,7 @@ generator=(
 
 ---
 
-迭代器 Iterator 是一个可以保存当前遍历状态，并且能够返回下一个元素的对象。
+迭代器（Iterator）是一个可以保存当前遍历状态，并且能够返回下一个元素的对象。
 
 迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。
 
@@ -195,7 +195,7 @@ print(next(iterator))
 
 ---
 
-生成器 Generator 是一种特殊的迭代器，用于生成序列。与迭代器不同，迭代器需要实现迭代协议（Iterator Protocol），即提供 `__iter__()` 和 `__next__()` 方法；而生成器通常通过包含 `yield` 关键字的函数或生成器表达式创建，Python 会自动实现迭代协议。
+生成器（Generator）是一种特殊的迭代器，用于生成序列。与迭代器不同，迭代器需要实现迭代协议（Iterator Protocol），即提供 `__iter__()` 和 `__next__()` 方法；而生成器通常通过包含 `yield` 关键字的函数或生成器表达式创建，Python 会自动实现迭代协议。
 
 `yield` 关键字类似于普通函数中的 `return` 用于返回函数值，不同的是 `yield` 会在返回当前值时，会保存函数当前的执行状态，当函数下一次调用，会从当前状态继续执行。
 
@@ -252,7 +252,7 @@ greet(say_name)
 
 ---
 
-结合以上特性，我们便得到了 Python 中的装饰器 Decorator，装饰器的本质是一个接收函数作为参数，并返回一个新函数的函数。通过装饰器，我们可以在不修改原函数的情况下，动态扩展原函数的功能。
+结合以上特性，我们便得到了 Python 中的装饰器（Decorator）。**装饰器的本质是一个接收函数作为参数，并返回一个新函数的函数**。通过装饰器，我们可以在不修改原函数的情况下，动态扩展原函数的功能。
 
 将上述的用例改用装饰器表达如下，最终同样输出 `Hello! Anton`：
 
@@ -621,7 +621,7 @@ def get_content(filename):
 除了使用 `with` 关键字，我们也可以通过自定义类实现上下文管理协议的 `__enter__()` 和 `__exit__()` 方法创建自定义的上下文管理器，例如以下基于上下文管理器实现的计时器：
 
 ```python
-from time import sleep
+import time
 
 class Timer:
     def __enter__(self):
@@ -638,7 +638,7 @@ class Timer:
 # 对代码执行时间进行计时
 with Timer() as t:
     # 执行一些耗时操作
-    sleep(1)
+    time.sleep(1)
 ```
 
 ---
@@ -661,7 +661,6 @@ def context():
 
 ```python
 import time
-from time import sleep
 from contextlib import contextmanager
 
 @contextmanager
@@ -680,5 +679,285 @@ def Timer():
 # 对代码执行时间进行计时
 with Timer():
     # 执行一些耗时操作
-    sleep(1)
+    time.sleep(1)
 ```
+
+### 3. Типизация и статическая проверка <br> 类型注解于静态类型检查
+
+Python 是一种动态类型语言（Dynamically Typed Language），变量的类型不需要提前声明，而实在运行过程中动态确定，并且同一个变量的类型可能随运行场景动态改变。这简化了程序设计，但在工程场景下也埋下了语法歧义与难以维护的隐患。
+
+例如以下代码既可以用于数字相加，也可以用于字符串拼接，导致用法不不统一：
+
+```python
+def add(a, b):
+    return a + b
+```
+
+为此，Python 提供了类型注解 Type Hints 用以标注变量、函数参数和返回值的类型，其中变量和参数在其名称后使用 `:` 后接类型表示，函数返回值在函数声明后使用 `->` 后接类型表示
+
+于是上述 `add()` 函数可以使用类型注解表示为：
+
+```python
+def add(a: int, b: int) -> int:
+    return a+b
+```
+
+需要注意的是，Python 的类型注解不同于 C/Java 语言的强类型检查，没有改变 Python 的动态类型的机制，也不会对变量本身的类型进行强制限制，只是提供了类型提示以及静态检查的功能，因此 `add("hello", "world")` 仍然可以正常执行并返回 `helloworld`
+
+---
+
+除了对基础的变量，参数和函数返回值进行类型标注，也可以引入 `typing` 模块对列表、字典等容器类型进行标注：
+
+```
+from typing import List, Dict, Tuple, Set
+
+# List[int] 表示这是一个只包含整数的列表
+numbers: List[int] = [1, 2, 3, 4, 5]
+
+# Dict[str, int] 表示这是一个键为字符串、值为整数的字典
+student_scores: Dict[str, int] = {"Alice": 95, "Bob": 88}
+
+# Tuple[int, str, bool] 表示这是一个包含整数、字符串、布尔值的元组
+person_info: Tuple[int, str, bool] = (25, "Alice", True)
+
+# Set[str] 表示这是一个只包含字符串的集合
+unique_names: Set[str] = {"Alice", "Bob", "Charlie"}
+```
+
+`typing` 还提供了以下复杂类型标注功能：
+
+- 联合类型（Union）：当值可能是多种类型之一时使用
+  
+  ```python
+  from typing import Union
+
+  def process_input(data: Union[str, int, List[int]]) -> None:
+      """处理可能是字符串、整数或整数列表的输入"""
+      if isinstance(data, str):
+          print(f"字符串: {data}")
+      elif isinstance(data, int):
+          print(f"整数: {data}")
+      elif isinstance(data, list):
+          print(f"列表: {data}")
+
+  process_input("hello")    # 输出：字符串: hello
+  process_input(42)         # 输出：整数: 42  
+  process_input([1, 2, 3])  # 输出：列表: [1, 2, 3]
+  ```
+
+- 可选类型（Optional）：当值可能是某种类型或者是 None 时使用
+
+  ```python
+  from typing import Optional
+
+  def find_student(name: str) -> Optional[str]:
+      """根据名字查找学生，可能找到也可能返回None"""
+      students = {"Alice": "A001", "Bob": "B002"}
+      return students.get(name)  # 可能返回字符串或None
+
+  # 等价于 Union[str, None]
+  ```
+
+---
+
+而当类型很复杂时，例如我们要标注一个二维坐标列表的类型时，可以使用类型别名（Type Alias）
+
+---
+
+对于静态类型检查，Python 提供了 `Mypy` 工具，我们需要首先安装它：
+
+```
+pip install mypy
+```
+
+对于存在潜在类型问题的 Python 文件：
+
+```python
+# example.py
+def add_numbers(a: int, b: int) -> int:
+    return a + b
+
+result = add_numbers("5", "3")  # 这里有问题！传入了字符串
+```
+
+可以运行 mypy 检查
+
+```
+mypy example.py
+```
+
+会得到类似这样的输出，提示类型错误：
+
+```python
+example.py:4: error: Argument 1 to "add_numbers" has incompatible type "str"; expected "int"
+example.py:4: error: Argument 2 to "add_numbers" has incompatible type "str"; expected "int"
+Found 2 errors in 1 file (checked 1 source file)
+```
+
+现代集成开发环境工具，大部分已经内置了类型检查支持，自动提供错误高亮提示以及智能补全建议
+
+
+---
+
+### 4. Асинхронность (asyncio) <br> 异步编程
+
+程序执行通常有两种方式：同步（synchronous）和异步（asynchronous）。
+
+同步程序按照代码顺序一步一步执行，例如以下模拟烹饪的程序
+
+```python
+import time
+
+def prepare_ingredients(ingredients): # 备菜
+    print("Begin preparing ingredients")
+    time.sleep(200)
+    print("Ingredients are prepared")
+    return "prepared " + ingredients
+
+def boil_water(water): # 烧水
+    print("Begin boiling water")
+    time.sleep(300)
+    print("Water is ready")
+    return "hot " + water
+
+def cooking(): # 烹饪
+    prepare_ingredients("")
+    boil_water("water")
+```
+
+执行过程
+
+```python
+开始备菜 prepare_ingredients
+    ↓
+等待200秒
+    ↓
+完成备菜 prepare_ingredients
+    ↓
+开始烧水 boil_water
+    ↓
+等待300秒
+    ↓
+完成烧水
+```
+
+总时间约为500秒，且等等待期间，当前线程处于阻塞状态，无法继续执行后续代码，因此 CPU 计算资源没有被当前任务充分利用。这种由等待输入输出操作导致的等待称为 I/O 阻塞（I/O blocking）。
+
+常见的 I/O 阻塞包括：
+
+- 网络 I/O：如 HTTP 请求、API 调用、下载文件、WebSocket
+  ```python
+  response = requests.get(url)
+  ```
+- 文件 I/O：文件读写等
+  ```python
+  data=open("large_file.txt").read()
+  ```
+- 数据库 I/O：增删查改等操作
+  ```python
+  result = database.query()
+  ```
+- ...
+
+这些操作往往其等待时间远大于 CPU 计算时间，长时间的空闲等待会拖慢整个流程的执行效率
+
+而异步编程（asyncio）则主要解决这种 I/O 阻塞问题，通过在 I/O 等待期间切换任务，提高单线程处理大量 I/O 操作的效率。
+
+对此，Python 提供了 `asyncio` 包以实现异步编程，它提供了以下核心概念：协程（Coroutine），事件循环（Event Loop），任务（Task）与未来对象（Future）用于实现单线程异步并发
+
+1. 协程（Coroutine）：协程是一种特殊函数，可以在执行过程中暂停，保存状态并在稍后恢复执行。协程通过 `async def` 关键字定义，并通过 `await` 关键字暂停执行，等待异步操作完成。
+   
+   ```python
+   import asyncio
+
+   async def boil_water(water): # 烧水
+       print("Begin boiling water")
+       await asyncio.sleep(300)
+       print("Water is ready")
+
+   asyncio.run(boil_water("water"))
+   ```
+2. 异步任务（Task）：当程序需要同时运行多个协程时，需要将协程封装为任务，即协程的包装对象，它将协程注册到事件循环中，使事件循环能够调度它。我们可以通过 `asyncio.create_task()` 函数创建 Task，并将其添加到事件循环中
+   
+   ```python
+   async def cook():
+       boil_water1 = asyncio.create_task(boil_water("300 ml water"))
+       boil_water2 = asyncio.create_task(boil_water("anather 300 ml water"))
+
+       await boil_water1
+       await boil_water2
+   
+   asyncio.run(cook())
+   ```
+   
+3. 事件循环（Event Loop）：事件循环是 `asyncio` 的核心调度机制，负责管理所有 Task 任务，检查异步操状态，恢复已经完成等待的任务并调度可以继续执行的任务。它相当于一个任务调度器，当某个 Task 因为 await 等待 I/O 操作而暂停时，事件循环会将控制权交给其他处于 Ready 状态的 Task；当等待操作完成后，再恢复原 Task 的执行。
+   
+   ```python
+              Event Loop
+                  |
+      -------------------------
+      |           |           |
+   Task A      Task B      Task C
+      |
+   await等待
+      |
+   切换执行其他就绪Task
+   ```
+
+4. 未来对象（Future）：Future 是 `asyncio` 中用于表示异步操作结果的对象，相当于一个结果占位符，在异步操作开始时，Future 处于 `Pending` 状态；当异步操作完成后，可以通过 `set_result()` 保存结果，或者通过 `set_exception()` 保存异常。其他协程可以通过 `await` 等待 Future 完成并获取最终结果。
+   
+   > 在实际开发中，Future 通常由底层框架创建和管理，而开发者更多使用 Task。Task 本身继承自 Future，用于封装和调度 Coroutine。
+   
+   ```python
+   async def cook():
+       meal = asyncio.Future()
+       meal.set_result("Meal is ready")
+       result = await meal
+   ```
+
+通过结合上述概念，我们可以以异步方式实现最初的例子：
+
+```python
+import asyncio
+
+async def prepare_ingredients(ingredients): # 备菜
+    print("Begin preparing ingredients")
+    await asyncio.sleep(200)
+    print("Ingredients are prepared")
+
+    return "prepared " + ingredients
+
+async def boil_water(water):  # 烧水
+    print("Begin boiling water")
+    await asyncio.sleep(300)
+    print("Water is ready")
+
+    return "hot " + water
+
+async def cook(meal):
+    task_prepare_vegetable = asyncio.create_task(prepare_ingredients("vegetable"))
+    task_boil_water = asyncio.create_task(boil_water("water"))
+
+    vegetable = await task_prepare_vegetable
+    water = await task_boil_water
+
+    meal = meal + ": " + vegetable + ", " + water
+
+    return meal
+
+if __name__ == "__main__":
+    results = asyncio.run(cook("Soup"))
+    print(results)
+```
+
+最终输出
+
+```
+Begin preparing ingredients
+Begin boiling water
+Ingredients are prepared
+Water is ready
+Soup: prepared vegetable, hot water
+```
+
+对比最初同步的版本所需大约 500 秒的执行时间，使用了 `asyncio` 的异步版本耗时缩短至 300 秒，显著提升了程序执行效率

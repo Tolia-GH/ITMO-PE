@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c96f8813-561f-46a7-aa7d-1dc5844a4744" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/practice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neurotechnologies.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neurotechnologies.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai/1-PythonProgramming.md" beforeDir="false" afterPath="$PROJECT_DIR$/ai/1-PythonProgramming.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai/ai.md" beforeDir="false" afterPath="$PROJECT_DIR$/ai/ai.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

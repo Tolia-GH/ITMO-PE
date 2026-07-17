@@ -1,21 +1,30 @@
-import time
-from time import sleep
-from contextlib import contextmanager
+import asyncio
 
-@contextmanager
-def Timer():
+async def prepare_ingredients(ingredients): # 备菜
+    print("Begin preparing ingredients")
+    await asyncio.sleep(200)
+    print("Ingredients are prepared")
 
-    # 进入 with 之前执行
-    start = time.time()
+    return "prepared " + ingredients
 
-    # 将控制权交给 with 代码块
-    yield
+async def boil_water(water):  # 烧水
+    print("Begin boiling water")
+    await asyncio.sleep(300)
+    print("Water is ready")
 
-    # 离开 with 之后执行
-    end = time.time()
-    print(f"cost: {end - start:.2f} second")
+    return "hot " + water
 
-# 对代码执行时间进行计时
-with Timer():
-    # 执行一些耗时操作
-    sleep(1)
+async def cook(meal):
+    task_prepare_vegetable = asyncio.create_task(prepare_ingredients("vegetable"))
+    task_boil_water = asyncio.create_task(boil_water("water"))
+
+    vegetable = await task_prepare_vegetable
+    water = await task_boil_water
+
+    meal = meal + ": " + vegetable + ", " + water
+
+    return meal
+
+if __name__ == "__main__":
+    results = asyncio.run(cook("Soup"))
+    print(results)
