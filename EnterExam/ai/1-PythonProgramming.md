@@ -961,3 +961,253 @@ Soup: prepared vegetable, hot water
 ```
 
 对比最初同步的版本所需大约 500 秒的执行时间，使用了 `asyncio` 的异步版本耗时缩短至 300 秒，显著提升了程序执行效率
+
+### 5. Файлы и форматы данных <br> 文件与数据格式
+
+Python 中使用内置方法 `open()` 进行文件操作，并返回文件对象，其基本语法如下：
+
+```python
+open(file, mode='r')
+```
+
+其完整语法格式为：
+
+```python
+open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
+```
+
+该方法可以接受以下参数：
+
+参数说明:
+
+- `file`: 必需，文件路径（相对或者绝对路径）。
+- `mode`: 可选，文件打开模式
+- `buffering`: 设置缓冲
+- `encoding`: 编码格式，一般使用 utf8
+- `errors`: 报错级别
+- `newline`: 区分换行符
+- `closefd`: 传入的 `file` 参数类型
+- `opener`: 设置自定义开启器，开启器的返回值必须是一个打开的文件描述符。
+
+其中文件打开模式 `mode` 包含以下几类：
+
+| 模式 | 含义           |
+| -- | ------------ |
+| t | 文本模式 (默认)。 |
+| x | 写模式，新建一个文件，如果该文件已存在则会报错。 |
+| b | 二进制模式。 |
+| + | 打开一个文件进行更新(可读可写)。 |
+| U | 通用换行模式（Python 3 不支持）。 |
+| r | 以只读方式打开文件。文件的指针将会放在文件的开头。这是默认模式。 |
+| rb | 以二进制格式打开一个文件用于只读。文件指针将会放在文件的开头。这是默认模式。一般用于非文本文件如图片等。 |
+| r+ | 打开一个文件用于读写。文件指针将会放在文件的开头。 |
+| rb+ | 以二进制格式打开一个文件用于读写。文件指针将会放在文件的开头。一般用于非文本文件如图片等。 |
+| w | 打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。 |
+| wb | 以二进制格式打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。一般用于非文本文件如图片等。 |
+| w+ | 打开一个文件用于读写。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。 |
+| wb+ | 以二进制格式打开一个文件用于读写。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。一般用于非文本文件如图片等。 |
+| a | 打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入。 |
+| ab | 以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入。 |
+| a+ | 打开一个文件用于读写。如果该文件已存在，文件指针将会放在文件的结尾。文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写。 |
+| ab+ | 以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写。 |
+
+---
+
+调用 `open()` 函数，返回得到的便是 `file` 对象，下表列出了 `file` 对象常用的函数：
+
+| 序号 | 函数 | 说明 |
+|---|---|---|
+| 1 | `file.close()` | 关闭文件。关闭后文件不能再进行读写操作。 |
+| 2 | `file.flush()` | 刷新文件内部缓冲，直接把内部缓冲区的数据立刻写入文件，而不是被动的等待输出缓冲区写入。 |
+| 3 | `file.fileno()` | 返回一个整型的文件描述符(file descriptor FD 整型)，可以用在如os模块的read方法等一些底层操作上。 |
+| 4 | `file.isatty()` | 如果文件连接到一个终端设备返回 `True`，否则返回 `False`。 |
+| 5 | `file.next()` | 返回文件下一行。Python 3 中的 File 对象不支持 `next()` 方法。 |
+| 6 | `file.read([size])` | 从文件读取指定的字节数，如果未给定或为负则读取所有。 |
+| 7 | `file.readline([size])` | 读取整行，包括 `\n` 字符。 |
+| 8 | `file.readlines([sizeint])` | 读取所有行并返回列表，若给定 `sizeint>0`，返回总和大约为`sizeint` 字节的行，实际读取值可能比 `sizeint` 较大，因为需要填充缓冲区。 |
+| 9 | `file.seek(offset[, whence])` | 移动文件读取指针到指定位置 |
+| 10 | `file.tell()` | 返回文件当前位置。 |
+| 11 | `file.truncate([size])` | 从文件的首行首字符开始截断，截断文件为 `size` 个字符，无 `size` 表示从当前位置截断；截断之后后面的所有字符被删除，其中 windows 系统下的换行代表2个字符大小。 |
+| 12 | `file.write(str)` | 将字符串写入文件，返回的是写入的字符长度。 |
+| 13 | `file.writelines(sequence)` | 向文件写入一个序列字符串列表，如果需要换行则要自己加入每行的换行符。 |
+
+---
+
+Python 文件数据格式规定了数据如何被组织并保存到文件中，或者如何在不同系统之间传输。
+
+例如对于一个表示学生的 Python 对象 `anton`：
+
+```python
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+anton=Student(name="Anton", age=12)
+```
+
+我们可以将其以不同格式保存到文件中：
+
+JSON 格式：anton.json
+
+```json
+{
+    "name":"Tom",
+    "age":20
+}
+```
+
+CSV 格式：anton.csv
+
+```CSV
+name,age
+Tom,20
+```
+
+YAML 格式：anton.yaml
+
+```yaml
+name: Tom
+age: 20
+```
+
+XML 格式：anton.xml
+
+```xml
+<student>
+    <name>Anton</name>
+    <age>12</age>
+</student>
+```
+
+除此之外，还有以下各类格式，总结如下：
+
+| 格式       | 扩展名       | Python库     | 主要用途      |
+| -------- | --------- | ----------- | --------- |
+| TXT      | .txt      | open        | 文本        |
+| CSV      | .csv      | csv/pandas  | 表格数据      |
+| JSON     | .json     | json        | 结构化数据/API |
+| YAML     | .yaml     | PyYAML      | 配置文件      |
+| XML      | .xml      | ElementTree | 结构化数据     |
+| Pickle   | .pkl      | pickle      | Python对象序列化格式  |
+| NumPy    | .npy/.npz | numpy       | 矩阵数据      |
+| HDF5     | .h5       | h5py        | 大规模科学数据   |
+| Parquet  | .parquet  | pandas      | 大数据       |
+| PyTorch  | .pt/.pth      | torch       | 模型权重      |
+| ONNX     | .onnx     | onnx        | 模型交换      |
+| JPEG/PNG | .jpg/.png | OpenCV/PIL  | 图像        |
+
+---
+
+而将 Python 程序在内存中的对象转换为文件数据保存，或读取文件数据转化为 Python 程序对象的过程则成为序列化/反序列化
+
+我们可以使用 Python 的 pickle 模块来实现序列化与反序列化
+
+该模块提供了 `pickle.dumps()` 方法用于将对象序列化为 bytes：
+
+```python
+import pickle
+d = dict(name='Bob', age=20, score=88)
+pickle.dumps(d)
+```
+
+得到 bytes 数据如下：
+
+```
+b'\x80\x03}q\x00(X\x03\x00\x00\x00ageq\x01K\x14X\x05\x00\x00\x00scoreq\x02KXX\x04\x00\x00\x00nameq\x03X\x03\x00\x00\x00Bobq\x04u.'
+```
+
+或者我们也可以直接使用另一个方法 `pickle.dump` 将对象序列化后写入一个文件：
+
+```python
+f = open('dump.pkl', 'wb')
+pickle.dump(d, f)
+f.close()
+```
+
+而将上述保存的对象数据反序列化为 Python 对象，可以使用 `pickle.loads()` 方法从 bytes 中反序列化，也可以直接使用 `pickle.load()` 方法从文件对象中反序列化：
+
+```python
+f = open("dump.pkl", 'rb')
+d = pickle.load(f)
+f.close()
+
+print(d)
+```
+
+输出得到：
+
+```json
+{'name': 'Bob', 'age': 20, 'score': 88}
+```
+
+### 6. Тестирование (pytest) <br> Python 测试（pytest）
+
+在软件开发过程中，测试是保证程序正确性的重要环节。对于一个简单的小程序，我们可以直接运行代码，通过观察输出判断程序是否正确。但是随着项目规模扩大，代码之间存在大量依赖关系，这种测试会变得越来越困难，因此我们需要自动化的软件测试框架以解决这一问题
+
+一般的软件测试包含以下几类：
+
+```mermaid
+flowchart TD
+    T[Software Testing<br>软件测试] --> FT[Functional Test<br>功能测试]
+    T --> NFT[Non-Functional<br>非功能测试]
+    FT --> UT[Unit Test<br>单元测试]
+    FT --> IT[Integration Test<br>集成测试]
+    FT --> ST[System Test<br>系统测试]
+```
+
+单元测试：用于测试最小功能单元，例如一个函数，或一个类的方法
+集成测试：用于测试多个模块整体协作，例如用户登录操作涉及的用户对象模块，用户认证模块和数据库模块等
+系统测试：用于测试完整的软件系统，例如一个由前端、后端、数据库构成的 Web 应用系统
+
+---
+
+Python 提供了多个测试框架，如 unittest、nose、pytest 等，这里我们主要关注 pytest
+
+pytest 在执行测试时，会自动递归遍历执行路径下所有的目录，根据 pytest 中默认用例的识别的规则，自动收集测试用例，其用例识别规则如下：
+
+1. 用例文件：所有文件名为 `test_` 开头 或者 `_test` 开头的文件会被识别为用例文件。
+2. 用例类，测试文件中每个 `Test` 开头的类就是一个测试用例类。
+3. 测试用例：测试类中每个 `test_`开头的方法就是一条测试用例，测试文件中每个 `test_` 开头的函数也是一条测试用例.
+
+因此我们使用 pytest 编写测试时，需要严格按照上述命名规则创建测试用例文件，并在测试用例文件内编写名称符合规则的用例类和用例方法
+
+假设我们有一个计算器项目如下：
+
+```
+calculator/
+├── src/
+│   └── basic_cal.py
+└── tests/
+    └── test_calculator.py
+```
+
+```python
+# basic_cal.py
+def add(a,b):
+    return a+b
+
+def divide(a, b):
+    return a / b
+```
+
+现在我们希望测试加法 `add()` 是否正确，我们可以创建测试文件 `test_calculator.py`:
+
+```python
+from calculator import add
+
+def test_add():
+    result = add(2, 3)
+    assert result == 5
+```
+
+在这里我们使用 Python 自带的 `assert` 断言以验证函数的输出结果是否正确。
+
+我们可以使用 assert 进行以下判断：
+
+- 判断相等
+  ```python
+  assert result
+  ```
+
+  
