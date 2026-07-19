@@ -1194,7 +1194,7 @@ def divide(a, b):
 现在我们希望测试加法 `add()` 是否正确，我们可以创建测试文件 `test_calculator.py`:
 
 ```python
-from calculator import add
+from src.basic_cal import add
 
 def test_add():
     result = add(2, 3)
@@ -1207,7 +1207,295 @@ def test_add():
 
 - 判断相等
   ```python
-  assert result
+  assert result == value
+  ```
+- 判断不等
+  ```python
+  assert result != value
+  ```
+- 判断真假
+  ```python
+  assert condition
+  ```
+- 判断包含关系
+  ```python
+  assert item in collection
   ```
 
-  
+当断言判断出现错误，会抛出 AssertError 异常，记录差异结果，我们也可以自定义异常的错误信息，例如
+
+```python
+assert result == 5, "Calculation error"
+```
+
+上述断言在失败时会记录：
+
+```
+AssertionError: Calculation error
+```
+
+---
+
+而当我们在不同情况下，不同输入下对程序进行测试时，重复性的编写测试会非常麻烦，因此我们可以使用参数化测试：
+
+例如：
+
+```python
+import pytest
+
+
+@pytest.mark.parametrize(
+    "a,b,result",
+    [
+        (1,2,3),
+        (2,3,5),
+        (-1,1,0)
+    ]
+)
+def test_add(a,b,result):
+
+    assert add(a,b)==result
+```
+
+pytest 会自动生成：
+
+```
+test_add(1,2,3)
+test_add(2,3,5)
+test_add(-1,1,0)
+```
+
+---
+
+除了对正确情况进行测试，还需要对错误情况进行测试，即**异常测试**
+
+例如我们希望除法方法 `devide()` 在除数为 0 时抛出 `ZeroDivisionError` 异常，我们可以使用 `pytest.raises`：
+
+```python
+import pytest
+
+def test_divide():
+
+    with pytest.raises(ZeroDivisionError):
+        divide(1,0)
+```
+
+上述的代码表示期待 `devide(1,0)` 产生 `ZeroDivisionError` 异常，如果没有产生，则测试不通过
+
+除了测试方法，我们还可以编写测试类，以组织相关测试：
+
+```python
+class TestCalculator:
+    def test_add(self):
+        assert add(1,2)==3
+
+    def test_divide(self):
+        assert divide(4,2)==2
+```
+
+---
+
+而在大型软件项目开发中，例如测试一个用户登录系统，对于每一个测试操作，我们都需要：
+
+```
+创建测试数据库
+    ↓
+插入测试用户
+    ↓
+执行登录测试
+    ↓
+删除测试数据
+```
+
+也就是说，在每一个测试函数内，我们都需要重复编写：
+
+```python
+create_database()
+insert_test_user()
+test_login()
+delete_database()
+```
+
+这会造成大量重复代码，维护困难，且容易遗漏资源释放。为此我们可以使用测试夹具 Fixture 固定测试用例的前后置操作，实现测试环境，测试数据，测试资源的统一维护管理。
+
+Fixture 测试夹具可以按一下方式定义：
+
+```python
+@pytest.fixture(scope='指定夹具的级别')
+def work():
+    # 前置执行脚本
+    yield 
+    # 后置执行脚本
+```
+
+其中 `scope` 可以设定为以下级别:
+
+- 用例级别：scope = function（默认值）
+- 测试类型：scope = class
+- 模块级别：scope = module
+- 包级别： scope = package
+- 会话级别：scope = session
+
+本质上，测试夹具是一个生成器函数，使用 `next()` 进行迭代， 执行到 `yield` 会返回数据，暂停执行，等待下一次迭代时继续，pytest 夹具就是利用了生成器的机制，通过 `yeild` 在测试夹具将前后置代码分开执行。
+
+> 注意：夹具只有在定义夹具的范围内才能使用。如果夹具是在类中定义的，则只能由该类内的测试用例使用。但是如果在模块的全局范围内定义的夹具，那么该模块中的每个测试用例，即使它是在一个类中定义的，都可以使用它。
+
+---
+
+在将测试夹具定义好之后，测试函数通过将它们声明为参数，来指定执行用例之前要执行的夹具。
+
+当 `pytest` 开始运行测试时，它会查看该测试函数定义地形参，然后搜索与这些参数同名的测试夹具。一旦 `pytest` 找到它们，它就会运行这些夹具，接收它们返回的内容（如果有的话），并将这些返回内容作为参数传递给测试函数。
+
+> 注意：当我们使用夹具时，如果夹具的前置脚本执行完，有数据要传递用例，需要传递的数据写在 yield 后面即可，在使用夹具的用例或者方法中，可以通过定义地形参来获取 yeild 返回的数据
+
+我们可以在在测试用例中指定测试夹具进行使用：
+
+```python
+@pytest.fixture
+def user_fixture():
+    print('------my_fixture---用例前置执行脚本--------')
+    yield
+    print('------my_fixture---用例后置执行脚本--------')
+
+def test_01(user_fixture):
+    print("测试用例----test_func__01----")
+
+class TestDome:
+    # 函数用例 指定测试夹具
+    def test_02(self, user_fixture):
+        print('----测试用例：test_02------')
+
+    # 函数用例 指定测试夹具
+    def test_03(self):
+        print('----测试用例：test_03------')
+```
+
+而如果一个测试类中有很多测试用例指定同一个测试夹具，也可以通过 `usefixtures` 指定
+
+---
+
+除此之外，我们还可以在一个夹具中引用其它夹具：
+
+```python
+import pytest
+# 用户注册的夹具
+@pytest.fixture
+def register_user():
+    print('---用户注册的夹具前置执行----')
+    # ...注册代码省略，注册的用户信息如下
+    user_info = {'user': 'lemonban', 'pwd': '123456'}
+    yield user_info
+    print('---用户注册的夹具后置执行----')
+
+
+# 用户登录的夹具,通过定义形参来使用register_user这个夹具
+@pytest.fixture
+def user_login(register_user):
+    print('---用户登录的夹具前置执行----')
+    # 获取register_user结局前置脚本执行完，yeild传递出来的数据
+    user_info = register_user
+    # ...登录代码省略，下面为登录得到的token
+    token = 'sdjasjdask'
+    yield token
+    print('---用户登录的夹具后置执行----')
+
+# 函数用例 指定使用测试夹具user_login
+def test_func__01(user_login):
+    token = user_login
+    print("测试用例夹具user_login传递过来的token:",token)
+    print("测试用例---test_func__01---")
+```
+
+```python
+@pytest.mark.usefixtures('user_fixture')
+class TestDome:
+    # 函数用例 指定测试夹具
+    def test_02(self):
+        print('----测试用例：test_01------')
+
+    # 函数用例 指定测试夹具
+    def test_03(self):
+        print('----测试用例：test_02------')
+```
+
+运行结果如下：
+
+```
+---用户注册的夹具前置执行----
+夹具register_user传递过来的用户信息: {'user': 'lemonban', 'pwd': '123456'}
+---用户登录的夹具前置执行----
+测试用例夹具user_login传递过来的token: sdjasjdask
+测试用例---test_func__01---.
+---用户登录的夹具后置执行----
+---用户注册的夹具后置执行----
+```
+
+如果我们希望夹具在测试时自动执行，也可以指定 `autouse=True`
+
+```python
+@pytest.fixture(autouse=True)
+def my_fixture():
+    print('------my_fixture---前置执行脚本--------')
+    yield
+    print('------my_fixture---后置执行脚本--------')
+
+class TestDome:
+    def test_01(self):
+        print('----测试用例：test_01------')
+```
+
+接下来 `test_01()` 就会在测试时自动使用夹具 `my_fixture`
+
+---
+
+<!-- 例如我们有一个简单用户系统，其业务代码如下：
+
+```python
+# user.py
+def login(username, password):
+    users = {
+        "Anton": "123456",
+        "Maria": "654321"
+    }
+
+    if username in users:
+        if users[username] == password:
+            return True
+
+    return False
+```
+
+现在我们想要测试登录功能是否正常运行：
+
+```python
+def test_login():
+    result = login("Tom", "123456")
+    assert result is True
+```
+
+我们先使用 `@pytest.fixture` 声明 Fixture：
+
+```python
+import pytest
+
+@pytest.fixture
+def user():
+    return {
+        "username": "Tom",
+        "password": "123456"
+    }
+```
+ -->
+
+---
+
+当软件测试需要外部依赖，而由于一些原因不能提供真实外部依赖的时候，我们可以使用 Mock 模拟对象替代真实对象或外部依赖进行测试。Mock 相当于一个“假的对象”，它模拟真实对象的行为，让我们可以在不依赖真实环境的情况下对程序进行测试。
+
+[Mock 详细介绍](https://www.cnblogs.com/goldsunshine/p/15265187.html)
+
+### 7. Packaging и окружения <br> 包管理与环境管理
+
+[虚拟环境与包管理](https://docs.python.org/zh-cn/3.13/tutorial/venv.html)
+
+### 8. Профилировка и оптимизация <br> 性能分析与优化
+
