@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c96f8813-561f-46a7-aa7d-1dc5844a4744" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/ai/Practice/S1-1/House_Prices_EDA_ML_Exam_Practice.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai/Practice/S1-1/S1-Regression.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai/Practice/S1-1/house-prices/data_description.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai/Practice/S1-1/house-prices/sample_submission.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai/Practice/S1-1/house-prices/test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai/Practice/S1-1/house-prices/train.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai/1-PythonProgramming.md" beforeDir="false" afterPath="$PROJECT_DIR$/ai/1-PythonProgramming.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai/ai.md" beforeDir="false" afterPath="$PROJECT_DIR$/ai/ai.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -42,27 +46,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python 测试.practice.test.test_calculator.test_add 的 Python 测试.executor&quot;: &quot;Run&quot;,
-    &quot;Python 测试.practice.test.test_calculator.test_devide 的 Python 测试.executor&quot;: &quot;Run&quot;,
-    &quot;Python 测试.practice.test.test_user.TestDome 的 Python 测试.executor&quot;: &quot;Run&quot;,
-    &quot;Python 测试.practice.test.test_user.test_01 的 Python 测试.executor&quot;: &quot;Run&quot;,
-    &quot;Python.practice.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_calculator.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python 测试.practice.test.test_calculator.test_add 的 Python 测试.executor": "Run",
+    "Python 测试.practice.test.test_calculator.test_devide 的 Python 测试.executor": "Run",
+    "Python 测试.practice.test.test_user.TestDome 的 Python 测试.executor": "Run",
+    "Python 测试.practice.test.test_user.test_01 的 Python 测试.executor": "Run",
+    "Python.practice.executor": "Run",
+    "Python.test_calculator.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Tolia/Documents/GitHub/ITMO-PE/EnterExam/ai/Practice/S1-1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "settings.editor.selected.configurable": "configurable.group.Jupyter Settings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tolia\Documents\GitHub\ITMO-PE\EnterExam\ai\Practice\S1-1" />
+      <recent name="C:\Users\Tolia\Documents\GitHub\ITMO-PE\EnterExam\ai\Practice" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tolia\Documents\GitHub\ITMO-PE\EnterExam\ai\Practice\S1-1" />
       <recent name="C:\Users\Tolia\Documents\GitHub\ITMO-PE\EnterExam\practice" />
     </key>
   </component>
